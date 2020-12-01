@@ -119,7 +119,6 @@ abbrink:
   alg: crc32
   rep: dec
 
-
 symbols_count_time:
   symbols: true
   time: true

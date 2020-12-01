@@ -162,10 +162,24 @@ git clone https://github.com/theme-next/hexo-theme-next themes/next
 
 #### hexo-symbols-count-time
 
-在终端输入以下命令即可。
+在终端输入以下命令。
 
 ```
 npm install hexo-symbols-count-time
+```
+
+在根目录的`_config.yml`文件末尾添加以下内容即可。若无效，则执行`hexo clean`，然后再生成。
+
+```
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  exclude_codeblock: false
+  awl: 4
+  wpm: 275
+  suffix: "mins."
 ```
 
 项目链接如下。
