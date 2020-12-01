@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#000">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-flash.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="安装Linux系统，可以完成许多在Windows下无法完成的操作。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux系统的安装与配置">
+<meta property="og:url" content="http://yoursite.com/posts/Linux-Installation.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="安装Linux系统，可以完成许多在Windows下无法完成的操作。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/006y8mN6ly1g9b69on8vmj30p10fj74q.jpg">
+<meta property="article:published_time" content="2019-11-26T01:50:29.000Z">
+<meta property="article:modified_time" content="2020-11-18T13:07:42.700Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/006y8mN6ly1g9b69on8vmj30p10fj74q.jpg">
+
+<link rel="canonical" href="http://yoursite.com/posts/Linux-Installation.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Linux系统的安装与配置 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/Linux-Installation.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Linux系统的安装与配置
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-11-26 09:50:29" itemprop="dateCreated datePublished" datetime="2019-11-26T09:50:29+08:00">2019-11-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-18 21:07:42" itemprop="dateModified" datetime="2020-11-18T21:07:42+08:00">2020-11-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span></span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>NaN:aN</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9b69on8vmj30p10fj74q.jpg"></p>
+<p>安装Linux系统，可以完成许多在Windows下无法完成的操作。</p>
+<a id="more"></a>
+
+<h1 id="安装与引导"><a href="#安装与引导" class="headerlink" title="安装与引导"></a>安装与引导</h1><h2 id="安装Ubuntu"><a href="#安装Ubuntu" class="headerlink" title="安装Ubuntu"></a>安装Ubuntu</h2><p>用<code>rufus</code>将ubuntu镜像拷录到U盘。备份硬盘的<code>EFI</code>，用Diskgenius为ubuntu安装分配空间，并格式化为NTFS。</p>
+<p>重启电脑并从U盘启动，进入安装程序。在安装选项中选<code>其他选项</code>，进入分区界面。选择刚才的分区并点击<code>分区</code>，格式选择<code>Ex4</code>，挂载点选择<code>/</code>，在<code>安装启动引导器的设备</code>下拉菜单，选择刚才格式化好的分区，点击安装。</p>
+<p>安装完成后，若Windows引导丢失，可用Diskgenius将备份好的EFI/BOOT中的Microsoft文件夹复制到EFI分区的EFI/BOOT下，与ubuntu文件夹同级即可。</p>
+<h2 id="grub2引导器配置"><a href="#grub2引导器配置" class="headerlink" title="grub2引导器配置"></a>grub2引导器配置</h2><p>在grub2引导器下（若无引导菜单则在开机时按Shift），按<code>C</code>进入控制台模式并输入以下命令，以得到grub所支持的显示器的分辨率。记下后按<code>Esc</code>退出控制台模式并进入Ubuntu。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">videoinfo</span><br></pre></td></tr></table></figure>
+
+<p>打开终端输入以下命令，以获取文件管理器的超级权限。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nautilus</span><br></pre></td></tr></table></figure>
+
+<p>编辑系统盘的<code>/etc/default/grub</code>并修改以下位置，然后在终端点击<code>Ctrl+C</code>结束程序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- #GRUB_GFXMODE&#x3D;640x480</span><br><span class="line">+ GRUB_GFXMODE&#x3D;1920x1080,1366x768,1280x1024,1024x768,800x600,640x480</span><br></pre></td></tr></table></figure>
+
+<p>打开以下链接，下载<code>Grub-theme-vimix</code>主题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.gnome-look.org&#x2F;p&#x2F;1009236&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>解压后终端切换到解压目录并输入以下命令，完成grub主题安装并更新grub引导器。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;Install</span><br><span class="line">sudo update-grub</span><br></pre></td></tr></table></figure>
+
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="安装Deepin容器"><a href="#安装Deepin容器" class="headerlink" title="安装Deepin容器"></a>安装Deepin容器</h2><p>Deepin容器可用于安装Windows软件。打开终端并输入以下命令，安装<code>git</code>并下载<code>deepin-wine</code>容器到工作目录。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br><span class="line">git clone https:&#x2F;&#x2F;gitee.com&#x2F;wszqkzqk&#x2F;deepin-wine-for-ubuntu.git</span><br></pre></td></tr></table></figure>
+
+<p>到工作目录下解压压缩包后，将终端切换到解压目录下并输入以下命令，完成deepin-wine容器安装。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;install.sh</span><br></pre></td></tr></table></figure>
+
+<p>若出现错误，则执行以下命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;KDE-install.sh</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h2><h3 id="软件合集"><a href="#软件合集" class="headerlink" title="软件合集"></a>软件合集</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;luong-komorebi&#x2F;Awesome-Linux-Software</span><br></pre></td></tr></table></figure>
+
+<h3 id="Deepin-wine仓库"><a href="#Deepin-wine仓库" class="headerlink" title="Deepin-wine仓库"></a>Deepin-wine仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;deepin&#x2F;pool&#x2F;non-free&#x2F;d</span><br></pre></td></tr></table></figure>
+
+<h3 id="TIM"><a href="#TIM" class="headerlink" title="TIM"></a>TIM</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;deepin&#x2F;pool&#x2F;non-free&#x2F;d&#x2F;deepin.com.qq.office&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h3 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;deepin&#x2F;pool&#x2F;non-free&#x2F;d&#x2F;deepin.com.wechat&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Google-Chrome"><a href="#Google-Chrome" class="headerlink" title="Google Chrome"></a>Google Chrome</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.google.cn&#x2F;chrome&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h3 id="WPS-Office"><a href="#WPS-Office" class="headerlink" title="WPS Office"></a>WPS Office</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.wps.cn&#x2F;product&#x2F;wpslinux&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h3 id="网易云音乐"><a href="#网易云音乐" class="headerlink" title="网易云音乐"></a>网易云音乐</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;download</span><br></pre></td></tr></table></figure>
+
+<h3 id="Smplayer"><a href="#Smplayer" class="headerlink" title="Smplayer"></a>Smplayer</h3><p>在终端利用<code>apt-get</code>命令安装。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install smplayer</span><br></pre></td></tr></table></figure>
+
+<h3 id="Spotify"><a href="#Spotify" class="headerlink" title="Spotify"></a>Spotify</h3><p>在终端输入以下命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-key adv --keyserver hkp:&#x2F;&#x2F;keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886</span><br><span class="line">echo deb http:&#x2F;&#x2F;repository.spotify.com stable non-free | sudo tee &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;spotify.list</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install spotify-client</span><br></pre></td></tr></table></figure>
+
+<h3 id="Musixmatch"><a href="#Musixmatch" class="headerlink" title="Musixmatch"></a>Musixmatch</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;adv.musixmatch.com&#x2F;r&#x2F;wwwmxm</span><br></pre></td></tr></table></figure>
+
+<h2 id="系统美化"><a href="#系统美化" class="headerlink" title="系统美化"></a>系统美化</h2><p>打开终端并输入以下命令，安装主题管理器及部分扩展。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gnome-tweak-tool</span><br><span class="line">sudo apt-get install gnome-shell-extensions</span><br></pre></td></tr></table></figure>
+
+<p>重启电脑后，在应用程序菜单（即Dashboard）打开<code>优化</code>，此时<code>外观</code>选项卡下，<code>Shell</code>处于禁用状态。</p>
+<p>打开以下网站，网站提示需要安装扩展。进入Chrome扩展程序商店，搜索<code>GNOME Shell integration</code>并完成安装。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;extensions.gnome.org&#x2F;extension&#x2F;19&#x2F;user-themes&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>再次进入网站，提示未检测到本机主机连接器。打开终端并输入以下命令以修复。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install chrome-gnome-shell</span><br></pre></td></tr></table></figure>
+
+<p>完成安装后再次打开网站，正常情况下不再弹出错误信息。安装该网站上的扩展<code>User Themes</code>，再次打开<code>优化</code>，发现Shell主题已经可用。</p>
+<p>到以下网站安装<code>dash-to-panel</code>插件，使桌面呈现任务栏风格。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;extensions.gnome.org&#x2F;extension&#x2F;1160&#x2F;dash-to-panel&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>到以下网站下载最新版Vimix主题的zip包。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;vinceliuice&#x2F;vimix-gtk-themes&#x2F;releases</span><br></pre></td></tr></table></figure>
+
+<p>解压后在终端打开解压目录位置，并输入以下命令完成Vimix主题的安装。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;Install</span><br></pre></td></tr></table></figure>
+
+<p>到以下网站下载最新版Vimix图标的zip包。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;vinceliuice&#x2F;vimix-icon-theme&#x2F;releases</span><br></pre></td></tr></table></figure>
+
+<p>解压后在终端打开解压目录位置，并输入以下命令完成Vimix图标的安装。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;Install.sh</span><br></pre></td></tr></table></figure>
+
+<p>打开<code>优化</code>，在<code>外观</code>选项卡中更改下列选项。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">应用程序为Vimix-dark-laptop-ruby</span><br><span class="line">光标为DMZ-Black</span><br><span class="line">图表为Vimix-Paper</span><br><span class="line">Shell为Vimix-dark-laptop-ruby</span><br><span class="line">背景&#x2F;锁屏自定义</span><br></pre></td></tr></table></figure>
+
+<p>在<code>桌面</code>选项卡中打开<code>回收站</code>，在<code>扩展</code>选项卡中打开<code>Dash to panel</code>并点击设置图标，进行个性化设置。</p>
+<h2 id="显示此电脑图标"><a href="#显示此电脑图标" class="headerlink" title="显示此电脑图标"></a>显示此电脑图标</h2><p>打开文件浏览器并转到<code>/usr/share/applications</code>，找到<code>Files</code>文件并拖到桌面。右键点击<code>属性</code>，切换到<code>权限</code>选项卡，勾选<code>允许作为程序执行文件</code>，双击打开后文件变成图标。右键点击<code>属性</code>，选择自定义图标，路径如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;home&#x2F;用户名&#x2F;.local&#x2F;share&#x2F;icons&#x2F;Vimix-Paper&#x2F;scalable&#x2F;devices&#x2F;computer.png</span><br></pre></td></tr></table></figure>
+
+<h2 id="Dashboard自动分类"><a href="#Dashboard自动分类" class="headerlink" title="Dashboard自动分类"></a>Dashboard自动分类</h2><p>打开以下命令，下载压缩包后解压。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;BenJetson&#x2F;gnome-dash-fix&#x2F;releases</span><br></pre></td></tr></table></figure>
+
+<p>终端切换到当前工作目录并输入以下命令执行脚本即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod +x interactive.py</span><br><span class="line"> .&#x2F;interactive.py</span><br></pre></td></tr></table></figure>
+
+<h1 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h1><h2 id="显示Ubuntu的隐藏文件"><a href="#显示Ubuntu的隐藏文件" class="headerlink" title="显示Ubuntu的隐藏文件"></a>显示Ubuntu的隐藏文件</h2><p>按<code>Ctrl+H</code>即可，文件（夹）名称前带有<code>.</code>的为隐藏文件。</p>
+<h2 id="快速打开终端"><a href="#快速打开终端" class="headerlink" title="快速打开终端"></a>快速打开终端</h2><p>任意位置按<code>Ctrl+Alt+T</code>即可。</p>
+<h2 id="安装rpm包"><a href="#安装rpm包" class="headerlink" title="安装rpm包"></a>安装rpm包</h2><p>在终端输入以下命令即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install alien</span><br><span class="line">sudo alien xxxx.rpm &#x2F;&#x2F; 将rpm转换为deb</span><br><span class="line">sudo dpkg -i xxxx.deb</span><br></pre></td></tr></table></figure>
+
+<h2 id="更换软件源"><a href="#更换软件源" class="headerlink" title="更换软件源"></a>更换软件源</h2><h3 id="仍在维护的版本"><a href="#仍在维护的版本" class="headerlink" title="仍在维护的版本"></a>仍在维护的版本</h3><p>对于仍在维护的版本，打开<code>软件与更新</code>，在<code>下载自</code>处下拉并选择其他站点，然后选择中国的站点即可。</p>
+<p>若无法安装，则可以在<code>其他软件</code>选项卡中取消部分软件源的勾选。</p>
+<h3 id="已经停止维护的版本"><a href="#已经停止维护的版本" class="headerlink" title="已经停止维护的版本"></a>已经停止维护的版本</h3><p>对于已经停止维护的版本，需要手动指定软件源。</p>
+<p>打开终端并执行以下命令以打开软件源列表文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit &#x2F;etc&#x2F;apt&#x2F;sources.list</span><br></pre></td></tr></table></figure>
+
+<p>将文件内容替换成以下格式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb 源地址&#x2F;ubuntu&#x2F; 版本代号 main restricted universe multiverse</span><br><span class="line">deb 源地址&#x2F;ubuntu&#x2F; 版本代号-security main restricted universe multiverse</span><br><span class="line">deb 源地址&#x2F;ubuntu&#x2F; 版本代号-updates main restricted universe multiverse</span><br><span class="line">deb 源地址&#x2F;ubuntu&#x2F; 版本代号-proposed main restricted universe multiverse</span><br><span class="line">deb 源地址&#x2F;ubuntu&#x2F; 版本代号-backports main restricted universe multiverse</span><br><span class="line">deb-src 源地址&#x2F;ubuntu&#x2F; 版本代号 main restricted universe multiverse</span><br><span class="line">deb-src 源地址&#x2F;ubuntu&#x2F; 版本代号-security main restricted universe multiverse</span><br><span class="line">deb-src 源地址&#x2F;ubuntu&#x2F; 版本代号-updates main restricted universe multiverse</span><br><span class="line">deb-src 源地址&#x2F;ubuntu&#x2F; 版本代号-proposed main restricted universe multiverse</span><br><span class="line">deb-src 源地址&#x2F;ubuntu&#x2F; 版本代号-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+
+<p>以中科大的源为例，对于Ubuntu 14.10，内容如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb http:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;ubuntu-old-releases&#x2F;ubuntu&#x2F; utopic main restricted universe multiverse</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;ubuntu-old-releases&#x2F;ubuntu&#x2F; utopic-security main restricted universe multiverse</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;ubuntu-old-releases&#x2F;ubuntu&#x2F; utopic-updates main restricted universe multiverse</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;ubuntu-old-releases&#x2F;ubuntu&#x2F; utopic-proposed main restricted universe multiverse</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;ubuntu-old-releases&#x2F;ubuntu&#x2F; utopic-backports main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;ubuntu-old-releases&#x2F;ubuntu&#x2F; utopic main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;ubuntu-old-releases&#x2F;ubuntu&#x2F; utopic-security main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;ubuntu-old-releases&#x2F;ubuntu&#x2F; utopic-updates main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;ubuntu-old-releases&#x2F;ubuntu&#x2F; utopic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;ubuntu-old-releases&#x2F;ubuntu&#x2F; utopic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+
+<p>如果是长期更新源，即带有LTS后缀的版本，以Ububtu 12.04(LTS)为例，内容如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb http:&#x2F;&#x2F;debian.ustc.edu.cn&#x2F;ubuntu&#x2F; precise main restricted universe multiverse</span><br><span class="line">deb http:&#x2F;&#x2F;debian.ustc.edu.cn&#x2F;ubuntu&#x2F; precise-backports restricted universe multiverse</span><br><span class="line">deb http:&#x2F;&#x2F;debian.ustc.edu.cn&#x2F;ubuntu&#x2F; precise-proposed main restricted universe multiverse</span><br><span class="line">deb http:&#x2F;&#x2F;debian.ustc.edu.cn&#x2F;ubuntu&#x2F; precise-security main restricted universe multiverse</span><br><span class="line">deb http:&#x2F;&#x2F;debian.ustc.edu.cn&#x2F;ubuntu&#x2F; precise-updates main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;debian.ustc.edu.cn&#x2F;ubuntu&#x2F; precise main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;debian.ustc.edu.cn&#x2F;ubuntu&#x2F; precise-backports main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;debian.ustc.edu.cn&#x2F;ubuntu&#x2F; precise-proposed main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;debian.ustc.edu.cn&#x2F;ubuntu&#x2F; precise-security main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;debian.ustc.edu.cn&#x2F;ubuntu&#x2F; precise-updates main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+
+<p>其它版本只需将utopic或precise更换为对应的Codename即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">breezy</span><br><span class="line">dapper</span><br><span class="line">edgy</span><br><span class="line">feisty</span><br><span class="line">gutsy</span><br><span class="line">hardy</span><br><span class="line">hoary</span><br><span class="line">intrepid</span><br><span class="line">jaunty</span><br><span class="line">karmic</span><br><span class="line">lucid</span><br><span class="line">maverick</span><br><span class="line">natty</span><br><span class="line">oneiric</span><br><span class="line">quantal</span><br><span class="line">raring</span><br><span class="line">saucy</span><br><span class="line">utopic</span><br><span class="line">warty</span><br></pre></td></tr></table></figure>
+
+<p>也可通过以下命令查看Codename。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsb_release -a</span><br></pre></td></tr></table></figure>
+
+<p>保存文件后运行以下命令以生效。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
+
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="WPS-for-Linux显示系统缺失字体"><a href="#WPS-for-Linux显示系统缺失字体" class="headerlink" title="WPS for Linux显示系统缺失字体"></a>WPS for Linux显示系统缺失字体</h3><p>打开以下链接下载字体库。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">网站 &#x2F; https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1xil5_i9M53fM7EQNIt3Mcw</span><br><span class="line">密码 &#x2F; jqnu</span><br></pre></td></tr></table></figure>
+
+<p>在终端输入以下命令，重启WPS即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo unzip wps_symbol_fonts.zip -d &#x2F;usr&#x2F;share&#x2F;fonts&#x2F;wps-office</span><br></pre></td></tr></table></figure>
+
+<h3 id="Shift打不出特殊符号"><a href="#Shift打不出特殊符号" class="headerlink" title="Shift打不出特殊符号"></a>Shift打不出特殊符号</h3><p>将键盘布局设置成英语（美国）即可。</p>
+<h3 id="输入管理员密码后提示「认证失败」"><a href="#输入管理员密码后提示「认证失败」" class="headerlink" title="输入管理员密码后提示「认证失败」"></a>输入管理员密码后提示「认证失败」</h3><p>打开终端并输入以下命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo vi &#x2F;etc&#x2F;pam.d&#x2F;gdm-autologin</span><br><span class="line">sudo vi &#x2F;etc&#x2F;pam.d&#x2F;gdm-password</span><br></pre></td></tr></table></figure>
+
+<p>两者均注释以下行即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">auth requied pam_succeed_if.so user !&#x3D; root quiet success</span><br></pre></td></tr></table></figure>
+
+<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><h2 id="Ubuntu的引导"><a href="#Ubuntu的引导" class="headerlink" title="Ubuntu的引导"></a>Ubuntu的引导</h2><h3 id="grub-grub2引导器"><a href="#grub-grub2引导器" class="headerlink" title="grub/grub2引导器"></a>grub/grub2引导器</h3><p>Ubuntu通过grub/grub2引导器引导系统，主要文件（夹）有三个。</p>
+<h4 id="etc-grub-d"><a href="#etc-grub-d" class="headerlink" title="/etc/grub.d"></a>/etc/grub.d</h4><p>配置grub启动项，其中40_custom和41_custom供手动添加启动项。</p>
+<h4 id="etc-default-grub"><a href="#etc-default-grub" class="headerlink" title="/etc/default/grub"></a>/etc/default/grub</h4><p>配置grub2引导器的各种选项，包括分辨率等。</p>
+<h4 id="boot-grub-grub-cfg"><a href="#boot-grub-grub-cfg" class="headerlink" title="/boot/grub/grub.cfg"></a>/boot/grub/grub.cfg</h4><p>根据前两个文件（夹）通过命令sudo update-grub生成，每次update会生成不同的grub.cfg，启动时根据grub.cfg生成引导菜单</p>
+<h3 id="安装Grub-Customizer管理引导项"><a href="#安装Grub-Customizer管理引导项" class="headerlink" title="安装Grub-Customizer管理引导项"></a>安装Grub-Customizer管理引导项</h3><p>在终端输入以下命令即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:danielrichter2007&#x2F;grub-customizer</span><br><span class="line">sudo apt-get install grub-customizer</span><br></pre></td></tr></table></figure>
+
+<h2 id="Linux切换终端工作目录的方法"><a href="#Linux切换终端工作目录的方法" class="headerlink" title="Linux切换终端工作目录的方法"></a>Linux切换终端工作目录的方法</h2><p>可利用<code>cd</code>命令，或文件管理器打开需切换到的工作目录，右键点击<code>在终端打开</code>。</p>
+<h2 id="Linux的软件安装目录"><a href="#Linux的软件安装目录" class="headerlink" title="Linux的软件安装目录"></a>Linux的软件安装目录</h2><h3 id="usr"><a href="#usr" class="headerlink" title="/usr"></a>/usr</h3><p>系统级的目录，可以理解为C:/Windows/。</p>
+<h3 id="usr-lib"><a href="#usr-lib" class="headerlink" title="/usr/lib"></a>/usr/lib</h3><p>理解为C:/Windows/System32。</p>
+<h3 id="usr-local"><a href="#usr-local" class="headerlink" title="/usr/local"></a>/usr/local</h3><p>用户级的程序目录，可以理解为C:/Progrem Files/。用户自己编译的软件默认会安装到这个目录下。</p>
+<h3 id="opt"><a href="#opt" class="headerlink" title="/opt"></a>/opt</h3><p>用户级的程序目录，可以理解为D:/Software，opt有可选的意思，这里可以用于放置第三方大型软件（或游戏），当你不需要时，直接rm -rf掉即可。在硬盘容量不够时，也可将/opt单独挂载到其他磁盘上使用。</p>
+<h3 id="usr-src"><a href="#usr-src" class="headerlink" title="/usr/src"></a>/usr/src</h3><p>系统级的源码目录。</p>
+<h3 id="usr-local-src"><a href="#usr-local-src" class="headerlink" title="/usr/local/src"></a>/usr/local/src</h3><p>用户级的源码目录。</p>
+<h1 id="相关下载"><a href="#相关下载" class="headerlink" title="相关下载"></a>相关下载</h1><h2 id="Ubuntu镜像"><a href="#Ubuntu镜像" class="headerlink" title="Ubuntu镜像"></a>Ubuntu镜像</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.ubuntu.com&#x2F;download</span><br></pre></td></tr></table></figure>
+
+<h2 id="rufus"><a href="#rufus" class="headerlink" title="rufus"></a>rufus</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;rufus.ie&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="国内老版本ubuntu更新源地址以及sources-list的配置方法"><a href="#国内老版本ubuntu更新源地址以及sources-list的配置方法" class="headerlink" title="国内老版本ubuntu更新源地址以及sources.list的配置方法"></a>国内老版本ubuntu更新源地址以及sources.list的配置方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;blog.csdn.net&#x2F;snaking616&#x2F;article&#x2F;details&#x2F;52966634</span><br></pre></td></tr></table></figure>
+
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/Chromium-OS-Installation.html" rel="prev" title="安装Chromium OS到硬盘实现双启动">
+      <i class="fa fa-chevron-left"></i> 安装Chromium OS到硬盘实现双启动
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/BIOS-Editing-And-Flashing.html" rel="next" title="刷写BIOS和调整整机性能的操作">
+      刷写BIOS和调整整机性能的操作 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%B8%8E%E5%BC%95%E5%AF%BC"><span class="nav-text">安装与引导</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Ubuntu"><span class="nav-text">安装Ubuntu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#grub2%E5%BC%95%E5%AF%BC%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="nav-text">grub2引导器配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Deepin%E5%AE%B9%E5%99%A8"><span class="nav-text">安装Deepin容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6"><span class="nav-text">常用软件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%90%88%E9%9B%86"><span class="nav-text">软件合集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deepin-wine%E4%BB%93%E5%BA%93"><span class="nav-text">Deepin-wine仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TIM"><span class="nav-text">TIM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1"><span class="nav-text">微信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Google-Chrome"><span class="nav-text">Google Chrome</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WPS-Office"><span class="nav-text">WPS Office</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90"><span class="nav-text">网易云音乐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Smplayer"><span class="nav-text">Smplayer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spotify"><span class="nav-text">Spotify</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Musixmatch"><span class="nav-text">Musixmatch</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96"><span class="nav-text">系统美化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%BE%E7%A4%BA%E6%AD%A4%E7%94%B5%E8%84%91%E5%9B%BE%E6%A0%87"><span class="nav-text">显示此电脑图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dashboard%E8%87%AA%E5%8A%A8%E5%88%86%E7%B1%BB"><span class="nav-text">Dashboard自动分类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7"><span class="nav-text">使用技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%BE%E7%A4%BAUbuntu%E7%9A%84%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6"><span class="nav-text">显示Ubuntu的隐藏文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%89%93%E5%BC%80%E7%BB%88%E7%AB%AF"><span class="nav-text">快速打开终端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85rpm%E5%8C%85"><span class="nav-text">安装rpm包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E8%BD%AF%E4%BB%B6%E6%BA%90"><span class="nav-text">更换软件源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8D%E5%9C%A8%E7%BB%B4%E6%8A%A4%E7%9A%84%E7%89%88%E6%9C%AC"><span class="nav-text">仍在维护的版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%B2%E7%BB%8F%E5%81%9C%E6%AD%A2%E7%BB%B4%E6%8A%A4%E7%9A%84%E7%89%88%E6%9C%AC"><span class="nav-text">已经停止维护的版本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#WPS-for-Linux%E6%98%BE%E7%A4%BA%E7%B3%BB%E7%BB%9F%E7%BC%BA%E5%A4%B1%E5%AD%97%E4%BD%93"><span class="nav-text">WPS for Linux显示系统缺失字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shift%E6%89%93%E4%B8%8D%E5%87%BA%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"><span class="nav-text">Shift打不出特殊符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E7%AE%A1%E7%90%86%E5%91%98%E5%AF%86%E7%A0%81%E5%90%8E%E6%8F%90%E7%A4%BA%E3%80%8C%E8%AE%A4%E8%AF%81%E5%A4%B1%E8%B4%A5%E3%80%8D"><span class="nav-text">输入管理员密码后提示「认证失败」</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%99%84%E5%BD%95"><span class="nav-text">附录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ubuntu%E7%9A%84%E5%BC%95%E5%AF%BC"><span class="nav-text">Ubuntu的引导</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#grub-grub2%E5%BC%95%E5%AF%BC%E5%99%A8"><span class="nav-text">grub&#x2F;grub2引导器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#etc-grub-d"><span class="nav-text">&#x2F;etc&#x2F;grub.d</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#etc-default-grub"><span class="nav-text">&#x2F;etc&#x2F;default&#x2F;grub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#boot-grub-grub-cfg"><span class="nav-text">&#x2F;boot&#x2F;grub&#x2F;grub.cfg</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Grub-Customizer%E7%AE%A1%E7%90%86%E5%BC%95%E5%AF%BC%E9%A1%B9"><span class="nav-text">安装Grub-Customizer管理引导项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux%E5%88%87%E6%8D%A2%E7%BB%88%E7%AB%AF%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-text">Linux切换终端工作目录的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95"><span class="nav-text">Linux的软件安装目录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#usr"><span class="nav-text">&#x2F;usr</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#usr-lib"><span class="nav-text">&#x2F;usr&#x2F;lib</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#usr-local"><span class="nav-text">&#x2F;usr&#x2F;local</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#opt"><span class="nav-text">&#x2F;opt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#usr-src"><span class="nav-text">&#x2F;usr&#x2F;src</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#usr-local-src"><span class="nav-text">&#x2F;usr&#x2F;local&#x2F;src</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E4%B8%8B%E8%BD%BD"><span class="nav-text">相关下载</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ubuntu%E9%95%9C%E5%83%8F"><span class="nav-text">Ubuntu镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rufus"><span class="nav-text">rufus</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BD%E5%86%85%E8%80%81%E7%89%88%E6%9C%ACubuntu%E6%9B%B4%E6%96%B0%E6%BA%90%E5%9C%B0%E5%9D%80%E4%BB%A5%E5%8F%8Asources-list%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95"><span class="nav-text">国内老版本ubuntu更新源地址以及sources.list的配置方法</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/guanpeiheng1" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;guanpeiheng1" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:guanpeiheng1@gmail.com" title="E-Mail → mailto:guanpeiheng1@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/paytonguan" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;paytonguan" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://plus.google.com/guanpeiheng1" title="Google → https:&#x2F;&#x2F;plus.google.com&#x2F;guanpeiheng1" rel="noopener" target="_blank"><i class="fab fa-google fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/guanpeiheng1" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;guanpeiheng1" rel="noopener" target="_blank"><i class="fab fa-facebook fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://youtube.com/guanpeiheng1" title="YouTube → https:&#x2F;&#x2F;youtube.com&#x2F;guanpeiheng1" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://instagram.com/guanpeiheng1" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;guanpeiheng1" rel="noopener" target="_blank"><i class="fab fa-instagram fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">NaNm</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">NaN:aN</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
