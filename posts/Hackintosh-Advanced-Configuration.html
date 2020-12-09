@@ -33,7 +33,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/006tNbRwly1g9lvpyjs1dj31c00u07wo.jpg">
 <meta property="article:published_time" content="2019-12-01T17:55:29.000Z">
-<meta property="article:modified_time" content="2020-12-06T17:15:00.830Z">
+<meta property="article:modified_time" content="2020-12-09T01:41:40.410Z">
 <meta property="article:author" content="Payton">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://tva1.sinaimg.cn/large/006tNbRwly1g9lvpyjs1dj31c00u07wo.jpg">
@@ -216,7 +216,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-07 01:15:00" itemprop="dateModified" datetime="2020-12-07T01:15:00+08:00">2020-12-07</time>
+                <time title="修改时间：2020-12-09 09:41:40" itemprop="dateModified" datetime="2020-12-09T09:41:40+08:00">2020-12-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -224,7 +224,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a>
+                  <a href="/categories/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a>
                 </span>
             </span>
 
@@ -248,7 +248,7 @@
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1:55</span>
+              <span>1:56</span>
             </span>
 
         </div>
@@ -313,7 +313,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 绕过SMBIOS限制</span><br><span class="line">defaults write http:&#x2F;&#x2F;com.apple .sidecar.display allowAllDevices -bool YES</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 解锁系统首选项中「Sidebar」页</span><br><span class="line">defaults write com.apple.sidecar.display hasShownPref -bool true</span><br></pre></td></tr></table></figure>
 
 <h2 id="Catalina下AR9565的驱动方法"><a href="#Catalina下AR9565的驱动方法" class="headerlink" title="Catalina下AR9565的驱动方法"></a>Catalina下AR9565的驱动方法</h2><p>需将<code>corecapture.kext</code>、<code>CoreCaptureResponder.kext</code>和<code>IO80211Family.kext</code>放入SLE下，且将SLE下的IO80211Family.kext与IO80211FamilyV2.kext更改扩展名以使其失效。完成替换后，需修复权限并重建缓存。</p>
-<h1 id="升级macOS-Big-Sur"><a href="#升级macOS-Big-Sur" class="headerlink" title="升级macOS Big Sur"></a>升级macOS Big Sur</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">首先需要更新所有的Kexts！！！</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">如果显示安装包过期或损坏，不能安装macos请退出到恢复界面，并保持断网（只要不插着网线），左上角实用工具————终端————输入以下代码：</span><br><span class="line">date 032208102015.20</span><br><span class="line">然后再左上角退出进入安装，安装位置选择刚抹掉的磁盘，切记别选错，然后等待，等它中间会自动重启2-3次</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line">不能将IO80211Family放到Clover&#x2F;OC的kexts文件夹，否则启动就panic</span><br><span class="line"></span><br><span class="line">不用电池修补hotpatch也可以正常工作（好奇怪）</span><br><span class="line"></span><br><span class="line">各系统镜像下载链接：</span><br><span class="line">https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;143960664</span><br><span class="line"></span><br><span class="line">资料：</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;khronokernel&#x2F;Legacy-Kexts&#x2F;tree&#x2F;master&#x2F;Injectors&#x2F;Zip</span><br></pre></td></tr></table></figure>
+<h1 id="升级macOS-Big-Sur"><a href="#升级macOS-Big-Sur" class="headerlink" title="升级macOS Big Sur"></a>升级macOS Big Sur</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">首先需要更新所有的Kexts！！！</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">如果显示安装包过期或损坏，不能安装macos请退出到恢复界面，并保持断网（只要不插着网线），左上角实用工具————终端————输入以下代码：</span><br><span class="line">date 032208102015.20</span><br><span class="line">然后再左上角退出进入安装，安装位置选择刚抹掉的磁盘，切记别选错，然后等待，等它中间会自动重启2-3次</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line">不能将IO80211Family放到Clover&#x2F;OC的kexts文件夹，否则启动就panic</span><br><span class="line"></span><br><span class="line">不用电池修补hotpatch也可以正常工作（好奇怪）</span><br><span class="line"></span><br><span class="line">各系统镜像下载链接：</span><br><span class="line">https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;143960664</span><br><span class="line"></span><br><span class="line">资料：</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;khronokernel&#x2F;Legacy-Kexts&#x2F;tree&#x2F;master&#x2F;Injectors&#x2F;Zip</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">无法通过AppleIntelInfo.kext获取当前CPU状态</span><br><span class="line">所以没办法进行下面的超频：</span><br><span class="line">https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;49183461</span><br><span class="line">https:&#x2F;&#x2F;www.tonymacx86.com&#x2F;threads&#x2F;skylake-hwp-enable.214915&#x2F;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;158770898</span><br><span class="line"></span><br><span class="line">安装或升级后的影响（部分由远景摘抄总结，侵权请联系删除）：</span><br><span class="line"></span><br><span class="line">Unix内核更新了，Darwin更新到了20.0.0，以下是uname得到的信息：</span><br><span class="line"></span><br><span class="line">Darwin VincentdeMacBook-Pro.local 20.0.0 Darwin Kernel Version 20.0.0: Sat Jun 13 17:58:16 PDT 2020; root:xnu-7090.0.0.111.5~1&#x2F;RELEASE_X86_64 x86_64</span><br><span class="line"></span><br><span class="line">1.即使关闭SIP，root用户依然无法挂载根目录为读写，这意味着直接修改&#x2F;System里面的文件已经不可能了（要到Recovery模式用命令行修改）</span><br><span class="line"></span><br><span class="line">影响范围（这些方法可能已失效）：</span><br><span class="line"></span><br><span class="line">single-user mode（单用户模式 -s）不能再加载launchd服务</span><br><span class="line"></span><br><span class="line">在之前的macOS中，我们可以在单用户模式运行launchctl load &#x2F;S*&#x2F;L*&#x2F;LaunchDaemons&#x2F;com.apple.opendirectory.plist来加载OpenDirectory服务来修改root密码和管理员密码。现在我测试的结果是，这个方法已经失效。launchctl在单用户模式加载的服务会自动停止运行，同时屏幕显示service only ran for 5 seconds，无法再在单用户模式找回管理员密码了。同时，单用户模式中加载kext的kextload命令也失去了效果。</span><br><span class="line"></span><br><span class="line">1.旧版修改&#x2F;S&#x2F;L&#x2F;E加载kext的方法</span><br><span class="line"></span><br><span class="line">2.修改&#x2F;System&#x2F;Library开启HiDPI的方法</span><br><span class="line"></span><br><span class="line">3.修改&#x2F;System&#x2F;Frameworks&#x2F;CoreDisplay.framework和添加旧版kext至S&#x2F;L&#x2F;E来开启Intel HD3000核芯显卡和老旧Nvidia（Tesla和Fermi架构GPU）的方法</span><br><span class="line"></span><br><span class="line">4.kext的加载受到严格限制，旧版本的kext几乎全军覆没</span><br><span class="line"></span><br><span class="line">5.Lilu不能被加载，kextutil kextload这些命令都被&#x2F;usr&#x2F;bin&#x2F;kmutil接替，现在运行kextutil kextload会自动跳到kmutil，不允许绕过系统安全性设置来加载kext。这意味着root用户也不能通过Terminal来加载kext了。现在只能靠OpenCore的注入功能直接把kext注入到kernelcache里面才有效，是的，黑果要升级这个系统，还有很多驱动的问题需要解决。比如opencore要更新适配新的mach内核，驱动要找到绕过苹果限制的方式加载了。目前来看现有版本的lilu不能被正确加载。</span><br><span class="line"></span><br><span class="line">之前opencore的开发组已经料想到macOS10.16（当然现在是叫macOS 11.0）会禁止修改系统的kext了，所以他们做出了一套可以不修改系统，直接把kext注入到kernelcache的方法，这个方法可能还管用，具体要等opencore的更新。</span><br><span class="line"></span><br><span class="line">黑果要升级这个系统，还有很多驱动的问题需要解决。比如opencore要更新适配新的mach内核，驱动要找到绕过苹果限制的方式加载了。目前来看现有版本的lilu不能被正确加载。</span><br><span class="line"></span><br><span class="line">总结：这次系统更新大幅削弱了root的权限，修改系统将变得更加困难和麻烦</span><br></pre></td></tr></table></figure>
 
@@ -4875,7 +4875,7 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -4947,7 +4947,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">18:32</span>
+    <span title="站点阅读时长">18:39</span>
 </div>
 
         

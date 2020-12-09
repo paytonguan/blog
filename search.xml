@@ -1,55 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Android使用技巧总结</title>
-    <url>/posts/Android-Skills.html</url>
-    <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegao3bnq6j31800kvaax.jpg"></p>
-<p>安卓使用技巧。</p>
-<a id="more"></a>
-
-<h1 id="破解软件"><a href="#破解软件" class="headerlink" title="破解软件"></a>破解软件</h1><h2 id="软件库"><a href="#软件库" class="headerlink" title="软件库"></a>软件库</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;590m.com&#x2F;dir&#x2F;845023-30099335-9e922b</span><br><span class="line">https:&#x2F;&#x2F;306t.com&#x2F;dir&#x2F;14633726-31244416-26771f</span><br><span class="line">https:&#x2F;&#x2F;www.uptodown.com&#x2F;android</span><br></pre></td></tr></table></figure>
-
-<h2 id="微信抢红包插件"><a href="#微信抢红包插件" class="headerlink" title="微信抢红包插件"></a>微信抢红包插件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;geeeeeeeeek&#x2F;WeChatLuckyMoney</span><br></pre></td></tr></table></figure>
-
-<h1 id="Root-Busybox-Xposed"><a href="#Root-Busybox-Xposed" class="headerlink" title="Root/Busybox/Xposed"></a>Root/Busybox/Xposed</h1><p>翻墙后安装Google Play，然后安装Busybox。准备好系统原镜像，安装Magisk Manager并打开，通过修补boot的方式得到新镜像，并通过Odin进行线刷即可。</p>
-<h1 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h1><p>在安卓手机上通过安装相应的APP，可以运行电脑系统。</p>
-<h2 id="Bochs运行XP"><a href="#Bochs运行XP" class="headerlink" title="Bochs运行XP"></a>Bochs运行XP</h2><h3 id="安装前的准备"><a href="#安装前的准备" class="headerlink" title="安装前的准备"></a>安装前的准备</h3><h4 id="Bochs安装包"><a href="#Bochs安装包" class="headerlink" title="Bochs安装包"></a>Bochs安装包</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1i4FDLGT</span><br></pre></td></tr></table></figure>
-
-<h4 id="适用于Bochs的XP镜像"><a href="#适用于Bochs的XP镜像" class="headerlink" title="适用于Bochs的XP镜像"></a>适用于Bochs的XP镜像</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1gfj4a2Z</span><br></pre></td></tr></table></figure>
-
-<h3 id="安装流程"><a href="#安装流程" class="headerlink" title="安装流程"></a>安装流程</h3><p>将apk格式的Bochs安装包和img格式的Windows系统镜像传送到手机，放置于任何目录下均可。安装Bochs，将<code>ata0-master</code>前面的复选框选中，然后点击<code>select</code>。选择img格式的系统镜像文件Windows.img，其他项无需更改。点击顶部的<code>HARDWARE</code>选项卡，按照以下设置。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CPU Model无需更改</span><br><span class="line">Chipset选择i440fx</span><br><span class="line">内存设置为517MB（可根据手机配置调整）</span><br><span class="line">VGA Card设置为cirrus_5446</span><br><span class="line">Sound Card设置为sb16</span><br><span class="line">Ethernet Card设置为rtl8029</span><br><span class="line">PCI设置中，Slot1设置为cirrus，Slot2设置为ne2k，Slot3设置为es1370，Slot4设置为voodoo，Slot5设置为none</span><br></pre></td></tr></table></figure>
-
-<p>点击顶部的MISC选项卡，将Full screen前面的复选框选中以使Windows可以全屏运行。点击右上角绿色的Start按钮以启动Windows。</p>
-<h2 id="Limbo运行XP"><a href="#Limbo运行XP" class="headerlink" title="Limbo运行XP"></a>Limbo运行XP</h2><h3 id="安装前的准备-1"><a href="#安装前的准备-1" class="headerlink" title="安装前的准备"></a>安装前的准备</h3><h4 id="Limbo安装包"><a href="#Limbo安装包" class="headerlink" title="Limbo安装包"></a>Limbo安装包</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1pK7ua3D</span><br></pre></td></tr></table></figure>
-
-<h4 id="适用于Limbo的XP镜像"><a href="#适用于Limbo的XP镜像" class="headerlink" title="适用于Limbo的XP镜像"></a>适用于Limbo的XP镜像</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1miRtjJU</span><br></pre></td></tr></table></figure>
-
-<h3 id="安装流程-1"><a href="#安装流程-1" class="headerlink" title="安装流程"></a>安装流程</h3><p>将apk格式的Limbo安装包和qcow2格式的Windows系统镜像传送到手机，放置于任何目录下均可。</p>
-<p>安装Limbo并打开，加载虚拟机下选择新建，在弹出对话框中输入虚拟机名称，然后按照以下设置。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">用户界面项选择SDL</span><br><span class="line">CPU型号项选择athlon</span><br><span class="line">CPU核心数设置为2（可根据手机配置调整）</span><br><span class="line">运存项设置为64（可根据手机配置调整）</span><br><span class="line">光驱和软盘A和软盘B项留空</span><br><span class="line">硬盘A项点击后选择打开，选择qcow2格式的镜像文件</span><br><span class="line">硬盘B项留空</span><br><span class="line">引导设备项选择硬盘</span><br><span class="line">网络配置项选择User</span><br><span class="line">网卡项选择rtl8139</span><br><span class="line">显卡配置项选择cirrus</span><br><span class="line">声卡配置项选择sb16</span><br><span class="line">高级设置全部留空</span><br><span class="line">勾选多线程AIO右侧的复选框（警告可以无视）</span><br></pre></td></tr></table></figure>
-
-<p>全部设置完毕后，回到顶部，点击运行以启动Windows。</p>
-<h2 id="APQ模拟器运行XP"><a href="#APQ模拟器运行XP" class="headerlink" title="APQ模拟器运行XP"></a>APQ模拟器运行XP</h2><h3 id="安装前的准备-2"><a href="#安装前的准备-2" class="headerlink" title="安装前的准备"></a>安装前的准备</h3><h4 id="APQ安装包"><a href="#APQ安装包" class="headerlink" title="APQ安装包"></a>APQ安装包</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.cr173.com&#x2F;soft&#x2F;692055.html</span><br></pre></td></tr></table></figure>
-
-<h4 id="Zarchiver安装包"><a href="#Zarchiver安装包" class="headerlink" title="Zarchiver安装包"></a>Zarchiver安装包</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;dl.pconline.com.cn&#x2F;download&#x2F;1815731.html</span><br></pre></td></tr></table></figure>
-
-<h4 id="适用于APQ的XP镜像"><a href="#适用于APQ的XP镜像" class="headerlink" title="适用于APQ的XP镜像"></a>适用于APQ的XP镜像</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1_aoxWWi0mfN1cXyS3V4I6g</span><br></pre></td></tr></table></figure>
-
-<h3 id="安装流程-2"><a href="#安装流程-2" class="headerlink" title="安装流程"></a>安装流程</h3><p>获取root权限。打开APQ，点击data分区，等待文件处理完成。</p>
-<p>打开zarchiver（自己百度下载，不知道为什么复制不了链接），找到手机内存的APQ打开，找到kolibri.conf文件。将以下位置的文件名改为下载好的镜像文件即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#第一块硬盘，硬盘镜像文件为xp.qcow2，应位于SD卡上的APQ主目录下或写绝对路径</span><br><span class="line">-fda kolibri.img</span><br></pre></td></tr></table></figure>
-
-<h2 id="Termux运行Linux"><a href="#Termux运行Linux" class="headerlink" title="Termux运行Linux"></a>Termux运行Linux</h2><p>无需root，安装完成后打开即可使用。</p>
-<h1 id="LineageOS"><a href="#LineageOS" class="headerlink" title="LineageOS"></a>LineageOS</h1><p>对于LG G3的教程如下。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;linustechtips.com&#x2F;topic&#x2F;1058206-lg-g3-lineageos-tutorial&#x2F;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Technology</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Git和Github的安装与使用</title>
     <url>/posts/Git-Installation.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9asa3gs51j30go08caa5.jpg"></p>
@@ -58,7 +9,7 @@
 
 <h1 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h1><h2 id="开源项目合集"><a href="#开源项目合集" class="headerlink" title="开源项目合集"></a>开源项目合集</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;1c7&#x2F;chinese-independent-developer</span><br></pre></td></tr></table></figure>
 
-<h2 id="Github学习"><a href="#Github学习" class="headerlink" title="Github学习"></a>Github学习</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;try.github.io&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;phodal&#x2F;github</span><br><span class="line">https:&#x2F;&#x2F;github.phodal.com&#x2F;</span><br></pre></td></tr></table></figure>
+<h2 id="Github学习"><a href="#Github学习" class="headerlink" title="Github学习"></a>Github学习</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;try.github.io&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;phodal&#x2F;github</span><br><span class="line">https:&#x2F;&#x2F;github.phodal.com&#x2F;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Github Gist</span><br><span class="line">代码随时存放，可以设为secret或public</span><br><span class="line">https:&#x2F;&#x2F;gist.github.com&#x2F;</span><br><span class="line">Lepton: Github Gist管理工具</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;hackjutsu&#x2F;Lepton</span><br></pre></td></tr></table></figure>
 
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>Mac系统下已自带git，Windows需自行下载。</p>
 <h2 id="Mac用户"><a href="#Mac用户" class="headerlink" title="Mac用户"></a>Mac用户</h2><p>打开终端，输入<code>git</code>，正常情况下会弹出git的帮助窗口。</p>
@@ -170,7 +121,13 @@
 <h3 id="git配置命令"><a href="#git配置命令" class="headerlink" title="git配置命令"></a>git配置命令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config</span><br></pre></td></tr></table></figure>
 
 <h1 id="Git大文件上传"><a href="#Git大文件上传" class="headerlink" title="Git大文件上传"></a>Git大文件上传</h1><p>git对于超过100MB的文件默认不能传，出现<code>GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.</code>错误。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 解决方法：</span><br><span class="line">https:&#x2F;&#x2F;git-lfs.github.com&#x2F;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 解决方法：</span><br><span class="line">https:&#x2F;&#x2F;git-lfs.github.com&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 切换到项目目录后运行</span><br><span class="line">git lfs install</span><br><span class="line">git lfs track &quot;*.psd&quot;</span><br><span class="line">git add .gitattributes</span><br><span class="line">&#x2F;&#x2F; 然后正常add，commit，push</span><br></pre></td></tr></table></figure>
+
+<h1 id="gitingore"><a href="#gitingore" class="headerlink" title=".gitingore"></a>.gitingore</h1><p>告诉Git哪些文件不需要添加到版本管理中。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;699ed86028c2</span><br></pre></td></tr></table></figure>
+
+<p>文件内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># dependencies  npm包文件</span><br><span class="line">&#x2F;node_modules</span><br><span class="line"></span><br><span class="line"># production  打包文件</span><br><span class="line">&#x2F;build</span><br><span class="line"></span><br><span class="line"># misc </span><br><span class="line">.DS_Store</span><br><span class="line"></span><br><span class="line">npm-debug.log*</span><br></pre></td></tr></table></figure>
 
 <h1 id="Git下载加速"><a href="#Git下载加速" class="headerlink" title="Git下载加速"></a>Git下载加速</h1><h2 id="通过Gitee"><a href="#通过Gitee" class="headerlink" title="通过Gitee"></a>通过Gitee</h2><p>打开以下链接并完成注册和登录。然后创建仓库，在新建仓库页选择<code>导入已有仓库</code>，复制需要下载的git链接，点击创建，然后下载即可。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;gitee.com&#x2F;</span><br></pre></td></tr></table></figure>
@@ -255,7 +212,7 @@
 <h2 id="GIT命令汇总"><a href="#GIT命令汇总" class="headerlink" title="GIT命令汇总"></a>GIT命令汇总</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;shaofan.org&#x2F;git-2&#x2F;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Skill</category>
       </categories>
   </entry>
   <entry>
@@ -321,7 +278,7 @@
 <h2 id="有了这十几个网站，没有你找不到的电子书"><a href="#有了这十几个网站，没有你找不到的电子书" class="headerlink" title="有了这十几个网站，没有你找不到的电子书"></a>有了这十几个网站，没有你找不到的电子书</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;53064677</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Life</category>
+        <category>Skill</category>
       </categories>
       <tags>
         <tag>Life</tag>
@@ -487,7 +444,7 @@
 
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Linux</category>
       </categories>
   </entry>
   <entry>
@@ -609,6 +566,10 @@
 <td>brew -v</td>
 <td>Homebrew版本</td>
 </tr>
+<tr>
+<td>brew search [包名]</td>
+<td>搜索可安装的包</td>
+</tr>
 </tbody></table>
 <h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><p>在终端输入以下命令。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#96;brew --prefix&#96;</span><br><span class="line">rm -rf Cellar</span><br><span class="line">brew prune</span><br><span class="line">rm &#96;git ls-files&#96;</span><br><span class="line">rm -r Library&#x2F;Homebrew Library&#x2F;Aliases Library&#x2F;Formula Library&#x2F;Contributions</span><br><span class="line">rm -rf .git</span><br><span class="line">rm -rf ~&#x2F;Library&#x2F;Caches&#x2F;Homebrew</span><br></pre></td></tr></table></figure>
@@ -617,7 +578,7 @@
 
 <h2 id="Hyper"><a href="#Hyper" class="headerlink" title="Hyper"></a>Hyper</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;hyper.is&#x2F;#installation</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Computer</category>
       </categories>
   </entry>
   <entry>
@@ -634,7 +595,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">A &#x3D; [];</span><br><span class="line">parfor i &#x3D; 1:100</span><br><span class="line">	for j &#x3D; 1:100</span><br><span class="line">		A(i,j) &#x3D; 1; &#x2F;&#x2F; 错误，因为A(i,j)需要依赖i</span><br><span class="line">	end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Skill</category>
       </categories>
   </entry>
   <entry>
@@ -703,7 +664,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">csrutil disable</span><br><span class="line">sudo mount -uw &#x2F;</span><br><span class="line">sudo ln -s &quot;$(xcrun --show-sdk-path)&#x2F;usr&#x2F;include&quot; &#x2F;usr&#x2F;include</span><br><span class="line">export SDKROOT&#x3D;&quot;$(xcrun --show-sdk-path)&quot;</span><br><span class="line">echo &quot;export SDKROOT&#x3D;\&quot;\$(xcrun --show-sdk-path)\&quot;&quot; &gt;&gt; ~&#x2F;.bash_profile</span><br><span class="line">sudo DevToolsSecurity -enable</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Skill</category>
       </categories>
   </entry>
   <entry>
@@ -785,7 +746,7 @@
 <h2 id="Why-it-doesn’t-work-·-Issue-44-·-demon386-SmartMarkdown"><a href="#Why-it-doesn’t-work-·-Issue-44-·-demon386-SmartMarkdown" class="headerlink" title="Why it doesn’t work? · Issue #44 · demon386/SmartMarkdown"></a>Why it doesn’t work? · Issue #44 · demon386/SmartMarkdown</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;demon386&#x2F;SmartMarkdown&#x2F;issues&#x2F;44</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Skill</category>
       </categories>
   </entry>
   <entry>
@@ -830,7 +791,7 @@
 
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Skill</category>
       </categories>
   </entry>
   <entry>
@@ -840,7 +801,9 @@
 <p>利用Github个人主页和Hexo，可轻松搭建出精美的个人博客。</p>
 <a id="more"></a>
 
-<h1 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h1><h2 id="搭建前的准备"><a href="#搭建前的准备" class="headerlink" title="搭建前的准备"></a>搭建前的准备</h2><p>需已安装<code>node</code>和<code>git</code>，且git已连接到github。</p>
+<h1 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 利用gitbook搭建博客</span><br><span class="line">通过github账号登录gitbook，新建workspace</span><br><span class="line">https:&#x2F;&#x2F;www.gitbook.com&#x2F;</span><br><span class="line">在github账号新建一个repository，假设为gitbook</span><br><span class="line">在工作区中Integrations-github，连接github账号，选择上面的repo</span><br><span class="line">为实现本地push一个repo时同步更新gitbook，选择Github to Gitbook</span><br><span class="line"></span><br><span class="line">连接后按照基本的github操作，本地连接远程的repo:</span><br><span class="line">cd &#x2F;Volumes&#x2F;Payton\&#39;s</span><br><span class="line">git clone git@github.com:guanpeiheng1&#x2F;gitbook.git</span><br><span class="line">cd &#x2F;Volumes&#x2F;Payton\&#39;s&#x2F;gitbook</span><br><span class="line">git init</span><br><span class="line">git remote add origin git@github.com:guanpeiheng1&#x2F;gitbook.git</span><br><span class="line">git pull</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;...&quot;</span><br><span class="line">git push origin master</span><br><span class="line"></span><br><span class="line">需要修改SUMMARY.md的目录结构，不然不会生效</span><br><span class="line">如果需要“子章节”可以使用 Tab 缩进来实现（最多支持三级标题）</span><br><span class="line"></span><br><span class="line">目录结构：</span><br><span class="line">文件夹为group</span><br><span class="line">文件夹内每一个md为一个页面</span><br><span class="line"></span><br><span class="line">部署后不行的话要重新去连接一下giuhub</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="搭建前的准备"><a href="#搭建前的准备" class="headerlink" title="搭建前的准备"></a>搭建前的准备</h2><p>需已安装<code>node</code>和<code>git</code>，且git已连接到github。</p>
 <h2 id="创建Github个人主页"><a href="#创建Github个人主页" class="headerlink" title="创建Github个人主页"></a>创建Github个人主页</h2><p>登录网页版Github，点击<code>New</code>以新建仓库，仓库名必须为<code>用户名.github.io</code>。点击<code>Create new file</code>，文件为<code>index.html</code>，内容为<code>Hello Github Pages</code>。复制仓库名，在浏览器中访问，若看到刚才输入的内容，则创建成功。</p>
 <h2 id="搭建Hexo环境"><a href="#搭建Hexo环境" class="headerlink" title="搭建Hexo环境"></a>搭建Hexo环境</h2><p>命令行/终端切换到想安装的目录（此处为E盘），执行以下安装命令。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
@@ -1076,7 +1039,7 @@
 
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Skill</category>
       </categories>
   </entry>
   <entry>
@@ -1142,7 +1105,7 @@
 
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Computer</category>
       </categories>
   </entry>
   <entry>
@@ -1226,7 +1189,7 @@
 
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Computer</category>
       </categories>
   </entry>
   <entry>
@@ -1290,7 +1253,7 @@
 <h2 id="balena-Etcher"><a href="#balena-Etcher" class="headerlink" title="balena Etcher"></a>balena Etcher</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.balena.io&#x2F;etcher&#x2F;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Chromium OS</category>
       </categories>
   </entry>
   <entry>
@@ -1734,7 +1697,7 @@
 </tbody></table>
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Computer</category>
       </categories>
   </entry>
   <entry>
@@ -1744,7 +1707,11 @@
 <p>总结了一些MacOS的使用技巧，不断更新。</p>
 <a id="more"></a>
 
-<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="构建Xcode时提示「xcode-select-error-tool-‘xcodebuild’-requires-Xcode-but-active-developer-directory」"><a href="#构建Xcode时提示「xcode-select-error-tool-‘xcodebuild’-requires-Xcode-but-active-developer-directory」" class="headerlink" title="构建Xcode时提示「xcode-select: error: tool ‘xcodebuild’ requires Xcode, but active developer directory」"></a>构建Xcode时提示「xcode-select: error: tool ‘xcodebuild’ requires Xcode, but active developer directory」</h2><p>在终端输入以下命令即可。</p>
+<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">._文件删除：</span><br><span class="line">dot_clean [路径]</span><br><span class="line"></span><br><span class="line">.DS_Store：</span><br><span class="line">https:&#x2F;&#x2F;qastack.cn&#x2F;apple&#x2F;14980&#x2F;why-are-dot-underscore-_-files-created-and-how-can-i-avoid-them</span><br><span class="line">https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;fdaa8be7f6c3</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="构建Xcode时提示「xcode-select-error-tool-‘xcodebuild’-requires-Xcode-but-active-developer-directory」"><a href="#构建Xcode时提示「xcode-select-error-tool-‘xcodebuild’-requires-Xcode-but-active-developer-directory」" class="headerlink" title="构建Xcode时提示「xcode-select: error: tool ‘xcodebuild’ requires Xcode, but active developer directory」"></a>构建Xcode时提示「xcode-select: error: tool ‘xcodebuild’ requires Xcode, but active developer directory」</h2><p>在终端输入以下命令即可。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo xcode-select --switch &#x2F;Applications&#x2F;Xcode.app&#x2F;Contents&#x2F;Developer&#x2F; </span><br><span class="line">xcode-select --print-path</span><br><span class="line">&#x2F;&#x2F; 输出&#x2F;Applications&#x2F;Xcode.app&#x2F;Contents&#x2F;Developer</span><br></pre></td></tr></table></figure>
 
 <h2 id="App在Catalina下提示已损坏"><a href="#App在Catalina下提示已损坏" class="headerlink" title="App在Catalina下提示已损坏"></a>App在Catalina下提示已损坏</h2><p>在终端输入以下命令即可。</p>
@@ -2088,7 +2055,7 @@
 
 <h2 id="将逻辑卷转换为物理卷"><a href="#将逻辑卷转换为物理卷" class="headerlink" title="将逻辑卷转换为物理卷"></a>将逻辑卷转换为物理卷</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo diskutil corestorage revert &#x2F;</span><br></pre></td></tr></table></figure>
 
-<h2 id="查看加载驱动"><a href="#查看加载驱动" class="headerlink" title="查看加载驱动"></a>查看加载驱动</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 查看所有加载的驱动</span><br><span class="line">kextstat</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 查看除苹果以外加载的驱动</span><br><span class="line">kextstat | grep -v &quot;com.apple&quot;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 查看加载的非官方驱动</span><br><span class="line">kextstat | grep -v &quot;com.apple&quot; | grep -v &quot;Energy&quot;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 查看特定名称的驱动（以ACPIplat为例）</span><br><span class="line">kextstat| grep -y acpiplat</span><br></pre></td></tr></table></figure>
+<h2 id="查看加载驱动"><a href="#查看加载驱动" class="headerlink" title="查看加载驱动"></a>查看加载驱动</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 查看所有加载的驱动</span><br><span class="line">kextstat</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 查看除苹果以外加载的驱动</span><br><span class="line">kextstat | grep -v &quot;com.apple&quot;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 查看加载的非官方驱动</span><br><span class="line">kextstat | grep -v &quot;com.apple&quot; | grep -v &quot;Energy&quot;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 查看特定名称的驱动（以ACPIplat为例）</span><br><span class="line">kextstat | grep -y acpiplat</span><br><span class="line">kextstat | grep -i acpiplat</span><br></pre></td></tr></table></figure>
 
 <h2 id="Finder显示完整文件路径"><a href="#Finder显示完整文件路径" class="headerlink" title="Finder显示完整文件路径"></a>Finder显示完整文件路径</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 显示</span><br><span class="line">defaults write com.apple.finder _FXShowPosixPathInTitle -bool TRUE &amp;&amp; killall Finder</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 取消显示</span><br><span class="line">defaults write com.apple.finder _FXShowPosixPathInTitle -bool FALSE &amp;&amp; killall Finder</span><br></pre></td></tr></table></figure>
 
@@ -2254,7 +2221,7 @@
 <h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="pyenv"><a href="#pyenv" class="headerlink" title="pyenv"></a>pyenv</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;pyenv&#x2F;pyenv</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;pyenv&#x2F;pyenv-installer</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;jiansoung&#x2F;issues-list&#x2F;issues&#x2F;13</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Mac</category>
       </categories>
   </entry>
   <entry>
@@ -2612,7 +2579,7 @@
 <h2 id="WSL2下让Ubuntu20-04安装Gnome桌面"><a href="#WSL2下让Ubuntu20-04安装Gnome桌面" class="headerlink" title="WSL2下让Ubuntu20.04安装Gnome桌面"></a>WSL2下让Ubuntu20.04安装Gnome桌面</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.chengxuzhilu.com&#x2F;2395.html</span><br><span class="line">https:&#x2F;&#x2F;www.most-useful.com&#x2F;ubuntu-20-04-desktop-gui-on-wsl-2-on-surface-pro-4.html</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Windows</category>
       </categories>
   </entry>
   <entry>
@@ -4106,7 +4073,16 @@
 
 <h3 id="免费VPS"><a href="#免费VPS" class="headerlink" title="免费VPS"></a>免费VPS</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;freeserver.us&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.youneed.win&#x2F;</span><br></pre></td></tr></table></figure>
 
-<h3 id="待整理"><a href="#待整理" class="headerlink" title="待整理"></a>待整理</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;program-think.blogspot.com&#x2F;2010&#x2F;04&#x2F;howto-cover-your-tracks-0.html</span><br><span class="line">https:&#x2F;&#x2F;program-think.blogspot.com&#x2F;2009&#x2F;09&#x2F;break-through-gfw-with-tor.html</span><br><span class="line">https:&#x2F;&#x2F;program-think.medium.com&#x2F;%E5%A6%82%E4%BD%95%E7%BF%BB%E5%A2%99-%E7%B3%BB%E5%88%97-%E5%85%B3%E4%BA%8E-tor-%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94-daa1115ac300</span><br><span class="line">https:&#x2F;&#x2F;blog.csdn.net&#x2F;Angle_Cal&#x2F;article&#x2F;details&#x2F;78249612s</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Privoxy教程</span><br><span class="line">https:&#x2F;&#x2F;www.cnblogs.com&#x2F;hongdada&#x2F;p&#x2F;10787924.html</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Sub-Store教程</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;Peng-YM&#x2F;Sub-Store</span><br><span class="line">https:&#x2F;&#x2F;www.notion.so&#x2F;Sub-Store-6259586994d34c11a4ced5c406264b46</span><br></pre></td></tr></table></figure>
+<h3 id="待整理"><a href="#待整理" class="headerlink" title="待整理"></a>待整理</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;program-think.blogspot.com&#x2F;2010&#x2F;04&#x2F;howto-cover-your-tracks-0.html</span><br><span class="line">https:&#x2F;&#x2F;program-think.blogspot.com&#x2F;2009&#x2F;09&#x2F;break-through-gfw-with-tor.html</span><br><span class="line">https:&#x2F;&#x2F;program-think.medium.com&#x2F;%E5%A6%82%E4%BD%95%E7%BF%BB%E5%A2%99-%E7%B3%BB%E5%88%97-%E5%85%B3%E4%BA%8E-tor-%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94-daa1115ac300</span><br><span class="line">https:&#x2F;&#x2F;blog.csdn.net&#x2F;Angle_Cal&#x2F;article&#x2F;details&#x2F;78249612s</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Privoxy教程</span><br><span class="line">https:&#x2F;&#x2F;www.cnblogs.com&#x2F;hongdada&#x2F;p&#x2F;10787924.html</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Surge for Mac</span><br><span class="line">破解：</span><br><span class="line">https:&#x2F;&#x2F;blog.cat73.org&#x2F;20190528&#x2F;2019052801.surge3-crack&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;gist.github.com&#x2F;whyliam&#x2F;a27bae053207dcb4c46bb5c9cf8ef274</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;wiki.kache.moe&#x2F;2019&#x2F;12&#x2F;11&#x2F;macOS-ClashX&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;merlinblog.xyz&#x2F;wiki&#x2F;ClashX.html</span><br><span class="line"></span><br><span class="line">ClashX Pro:</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;yichengchen&#x2F;clashX&#x2F;releases&#x2F;tag&#x2F;1.31.1</span><br><span class="line">https:&#x2F;&#x2F;install.appcenter.ms&#x2F;users&#x2F;clashx&#x2F;apps&#x2F;clashx-pro&#x2F;distribution_groups&#x2F;public</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;V2RaySSR&#x2F;Tools&#x2F;blob&#x2F;master&#x2F;clash.yaml</span><br><span class="line"></span><br><span class="line">远程配置：配置-托管配置-管理</span><br><span class="line">配置文件（可填写服务器信息）：</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;V2RaySSR&#x2F;Tools&#x2F;blob&#x2F;master&#x2F;clash.yaml</span><br><span class="line">https:&#x2F;&#x2F;www.hijk.pw&#x2F;clash_template.yaml </span><br><span class="line">https:&#x2F;&#x2F;lancellc.gitbook.io&#x2F;clash&#x2F;clash-config-file&#x2F;an-example-configuration-file</span><br><span class="line"></span><br><span class="line">也可https:&#x2F;&#x2F;bianyuan.xyz&#x2F;生成</span><br><span class="line">然后ClashX内配置-打开本地配置文件夹，选择配置好的配置文件并使用</span><br><span class="line"></span><br><span class="line">点击 ClashX 状态栏图标，将「出站模式」选为「规则判断」，在「Proxy」或「Global」策略组中可以选择自己喜欢的线路，然后点击「设置为系统代理」即可开始使用。</span><br><span class="line">注：「Proxy」策略组是用于访问国际互联网的默认策略，一般情况下，所有国际网络的访问都通过该策略组中选择的节点进行连接。</span><br><span class="line"></span><br><span class="line">点击状态栏上小猫咪图标-》控制台，进入ClashX主界面</span><br><span class="line">在主界面选择代理规则：</span><br><span class="line"></span><br><span class="line">首先在主界面的PROXY里选择使用的节点：默认是“自动选择快速节点”，也可以指定使用某个节点。</span><br><span class="line"></span><br><span class="line">其次在“Final”选择默认规则：DIRECT表示直连，PROXY走代理。个人建议使用直连，如果网站打不开再选择代理。</span><br><span class="line">在主界面点击“设置”，设置启用系统代理和选择代理模式：代理模式有全局、基于规则路由和直连，(可以认为)对应其他客户端的全局模式、PAC模式和禁用系统代理。绝大多数情况建议使用规则模式。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">策略组的特性：</span><br><span class="line">可以包含节点或其他策略组</span><br><span class="line">具有多种不同的策略类型</span><br><span class="line">服务于规则</span><br><span class="line">不同策略组的作用：</span><br><span class="line">Global (或Proxy，视配置文件具体情况而定)：主要规则代理分组，需手动选定一个你要使用的节点作为默认的节点。无其它修改的话，所有国际网络的访问都通过该策略组中选择的节点进行连接。</span><br><span class="line">Netflix：指Netflix流媒体的分组，如选择香港节点，则显示港区内容。其它地区的同理。</span><br><span class="line">Spotify：指Spotify流媒体的分组，仅用于加速访问。Spotify执行锁区政策，根据账号注册时所在地进行内容展示，更换节点并不能显示其它地区的版权内容。</span><br><span class="line">YouTube：指YouTube流媒体的分组，使用不同的线路将展示不同地区的特色内容。</span><br><span class="line">Telegram：指Telegram（电报）的分组，国内手机号注册的用户选择新加坡线路也许可以加速（注意：是也许。因为+86号段注册的电报用户数据都在新加坡数据中心）。</span><br><span class="line">China：访问中国大陆网站所用的策略。大陆用户请选择 DIRECT （直接连接）；海外用户请选择回国线路。</span><br><span class="line">Auto：软件每隔一段时间会自动进行测试并排序，自动评选出延迟最低的节点，当其它策略组里选择了 auto 策略，那么效果就是该策略组将每隔一段时间自动切换到延迟最低的线路。</span><br><span class="line">（如果你有登陆脸书、IG等社交媒体，不建议使用该策略，以免由于IP变动造成风控，甚至封号。）</span><br><span class="line">fallback：可用性策略。与故障转移类似，按照节点顺序选择第一个可用节点。</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 订阅转换：</span><br><span class="line">Sub-store教程：</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;Peng-YM&#x2F;Sub-Store</span><br><span class="line">https:&#x2F;&#x2F;www.notion.so&#x2F;Sub-Store-6259586994d34c11a4ced5c406264b46</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;Peng-YM&#x2F;Sub-Store&#x2F;tree&#x2F;master&#x2F;config</span><br><span class="line"></span><br><span class="line">-添加</span><br><span class="line">1. Loon</span><br><span class="line">打开 Loon 并点击下方 配置 栏，点击 插件</span><br><span class="line">+，URL：</span><br><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Peng-YM&#x2F;Sub-Store&#x2F;master&#x2F;config&#x2F;Loon.plugin</span><br><span class="line">确保 PROXY 栏右侧区域不出现任何文字，点击 保存 即可</span><br><span class="line">或手动配置：</span><br><span class="line">[MITM]</span><br><span class="line">hostname&#x3D;sub.store</span><br><span class="line"></span><br><span class="line">[Script]</span><br><span class="line">http-request https?:\&#x2F;\&#x2F;sub\.store script-path&#x3D;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Peng-YM&#x2F;Sub-Store&#x2F;master&#x2F;backend&#x2F;sub-store.js, requires-body&#x3D;true, timeout&#x3D;120, tag&#x3D;Sub-Store</span><br><span class="line"></span><br><span class="line">2. Surge</span><br><span class="line">目前iOS商店版本的bug未修复，暂时无法使用。TF用户直接使用模块。</span><br><span class="line">模块订阅，外部资源刷新</span><br><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Peng-YM&#x2F;Sub-Store&#x2F;master&#x2F;config&#x2F;Surge.sgmodule</span><br><span class="line"></span><br><span class="line">3. QX</span><br><span class="line">QX暂时需要通过backend方式使用，添加如下配置。注意，HTTP backend开关需要打开！</span><br><span class="line"></span><br><span class="line">[http_backend]</span><br><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Peng-YM&#x2F;Sub-Store&#x2F;master&#x2F;backend&#x2F;sub-store.js, tag&#x3D;Sub-Store, path&#x3D;&#x2F;, enabled&#x3D;true</span><br><span class="line"></span><br><span class="line">-访问</span><br><span class="line">Loon &amp; Surge</span><br><span class="line">浏览器打开以下网址，可添加到主屏幕：</span><br><span class="line">https:&#x2F;&#x2F;sub-store.vercel.app</span><br><span class="line">QuanX</span><br><span class="line">通过JSBox版本：从JSBox的Erots商店获取，一些有用的脚本：</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;LiuGuoGY&#x2F;JSBox-addins</span><br><span class="line">https:&#x2F;&#x2F;xteko.com&#x2F;redir?name&#x3D;Light%20Store&amp;url&#x3D;https%3A%2F%2Fraw.githubusercontent.com%2FZiGmaX809%2FJsBoxLib%2Fmaster%2FLight_Store%2FLight%2520Store.box</span><br><span class="line">在JSBox打开脚本，点击设置，查看环境是不是quanx，不是的话就要切回quanx</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">使用：</span><br><span class="line">订阅，+号，填写订阅名称和地址，设置好后点进去可以看到节点</span><br><span class="line">可以多个订阅组合在一起，合并成一个不订阅，订阅-文件夹符号即可</span><br><span class="line"></span><br><span class="line">本地解析：</span><br><span class="line">在要修改的订阅三个点-编辑，</span><br><span class="line">常用选项：过滤节点</span><br><span class="line">节点操作：添加各个过滤模式，同一类型过滤模式可以添加多个，会按照顺序执行</span><br><span class="line">保留模式下关键词过滤只能单个匹配，需要添加多个过滤器实现多关键词</span><br><span class="line">过滤模式则可匹配多个词</span><br><span class="line">关键词重命名可以一次操作多个关键词</span><br><span class="line">脚本操作可以远程脚本或者本地脚本，脚本库：</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;Peng-YM&#x2F;Sub-Store&#x2F;tree&#x2F;master&#x2F;scripts</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 其余同类型作品：</span><br><span class="line">Surgio：</span><br><span class="line">https:&#x2F;&#x2F;surgio.js.org&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;surgioproject&#x2F;surgio</span><br><span class="line"></span><br><span class="line">subconverter：</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;tindy2013&#x2F;subconverter</span><br><span class="line"></span><br><span class="line">ConfigConverter:</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;ImSingee&#x2F;ConfigConverter</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 订阅类型转换</span><br><span class="line">https:&#x2F;&#x2F;bianyuan.xyz&#x2F;</span><br></pre></td></tr></table></figure>
 
 <h1 id="现成工具"><a href="#现成工具" class="headerlink" title="现成工具"></a>现成工具</h1><h2 id="谷歌镜像网站"><a href="#谷歌镜像网站" class="headerlink" title="谷歌镜像网站"></a>谷歌镜像网站</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">自建：</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;aploium&#x2F;zmirror</span><br></pre></td></tr></table></figure>
 
@@ -4791,7 +4767,7 @@
 <h2 id="SS二级（前置）代理设置实现中转加速观看BBC-iPlayer"><a href="#SS二级（前置）代理设置实现中转加速观看BBC-iPlayer" class="headerlink" title="SS二级（前置）代理设置实现中转加速观看BBC iPlayer"></a>SS二级（前置）代理设置实现中转加速观看BBC iPlayer</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.itengli.com&#x2F;ss-relay&#x2F;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>World</category>
       </categories>
   </entry>
   <entry>
@@ -5422,7 +5398,8 @@
 
 <h2 id="GIF库"><a href="#GIF库" class="headerlink" title="GIF库"></a>GIF库</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;giphy.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.gifparanoia.org&#x2F;</span><br></pre></td></tr></table></figure>
 
-<h1 id="图片处理"><a href="#图片处理" class="headerlink" title="图片处理"></a>图片处理</h1><h2 id="去水印"><a href="#去水印" class="headerlink" title="去水印"></a>去水印</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s&#x2F;sJSUm68TTbCosUAWoSDWyQ</span><br></pre></td></tr></table></figure>
+<h1 id="PS相关"><a href="#PS相关" class="headerlink" title="PS相关"></a>PS相关</h1><h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><h3 id="topaz-remask-5"><a href="#topaz-remask-5" class="headerlink" title="topaz remask 5"></a>topaz remask 5</h3><p>用于抠图。</p>
+<h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><h3 id="去水印"><a href="#去水印" class="headerlink" title="去水印"></a>去水印</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s&#x2F;sJSUm68TTbCosUAWoSDWyQ</span><br></pre></td></tr></table></figure>
 
 <h2 id="图片拼接"><a href="#图片拼接" class="headerlink" title="图片拼接"></a>图片拼接</h2><h3 id="网站-2"><a href="#网站-2" class="headerlink" title="网站"></a>网站</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;xiuxiu.web.meitu.com&#x2F;</span><br></pre></td></tr></table></figure>
 
@@ -5992,7 +5969,7 @@
 
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Skill</category>
       </categories>
   </entry>
   <entry>
@@ -6861,7 +6838,7 @@
 <h2 id="win98se-install-freezes"><a href="#win98se-install-freezes" class="headerlink" title="win98se install freezes"></a>win98se install freezes</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;forums.techguy.org&#x2F;threads&#x2F;win98se-install-freezes.384921&#x2F;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Windows</category>
       </categories>
   </entry>
   <entry>
@@ -8084,7 +8061,7 @@
 
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Mac</category>
       </categories>
   </entry>
   <entry>
@@ -9611,7 +9588,7 @@
 <h1 id="庞博"><a href="#庞博" class="headerlink" title="庞博"></a>庞博</h1><h2 id="采访-13"><a href="#采访-13" class="headerlink" title="采访"></a>采访</h2><h3 id="【20190913】北方公园NorthPark「庞博：大王的变与不变」"><a href="#【20190913】北方公园NorthPark「庞博：大王的变与不变」" class="headerlink" title="【20190913】北方公园NorthPark「庞博：大王的变与不变」"></a>【20190913】北方公园NorthPark「庞博：大王的变与不变」</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;weibo.com&#x2F;ttarticle&#x2F;p&#x2F;show?id&#x3D;2309404416012987531303</span><br><span class="line">https:&#x2F;&#x2F;baijiahao.baidu.com&#x2F;s?id&#x3D;1644499364015701681&amp;wfr&#x3D;spider&amp;for&#x3D;pc</span><br><span class="line">http:&#x2F;&#x2F;www.myzaker.com&#x2F;article&#x2F;5d7a58dc8e9f09606d4102bc&#x2F;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Life</category>
+        <category>Other</category>
       </categories>
   </entry>
   <entry>
@@ -9620,6 +9597,8 @@
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkl3459bh3j30u00gvtba.jpg"></p>
 <p>对程序员有用的工具集合。</p>
 <a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Notion教程：</span><br><span class="line">https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;49263306</span><br><span class="line">https:&#x2F;&#x2F;sspai.com&#x2F;post&#x2F;57464</span><br></pre></td></tr></table></figure>
 
 <h1 id="相关知识"><a href="#相关知识" class="headerlink" title="相关知识"></a>相关知识</h1><h2 id="云应用部署"><a href="#云应用部署" class="headerlink" title="云应用部署"></a>云应用部署</h2><p>通过存放到Github等代码平台的镜像仓库，可以在云服务商部署应用。仓库应当有docker，以供服务器创建容器。</p>
 <h2 id="IaaS-SaaS-BaaS"><a href="#IaaS-SaaS-BaaS" class="headerlink" title="IaaS/SaaS/BaaS"></a>IaaS/SaaS/BaaS</h2><p>IaaS指提供系统（可以自己选）或者储存空间之类的硬件，软件要自己手动装。</p>
@@ -12194,7 +12173,7 @@
 <h2 id="hoochanlon-w3-goto-world"><a href="#hoochanlon-w3-goto-world" class="headerlink" title="hoochanlon/w3-goto-world"></a>hoochanlon/w3-goto-world</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;hoochanlon&#x2F;w3-goto-world</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Skill</category>
       </categories>
   </entry>
   <entry>
@@ -12253,7 +12232,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 绕过SMBIOS限制</span><br><span class="line">defaults write http:&#x2F;&#x2F;com.apple .sidecar.display allowAllDevices -bool YES</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 解锁系统首选项中「Sidebar」页</span><br><span class="line">defaults write com.apple.sidecar.display hasShownPref -bool true</span><br></pre></td></tr></table></figure>
 
 <h2 id="Catalina下AR9565的驱动方法"><a href="#Catalina下AR9565的驱动方法" class="headerlink" title="Catalina下AR9565的驱动方法"></a>Catalina下AR9565的驱动方法</h2><p>需将<code>corecapture.kext</code>、<code>CoreCaptureResponder.kext</code>和<code>IO80211Family.kext</code>放入SLE下，且将SLE下的IO80211Family.kext与IO80211FamilyV2.kext更改扩展名以使其失效。完成替换后，需修复权限并重建缓存。</p>
-<h1 id="升级macOS-Big-Sur"><a href="#升级macOS-Big-Sur" class="headerlink" title="升级macOS Big Sur"></a>升级macOS Big Sur</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">首先需要更新所有的Kexts！！！</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">如果显示安装包过期或损坏，不能安装macos请退出到恢复界面，并保持断网（只要不插着网线），左上角实用工具————终端————输入以下代码：</span><br><span class="line">date 032208102015.20</span><br><span class="line">然后再左上角退出进入安装，安装位置选择刚抹掉的磁盘，切记别选错，然后等待，等它中间会自动重启2-3次</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line">不能将IO80211Family放到Clover&#x2F;OC的kexts文件夹，否则启动就panic</span><br><span class="line"></span><br><span class="line">不用电池修补hotpatch也可以正常工作（好奇怪）</span><br><span class="line"></span><br><span class="line">各系统镜像下载链接：</span><br><span class="line">https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;143960664</span><br><span class="line"></span><br><span class="line">资料：</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;khronokernel&#x2F;Legacy-Kexts&#x2F;tree&#x2F;master&#x2F;Injectors&#x2F;Zip</span><br></pre></td></tr></table></figure>
+<h1 id="升级macOS-Big-Sur"><a href="#升级macOS-Big-Sur" class="headerlink" title="升级macOS Big Sur"></a>升级macOS Big Sur</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">首先需要更新所有的Kexts！！！</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">如果显示安装包过期或损坏，不能安装macos请退出到恢复界面，并保持断网（只要不插着网线），左上角实用工具————终端————输入以下代码：</span><br><span class="line">date 032208102015.20</span><br><span class="line">然后再左上角退出进入安装，安装位置选择刚抹掉的磁盘，切记别选错，然后等待，等它中间会自动重启2-3次</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line">不能将IO80211Family放到Clover&#x2F;OC的kexts文件夹，否则启动就panic</span><br><span class="line"></span><br><span class="line">不用电池修补hotpatch也可以正常工作（好奇怪）</span><br><span class="line"></span><br><span class="line">各系统镜像下载链接：</span><br><span class="line">https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;143960664</span><br><span class="line"></span><br><span class="line">资料：</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;khronokernel&#x2F;Legacy-Kexts&#x2F;tree&#x2F;master&#x2F;Injectors&#x2F;Zip</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">无法通过AppleIntelInfo.kext获取当前CPU状态</span><br><span class="line">所以没办法进行下面的超频：</span><br><span class="line">https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;49183461</span><br><span class="line">https:&#x2F;&#x2F;www.tonymacx86.com&#x2F;threads&#x2F;skylake-hwp-enable.214915&#x2F;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;158770898</span><br><span class="line"></span><br><span class="line">安装或升级后的影响（部分由远景摘抄总结，侵权请联系删除）：</span><br><span class="line"></span><br><span class="line">Unix内核更新了，Darwin更新到了20.0.0，以下是uname得到的信息：</span><br><span class="line"></span><br><span class="line">Darwin VincentdeMacBook-Pro.local 20.0.0 Darwin Kernel Version 20.0.0: Sat Jun 13 17:58:16 PDT 2020; root:xnu-7090.0.0.111.5~1&#x2F;RELEASE_X86_64 x86_64</span><br><span class="line"></span><br><span class="line">1.即使关闭SIP，root用户依然无法挂载根目录为读写，这意味着直接修改&#x2F;System里面的文件已经不可能了（要到Recovery模式用命令行修改）</span><br><span class="line"></span><br><span class="line">影响范围（这些方法可能已失效）：</span><br><span class="line"></span><br><span class="line">single-user mode（单用户模式 -s）不能再加载launchd服务</span><br><span class="line"></span><br><span class="line">在之前的macOS中，我们可以在单用户模式运行launchctl load &#x2F;S*&#x2F;L*&#x2F;LaunchDaemons&#x2F;com.apple.opendirectory.plist来加载OpenDirectory服务来修改root密码和管理员密码。现在我测试的结果是，这个方法已经失效。launchctl在单用户模式加载的服务会自动停止运行，同时屏幕显示service only ran for 5 seconds，无法再在单用户模式找回管理员密码了。同时，单用户模式中加载kext的kextload命令也失去了效果。</span><br><span class="line"></span><br><span class="line">1.旧版修改&#x2F;S&#x2F;L&#x2F;E加载kext的方法</span><br><span class="line"></span><br><span class="line">2.修改&#x2F;System&#x2F;Library开启HiDPI的方法</span><br><span class="line"></span><br><span class="line">3.修改&#x2F;System&#x2F;Frameworks&#x2F;CoreDisplay.framework和添加旧版kext至S&#x2F;L&#x2F;E来开启Intel HD3000核芯显卡和老旧Nvidia（Tesla和Fermi架构GPU）的方法</span><br><span class="line"></span><br><span class="line">4.kext的加载受到严格限制，旧版本的kext几乎全军覆没</span><br><span class="line"></span><br><span class="line">5.Lilu不能被加载，kextutil kextload这些命令都被&#x2F;usr&#x2F;bin&#x2F;kmutil接替，现在运行kextutil kextload会自动跳到kmutil，不允许绕过系统安全性设置来加载kext。这意味着root用户也不能通过Terminal来加载kext了。现在只能靠OpenCore的注入功能直接把kext注入到kernelcache里面才有效，是的，黑果要升级这个系统，还有很多驱动的问题需要解决。比如opencore要更新适配新的mach内核，驱动要找到绕过苹果限制的方式加载了。目前来看现有版本的lilu不能被正确加载。</span><br><span class="line"></span><br><span class="line">之前opencore的开发组已经料想到macOS10.16（当然现在是叫macOS 11.0）会禁止修改系统的kext了，所以他们做出了一套可以不修改系统，直接把kext注入到kernelcache的方法，这个方法可能还管用，具体要等opencore的更新。</span><br><span class="line"></span><br><span class="line">黑果要升级这个系统，还有很多驱动的问题需要解决。比如opencore要更新适配新的mach内核，驱动要找到绕过苹果限制的方式加载了。目前来看现有版本的lilu不能被正确加载。</span><br><span class="line"></span><br><span class="line">总结：这次系统更新大幅削弱了root的权限，修改系统将变得更加困难和麻烦</span><br></pre></td></tr></table></figure>
 
@@ -16714,7 +16693,7 @@
 <h2 id="V进mac不滚代码直接卡-加号或者加号下几行代码Error-allocating-0x11c8d-pages-at……卡住解决方案"><a href="#V进mac不滚代码直接卡-加号或者加号下几行代码Error-allocating-0x11c8d-pages-at……卡住解决方案" class="headerlink" title="-V进mac不滚代码直接卡++加号或者加号下几行代码Error allocating 0x11c8d pages at……卡住解决方案"></a>-V进mac不滚代码直接卡++加号或者加号下几行代码Error allocating 0x11c8d pages at……卡住解决方案</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;imacos.top&#x2F;2019&#x2F;08&#x2F;12&#x2F;1033&#x2F;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Mac</category>
       </categories>
   </entry>
   <entry>
@@ -16724,14 +16703,14 @@
 <p>共享应用、破解内购等。</p>
 <a id="more"></a>
 
-<h1 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;www.iosre.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;appletech752.com&#x2F;index.html</span><br></pre></td></tr></table></figure>
+<h1 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;www.iosre.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;appletech752.com&#x2F;index.html</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">游戏破解新插件：iGameGod</span><br><span class="line">https:&#x2F;&#x2F;iosgods.com&#x2F;topic&#x2F;134184-introducing-igamegod-cheat-engine-speed-manager-auto-touch-more&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;iosgods.com&#x2F;topic&#x2F;134186-igamegod-speed-manager-adjust-the-speed-of-your-games&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;iosgods.com&#x2F;topic&#x2F;134185-igamegod-auto-touch-record-and-replay-your-touches&#x2F;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">新的越狱源：</span><br><span class="line">cydia.kiiimo.org</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h1 id="硬件操作"><a href="#硬件操作" class="headerlink" title="硬件操作"></a>硬件操作</h1><h2 id="Home键失灵"><a href="#Home键失灵" class="headerlink" title="Home键失灵"></a>Home键失灵</h2><p>越狱后可安装CCSettings插件在控制中心添加主屏幕按钮，或安装Activator插件实现手势操作。</p>
 <h2 id="电源键失灵"><a href="#电源键失灵" class="headerlink" title="电源键失灵"></a>电源键失灵</h2><p>可通过爱思助手完成重启。</p>
 <h1 id="系统操作"><a href="#系统操作" class="headerlink" title="系统操作"></a>系统操作</h1><h2 id="恢复模式"><a href="#恢复模式" class="headerlink" title="恢复模式"></a>恢复模式</h2><h3 id="进入"><a href="#进入" class="headerlink" title="进入"></a>进入</h3><h4 id="正常方法"><a href="#正常方法" class="headerlink" title="正常方法"></a>正常方法</h4><p>彻底关闭设备，并且将设备与PC断开连接。长按Home键的同时将设备连接到计算机，不要松开Home键，直到在设备屏幕上看到<code>连接到iTunes</code>的图片。</p>
 <h4 id="按键失灵时的方法"><a href="#按键失灵时的方法" class="headerlink" title="按键失灵时的方法"></a>按键失灵时的方法</h4><p>用爱思助手即可。</p>
 <h3 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h3><p>按住电源键十秒即可。通过爱思助手进入的则需要通过爱思助手退出。</p>
-<h2 id="DFU模式"><a href="#DFU模式" class="headerlink" title="DFU模式"></a>DFU模式</h2><h3 id="进入-1"><a href="#进入-1" class="headerlink" title="进入"></a>进入</h3><h4 id="正常方法-1"><a href="#正常方法-1" class="headerlink" title="正常方法"></a>正常方法</h4><p>把设备连接到PC后关闭设备，同时按住Home键和电源键十秒后松开电源键，继续按住Home键，直到在电脑上看到识别到DFU状态下的USB设备。</p>
+<h2 id="让手机进入DFU模式，连接手机并输入以下命令进行刷机。"><a href="#让手机进入DFU模式，连接手机并输入以下命令进行刷机。" class="headerlink" title="让手机进入DFU模式，连接手机并输入以下命令进行刷机。"></a>让手机进入DFU模式，连接手机并输入以下命令进行刷机。</h2><h3 id="进入-1"><a href="#进入-1" class="headerlink" title="进入"></a>进入</h3><h4 id="正常方法-1"><a href="#正常方法-1" class="headerlink" title="正常方法"></a>正常方法</h4><p>把设备连接到PC后关闭设备，同时按住Home键和电源键十秒后松开电源键，继续按住Home键，直到在电脑上看到识别到DFU状态下的USB设备。</p>
 <h4 id="按键失灵时的方法-1"><a href="#按键失灵时的方法-1" class="headerlink" title="按键失灵时的方法"></a>按键失灵时的方法</h4><h5 id="法一"><a href="#法一" class="headerlink" title="法一"></a>法一</h5><p>把设备连接到Windows后下载以下压缩包，解压后双击<code>DFU.bat</code>即可。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;feng-bbs-att-1255531212.file.myqcloud.com&#x2F;2011&#x2F;10&#x2F;15&#x2F;2472983_DFU.rar</span><br></pre></td></tr></table></figure>
 
@@ -16827,7 +16806,9 @@
 
 <h3 id="应用无法联网"><a href="#应用无法联网" class="headerlink" title="应用无法联网"></a>应用无法联网</h3><p>某些APP无法联网，尽管在设置中打开其网络权限，也会被系统自动关闭。遇到此情况，可进入设置-通用-还原，点击<code>还原所有设置</code>。</p>
 <h3 id="旧版iOS登录App-Store无法完成双重认证"><a href="#旧版iOS登录App-Store无法完成双重认证" class="headerlink" title="旧版iOS登录App Store无法完成双重认证"></a>旧版iOS登录App Store无法完成双重认证</h3><p>直接把验证码填在密码后面即可。</p>
-<h1 id="网络调试工具"><a href="#网络调试工具" class="headerlink" title="网络调试工具"></a>网络调试工具</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><p>通常代表一个运行着某个协议程序（SS、SSR、V2ray、Trojan等）的代理服务器，通过代理服务器可以实现流量的中转。</p>
+<h1 id="网络调试工具"><a href="#网络调试工具" class="headerlink" title="网络调试工具"></a>网络调试工具</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">规则库：</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;wlaotou&#x2F;Profiles</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;lhie1&#x2F;Rules&#x2F;tree&#x2F;master</span><br><span class="line"></span><br><span class="line">脚本库：</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;Orz-3&#x2F;QuantumultX</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;evilbutcher&#x2F;Quantumult_X</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;Peng-YM&#x2F;QuanX</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;chavyleung&#x2F;scripts</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;zZPiglet&#x2F;Task&#x2F;tree&#x2F;master</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;yichahucha&#x2F;surge</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;NobyDa&#x2F;Script</span><br><span class="line"></span><br><span class="line">JSBox库：</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;evilbutcher&#x2F;Code</span><br><span class="line"></span><br><span class="line">Taio：</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;evilbutcher&#x2F;Taio</span><br><span class="line"></span><br><span class="line">实用小程序：</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;evilbutcher&#x2F;Python</span><br><span class="line"></span><br><span class="line">图标组：</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;Orz-3&#x2F;mini</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;Orz-3&#x2F;task</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;Orz-3&#x2F;face</span><br></pre></td></tr></table></figure>
+
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><p>通常代表一个运行着某个协议程序（SS、SSR、V2ray、Trojan等）的代理服务器，通过代理服务器可以实现流量的中转。</p>
 <h3 id="策略组"><a href="#策略组" class="headerlink" title="策略组"></a>策略组</h3><p>策略组可以包含节点或其他策略组，具有多种不同的策略类型，服务于规则。策略组的作用就是根据不同策略，分发规则传递过来的请求。</p>
 <h3 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h3><h4 id="规则原理"><a href="#规则原理" class="headerlink" title="规则原理"></a>规则原理</h4><p>规则决定了当一个请求进来时，如何通过匹配类型进行匹配，以及如何选用对应的策略。</p>
 <h4 id="规则格式"><a href="#规则格式" class="headerlink" title="规则格式"></a>规则格式</h4><p><code>[匹配类型],[匹配关键字],[策略名称]</code>。如<code>DOMAIN-SUFFIX,twimg.com,PROXY</code>。</p>
@@ -16897,7 +16878,7 @@
 <h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;Peng-YM&#x2F;QuanX&#x2F;blob&#x2F;master&#x2F;Rewrites&#x2F;GreasyFork&#x2F;greasy-fork.js</span><br></pre></td></tr></table></figure>
 
 <h4 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h4><p>在手机端的浏览器打开greasyfork的脚本页，点击安装即可自动转换。</p>
-<h3 id="BoxJs"><a href="#BoxJs" class="headerlink" title="BoxJs"></a>BoxJs</h3><p>教程链接如下。</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="BoxJs"><a href="#BoxJs" class="headerlink" title="BoxJs"></a>BoxJs</h3><p>教程链接如下。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;chavyleung.gitbook.io&#x2F;boxjs&#x2F;</span><br></pre></td></tr></table></figure>
 
 <p>部分JS脚本需要配合BoxJs才能运行。用手机打开以下链接。打开后点击分享-添加到主屏幕，可供以后快速访问。</p>
@@ -16908,7 +16889,7 @@
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">新增订阅后在quanx刷新一次全局配置，然后开关一次VPN</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">会话管理：</span><br><span class="line">进入某个脚本的配置（如京东多合一签到）</span><br><span class="line">下面有当前会话，可以获取两个账号的cookie（一个在safari访问bean.m.jd.com另一个在无痕模式），保存会话后点击应用，即可应用当前会话</span><br><span class="line">删除当前会话内的cookie，然后再无痕模式登录第三、四个账号，保存为会话二，点击应用，就可以使用第三四个账号签到</span><br><span class="line">通过调用会话切换脚本，可从会话一切换到会话二</span><br><span class="line">京东签到1-&gt;会话切换-&gt;京东签到2-&gt;会话切换-&gt;京东签到3-&gt;...</span><br><span class="line"></span><br><span class="line">参数配置：</span><br><span class="line">进入对应脚本，配置相关参数就可以了</span><br><span class="line"></span><br><span class="line">会话管理：</span><br><span class="line">可以批量导入所有的配置，以从Loon切换到quanx等</span><br><span class="line">主界面-&gt;我的-&gt;备份，生成的全局变量里点复制</span><br><span class="line">主界面-&gt;我的-&gt;导入，将刚才的配置复制进去，再点一下还原</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="Loon"><a href="#Loon" class="headerlink" title="Loon"></a>Loon</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">懒人配置也可通过捷径：</span><br><span class="line">https:&#x2F;&#x2F;www.icloud.com&#x2F;shortcuts&#x2F;5ba2ec8d144a4be188b9037498bbdd26</span><br><span class="line"></span><br><span class="line">SSID配置：</span><br><span class="line">新建策略组，策略类型选择SSID，添加SSID Name并选择模式（比如直连）即可</span><br><span class="line"></span><br><span class="line">Final规则：</span><br><span class="line">选定当前最终使用的规则，可以选择自动切换&#x2F;手动选择</span><br><span class="line"></span><br><span class="line">订阅筛选：</span><br><span class="line">关键词筛选、正则筛选</span><br><span class="line">(?&#x3D;.*A)^(?&#x3D;.*B)^.*$  节点名既有 A 又有 B</span><br><span class="line">(A)|(B)                       节点名有 A 或者 B  </span><br><span class="line">^((?!A).)*$                 节点名不含有A</span><br><span class="line">(?&#x3D;.*A)^((?!B).)^*$   节点名含有 A，不含有 B</span><br><span class="line"></span><br><span class="line">规则测试：</span><br><span class="line">测试某个网站走的是什么模式</span><br><span class="line"></span><br><span class="line">脚本：</span><br><span class="line">Loon原生支持surge脚本</span><br><span class="line">本地脚本-加号，写脚本</span><br><span class="line">所有脚本-加号-脚本类型cron，设置自动运行脚本，脚本位置可以是local&#x2F;remote</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="Loon"><a href="#Loon" class="headerlink" title="Loon"></a>Loon</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">懒人配置也可通过捷径：</span><br><span class="line">https:&#x2F;&#x2F;www.icloud.com&#x2F;shortcuts&#x2F;5ba2ec8d144a4be188b9037498bbdd26</span><br><span class="line"></span><br><span class="line">SSID配置：</span><br><span class="line">新建策略组，策略类型选择SSID，添加SSID Name并选择模式（比如直连）即可</span><br><span class="line"></span><br><span class="line">Final规则：</span><br><span class="line">选定当前最终使用的规则，可以选择自动切换&#x2F;手动选择</span><br><span class="line"></span><br><span class="line">订阅筛选：</span><br><span class="line">关键词筛选、正则筛选</span><br><span class="line">(?&#x3D;.*A)^(?&#x3D;.*B)^.*$  节点名既有 A 又有 B</span><br><span class="line">(A)|(B)                       节点名有 A 或者 B  </span><br><span class="line">^((?!A).)*$                 节点名不含有A</span><br><span class="line">(?&#x3D;.*A)^((?!B).)^*$   节点名含有 A，不含有 B</span><br><span class="line"></span><br><span class="line">规则测试：</span><br><span class="line">测试某个网站走的是什么模式</span><br><span class="line"></span><br><span class="line">脚本：</span><br><span class="line">Loon原生支持surge脚本</span><br><span class="line">本地脚本-加号，写脚本</span><br><span class="line">所有脚本-加号-脚本类型cron，设置自动运行脚本，脚本位置可以是local&#x2F;remote</span><br><span class="line"></span><br><span class="line">Q-Search-All-in-One复写的作用：</span><br><span class="line">将Safari默认搜索引擎改为DuckDuckGo，在搜索时打</span><br><span class="line">gm 关键词</span><br><span class="line">可以google搜图，打</span><br><span class="line">yd 关键词</span><br><span class="line">可以有道翻译等</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="懒人配置-1"><a href="#懒人配置-1" class="headerlink" title="懒人配置"></a>懒人配置</h3><p>打开软件，选择配置-编辑-从URL下载，导入以下配置。注意需要翻墙环境。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;nzw9314&#x2F;Loon&#x2F;master&#x2F;Loon.conf</span><br></pre></td></tr></table></figure>
@@ -17167,7 +17148,9 @@
 <h5 id="persistentStore-read-39-key-lt-String-gt-39"><a href="#persistentStore-read-39-key-lt-String-gt-39" class="headerlink" title="$persistentStore.read(&#39;key&lt;String&gt;&#39;)"></a><code>$persistentStore.read(&#39;key&lt;String&gt;&#39;)</code></h5><p>获取存放的数据。</p>
 <h3 id="配置详解"><a href="#配置详解" class="headerlink" title="配置详解"></a>配置详解</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 以下三行分别表示了配置名、更新时间、作者，暂无实际用处</span><br><span class="line"># </span><br><span class="line">#default configure</span><br><span class="line">#Update Date: 2020-01-22 01:00:20 +0000</span><br><span class="line">#author: Loon</span><br><span class="line"></span><br><span class="line">[General]</span><br><span class="line">skip-proxy &#x3D; 192.168.0.0&#x2F;16,10.0.0.0&#x2F;8,172.16.0.0&#x2F;12,localhost,*.local,e.crashlynatics.com</span><br><span class="line">bypass-tun &#x3D; 10.0.0.0&#x2F;8,100.64.0.0&#x2F;10,127.0.0.0&#x2F;8,169.254.0.0&#x2F;16,172.16.0.0&#x2F;12,192.0.0.0&#x2F;24,192.0.2.0&#x2F;24,192.88.99.0&#x2F;24,192.168.0.0&#x2F;16,198.18.0.0&#x2F;15,198.51.100.0&#x2F;24,203.0.113.0&#x2F;24,224.0.0.0&#x2F;4,255.255.255.255&#x2F;32</span><br><span class="line"># 自定义 DNS 服务器，Loon 会优先使用自定义 DNS，若丢包严重，会切回系统自带的 DNS，使用 , 分割多个 DNS 地址</span><br><span class="line">dns-server &#x3D; system,119.29.29.29,223.5.5.5</span><br><span class="line">allow-udp-proxy &#x3D; false</span><br><span class="line">host &#x3D; 127.0.0.1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[Proxy]</span><br><span class="line"># 单个节点添加在下面</span><br><span class="line"># SS 格式: 节点名称 &#x3D; 协议，服务器地址，服务器端口，加密协议，密码</span><br><span class="line">1 &#x3D; Shadowsocks, 1.2.3.4, 443, aes-128-gcm, &quot;password&quot;</span><br><span class="line">2 &#x3D; Shadowsocks, 1.2.3.4, 443, aes-128-gcm, &quot;password&quot;</span><br><span class="line"></span><br><span class="line"># SSR 格式: 名称&#x3D;协议类型,地址,端口,加密方式,密码,协议类型,&#123;协议参数&#125;,混淆类型,&#123;混淆参数&#125;</span><br><span class="line">3 &#x3D; ShadowsocksR, 1.2.3.4, 443, aes-256-cfb,&quot;password&quot;,auth_aes128_md5,&#123;&#125;,tls1.2_ticket_auth,&#123;&#125;</span><br><span class="line">4 &#x3D; ShadowsocksR, 1.2.3.4, 10076, aes-128-cfb,&quot;password&quot;,auth_aes128_md5,&#123;&#125;,tls1.2_ticket_auth,&#123;&#125;</span><br><span class="line"></span><br><span class="line"># vmess格式</span><br><span class="line"># 节点名称 &#x3D; 协议,服务器地址,端口,加密方式,UUID,传输方式:(tcp&#x2F;ws),path:websocket握手header中的path,host:websocket握手header中的path,over-tls:是否tls,tls-name:远端w服务器域名,skip-cert-verify:是否跳过证书校验（默认否）</span><br><span class="line">5 &#x3D; vmess,1.2.3.4,10086,aes-128-gcm,&quot;uuid&quot;,transport:ws,path:&#x2F;,host:icloud.com,over-tls:true,tls-name:youtTlsServerName.com,skip-cert-verify:false</span><br><span class="line"></span><br><span class="line"># http 格式 (不支持 username, password)</span><br><span class="line"># 节点名称 &#x3D; http, 服务器地址，端口</span><br><span class="line">ProxyHTTP &#x3D; http, 1.2.3.4, 8888</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[Remote Proxy]</span><br><span class="line"># 订阅节点</span><br><span class="line"># 格式为 别名 &#x3D; 订阅 URL</span><br><span class="line">Subs &#x3D; https:&#x2F;&#x2F;example&#x2F;server-complete.txt</span><br><span class="line"></span><br><span class="line">[Proxy Group]</span><br><span class="line"># 以下为策略组定义</span><br><span class="line"># 支持 select、url-test、fallback、ssid 这几种类型</span><br><span class="line"></span><br><span class="line"># 基于用户 UI 选择</span><br><span class="line">PROXY &#x3D; select,Auto,1,2,3,4,Subs</span><br><span class="line"></span><br><span class="line"># url-test模式，给提供的 url 发出 http header 请求，根据返回结果，选择测速最快的节点，默认间隔 600s，测速超时时间5s，为了避免资源浪费，建议节点数不要过多，只支持单个节点和远端节点，其他会被忽略</span><br><span class="line">Auto &#x3D; url-test,1,2,3,4,Subs,url &#x3D; http:&#x2F;&#x2F;bing.com&#x2F;,interval &#x3D; 600</span><br><span class="line"></span><br><span class="line"># fallback 模式，和 url-test类似，不同的是会根据顺序返回第一个可用的节点，为了避免资源浪费，建议节点数不要过多，只支持单个节点和远端节点，其他会被忽略</span><br><span class="line">Fallback &#x3D; fallback,1,2,3,4,Subs,url &#x3D; http:&#x2F;&#x2F;bing.com&#x2F;,interval &#x3D; 600</span><br><span class="line"></span><br><span class="line"># 别名 &#x3D; ssid，默认 &#x3D; 策略组名， 蜂窝 &#x3D; 策略， ssid名称 &#x3D; 策略组名</span><br><span class="line">SSID &#x3D; ssid, default &#x3D; PROXY, cellular &#x3D; DIRECT, &quot;DivineEngine&quot; &#x3D; PROXY</span><br><span class="line"></span><br><span class="line"># 广告模式</span><br><span class="line">Advertising &#x3D; select,REJECT,DIRECT</span><br><span class="line"></span><br><span class="line"># 白名单模式 PROXY，黑名单模式 DIRECT</span><br><span class="line">Final &#x3D; select,PROXY,DIRECT</span><br><span class="line"></span><br><span class="line">[Rule]</span><br><span class="line"># 本地规则部分书写在下面</span><br><span class="line"># 格式为 规则类型,域名(部分类型可省略),策略</span><br><span class="line">#             </span><br><span class="line"># 目前支持的类型有      </span><br><span class="line"># DOMAIN-SUFFIX  基于域名后缀</span><br><span class="line"># DOMAIN         基于域名完整匹配</span><br><span class="line"># DOMAIN-KEYWORD 基于域名关键字</span><br><span class="line"># USER-AGENT     基于用户代理串</span><br><span class="line"># URL-REGEX      基于 URL 正则</span><br><span class="line"># IP-CIDR        基于请求 IP 范围</span><br><span class="line"># GEOIP          基于 IP 定位国家编码</span><br><span class="line"># FINAL          兜底策略，所有策略都未匹配上时使用</span><br><span class="line">#</span><br><span class="line"># 目前支持的策略有</span><br><span class="line"># DIRECT 直连，即所有流量不通过代理，在国内就走国内IP，在国外就走国外IP</span><br><span class="line"># Proxy  策略组名, 这里可自定义名字，名字值为 [Proxy Group] 或者 [Proxy] 中的自定的值</span><br><span class="line"># REJECT 拒绝策略，通常用作去广告</span><br><span class="line">#</span><br><span class="line"># 可选项:force-remote-dns(Default:false),no-resolve</span><br><span class="line">DOMAIN,google.com,PROXY</span><br><span class="line"># GeoIP 为中国的，走直连</span><br><span class="line">GEOIP,CN,DIRECT</span><br><span class="line"># 兜底策略使用 Final 策略组</span><br><span class="line">FINAL,Final</span><br><span class="line"></span><br><span class="line">[Remote Rule]</span><br><span class="line"># 远程规则部分书写在下面</span><br><span class="line"># 格式为 订阅规则 URL,策略</span><br><span class="line"></span><br><span class="line"># 如以下地址将使用，PROXY 这个策略组</span><br><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Loon0x00&#x2F;LoonExampleConfig&#x2F;master&#x2F;Rule&#x2F;ExampleRule.list,PROXY</span><br><span class="line"></span><br><span class="line">[URL Rewrite]</span><br><span class="line"># URL 重写开关，为 true 表示开启</span><br><span class="line">enable &#x3D; true</span><br><span class="line"></span><br><span class="line"># 本地重写规则部分书写在下面</span><br><span class="line">#</span><br><span class="line"># 302 重定向 google search</span><br><span class="line">^https?:\&#x2F;\&#x2F;(www.)?(g|google)\.cn https:&#x2F;&#x2F;www.google.com 302</span><br><span class="line"></span><br><span class="line">[Remote Rewrite]</span><br><span class="line"># 远程重写规则部分书写在下面</span><br><span class="line"># 格式为 远程重写规则 URL,别名(可选)</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Loon0x00&#x2F;LoonExampleConfig&#x2F;master&#x2F;Rewrite&#x2F;AutoRewrite_Example.list,auto</span><br><span class="line"></span><br><span class="line">[MITM]</span><br><span class="line">hostname &#x3D; *.example.com,*.sample.com</span><br><span class="line">enable &#x3D; true</span><br><span class="line">skip-server-cert-verify &#x3D; true</span><br><span class="line">#ca-p12 &#x3D;</span><br><span class="line">#ca-passphrase &#x3D;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Quantumult"><a href="#Quantumult" class="headerlink" title="Quantumult"></a>Quantumult</h2><h3 id="规则导入-1"><a href="#规则导入-1" class="headerlink" title="规则导入"></a>规则导入</h3><h4 id="分流"><a href="#分流" class="headerlink" title="分流"></a>分流</h4><p>复制以下链接，进入Quantumult，进入<code>设置</code>，进入<code>订阅</code>。点击右上角<code>+</code>号，选择<code>分流</code>，填写名称与以下规则链接，勾选个性化。保存后向左滑动条目并点击<code>替换</code>或<code>增加</code>以更新。</p>
+<h2 id="Quantumult"><a href="#Quantumult" class="headerlink" title="Quantumult"></a>Quantumult</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">首页右下角节点位置处，带五角星说明是中转节点</span><br><span class="line">延迟与网速并无关系</span><br></pre></td></tr></table></figure>
+
+<h3 id="规则导入-1"><a href="#规则导入-1" class="headerlink" title="规则导入"></a>规则导入</h3><h4 id="分流"><a href="#分流" class="headerlink" title="分流"></a>分流</h4><p>复制以下链接，进入Quantumult，进入<code>设置</code>，进入<code>订阅</code>。点击右上角<code>+</code>号，选择<code>分流</code>，填写名称与以下规则链接，勾选个性化。保存后向左滑动条目并点击<code>替换</code>或<code>增加</code>以更新。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 测试可用规则</span><br><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;ConnersHua&#x2F;Profiles&#x2F;master&#x2F;Quantumult&#x2F;Pro.conf</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 其它规则</span><br><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;lhie1&#x2F;Rules&#x2F;master&#x2F;Quantumult&#x2F;Quantumult.conf</span><br><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;lhie1&#x2F;Rules&#x2F;master&#x2F;Quantumult&#x2F;Quantumult_Extra.conf</span><br><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;ConnersHua&#x2F;Profiles&#x2F;master&#x2F;Quantumult&#x2F;Basic.conf</span><br><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;ConnersHua&#x2F;Profiles&#x2F;master&#x2F;Quantumult&#x2F;Pro.conf</span><br></pre></td></tr></table></figure>
 
 <h4 id="去广告"><a href="#去广告" class="headerlink" title="去广告"></a>去广告</h4><p>步骤同上，将选择<code>分流</code>改为选择<code>链接阻止</code>即可。</p>
@@ -17216,20 +17199,25 @@
 <h2 id="Kitsunebi"><a href="#Kitsunebi" class="headerlink" title="Kitsunebi"></a>Kitsunebi</h2><h3 id="规则导入-3"><a href="#规则导入-3" class="headerlink" title="规则导入"></a>规则导入</h3><p>切换到<code>高级</code>选项卡，点击<code>规则集</code>并在弹出的页面中点击Default右边的按钮，将URL改为下面的网址，并点击<code>存储</code>。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;ConnersHua&#x2F;Profiles&#x2F;master&#x2F;Kitsunebi&#x2F;Pro.conf</span><br></pre></td></tr></table></figure>
 
-<h2 id="Surge-4"><a href="#Surge-4" class="headerlink" title="Surge 4"></a>Surge 4</h2><h3 id="破解"><a href="#破解" class="headerlink" title="破解"></a>破解</h3><p>越狱后下载以下插件并安装即可。</p>
+<h2 id="Surge-4"><a href="#Surge-4" class="headerlink" title="Surge 4"></a>Surge 4</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">关于 Surge 的延迟测试：</span><br><span class="line"></span><br><span class="line">Q：为什么Surge&#x2F;Shadowrocket&#x2F;Quantumult 测延迟差距这么大？</span><br><span class="line">A：测试方式不同。</span><br><span class="line">Surge 测试的是从目标 policy 返回 http response header 数据包的时间。</span><br><span class="line">Shadowrocket 支持两种测速方式（ICMP&#x2F;TCP），默认为 ICMP 模式（即 Ping）。</span><br><span class="line">Quantumult 采用 SSH 测速模式（22 端口）。</span><br></pre></td></tr></table></figure>
+
+<h3 id="破解"><a href="#破解" class="headerlink" title="破解"></a>破解</h3><p>越狱后下载以下插件并安装即可。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;wws.lanzous.com&#x2F;tp&#x2F;i0Ge2dh3oeb</span><br></pre></td></tr></table></figure>
 
 <h3 id="规则导入-4"><a href="#规则导入-4" class="headerlink" title="规则导入"></a>规则导入</h3><p>点击左上角下拉菜单，选择从URL下载配置，复制以下链接并确定即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;limbopro&#x2F;Profiles&#x2F;master&#x2F;Surge&#x2F;Pro.conf</span><br><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;nzw9314&#x2F;Surge&#x2F;master&#x2F;Surge_Basic.conf</span><br><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;nzw9314&#x2F;surge-2&#x2F;master&#x2F;surge.conf</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 主要</span><br><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;nzw9314&#x2F;Surge&#x2F;master&#x2F;Surge_Basic.conf</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 其余可用</span><br><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;limbopro&#x2F;Profiles&#x2F;master&#x2F;Surge&#x2F;Pro.conf</span><br><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;nzw9314&#x2F;surge-2&#x2F;master&#x2F;surge.conf</span><br></pre></td></tr></table></figure>
 
 <p>完成后若菜单栏出现策略组，则成功。某些规则的仓库如下。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;Blankwonder&#x2F;surge-list</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;onewayticket255&#x2F;Surge-Script</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;MeetaGit&#x2F;MeetaRules</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;Choler&#x2F;Surge</span><br></pre></td></tr></table></figure>
 
-<h3 id="节点导入-1"><a href="#节点导入-1" class="headerlink" title="节点导入"></a>节点导入</h3><p>在主界面点击代理服务器，选择添加代理即可添加单个节点，选择新的策略组并勾选使用外部代理列表则可添加订阅。</p>
+<h3 id="节点导入-1"><a href="#节点导入-1" class="headerlink" title="节点导入"></a>节点导入</h3><p>在主界面点击代理服务器，选择添加代理即可添加单个节点，选择新的策略组并勾选使用外部代理列表则可添加订阅。也可直接修改配置文件，在<code>[proxy]</code>模块下填写即可。</p>
+<p>完成后点击外部资源，下拉到底部并点击立即更新。</p>
 <h3 id="节点切换"><a href="#节点切换" class="headerlink" title="节点切换"></a>节点切换</h3><p>点击策略组，进入相应策略组，选择需要切换的节点即可。</p>
 <h3 id="策略组配置-1"><a href="#策略组配置-1" class="headerlink" title="策略组配置"></a>策略组配置</h3><p>新建策略组时，在策略组类型中可选择模式，类型含义与Loon基本一致。</p>
-<h3 id="DNS服务器"><a href="#DNS服务器" class="headerlink" title="DNS服务器"></a>DNS服务器</h3><p>在主页面点击DNS服务器即可。</p>
-<p>如果经常使用的网络没有DNS劫持问题，配置为使用系统DNS配置并追加223.5.5.5和114.114.114.114作为冗余。如果经常使用的网络存在DNS劫持问题。配置为仅使用223.5.5.5和114.114.114.114。</p>
+<h4 id="SSID"><a href="#SSID" class="headerlink" title="SSID"></a>SSID</h4><p>类型选择SSID即可。默认策略和数据网络策略为Proxy，添加Wifi名称并设为Direct即可。完成后需要嵌套到其它策略组以完成调用。</p>
+<h3 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h3><p>可通过分析-脚本编辑器打开已有脚本进行编辑。</p>
+<h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><h3 id="DNS服务器"><a href="#DNS服务器" class="headerlink" title="DNS服务器"></a>DNS服务器</h3><p>在主页面点击DNS服务器即可。</p>
+<p>如果经常使用的网络没有DNS劫持问题，配置为使用系统DNS配置并追加223.5.5.5和114.114.114.114作为冗余。如果经常使用的网络存在DNS劫持问题，配置为仅使用223.5.5.5和114.114.114.114。</p>
 <h3 id="规则匹配过程"><a href="#规则匹配过程" class="headerlink" title="规则匹配过程"></a>规则匹配过程</h3><p>如果一个使用域名的请求遇到了一个IP类型规则（IP-CIDR/IP-CIDR6/GEOIP）且该规则不带有 no-resolve 选项，那么将触发DNS查询。所以应将所有非IP类规则置于规则的顶部，将IP类规则置于尾部，避免并不需要进行本地DNS查询的请求产生额外的DNS查询。</p>
 <h2 id="Quantumult-X"><a href="#Quantumult-X" class="headerlink" title="Quantumult X"></a>Quantumult X</h2><p>Quantumult X引入了防共享机制，版本号右边有个绿色√的即为正版。若为问号，则代表被检测到有共享账号行为。若显示绿色问号，先删除TestFlight测试版，安装App Store最新版并运行一次，待得版本信息显示为绿色对号后再安装TestFlight测试版。若显示红色问号，则证明为盗版，Rewrite和MitM功能将被限制。</p>
 <h3 id="基本操作-1"><a href="#基本操作-1" class="headerlink" title="基本操作"></a>基本操作</h3><h4 id="三菱按钮"><a href="#三菱按钮" class="headerlink" title="三菱按钮"></a>三菱按钮</h4><p>长按三菱按钮可切换模式，左侧出现的更新按钮可一键更新所有节点。</p>
@@ -17373,6 +17361,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;Advertising.list#policy&#x3D;Shawn&amp;out&#x3D;aweme</span><br></pre></td></tr></table></figure>
 
 <h4 id="分组图标设置"><a href="#分组图标设置" class="headerlink" title="分组图标设置"></a>分组图标设置</h4><p>点击三菱按钮，选择配置文件中的编辑，找到<code>[server_remote]</code>，在选中的订阅链接后面添加图标的地址即可，示例如下。</p>
+<p>图标格式必须为png，且分辨率必须为108*108像素。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">img-url&#x3D;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Koolson&#x2F;Qure&#x2F;master&#x2F;IconSet&#x2F;IPLC.png</span><br></pre></td></tr></table></figure>
 
 <h3 id="分流-2"><a href="#分流-2" class="headerlink" title="分流"></a>分流</h3><h4 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h4><table>
@@ -17514,7 +17503,7 @@
 
 <h4 id="使用-3"><a href="#使用-3" class="headerlink" title="使用"></a>使用</h4><p>主界面的策略组模块上有白色环形标志，则代表可以长按以添加或删除其中的节点。</p>
 <h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><p>确认没有规则指向该策略后，在配置文件中删除即可。</p>
-<h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><h4 id="引用重写规则"><a href="#引用重写规则" class="headerlink" title="引用重写规则"></a>引用重写规则</h4><p>点击三菱图标，选择重写中的引用。</p>
+<h3 id="重写-1"><a href="#重写-1" class="headerlink" title="重写"></a>重写</h3><h4 id="引用重写规则"><a href="#引用重写规则" class="headerlink" title="引用重写规则"></a>引用重写规则</h4><p>点击三菱图标，选择重写中的引用。</p>
 <h5 id="JS脚本-1"><a href="#JS脚本-1" class="headerlink" title="JS脚本"></a>JS脚本</h5><p>复制以下链接并确定，即可导入脚本。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;NobyDa&#x2F;Script&#x2F;master&#x2F;QuantumultX&#x2F;Js.conf</span><br></pre></td></tr></table></figure>
 
@@ -20496,7 +20485,7 @@
 <h2 id="AppStore降价监控"><a href="#AppStore降价监控" class="headerlink" title="AppStore降价监控"></a>AppStore降价监控</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.antmoe.com&#x2F;posts&#x2F;77e27eac&#x2F;index.html</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>iOS</category>
       </categories>
   </entry>
   <entry>
@@ -29120,7 +29109,56 @@
 <h2 id="LongSoft-UEFITool"><a href="#LongSoft-UEFITool" class="headerlink" title="LongSoft/UEFITool"></a>LongSoft/UEFITool</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;LongSoft&#x2F;UEFITool</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Technology</category>
+        <category>Computer</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Android使用技巧总结</title>
+    <url>/posts/Android-Skills.html</url>
+    <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegao3bnq6j31800kvaax.jpg"></p>
+<p>安卓使用技巧。</p>
+<a id="more"></a>
+
+<h1 id="破解软件"><a href="#破解软件" class="headerlink" title="破解软件"></a>破解软件</h1><h2 id="软件库"><a href="#软件库" class="headerlink" title="软件库"></a>软件库</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;590m.com&#x2F;dir&#x2F;845023-30099335-9e922b</span><br><span class="line">https:&#x2F;&#x2F;306t.com&#x2F;dir&#x2F;14633726-31244416-26771f</span><br><span class="line">https:&#x2F;&#x2F;www.uptodown.com&#x2F;android</span><br></pre></td></tr></table></figure>
+
+<h2 id="微信抢红包插件"><a href="#微信抢红包插件" class="headerlink" title="微信抢红包插件"></a>微信抢红包插件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;geeeeeeeeek&#x2F;WeChatLuckyMoney</span><br></pre></td></tr></table></figure>
+
+<h1 id="Root-Busybox-Xposed"><a href="#Root-Busybox-Xposed" class="headerlink" title="Root/Busybox/Xposed"></a>Root/Busybox/Xposed</h1><p>翻墙后安装Google Play，然后安装Busybox。准备好系统原镜像，安装Magisk Manager并打开，通过修补boot的方式得到新镜像，并通过Odin进行线刷即可。</p>
+<h1 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h1><p>在安卓手机上通过安装相应的APP，可以运行电脑系统。</p>
+<h2 id="Bochs运行XP"><a href="#Bochs运行XP" class="headerlink" title="Bochs运行XP"></a>Bochs运行XP</h2><h3 id="安装前的准备"><a href="#安装前的准备" class="headerlink" title="安装前的准备"></a>安装前的准备</h3><h4 id="Bochs安装包"><a href="#Bochs安装包" class="headerlink" title="Bochs安装包"></a>Bochs安装包</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1i4FDLGT</span><br></pre></td></tr></table></figure>
+
+<h4 id="适用于Bochs的XP镜像"><a href="#适用于Bochs的XP镜像" class="headerlink" title="适用于Bochs的XP镜像"></a>适用于Bochs的XP镜像</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1gfj4a2Z</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装流程"><a href="#安装流程" class="headerlink" title="安装流程"></a>安装流程</h3><p>将apk格式的Bochs安装包和img格式的Windows系统镜像传送到手机，放置于任何目录下均可。安装Bochs，将<code>ata0-master</code>前面的复选框选中，然后点击<code>select</code>。选择img格式的系统镜像文件Windows.img，其他项无需更改。点击顶部的<code>HARDWARE</code>选项卡，按照以下设置。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CPU Model无需更改</span><br><span class="line">Chipset选择i440fx</span><br><span class="line">内存设置为517MB（可根据手机配置调整）</span><br><span class="line">VGA Card设置为cirrus_5446</span><br><span class="line">Sound Card设置为sb16</span><br><span class="line">Ethernet Card设置为rtl8029</span><br><span class="line">PCI设置中，Slot1设置为cirrus，Slot2设置为ne2k，Slot3设置为es1370，Slot4设置为voodoo，Slot5设置为none</span><br></pre></td></tr></table></figure>
+
+<p>点击顶部的MISC选项卡，将Full screen前面的复选框选中以使Windows可以全屏运行。点击右上角绿色的Start按钮以启动Windows。</p>
+<h2 id="Limbo运行XP"><a href="#Limbo运行XP" class="headerlink" title="Limbo运行XP"></a>Limbo运行XP</h2><h3 id="安装前的准备-1"><a href="#安装前的准备-1" class="headerlink" title="安装前的准备"></a>安装前的准备</h3><h4 id="Limbo安装包"><a href="#Limbo安装包" class="headerlink" title="Limbo安装包"></a>Limbo安装包</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1pK7ua3D</span><br></pre></td></tr></table></figure>
+
+<h4 id="适用于Limbo的XP镜像"><a href="#适用于Limbo的XP镜像" class="headerlink" title="适用于Limbo的XP镜像"></a>适用于Limbo的XP镜像</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1miRtjJU</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装流程-1"><a href="#安装流程-1" class="headerlink" title="安装流程"></a>安装流程</h3><p>将apk格式的Limbo安装包和qcow2格式的Windows系统镜像传送到手机，放置于任何目录下均可。</p>
+<p>安装Limbo并打开，加载虚拟机下选择新建，在弹出对话框中输入虚拟机名称，然后按照以下设置。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">用户界面项选择SDL</span><br><span class="line">CPU型号项选择athlon</span><br><span class="line">CPU核心数设置为2（可根据手机配置调整）</span><br><span class="line">运存项设置为64（可根据手机配置调整）</span><br><span class="line">光驱和软盘A和软盘B项留空</span><br><span class="line">硬盘A项点击后选择打开，选择qcow2格式的镜像文件</span><br><span class="line">硬盘B项留空</span><br><span class="line">引导设备项选择硬盘</span><br><span class="line">网络配置项选择User</span><br><span class="line">网卡项选择rtl8139</span><br><span class="line">显卡配置项选择cirrus</span><br><span class="line">声卡配置项选择sb16</span><br><span class="line">高级设置全部留空</span><br><span class="line">勾选多线程AIO右侧的复选框（警告可以无视）</span><br></pre></td></tr></table></figure>
+
+<p>全部设置完毕后，回到顶部，点击运行以启动Windows。</p>
+<h2 id="APQ模拟器运行XP"><a href="#APQ模拟器运行XP" class="headerlink" title="APQ模拟器运行XP"></a>APQ模拟器运行XP</h2><h3 id="安装前的准备-2"><a href="#安装前的准备-2" class="headerlink" title="安装前的准备"></a>安装前的准备</h3><h4 id="APQ安装包"><a href="#APQ安装包" class="headerlink" title="APQ安装包"></a>APQ安装包</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.cr173.com&#x2F;soft&#x2F;692055.html</span><br></pre></td></tr></table></figure>
+
+<h4 id="Zarchiver安装包"><a href="#Zarchiver安装包" class="headerlink" title="Zarchiver安装包"></a>Zarchiver安装包</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;dl.pconline.com.cn&#x2F;download&#x2F;1815731.html</span><br></pre></td></tr></table></figure>
+
+<h4 id="适用于APQ的XP镜像"><a href="#适用于APQ的XP镜像" class="headerlink" title="适用于APQ的XP镜像"></a>适用于APQ的XP镜像</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1_aoxWWi0mfN1cXyS3V4I6g</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装流程-2"><a href="#安装流程-2" class="headerlink" title="安装流程"></a>安装流程</h3><p>获取root权限。打开APQ，点击data分区，等待文件处理完成。</p>
+<p>打开zarchiver（自己百度下载，不知道为什么复制不了链接），找到手机内存的APQ打开，找到kolibri.conf文件。将以下位置的文件名改为下载好的镜像文件即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#第一块硬盘，硬盘镜像文件为xp.qcow2，应位于SD卡上的APQ主目录下或写绝对路径</span><br><span class="line">-fda kolibri.img</span><br></pre></td></tr></table></figure>
+
+<h2 id="Termux运行Linux"><a href="#Termux运行Linux" class="headerlink" title="Termux运行Linux"></a>Termux运行Linux</h2><p>无需root，安装完成后打开即可使用。</p>
+<h1 id="LineageOS"><a href="#LineageOS" class="headerlink" title="LineageOS"></a>LineageOS</h1><p>对于LG G3的教程如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;linustechtips.com&#x2F;topic&#x2F;1058206-lg-g3-lineageos-tutorial&#x2F;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Android</category>
       </categories>
   </entry>
 </search>
