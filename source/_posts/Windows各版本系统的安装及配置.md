@@ -1,6 +1,6 @@
 ---
 title: Windows各版本系统的安装及配置
-categories: Technology
+categories: Windows
 abbrlink: Windows-Installation
 date: 2020-04-09 00:59:29
 tags:

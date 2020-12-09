@@ -1,6 +1,6 @@
 ---
 title: Git和Github的安装与使用
-categories: Technology
+categories: Skill
 abbrlink: Git-Installation
 date: 2019-11-25 17:50:29
 tags:
@@ -26,6 +26,15 @@ https://github.com/1c7/chinese-independent-developer
 https://try.github.io/
 https://github.com/phodal/github
 https://github.phodal.com/
+
+
+
+
+// Github Gist
+代码随时存放，可以设为secret或public
+https://gist.github.com/
+Lepton: Github Gist管理工具
+https://github.com/hackjutsu/Lepton
 ```
 
 # 安装
@@ -518,6 +527,44 @@ git config color.ui true
 git config
 ```
 
+# Git大文件上传
+
+git对于超过100MB的文件默认不能传，出现`GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.`错误。
+
+``` 
+// 解决方法：
+https://git-lfs.github.com/
+
+// 切换到项目目录后运行
+git lfs install
+git lfs track "*.psd"
+git add .gitattributes
+// 然后正常add，commit，push
+```
+
+# .gitingore
+
+告诉Git哪些文件不需要添加到版本管理中。
+
+```
+https://www.jianshu.com/p/699ed86028c2
+```
+
+文件内容：
+
+```
+# dependencies  npm包文件
+/node_modules
+
+# production  打包文件
+/build
+
+# misc 
+.DS_Store
+
+npm-debug.log*
+```
+
 # Git下载加速
 
 ## 通过Gitee
@@ -597,16 +644,25 @@ git config --global --unset https.proxy 'socks5://127.0.0.1:1080'
 git config --global --unset http.proxy 'socks5://127.0.0.1:1080'
 ```
 
-## 通过修改hosts（已失效）
+## 通过修改hosts
 
 在国内使用`git clone`命令经常会很慢，这是由于域名被限制，修改hosts文件即可解决。
 
-通过以下两个地址中的任意一个查找域名`global-ssl.fastly.Net`和`github.com`的公网地址，选择一个稳定且延迟较低的IP并记录。
+### 寻找正确的IP地址
 
 ```
+// 国内效果不好
+全局翻墙环境下，ping一下域名即可。
+
+或：
+通过以下两个地址中的任意一个查找域名`global-ssl.fastly.Net`和`github.com`的公网地址，选择一个稳定且延迟较低的IP并记录。
 http://tool.chinaz.com/dns/
 https://www.ipaddress.com/
 ```
+
+### 修改hosts文件
+
+#### 通过直接修改
 
 将以下代码添加到`hosts`文件，其中xxx部分替换为上面所查到的IP地址。
 
@@ -626,6 +682,14 @@ sudo /etc/init.d/networking restart
 
 // Windows
 ipconfig /flushdns
+```
+
+#### 通过SwitchHosts!
+
+注意需要把backup配置文件也打开。
+
+```
+https://github.com/oldj/SwitchHosts
 ```
 
 # Github Action

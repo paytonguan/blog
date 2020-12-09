@@ -1,6 +1,6 @@
 ---
 title: 安装Chromium OS到硬盘实现双启动
-categories: Technology
+categories: Chromium OS
 abbrlink: Chromium-OS-Installation
 date: 2019-11-25 22:24:29
 tags:

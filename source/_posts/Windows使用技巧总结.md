@@ -1,6 +1,6 @@
 ---
 title: Windows使用技巧总结
-categories: Technology
+categories: Windows
 abbrlink: Windows-Skills
 date: 2020-05-04 12:55:29
 tags:
@@ -49,6 +49,81 @@ net user Administrator [新密码]
 以管理员身份登录，打开资源管理器，选择菜单工具-文件夹选项，单击`查看`选项卡，取消勾选`使用简单共享`。右键单击不能打开的文件夹，从弹出菜单中选择`属性`，单击安全-高级，选择`将所有者更改为下方的用户`，选中下方的`替换子容器及对象的所有者`，单击`应用`。单击权限-添加，在`选择用户或组`中单击高级-立即查找。选择要给予权限的用户，连续单击两次`确定`，直到出现`权限项目`对话框。在`权限`中的`完全控制`右侧选择`允许`，连续单击确定直到关闭所有对话框即可。
 
 # 系统技巧
+
+## 获取超级管理员权限
+
+将以下内容保存为reg文件后运行，在右键菜单中即出现超级管理员的菜单。
+
+```
+Windows Registry Editor Version 5.00
+
+[-HKEY_CLASSES_ROOT\*\shell\runas]
+
+[HKEY_CLASSES_ROOT\*\shell\runas]
+@="获取超级管理员权限"
+"Icon"="C:\\Windows\\System32\\imageres.dll,-78"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\*\shell\runas\command]
+@="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+"IsolatedCommand"="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+
+[-HKEY_CLASSES_ROOT\Directory\shell\runas]
+
+[HKEY_CLASSES_ROOT\Directory\shell\runas]
+@="获取超级管理员权限"
+"Icon"="C:\\Windows\\System32\\imageres.dll,-78"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\runas\command]
+@="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant administrators:F /t"
+"IsolatedCommand"="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant administrators:F /t"
+
+[-HKEY_CLASSES_ROOT\dllfile\shell]
+
+[HKEY_CLASSES_ROOT\dllfile\shell\runas]
+@="获取超级管理员权限"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\dllfile\shell\runas\command]
+@="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+"IsolatedCommand"="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+
+[-HKEY_CLASSES_ROOT\Drive\shell\runas]
+
+[HKEY_CLASSES_ROOT\Drive\shell\runas]
+@="获取超级管理员权限"
+"Icon"="C:\\Windows\\System32\\imageres.dll,-78"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Drive\shell\runas\command]
+@="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant administrators:F /t"
+"IsolatedCommand"="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant administrators:F /t"
+```
+
+若要取消该菜单，则用以下reg。
+
+```
+Windows Registry Editor Version 5.00
+
+[-HKEY_CLASSES_ROOT\*\shell\runas]
+
+[-HKEY_CLASSES_ROOT\Directory\shell\runas]
+
+[-HKEY_CLASSES_ROOT\dllfile\shell]
+
+[-HKEY_CLASSES_ROOT\Drive\shell\runas]
+
+[-HKEY_CLASSES_ROOT\exefile\shell\runas]
+
+[HKEY_CLASSES_ROOT\exefile\shell\runas]
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\exefile\shell\runas\command]
+@="\"%1\" %*"
+"IsolatedCommand"="\"%1\" %*"
+```
 
 ## 虚拟Wi-Fi功能
 
@@ -676,12 +751,47 @@ https://www.jb51.net/softs/654861.html
 
 ```
 https://macpaw.com/cleanmypc
+https://www.lanzoux.com/ic9hf1e
+https://www.lanzoux.com/ic9hhmh
 ```
 
 ### Wise Disk Cleaner
 
 ```
 https://www.wisecleaner.com/wise-disk-cleaner.html
+https://www.lanzoux.com/ic9oorg
+```
+
+### 一键系统优化加速工具
+
+```
+https://www.lanzoux.com/ic9onud
+```
+
+### 火绒弹窗拦截独立版
+
+```
+https://www.lanzoux.com/iqAkjgyw9vc
+```
+
+## 卸载工具
+
+### Geek Uninstaller
+
+```
+https://www.lanzoux.com/ic9h9da
+```
+
+### Revo Uninstaller Pro
+
+```
+https://www.lanzoux.com/ic9h98f
+```
+
+### IObit Uninstaller
+
+```
+https://www.lanzoux.com/ic9ha6j
 ```
 
 ## 硬件配置
@@ -809,6 +919,8 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 ## 本地搜索工具
 
 ### Everything
+
+可将某目录映射到localhost。打开选项-HTTP服务器，勾选启用HTTP服务器，并选择服务器页面位置即可。
 
 ```
 https://www.voidtools.com/zh-cn/
@@ -960,6 +1072,20 @@ https://justgetflux.com/
 
 ```
 https://leanote.com/
+```
+
+### 绿色程序制作
+
+```
+https://www.lanzoux.com/iMtkjfcey0f
+```
+
+### WizTree
+
+磁盘文件分析。
+
+```
+https://www.lanzoux.com/iyl7Ig6ilxe
 ```
 
 # 参考教程

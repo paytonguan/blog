@@ -1,6 +1,6 @@
 ---
 title: Mac使用技巧总结
-categories: Technology
+categories: Mac
 abbrlink: Mac-Skills
 date: 2019-11-25 14:12:29
 tags:
@@ -13,6 +13,17 @@ tags:
 <!-- more -->
 
 # 常见问题
+
+```
+._文件删除：
+dot_clean [路径]
+
+.DS_Store：
+https://qastack.cn/apple/14980/why-are-dot-underscore-_-files-created-and-how-can-i-avoid-them
+https://www.jianshu.com/p/fdaa8be7f6c3
+```
+
+
 
 ## 构建Xcode时提示「xcode-select: error: tool 'xcodebuild' requires Xcode, but active developer directory」
 
@@ -555,7 +566,8 @@ kextstat | grep -v "com.apple"
 kextstat | grep -v "com.apple" | grep -v "Energy"
 
 // 查看特定名称的驱动（以ACPIplat为例）
-kextstat| grep -y acpiplat
+kextstat | grep -y acpiplat
+kextstat | grep -i acpiplat
 ```
 
 ## Finder显示完整文件路径

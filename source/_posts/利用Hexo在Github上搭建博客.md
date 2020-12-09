@@ -1,6 +1,6 @@
 ---
 title: 利用Hexo在Github上搭建博客
-categories: Technology
+categories: Skill
 abbrlink: Building-Blog-With-Hexo
 date: 2019-06-04 09:50:29
 tags:
@@ -13,6 +13,36 @@ tags:
 <!-- more -->
 
 # 搭建博客
+
+```
+// 利用gitbook搭建博客
+通过github账号登录gitbook，新建workspace
+https://www.gitbook.com/
+在github账号新建一个repository，假设为gitbook
+在工作区中Integrations-github，连接github账号，选择上面的repo
+为实现本地push一个repo时同步更新gitbook，选择Github to Gitbook
+
+连接后按照基本的github操作，本地连接远程的repo:
+cd /Volumes/Payton\'s
+git clone git@github.com:guanpeiheng1/gitbook.git
+cd /Volumes/Payton\'s/gitbook
+git init
+git remote add origin git@github.com:guanpeiheng1/gitbook.git
+git pull
+git add .
+git commit -m "..."
+git push origin master
+
+需要修改SUMMARY.md的目录结构，不然不会生效
+如果需要“子章节”可以使用 Tab 缩进来实现（最多支持三级标题）
+
+目录结构：
+文件夹为group
+文件夹内每一个md为一个页面
+
+部署后不行的话要重新去连接一下giuhub
+
+```
 
 ## 搭建前的准备
 

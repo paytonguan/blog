@@ -1,6 +1,6 @@
 ---
 title: 刷写BIOS和调整整机性能的操作
-categories: Technology
+categories: Computer
 abbrlink: BIOS-Editing-And-Flashing
 date: 2019-11-26 10:33:29
 mathjax: true

@@ -1,6 +1,6 @@
 ---
 title: iOS使用技巧总结
-categories: Technology
+categories: iOS
 abbrlink: iOS-Skills
 date: 2020-03-20 19:06:29
 tags:
@@ -19,6 +19,18 @@ tags:
 ```
 http://www.iosre.com/
 https://appletech752.com/index.html
+
+
+
+游戏破解新插件：iGameGod
+https://iosgods.com/topic/134184-introducing-igamegod-cheat-engine-speed-manager-auto-touch-more/
+https://iosgods.com/topic/134186-igamegod-speed-manager-adjust-the-speed-of-your-games/
+https://iosgods.com/topic/134185-igamegod-auto-touch-record-and-replay-your-touches/
+
+
+新的越狱源：
+cydia.kiiimo.org
+
 ```
 
 # 硬件操作
@@ -49,7 +61,7 @@ https://appletech752.com/index.html
 
 按住电源键十秒即可。通过爱思助手进入的则需要通过爱思助手退出。
 
-## DFU模式
+## 让手机进入DFU模式，连接手机并输入以下命令进行刷机。  
 
 ### 进入
 
@@ -502,7 +514,95 @@ http://www.gpsspg.com/maps.htm
 
 配合iOS 14的小组件功能，可以使用该软件，通过JavaScript脚本使小组件显示相应的内容。
 
-### 显示限免软件
+### 懒人配置
+
+在手机上下载以下脚本，存储到`文件`APP的Scriptable文件夹中。打开Scriptable，先运行Env，再运行Install Scripts即可。
+
+```
+https://raw.githubusercontent.com/evilbutcher/Scriptables/master/Env.js
+https://raw.githubusercontent.com/evilbutcher/Scriptables/master/Install%20Scripts.js
+```
+
+然后下载Config.js脚本并放置，该脚本用于全局配置各脚本的变量，配置Config 文件后，脚本运行优先使用Config文件内的设置，这样可以保证每次更新不会影响自定义设置。
+
+```
+https://raw.githubusercontent.com/evilbutcher/Scriptables/master/Config.js
+```
+
+仓库地址如下。
+
+```
+https://github.com/evilbutcher/Scriptables
+https://github.com/GideonSenku/Scriptable
+```
+
+### 组件放置
+
+在主屏幕添加Scriptable组件，长按小组件并点击`编辑小组件`，在Script中选择要打开的脚本即可。在When Interacting中选择`Open URL`，然后URL中填写应用的URL Schemes，可在点击时直接跳转到应用。
+
+```
+// 获取 URL_Scheme 捷径链接
+https://www.icloud.com/shortcuts/7803b1b01e6f443187651b6a57fee0f0
+
+
+// 10086脚本的使用
+// 10010联通脚本同理
+到Scriptable编辑该脚本，将preefix=""修改成boxjs的域名，一般是boxjs.com
+该脚本重要的地方是需要填入chavy_autologin_cmcc和chavy_getfee_cmcc
+打开boxjs，搜索10086脚本（在chavyleung库里），现在是空的
+确保quanx有cookie的重写（看附的说明），然后打开中国移动APP获取一次cookie，点击话费余额再获取一次cookie
+回到boxjs，看到已经有数据了，复制数据到脚本中即可
+也可不复制，脚本会直接从boxjs中导入
+
+
+附chavy的说明：
+移动：
+1）
+https://github.com/chavyleung/scripts/tree/master/10086
+2）
+#中国移动 查话费
+
+有两个获取ck的地方
+打开app获取一次，点击话费余额获取一次
+
+【如果打开 App 时无提示获取会话】
+“我的”-“设置”-“登陆设置”中关闭指纹登陆，打开自动登录，登陆以后关后台重进，才能保证获取到ck
+感谢 #ridiculou 提供的姿势
+
+注意：是 中国移动 app，不是之前的10086 app
+
+感谢 #wangfei021325 灰灰大佬提供的数据及加解密姿势
+
+hostname = clientaccess.10086.cn
+
+# Surge
+Rewrite: CMCC = type=http-request,pattern=^https:\/\/clientaccess.10086.cn\/biz-orange\/LN\/uamrandcodelogin\/autoLogin,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js,requires-body=true,debug=true
+Rewrite: CMCC = type=http-request,pattern=^https:\/\/clientaccess.10086.cn\/biz-orange\/BN\/realFeeQuery\/getRealFee,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js,requires-body=true,debug=true
+Tasks: 10086-查话费 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.js,wake-system=true
+
+# QuanX
+^https:\/\/clientaccess.10086.cn\/biz-orange\/LN\/uamrandcodelogin\/autoLogin url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js
+^https:\/\/clientaccess.10086.cn\/biz-orange\/BN\/realFeeQuery\/getRealFee url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js
+10 0 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.js, tag=10086-查话费
+
+# Loon
+http-response ^https:\/\/clientaccess.10086.cn\/biz-orange\/LN\/uamrandcodelogin\/autoLogin script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js, requires-body=true
+http-response ^https:\/\/clientaccess.10086.cn\/biz-orange\/BN\/realFeeQuery\/getRealFee script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js, requires-body=true
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js
+
+联通：
+https://github.com/chavyleung/scripts/tree/master/10010
+
+
+// 机场签到脚本
+下载以下json，放到Scriptable文件夹，改名为checkin.json，改内容为自己的机场，运行就可以了
+
+https://raw.githubusercontent.com/evilbutcher/Scriptables/master/checkin_example.json
+```
+
+### 部分脚本
+
+#### 显示限免软件
 
 打开后点击右上角的`+`，将以下代码复制到代码区。然后点击左上角，设置名称和图表后保存。
 
@@ -613,9 +713,7 @@ async function loadAppIcon() {
 }
 ```
 
-在主界面添加Scriptable小组件，长按并选择`编辑小组件`，Script选择刚才的脚本即可。
-
-### 联通话费查询和签到
+#### 联通话费查询和签到
 
 代码如下。
 
@@ -709,7 +807,7 @@ async function getData() {
 
 其中cookie可通过抓包软件获得。以`Stream`为例，开启抓包后登录联通掌上营业厅，点击右上角签到随后退出。然后回到Stream，按域名查找，找到atc.10010.com，进入任意一个链接，找到请求，拷贝Cookie里的内容即可。
 
-### 京东物流查询和自动签到
+#### 京东物流查询和自动签到
 
 ```
 eval(await (new Request(Data.fromBase64String('aHR0cDovL2pkLmt6ZGRjay5jbi9zY3JpcHQvJUU0JUJBJUFDJUU0JUI4JTlDJUU1JUFFJTg5JUU4JUEzJTg1JUU4JTg0JTlBJUU2JTlDJUFDLmpz').toRawString())).loadString());await Script.Installer();
@@ -883,6 +981,35 @@ https://appleid.apple.com/
 
 # 网络调试工具
 
+```
+规则库：
+https://github.com/wlaotou/Profiles
+https://github.com/lhie1/Rules/tree/master
+
+脚本库：
+https://github.com/Orz-3/QuantumultX
+https://github.com/evilbutcher/Quantumult_X
+https://github.com/Peng-YM/QuanX
+https://github.com/chavyleung/scripts
+https://github.com/zZPiglet/Task/tree/master
+https://github.com/yichahucha/surge
+https://github.com/NobyDa/Script
+
+JSBox库：
+https://github.com/evilbutcher/Code
+
+Taio：
+https://github.com/evilbutcher/Taio
+
+实用小程序：
+https://github.com/evilbutcher/Python
+
+图标组：
+https://github.com/Orz-3/mini
+https://github.com/Orz-3/task
+https://github.com/Orz-3/face
+```
+
 ## 基本概念
 
 ### 节点
@@ -966,6 +1093,8 @@ https://github.com/Peng-YM/QuanX/blob/master/Rewrites/GreasyFork/greasy-fork.js
 
 在手机端的浏览器打开greasyfork的脚本页，点击安装即可自动转换。
 
+### 
+
 ### BoxJs
 
 教程链接如下。
@@ -974,7 +1103,7 @@ https://github.com/Peng-YM/QuanX/blob/master/Rewrites/GreasyFork/greasy-fork.js
 https://chavyleung.gitbook.io/boxjs/
 ```
 
-部分JS脚本需要配合BoxJs才能运行。用手机打开以下链接。
+部分JS脚本需要配合BoxJs才能运行。用手机打开以下链接。打开后点击分享-添加到主屏幕，可供以后快速访问。
 
 ```
 http://boxjs.com/
@@ -1000,7 +1129,64 @@ https://raw.githubusercontent.com/id77/QuantumultX/master/box.json
 https://raw.githubusercontent.com/dompling/Script/master/dompling.boxjs.json
 ```
 
+```
+新增订阅后在quanx刷新一次全局配置，然后开关一次VPN
+
+
+会话管理：
+进入某个脚本的配置（如京东多合一签到）
+下面有当前会话，可以获取两个账号的cookie（一个在safari访问bean.m.jd.com另一个在无痕模式），保存会话后点击应用，即可应用当前会话
+删除当前会话内的cookie，然后再无痕模式登录第三、四个账号，保存为会话二，点击应用，就可以使用第三四个账号签到
+通过调用会话切换脚本，可从会话一切换到会话二
+京东签到1->会话切换->京东签到2->会话切换->京东签到3->...
+
+参数配置：
+进入对应脚本，配置相关参数就可以了
+
+会话管理：
+可以批量导入所有的配置，以从Loon切换到quanx等
+主界面->我的->备份，生成的全局变量里点复制
+主界面->我的->导入，将刚才的配置复制进去，再点一下还原
+
+
+```
+
 ## Loon
+
+```
+懒人配置也可通过捷径：
+https://www.icloud.com/shortcuts/5ba2ec8d144a4be188b9037498bbdd26
+
+SSID配置：
+新建策略组，策略类型选择SSID，添加SSID Name并选择模式（比如直连）即可
+
+Final规则：
+选定当前最终使用的规则，可以选择自动切换/手动选择
+
+订阅筛选：
+关键词筛选、正则筛选
+(?=.*A)^(?=.*B)^.*$  节点名既有 A 又有 B
+(A)|(B)                       节点名有 A 或者 B  
+^((?!A).)*$                 节点名不含有A
+(?=.*A)^((?!B).)^*$   节点名含有 A，不含有 B
+
+规则测试：
+测试某个网站走的是什么模式
+
+脚本：
+Loon原生支持surge脚本
+本地脚本-加号，写脚本
+所有脚本-加号-脚本类型cron，设置自动运行脚本，脚本位置可以是local/remote
+
+Q-Search-All-in-One复写的作用：
+将Safari默认搜索引擎改为DuckDuckGo，在搜索时打
+gm 关键词
+可以google搜图，打
+yd 关键词
+可以有道翻译等
+
+
+```
 
 ### 懒人配置
 
@@ -1495,6 +1681,11 @@ skip-server-cert-verify = true
 
 ## Quantumult
 
+```
+首页右下角节点位置处，带五角星说明是中转节点
+延迟与网速并无关系
+```
+
 ### 规则导入
 
 #### 分流
@@ -1601,6 +1792,16 @@ https://raw.githubusercontent.com/ConnersHua/Profiles/master/Kitsunebi/Pro.conf
 
 ## Surge 4
 
+```
+关于 Surge 的延迟测试：
+
+Q：为什么Surge/Shadowrocket/Quantumult 测延迟差距这么大？
+A：测试方式不同。
+Surge 测试的是从目标 policy 返回 http response header 数据包的时间。
+Shadowrocket 支持两种测速方式（ICMP/TCP），默认为 ICMP 模式（即 Ping）。
+Quantumult 采用 SSH 测速模式（22 端口）。
+```
+
 ### 破解
 
 越狱后下载以下插件并安装即可。
@@ -1614,8 +1815,11 @@ https://wws.lanzous.com/tp/i0Ge2dh3oeb
 点击左上角下拉菜单，选择从URL下载配置，复制以下链接并确定即可。
 
 ```
-https://raw.githubusercontent.com/limbopro/Profiles/master/Surge/Pro.conf
+// 主要
 https://raw.githubusercontent.com/nzw9314/Surge/master/Surge_Basic.conf
+
+// 其余可用
+https://raw.githubusercontent.com/limbopro/Profiles/master/Surge/Pro.conf
 https://raw.githubusercontent.com/nzw9314/surge-2/master/surge.conf
 ```
 
@@ -1630,7 +1834,9 @@ https://github.com/Choler/Surge
 
 ### 节点导入
 
-在主界面点击代理服务器，选择添加代理即可添加单个节点，选择新的策略组并勾选使用外部代理列表则可添加订阅。
+在主界面点击代理服务器，选择添加代理即可添加单个节点，选择新的策略组并勾选使用外部代理列表则可添加订阅。也可直接修改配置文件，在`[proxy]`模块下填写即可。
+
+完成后点击外部资源，下拉到底部并点击立即更新。
 
 ### 节点切换
 
@@ -1640,11 +1846,21 @@ https://github.com/Choler/Surge
 
 新建策略组时，在策略组类型中可选择模式，类型含义与Loon基本一致。
 
+#### SSID
+
+类型选择SSID即可。默认策略和数据网络策略为Proxy，添加Wifi名称并设为Direct即可。完成后需要嵌套到其它策略组以完成调用。
+
+### 脚本
+
+可通过分析-脚本编辑器打开已有脚本进行编辑。
+
+### 重写
+
 ### DNS服务器
 
 在主页面点击DNS服务器即可。
 
-如果经常使用的网络没有DNS劫持问题，配置为使用系统DNS配置并追加223.5.5.5和114.114.114.114作为冗余。如果经常使用的网络存在DNS劫持问题。配置为仅使用223.5.5.5和114.114.114.114。
+如果经常使用的网络没有DNS劫持问题，配置为使用系统DNS配置并追加223.5.5.5和114.114.114.114作为冗余。如果经常使用的网络存在DNS劫持问题，配置为仅使用223.5.5.5和114.114.114.114。
 
 ### 规则匹配过程
 
@@ -1961,9 +2177,12 @@ https://Advertising.list#policy=Shawn&out=aweme
 
 点击三菱按钮，选择配置文件中的编辑，找到`[server_remote]`，在选中的订阅链接后面添加图标的地址即可，示例如下。
 
+图标格式必须为png，且分辨率必须为108*108像素。
+
 ```
 img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/IPLC.png
 ```
+
 ### 分流
 
 #### 类型
@@ -2102,17 +2321,17 @@ https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter
 
 ##### 通过与订阅绑定
 
-###### 使用as-policy参数
+###### 得到特定类型的策略组
 
 支持生成static静态策略、available健康检查策略、round-robin负载均衡策略。示例如下。
 
 ```
 [server-remote]
 https://xxxx.server.com, tag=Hong Kong, as-policy=static, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/HK.png, enabled=true
-;这样就会生成一个叫Hong Kong的策略组, 类型是static, 由 as-policy决定
+;这样就会生成一个叫Hong Kong的策略组, 类型是static, 由as-policy决定
 ```
 
-###### 使用regex参数
+###### 得到节点筛选后的策略组
 
 通过正则表达式将某些订阅或某些节点添加到策略组中，支持生成static静态策略、available健康检查策略、round-robin负载均衡策略。当筛选结果为空时设为直连模式。
 
@@ -2129,11 +2348,18 @@ regex包含两个参数，说明如下。
 
 ```
 [policy]
-;策略类型=策略名, resource-tag-regex=筛选订阅 tag 的正则, server-tag-regex=筛选节点 tag 的正则, img-url=策略组图标地址
+;策略类型=策略名, resource-tag-regex=筛选订阅tag的正则, server-tag-regex=筛选节点 tag 的正则, img-url=策略组图标地址
 static=policy-name, resource-tag-regex=^sample, server-tag-regex=^example, img-url=https://example.com/icon.png
 ```
 
-该参数可将多个订阅链接的节点添加到同一策略组进行关联。
+该参数可将多个订阅链接的节点添加到同一策略组进行关联。常用正则表达式如下。
+
+```
+(A).*(B)             节点名既有 A又有 B
+(A)|(B)              节点名有 A 或者 B  
+^((?!A).)*$            节点名不含有 A
+(?!.*(A)).*(B)         节点名不含有 A，同时含有 B
+```
 
 ##### 策略组实例
 
@@ -4564,11 +4790,24 @@ http://ffapple.com
 
 ## 抓取旧版IPA
 
+### 推荐旧版APP
+
+```
+Pyto 12.1.3 内购免费
+
+```
+
 ### 通过爱思助手
 
 爱思助手有安装旧版的功能。
 
 ### 通过专门软件
+
+iTunes12.6.3链接如下。
+
+```
+https://www.jianshu.com/p/33bbfaa6acfd
+```
 
 #### 软件一
 
@@ -4586,6 +4825,8 @@ http://www.pc6.com/softview/SoftView_743492.html
 
 ```
 https://www.52pojie.cn/thread-1119324-1-1.html
+https://www.52pojie.cn/thread-1284776-1-1.html
+https://www.lanzoux.com/i1BaVhg2m7e
 ```
 
 ## 抓取已购买但下架的APP
@@ -5374,6 +5615,12 @@ Online-基址FD38  Beta-基址FD68
 打开Filza，找到APP管理器，点击LOL右侧的`i`。点击`主程序`，进入wildrift.app目录，找到主程序wildrift，点击右侧的`i`。点击`打开方式`，选择`十六进制编辑器`，返回后点击主程序wildrift，选择左侧地址码并输入`020607F8`，将`08 41 40 39`修改为`08 00 80 D2`，保存后即可。
 
 完成修改后需要重新下载以避免闪退。
+
+#### 王牌战士
+
+```
+https://mp.weixin.qq.com/s/0Je9UhWjVTuK-WIDcP886A
+```
 
 ### 常见问题
 

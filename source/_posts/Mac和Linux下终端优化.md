@@ -1,6 +1,6 @@
 ---
 title: Mac和Linux下终端优化
-categories: Technology
+categories: Computer
 abbrlink: Terminal-Optimization
 date: 2019-11-25 13:06:29
 tags:
@@ -181,7 +181,19 @@ git clone https://github.com/powerline/fonts
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-### 国内安装方法
+### 国内安装方法（成功）
+
+```
+https://zhuanlan.zhihu.com/p/111014448
+
+
+安装脚本：
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+卸载脚本：
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/HomebrewUninstall.sh)"
+```
+
+### 国内安装方法（失效）
 
 #### 获取install文件
 
@@ -267,15 +279,16 @@ brew upgrade
 
 ### 常用命令
 
-|         命令          |     操作     |
-| --------------------- | ------------ |
-| brew help             |     帮助     |
-| brew list             |  列出安装包  |
-| brew update           | 更新Homebrew |
-| brew upgrade          |    更新包    |
-| brew install [包名]   |    安装包    |
-| brew uninstall [包名] |    卸载包    |
-| brew -v               | Homebrew版本 |
+|          命令         |      操作      |
+|-----------------------|----------------|
+| brew help             | 帮助           |
+| brew list             | 列出安装包     |
+| brew update           | 更新Homebrew   |
+| brew upgrade          | 更新包         |
+| brew install [包名]   | 安装包         |
+| brew uninstall [包名] | 卸载包         |
+| brew -v               | Homebrew版本   |
+| brew search [包名]    | 搜索可安装的包 |
 
 ## 卸载
 

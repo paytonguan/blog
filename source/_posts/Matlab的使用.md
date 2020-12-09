@@ -1,6 +1,6 @@
 ---
 title: Matlab的使用
-categories: Technology
+categories: Skill
 abbrlink: Matlab-Installation
 date: 2020-04-12 15:52:29
 tags:

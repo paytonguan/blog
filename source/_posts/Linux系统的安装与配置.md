@@ -1,6 +1,6 @@
 ---
 title: Linux系统的安装与配置
-categories: Technology
+categories: Linux
 abbrlink: Linux-Installation
 date: 2019-11-26 09:50:29
 tags:

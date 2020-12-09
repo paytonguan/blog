@@ -1,6 +1,6 @@
 ---
 title: Kindle的使用
-categories: Life
+categories: Skill
 abbrlink: How-To-Use-Kindle
 date: 2020-07-21 12:57:29
 tags: Life
@@ -177,21 +177,43 @@ https://www.duxiu.com/
 
 ### 免费方法
 
-注册图书馆资源，如广西壮族自治区图书馆，然后进入读秀知识库。搜索需要的书，如果结果显示有`包库全文`，则本书可被免费下载。点击包库全文打开，下载并用超星阅读器打开，然后使用以下任意一种方式进行格式转换。
+注册图书馆资源，如广西壮族自治区图书馆，然后进入读秀知识库。搜索需要的书，如果结果显示有`包库全文`，则本书可被免费下载。点击包库全文打开，下载并用超星阅读器打开，然后使用以下任意一种方式进行格式转换。超星阅读器下载链接如下。
+
+```
+http://www.sslibrary.com/ssreader/download
+```
 
 如果显示的是`部分阅读`，可通过查看目录页并逐章搜索的方式尝试下载全书。若发现有缺页，可以使用文献传递来补齐。
 
 #### 通过图片缓存
 
-然后进入`C:\Users\电脑用户名\AppData\Local\Temp\buffer`，如果PDZ是文字版则将buffer改为localX，如local1。每翻一页，此处将生成当前页和下一页的BMP图像，因此只需翻完整本书，即可获取到所有页面的图片。得到图片后，通过PDF编辑器将其合成为完整的PDF即可。
+然后进入`C:\Users\电脑用户名\AppData\Local\Temp\buffer`，如果PDZ是文字版则将buffer改为localX，如local1。每翻一页，此处将生成当前页和下一页的BMP图像，因此只需翻完整本书，即可获取到所有页面的图片。可使用鼠大侠鼠标连点器完成上述点击操作。
+
+```
+https://axu.lanzoux.com/inFq6hykh2f
+```
+
+得到图片后，通过PDF编辑器将其合成为完整的PDF即可。合并PDF可通过PDF补丁丁完成，下载链接如下。
+
+```
+https://axu.lanzoux.com/igagvhykeyj
+```
 
 #### 通过虚拟打印机
 
-在超星阅读器中将PDZ打印为XPS，然后用XPS Viewer打开XPS打印为PDF。
+在超星阅读器中将PDZ打印为XPS，然后用XPS Viewer打开XPS打印为PDF。XPS Viewer下载链接如下。
+
+```
+https://axu.lanzoux.com/i1dN4hykicb
+```
 
 ### 添加目录书签
 
-以上方法下载的电子书可能会没有目录书签。为此，需要重新下载电子书，并选择分页下载，以获取BookContents.dat文件。用PdgCntEditor打开并复制，然后打开需要添加目录书签的PDF，将刚才复制的内容贴上。
+以上方法下载的电子书可能会没有目录书签。为此，需要重新下载电子书，并选择分页下载，以获取BookContents.dat文件。用PdgCntEditor打开并复制，然后打开需要添加目录书签的PDF，将刚才复制的内容贴上。PdgEntEditor下载链接如下。
+
+```
+https://axu.lanzoux.com/iPLWkhykfde
+```
 
 切换到树形编辑模式。如果目录本身自带数字编号的层级，如`1.1`、`2.1`等，则直接点击工具栏上的`自动切分页码`，否则通过工具栏上的`将所选条目右移一栏`调整目录层次。根据目录与实际的页码差值调整基准页，如目录是第1页，而实际PDF中是第7页，则基准页填7（7-1+1）。完成后保存PDF即可。
 

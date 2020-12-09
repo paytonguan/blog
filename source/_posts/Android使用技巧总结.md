@@ -1,6 +1,6 @@
 ---
 title: Android使用技巧总结
-categories: Technology
+categories: Android
 abbrlink: Android-Skills
 date: 2020-04-22 22:54:29
 tags:

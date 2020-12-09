@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#000">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-flash.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="安卓使用技巧。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android使用技巧总结">
+<meta property="og:url" content="http://yoursite.com/posts/Android-Skills.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="安卓使用技巧。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegao3bnq6j31800kvaax.jpg">
+<meta property="article:published_time" content="2020-04-22T14:54:29.000Z">
+<meta property="article:modified_time" content="2020-12-09T01:40:07.270Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegao3bnq6j31800kvaax.jpg">
+
+<link rel="canonical" href="http://yoursite.com/posts/Android-Skills.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Android使用技巧总结 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/Android-Skills.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Android使用技巧总结
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-22 22:54:29" itemprop="dateCreated datePublished" datetime="2020-04-22T22:54:29+08:00">2020-04-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-09 09:40:07" itemprop="dateModified" datetime="2020-12-09T09:40:07+08:00">2020-12-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegao3bnq6j31800kvaax.jpg"></p>
+<p>安卓使用技巧。</p>
+<a id="more"></a>
+
+<h1 id="破解软件"><a href="#破解软件" class="headerlink" title="破解软件"></a>破解软件</h1><h2 id="软件库"><a href="#软件库" class="headerlink" title="软件库"></a>软件库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;590m.com&#x2F;dir&#x2F;845023-30099335-9e922b</span><br><span class="line">https:&#x2F;&#x2F;306t.com&#x2F;dir&#x2F;14633726-31244416-26771f</span><br><span class="line">https:&#x2F;&#x2F;www.uptodown.com&#x2F;android</span><br></pre></td></tr></table></figure>
+
+<h2 id="微信抢红包插件"><a href="#微信抢红包插件" class="headerlink" title="微信抢红包插件"></a>微信抢红包插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;geeeeeeeeek&#x2F;WeChatLuckyMoney</span><br></pre></td></tr></table></figure>
+
+<h1 id="Root-Busybox-Xposed"><a href="#Root-Busybox-Xposed" class="headerlink" title="Root/Busybox/Xposed"></a>Root/Busybox/Xposed</h1><p>翻墙后安装Google Play，然后安装Busybox。准备好系统原镜像，安装Magisk Manager并打开，通过修补boot的方式得到新镜像，并通过Odin进行线刷即可。</p>
+<h1 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h1><p>在安卓手机上通过安装相应的APP，可以运行电脑系统。</p>
+<h2 id="Bochs运行XP"><a href="#Bochs运行XP" class="headerlink" title="Bochs运行XP"></a>Bochs运行XP</h2><h3 id="安装前的准备"><a href="#安装前的准备" class="headerlink" title="安装前的准备"></a>安装前的准备</h3><h4 id="Bochs安装包"><a href="#Bochs安装包" class="headerlink" title="Bochs安装包"></a>Bochs安装包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1i4FDLGT</span><br></pre></td></tr></table></figure>
+
+<h4 id="适用于Bochs的XP镜像"><a href="#适用于Bochs的XP镜像" class="headerlink" title="适用于Bochs的XP镜像"></a>适用于Bochs的XP镜像</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1gfj4a2Z</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装流程"><a href="#安装流程" class="headerlink" title="安装流程"></a>安装流程</h3><p>将apk格式的Bochs安装包和img格式的Windows系统镜像传送到手机，放置于任何目录下均可。安装Bochs，将<code>ata0-master</code>前面的复选框选中，然后点击<code>select</code>。选择img格式的系统镜像文件Windows.img，其他项无需更改。点击顶部的<code>HARDWARE</code>选项卡，按照以下设置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CPU Model无需更改</span><br><span class="line">Chipset选择i440fx</span><br><span class="line">内存设置为517MB（可根据手机配置调整）</span><br><span class="line">VGA Card设置为cirrus_5446</span><br><span class="line">Sound Card设置为sb16</span><br><span class="line">Ethernet Card设置为rtl8029</span><br><span class="line">PCI设置中，Slot1设置为cirrus，Slot2设置为ne2k，Slot3设置为es1370，Slot4设置为voodoo，Slot5设置为none</span><br></pre></td></tr></table></figure>
+
+<p>点击顶部的MISC选项卡，将Full screen前面的复选框选中以使Windows可以全屏运行。点击右上角绿色的Start按钮以启动Windows。</p>
+<h2 id="Limbo运行XP"><a href="#Limbo运行XP" class="headerlink" title="Limbo运行XP"></a>Limbo运行XP</h2><h3 id="安装前的准备-1"><a href="#安装前的准备-1" class="headerlink" title="安装前的准备"></a>安装前的准备</h3><h4 id="Limbo安装包"><a href="#Limbo安装包" class="headerlink" title="Limbo安装包"></a>Limbo安装包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1pK7ua3D</span><br></pre></td></tr></table></figure>
+
+<h4 id="适用于Limbo的XP镜像"><a href="#适用于Limbo的XP镜像" class="headerlink" title="适用于Limbo的XP镜像"></a>适用于Limbo的XP镜像</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1miRtjJU</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装流程-1"><a href="#安装流程-1" class="headerlink" title="安装流程"></a>安装流程</h3><p>将apk格式的Limbo安装包和qcow2格式的Windows系统镜像传送到手机，放置于任何目录下均可。</p>
+<p>安装Limbo并打开，加载虚拟机下选择新建，在弹出对话框中输入虚拟机名称，然后按照以下设置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">用户界面项选择SDL</span><br><span class="line">CPU型号项选择athlon</span><br><span class="line">CPU核心数设置为2（可根据手机配置调整）</span><br><span class="line">运存项设置为64（可根据手机配置调整）</span><br><span class="line">光驱和软盘A和软盘B项留空</span><br><span class="line">硬盘A项点击后选择打开，选择qcow2格式的镜像文件</span><br><span class="line">硬盘B项留空</span><br><span class="line">引导设备项选择硬盘</span><br><span class="line">网络配置项选择User</span><br><span class="line">网卡项选择rtl8139</span><br><span class="line">显卡配置项选择cirrus</span><br><span class="line">声卡配置项选择sb16</span><br><span class="line">高级设置全部留空</span><br><span class="line">勾选多线程AIO右侧的复选框（警告可以无视）</span><br></pre></td></tr></table></figure>
+
+<p>全部设置完毕后，回到顶部，点击运行以启动Windows。</p>
+<h2 id="APQ模拟器运行XP"><a href="#APQ模拟器运行XP" class="headerlink" title="APQ模拟器运行XP"></a>APQ模拟器运行XP</h2><h3 id="安装前的准备-2"><a href="#安装前的准备-2" class="headerlink" title="安装前的准备"></a>安装前的准备</h3><h4 id="APQ安装包"><a href="#APQ安装包" class="headerlink" title="APQ安装包"></a>APQ安装包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.cr173.com&#x2F;soft&#x2F;692055.html</span><br></pre></td></tr></table></figure>
+
+<h4 id="Zarchiver安装包"><a href="#Zarchiver安装包" class="headerlink" title="Zarchiver安装包"></a>Zarchiver安装包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;dl.pconline.com.cn&#x2F;download&#x2F;1815731.html</span><br></pre></td></tr></table></figure>
+
+<h4 id="适用于APQ的XP镜像"><a href="#适用于APQ的XP镜像" class="headerlink" title="适用于APQ的XP镜像"></a>适用于APQ的XP镜像</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1_aoxWWi0mfN1cXyS3V4I6g</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装流程-2"><a href="#安装流程-2" class="headerlink" title="安装流程"></a>安装流程</h3><p>获取root权限。打开APQ，点击data分区，等待文件处理完成。</p>
+<p>打开zarchiver（自己百度下载，不知道为什么复制不了链接），找到手机内存的APQ打开，找到kolibri.conf文件。将以下位置的文件名改为下载好的镜像文件即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#第一块硬盘，硬盘镜像文件为xp.qcow2，应位于SD卡上的APQ主目录下或写绝对路径</span><br><span class="line">-fda kolibri.img</span><br></pre></td></tr></table></figure>
+
+<h2 id="Termux运行Linux"><a href="#Termux运行Linux" class="headerlink" title="Termux运行Linux"></a>Termux运行Linux</h2><p>无需root，安装完成后打开即可使用。</p>
+<h1 id="LineageOS"><a href="#LineageOS" class="headerlink" title="LineageOS"></a>LineageOS</h1><p>对于LG G3的教程如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;linustechtips.com&#x2F;topic&#x2F;1058206-lg-g3-lineageos-tutorial&#x2F;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/AllOS-Skills.html" rel="prev" title="全平台使用技巧总结">
+      <i class="fa fa-chevron-left"></i> 全平台使用技巧总结
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/OS-Installation.html" rel="next" title="各种系统的安装与配置">
+      各种系统的安装与配置 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6"><span class="nav-text">破解软件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%BA%93"><span class="nav-text">软件库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1%E6%8A%A2%E7%BA%A2%E5%8C%85%E6%8F%92%E4%BB%B6"><span class="nav-text">微信抢红包插件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Root-Busybox-Xposed"><span class="nav-text">Root&#x2F;Busybox&#x2F;Xposed</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-text">虚拟机</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Bochs%E8%BF%90%E8%A1%8CXP"><span class="nav-text">Bochs运行XP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87"><span class="nav-text">安装前的准备</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Bochs%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-text">Bochs安装包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E4%BA%8EBochs%E7%9A%84XP%E9%95%9C%E5%83%8F"><span class="nav-text">适用于Bochs的XP镜像</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B"><span class="nav-text">安装流程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Limbo%E8%BF%90%E8%A1%8CXP"><span class="nav-text">Limbo运行XP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87-1"><span class="nav-text">安装前的准备</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Limbo%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-text">Limbo安装包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E4%BA%8ELimbo%E7%9A%84XP%E9%95%9C%E5%83%8F"><span class="nav-text">适用于Limbo的XP镜像</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B-1"><span class="nav-text">安装流程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#APQ%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%BF%90%E8%A1%8CXP"><span class="nav-text">APQ模拟器运行XP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87-2"><span class="nav-text">安装前的准备</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#APQ%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-text">APQ安装包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Zarchiver%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-text">Zarchiver安装包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E4%BA%8EAPQ%E7%9A%84XP%E9%95%9C%E5%83%8F"><span class="nav-text">适用于APQ的XP镜像</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B-2"><span class="nav-text">安装流程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Termux%E8%BF%90%E8%A1%8CLinux"><span class="nav-text">Termux运行Linux</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LineageOS"><span class="nav-text">LineageOS</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/guanpeiheng1" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;guanpeiheng1" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:guanpeiheng1@gmail.com" title="E-Mail → mailto:guanpeiheng1@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/paytonguan" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;paytonguan" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://plus.google.com/guanpeiheng1" title="Google → https:&#x2F;&#x2F;plus.google.com&#x2F;guanpeiheng1" rel="noopener" target="_blank"><i class="fab fa-google fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/guanpeiheng1" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;guanpeiheng1" rel="noopener" target="_blank"><i class="fab fa-facebook fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://youtube.com/guanpeiheng1" title="YouTube → https:&#x2F;&#x2F;youtube.com&#x2F;guanpeiheng1" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://instagram.com/guanpeiheng1" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;guanpeiheng1" rel="noopener" target="_blank"><i class="fab fa-instagram fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">1.2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">18:39</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

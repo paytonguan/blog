@@ -104,7 +104,7 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/paytonguan/paytonguan.github.io.git
+  repo: https://github.com/paytonguan/blog.git
   branch: master
 
 # Backup
@@ -112,7 +112,7 @@ backup:
   type: git     
   message: backup for hexo blog
   repository:  
-    github: git@github.com:paytonguan/paytonguan.github.io.git,source
+    github: git@github.com:paytonguan/blog.git,source
 
 # Abbrlinks
 abbrink:
