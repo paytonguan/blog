@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Android使用技巧总结</title>
-    <url>/posts/Android-Skills.html</url>
+    <url>/blog/posts/Android-Skills.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegao3bnq6j31800kvaax.jpg"></p>
 <p>安卓使用技巧。</p>
 <a id="more"></a>
@@ -51,7 +51,7 @@
   </entry>
   <entry>
     <title>Kindle的使用</title>
-    <url>/posts/How-To-Use-Kindle.html</url>
+    <url>/blog/posts/How-To-Use-Kindle.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gh62g6dppjj30xc0m8q5l.jpg"></p>
 <p>Kindle的使用技巧总结。</p>
 <a id="more"></a>
@@ -120,7 +120,7 @@
   </entry>
   <entry>
     <title>Linux系统的安装与配置</title>
-    <url>/posts/Linux-Installation.html</url>
+    <url>/blog/posts/Linux-Installation.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9b69on8vmj30p10fj74q.jpg"></p>
 <p>安装Linux系统，可以完成许多在Windows下无法完成的操作。</p>
 <a id="more"></a>
@@ -283,7 +283,7 @@
   </entry>
   <entry>
     <title>Mac和Linux下终端优化</title>
-    <url>/posts/Terminal-Optimization.html</url>
+    <url>/blog/posts/Terminal-Optimization.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9ad0bvjl7j312q0rutjq.jpg"></p>
 <p>对Mac和Linux下终端进行优化，可以大大提升用户体验。</p>
 <a id="more"></a>
@@ -416,8 +416,77 @@
       </categories>
   </entry>
   <entry>
+    <title>Node环境的搭建与使用</title>
+    <url>/blog/posts/Node-Installation.html</url>
+    <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9as31waswj31c00u013e.jpg"></p>
+<p>Node是一个JavaScript运行环境，很多模块都需要依赖node。npm是随同node安装的包管理工具，node安装完成后，npm也安装完成。</p>
+<a id="more"></a>
+
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="通过nvm安装（推荐）"><a href="#通过nvm安装（推荐）" class="headerlink" title="通过nvm安装（推荐）"></a>通过nvm安装（推荐）</h2><p>仓库如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;nvm-sh&#x2F;nvm</span><br></pre></td></tr></table></figure>
+
+<p>在终端输入以下命令安装<code>nvm</code>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; bash用户</span><br><span class="line">curl -o- https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;creationix&#x2F;nvm&#x2F;v0.33.11&#x2F;install.sh | bash</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; zsh用户</span><br><span class="line">curl -o- [https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;creationix&#x2F;nvm&#x2F;v0.33.11&#x2F;install.sh](https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;creationix&#x2F;nvm&#x2F;v0.33.11&#x2F;install.sh) | bash [[ -s $HOME&#x2F;.nvm&#x2F;nvm.sh ]] &amp;&amp; . $HOME&#x2F;.nvm&#x2F;nvm.sh</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后在终端输入下列命令以安装<code>node</code>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 安装长期支持版本（建议）</span><br><span class="line">nvm install --lts</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 安装最新版本</span><br><span class="line">nvm install node</span><br></pre></td></tr></table></figure>
+
+<h2 id="通过官方安装包安装"><a href="#通过官方安装包安装" class="headerlink" title="通过官方安装包安装"></a>通过官方安装包安装</h2><p>打开下面官方网站，下载安装包进行安装。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h2 id="更换下载源"><a href="#更换下载源" class="headerlink" title="更换下载源"></a>更换下载源</h2><h3 id="直接更换为淘宝源"><a href="#直接更换为淘宝源" class="headerlink" title="直接更换为淘宝源"></a>直接更换为淘宝源</h3><p>在终端执行以下命令。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config set -g registry https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<h3 id="用nrm切换下载源"><a href="#用nrm切换下载源" class="headerlink" title="用nrm切换下载源"></a>用nrm切换下载源</h3><p>在终端执行以下命令安装<code>nrm</code>，并查看下载镜像源。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g nrm</span><br><span class="line">nrm ls</span><br></pre></td></tr></table></figure>
+
+<p>用以下命令切换淘宝源。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nrm use taobao</span><br></pre></td></tr></table></figure>
+
+<h2 id="更新主程序"><a href="#更新主程序" class="headerlink" title="更新主程序"></a>更新主程序</h2><h3 id="对于nvm安装"><a href="#对于nvm安装" class="headerlink" title="对于nvm安装"></a>对于nvm安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nvm install lts&#x2F;* --reinstall-packages-from&#x3D;default --latest-npm</span><br></pre></td></tr></table></figure>
+
+<h3 id="对于独立程序"><a href="#对于独立程序" class="headerlink" title="对于独立程序"></a>对于独立程序</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g npm</span><br><span class="line">npm install -g node</span><br></pre></td></tr></table></figure>
+
+<h2 id="更新下载包"><a href="#更新下载包" class="headerlink" title="更新下载包"></a>更新下载包</h2><p>在终端执行以下命令安装<code>ncu</code>并更新依赖包到最新版本。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g npm-check-updates</span><br><span class="line">ncu -u</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看安装过的模块"><a href="#查看安装过的模块" class="headerlink" title="查看安装过的模块"></a>查看安装过的模块</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 查看当前项目的依赖模块</span><br><span class="line">npm ls --depth 0</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 查看全局依赖模块命令</span><br><span class="line">npm ls -g --depth 0</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除项目所有依赖"><a href="#删除项目所有依赖" class="headerlink" title="删除项目所有依赖"></a>删除项目所有依赖</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm cache verify</span><br><span class="line">&#x2F;&#x2F; 或npm cache clean --force</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除项目所有依赖-1"><a href="#删除项目所有依赖-1" class="headerlink" title="删除项目所有依赖"></a>删除项目所有依赖</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm uninstall *</span><br></pre></td></tr></table></figure>
+
+<h1 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h1><h2 id="卸载nvm"><a href="#卸载nvm" class="headerlink" title="卸载nvm"></a>卸载nvm</h2><p>在终端输入以下命令，移除nvm。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~</span><br><span class="line">rm -rf .nvm</span><br></pre></td></tr></table></figure>
+
+<p>移除掉<code>~/.profile</code>，<code>~/.bash_profile</code>， <code>~/.zshrc</code>，<code>~/.bashrc</code>文件中关于nvm的配置后输入以下命令，让配置文件生效。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source ~&#x2F;.zshrc</span><br><span class="line">source ~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure>
+
+<h2 id="卸载node和npm"><a href="#卸载node和npm" class="headerlink" title="卸载node和npm"></a>卸载node和npm</h2><p>在终端执行以下命令以卸载。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo npm uninstall npm -g</span><br><span class="line">sudo rm -rf &#x2F;usr&#x2F;local&#x2F;lib&#x2F;node &#x2F;usr&#x2F;local&#x2F;lib&#x2F;node_modules &#x2F;var&#x2F;db&#x2F;receipts&#x2F;org.nodejs.*</span><br><span class="line">sudo rm -rf &#x2F;usr&#x2F;local&#x2F;include&#x2F;node &#x2F;Users&#x2F;$USER&#x2F;.npm</span><br><span class="line">sudo rm &#x2F;usr&#x2F;local&#x2F;bin&#x2F;node</span><br><span class="line">sudo rm &#x2F;usr&#x2F;local&#x2F;share&#x2F;man&#x2F;man1&#x2F;node.1</span><br><span class="line">sudo rm &#x2F;usr&#x2F;local&#x2F;lib&#x2F;dtrace&#x2F;node.d</span><br></pre></td></tr></table></figure>
+
+<p>输入以下命令以确认卸载是否已完成。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node</span><br><span class="line">npm</span><br></pre></td></tr></table></figure>
+
+<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="提示package-json不存在"><a href="#提示package-json不存在" class="headerlink" title="提示package.json不存在"></a>提示package.json不存在</h2><p>package.json不存在时，可运行以下命令自动创建。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
+
+<p>package.json存在时，运行以下命令以将package.json的模块安装到node-modules文件夹下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br><span class="line">&#x2F;&#x2F; 或 npm install –save-dev</span><br></pre></td></tr></table></figure>
+
+<p>打开package.json，在最后大括号前添加以下语句，保存并退出。该语句可修复<code>warning no description / no repository field</code>的错误。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;private&quot;: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="提示找不到-lt-CoreFoundation-CoreFoundation-h-gt-或其它库文件"><a href="#提示找不到-lt-CoreFoundation-CoreFoundation-h-gt-或其它库文件" class="headerlink" title="提示找不到&lt;CoreFoundation/CoreFoundation.h&gt;或其它库文件"></a>提示找不到&lt;CoreFoundation/CoreFoundation.h&gt;或其它库文件</h2><p>在终端输入以下命令即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">csrutil disable</span><br><span class="line">sudo mount -uw &#x2F;</span><br><span class="line">sudo ln -s &quot;$(xcrun --show-sdk-path)&#x2F;usr&#x2F;include&quot; &#x2F;usr&#x2F;include</span><br><span class="line">export SDKROOT&#x3D;&quot;$(xcrun --show-sdk-path)&quot;</span><br><span class="line">echo &quot;export SDKROOT&#x3D;\&quot;\$(xcrun --show-sdk-path)\&quot;&quot; &gt;&gt; ~&#x2F;.bash_profile</span><br><span class="line">sudo DevToolsSecurity -enable</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Skill</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Matlab的使用</title>
-    <url>/posts/Matlab-Installation.html</url>
+    <url>/blog/posts/Matlab-Installation.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegaff5icfj30sg0g040h.jpg"></p>
 <p>Matlab相关使用技巧。</p>
 <a id="more"></a>
@@ -434,7 +503,7 @@
   </entry>
   <entry>
     <title>Sublime 3的使用</title>
-    <url>/posts/Sublime-Installation.html</url>
+    <url>/blog/posts/Sublime-Installation.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006tNbRwly1ga8x7npp86j30v50u0h1g.jpg"></p>
 <p>Sublime 3是一款好用的文本编辑软件。</p>
 <a id="more"></a>
@@ -515,122 +584,8 @@
       </categories>
   </entry>
   <entry>
-    <title>Node环境的搭建与使用</title>
-    <url>/posts/Node-Installation.html</url>
-    <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9as31waswj31c00u013e.jpg"></p>
-<p>Node是一个JavaScript运行环境，很多模块都需要依赖node。npm是随同node安装的包管理工具，node安装完成后，npm也安装完成。</p>
-<a id="more"></a>
-
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="通过nvm安装（推荐）"><a href="#通过nvm安装（推荐）" class="headerlink" title="通过nvm安装（推荐）"></a>通过nvm安装（推荐）</h2><p>仓库如下。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;nvm-sh&#x2F;nvm</span><br></pre></td></tr></table></figure>
-
-<p>在终端输入以下命令安装<code>nvm</code>。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; bash用户</span><br><span class="line">curl -o- https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;creationix&#x2F;nvm&#x2F;v0.33.11&#x2F;install.sh | bash</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; zsh用户</span><br><span class="line">curl -o- [https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;creationix&#x2F;nvm&#x2F;v0.33.11&#x2F;install.sh](https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;creationix&#x2F;nvm&#x2F;v0.33.11&#x2F;install.sh) | bash [[ -s $HOME&#x2F;.nvm&#x2F;nvm.sh ]] &amp;&amp; . $HOME&#x2F;.nvm&#x2F;nvm.sh</span><br></pre></td></tr></table></figure>
-
-<p>安装完成后在终端输入下列命令以安装<code>node</code>。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 安装长期支持版本（建议）</span><br><span class="line">nvm install --lts</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 安装最新版本</span><br><span class="line">nvm install node</span><br></pre></td></tr></table></figure>
-
-<h2 id="通过官方安装包安装"><a href="#通过官方安装包安装" class="headerlink" title="通过官方安装包安装"></a>通过官方安装包安装</h2><p>打开下面官方网站，下载安装包进行安装。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h2 id="更换下载源"><a href="#更换下载源" class="headerlink" title="更换下载源"></a>更换下载源</h2><h3 id="直接更换为淘宝源"><a href="#直接更换为淘宝源" class="headerlink" title="直接更换为淘宝源"></a>直接更换为淘宝源</h3><p>在终端执行以下命令。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config set -g registry https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<h3 id="用nrm切换下载源"><a href="#用nrm切换下载源" class="headerlink" title="用nrm切换下载源"></a>用nrm切换下载源</h3><p>在终端执行以下命令安装<code>nrm</code>，并查看下载镜像源。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g nrm</span><br><span class="line">nrm ls</span><br></pre></td></tr></table></figure>
-
-<p>用以下命令切换淘宝源。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nrm use taobao</span><br></pre></td></tr></table></figure>
-
-<h2 id="更新主程序"><a href="#更新主程序" class="headerlink" title="更新主程序"></a>更新主程序</h2><h3 id="对于nvm安装"><a href="#对于nvm安装" class="headerlink" title="对于nvm安装"></a>对于nvm安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nvm install lts&#x2F;* --reinstall-packages-from&#x3D;default --latest-npm</span><br></pre></td></tr></table></figure>
-
-<h3 id="对于独立程序"><a href="#对于独立程序" class="headerlink" title="对于独立程序"></a>对于独立程序</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g npm</span><br><span class="line">npm install -g node</span><br></pre></td></tr></table></figure>
-
-<h2 id="更新下载包"><a href="#更新下载包" class="headerlink" title="更新下载包"></a>更新下载包</h2><p>在终端执行以下命令安装<code>ncu</code>并更新依赖包到最新版本。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g npm-check-updates</span><br><span class="line">ncu -u</span><br></pre></td></tr></table></figure>
-
-<h2 id="查看安装过的模块"><a href="#查看安装过的模块" class="headerlink" title="查看安装过的模块"></a>查看安装过的模块</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 查看当前项目的依赖模块</span><br><span class="line">npm ls --depth 0</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 查看全局依赖模块命令</span><br><span class="line">npm ls -g --depth 0</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除项目所有依赖"><a href="#删除项目所有依赖" class="headerlink" title="删除项目所有依赖"></a>删除项目所有依赖</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm cache verify</span><br><span class="line">&#x2F;&#x2F; 或npm cache clean --force</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除项目所有依赖-1"><a href="#删除项目所有依赖-1" class="headerlink" title="删除项目所有依赖"></a>删除项目所有依赖</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm uninstall *</span><br></pre></td></tr></table></figure>
-
-<h1 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h1><h2 id="卸载nvm"><a href="#卸载nvm" class="headerlink" title="卸载nvm"></a>卸载nvm</h2><p>在终端输入以下命令，移除nvm。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~</span><br><span class="line">rm -rf .nvm</span><br></pre></td></tr></table></figure>
-
-<p>移除掉<code>~/.profile</code>，<code>~/.bash_profile</code>， <code>~/.zshrc</code>，<code>~/.bashrc</code>文件中关于nvm的配置后输入以下命令，让配置文件生效。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source ~&#x2F;.zshrc</span><br><span class="line">source ~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure>
-
-<h2 id="卸载node和npm"><a href="#卸载node和npm" class="headerlink" title="卸载node和npm"></a>卸载node和npm</h2><p>在终端执行以下命令以卸载。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo npm uninstall npm -g</span><br><span class="line">sudo rm -rf &#x2F;usr&#x2F;local&#x2F;lib&#x2F;node &#x2F;usr&#x2F;local&#x2F;lib&#x2F;node_modules &#x2F;var&#x2F;db&#x2F;receipts&#x2F;org.nodejs.*</span><br><span class="line">sudo rm -rf &#x2F;usr&#x2F;local&#x2F;include&#x2F;node &#x2F;Users&#x2F;$USER&#x2F;.npm</span><br><span class="line">sudo rm &#x2F;usr&#x2F;local&#x2F;bin&#x2F;node</span><br><span class="line">sudo rm &#x2F;usr&#x2F;local&#x2F;share&#x2F;man&#x2F;man1&#x2F;node.1</span><br><span class="line">sudo rm &#x2F;usr&#x2F;local&#x2F;lib&#x2F;dtrace&#x2F;node.d</span><br></pre></td></tr></table></figure>
-
-<p>输入以下命令以确认卸载是否已完成。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node</span><br><span class="line">npm</span><br></pre></td></tr></table></figure>
-
-<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="提示package-json不存在"><a href="#提示package-json不存在" class="headerlink" title="提示package.json不存在"></a>提示package.json不存在</h2><p>package.json不存在时，可运行以下命令自动创建。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
-
-<p>package.json存在时，运行以下命令以将package.json的模块安装到node-modules文件夹下。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br><span class="line">&#x2F;&#x2F; 或 npm install –save-dev</span><br></pre></td></tr></table></figure>
-
-<p>打开package.json，在最后大括号前添加以下语句，保存并退出。该语句可修复<code>warning no description / no repository field</code>的错误。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;private&quot;: true</span><br></pre></td></tr></table></figure>
-
-<h2 id="提示找不到-lt-CoreFoundation-CoreFoundation-h-gt-或其它库文件"><a href="#提示找不到-lt-CoreFoundation-CoreFoundation-h-gt-或其它库文件" class="headerlink" title="提示找不到&lt;CoreFoundation/CoreFoundation.h&gt;或其它库文件"></a>提示找不到&lt;CoreFoundation/CoreFoundation.h&gt;或其它库文件</h2><p>在终端输入以下命令即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">csrutil disable</span><br><span class="line">sudo mount -uw &#x2F;</span><br><span class="line">sudo ln -s &quot;$(xcrun --show-sdk-path)&#x2F;usr&#x2F;include&quot; &#x2F;usr&#x2F;include</span><br><span class="line">export SDKROOT&#x3D;&quot;$(xcrun --show-sdk-path)&quot;</span><br><span class="line">echo &quot;export SDKROOT&#x3D;\&quot;\$(xcrun --show-sdk-path)\&quot;&quot; &gt;&gt; ~&#x2F;.bash_profile</span><br><span class="line">sudo DevToolsSecurity -enable</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Skill</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>公众号使用指南</title>
-    <url>/posts/Subscription-Use.html</url>
-    <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gk7x9t5no2j30yk0jgwki.jpg"></p>
-<p>公众号开发可以为其提供新的功能。</p>
-<a id="more"></a>
-
-<h1 id="图文排版"><a href="#图文排版" class="headerlink" title="图文排版"></a>图文排版</h1><h2 id="编辑器自动保存"><a href="#编辑器自动保存" class="headerlink" title="编辑器自动保存"></a>编辑器自动保存</h2><p>点击Chrome浏览器的TamperMonkey扩展程序，选择<code>添加新脚本</code>，复制以下内容并保存即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; &#x3D;&#x3D;UserScript&#x3D;&#x3D;</span><br><span class="line">&#x2F;&#x2F; @name         微信推文编辑器自动保存</span><br><span class="line">&#x2F;&#x2F; @version      0.1</span><br><span class="line">&#x2F;&#x2F; @description  微信推文编辑器自动保存</span><br><span class="line">&#x2F;&#x2F; @author       内咸禾方皇</span><br><span class="line">&#x2F;&#x2F; @match        https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;*</span><br><span class="line">&#x2F;&#x2F; @grant        none</span><br><span class="line">&#x2F;&#x2F; @run-at       document-end</span><br><span class="line">&#x2F;&#x2F; &#x3D;&#x3D;&#x2F;UserScript&#x3D;&#x3D;</span><br><span class="line">(function() &#123;</span><br><span class="line">    &#39;use strict&#39;;</span><br><span class="line">    var time &#x3D; window.setInterval(function()&#123;document.querySelector(&quot;#js_submit&quot;).click()&#125;,60000);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<h2 id="Markdown-to-公众号一键转换器"><a href="#Markdown-to-公众号一键转换器" class="headerlink" title="Markdown to 公众号一键转换器"></a>Markdown to 公众号一键转换器</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;knb.im&#x2F;mp&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h1 id="公众号开发"><a href="#公众号开发" class="headerlink" title="公众号开发"></a>公众号开发</h1><h2 id="服务器绑定"><a href="#服务器绑定" class="headerlink" title="服务器绑定"></a>服务器绑定</h2><p>服务器用于处理发送到公众号的消息请求，并完成消息发送。</p>
-<p>准备好VPS后通过SSH连接，以CentOS为例，进入root用户后执行以下命令以安装必要依赖。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install vim</span><br><span class="line">yum install libxml2</span><br><span class="line">yum install libxslt</span><br><span class="line">yum install python</span><br><span class="line">pip install --upgrade pip</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 对于python2</span><br><span class="line">pip install web.py&#x3D;&#x3D;0.51</span><br><span class="line">&#x2F;&#x2F; 对于python3</span><br><span class="line">pip install web.py</span><br><span class="line"></span><br><span class="line">pip install lxml</span><br></pre></td></tr></table></figure>
-
-<p>完成后输入以下命令新建py文件。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim main.py</span><br></pre></td></tr></table></figure>
-
-<p>内容如下。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># filename: main.py</span><br><span class="line">import web</span><br><span class="line">from handle import Handle</span><br><span class="line"></span><br><span class="line">urls &#x3D; (</span><br><span class="line">    &#39;&#x2F;wx&#39;, &#39;Handle&#39;,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    app &#x3D; web.application(urls, globals())</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure>
-
-<p>保存后继续新建文件。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim handle.py</span><br></pre></td></tr></table></figure>
-
-<p>内容如下，其中token可任意填写。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># filename: handle.py</span><br><span class="line"></span><br><span class="line">import hashlib</span><br><span class="line">import web</span><br><span class="line"></span><br><span class="line">class Handle(object):</span><br><span class="line">    def GET(self):</span><br><span class="line">        try:</span><br><span class="line">            data &#x3D; web.input()</span><br><span class="line">            if len(data) &#x3D;&#x3D; 0:</span><br><span class="line">                return &quot;hello, this is handle view&quot;</span><br><span class="line">            signature &#x3D; data.signature</span><br><span class="line">            timestamp &#x3D; data.timestamp</span><br><span class="line">            nonce &#x3D; data.nonce</span><br><span class="line">            echostr &#x3D; data.echostr</span><br><span class="line">            token &#x3D; &quot;xxxx&quot; #可任意</span><br><span class="line"></span><br><span class="line">            list &#x3D; [token, timestamp, nonce]</span><br><span class="line">            list.sort()</span><br><span class="line">            sha1 &#x3D; hashlib.sha1()</span><br><span class="line">            map(sha1.update, list)</span><br><span class="line">            hashcode &#x3D; sha1.hexdigest()</span><br><span class="line">            print &quot;handle&#x2F;GET func: hashcode, signature: &quot;, hashcode, signature</span><br><span class="line">            if hashcode &#x3D;&#x3D; signature:</span><br><span class="line">                return echostr</span><br><span class="line">            else:</span><br><span class="line">                return &quot;&quot;</span><br><span class="line">        except Exception, Argument:</span><br><span class="line">            return Argument</span><br></pre></td></tr></table></figure>
-
-<p>保存后运行以下命令执行脚本。如果提示socket错误，则需要开启80端口。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python main.py 80</span><br></pre></td></tr></table></figure>
-
-<p>在浏览器输入以下链接以访问刚才运行脚本所搭建的网页，若显示<code>hello, this is handle view</code>，则成功。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;[外网IP]&#x2F;wx</span><br></pre></td></tr></table></figure>
-
-<p>进入公众号后台并选择开发-基本配置-修改配置，内容如下，然后提交即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">URL &#x2F; http:&#x2F;&#x2F;[外网IP]&#x2F;wx</span><br><span class="line">Token &#x2F; 刚才填写的内容</span><br><span class="line">消息加解密方式 &#x2F; 明文模式</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="公众号开发指南"><a href="#公众号开发指南" class="headerlink" title="公众号开发指南"></a>公众号开发指南</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;developers.weixin.qq.com&#x2F;doc&#x2F;offiaccount&#x2F;Getting_Started&#x2F;Getting_Started_Guide.html</span><br></pre></td></tr></table></figure>
-
-
-]]></content>
-      <categories>
-        <category>Skill</category>
-      </categories>
-  </entry>
-  <entry>
     <title>利用Hexo在Github上搭建博客</title>
-    <url>/posts/Building-Blog-With-Hexo.html</url>
+    <url>/blog/posts/Building-Blog-With-Hexo.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9ari29zqgj31cq0u0gva.jpg"></p>
 <p>利用Github个人主页和Hexo，可轻松搭建出精美的个人博客。</p>
 <a id="more"></a>
@@ -877,74 +832,53 @@
       </categories>
   </entry>
   <entry>
-    <title>各种系统的安装与配置</title>
-    <url>/posts/OS-Installation.html</url>
-    <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegazq8rzvj30xc0irwet.jpg"></p>
-<p>不同系统的安装方法。</p>
+    <title>公众号使用指南</title>
+    <url>/blog/posts/Subscription-Use.html</url>
+    <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gk7x9t5no2j30yk0jgwki.jpg"></p>
+<p>公众号开发可以为其提供新的功能。</p>
 <a id="more"></a>
 
-<h1 id="红星OS"><a href="#红星OS" class="headerlink" title="红星OS"></a>红星OS</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">链接 &#x2F; https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1Y-F4xulXJAmnfF7eQ1vFag</span><br><span class="line">提取码 &#x2F; 23om</span><br><span class="line"></span><br><span class="line">链接 &#x2F; https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1i3iSOCH#list&#x2F;path&#x3D;%2F</span><br></pre></td></tr></table></figure>
+<h1 id="图文排版"><a href="#图文排版" class="headerlink" title="图文排版"></a>图文排版</h1><h2 id="编辑器自动保存"><a href="#编辑器自动保存" class="headerlink" title="编辑器自动保存"></a>编辑器自动保存</h2><p>点击Chrome浏览器的TamperMonkey扩展程序，选择<code>添加新脚本</code>，复制以下内容并保存即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; &#x3D;&#x3D;UserScript&#x3D;&#x3D;</span><br><span class="line">&#x2F;&#x2F; @name         微信推文编辑器自动保存</span><br><span class="line">&#x2F;&#x2F; @version      0.1</span><br><span class="line">&#x2F;&#x2F; @description  微信推文编辑器自动保存</span><br><span class="line">&#x2F;&#x2F; @author       内咸禾方皇</span><br><span class="line">&#x2F;&#x2F; @match        https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;*</span><br><span class="line">&#x2F;&#x2F; @grant        none</span><br><span class="line">&#x2F;&#x2F; @run-at       document-end</span><br><span class="line">&#x2F;&#x2F; &#x3D;&#x3D;&#x2F;UserScript&#x3D;&#x3D;</span><br><span class="line">(function() &#123;</span><br><span class="line">    &#39;use strict&#39;;</span><br><span class="line">    var time &#x3D; window.setInterval(function()&#123;document.querySelector(&quot;#js_submit&quot;).click()&#125;,60000);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>虚拟机类型选择XP。</p>
-<h3 id="通过挂载光盘"><a href="#通过挂载光盘" class="headerlink" title="通过挂载光盘"></a>通过挂载光盘</h3><p>挂载ISO后点击蓝色按钮一路下一步即可。安装过程中应当为用户添加密码，网络配置应当设置为DHCP。</p>
-<p>若感觉韩文比较困难，修改镜像/isolinux/isolinux.cfg里的lang=ko为lang=en即可用英文安装。也可在ISO启动后重复按Esc几秒钟，然后输入以下命令，按回车保存后按B引导即可。</p>
-<p>安装的前一步需要点击手动配置，将所有组件都选上。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">linux lang&#x3D;en</span><br></pre></td></tr></table></figure>
+<h2 id="Markdown-to-公众号一键转换器"><a href="#Markdown-to-公众号一键转换器" class="headerlink" title="Markdown to 公众号一键转换器"></a>Markdown to 公众号一键转换器</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;knb.im&#x2F;mp&#x2F;</span><br></pre></td></tr></table></figure>
 
-<h3 id="通过从Windows启动"><a href="#通过从Windows启动" class="headerlink" title="通过从Windows启动"></a>通过从Windows启动</h3><p>将ISO里的文件复制到Documents文件夹，编辑<code>m_rs.lst</code>文件，将lang=ko替换为lang=en并保存。运行install.exe，单击蓝色按钮以重新启动系统并进入安装。</p>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="获取Root权限"><a href="#获取Root权限" class="headerlink" title="获取Root权限"></a>获取Root权限</h3><p>点击拓展坞上的应用程序文件夹，单击没有扳手图标的普通文件夹，再单击有扳手图标的文件夹。然后单击终端，输入以下命令。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rootsetting</span><br></pre></td></tr></table></figure>
+<h1 id="公众号开发"><a href="#公众号开发" class="headerlink" title="公众号开发"></a>公众号开发</h1><h2 id="服务器绑定"><a href="#服务器绑定" class="headerlink" title="服务器绑定"></a>服务器绑定</h2><p>服务器用于处理发送到公众号的消息请求，并完成消息发送。</p>
+<p>准备好VPS后通过SSH连接，以CentOS为例，进入root用户后执行以下命令以安装必要依赖。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install vim</span><br><span class="line">yum install libxml2</span><br><span class="line">yum install libxslt</span><br><span class="line">yum install python</span><br><span class="line">pip install --upgrade pip</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 对于python2</span><br><span class="line">pip install web.py&#x3D;&#x3D;0.51</span><br><span class="line">&#x2F;&#x2F; 对于python3</span><br><span class="line">pip install web.py</span><br><span class="line"></span><br><span class="line">pip install lxml</span><br></pre></td></tr></table></figure>
 
-<p>单击锁按钮并输入密码，然后选中复选框，输入密码后关闭对话框。以后即可在终端输入<code>su</code>获取Root权限。</p>
-<h3 id="设置系统语言为英语"><a href="#设置系统语言为英语" class="headerlink" title="设置系统语言为英语"></a>设置系统语言为英语</h3><p>打开终端并输入以下命令，重启即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">su</span><br><span class="line">sed -i &#39;s&#x2F;ko_KP&#x2F;en_US&#x2F;g&#39; &#x2F;etc&#x2F;sysconfig&#x2F;i18n &#x2F;usr&#x2F;share&#x2F;config&#x2F;kdeglobals</span><br></pre></td></tr></table></figure>
+<p>完成后输入以下命令新建py文件。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim main.py</span><br></pre></td></tr></table></figure>
 
-<h3 id="设置浏览器语言为英语"><a href="#设置浏览器语言为英语" class="headerlink" title="设置浏览器语言为英语"></a>设置浏览器语言为英语</h3><p>打开Naenara Browser，转到倒数第二个菜单，选择第三个选项。转到倒数第二个选项卡，选择Korean（ko-KP）加载项，单击第一个按钮将其禁用，然后单击黄色栏上的按钮以重新启动浏览器。浏览器将询问您是否确认打开了多个选项卡，请单击蓝色按钮（如果已打开）。</p>
-<h3 id="设置Sogwang-Office语言为英语"><a href="#设置Sogwang-Office语言为英语" class="headerlink" title="设置Sogwang Office语言为英语"></a>设置Sogwang Office语言为英语</h3><p>打开终端并输入以下命令即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">su</span><br><span class="line">cd &#x2F;Applications&#x2F;SGOffice.app&#x2F;Contents</span><br><span class="line">rm RedStar&#x2F;resource&#x2F;*ko.res share&#x2F;registry&#x2F;Langpack-ko.xcd</span><br></pre></td></tr></table></figure>
+<p>内容如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># filename: main.py</span><br><span class="line">import web</span><br><span class="line">from handle import Handle</span><br><span class="line"></span><br><span class="line">urls &#x3D; (</span><br><span class="line">    &#39;&#x2F;wx&#39;, &#39;Handle&#39;,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    app &#x3D; web.application(urls, globals())</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure>
 
-<h3 id="设置APM-Manager语言为英语"><a href="#设置APM-Manager语言为英语" class="headerlink" title="设置APM Manager语言为英语"></a>设置APM Manager语言为英语</h3><p>在浏览器输入以下网址可打开APM管理器。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;localhost:10000</span><br></pre></td></tr></table></figure>
+<p>保存后继续新建文件。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim handle.py</span><br></pre></td></tr></table></figure>
 
-<p>打开终端并输入以下命令即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">su</span><br><span class="line">sed -i &#39;s&#x2F;ko_KP.UTF-8&#x2F;en&#x2F;g&#39; &#x2F;etc&#x2F;sat&#x2F;config &#x2F;usr&#x2F;share&#x2F;sat&#x2F;web-lib.pl</span><br><span class="line">service sat restart</span><br></pre></td></tr></table></figure>
+<p>内容如下，其中token可任意填写。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># filename: handle.py</span><br><span class="line"></span><br><span class="line">import hashlib</span><br><span class="line">import web</span><br><span class="line"></span><br><span class="line">class Handle(object):</span><br><span class="line">    def GET(self):</span><br><span class="line">        try:</span><br><span class="line">            data &#x3D; web.input()</span><br><span class="line">            if len(data) &#x3D;&#x3D; 0:</span><br><span class="line">                return &quot;hello, this is handle view&quot;</span><br><span class="line">            signature &#x3D; data.signature</span><br><span class="line">            timestamp &#x3D; data.timestamp</span><br><span class="line">            nonce &#x3D; data.nonce</span><br><span class="line">            echostr &#x3D; data.echostr</span><br><span class="line">            token &#x3D; &quot;xxxx&quot; #可任意</span><br><span class="line"></span><br><span class="line">            list &#x3D; [token, timestamp, nonce]</span><br><span class="line">            list.sort()</span><br><span class="line">            sha1 &#x3D; hashlib.sha1()</span><br><span class="line">            map(sha1.update, list)</span><br><span class="line">            hashcode &#x3D; sha1.hexdigest()</span><br><span class="line">            print &quot;handle&#x2F;GET func: hashcode, signature: &quot;, hashcode, signature</span><br><span class="line">            if hashcode &#x3D;&#x3D; signature:</span><br><span class="line">                return echostr</span><br><span class="line">            else:</span><br><span class="line">                return &quot;&quot;</span><br><span class="line">        except Exception, Argument:</span><br><span class="line">            return Argument</span><br></pre></td></tr></table></figure>
 
-<h3 id="清除防火墙规则"><a href="#清除防火墙规则" class="headerlink" title="清除防火墙规则"></a>清除防火墙规则</h3><p>打开终端并输入以下命令即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">su</span><br><span class="line">rm &#x2F;etc&#x2F;sysconfig&#x2F;iptables</span><br><span class="line">service iptables restart</span><br></pre></td></tr></table></figure>
+<p>保存后运行以下命令执行脚本。如果提示socket错误，则需要开启80端口。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python main.py 80</span><br></pre></td></tr></table></figure>
 
-<h3 id="删除系统文件修改检测器"><a href="#删除系统文件修改检测器" class="headerlink" title="删除系统文件修改检测器"></a>删除系统文件修改检测器</h3><p>打开终端并输入以下命令，重启即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">su</span><br><span class="line">rm &#x2F;usr&#x2F;share&#x2F;autostart&#x2F;intcheck_kde.desktop</span><br></pre></td></tr></table></figure>
+<p>在浏览器输入以下链接以访问刚才运行脚本所搭建的网页，若显示<code>hello, this is handle view</code>，则成功。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;[外网IP]&#x2F;wx</span><br></pre></td></tr></table></figure>
 
-<h3 id="禁用恶意组件"><a href="#禁用恶意组件" class="headerlink" title="禁用恶意组件"></a>禁用恶意组件</h3><p>克隆以下仓库并打包成ISO镜像，然后加载到虚拟机中。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;takeshixx&#x2F;redstar-tools</span><br></pre></td></tr></table></figure>
+<p>进入公众号后台并选择开发-基本配置-修改配置，内容如下，然后提交即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">URL &#x2F; http:&#x2F;&#x2F;[外网IP]&#x2F;wx</span><br><span class="line">Token &#x2F; 刚才填写的内容</span><br><span class="line">消息加解密方式 &#x2F; 明文模式</span><br></pre></td></tr></table></figure>
 
-<p>在终端执行以下命令以复制文件夹，并执行脚本。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">su</span><br><span class="line">cp -r [源位置] [目标位置]</span><br><span class="line">[目标位置]&#x2F;defuse.sh</span><br></pre></td></tr></table></figure>
-
-<h1 id="Ylmf-OS-3-0"><a href="#Ylmf-OS-3-0" class="headerlink" title="Ylmf OS 3.0"></a>Ylmf OS 3.0</h1><h2 id="下载-1"><a href="#下载-1" class="headerlink" title="下载"></a>下载</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">链接 &#x2F; https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;10jHOYNAGuhayQu8IrzkY0w </span><br><span class="line">提取码 &#x2F; ldnh</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><h3 id="Vmware-Tool安装"><a href="#Vmware-Tool安装" class="headerlink" title="Vmware Tool安装"></a>Vmware Tool安装</h3><p>下载链接如下。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.7down.com&#x2F;soft&#x2F;312275.html</span><br></pre></td></tr></table></figure>
-
-<p>在终端切换到安装包目录后运行以下命令。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ls</span><br><span class="line">mkdir &#x2F;vmtools</span><br><span class="line">tar xvf VMwareTools-10.0.0-2977863.tar.gz -C &#x2F;vmtools</span><br><span class="line">cd &#x2F;vmtools&#x2F;</span><br><span class="line">ls</span><br><span class="line">cd vmware-tools-distrib&#x2F;</span><br><span class="line">.&#x2F;vmware-install.pl</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
-
-<h1 id="Sigma-OS-3-0"><a href="#Sigma-OS-3-0" class="headerlink" title="Sigma OS 3.0"></a>Sigma OS 3.0</h1><h2 id="下载-2"><a href="#下载-2" class="headerlink" title="下载"></a>下载</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;techvortal.pl&#x2F;viewtopic.php?t&#x3D;2883</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h2><h3 id="Vmware-Tool安装-1"><a href="#Vmware-Tool安装-1" class="headerlink" title="Vmware Tool安装"></a>Vmware Tool安装</h3><p>与Ylmf OS 3.0相同。</p>
-<h1 id="ReactOS"><a href="#ReactOS" class="headerlink" title="ReactOS"></a>ReactOS</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;reactos.org&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;sourceforge.net&#x2F;projects&#x2F;reactos&#x2F;files&#x2F;ReactOS&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="Notes-on-Red-Star-OS-3-0"><a href="#Notes-on-Red-Star-OS-3-0" class="headerlink" title="Notes on Red Star OS 3.0"></a>Notes on Red Star OS 3.0</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;richardg867.wordpress.com&#x2F;2015&#x2F;01&#x2F;01&#x2F;notes-on-red-star-os-3-0&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;richardg867.wordpress.com&#x2F;2020&#x2F;03&#x2F;31&#x2F;more-notes-on-red-star-os-3-0&#x2F;</span><br></pre></td></tr></table></figure>
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="公众号开发指南"><a href="#公众号开发指南" class="headerlink" title="公众号开发指南"></a>公众号开发指南</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;developers.weixin.qq.com&#x2F;doc&#x2F;offiaccount&#x2F;Getting_Started&#x2F;Getting_Started_Guide.html</span><br></pre></td></tr></table></figure>
 
 
 ]]></content>
       <categories>
-        <category>Computer</category>
+        <category>Skill</category>
       </categories>
   </entry>
   <entry>
     <title>多方式引导启动系统</title>
-    <url>/posts/Multiple-Methods-To-Start-OS.html</url>
+    <url>/blog/posts/Multiple-Methods-To-Start-OS.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegariofn3j31c00u04qp.jpg"></p>
 <p>分区表、引导方式和不同方式引导系统。</p>
 <a id="more"></a>
@@ -1027,8 +961,74 @@
       </categories>
   </entry>
   <entry>
+    <title>各种系统的安装与配置</title>
+    <url>/blog/posts/OS-Installation.html</url>
+    <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegazq8rzvj30xc0irwet.jpg"></p>
+<p>不同系统的安装方法。</p>
+<a id="more"></a>
+
+<h1 id="红星OS"><a href="#红星OS" class="headerlink" title="红星OS"></a>红星OS</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">链接 &#x2F; https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1Y-F4xulXJAmnfF7eQ1vFag</span><br><span class="line">提取码 &#x2F; 23om</span><br><span class="line"></span><br><span class="line">链接 &#x2F; https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1i3iSOCH#list&#x2F;path&#x3D;%2F</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>虚拟机类型选择XP。</p>
+<h3 id="通过挂载光盘"><a href="#通过挂载光盘" class="headerlink" title="通过挂载光盘"></a>通过挂载光盘</h3><p>挂载ISO后点击蓝色按钮一路下一步即可。安装过程中应当为用户添加密码，网络配置应当设置为DHCP。</p>
+<p>若感觉韩文比较困难，修改镜像/isolinux/isolinux.cfg里的lang=ko为lang=en即可用英文安装。也可在ISO启动后重复按Esc几秒钟，然后输入以下命令，按回车保存后按B引导即可。</p>
+<p>安装的前一步需要点击手动配置，将所有组件都选上。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">linux lang&#x3D;en</span><br></pre></td></tr></table></figure>
+
+<h3 id="通过从Windows启动"><a href="#通过从Windows启动" class="headerlink" title="通过从Windows启动"></a>通过从Windows启动</h3><p>将ISO里的文件复制到Documents文件夹，编辑<code>m_rs.lst</code>文件，将lang=ko替换为lang=en并保存。运行install.exe，单击蓝色按钮以重新启动系统并进入安装。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="获取Root权限"><a href="#获取Root权限" class="headerlink" title="获取Root权限"></a>获取Root权限</h3><p>点击拓展坞上的应用程序文件夹，单击没有扳手图标的普通文件夹，再单击有扳手图标的文件夹。然后单击终端，输入以下命令。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rootsetting</span><br></pre></td></tr></table></figure>
+
+<p>单击锁按钮并输入密码，然后选中复选框，输入密码后关闭对话框。以后即可在终端输入<code>su</code>获取Root权限。</p>
+<h3 id="设置系统语言为英语"><a href="#设置系统语言为英语" class="headerlink" title="设置系统语言为英语"></a>设置系统语言为英语</h3><p>打开终端并输入以下命令，重启即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">su</span><br><span class="line">sed -i &#39;s&#x2F;ko_KP&#x2F;en_US&#x2F;g&#39; &#x2F;etc&#x2F;sysconfig&#x2F;i18n &#x2F;usr&#x2F;share&#x2F;config&#x2F;kdeglobals</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置浏览器语言为英语"><a href="#设置浏览器语言为英语" class="headerlink" title="设置浏览器语言为英语"></a>设置浏览器语言为英语</h3><p>打开Naenara Browser，转到倒数第二个菜单，选择第三个选项。转到倒数第二个选项卡，选择Korean（ko-KP）加载项，单击第一个按钮将其禁用，然后单击黄色栏上的按钮以重新启动浏览器。浏览器将询问您是否确认打开了多个选项卡，请单击蓝色按钮（如果已打开）。</p>
+<h3 id="设置Sogwang-Office语言为英语"><a href="#设置Sogwang-Office语言为英语" class="headerlink" title="设置Sogwang Office语言为英语"></a>设置Sogwang Office语言为英语</h3><p>打开终端并输入以下命令即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">su</span><br><span class="line">cd &#x2F;Applications&#x2F;SGOffice.app&#x2F;Contents</span><br><span class="line">rm RedStar&#x2F;resource&#x2F;*ko.res share&#x2F;registry&#x2F;Langpack-ko.xcd</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置APM-Manager语言为英语"><a href="#设置APM-Manager语言为英语" class="headerlink" title="设置APM Manager语言为英语"></a>设置APM Manager语言为英语</h3><p>在浏览器输入以下网址可打开APM管理器。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;localhost:10000</span><br></pre></td></tr></table></figure>
+
+<p>打开终端并输入以下命令即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">su</span><br><span class="line">sed -i &#39;s&#x2F;ko_KP.UTF-8&#x2F;en&#x2F;g&#39; &#x2F;etc&#x2F;sat&#x2F;config &#x2F;usr&#x2F;share&#x2F;sat&#x2F;web-lib.pl</span><br><span class="line">service sat restart</span><br></pre></td></tr></table></figure>
+
+<h3 id="清除防火墙规则"><a href="#清除防火墙规则" class="headerlink" title="清除防火墙规则"></a>清除防火墙规则</h3><p>打开终端并输入以下命令即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">su</span><br><span class="line">rm &#x2F;etc&#x2F;sysconfig&#x2F;iptables</span><br><span class="line">service iptables restart</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除系统文件修改检测器"><a href="#删除系统文件修改检测器" class="headerlink" title="删除系统文件修改检测器"></a>删除系统文件修改检测器</h3><p>打开终端并输入以下命令，重启即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">su</span><br><span class="line">rm &#x2F;usr&#x2F;share&#x2F;autostart&#x2F;intcheck_kde.desktop</span><br></pre></td></tr></table></figure>
+
+<h3 id="禁用恶意组件"><a href="#禁用恶意组件" class="headerlink" title="禁用恶意组件"></a>禁用恶意组件</h3><p>克隆以下仓库并打包成ISO镜像，然后加载到虚拟机中。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;takeshixx&#x2F;redstar-tools</span><br></pre></td></tr></table></figure>
+
+<p>在终端执行以下命令以复制文件夹，并执行脚本。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">su</span><br><span class="line">cp -r [源位置] [目标位置]</span><br><span class="line">[目标位置]&#x2F;defuse.sh</span><br></pre></td></tr></table></figure>
+
+<h1 id="Ylmf-OS-3-0"><a href="#Ylmf-OS-3-0" class="headerlink" title="Ylmf OS 3.0"></a>Ylmf OS 3.0</h1><h2 id="下载-1"><a href="#下载-1" class="headerlink" title="下载"></a>下载</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">链接 &#x2F; https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;10jHOYNAGuhayQu8IrzkY0w </span><br><span class="line">提取码 &#x2F; ldnh</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><h3 id="Vmware-Tool安装"><a href="#Vmware-Tool安装" class="headerlink" title="Vmware Tool安装"></a>Vmware Tool安装</h3><p>下载链接如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.7down.com&#x2F;soft&#x2F;312275.html</span><br></pre></td></tr></table></figure>
+
+<p>在终端切换到安装包目录后运行以下命令。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ls</span><br><span class="line">mkdir &#x2F;vmtools</span><br><span class="line">tar xvf VMwareTools-10.0.0-2977863.tar.gz -C &#x2F;vmtools</span><br><span class="line">cd &#x2F;vmtools&#x2F;</span><br><span class="line">ls</span><br><span class="line">cd vmware-tools-distrib&#x2F;</span><br><span class="line">.&#x2F;vmware-install.pl</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<h1 id="Sigma-OS-3-0"><a href="#Sigma-OS-3-0" class="headerlink" title="Sigma OS 3.0"></a>Sigma OS 3.0</h1><h2 id="下载-2"><a href="#下载-2" class="headerlink" title="下载"></a>下载</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;techvortal.pl&#x2F;viewtopic.php?t&#x3D;2883</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h2><h3 id="Vmware-Tool安装-1"><a href="#Vmware-Tool安装-1" class="headerlink" title="Vmware Tool安装"></a>Vmware Tool安装</h3><p>与Ylmf OS 3.0相同。</p>
+<h1 id="ReactOS"><a href="#ReactOS" class="headerlink" title="ReactOS"></a>ReactOS</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;reactos.org&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;sourceforge.net&#x2F;projects&#x2F;reactos&#x2F;files&#x2F;ReactOS&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="Notes-on-Red-Star-OS-3-0"><a href="#Notes-on-Red-Star-OS-3-0" class="headerlink" title="Notes on Red Star OS 3.0"></a>Notes on Red Star OS 3.0</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;richardg867.wordpress.com&#x2F;2015&#x2F;01&#x2F;01&#x2F;notes-on-red-star-os-3-0&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;richardg867.wordpress.com&#x2F;2020&#x2F;03&#x2F;31&#x2F;more-notes-on-red-star-os-3-0&#x2F;</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>Computer</category>
+      </categories>
+  </entry>
+  <entry>
     <title>安装Chromium OS到硬盘实现双启动</title>
-    <url>/posts/Chromium-OS-Installation.html</url>
+    <url>/blog/posts/Chromium-OS-Installation.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9apspq7y8j30u00mijs7.jpg"></p>
 <p>Chromium OS是Google开发的一款基于Linux内核的系统，需要连网才能使用，整个系统的架构等同于一个Chromium浏览器。</p>
 <a id="more"></a>
@@ -1092,7 +1092,7 @@
   </entry>
   <entry>
     <title>系统和硬件的相关知识及维护</title>
-    <url>/posts/Knowledge-About-OS-And-Hardware.html</url>
+    <url>/blog/posts/Knowledge-About-OS-And-Hardware.html</url>
     <content><![CDATA[<p><img src="https://i.loli.net/2019/06/05/5cf71019dace093816.jpg"></p>
 <p>有关操作系统类型、操作系统位数、操作系统引导、硬盘修复等。</p>
 <a id="more"></a>
@@ -1536,7 +1536,7 @@
   </entry>
   <entry>
     <title>Git和Github的安装与使用</title>
-    <url>/posts/Git-Installation.html</url>
+    <url>/blog/posts/Git-Installation.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9asa3gs51j30go08caa5.jpg"></p>
 <p>Git是一个常用的工具，与github一同使用。</p>
 <a id="more"></a>
@@ -1751,7 +1751,7 @@
   </entry>
   <entry>
     <title>Mac使用技巧总结</title>
-    <url>/posts/Mac-Skills.html</url>
+    <url>/blog/posts/Mac-Skills.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9adg1f7usj31c00u0u15.jpg"></p>
 <p>总结了一些MacOS的使用技巧，不断更新。</p>
 <a id="more"></a>
@@ -2275,7 +2275,7 @@
   </entry>
   <entry>
     <title>Windows使用技巧总结</title>
-    <url>/posts/Windows-Skills.html</url>
+    <url>/blog/posts/Windows-Skills.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegayckavoj31be0qot9i.jpg"></p>
 <p>Windows相关技巧。</p>
 <a id="more"></a>
@@ -2633,7 +2633,7 @@
   </entry>
   <entry>
     <title>学习进程整理</title>
-    <url>/posts/Study-Process.html</url>
+    <url>/blog/posts/Study-Process.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegalwpmxbj310m0u0tfi.jpg"></p>
 <p>已修读课程整理。</p>
 <a id="more"></a>
@@ -3971,7 +3971,7 @@
   </entry>
   <entry>
     <title>全平台使用技巧总结</title>
-    <url>/posts/AllOS-Skills.html</url>
+    <url>/blog/posts/AllOS-Skills.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegb0koys4j31hc0u0mzb.jpg"></p>
 <p>一些有用的电脑和手机使用技巧。</p>
 <a id="more"></a>
@@ -5173,7 +5173,7 @@
   </entry>
   <entry>
     <title>Windows各版本系统的安装及配置</title>
-    <url>/posts/Windows-Installation.html</url>
+    <url>/blog/posts/Windows-Installation.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegb2ckiyij31c00u016c.jpg"></p>
 <p>不同版本的Windows在现代电脑上安装方法并不相同。通过相关配置，可以运行较旧的Windows版本。</p>
 <a id="more"></a>
@@ -6042,7 +6042,7 @@
   </entry>
   <entry>
     <title>黑苹果的安装与配置</title>
-    <url>/posts/Hackintosh-Installation.html</url>
+    <url>/blog/posts/Hackintosh-Installation.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9bt5qlkq5j31lv0u0kii.jpg"></p>
 <p>本文以macOS Mojave为例进行说明，包含内容较多，主要适合较新主板的安装。</p>
 <a id="more"></a>
@@ -7265,7 +7265,7 @@
   </entry>
   <entry>
     <title>Google正确食用指南</title>
-    <url>/posts/How-To-Access-Google.html</url>
+    <url>/blog/posts/How-To-Access-Google.html</url>
     <content><![CDATA[<p><img src="https://i.loli.net/2019/06/03/5cf4e62026ce662099.jpg"></p>
 <p>Google是一个强大的搜索引擎，本文主要介绍访问Google的方法。</p>
 <a id="more"></a>
@@ -8115,7 +8115,7 @@
   </entry>
   <entry>
     <title>计算机技术相关知识与操作</title>
-    <url>/posts/Knowledge-About-CS.html</url>
+    <url>/blog/posts/Knowledge-About-CS.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegauv7nluj31hc0u00zn.jpg"></p>
 <p>有关计算机技术的相关内容。</p>
 <a id="more"></a>
@@ -8700,7 +8700,7 @@
   </entry>
   <entry>
     <title>娱乐圈相关实体资料收集</title>
-    <url>/posts/Information-About-Stars.html</url>
+    <url>/blog/posts/Information-About-Stars.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkz241dvlgj31390qoaf6.jpg" alt="【20190928】微博@卜算子咏零丁洋，https://weibo.com/6417505553/I9025gdp6"></p>
 <p>在流言蜚语遍布的娱乐圈，唯有一手资料可以让我们直观的了解每一个深处娱乐圈的实体。这里收集了综艺、访谈、微博等内容，试图在营销号乱带节奏的当下让这些证据帮助我们我们保持一个相对清醒的头脑。</p>
 <a id="more"></a>
@@ -9642,7 +9642,7 @@
   </entry>
   <entry>
     <title>程序员工具集合及使用</title>
-    <url>/posts/Useful-Tools-For-Programmers.html</url>
+    <url>/blog/posts/Useful-Tools-For-Programmers.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkl3459bh3j30u00gvtba.jpg"></p>
 <p>对程序员有用的工具集合。</p>
 <a id="more"></a>
@@ -12227,7 +12227,7 @@
   </entry>
   <entry>
     <title>黑苹果的进阶操作</title>
-    <url>/posts/Hackintosh-Advanced-Configuration.html</url>
+    <url>/blog/posts/Hackintosh-Advanced-Configuration.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006tNbRwly1g9lvpyjs1dj31c00u07wo.jpg"></p>
 <p>请保证在黑苹果已完全能够正常使用、并有足够能力理解相关术语后进行以下操作。</p>
 <a id="more"></a>
@@ -16747,7 +16747,7 @@
   </entry>
   <entry>
     <title>iOS使用技巧总结</title>
-    <url>/posts/iOS-Skills.html</url>
+    <url>/blog/posts/iOS-Skills.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gega76v20ij315d0u045g.jpg"></p>
 <p>共享应用、破解内购等。</p>
 <a id="more"></a>
@@ -20539,7 +20539,7 @@
   </entry>
   <entry>
     <title>刷写BIOS和调整整机性能的操作</title>
-    <url>/posts/BIOS-Editing-And-Flashing.html</url>
+    <url>/blog/posts/BIOS-Editing-And-Flashing.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9baxry2kwj30sg0lctax.jpg"></p>
 <p>对BIOS进行修改和刷写，可以解锁BIOS的其它功能。</p>
 <a id="more"></a>
