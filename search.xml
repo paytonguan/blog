@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Android使用技巧总结</title>
-    <url>blog/posts/Android-Skills.html</url>
+    <url>/posts/Android-Skills.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegao3bnq6j31800kvaax.jpg"></p>
 <p>安卓使用技巧。</p>
 <a id="more"></a>
@@ -50,8 +50,77 @@
       </categories>
   </entry>
   <entry>
+    <title>Kindle的使用</title>
+    <url>/posts/How-To-Use-Kindle.html</url>
+    <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gh62g6dppjj30xc0m8q5l.jpg"></p>
+<p>Kindle的使用技巧总结。</p>
+<a id="more"></a>
+
+<h1 id="获取电子书"><a href="#获取电子书" class="headerlink" title="获取电子书"></a>获取电子书</h1><h2 id="普通电子书网站"><a href="#普通电子书网站" class="headerlink" title="普通电子书网站"></a>普通电子书网站</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;bookfere.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;cn.epubee.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;panghubook.cn&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.soepub.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;book.share2uu.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.haodoo.net&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;new.shuge.org&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.jiumodiary.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;gen.lib.rus.ec&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;sobooks.cc&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.owllook.net&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.gutenberg.org&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;ibooks.org.cn&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.zxcs.me&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;shudan.vip&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;avxhm.se&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;libgen.pw&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;booksc.org&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;so.pansoso.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;ishare.iask.sina.com.cn&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;kgbook.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;zoudupai.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;dianbook.cc&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.gujiguan.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.amazon.cn&#x2F;Kindle%E5%85%8D%E8%B4%B9%E7%94%B5%E5%AD%90%E4%B9%A6&#x2F;b?node&#x3D;116175071</span><br><span class="line">https:&#x2F;&#x2F;manybooks.net&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.qcenglish.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.feedbooks.com&#x2F;publicdomain</span><br><span class="line">http:&#x2F;&#x2F;www.mybanshu.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.baen.com&#x2F;allbooks&#x2F;category&#x2F;index&#x2F;id&#x2F;2012</span><br><span class="line">https:&#x2F;&#x2F;digilibraries.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.renrensousuo.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;forum.mobilism.org&#x2F;viewforum.php?f&#x3D;19</span><br><span class="line">https:&#x2F;&#x2F;woaiwangpan.com&#x2F;s&#x2F;8gPZbMGmMY82ExD?path&#x3D;%2F（密码7kK4xDYa）</span><br><span class="line">https:&#x2F;&#x2F;www.allitebooks.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.foxebook.net&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.jiumodiary.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;libribook.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.pdfbook.cn&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.bookbao99.net&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;itpanda.net&#x2F;book&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;bookboon.com&#x2F;en</span><br><span class="line">https:&#x2F;&#x2F;www.free-ebooks.net&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.scribd.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;aibooks.club&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;zh.b-ok.global&#x2F;?regionChanged&#x3D;&amp;redirect&#x3D;59363490</span><br><span class="line">http:&#x2F;&#x2F;haodoo.net&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.iamtxt.com&#x2F;e&#x2F;member&#x2F;login&#x2F;log.html</span><br><span class="line">http:&#x2F;&#x2F;www.binnao.com&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h2 id="外语电子书"><a href="#外语电子书" class="headerlink" title="外语电子书"></a>外语电子书</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;gen.lib.rus.ec&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;gutenberg.org&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h2 id="电子版教材"><a href="#电子版教材" class="headerlink" title="电子版教材"></a>电子版教材</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;vdisk.weibo.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;yixueshu.gitee.io&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h2 id="计算机编程书籍"><a href="#计算机编程书籍" class="headerlink" title="计算机编程书籍"></a>计算机编程书籍</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;freecomputerbooks.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;EbookFoundation&#x2F;free-programming-books&#x2F;blob&#x2F;master&#x2F;free-programming-books-zh.md</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;programthink&#x2F;books</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;justjavac&#x2F;free-programming-books-zh_CN</span><br><span class="line">https:&#x2F;&#x2F;www.ituring.com.cn&#x2F;book</span><br><span class="line">http:&#x2F;&#x2F;bestcbooks.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;it-ebooks.flygon.net&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h2 id="漫画"><a href="#漫画" class="headerlink" title="漫画"></a>漫画</h2><h3 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;lossme&#x2F;TencentComicBook</span><br><span class="line">http:&#x2F;&#x2F;www.kindlecomic.net&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;kindlemh.cc&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.manhuabudang.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;volmoe.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;vol.moe&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.dm5.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.1kkk.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.manhuatai.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.mkzhan.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.kanman.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.alimanhua.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.manhuamobi.com&#x2F;forum.php</span><br><span class="line">http:&#x2F;&#x2F;www.binnao.com&#x2F;forum-85-1.html</span><br></pre></td></tr></table></figure>
+
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;ddcat.noear.org&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.dmzj.com&#x2F;app&#x2F;pc.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><h3 id="电子书合集"><a href="#电子书合集" class="headerlink" title="电子书合集"></a>电子书合集</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;kyon945.stackstorage.com&#x2F;s&#x2F;3WVmxKmKu5IGhVr</span><br></pre></td></tr></table></figure>
+
+<h3 id="东野圭吾91部作品集"><a href="#东野圭吾91部作品集" class="headerlink" title="东野圭吾91部作品集"></a>东野圭吾91部作品集</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; azw3&amp;mobi格式</span><br><span class="line">链接 &#x2F; https:&#x2F;&#x2F;share.weiyun.com&#x2F;5bL0FMv</span><br><span class="line">密码 &#x2F; ny6ghu</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; epub格式</span><br><span class="line">链接 &#x2F; https:&#x2F;&#x2F;share.weiyun.com&#x2F;53bONhM</span><br><span class="line">密码 &#x2F; 406if9</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 入门级英文原著（mobi &amp; epub格式）</span><br><span class="line">链接 &#x2F; https:&#x2F;&#x2F;share.weiyun.com&#x2F;5pFArBv</span><br><span class="line">密码 &#x2F; bg15jd</span><br></pre></td></tr></table></figure>
+
+<h1 id="电子书格式转换"><a href="#电子书格式转换" class="headerlink" title="电子书格式转换"></a>电子书格式转换</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;calibre-ebook.com&#x2F;download</span><br></pre></td></tr></table></figure>
+
+<p>教程如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;bookfere.com&#x2F;skills&#x2F;convert</span><br></pre></td></tr></table></figure>
+
+<h2 id="PDF寻找"><a href="#PDF寻找" class="headerlink" title="PDF寻找"></a>PDF寻找</h2><h3 id="付费方法"><a href="#付费方法" class="headerlink" title="付费方法"></a>付费方法</h3><p>打开以下链接以安装油猴脚本。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;greasyfork.org&#x2F;zh-CN&#x2F;scripts&#x2F;388744</span><br></pre></td></tr></table></figure>
+
+<p>安装后通过以下网站付费下载。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.duxiu.com&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h3 id="免费方法"><a href="#免费方法" class="headerlink" title="免费方法"></a>免费方法</h3><p>注册图书馆资源，如广西壮族自治区图书馆，然后进入读秀知识库。搜索需要的书，如果结果显示有<code>包库全文</code>，则本书可被免费下载。点击包库全文打开，下载并用超星阅读器打开，然后使用以下任意一种方式进行格式转换。超星阅读器下载链接如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;www.sslibrary.com&#x2F;ssreader&#x2F;download</span><br></pre></td></tr></table></figure>
+
+<p>如果显示的是<code>部分阅读</code>，可通过查看目录页并逐章搜索的方式尝试下载全书。若发现有缺页，可以使用文献传递来补齐。</p>
+<h4 id="通过图片缓存"><a href="#通过图片缓存" class="headerlink" title="通过图片缓存"></a>通过图片缓存</h4><p>然后进入<code>C:\Users\电脑用户名\AppData\Local\Temp\buffer</code>，如果PDZ是文字版则将buffer改为localX，如local1。每翻一页，此处将生成当前页和下一页的BMP图像，因此只需翻完整本书，即可获取到所有页面的图片。可使用鼠大侠鼠标连点器完成上述点击操作。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;axu.lanzoux.com&#x2F;inFq6hykh2f</span><br></pre></td></tr></table></figure>
+
+<p>得到图片后，通过PDF编辑器将其合成为完整的PDF即可。合并PDF可通过PDF补丁丁完成，下载链接如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;axu.lanzoux.com&#x2F;igagvhykeyj</span><br></pre></td></tr></table></figure>
+
+<h4 id="通过虚拟打印机"><a href="#通过虚拟打印机" class="headerlink" title="通过虚拟打印机"></a>通过虚拟打印机</h4><p>在超星阅读器中将PDZ打印为XPS，然后用XPS Viewer打开XPS打印为PDF。XPS Viewer下载链接如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;axu.lanzoux.com&#x2F;i1dN4hykicb</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加目录书签"><a href="#添加目录书签" class="headerlink" title="添加目录书签"></a>添加目录书签</h3><p>以上方法下载的电子书可能会没有目录书签。为此，需要重新下载电子书，并选择分页下载，以获取BookContents.dat文件。用PdgCntEditor打开并复制，然后打开需要添加目录书签的PDF，将刚才复制的内容贴上。PdgEntEditor下载链接如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;axu.lanzoux.com&#x2F;iPLWkhykfde</span><br></pre></td></tr></table></figure>
+
+<p>切换到树形编辑模式。如果目录本身自带数字编号的层级，如<code>1.1</code>、<code>2.1</code>等，则直接点击工具栏上的<code>自动切分页码</code>，否则通过工具栏上的<code>将所选条目右移一栏</code>调整目录层次。根据目录与实际的页码差值调整基准页，如目录是第1页，而实际PDF中是第7页，则基准页填7（7-1+1）。完成后保存PDF即可。</p>
+<h1 id="推送电子书"><a href="#推送电子书" class="headerlink" title="推送电子书"></a>推送电子书</h1><h2 id="通过数据线"><a href="#通过数据线" class="headerlink" title="通过数据线"></a>通过数据线</h2><p>将Kindle连接到电脑，复制文件到Kindle即可。</p>
+<h2 id="通过邮箱"><a href="#通过邮箱" class="headerlink" title="通过邮箱"></a>通过邮箱</h2><p>打开以下网站，登录Kindle账号后选择<code>我的账户</code>-<code>管理我的内容和设备</code>，点击<code>首选项</code>-<code>个人文档设置</code>并在下方选择<code>添加认可的电子邮箱</code>，将负责传书的邮箱添加进去。上面系统分配的邮箱即为传输到Kindle的推送邮箱，在传输邮箱中新建邮件，收件地址填Kindle的推送邮箱，将需要传输的电子书设为普通邮件附件，注意不要使用超大附件功能，可以发送多个附件。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.amazon.cn&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h2 id="通过公众号"><a href="#通过公众号" class="headerlink" title="通过公众号"></a>通过公众号</h2><p>关注<code>亚马逊Kindle服务号</code>并关注。回复<code>绑定+你的 Kindle 邮箱地址</code>来绑定账号。在Kindle后台添加<code>kindle@eub-inc.com</code>为信任邮箱。打开你希望保存的公众号文章，点击右上角分享，选择<code>亚马逊Kindle服务号</code>，稍等片刻，文章便会被推送到Kindle中。</p>
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="怎么把网上找到的电子书放到kindle里？"><a href="#怎么把网上找到的电子书放到kindle里？" class="headerlink" title="怎么把网上找到的电子书放到kindle里？"></a>怎么把网上找到的电子书放到kindle里？</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.zhihu.com&#x2F;question&#x2F;22794631</span><br></pre></td></tr></table></figure>
+
+<h2 id="【简道云筛选】电子书下载网站大全"><a href="#【简道云筛选】电子书下载网站大全" class="headerlink" title="【简道云筛选】电子书下载网站大全"></a>【简道云筛选】电子书下载网站大全</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;tyi45di4ct.jiandaoyun.com&#x2F;dash&#x2F;5e7d915c6c56d8000674a8b8</span><br></pre></td></tr></table></figure>
+
+<h2 id="有了这十几个网站，没有你找不到的电子书"><a href="#有了这十几个网站，没有你找不到的电子书" class="headerlink" title="有了这十几个网站，没有你找不到的电子书"></a>有了这十几个网站，没有你找不到的电子书</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;53064677</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Skill</category>
+      </categories>
+      <tags>
+        <tag>Life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux系统的安装与配置</title>
-    <url>blog/posts/Linux-Installation.html</url>
+    <url>/posts/Linux-Installation.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9b69on8vmj30p10fj74q.jpg"></p>
 <p>安装Linux系统，可以完成许多在Windows下无法完成的操作。</p>
 <a id="more"></a>
@@ -213,77 +282,8 @@
       </categories>
   </entry>
   <entry>
-    <title>Kindle的使用</title>
-    <url>blog/posts/How-To-Use-Kindle.html</url>
-    <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gh62g6dppjj30xc0m8q5l.jpg"></p>
-<p>Kindle的使用技巧总结。</p>
-<a id="more"></a>
-
-<h1 id="获取电子书"><a href="#获取电子书" class="headerlink" title="获取电子书"></a>获取电子书</h1><h2 id="普通电子书网站"><a href="#普通电子书网站" class="headerlink" title="普通电子书网站"></a>普通电子书网站</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;bookfere.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;cn.epubee.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;panghubook.cn&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.soepub.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;book.share2uu.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.haodoo.net&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;new.shuge.org&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.jiumodiary.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;gen.lib.rus.ec&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;sobooks.cc&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.owllook.net&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.gutenberg.org&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;ibooks.org.cn&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.zxcs.me&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;shudan.vip&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;avxhm.se&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;libgen.pw&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;booksc.org&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;so.pansoso.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;ishare.iask.sina.com.cn&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;kgbook.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;zoudupai.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;dianbook.cc&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.gujiguan.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.amazon.cn&#x2F;Kindle%E5%85%8D%E8%B4%B9%E7%94%B5%E5%AD%90%E4%B9%A6&#x2F;b?node&#x3D;116175071</span><br><span class="line">https:&#x2F;&#x2F;manybooks.net&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.qcenglish.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.feedbooks.com&#x2F;publicdomain</span><br><span class="line">http:&#x2F;&#x2F;www.mybanshu.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.baen.com&#x2F;allbooks&#x2F;category&#x2F;index&#x2F;id&#x2F;2012</span><br><span class="line">https:&#x2F;&#x2F;digilibraries.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.renrensousuo.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;forum.mobilism.org&#x2F;viewforum.php?f&#x3D;19</span><br><span class="line">https:&#x2F;&#x2F;woaiwangpan.com&#x2F;s&#x2F;8gPZbMGmMY82ExD?path&#x3D;%2F（密码7kK4xDYa）</span><br><span class="line">https:&#x2F;&#x2F;www.allitebooks.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.foxebook.net&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.jiumodiary.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;libribook.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.pdfbook.cn&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.bookbao99.net&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;itpanda.net&#x2F;book&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;bookboon.com&#x2F;en</span><br><span class="line">https:&#x2F;&#x2F;www.free-ebooks.net&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.scribd.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;aibooks.club&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;zh.b-ok.global&#x2F;?regionChanged&#x3D;&amp;redirect&#x3D;59363490</span><br><span class="line">http:&#x2F;&#x2F;haodoo.net&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.iamtxt.com&#x2F;e&#x2F;member&#x2F;login&#x2F;log.html</span><br><span class="line">http:&#x2F;&#x2F;www.binnao.com&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h2 id="外语电子书"><a href="#外语电子书" class="headerlink" title="外语电子书"></a>外语电子书</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;gen.lib.rus.ec&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;gutenberg.org&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h2 id="电子版教材"><a href="#电子版教材" class="headerlink" title="电子版教材"></a>电子版教材</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;vdisk.weibo.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;yixueshu.gitee.io&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h2 id="计算机编程书籍"><a href="#计算机编程书籍" class="headerlink" title="计算机编程书籍"></a>计算机编程书籍</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;freecomputerbooks.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;EbookFoundation&#x2F;free-programming-books&#x2F;blob&#x2F;master&#x2F;free-programming-books-zh.md</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;programthink&#x2F;books</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;justjavac&#x2F;free-programming-books-zh_CN</span><br><span class="line">https:&#x2F;&#x2F;www.ituring.com.cn&#x2F;book</span><br><span class="line">http:&#x2F;&#x2F;bestcbooks.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;it-ebooks.flygon.net&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h2 id="漫画"><a href="#漫画" class="headerlink" title="漫画"></a>漫画</h2><h3 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;lossme&#x2F;TencentComicBook</span><br><span class="line">http:&#x2F;&#x2F;www.kindlecomic.net&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;kindlemh.cc&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.manhuabudang.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;volmoe.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;vol.moe&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.dm5.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.1kkk.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.manhuatai.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.mkzhan.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.kanman.com&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;www.alimanhua.com&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.manhuamobi.com&#x2F;forum.php</span><br><span class="line">http:&#x2F;&#x2F;www.binnao.com&#x2F;forum-85-1.html</span><br></pre></td></tr></table></figure>
-
-<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;ddcat.noear.org&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;www.dmzj.com&#x2F;app&#x2F;pc.html</span><br></pre></td></tr></table></figure>
-
-<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><h3 id="电子书合集"><a href="#电子书合集" class="headerlink" title="电子书合集"></a>电子书合集</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;kyon945.stackstorage.com&#x2F;s&#x2F;3WVmxKmKu5IGhVr</span><br></pre></td></tr></table></figure>
-
-<h3 id="东野圭吾91部作品集"><a href="#东野圭吾91部作品集" class="headerlink" title="东野圭吾91部作品集"></a>东野圭吾91部作品集</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; azw3&amp;mobi格式</span><br><span class="line">链接 &#x2F; https:&#x2F;&#x2F;share.weiyun.com&#x2F;5bL0FMv</span><br><span class="line">密码 &#x2F; ny6ghu</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; epub格式</span><br><span class="line">链接 &#x2F; https:&#x2F;&#x2F;share.weiyun.com&#x2F;53bONhM</span><br><span class="line">密码 &#x2F; 406if9</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 入门级英文原著（mobi &amp; epub格式）</span><br><span class="line">链接 &#x2F; https:&#x2F;&#x2F;share.weiyun.com&#x2F;5pFArBv</span><br><span class="line">密码 &#x2F; bg15jd</span><br></pre></td></tr></table></figure>
-
-<h1 id="电子书格式转换"><a href="#电子书格式转换" class="headerlink" title="电子书格式转换"></a>电子书格式转换</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;calibre-ebook.com&#x2F;download</span><br></pre></td></tr></table></figure>
-
-<p>教程如下。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;bookfere.com&#x2F;skills&#x2F;convert</span><br></pre></td></tr></table></figure>
-
-<h2 id="PDF寻找"><a href="#PDF寻找" class="headerlink" title="PDF寻找"></a>PDF寻找</h2><h3 id="付费方法"><a href="#付费方法" class="headerlink" title="付费方法"></a>付费方法</h3><p>打开以下链接以安装油猴脚本。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;greasyfork.org&#x2F;zh-CN&#x2F;scripts&#x2F;388744</span><br></pre></td></tr></table></figure>
-
-<p>安装后通过以下网站付费下载。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.duxiu.com&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h3 id="免费方法"><a href="#免费方法" class="headerlink" title="免费方法"></a>免费方法</h3><p>注册图书馆资源，如广西壮族自治区图书馆，然后进入读秀知识库。搜索需要的书，如果结果显示有<code>包库全文</code>，则本书可被免费下载。点击包库全文打开，下载并用超星阅读器打开，然后使用以下任意一种方式进行格式转换。超星阅读器下载链接如下。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;www.sslibrary.com&#x2F;ssreader&#x2F;download</span><br></pre></td></tr></table></figure>
-
-<p>如果显示的是<code>部分阅读</code>，可通过查看目录页并逐章搜索的方式尝试下载全书。若发现有缺页，可以使用文献传递来补齐。</p>
-<h4 id="通过图片缓存"><a href="#通过图片缓存" class="headerlink" title="通过图片缓存"></a>通过图片缓存</h4><p>然后进入<code>C:\Users\电脑用户名\AppData\Local\Temp\buffer</code>，如果PDZ是文字版则将buffer改为localX，如local1。每翻一页，此处将生成当前页和下一页的BMP图像，因此只需翻完整本书，即可获取到所有页面的图片。可使用鼠大侠鼠标连点器完成上述点击操作。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;axu.lanzoux.com&#x2F;inFq6hykh2f</span><br></pre></td></tr></table></figure>
-
-<p>得到图片后，通过PDF编辑器将其合成为完整的PDF即可。合并PDF可通过PDF补丁丁完成，下载链接如下。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;axu.lanzoux.com&#x2F;igagvhykeyj</span><br></pre></td></tr></table></figure>
-
-<h4 id="通过虚拟打印机"><a href="#通过虚拟打印机" class="headerlink" title="通过虚拟打印机"></a>通过虚拟打印机</h4><p>在超星阅读器中将PDZ打印为XPS，然后用XPS Viewer打开XPS打印为PDF。XPS Viewer下载链接如下。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;axu.lanzoux.com&#x2F;i1dN4hykicb</span><br></pre></td></tr></table></figure>
-
-<h3 id="添加目录书签"><a href="#添加目录书签" class="headerlink" title="添加目录书签"></a>添加目录书签</h3><p>以上方法下载的电子书可能会没有目录书签。为此，需要重新下载电子书，并选择分页下载，以获取BookContents.dat文件。用PdgCntEditor打开并复制，然后打开需要添加目录书签的PDF，将刚才复制的内容贴上。PdgEntEditor下载链接如下。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;axu.lanzoux.com&#x2F;iPLWkhykfde</span><br></pre></td></tr></table></figure>
-
-<p>切换到树形编辑模式。如果目录本身自带数字编号的层级，如<code>1.1</code>、<code>2.1</code>等，则直接点击工具栏上的<code>自动切分页码</code>，否则通过工具栏上的<code>将所选条目右移一栏</code>调整目录层次。根据目录与实际的页码差值调整基准页，如目录是第1页，而实际PDF中是第7页，则基准页填7（7-1+1）。完成后保存PDF即可。</p>
-<h1 id="推送电子书"><a href="#推送电子书" class="headerlink" title="推送电子书"></a>推送电子书</h1><h2 id="通过数据线"><a href="#通过数据线" class="headerlink" title="通过数据线"></a>通过数据线</h2><p>将Kindle连接到电脑，复制文件到Kindle即可。</p>
-<h2 id="通过邮箱"><a href="#通过邮箱" class="headerlink" title="通过邮箱"></a>通过邮箱</h2><p>打开以下网站，登录Kindle账号后选择<code>我的账户</code>-<code>管理我的内容和设备</code>，点击<code>首选项</code>-<code>个人文档设置</code>并在下方选择<code>添加认可的电子邮箱</code>，将负责传书的邮箱添加进去。上面系统分配的邮箱即为传输到Kindle的推送邮箱，在传输邮箱中新建邮件，收件地址填Kindle的推送邮箱，将需要传输的电子书设为普通邮件附件，注意不要使用超大附件功能，可以发送多个附件。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.amazon.cn&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h2 id="通过公众号"><a href="#通过公众号" class="headerlink" title="通过公众号"></a>通过公众号</h2><p>关注<code>亚马逊Kindle服务号</code>并关注。回复<code>绑定+你的 Kindle 邮箱地址</code>来绑定账号。在Kindle后台添加<code>kindle@eub-inc.com</code>为信任邮箱。打开你希望保存的公众号文章，点击右上角分享，选择<code>亚马逊Kindle服务号</code>，稍等片刻，文章便会被推送到Kindle中。</p>
-<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="怎么把网上找到的电子书放到kindle里？"><a href="#怎么把网上找到的电子书放到kindle里？" class="headerlink" title="怎么把网上找到的电子书放到kindle里？"></a>怎么把网上找到的电子书放到kindle里？</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.zhihu.com&#x2F;question&#x2F;22794631</span><br></pre></td></tr></table></figure>
-
-<h2 id="【简道云筛选】电子书下载网站大全"><a href="#【简道云筛选】电子书下载网站大全" class="headerlink" title="【简道云筛选】电子书下载网站大全"></a>【简道云筛选】电子书下载网站大全</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;tyi45di4ct.jiandaoyun.com&#x2F;dash&#x2F;5e7d915c6c56d8000674a8b8</span><br></pre></td></tr></table></figure>
-
-<h2 id="有了这十几个网站，没有你找不到的电子书"><a href="#有了这十几个网站，没有你找不到的电子书" class="headerlink" title="有了这十几个网站，没有你找不到的电子书"></a>有了这十几个网站，没有你找不到的电子书</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;53064677</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Skill</category>
-      </categories>
-      <tags>
-        <tag>Life</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Mac和Linux下终端优化</title>
-    <url>blog/posts/Terminal-Optimization.html</url>
+    <url>/posts/Terminal-Optimization.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9ad0bvjl7j312q0rutjq.jpg"></p>
 <p>对Mac和Linux下终端进行优化，可以大大提升用户体验。</p>
 <a id="more"></a>
@@ -417,7 +417,7 @@
   </entry>
   <entry>
     <title>Matlab的使用</title>
-    <url>blog/posts/Matlab-Installation.html</url>
+    <url>/posts/Matlab-Installation.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegaff5icfj30sg0g040h.jpg"></p>
 <p>Matlab相关使用技巧。</p>
 <a id="more"></a>
@@ -434,7 +434,7 @@
   </entry>
   <entry>
     <title>Sublime 3的使用</title>
-    <url>blog/posts/Sublime-Installation.html</url>
+    <url>/posts/Sublime-Installation.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006tNbRwly1ga8x7npp86j30v50u0h1g.jpg"></p>
 <p>Sublime 3是一款好用的文本编辑软件。</p>
 <a id="more"></a>
@@ -516,7 +516,7 @@
   </entry>
   <entry>
     <title>Node环境的搭建与使用</title>
-    <url>blog/posts/Node-Installation.html</url>
+    <url>/posts/Node-Installation.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9as31waswj31c00u013e.jpg"></p>
 <p>Node是一个JavaScript运行环境，很多模块都需要依赖node。npm是随同node安装的包管理工具，node安装完成后，npm也安装完成。</p>
 <a id="more"></a>
@@ -585,7 +585,7 @@
   </entry>
   <entry>
     <title>公众号使用指南</title>
-    <url>blog/posts/Subscription-Use.html</url>
+    <url>/posts/Subscription-Use.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gk7x9t5no2j30yk0jgwki.jpg"></p>
 <p>公众号开发可以为其提供新的功能。</p>
 <a id="more"></a>
@@ -630,7 +630,7 @@
   </entry>
   <entry>
     <title>利用Hexo在Github上搭建博客</title>
-    <url>blog/posts/Building-Blog-With-Hexo.html</url>
+    <url>/posts/Building-Blog-With-Hexo.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9ari29zqgj31cq0u0gva.jpg"></p>
 <p>利用Github个人主页和Hexo，可轻松搭建出精美的个人博客。</p>
 <a id="more"></a>
@@ -878,7 +878,7 @@
   </entry>
   <entry>
     <title>各种系统的安装与配置</title>
-    <url>blog/posts/OS-Installation.html</url>
+    <url>/posts/OS-Installation.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegazq8rzvj30xc0irwet.jpg"></p>
 <p>不同系统的安装方法。</p>
 <a id="more"></a>
@@ -944,7 +944,7 @@
   </entry>
   <entry>
     <title>多方式引导启动系统</title>
-    <url>blog/posts/Multiple-Methods-To-Start-OS.html</url>
+    <url>/posts/Multiple-Methods-To-Start-OS.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegariofn3j31c00u04qp.jpg"></p>
 <p>分区表、引导方式和不同方式引导系统。</p>
 <a id="more"></a>
@@ -1028,7 +1028,7 @@
   </entry>
   <entry>
     <title>安装Chromium OS到硬盘实现双启动</title>
-    <url>blog/posts/Chromium-OS-Installation.html</url>
+    <url>/posts/Chromium-OS-Installation.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9apspq7y8j30u00mijs7.jpg"></p>
 <p>Chromium OS是Google开发的一款基于Linux内核的系统，需要连网才能使用，整个系统的架构等同于一个Chromium浏览器。</p>
 <a id="more"></a>
@@ -1092,7 +1092,7 @@
   </entry>
   <entry>
     <title>系统和硬件的相关知识及维护</title>
-    <url>blog/posts/Knowledge-About-OS-And-Hardware.html</url>
+    <url>/posts/Knowledge-About-OS-And-Hardware.html</url>
     <content><![CDATA[<p><img src="https://i.loli.net/2019/06/05/5cf71019dace093816.jpg"></p>
 <p>有关操作系统类型、操作系统位数、操作系统引导、硬盘修复等。</p>
 <a id="more"></a>
@@ -1536,7 +1536,7 @@
   </entry>
   <entry>
     <title>Git和Github的安装与使用</title>
-    <url>blog/posts/Git-Installation.html</url>
+    <url>/posts/Git-Installation.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9asa3gs51j30go08caa5.jpg"></p>
 <p>Git是一个常用的工具，与github一同使用。</p>
 <a id="more"></a>
@@ -1751,7 +1751,7 @@
   </entry>
   <entry>
     <title>Mac使用技巧总结</title>
-    <url>blog/posts/Mac-Skills.html</url>
+    <url>/posts/Mac-Skills.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9adg1f7usj31c00u0u15.jpg"></p>
 <p>总结了一些MacOS的使用技巧，不断更新。</p>
 <a id="more"></a>
@@ -2275,7 +2275,7 @@
   </entry>
   <entry>
     <title>Windows使用技巧总结</title>
-    <url>blog/posts/Windows-Skills.html</url>
+    <url>/posts/Windows-Skills.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegayckavoj31be0qot9i.jpg"></p>
 <p>Windows相关技巧。</p>
 <a id="more"></a>
@@ -2633,7 +2633,7 @@
   </entry>
   <entry>
     <title>学习进程整理</title>
-    <url>blog/posts/Study-Process.html</url>
+    <url>/posts/Study-Process.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegalwpmxbj310m0u0tfi.jpg"></p>
 <p>已修读课程整理。</p>
 <a id="more"></a>
@@ -3971,7 +3971,7 @@
   </entry>
   <entry>
     <title>全平台使用技巧总结</title>
-    <url>blog/posts/AllOS-Skills.html</url>
+    <url>/posts/AllOS-Skills.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegb0koys4j31hc0u0mzb.jpg"></p>
 <p>一些有用的电脑和手机使用技巧。</p>
 <a id="more"></a>
@@ -5173,7 +5173,7 @@
   </entry>
   <entry>
     <title>Windows各版本系统的安装及配置</title>
-    <url>blog/posts/Windows-Installation.html</url>
+    <url>/posts/Windows-Installation.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegb2ckiyij31c00u016c.jpg"></p>
 <p>不同版本的Windows在现代电脑上安装方法并不相同。通过相关配置，可以运行较旧的Windows版本。</p>
 <a id="more"></a>
@@ -6042,7 +6042,7 @@
   </entry>
   <entry>
     <title>黑苹果的安装与配置</title>
-    <url>blog/posts/Hackintosh-Installation.html</url>
+    <url>/posts/Hackintosh-Installation.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9bt5qlkq5j31lv0u0kii.jpg"></p>
 <p>本文以macOS Mojave为例进行说明，包含内容较多，主要适合较新主板的安装。</p>
 <a id="more"></a>
@@ -7265,7 +7265,7 @@
   </entry>
   <entry>
     <title>Google正确食用指南</title>
-    <url>blog/posts/How-To-Access-Google.html</url>
+    <url>/posts/How-To-Access-Google.html</url>
     <content><![CDATA[<p><img src="https://i.loli.net/2019/06/03/5cf4e62026ce662099.jpg"></p>
 <p>Google是一个强大的搜索引擎，本文主要介绍访问Google的方法。</p>
 <a id="more"></a>
@@ -8115,7 +8115,7 @@
   </entry>
   <entry>
     <title>计算机技术相关知识与操作</title>
-    <url>blog/posts/Knowledge-About-CS.html</url>
+    <url>/posts/Knowledge-About-CS.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gegauv7nluj31hc0u00zn.jpg"></p>
 <p>有关计算机技术的相关内容。</p>
 <a id="more"></a>
@@ -8700,7 +8700,7 @@
   </entry>
   <entry>
     <title>娱乐圈相关实体资料收集</title>
-    <url>blog/posts/Information-About-Stars.html</url>
+    <url>/posts/Information-About-Stars.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkz241dvlgj31390qoaf6.jpg" alt="【20190928】微博@卜算子咏零丁洋，https://weibo.com/6417505553/I9025gdp6"></p>
 <p>在流言蜚语遍布的娱乐圈，唯有一手资料可以让我们直观的了解每一个深处娱乐圈的实体。这里收集了综艺、访谈、微博等内容，试图在营销号乱带节奏的当下让这些证据帮助我们我们保持一个相对清醒的头脑。</p>
 <a id="more"></a>
@@ -9642,7 +9642,7 @@
   </entry>
   <entry>
     <title>程序员工具集合及使用</title>
-    <url>blog/posts/Useful-Tools-For-Programmers.html</url>
+    <url>/posts/Useful-Tools-For-Programmers.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkl3459bh3j30u00gvtba.jpg"></p>
 <p>对程序员有用的工具集合。</p>
 <a id="more"></a>
@@ -12227,7 +12227,7 @@
   </entry>
   <entry>
     <title>黑苹果的进阶操作</title>
-    <url>blog/posts/Hackintosh-Advanced-Configuration.html</url>
+    <url>/posts/Hackintosh-Advanced-Configuration.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006tNbRwly1g9lvpyjs1dj31c00u07wo.jpg"></p>
 <p>请保证在黑苹果已完全能够正常使用、并有足够能力理解相关术语后进行以下操作。</p>
 <a id="more"></a>
@@ -16747,7 +16747,7 @@
   </entry>
   <entry>
     <title>iOS使用技巧总结</title>
-    <url>blog/posts/iOS-Skills.html</url>
+    <url>/posts/iOS-Skills.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gega76v20ij315d0u045g.jpg"></p>
 <p>共享应用、破解内购等。</p>
 <a id="more"></a>
@@ -20539,7 +20539,7 @@
   </entry>
   <entry>
     <title>刷写BIOS和调整整机性能的操作</title>
-    <url>blog/posts/BIOS-Editing-And-Flashing.html</url>
+    <url>/posts/BIOS-Editing-And-Flashing.html</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g9baxry2kwj30sg0lctax.jpg"></p>
 <p>对BIOS进行修改和刷写，可以解锁BIOS的其它功能。</p>
 <a id="more"></a>
