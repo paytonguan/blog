@@ -1401,6 +1401,16 @@ https://www.yzkof.com/
 https://www.gotvg.com/
 ```
 
+## 应用市场
+
+### 国际版APP应用市场
+
+可用`9Apps`、`V-Appstore`、`F-Droid`。F-Droid可用以下镜像加速。
+
+```
+https://mirrors.tuna.tsinghua.edu.cn/help/fdroid/
+```
+
 ## 常用工具
 
 ### Gboard
@@ -2193,4 +2203,10 @@ https://mp.weixin.qq.com/s/w1oxB0BnhQkyhI1tW_2f6g
 
 ```
 https://mp.weixin.qq.com/s/V7mK6ahKN8rLOkvHExUpCA
+```
+
+## 大厂出品却冷门10年，免翻不限速下载国际版APP的绝佳选择！
+
+```
+https://mp.weixin.qq.com/s/8xc2uRZP2EboZz3wnR74Zw
 ```

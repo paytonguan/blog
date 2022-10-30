@@ -8839,6 +8839,30 @@ https://appleid.apple.com/
 
 # 系统操作
 
+## 添加日历订阅
+
+点击设置-日历-账户-添加账户-其他-添加已订阅的日历，填入服务器地址即可。推荐订阅如下。
+
+```
+# 中国节假日补班日历订阅
+# Github 仓库为 https://github.com/lanceliao/china-holiday-calender
+https://www.shuyz.com/githubfiles/china-holiday-calender/master/holidayCal.ics
+
+# 中国二十四节气日历订阅
+# Github 仓库为 https://github.com/KaitoHH/24-jieqi-ics
+https://cdn.jsdelivr.net/gh/KaitoHH/24-jieqi-ics@master/23_solar_terms_2015-01-01_2050-12-31.ics
+
+# 电影、美剧、英剧公共日历
+https://calendar.google.com/calendar/ical/291ig4cijjnirlc6krcopq5gj4%2540group.calendar.google.com/public/basic.ics
+```
+
+也可在以下网站寻找订阅。
+
+```
+http://icalshare.com/
+https://sspai.com/post/43209
+```
+
 ## 恢复模式
 
 ### 进入
@@ -10922,4 +10946,10 @@ https://mp.weixin.qq.com/s/cDmx4doiumVOBZuuE9jUjg
 
 ```
 https://mp.weixin.qq.com/s/ZvLQQt1-FyToTtZA14Vifg
+```
+
+## 最出名的那些日历APP，结果一点都不够好用...
+
+```
+https://mp.weixin.qq.com/s/LSW7nB-5dLhEgSTqlOvy8g
 ```
