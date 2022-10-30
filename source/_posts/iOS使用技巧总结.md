@@ -2358,6 +2358,137 @@ https://www.zzzmode.com/mytools/charles/
 
 用解压软件打开IPA，删除iTunesmeradata.plist即可。若无法直接用解压软件打开，可先修改后缀名为ZIP，删除后再修改回IPA。
 
+## 永不掉签工具
+
+### TrollStore
+
+TrollStore可以在部分系统上利用漏洞，不越狱即可安装永不过期的IPA。
+
+#### 安装
+
+打开以下链接并按照步骤操作即可。
+
+```
+https://github.com/opa334/TrollStore
+```
+
+安装后需要安装ldid以允许安装未签名的应用。建议安装持久性助手，以避免重建图标缓存时TrollStore无法打开。如果安装时出错，可翻墙后重试。
+
+完成后，将需要安装的IPA分享到TrollStore即可安装。
+
+#### 可用APP
+
+##### 越狱工具
+
+###### Unc0ver
+
+通过普通安装方式下载IPA并分享给TrollStore安装即可。
+
+若安装8.0.0-8.0.2版本，则还需要安装u0Launcher，安装完成后打开u0Launcher，它会自动跳转到unc0ver，正常越狱即可。
+
+```
+https://github.com/opa334/u0Launcher/releases
+```
+
+##### 将deb转换为IPA
+
+可通过DebtoIPA，将越狱的deb插件转换为IPA。
+
+```
+https://github.com/sourcelocation/DebToIPA/releases
+```
+
+##### 主题美化
+
+可用APP如下。
+
+```
+# Mugunghwa
+# 将主题用Filza放置于var/mobile/Themes/mugunghwa/Themes即可
+https://github.com/s8ngyu/Mugunghwa/releases
+
+# TrollTools
+https://github.com/sourcelocation/TrollTools/releases
+```
+
+主题包可在以下链接下载。
+
+```
+https://pan.baidu.com/s/1Ygj6RpzIFQYn0aGzGB5nFg?pwd=9nns（提取码 / 9nns）
+https://www.123pan.com/s/vgn0Vv-5J3Fv
+https://havoc.app/
+```
+
+##### APP降级
+
+```
+# DowngradeApp
+https://pan.baidu.com/s/17YQgjtw2Mf2W36iTG63w6Q?pwd=fxpf（提取码 / fxpf）
+https://share.weiyun.com/t0Lvr5ms
+
+# AppStore++
+https://github.com/CokePokes/AppStorePlus-TrollStore/releases
+```
+
+##### 其它
+
+```
+# 资源库
+https://www.123pan.com/s/vgn0Vv-Qo3Fv
+https://pan.baidu.com/s/1f7qiHzFutQ3zN1-SQkFXSg?pwd=791g（提取码 / 791g）
+https://wwn.lanzouy.com/b00q85ctg（密码 / zdf）
+
+# Filza
+https://www.tigisoftware.com/default/?p=439
+
+# ResolutionSetter
+# 各个设备的分辨率可在该网站查看：https://www.apple.com.cn/iphone/compare/
+# 若修改分辨率后屏幕黑屏，重启手机即可
+https://github.com/Halo-Michael/ipas/blob/main/resolutionsetter.ipa
+
+# ResolutionSetterSwift
+https://github.com/haoict/haoict.github.io/tree/master/cydia/ipa
+
+# BlizzBoards
+https://appinstallerios.com/TrollStoreIPAs/BlizzardBoard.ipa
+
+# H5GG
+https://github.com/H5GG/H5GG
+
+# uYou+
+https://github.com/qnblackcat/uYouPlus/releases
+
+# OldOS
+https://github.com/zzanehip/The-OldOS-Project/releases
+
+# RingTonesManager
+https://share.initnil.com/With_TorllStore
+
+# NiceBattery
+https://www.niceios.com/download.php
+
+# 电池助手
+https://www.123pan.com/s/vgn0Vv-Ex3Fv
+https://pan.baidu.com/s/1YBIuBzHONOTwYZ0YTYZUVg?pwd=ik6g（提取码 / ik6g）
+
+# PostBox
+https://www.postbox.news/
+```
+
+### 轻松签+
+
+#### 安装
+
+与TrollStore功能类似，但可以自定义IPA。利用TrollStore的漏洞可以安装永不掉签的轻松签版本，也可以选择已有的企业证书自签安装。
+
+```
+https://esign.yyyue.xyz/
+```
+
+#### 使用
+
+通过修改标识符，可实现双开。通过移除库，可能可以去除广告弹窗，注意修改完后选择`仅修改配置，不签名`。
+
 ## 相关资源
 
 ### 旧版APP
@@ -2419,7 +2550,19 @@ https://apporanges.lanzoui.com/b0cfcmzwj
 
 ### Unc0ver
 
+Unc0ver版本与机型和系统的对应表格如下。
+
+|       系统      |  支持机型 | 可用unc0ver版本 |
+|-----------------|-----------|-----------------|
+| iOS 13.0-13.7   | A9-A13    | 5.0.0-6.0.0     |
+| iOS 14.0-14.3   | A9-A14    | 6.0.0-6.2.0     |
+| iOS 14.4-14.5.1 | A12及以上 | 7.0.0-7.0.2     |
+| iOS 14.6-14.8   | A12-A13   | 8.0.0-8.0.2     |
+
+
 #### 应用安装
+
+##### 普通安装
 
 官网如下。
 
@@ -2440,6 +2583,24 @@ https://www.lanzous.com/icxyqaf?p
 
 ```
 https://github.com/LinusHenze/Fugu14
+```
+
+##### 永不过期版本
+
+仅支持iOS 14.0-15.4.1系统。
+
+使用Unc0ver越狱后，才能安装永不过期版本。添加以下源后搜索unc0ver安装，注意需要选择正确的版本，可选择`6.0.2`、`6.1.1`、`6.1.2`、`6.2.0`、`8.0.2`。
+
+```
+https://cydia.ichitaso.com/
+```
+
+也可下载以下deb后，通过Filza安装。
+
+```
+https://apporanges.lanzoub.com/b0cfc799a
+https://www.aliyundrive.com/s/hzmbkEx8YaF
+https://pan.baidu.com/s/1AT6vYKDyPmawrW_6Pp3gQA?pwd=ybhk（提取码 / ybhk）
 ```
 
 #### Sileo商店
@@ -2504,10 +2665,28 @@ rm /.disable_tweakinject && killall backboardd
 
 ### Taurine
 
+#### 普通安装
+
 下载链接如下。
 
 ```
 https://taurine.app/
+```
+
+#### 永不过期版本
+
+需要用Taurine越狱后，才可以安装永不过期版本。添加以下源后，搜索taurine-permanent安装即可。
+
+```
+https://repo.theodyssey.dev/
+```
+
+也可下载以下deb包，然后通过Filza安装。
+
+```
+https://apporanges.lanzoub.com/b0cfc798j
+https://www.aliyundrive.com/s/oG2XUjBbEFA
+https://pan.baidu.com/s/1N9xFwIPtkVqx7G9AVGdHtQ?pwd=yzke（提取码 / yzke）
 ```
 
 ### Checkra1n
@@ -4241,6 +4420,8 @@ https://cydia.ichitaso.com
 打开Cydia，找到需要生效的插件，点击显示软件包内容，展开到DynamicLibraries，应当有xx.dylib和xx.plist两个文件。用Filza定位到以上位置，点开xx.plist，点击Bundles后面的`i`，点击`+`号后填写要添加插件支持的应用唯一标志符即可。该标志符可通过Filza的应用程序管理功能得到。
 
 ### 应用砸壳
+
+AppStore下载的应用进行了数字版权加密处理。砸壳可以将已经安装的App砸壳，导出为ipa格式的文件。
 
 砸壳可以跳过ID验证。
 
@@ -10420,10 +10601,10 @@ https://ipsw.me/
 将要降级到的固件重命名为restore.ipsw，对应版本的SHSH2文件重命名为blob.shsh2。打开终端并执行以下命令即可。
 
 ```
-// 带基带文件
+# 带基带文件
 ./futurerestore -t shsh.shsh2 --latest-baseband --latest-sep restore.ipsw
 
-// 不带基带文件
+# 不带基带文件
 ./futurerestore -t shsh.shsh2 --no-baseband --latest-sep restore.ipsw
 ```
 
@@ -10441,7 +10622,7 @@ https://www.theiphonewiki.com/wiki/Models#iPhone
 
 SEP主要负责处理Touch ID、Face ID认证与各种密码的核对工作，一般来说，相同大版本系统的SEP很大几率兼容，跨版本系统的SEP不兼容。
 
-打开restore.sh并找到./futurerestore一行，修改如下。
+然后使用以下命令即可刷机。
 
 ```
 ./futurerestore -t blob.shsh2 -b bbfw.bbfw -p build.plist -s im4p.im4p -m build.plist -w restore.ipsw
@@ -10452,6 +10633,16 @@ SEP主要负责处理Touch ID、Face ID认证与各种密码的核对工作，�
 ```
 ./futurerestore -t blob.shsh2 --no-baseband -p build.plist -s im4p.im4p -m build.plist -w restore.ipsw
 ```
+
+<details>
+<summary>【进阶】使用图形化界面</summary>
+
+除了用命令行，也可用GUI界面。不需要先下载futurerestore，可直接使用GUI界面下载。
+
+```
+https://github.com/CoocooFroggy/FutureRestore-GUI/releases
+```
+</details>
 
 #### 常见问题
 
@@ -10521,7 +10712,15 @@ SEP不兼容，无法进行刷机。手动提取基带、SEP等文件后重试�
 
 ##### failed to reconnect to device in recovery <iBEC> mode (errorcode=65863697)
 
-无法在恢复模式下重新连接到设备，表示设备与电脑断开连接。使用苹果官方原装数据线，更换 USB 接口，保证良好连接的情况下，再进行刷机。
+无法在恢复模式下重新连接到设备，表示设备与电脑断开连接。使用苹果官方原装数据线，更换USB接口，保证良好连接的情况下，再进行刷机。
+
+##### Device ApNonce does not match APTicket nonce
+
+G值不匹配。设备的G值和备份SHSH2文件中的不一致，重新固定G值即可。
+
+##### SEP firmware is Not being signed
+
+所选SEP的固件已经关闭验证，尝试重新从开放验证的固件中提取SEP文件。
 
 ### restoreM8
 
@@ -10952,4 +11151,58 @@ https://mp.weixin.qq.com/s/ZvLQQt1-FyToTtZA14Vifg
 
 ```
 https://mp.weixin.qq.com/s/LSW7nB-5dLhEgSTqlOvy8g
+```
+
+## iOS 永久签名，永不过期，无需越狱，完全免费，速度
+
+```
+https://mp.weixin.qq.com/s/fjD7CDQFZ_BGvCsz8qdyog
+```
+
+## iOS 永久签名，支持 iOS 14.0 - 15.4.1，支持全系设备，官方在线安装，永不过期，完全免费
+
+```
+https://mp.weixin.qq.com/s/0f2My5VsQMSOoHXhwPo0aA
+```
+
+## iOS 系统，主题美化，真主题，抢鲜使用，无需越狱，免费
+
+```
+https://mp.weixin.qq.com/s/eDl_Og4I-nFotAgNwp2AnA
+```
+
+## 轻松签+，无需证书，永久签名，永不过期，无需越狱
+
+```
+https://mp.weixin.qq.com/s/STdwUdba7Pc8klnfzfcmlw
+```
+
+## futurerestore 指南 ，iOS 系统刷机到指定版本
+
+```
+https://mp.weixin.qq.com/s/_faR7J2tvxUunr1ZijdIig
+```
+
+## CrackerXI+，砸壳，提取 IPA
+
+```
+https://mp.weixin.qq.com/s/SIf8tWc1IH1ZZLHOiYG3Fw
+```
+
+## Taurine，永不过期，免费安装，再也不用担心签名问题了，速度
+
+```
+https://mp.weixin.qq.com/s/OL2aJMRBApre3jkvEhKcQA
+```
+
+## unc0ver，永不过期，免费安装，再也不用担心签名问题了，速度
+
+```
+https://mp.weixin.qq.com/s/4UnkQ68bLQJFnVSJbXyHBg
+```
+
+## u0Launcher，永不过期版 unc0ver ，速度使用
+
+```
+https://mp.weixin.qq.com/s/ZsHpKOf_kTkImfJqQpv6Ow
 ```

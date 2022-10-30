@@ -245,6 +245,22 @@ https://axu.lanzoux.com/iPLWkhykfde
 
 切换到树形编辑模式。如果目录本身自带数字编号的层级，如`1.1`、`2.1`等，则直接点击工具栏上的`自动切分页码`，否则通过工具栏上的`将所选条目右移一栏`调整目录层次。根据目录与实际的页码差值调整基准页，如目录是第1页，而实际PDF中是第7页，则基准页填7（7-1+1）。完成后保存PDF即可。
 
+# 书源
+
+## 阅读APP
+
+可用书香之家、爱阅读、石头阅读、顶点小说、蓝鲸阅读。其中蓝鲸阅读可添加以下书源。
+
+```
+https://gitee.com/dkreader/book-source-warehouse/raw/master/my.json
+```
+
+## 源生成工具
+
+```
+http://www.yckceo.com/
+```
+
 # 参考教程
 
 ## 怎么把网上找到的电子书放到kindle里？
@@ -263,4 +279,10 @@ https://tyi45di4ct.jiandaoyun.com/dash/5e7d915c6c56d8000674a8b8
 
 ```
 https://zhuanlan.zhihu.com/p/53064677
+```
+
+## 知名换源阅读APP相继下架，仅剩的免费阅读神器别再错过了！
+
+```
+https://mp.weixin.qq.com/s/kCAH5ZphEn-Xq2qKg60xUg
 ```

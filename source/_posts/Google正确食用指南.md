@@ -756,6 +756,12 @@ https://cloudssh.us/
 https://www.emule-project.net/home/perl/general.cgi?l=42
 ```
 
+## 其它特殊方法
+
+可通过QQ邮箱或网易邮箱大师APP，添加Gmail账户即可跳转到Google登录页面。点击下面的`帮助`，在搜索框随便输入内容，然后点击`在Google上搜索`即可。
+
+
+
 # 自建服务器
 
 通过国外服务器上搭建专门的翻墙协议，实现翻墙效果。
@@ -7619,4 +7625,10 @@ https://www.jianshu.com/p/02e3e8ccfe80
 
 ```
 https://mp.weixin.qq.com/s/bmidD6nygCl5JnrRO-bdyg
+```
+
+## 不小心挖出的大厂官方Google搜索访问渠道，低调但是放心大胆的用！
+
+```
+https://mp.weixin.qq.com/s/Ay9pfz0CLb_8R_CNQ5jCbw
 ```
