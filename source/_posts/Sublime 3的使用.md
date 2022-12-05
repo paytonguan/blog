@@ -147,7 +147,7 @@ Sublime的语言包。
 
 #### 使用优化
 
-##### MarkDown Editing
+##### MarkDownEditing
 
 Markdown语法高亮。
 
@@ -186,6 +186,8 @@ Markdown语法高亮。
 Markdown表格。需先按`Ctrl+Shift+P`，然后打开`Table Editor: Enable for current syntax`以在md格式中应用该插件，打开`Table Editor: Enable for current view`和`Table Editor: Set table syntax ... for current view`以在本文件中应用该插件。注意打开后Tab键将被该插件抢占。
 
 ##### SmartMarkdown
+
+该插件可能会与MarkDownEditing冲突，MarkDownEditing已支持标题折叠功能。
 
 智能标题折叠，在标题上按`Tab`以折叠/展开本层，在任意位置按`Shift+Tab`以折叠/展开全文。
 

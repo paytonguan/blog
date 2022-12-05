@@ -1247,7 +1247,11 @@ https://www.yxssp.com/23173.html
 
 #### Termux
 
-手机上使用终端。
+手机上使用终端。可以没有Root权限。
+
+```
+https://f-droid.org/zh_Hans/packages/com.termux/
+```
 
 ### 游戏修改
 
@@ -1374,12 +1378,38 @@ https://www.downkuai.com/android/115784.html
 https://anti-recall.com/
 ```
 
+## WPS Pro
+
+破解版下载链接如下。
+
+```
+https://wwc.lanzouy.com/b03j3cbyd（密码 / 0000）
+```
+
+激活码如下。
+
+```
+R8R8P-MTT6F-KLRPM-J7CAB-PJM8C
+7LR67-WTXPA-KLUHV-GEK2E-QW4CK
+EUYTH-3KWKL-PJMX7-XBCPW-9U2DD
+THUV2-32HH7-6NMHN-PTX7Y-QQCTH
+A4XV7-QP9JN-E7FCB-VQFRD-4NLKC
+U2PWU-H7D9H-69T3B-JEYC2-3R2NG
+7G2HE-JR8KL-ABB9D-Y7789-GLNFL
+```
+
 ## Google框架
 
 部分手机如Sumsung国行版只是将Google Play隐藏了起来，重新安装相关APP即可。Google Play下载地址如下。
 
 ```
 https://m.apkpure.com/google-play-store/com.android.vending
+```
+
+## 游戏库
+
+```
+https://wwc.lanzouy.com/b03j3vpgd（密码 / 0000）
 ```
 
 ## 游戏模拟器
@@ -1770,8 +1800,8 @@ https://github.com/KhronosGroup/OpenCL-Headers
 
 ```
 ├── CL
-│   ├── libOpenCL.so
-│   └── [头文件]
+│   ├── libOpenCL.so
+│   └── [头文件]
 ├── CMakeLists.txt
 ├── [cl核文件，以HelloWorld.cl为例]
 └── [主程序，以test.cpp为例]

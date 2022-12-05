@@ -1726,6 +1726,12 @@ https://sourceforge.net/projects/pcxfirefox/files/Release/Firefox/
 https://shuax.com/project/chrome/
 ```
 
+## 游戏库
+
+```
+https://wwc.lanzouy.com/b03j43zxi（密码 / 0000）
+```
+
 ## 其它
 
 ### Unlocker

@@ -1605,7 +1605,7 @@ https://github.com/Alvin9999/new-pac/wiki/%E4%BD%8E%E5%86%85%E6%A0%B8%E7%89%88
 
 ```
 ├── doc
-│   └── ...
+│   └── ...
 ├── config.json
 ├── geoip.dat
 ├── geosite.dat
