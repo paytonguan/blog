@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/006y8mN6ly1g9bt5qlkq5j31lv0u0kii.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/006tNbRwly1g9j9syjzgdj30jg0m8jst.jpg">
 <meta property="article:published_time" content="2019-11-26T06:24:16.000Z">
-<meta property="article:modified_time" content="2022-01-26T08:08:28.940Z">
+<meta property="article:modified_time" content="2022-11-27T04:31:38.940Z">
 <meta property="article:author" content="Payton">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://tva1.sinaimg.cn/large/006y8mN6ly1g9bt5qlkq5j31lv0u0kii.jpg">
@@ -213,7 +213,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-01-26 16:08:28" itemprop="dateModified" datetime="2022-01-26T16:08:28+08:00">2022-01-26</time>
+                <time title="修改时间：2022-11-27 12:31:38" itemprop="dateModified" datetime="2022-11-27T12:31:38+08:00">2022-11-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -716,7 +716,7 @@
 <p>安装完成后使用Clover Configurator挂载EFI分区，并打开EFI&#x2F;CLOVER&#x2F;kexts，只留Others文件夹，其余删除。打开Others文件夹，只留VirtualSMC.kext、WhatEverGreen.kext和Lilu.kext。</p>
 <p>然后打开EFI&#x2F;CLOVER&#x2F;DRIVER64UEFI，删除SMCHelper-64.efi并复制VirtualSMC.efi到此目录下。</p>
 <p>目录层级如下。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">├── ACPI</span><br><span class="line">├── CLOVERX64.efi</span><br><span class="line">├── config.plist</span><br><span class="line">├── drivers</span><br><span class="line">│   └── UEFI</span><br><span class="line">│       ├── ApfsDriverLoader.efi</span><br><span class="line">│       ├── AudioDxe.efi</span><br><span class="line">│       ├── DataHubDxe.efi</span><br><span class="line">│       ├── FSInject.efi</span><br><span class="line">│       ├── HFSPlus.efi</span><br><span class="line">│       ├── OpenRuntime.efi</span><br><span class="line">│       └── VirtualSmc.efi</span><br><span class="line">├── kexts</span><br><span class="line">    └── Other</span><br><span class="line">        ├── Lilu.kext</span><br><span class="line">        ├── VirtualSMC.kext</span><br><span class="line">        └── WhateverGreen.kext</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">├── ACPI</span><br><span class="line">├── CLOVERX64.efi</span><br><span class="line">├── config.plist</span><br><span class="line">├── drivers</span><br><span class="line">│   └── UEFI</span><br><span class="line">│       ├── ApfsDriverLoader.efi</span><br><span class="line">│       ├── AudioDxe.efi</span><br><span class="line">│       ├── DataHubDxe.efi</span><br><span class="line">│       ├── FSInject.efi</span><br><span class="line">│       ├── HFSPlus.efi</span><br><span class="line">│       ├── OpenRuntime.efi</span><br><span class="line">│       └── VirtualSmc.efi</span><br><span class="line">├── kexts</span><br><span class="line">    └── Other</span><br><span class="line">        ├── Lilu.kext</span><br><span class="line">        ├── VirtualSMC.kext</span><br><span class="line">        └── WhateverGreen.kext</span><br></pre></td></tr></table></figure>
 
 <h3 id="Clover配置"><a href="#Clover配置" class="headerlink" title="Clover配置"></a>Clover配置</h3><p>用Clover Configurator打开config.plist，按下列设置进行修改。</p>
 <h4 id="ACPI"><a href="#ACPI" class="headerlink" title="ACPI"></a>ACPI</h4><p>将Fixs下所有选项取消勾选（1和2两个页面的选项都要取消），并添加以下更名补丁。</p>
@@ -3657,7 +3657,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">29:35</span>
+    <span title="站点阅读时长">29:37</span>
 </div>
 
         
