@@ -6,6 +6,8 @@ date: 2022-02-08 10:38:57
 tags:
 ---
 
+![](https://tva1.sinaimg.cn/large/008vxvgGgy1h8tgfugkauj30xc0hgjtq.jpg)
+
 Spotify使用指南。
 
 <!-- more -->
@@ -76,12 +78,15 @@ http://free-proxy.cz/zh/proxylist/country/PH/all/ping/all
 
 #### 手机号付款
 
-菲律宾支持通过手机号付款，可参考以下教程。
+菲律宾支持通过手机号付款。在淘宝购买一张Globe手机卡，然后连接菲律宾节点，打开Spotify菲律宾区Premium付款界面，付款方式选择Globe，输入手机号即可。如果收不到验证码，可以尝试反激活，即用这个手机号给另一个菲律宾手机号发信息。
+
+手机号有效期及余额可通过以下网站查询。
 
 ```
-https://help.mints7.cc/no/fei-lv-bin-spotify-hui-yuan-kai-tong-jiao-cheng
-https://sspai.com/post/64399
+http://login.globe.com.ph/
 ```
+
+通过微信公众号`海外华人助手`给手机卡充值3元人民币，即可延长该手机号有效期。
 
 #### GCash付款
 
@@ -107,8 +112,6 @@ https://www.eepay.app/
 
 国内没有给Paytm充值的途径。
 
-
-
 ## 破解版
 
 ### Android
@@ -119,7 +122,7 @@ https://www.eepay.app/
 https://bestforandroid.com/apk/spotify-premium-mod-apk-free/
 ```
 
-下载armv7版本。翻墙后打开App，使用密码登录，登录成功后退出，关闭翻墙，再次进App即可。
+翻墙后打开App，使用密码登录，登录成功后退出，关闭翻墙，再次进App即可。
 
 # 屏蔽广告
 
@@ -144,18 +147,11 @@ DOMAIN,	weblb-wg.gslb.spotify.com,REJECT
 # DOMAIN,spclient.spotify.com,REJECT
 ```
 
-也可使用以下方法。
-
-```
-https://www.bv2ex.com/t/310140
-```
-
 也可用以下版本，主要原理是使用Web端的Spotify。
 
 ```
 https://github.com/sooxt98/spotify-crack-chrome-app
 ```
-
 
 # 切换区域
 
@@ -213,4 +209,16 @@ https://channel.newlearner.site/?q=%23Spotify
 
 ```
 https://www.jkg.tw/p1615/
+```
+
+## 菲律宾Spotify会员开通教程
+
+```
+https://help.mints7.cc/no/fei-lv-bin-spotify-hui-yuan-kai-tong-jiao-cheng
+```
+
+## 开通菲律宾Spotify最小白的方法
+
+```
+https://sspai.com/post/64399
 ```

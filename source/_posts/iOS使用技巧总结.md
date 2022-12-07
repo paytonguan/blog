@@ -2453,6 +2453,9 @@ https://wwn.lanzouy.com/b00q85ctg（密码 / zdf）
 # Filza
 https://www.tigisoftware.com/default/?p=439
 
+# Apps Manager
+https://www.tigisoftware.com/default/?p=435
+
 # ResolutionSetter
 # 各个设备的分辨率可在该网站查看：https://www.apple.com.cn/iphone/compare/
 # 若修改分辨率后屏幕黑屏，重启手机即可
