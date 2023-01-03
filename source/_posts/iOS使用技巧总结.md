@@ -2381,7 +2381,16 @@ https://github.com/opa334/TrollStore
 可从以下库搜寻。
 
 ```
+# 推荐
+https://github.com/Peng1029/trollrepo
 https://ipa.cypwn.xyz/
+
+# 其它
+https://ipa.store/
+https://pan.ios98.com/
+https://pan.qxnav.com/
+https://www.123pan.com/s/vgn0Vv-Qo3Fv
+https://pan.baidu.com/s/1f7qiHzFutQ3zN1-SQkFXSg?pwd=791g（提取码 / 791g）
 ```
 
 ##### 越狱工具
@@ -2402,6 +2411,16 @@ https://github.com/opa334/u0Launcher/releases
 
 ```
 https://github.com/sourcelocation/DebToIPA/releases
+```
+
+##### 字体更换
+
+可用WDBFontOverwrite，在iOS 16.1.2下可更换字体。iOS 14和越狱用户不推荐使用。
+
+更换后重启手机即可恢复原状。
+
+```
+https://github.com/ginsudev/WDBFontOverwrite
 ```
 
 ##### 主题美化
@@ -2502,6 +2521,14 @@ https://github.com/powenn/ModMyIPA
 https://www.htv123.com/down/CallAssist_TrollStore.ipa
 ```
 
+#### 操作技巧
+
+##### 清理手机占用空间
+
+可用Filza清空`/var/db/diagnostics/Persist/`和`/var/db/diagnostics/Special/`目录。
+
+注意TrollStore无法安装iCleaner，因无法获取到iCleaner所需要的权限。
+
 ### 轻松签+
 
 #### 安装
@@ -2573,6 +2600,12 @@ https://cydia-app.com/
 
 ```
 https://apporanges.lanzoui.com/b0cfcmzwj
+```
+
+### XinaA15
+
+```
+https://xina.ss03.cn/
 ```
 
 ### Unc0ver
@@ -11244,4 +11277,22 @@ https://mp.weixin.qq.com/s/4UnkQ68bLQJFnVSJbXyHBg
 
 ```
 https://mp.weixin.qq.com/s/ZsHpKOf_kTkImfJqQpv6Ow
+```
+
+## [Tutorial] Save TONS of GB's on smaller storage iDevices!
+
+```
+https://www.reddit.com/r/jailbreak/comments/pmcj2s/tutorial_save_tons_of_gbs_on_smaller_storage/
+```
+
+## Since we don’t have iCleaner Pro for TrollStore, it’s possible to delete some large cache files from Filza without harm to the system.
+
+```
+https://www.reddit.com/r/Trollstore/comments/yhw4kb/since_we_dont_have_icleaner_pro_for_trollstore/
+```
+
+## iOS 系统，一键更换字体，大神接手，新版下载地址，必看
+
+```
+https://mp.weixin.qq.com/s/Rf8WAaKGz26pAWYSkCo6Bg
 ```
