@@ -2358,191 +2358,6 @@ https://www.zzzmode.com/mytools/charles/
 
 用解压软件打开IPA，删除iTunesmeradata.plist即可。若无法直接用解压软件打开，可先修改后缀名为ZIP，删除后再修改回IPA。
 
-## 永不掉签工具
-
-### TrollStore
-
-TrollStore可以在部分系统上利用漏洞，不越狱即可安装永不过期的IPA。
-
-#### 安装
-
-打开以下链接并按照步骤操作即可。
-
-```
-https://github.com/opa334/TrollStore
-```
-
-安装后需要安装ldid以允许安装未签名的应用。建议安装持久性助手，以避免重建图标缓存时TrollStore无法打开。如果安装时出错，可翻墙后重试。
-
-完成后，将需要安装的IPA分享到TrollStore即可安装。
-
-#### 可用APP
-
-可从以下库搜寻。
-
-```
-# 推荐
-https://github.com/Peng1029/trollrepo
-https://ipa.cypwn.xyz/
-
-# 其它
-https://ipa.store/
-https://pan.ios98.com/
-https://pan.qxnav.com/
-https://www.123pan.com/s/vgn0Vv-Qo3Fv
-https://pan.baidu.com/s/1f7qiHzFutQ3zN1-SQkFXSg?pwd=791g（提取码 / 791g）
-```
-
-##### 越狱工具
-
-###### Unc0ver
-
-通过普通安装方式下载IPA并分享给TrollStore安装即可。
-
-若安装8.0.0-8.0.2版本，则还需要安装u0Launcher，安装完成后打开u0Launcher，它会自动跳转到unc0ver，正常越狱即可。
-
-```
-https://github.com/opa334/u0Launcher/releases
-```
-
-##### 将deb转换为IPA
-
-可通过DebtoIPA，将越狱的deb插件转换为IPA。
-
-```
-https://github.com/sourcelocation/DebToIPA/releases
-```
-
-##### 字体更换
-
-可用WDBFontOverwrite，在iOS 16.1.2下可更换字体。iOS 14和越狱用户不推荐使用。
-
-更换后重启手机即可恢复原状。
-
-```
-https://github.com/ginsudev/WDBFontOverwrite
-```
-
-##### 主题美化
-
-可用APP如下。
-
-```
-# Mugunghwa
-# 将主题用Filza放置于var/mobile/Themes/mugunghwa/Themes即可
-# 主题图标的规律为，App标识符-large.png
-https://github.com/s8ngyu/Mugunghwa/releases
-
-# TrollTools
-https://github.com/sourcelocation/TrollTools/releases
-```
-
-主题包可在以下链接下载。
-
-```
-# 普通
-https://pan.baidu.com/s/1Ygj6RpzIFQYn0aGzGB5nFg?pwd=9nns（提取码 / 9nns）
-https://www.123pan.com/s/vgn0Vv-5J3Fv
-https://havoc.app/
-
-# 锁屏密码美化
-https://pan.baidu.com/s/1E4MDnPbJ9fdFx-kHqo68og?pwd=7wcu（提取码 / 7wcu）
-https://www.123pan.com/s/vgn0Vv-gw3Fv
-```
-
-##### APP降级
-
-```
-# DowngradeApp
-https://pan.baidu.com/s/17YQgjtw2Mf2W36iTG63w6Q?pwd=fxpf（提取码 / fxpf）
-https://share.weiyun.com/t0Lvr5ms
-
-# AppStore++
-https://github.com/CokePokes/AppStorePlus-TrollStore/releases
-```
-
-##### 其它
-
-```
-# 资源库
-https://www.123pan.com/s/vgn0Vv-Qo3Fv
-https://pan.baidu.com/s/1f7qiHzFutQ3zN1-SQkFXSg?pwd=791g（提取码 / 791g）
-https://wwn.lanzouy.com/b00q85ctg（密码 / zdf）
-
-# Filza
-https://www.tigisoftware.com/default/?p=439
-
-# Apps Manager
-https://www.tigisoftware.com/default/?p=435
-
-# ResolutionSetter
-# 各个设备的分辨率可在该网站查看：https://www.apple.com.cn/iphone/compare/
-# 若修改分辨率后屏幕黑屏，重启手机即可
-https://github.com/Halo-Michael/ipas/blob/main/resolutionsetter.ipa
-
-# ResolutionSetterSwift
-https://github.com/haoict/haoict.github.io/tree/master/cydia/ipa
-
-# BlizzBoards
-https://appinstallerios.com/TrollStoreIPAs/BlizzardBoard.ipa
-
-# H5GG
-https://github.com/H5GG/H5GG
-
-# uYou+
-https://github.com/qnblackcat/uYouPlus/releases
-
-# OldOS
-https://github.com/zzanehip/The-OldOS-Project/releases
-
-# RingTonesManager
-https://share.initnil.com/With_TorllStore
-
-# NiceBattery
-https://www.niceios.com/download.php
-
-# 电池助手
-https://www.123pan.com/s/vgn0Vv-Ex3Fv
-https://pan.baidu.com/s/1YBIuBzHONOTwYZ0YTYZUVg?pwd=ik6g（提取码 / ik6g）
-
-# PostBox
-https://www.postbox.news/
-
-# 静音模块
-# 将文件用Filza放置到/var/Managed Preferences/mobile中，注销后即可在控制中心添加静音按钮
-https://www.123pan.com/s/vgn0Vv-5I3Fv
-https://pan.baidu.com/s/1N_-DkwRejMQOz_dBu9GZwA?pwd=hufn（提取码 / hufn）
-
-# ModMyIPA
-# 安装后通过修改现有IPA包的标识符，可实现应用多开
-https://github.com/powenn/ModMyIPA
-
-# 电话助手
-https://www.htv123.com/down/CallAssist_TrollStore.ipa
-```
-
-#### 操作技巧
-
-##### 清理手机占用空间
-
-可用Filza清空`/var/db/diagnostics/Persist/`和`/var/db/diagnostics/Special/`目录。
-
-注意TrollStore无法安装iCleaner，因无法获取到iCleaner所需要的权限。
-
-### 轻松签+
-
-#### 安装
-
-与TrollStore功能类似，但可以自定义IPA。利用TrollStore的漏洞可以安装永不掉签的轻松签版本，也可以选择已有的企业证书自签安装。
-
-```
-https://esign.yyyue.xyz/
-```
-
-#### 使用
-
-通过修改标识符，可实现双开。通过移除库，可能可以去除广告弹窗，注意修改完后选择`仅修改配置，不签名`。
-
 ## 相关资源
 
 ### 旧版APP
@@ -5167,6 +4982,243 @@ su
 # 获取超级权限，密码为alpine
 rm -f /bin/sh && ln -s /usr/bin/bash /bin/sh
 ldrestart
+```
+
+# TrollStore
+
+TrollStore可以在部分系统上利用漏洞，不越狱即可安装永不过期的IPA。
+
+## 安装
+
+打开以下链接并按照步骤操作即可。
+
+```
+https://github.com/opa334/TrollStore
+```
+
+安装后需要安装ldid以允许安装未签名的应用。建议安装持久性助手，以避免重建图标缓存时TrollStore无法打开。如果安装时出错，可翻墙后重试。
+
+完成后，将需要安装的IPA分享到TrollStore即可安装。
+
+## 可用APP
+
+可从以下库搜寻。
+
+```
+# 推荐
+https://github.com/Peng1029/trollrepo
+https://ipa.cypwn.xyz/
+
+# 其它
+https://ipa.store/
+https://pan.ios98.com/
+https://pan.qxnav.com/
+https://www.123pan.com/s/vgn0Vv-Qo3Fv
+https://pan.baidu.com/s/1f7qiHzFutQ3zN1-SQkFXSg?pwd=791g（提取码 / 791g）
+```
+
+### 越狱工具
+
+#### Unc0ver
+
+通过普通安装方式下载IPA并分享给TrollStore安装即可。
+
+若安装8.0.0-8.0.2版本，则还需要安装u0Launcher，安装完成后打开u0Launcher，它会自动跳转到unc0ver，正常越狱即可。
+
+```
+https://github.com/opa334/u0Launcher/releases
+```
+
+### 将deb转换为IPA
+
+可通过DebtoIPA，将越狱的deb插件转换为IPA。
+
+```
+https://github.com/sourcelocation/DebToIPA/releases
+```
+
+### APP降级
+
+```
+# DowngradeApp
+https://pan.baidu.com/s/17YQgjtw2Mf2W36iTG63w6Q?pwd=fxpf（提取码 / fxpf）
+https://share.weiyun.com/t0Lvr5ms
+
+# AppStore++
+# 原版包含广告，网盘包含去广告版本
+https://github.com/CokePokes/AppStorePlus-TrollStore
+https://www.123pan.com/s/vgn0Vv-9r3Fv
+```
+
+### 其它
+
+```
+# 资源库
+https://www.123pan.com/s/vgn0Vv-Qo3Fv
+https://pan.baidu.com/s/1f7qiHzFutQ3zN1-SQkFXSg?pwd=791g（提取码 / 791g）
+https://wwn.lanzouy.com/b00q85ctg（密码 / zdf）
+
+# Filza
+https://www.tigisoftware.com/default/?p=439
+
+# Apps Manager
+https://www.tigisoftware.com/default/?p=435
+
+# ResolutionSetter
+# 各个设备的分辨率可在该网站查看：https://www.apple.com.cn/iphone/compare/
+# 若修改分辨率后屏幕黑屏，重启手机即可
+https://github.com/Halo-Michael/ipas/blob/main/resolutionsetter.ipa
+
+# ResolutionSetterSwift
+https://github.com/haoict/haoict.github.io/tree/master/cydia/ipa
+
+# BlizzBoards
+https://appinstallerios.com/TrollStoreIPAs/BlizzardBoard.ipa
+
+# H5GG
+https://github.com/H5GG/H5GG
+
+# uYou+
+https://github.com/qnblackcat/uYouPlus/releases
+
+# OldOS
+https://github.com/zzanehip/The-OldOS-Project/releases
+
+# RingTonesManager
+https://share.initnil.com/With_TorllStore
+
+# NiceBattery
+https://www.niceios.com/download.php
+
+# 电池助手
+https://www.123pan.com/s/vgn0Vv-Ex3Fv
+https://pan.baidu.com/s/1YBIuBzHONOTwYZ0YTYZUVg?pwd=ik6g（提取码 / ik6g）
+
+# PostBox
+https://www.postbox.news/
+
+# 静音模块
+# 将文件用Filza放置到/var/Managed Preferences/mobile中，注销后即可在控制中心添加静音按钮
+https://www.123pan.com/s/vgn0Vv-5I3Fv
+https://pan.baidu.com/s/1N_-DkwRejMQOz_dBu9GZwA?pwd=hufn（提取码 / hufn）
+
+# ModMyIPA
+# 安装后通过修改现有IPA包的标识符，可实现应用多开
+https://github.com/powenn/ModMyIPA
+
+# 电话助手
+https://www.htv123.com/down/CallAssist_TrollStore.ipa
+
+# TrollTools
+# 多功能工具箱
+https://github.com/sourcelocation/TrollTools
+```
+
+## 操作技巧
+
+### 清理手机占用空间
+
+可用Filza清空`/var/db/diagnostics/Persist/`和`/var/db/diagnostics/Special/`目录。
+
+注意TrollStore无法安装iCleaner，因无法获取到iCleaner所需要的权限。
+
+## 轻松签+
+
+### 安装
+
+与TrollStore功能类似，但可以自定义IPA。利用TrollStore的漏洞可以安装永不掉签的轻松签版本，也可以选择已有的企业证书自签安装。
+
+```
+https://esign.yyyue.xyz/
+```
+
+### 使用
+
+通过修改标识符，可实现双开。通过移除库，可能可以去除广告弹窗，注意修改完后选择`仅修改配置，不签名`。
+
+# MacDirtyCow
+
+## 原理
+
+MacDirtyCow利用CVE-2022-46689漏洞，支持iOS 14.0-15.7.1，16.0-16.1.2，建议15.0及以上系统使用。
+
+利用该漏洞，可通过交换同等大小文件的方式覆盖文件实现，从而实现一些特权操作。注意覆盖的文件不能大于原文件，覆盖后会一直存在并占用内存，重启后得到释放。当占用内存过大时，可能会导致手机变卡、小组件无法载入、第三方输入法无法使用、手机自动注销等。
+
+MacDirtyCowDemo仓库如下。
+
+```
+https://github.com/zhuowei/MacDirtyCowDemo
+```
+
+## 可用App
+
+以下App均可通过TrollStore安装。
+
+```
+# 超强工具箱，各种功能集合
+https://github.com/leminlimez/Cowabunga
+
+# 其它工具箱
+https://github.com/straight-tamago/FileSwitcherX
+
+# 图标排序
+https://github.com/Avangelista/Appabetical
+
+# 字体更换
+https://github.com/ginsudev/WDBFontOverwrite
+
+# 修复企业证书失效
+https://github.com/BomberFish/Whitelist
+https://www.123pan.com/s/vgn0Vv-YO3Fv
+
+# 移除自签三个App限制
+https://github.com/zhuowei/WDBRemoveThreeAppLimit
+
+# 自定义状态栏
+https://github.com/Avangelista/StatusMagic
+
+# 修改分辨率，iOS 16老设备激活灵动岛
+https://github.com/matteozappia/DynamicCow
+
+# 隐藏主页条
+https://github.com/straight-tamago/NoHomeBar
+
+# Dock栏透明
+https://github.com/straight-tamago/DockTransparent
+
+# 隐藏主页条+Dock栏透明
+https://github.com/leminlimez/DockHider
+
+# 一键注销
+# 将放大器添加到控制中心，然后打开一次App，就可以在控制中心一键注销
+https://github.com/straight-tamago/RespringCC
+```
+
+### 主题美化
+
+可用APP如下。
+
+```
+# Mugunghwa
+# 将主题用Filza放置于var/mobile/Themes/mugunghwa/Themes即可
+# 主题图标的规律为，App标识符-large.png
+https://github.com/s8ngyu/Mugunghwa/releases
+
+# TrollTools
+https://github.com/sourcelocation/TrollTools/releases
+```
+
+主题包可在以下链接下载。
+
+```
+# 普通
+https://pan.baidu.com/s/1Ygj6RpzIFQYn0aGzGB5nFg?pwd=9nns（提取码 / 9nns）
+https://www.123pan.com/s/vgn0Vv-5J3Fv
+https://havoc.app/
+
+# 锁屏密码美化
+https://pan.baidu.com/s/1E4MDnPbJ9fdFx-kHqo68og?pwd=7wcu（提取码 / 7wcu）
+https://www.123pan.com/s/vgn0Vv-gw3Fv
 ```
 
 # 密码与激活锁
@@ -10836,6 +10888,12 @@ sudo chmod +x rera1n.sh
 ./rera1n.sh
 ```
 
+# 常见问题
+
+## 切换AppStore账号后自动下载App
+
+进入AppStore中的账号详情，点击`删除此设备`即可。
+
 # 参考教程
 
 ## 不按任何键即可进入DFU模式
@@ -11295,4 +11353,16 @@ https://www.reddit.com/r/Trollstore/comments/yhw4kb/since_we_dont_have_icleaner_
 
 ```
 https://mp.weixin.qq.com/s/Rf8WAaKGz26pAWYSkCo6Bg
+```
+
+## 切换id后会自动下载app
+
+```
+https://discussionschinese.apple.com/thread/253193718
+```
+
+## 关于 MacDirtyCow，支持的系统范围，必看
+
+```
+https://mp.weixin.qq.com/s/h9R_veKuOd2ienAHce9KYw
 ```
