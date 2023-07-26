@@ -24,6 +24,7 @@ http://1984.wang/
 ## 普通电子书
 
 ```
+https://z-lib.is/
 https://kyon945.stackstorage.com/s/3WVmxKmKu5IGhVr
 https://bookfere.com/
 http://cn.epubee.com/
@@ -74,6 +75,12 @@ https://zh.b-ok.global/?regionChanged=&redirect=59363490
 http://haodoo.net/
 https://www.iamtxt.com/e/member/login/log.html
 http://www.binnao.com/
+```
+
+## 小说
+
+```
+http://www.txtnovel.top/
 ```
 
 ## 外语电子书

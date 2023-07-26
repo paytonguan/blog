@@ -2963,10 +2963,24 @@ https://winworldpc.com/product/winframe/18
 
 ### 下载
 
+#### 官方镜像
+
 通过更改地区，可下载不同地区的镜像。
 
 ```
 https://www.microsoft.com/ko-kr/software-download/windows10ISO
+```
+
+#### 精简镜像
+
+##### Tiny10
+
+```
+# x64
+https://archive.org/download/tiny-10_202301/tiny10%2023h1%20x64.iso
+
+# x86
+https://archive.org/download/tiny-10_202301/tiny10%202303%20x86.iso
 ```
 
 ### 实体机安装
@@ -3227,6 +3241,7 @@ https://lanzous.com/i3mbn3c
 
 # HEU_KMS_Activator
 https://github.com/zbezj/HEU_KMS_Activator
+https://ltribe.lanzout.com/iix5s0orgszg
 https://ltribe.lanzoui.com/iaIcUvc61xi
 
 # 沧水KMS激活脚本

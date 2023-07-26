@@ -504,9 +504,11 @@ ipconfig/flushdns
 提取码 / heyd
 ```
 
-## Windows 11
+## 安装Android子系统
 
-### 安装Android子系统
+### Windows 11
+
+Windows 11可使用Windows Subsystem for Android运行安卓APP。
 
 在安装前需要先通过Windows Update安装所有的更新。在设置-系统-关于下，操作系统版本需要在`22000.526`及以上，硬盘需要为SSD，Microsoft Store版本需要高于`22110.1402.6.0`，可在Microsoft Store点击头像，选择应用设置，下拉到底查看。
 
@@ -526,6 +528,28 @@ https://store.rg-adguard.net/
 
 ```
 add-appxpackage [msixbundle包路径]
+```
+
+### Windows 10
+
+Windows 10可使用以下仓库实现。
+
+```
+https://github.com/cinit/WSAPatch
+```
+
+教程如下。
+
+```
+https://www.kdocs.cn/l/ctwrfU5tAOjU
+```
+
+### 安装APK
+
+可使用Apk Installer。
+
+```
+https://gitee.com/haoyu3/wsainstall-tool
 ```
 
 # 操作技巧
@@ -1159,6 +1183,12 @@ http://excelbbx.net/PPT/Index.htm
 
 # 常用工具
 
+## 软件库
+
+```
+https://www.ghxi.com/
+```
+
 ## 文件传输
 
 ### Dukto
@@ -1732,6 +1762,17 @@ https://shuax.com/project/chrome/
 https://wwc.lanzouy.com/b03j43zxi（密码 / 0000）
 ```
 
+## 文件预览
+
+```
+# SumatraPDF，预览PDF
+https://www.sumatrapdfreader.org/free-pdf-reader
+
+# QuickLook
+https://pooi.moe/QuickLook/
+https://github.com/QL-Win/QuickLook/wiki/Available-Plugins
+```
+
 ## 其它
 
 ### Unlocker
@@ -1971,4 +2012,10 @@ https://mp.weixin.qq.com/s/64gbcQJ_9ASRFe91rfRX6g
 
 ```
 https://mp.weixin.qq.com/s/RwFi7XbGd0yqkqX7923iXw
+```
+
+## 1秒预览各类文件内容，这些软件真的配得上Windows必装！
+
+```
+https://mp.weixin.qq.com/s/TG7X4AXm1qJACQmZTEg8mA
 ```

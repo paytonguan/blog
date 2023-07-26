@@ -380,6 +380,21 @@ https://docs.microsoft.com/en-us/learn/modules/extend-elements-finance-operation
 https://docs.microsoft.com/en-us/learn/modules/implement-common-integration-features-finance-ops/10-exercise-1
 ```
 
+## 加速器
+
+```
+https://tuntu.gy-idc.com/views/home
+https://www.nn.com/
+https://www.chiyanjiasu.com/
+http://ifengyun.com/
+https://www.zhifool.com/
+https://zzjiasuqi.com/
+https://akspeedy.com/
+https://www.ccspeed.cn/
+https://www.biubiu001.com/
+http://xunyou.mobi/#/
+```
+
 ## 电脑端软件
 
 ### 翻墙Chrome浏览器
@@ -7631,4 +7646,10 @@ https://mp.weixin.qq.com/s/bmidD6nygCl5JnrRO-bdyg
 
 ```
 https://mp.weixin.qq.com/s/Ay9pfz0CLb_8R_CNQ5jCbw
+```
+
+## 整整13款加速器，要的赶紧白嫖啦！
+
+```
+https://mp.weixin.qq.com/s/ubJNdNdY1T5QqtCP-5wwag
 ```
