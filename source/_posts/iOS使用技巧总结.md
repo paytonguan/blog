@@ -13,6 +13,36 @@ tags:
 
 <!-- more -->
 
+```
+重新登录appleID后会安装很多app
+
+原因应该是之前下他们的时候下到一半就没下，然后重新登录后会自动完成没下完的部分
+
+解决：
+
+
+https://discussionschinese.apple.com/thread/253150810
+
+让他们下完，在全部删掉
+
+或者：
+
+https://discussionschinese.apple.com/thread/253193718
+
+我以前也是，后来没有了，你试试，你点开app，点击右上角头像，进去再点击账户头像，下拉有一个删除此设备（写了什么自动下载，我忘记了），然后来回切换ID都可以了
+
+
+
+双引导
+https://github.com/dualra1n/dualra1n
+
+降级
+https://github.com/mineek/sunst0rm
+
+iOS马甲包
+https://github.com/lightank/LTVestbagDemo
+```
+
 # 捷径
 
 ## 制作
@@ -1926,6 +1956,20 @@ https://dantheman827.github.io/ios-app-signer/
 https://altstore.io/
 ```
 
+##### 常见问题
+
+###### 电脑安装AltStore等待很久无反应
+
+可尝试手机开热点，电脑连接热点安装；翻墙后安装；更换电脑；用虚拟机搭载macOS系统测试；关闭所有杀毒软件。
+
+###### 手机安装IPA显示找不到AltServer
+
+将手机连接电脑即可。若已经越狱，可安装AltStorePatch插件，即可不连接电脑。
+
+###### 手机安装IPA最后一步显示could not install
+
+退出电脑杀毒软件，或更换USB接口。
+
 #### nullxImpactor
 
 需要先安装AltStore并安装AltStore的邮件插件。签名时需保持邮件应用打开。
@@ -1948,6 +1992,30 @@ https://github.com/pixelomer/AltDeploy
 
 ```
 https://sideloadly.io/
+```
+
+#### Cydia Impactor
+
+```
+http://www.cydiaimpactor.com/
+```
+
+#### Scarlet
+
+注意安装Mail Plugin时退出Clash，否则会因为端口占用而安装失败。
+
+```
+https://github.com/DebianArch64/DebProvision
+```
+
+可用repo如下。
+
+```
+https://raw.githubusercontent.com/azu0609/repo/main/scarlet_repo.json
+https://usescarlet.com/scarlet.json
+https://ipa.cypwn.xyz/scarlet.json
+https://cydia.akemi.ai/
+https://repo.chariz.com/
 ```
 
 ### 通过APP
@@ -2342,7 +2410,7 @@ https://www.charles.ren/
 
 将支付宝地区切换为美国，然后点击出境-折扣礼卡，滑到最底部点击查看，搜索`iTunes`即可。
 
-## 相关资源
+## 相关APP
 
 ### 旧版APP
 
@@ -2355,6 +2423,23 @@ https://www.lanzous.com/b0f7a3l6d
 
 ```
 https://sideload.tweakboxapp.com/
+```
+
+### 其他APP
+
+#### DolphiniOS
+
+PPSSPP模拟器。
+
+```
+https://dolphinios.oatmealdome.me/
+```
+
+#### 其他
+
+```
+# uYouPlus
+https://github.com/qnblackcat/uYouPlus
 ```
 
 # 越狱
@@ -2475,6 +2560,20 @@ https://apt.ss03.cn/
 http://www.lenglengyu.com/
 ```
 
+##### 更换字体
+
+添加以下源，搜索Xina即可。
+
+```
+https://apt.ss03.cn/
+```
+
+#### 使用
+
+##### 手动安装Deb插件包
+
+打开XinaA15内置文件管理器，长按点击Deb安装即可。
+
 #### 常见问题
 
 ##### 电脑端无法访问手机文件
@@ -2488,6 +2587,18 @@ dpkg -i [deb插件名称]
 uicache —all
 killall SpringBoard
 ```
+
+##### 安装应用级插件出现白图标
+
+安装XinalConFix插件，然后重新安装XinaA15工具，激活越狱。
+
+```
+https://opa334.github.io/
+```
+
+##### Sileo刷新源出现522错误
+
+在Sileo越狱商店精选页面上，点击右上角头像，下拉找到缓存，直接点击两下，然后点击语音，开启使用系统语言，再点应用即可。
 
 ### Unc0ver
 
@@ -2754,6 +2865,9 @@ codesign -f -s - --deep /Applications/
 
 ```
 https://palera.in/
+
+# WinRa1n，Windows版
+https://onejailbreak.com/blog/winra1n-jailbreak/
 ```
 
 ### Doubleh3lix
@@ -2792,6 +2906,28 @@ https://phoenixpwn.com/
 # ap0110
 # iOS 10，重启后可自动越狱
 https://github.com/athenusdev/ap0110
+
+# ayakurume
+# iOS 15，A8-A11设备
+https://github.com/dora2-iOS/ayakurume
+
+# Betelguese
+# 利用checkra1n越狱得到SSH，然后安装Sileo越狱商店
+https://github.com/23Aaron/Betelguese
+
+# ra1ncloud
+# iOS 15
+https://github.com/iarchiveml/ra1ncloud
+
+# Th0r
+https://github.com/pwned4ever/Th0r_Freya
+https://github.com/pwned4ever/Th-r
+
+# Blizzard
+https://geosn0w.github.io/
+https://github.com/GeoSn0w/Blizzard-Jailbreak-9
+https://geosn0w.github.io/getblizzard/
+https://github.com/GeoSn0w/Blizzard-Jailbreak
 ```
 
 ## 插件
@@ -2821,6 +2957,8 @@ https://apt.25mao.com
 https://repo.anamy.gay
 
 # 电话助手作者源
+# 电话助手
+# 魔术师，一键锁屏
 http://apt.htv123.com/
 
 # opa334作者源
@@ -2836,9 +2974,11 @@ https://opa334.github.io/
 # AlbumManager，照片相簿加锁
 # Bolders Reborn，自定义文件夹
 # SearchDots，模仿iOS 16系统桌面搜索按钮
+# SwipeExtenderX，原生键盘增强
 https://repo.chariz.com/
 
 # Ginsu作者源
+# Dodo，锁屏美化插件
 https://repo.ginsu.dev/
 
 # PoomSmart源
@@ -2847,11 +2987,13 @@ https://repo.ginsu.dev/
 # CC On&Off，在控制中心真正关闭WiFi/蓝牙
 # BlurryBadges，角标美化
 # AppColorClose，删除按钮自适应App图标颜色
+# Battery Health Enabler，开启电池健康
 https://poomsmart.github.io/repo/
 
 # Spark源
 # SnowBoard，主题插件
 # CCMusicArtwork，控制中心音乐模块显示正在播放音乐封面
+# AutoUnlockX，自动解锁
 https://sparkdev.me/
 
 # Sileo 官方源
@@ -2864,6 +3006,7 @@ https://tigisoftware.com/cydia/
 # P2KDev源
 # SimpleBattery，状态栏电池增加百分比显示
 # SugarCane，控制中心亮度和音量添加百分比显示
+# ReachMore，便捷访问手势
 # 3DBadgeClear，快速清除通知角标
 # DeleteForeverXS，永久删除照片
 # EZSwipe，主屏幕向下滑动手势插件
@@ -2904,6 +3047,7 @@ https://repo.packix.com/
 # InstaLauncher 2，应用快速启动
 # Uptime，控制中心显示开机后运行时间
 # DNDMyRecording，录屏勿扰
+# SquidGesture，全局手势插件
 https://havoc.app/
 
 # Limneos源
@@ -2922,6 +3066,9 @@ https://limneos.net/repo/
 # CalcLog，计算器显示历史记录
 # Speedy，自定义动画速度
 # A-Shields，程序锁
+# Axon，锁屏通知归纳
+# Power4Options，电源增强插件
+# FakeSignalBar，自定义运营商
 https://alias20.gitlab.io/apt/
 
 # iCraze源
@@ -2929,7 +3076,10 @@ https://alias20.gitlab.io/apt/
 # NotiCopy15，复制通知
 https://repo.icrazeios.com/
 
+# Creature源
 # TweakSettings，独立的插件设置
+# Shuffle，设置归类
+# Tranquil，背景音
 https://creaturecoding.com/repo/
 
 # AnthoPak源
@@ -2942,7 +3092,6 @@ https://repo.anthopak.dev/
 # Zetsu，分屏插件
 # KBApp，在键盘底部添加快捷按钮或者App
 # ADKeyboard，键盘添加颜色
-# KBApp，键盘底部增加App
 https://dcsyhi1998.github.io/
 
 # Sopppra源
@@ -2962,6 +3111,7 @@ https://repo.itznebbs.com/
 
 # Lizynz源
 # IconOrder，自定义文件夹
+# FolderX，自定义文件夹插件
 https://lizynz.github.io/
 
 # SkyPian源
@@ -3036,7 +3186,50 @@ https://cydia.ichitaso.com/
 
 # BigBoss源
 # App Library Disabler，去除App资源库
+# CCVibration，控制中心添加振动模块
+# WiFiQR，将WiFi网络生成二维码
+# HotspotQR，将个人热点网络生成二维码
 https://apt.thebigboss.org/repofiles/cydia/
+
+# 刀刀源
+# 插件汉化包
+https://xiangfeidexiaohuo.github.io/
+
+# 老牌猫源
+https://apt.25mao.com/
+
+# 赵楠源
+https://invalidunit.github.io/repo/
+
+# rob311源
+https://cydia.rob311.com/repo/
+
+# alexia源
+https://repo.alexia.lol/
+
+# MirO92源
+http://miro92.com/repo
+
+# iKarwan源
+# PMP，照片保护插件
+https://repo.ikghd.me/
+
+# Dhinak源
+https://dhinakg.github.io/repo/
+
+# DEB 备份，已安装的插件，提取和备份
+# 百度网盘（提取码6rsu）
+https://pan.baidu.com/s/1AHqn6osPVHSxtSuPQaabSA?pwd=6rsu 
+# 123云盘
+https://www.123pan.com/s/vgn0Vv-XchFv.html
+
+# CydiaGeek源
+# DoubleTapToLock，双击锁屏
+https://cydiageek.yourepo.com/
+
+# i0s_tweak3r源
+# ByeByeAppLibrary，禁用App资源库
+https://www.yourepo.com/
 ```
 
 ### 非越狱手机查看插件库
@@ -3149,7 +3342,6 @@ https://denialpan.github.io/
 https://repo.chr1s.dev/
 https://repo.titand3v.com/
 https://cydia.alexbeals.com/
-https://cydiageek.yourepo.com/
 https://foxfort.yourepo.com/
 https://galacticdev.me/
 https://repo.krit.me/
@@ -3159,7 +3351,6 @@ https://shepgoba.github.io/
 https://repo.tr1fecta.co/
 https://repo.basepack.co/
 https://mtac.app/repo/
-https://www.yourepo.com/
 https://repo.festival.tf/
 https://myxxdev.github.io/
 https://xia0z.github.io/
@@ -3220,6 +3411,10 @@ apt.geometricsoftware.se
 Six（LS）
 锁屏界面变成iOS 6样式
 skitty.xyz/repo
+
+
+PPSSPP，PSP模拟器
+cydia.ppsspp.org
 
 
 
@@ -3325,6 +3520,29 @@ ColorBanners 2 信息通知彩色风格
 
 DynamicPeninsula 灵动半岛
 limneos.net/repo
+
+
+SemiRestore11平刷插件，支持IOS11.3~11.4B3系统
+repo.packix.com
+
+
+IconCert 14，检测签名后应用显示剩余时间，显示在图标上
+apt.ss03.cn
+
+
+
+
+Houdini美化软件(iOS 10-10.3.2 and iOS 11-11.1.2)
+https://github.com/ihorlaitan/houdini-public
+
+
+
+
+仿iOS 14插件
+Titan，画中画插件
+Scorpion，通话窗口插件
+Velox Reloaded，桌面小组件插件
+Back Tap，轻点背面插件
 ```
 
 #### 必备插件
@@ -4748,12 +4966,28 @@ https://repo.supercharge.app/
 
 ## 免越狱安装越狱软件
 
-### Filza
+### FilzaEscaped15
 
 在未越狱的iOS 15.0-15.1.1，可使用FilzaEscaped15。需要自签。
 
 ```
 https://basvtdevelopments.com/filzaescaped
+```
+
+#### 使用
+
+##### 修改X手势
+
+```
+1.打开FilzaEscaped 
+2.找路径：
+/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist 
+3.打开com.apple.MobileGestalt.plist
+4.选择CacheExtra-再找oPeik/9e8lQWMszEjbPzng 
+5.ArtworkDeviceSubType 点击右侧（i） 
+6.注意这个值一定要记得，预防你想恢复原来的样子，想恢复改为原来值就行。 
+7.值修改为：2436
+8.点击右上角存储，打开设置-显示与亮度-视图-改为放大，再改为标准即可实现X手势。
 ```
 
 ## 使用
@@ -5617,6 +5851,12 @@ https://www.htv123.com/down/CallAssist_TrollStore.ipa
 # TrollTools
 # 多功能工具箱
 https://github.com/sourcelocation/TrollTools
+
+# WallpaperSetter，自定义浅色模式深色模式的墙纸
+https://github.com/Skittyblock/WallpaperSetter
+
+# CAPerfHUD，浮窗显示手机性能
+https://github.com/khanhduytran0/CAPerfHUD
 ```
 
 ## 操作技巧
@@ -6043,6 +6283,15 @@ https://mp.weixin.qq.com/s/GNzXfiTchse4KeAD7iHrxQ
 
 # AppCommander，App备份
 https://github.com/BomberFish/AppCommander
+
+# DirtyCow，工具箱
+https://github.com/mineek/dirtycowapp
+```
+
+# Cowabunga Lite
+
+```
+https://github.com/leminlimez/CowabungaLite
 ```
 
 # 密码与激活锁
@@ -6056,6 +6305,38 @@ https://github.com/BomberFish/AppCommander
 ```
 https://appletech752.com/icloudbypass.html
 https://appletech752.com/downloads.html
+```
+
+```
+绕过ID锁，具体操作方法
+
+条件要求：
+仅支持A5-A11设备
+MAC系统或黑苹果系统
+Checkra1n越狱工具（在艾锋降级-在线越狱获取）
+
+
+
+操作步骤：
+先将设备进入dfu模式
+使用Checkra1n进行越狱
+在端口44上使用ssh，同时删除或者重命名 Applications文件夹内的setup.app
+执行 killall -9 SpringBoard.Boom，注销后即可跳过iCloud。
+
+
+
+若是国行机，请往下看： 
+
+执行命令有二个方法：
+【方法1】
+rm /Library/Preferences/com.apple.networkextension.plist 
+killall CommCenter 
+
+【方法2】
+mv /Applications/Setup.app/Setup/Applications/Setup.app/Setup.bak touch /Application/Setup.app/Setup 
+uicache --all 
+killall backboardd 
+killall -9 SpringBoard
 ```
 
 # 网络调试工具
@@ -11720,6 +12001,14 @@ sudo chmod +x rera1n.sh
 ./rera1n.sh
 ```
 
+### Vieux
+
+仅支持部分设备。
+
+```
+https://github.com/MatthewPierson/Vieux
+```
+
 # 常见问题
 
 ## 切换AppStore账号后自动下载App
@@ -12694,4 +12983,160 @@ https://mp.weixin.qq.com/s/m-UVmt0uggHyD7I6_8TYxA
 
 ```
 https://mp.weixin.qq.com/s/FGDCsm5Po8j1MNRa2Aj8EQ
+```
+
+## iOS 系统，带上皇冠，终于来了
+
+```
+https://mp.weixin.qq.com/s/jUTM2lVhOSLWBdr1HiMQQQ
+```
+
+## iOS 系统，Dopamine 越狱，官方源作者源推荐（一）
+
+```
+https://mp.weixin.qq.com/s/9IVsWkRaCcfrnSr4Ebupxw
+```
+
+## 二个越狱消息：新版Cydia将来出炉/IOS11.3.1平刷插件
+
+```
+https://mp.weixin.qq.com/s/2hmmLyQaSpupc9D9PYsmRQ
+```
+
+## IOS11.2~11.3.1系统美化软件已发布，你会喜欢吗？
+
+```
+https://mp.weixin.qq.com/s/FabYhz1LNwgic41A13kQdA
+```
+
+## iOS 系统，自定义外观模式墙纸，无需越狱
+
+```
+https://mp.weixin.qq.com/s/SK-4YwXi1Gy9rsnmbcMMPg
+```
+
+## iOS 系统，deb 备份，支持一键备份全部
+
+```
+https://mp.weixin.qq.com/s/r6KxWQsuSBh72w6b4X21Sg
+```
+
+## iOS 系统，手机性能 HUD，无需越狱
+
+```
+https://mp.weixin.qq.com/s/SyG9g0jGYW2Uk5cjxQLIRQ
+```
+
+## iOS 系统，通知归纳，简洁美观
+
+```
+https://mp.weixin.qq.com/s/Jc7ou0mo4yB5_SMiXOw6KA
+```
+
+## iOS 系统，一键振动，禁用资源库，自定义运营商，自动解锁，完全免费
+
+```
+https://mp.weixin.qq.com/s/PbTZM37HmOShWP7QS7_B9g
+```
+
+## iOS12.4 越狱工具无法安装？绕过 ID 新方法
+
+```
+https://mp.weixin.qq.com/s/3AqUY1R0hVxWYxScBlfNwA
+```
+
+## iOS 13.4.1 免越狱改X手势，Sileo 再次更新
+
+```
+https://mp.weixin.qq.com/s/qYrfrFd-kE5hRtr0thIdUg
+```
+
+## DolphiniOS 模拟器已发布，掉签问题已修复
+
+```
+https://mp.weixin.qq.com/s/Htif1DpuPwTPOxHQYYaMnw
+```
+
+## iPhone 上玩真的 PSP 游戏，支持 iOS 13 系统
+
+```
+https://mp.weixin.qq.com/s/Shwv4N4lWlTVvDxGBrW23g
+```
+
+## iOS 16.1.2 DirtyCow 已发布，可以实现一键替换
+
+```
+https://mp.weixin.qq.com/s/MOrmpFG0SA8k62d0m9rQCA
+```
+
+## iOS 15.1 XinaA15 越狱工具，更换字体仅需几秒
+
+```
+https://mp.weixin.qq.com/s/gL8vNR6RDb8F4LoUY-ttng
+```
+
+## 惊现！iOS 15.7.1 有根越狱，但会失去5G存储空间
+
+```
+https://mp.weixin.qq.com/s/SR4JnHA-W62ugkSA9EYy2Q
+```
+
+## iOS 14.5.1 越狱问题，百度网盘要提速？
+
+```
+https://mp.weixin.qq.com/s/cIDqspQ2TID9lY3APAx8_A
+```
+
+## 劲爆！iOS 15.4.1 ra1ncloud 已发布，确实能越狱
+
+```
+https://mp.weixin.qq.com/s/hWSzXxgj-HURTQ5jZM40fg
+```
+
+## iOS 系统，全新全局手势神器，完全免费
+
+```
+https://mp.weixin.qq.com/s/O6Dug7Cj3tT5I1d_hICaeA
+```
+
+## iOS 14.4.1 Betelguese 越狱发布，新系统出现
+
+```
+https://mp.weixin.qq.com/s/gQ2ZtdnWTIDiMS1S-95-WA
+```
+
+## iOS 14 ReProvision 续签进展，新越狱视频演示
+
+```
+https://mp.weixin.qq.com/s/TDOpIqIdmmcOyIwwa3zB_A
+```
+
+## iOS 14.3 越狱工具已出？降级工具再次更新
+
+```
+https://mp.weixin.qq.com/s/OT5Cuu-0Cl2wvkre5kqcag
+```
+
+## iOS 13.5 Blizzard 新越狱，操作官网已经出现
+
+```
+https://mp.weixin.qq.com/s/BNBOIfaUx8Fxuu7dzy9TnA
+```
+
+## iOS 13 也能享用 iOS 14 新功能，赶紧试试
+
+```
+https://mp.weixin.qq.com/s/q9yuPIOh0nl4hhoRo7j3AQ
+```
+
+## Scarlet，猩红，自签安装 IPA 文件，完全免费
+
+```
+https://mp.weixin.qq.com/s/4Nt6K5KkkZr4247RlbQZog
+```
+
+## 降级 iOS10.3.3 方法？并不是想象中容易
+
+```
+https://mp.weixin.qq.com/s/VjyE55Vsn5OTISzg4eaeoA
 ```

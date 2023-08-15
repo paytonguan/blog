@@ -12,6 +12,62 @@ Google是一个强大的搜索引擎，本文主要介绍访问Google的方法�
 
 <!-- more -->
 
+```
+一些服务器的搭建
+https://www.kejiwanjia.com/jiaocheng/zheteng/notes/77125.html
+https://www.wxlog.cn/assort/
+
+
+
+
+
+IP地址查询
+https://ip.skk.moe/
+
+
+
+定向流量免流
+得有服务器，SSR/v2ray节点，节点得符合条件，端口80/443
+然后改混淆
+
+混淆HOST
+https://www.fbbi.pw/15.html
+https://github.com/FreeMLV2Ray/V2Ray_ml/wiki/V2Ray免流手册
+
+https://jacobsblog.xyz/%E5%85%8D%E6%B5%81%E6%B7%B7%E6%B7%86%E5%8F%82%E6%95%B0%E4%BB%85%E4%BE%9B%E5%8F%82%E8%80%83/
+
+https://blog.mo0.top/archives/55/
+
+
+免流机场
+https://www.somersaultcloud.xyz/auth/login
+http://www.xiaoyunml.com
+
+免流教程
+免流一般都得是Vmess
+
+https://www.xgiu.com/yidong_mianliu_jiaocheng
+
+
+https://www.duangks.com/archives/85/
+
+https://tstrs.me/1492.html
+https://www.flyzy2005.com/tech/ssr-free-traffic/
+http://www.itog.top/index.php/archives/20/wiz
+
+https://102345.xyz/jishu/v2ray-free-traffic/
+
+https://www.cxyzjd.com/article/qq_41975868/114700256
+
+https://www.wanuse.com/2021/12/blog-post_30.html
+
+免费机场
+
+https://www.mattkaydiary.com/search/label/vpn
+
+https://bulink.xyz
+```
+
 # 资料
 
 ```

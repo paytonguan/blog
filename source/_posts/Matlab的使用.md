@@ -6,7 +6,7 @@ date: 2020-04-12 15:52:29
 tags:
 ---
 
-![](https://tva1.sinaimg.cn/large/007S8ZIlgy1gegaff5icfj30sg0g040h.jpg)
+![](topic.jpg)
 
 Matlab相关使用技巧。
 

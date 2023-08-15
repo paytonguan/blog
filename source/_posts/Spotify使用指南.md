@@ -6,11 +6,19 @@ date: 2022-02-08 10:38:57
 tags:
 ---
 
-![](https://tva1.sinaimg.cn/large/008vxvgGgy1h8tgfugkauj30xc0hgjtq.jpg)
+![](topic.jpg)
 
 Spotify使用指南。
 
 <!-- more -->
+
+```
+spotify
+
+另外有个买港区的方法可以说一下，绑定你的港区 PlayStation Network 帐户，Spotify 就会从你的 PSN 帐户里扣钱，需要绑定一张 VISA 或者 MasterCard 的信用卡，国内的可以，但最后付费的时候也可以使用支付宝付款，方法是用支付宝充值 PSN 帐户，就是每个月要记得用支付宝充值就是了。
+
+哦还有的就是记得要从 PlayStation Music 那里购买 Spotify Premium…… 之前 PS+ 会员永久九折（只要不中断会员就可以一直享受九折）还是有点爽
+```
 
 # Premium
 

@@ -6,7 +6,7 @@ date: 2020-05-04 12:55:29
 tags:
 ---
 
-![](https://tva1.sinaimg.cn/large/007S8ZIlgy1gegayckavoj31be0qot9i.jpg)
+![](topic.jpg)
 
 Windows相关技巧。
 

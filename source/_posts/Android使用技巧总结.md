@@ -6,11 +6,281 @@ date: 2020-04-22 22:54:29
 tags:
 ---
 
-![](https://tva1.sinaimg.cn/large/007S8ZIlgy1gegao3bnq6j31800kvaax.jpg)
+![](topic.jpg)
 
 安卓使用技巧。
 
 <!-- more -->
+
+```
+APK安装器——SAI
+https://github.com/Aefyr/SAI
+
+
+
+
+termux
+https://github.com/termux/termux-app
+
+
+
+API Levels
+https://apilevels.com/
+
+
+Shizuku
+https://sspai.com/post/73294
+https://shizuku.rikka.app/zh-hans/
+https://www.xda-developers.com/shizuku/
+https://forum.xda-developers.com/t/exploit-shizuku-support-smt-shell-v2-0-get-a-system-shell-uid-1000-within-the-app-itself-and-write-your-own-system-app-with-an-api.4561879/
+https://www.reddit.com/r/fossdroid/comments/y8ewgf/a_list_of_apps_that_utilize_shizuku_for_elevated/
+https://github.com/BLuFeNiX/SMTShell
+https://forum.xda-developers.com/t/exploit-shizuku-support-smt-shell-v2-0-get-a-system-shell-uid-1000-within-the-app-itself-and-write-your-own-system-app-with-an-api.4561879/
+
+
+
+Fdroid
+https://depau.github.io/fdroid_shizuku_privileged_extension/fdroid/repo/
+https://f-droid.org/packages/de.marmaro.krt.ffupdater/
+https://gitlab.com/sunilpaulmathew/izzyondroid
+https://github.com/redsolver/skydroid
+
+
+
+
+双系统
+https://www.jianshu.com/p/0045d820f586
+https://zhuanlan.zhihu.com/p/48520404
+
+
+
+
+解压/打包boot.img
+https://www.whitewinterwolf.com/posts/2016/08/11/how-to-unpack-and-edit-android-boot-img/
+https://forum.xda-developers.com/t/guide-unpack-repack-boot-recovery-img-without-kitchen.2839670/
+https://github.com/cfig/Android_boot_image_editor
+https://github.com/GameTheory-/mktool
+https://github.com/pbatard/bootimg-tools
+https://stackoverflow.com/questions/57485080/stock-boot-img-not-booting-after-re-packing
+https://forum.xda-developers.com/t/tool-boot-img-tools-unpack-repack-ramdisk.2319018/
+
+
+
+临时 root？
+https://forum.xda-developers.com/t/how-do-i-temporarily-root-a-samsung-device-running-android-9-without-twrp-recovery.4421255/
+
+Magisk Root
+另外一个可能的方法：先刷入twrp
+可以用supersu来看是不是真的被root了
+Magisk修改的是boot分区
+进不了boot分区会卡在android的界面，进不了system分区会卡在开机logo界面
+
+救砖模块
+https://sspai.com/post/57320
+https://www.52pojie.cn/thread-1600094-1-1.html
+刷了救砖模块手机反而启动不了了。。。
+补救：
+https://topjohnwu.github.io/Magisk/faq.html
+ADB输命令，或者进Safe Mode（其实就是fastboot或者recovery）
+
+
+magisk不适用于android 9是一个普遍现象
+https://forum.xda-developers.com/t/why-magisk-doesnt-work-with-pie-roms.3848025/page-3
+https://forum.xda-developers.com/t/solved-i-do-have-root-access-but-magisk-is-not-installed.3861626/
+
+
+
+root的另外一个可能—kernelSU
+
+
+Mac上的odin——heimdall
+https://glassechidna.com.au/heimdall/#downloads
+https://bitbucket.org/benjamin_dobell/heimdall/downloads/heimdall-suite-1.4.0-mac.dmg
+可用homebrew安装，但在mac12上失败，因为它试图安装到系统盘
+https://formulae.brew.sh/cask/heimdall-suite
+
+Jodin基于heimdall，所以也不行
+
+
+
+
+
+
+
+
+fastboot命令大全
+https://www.jkmeng.cn/219.html
+
+
+
+
+
+
+
+Heimdall的用法
+https://forum.xda-developers.com/t/guide-how-to-install-use-heimdall-and-flash-back-to-stock.1113195/
+
+两个exe文件，heimhall是命令行，heimhall-frontend是用户界面方式
+替换driver的时候，如果没有samsung开头的设备，就选MSM8953（反正选错了驱动也装不上去的）
+可能需要用1.42版本修复ERROR: Failed to Send Data! 问题：
+https://www.reddit.com/r/LineageOS/comments/aymmy2/heimdall_error_failed_to_send_data/
+1.42 版本 windows：
+https://github.com/tothphu/heimdall_build
+
+步骤：
+1. 下载1.40和1.42的heimdall
+2. 用1.40下面的Drivers/zadig，更换MSM8953的驱动
+3. 命令行切换到1.42所在目录，运行以下命令：
+
+.\heimdall.exe detect
+.\heimdall.exe download-pit --output pit.pit --no-reboot
+.\heimdall.exe print-pit --no-reboot
+
+然后就可以将输出的分区表复制出来了，可以搜索一下相关分区
+主要分区是BOOT RECOVERY SYSTEM
+flash命令示例如下：
+
+https://forum.xda-developers.com/t/tool-heimdall-1-4-rc1.2071724/
+
+.\heimdall.exe flash --resume --BOOT boot.img
+
+
+
+
+
+
+
+
+
+
+
+组合固件（新bootloader+旧系统，可以在新bootloader跑旧系统）
+https://combinationfirmware.com/downloads/j3300zcu1aqh1/
+
+
+
+TWRP
+twrp不能挂载分区，应该是没有解密模块
+
+
+
+Google Play版微信
+https://www.coolapk.com/feed/45383246?shareKey=YThmNjhlNzAwMzZiNjQ0MzY5MTg~&shareFrom=com.coolapk.market_12.5.0
+
+
+
+
+Samsung J3（armv7架构）要用微信8.0.2
+可以在这里下载（在官网下的armv7装不了）
+https://www.apkmirror.com/apk/wechat-tencent/wechat/wechat-7-0-10-release/wechat-7-0-10-android-apk-download/
+
+
+
+
+
+Google Camera
+https://www.bilibili.com/read/cv8122208
+https://tecnoandroid.net/zh-TW/gcam-google-camera-xiaomi-huawei-samsung-oneplus-realme-redmi/
+https://forum.xda-developers.com/t/downgrade-android-8-to-7-binary-3.3891802/
+armv7可以用的版本（不过会闪退，闪退的话要更换维护版本）
+https://www.apkmirror.com/apk/google-inc/camera/camera-4-2-035-141213305-release/google-camera-4-2-035-141213305-2-android-apk-download/download/?key=2997286a3ea65b09c97e3be9755b361bde73e4e8
+
+
+降级bootloader（基本不可能，bootloader禁止从高SW REV刷到低SW REV）
+https://forum.xda-developers.com/t/downgrading-bootloader-in-samsung.4382225/
+https://www.reddit.com/r/AndroidQuestions/comments/nnlg6f/sw_rev_check_fail_bootloader_device_7_binary_2/
+https://forum.gsmhosting.com/vbb/f777/how-downgrade-binaryu8-binary-u1-2963482/
+https://forum.xda-developers.com/t/guide-skipping-kg-state-prenormal-on-oneui-android-pie-9-0.3911862/
+https://forum.xda-developers.com/t/is-it-possible-to-downgrade-s8-from-pie-to-oreo-sw-rev-error.4135167/
+https://forum.xda-developers.com/t/method-for-everyone-who-wants-to-downgrade-galaxy-s8-to-oreo-nougat.3946240/
+https://forum.xda-developers.com/t/can-i-downgrade-the-samsung-bootloader-from-sw-rev-3-to-2.3650483/
+从这里可以看到SW REV
+https://samfw.com/firmware/SM-J3300
+BIN/BINARY是什么
+https://samfw.com/blog/what-is-bit-binary-value
+只能刷BINARY VALUE比当前高或相同的固件，否则会报错
+假设value是4，那么可以这样来搜索root文件：j3300 u4 root
+
+
+
+Android看系统启动log需要root权限
+https://android.stackexchange.com/questions/26080/does-android-keep-a-log-of-when-it-boots
+https://www.xda-developers.com/how-to-take-logs-android/
+
+
+
+LineageOS
+需要适配的设备，才能源码编译
+
+
+
+解压lz4
+https://github.com/lz4/lz4
+
+
+
+
+
+J3300 Root
+
+用最新的magisk 26.1也不行
+
+这个也不行
+操作是先刷原版固件包，再刷它的AP包
+https://support.halabtech.com/index.php?a=downloads&b=file&id=318127
+https://drive.google.com/file/d/1uZRLjK4I2--h69aKJ51WS40vtqINJJ4k/view
+
+j3300 android 9 SAR 是 No，要装magisk 23 才能看到
+所以应该只传 boot.img 而不是整个 AP 包，但也还是不行，搞不懂
+
+
+
+尝试安装时保留AVB 2.0/dm-verity 和 保持强制加密
+https://zhuanlan.zhihu.com/p/143181151
+
+用AP包：
+都取消勾选：可启动，无Root
+都勾选：可启动，无Root
+只勾选保留AVB 2.0/dm-verity：可启动，无Root
+只勾选保持强制加密：可启动，无Root
+
+用img：
+都取消勾选：可启动，无Root
+都勾选：可启动，无Root
+只勾选保留AVB 2.0/dm-verity：可启动，无Root
+只勾选保持强制加密：可启动，无Root
+
+看日志可以看到
+E opjohnwu.magis: Not starting debugger since process cannot load the jdwp agent
+
+https://forum.xda-developers.com/t/magisk-general-support-discussion.3432382/page-1565
+
+I doubt that error has anything to do with it (it's got to do with debugging Java), but like I said earlier my log reading skills are limited. I can't see anything special in there, but it isn't certain that the problem manifests as an error. A full logcat without the heavy filtering might be necessary.
+
+https://forum.xda-developers.com/t/magisk-general-support-discussion.3432382/page-1566
+
+
+——原因很可能是升级了bootloader的版本，导致magisk的boot修补失效了
+——可能可以尝试magisk in recovery
+
+——更新（2022-10-6）
+magisk 25.2+boot.img或recovery.img都不行
+安装后用recovery的方式进入也不行
+
+https://github.com/topjohnwu/Magisk/issues/4495
+用这个也不行
+
+尝试22-25.2的版本均不行
+
+（如果想用22以下的，注意一进去的时候要马上按安装
+不然检测到有更新的话，就按不了了
+——但其实就算进去了也不行，会下载失败的）
+
+尝试以下方法，还是不行：
+https://trendyport.com/how-to-extract-boot-img-from-boot-img-iz4-and-root-samsung/?amp
+
+尝试刷入后取消自动重启，自行进入Recovery并重置系统，还是不行
+```
 
 # 基本知识
 

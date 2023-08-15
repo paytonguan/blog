@@ -7,7 +7,7 @@ tags:
 
 ---
 
-![](https://tva1.sinaimg.cn/large/007S8ZIlgy1gh62g6dppjj30xc0m8q5l.jpg)
+![](topic.jpg)
 
 Kindle的使用技巧总结。
 
