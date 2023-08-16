@@ -6,7 +6,7 @@ date: 2019-11-25 14:12:29
 tags:
 ---
 
-![](https://tva1.sinaimg.cn/large/006y8mN6ly1g9adg1f7usj31c00u0u15.jpg)
+![](topic.jpg)
 
 总结了一些MacOS的使用技巧，不断更新。
 

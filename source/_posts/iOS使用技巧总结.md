@@ -7,7 +7,7 @@ tags:
 
 ---
 
-![](https://tva1.sinaimg.cn/large/007S8ZIlgy1gega76v20ij315d0u045g.jpg)
+![](topic.jpg)
 
 共享应用、破解内购等。
 
@@ -2614,7 +2614,7 @@ Unc0ver版本与机型和系统的对应表格如下。
 
 #### 应用安装
 
-###### 普通安装
+##### 普通安装
 
 官网如下。
 
@@ -2637,7 +2637,7 @@ https://www.lanzous.com/icxyqaf?p
 https://github.com/LinusHenze/Fugu14
 ```
 
-###### 永不过期版本
+##### 永不过期版本
 
 仅支持iOS 14.0-15.4.1系统。
 
@@ -2669,15 +2669,15 @@ https://repo.getsileo.app
 
 #### 常见问题
 
-###### 进度条卡2或9
+##### 进度条卡2或9
 
 换其他签名版本的unc0ver尝试。
 
-###### 进度条卡25
+##### 进度条卡25
 
 unc0ver签名有问题，需重新进行安装unc0ver。
 
-###### 进度条卡31
+##### 进度条卡31
 
 unc0ver的广告，直接往下拉即可，不要点进去广告详情。
 
@@ -2691,7 +2691,7 @@ https://theodyssey.dev/
 
 #### 常见问题
 
-###### 第二次及以后出现无限黑屏/菊花并重启
+##### 第二次及以后出现无限黑屏/菊花并重启
 
 部分插件的冲突问题，导致引导RSD的时候出现卡滞。
 
@@ -2703,15 +2703,15 @@ https://theodyssey.dev/
 rm /.disable_tweakinject && killall backboardd
 ```
 
-###### 提示ERR_JAILBREAK
+##### 提示ERR_JAILBREAK
 
 打开Sileo并安装Odyssey Activation即可。或打开Fliza，找到根目录，删除.disable_tweakinject，然后点击/usr/bin/killall，在bash后面输入killall backboard，回车后自动注销。
 
-###### 卡在三分之一处
+##### 卡在三分之一处
 
 飞行模式不能下载数据，漏洞出现利用循环BUG。安装Odyssey以后，要重启设备后十五秒再点JailBreak。
 
-###### 卡在三分之三处
+##### 卡在三分之三处
 
 漏洞出现利用循环BUG，或执行刷新图标缓存即UICache时卡住。重启设备后十五秒再点JailBreak即可。
 

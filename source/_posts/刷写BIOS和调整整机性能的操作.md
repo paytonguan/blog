@@ -7,7 +7,7 @@ mathjax: true
 tags:
 ---
 
-![](https://tva1.sinaimg.cn/large/006y8mN6ly1g9baxry2kwj30sg0lctax.jpg)
+![](topic.jpg)
 
 对BIOS进行修改和刷写，可以解锁BIOS的其它功能。
 

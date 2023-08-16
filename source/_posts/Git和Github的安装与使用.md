@@ -6,7 +6,7 @@ date: 2019-11-25 17:50:29
 tags:
 ---
 
-![](https://tva1.sinaimg.cn/large/006y8mN6ly1g9asa3gs51j30go08caa5.jpg)
+![](topic.jpg)
 
 Git是一个常用的工具，与github一同使用。
 

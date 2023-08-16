@@ -6,7 +6,7 @@ date: 2019-06-02 17:01:00
 tags:
 ---
 
-![](https://i.loli.net/2019/06/03/5cf4e62026ce662099.jpg)
+![](topic.jpg)
 
 Google是一个强大的搜索引擎，本文主要介绍访问Google的方法。
 

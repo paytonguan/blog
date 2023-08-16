@@ -6,7 +6,7 @@ date: 2020-04-09 00:59:29
 tags:
 ---
 
-![](https://tva1.sinaimg.cn/large/007S8ZIlgy1gegb2ckiyij31c00u016c.jpg)
+![](topic.jpg)
 
 不同版本的Windows在现代电脑上安装方法并不相同。通过相关配置，可以运行较旧的Windows版本。
 

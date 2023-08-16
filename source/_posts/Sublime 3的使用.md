@@ -6,7 +6,7 @@ date: 2019-12-24 08:16:29
 tags:
 ---
 
-![](https://tva1.sinaimg.cn/large/006tNbRwly1ga8x7npp86j30v50u0h1g.jpg)
+![](topic.jpg)
 
 Sublime 3是一款好用的文本编辑软件。
 

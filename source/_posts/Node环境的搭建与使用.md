@@ -6,7 +6,7 @@ date: 2019-11-25 21:10:29
 tags:
 ---
 
-![](https://tva1.sinaimg.cn/large/006y8mN6ly1g9as31waswj31c00u013e.jpg)
+![](topic.jpg)
 
 Node是一个JavaScript运行环境，很多模块都需要依赖node。npm是随同node安装的包管理工具，node安装完成后，npm也安装完成。
 

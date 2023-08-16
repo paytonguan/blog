@@ -6,7 +6,7 @@ date: 2019-11-26 09:50:29
 tags:
 ---
 
-![](https://tva1.sinaimg.cn/large/006y8mN6ly1g9b69on8vmj30p10fj74q.jpg)
+![](topic.jpg)
 
 安装Linux系统，可以完成许多在Windows下无法完成的操作。
 
