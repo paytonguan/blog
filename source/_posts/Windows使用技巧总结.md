@@ -12,6 +12,11 @@ Windows相关技巧。
 
 <!-- more -->
 
+```
+Office 365 E5 账号申请及永久续期教程
+https://logi.im/script/permanently-keeping-an-office-e5-account.html
+```
+
 # 系统技巧
 
 ## 更换系统版本
@@ -1183,6 +1188,13 @@ http://excelbbx.net/PPT/Index.htm
 
 # 常用工具
 
+## 工具箱
+
+```
+# 太极
+https://ltribe.lanzout.com/iBikg0qpcl7c
+```
+
 ## 软件库
 
 ```
@@ -2018,4 +2030,10 @@ https://mp.weixin.qq.com/s/RwFi7XbGd0yqkqX7923iXw
 
 ```
 https://mp.weixin.qq.com/s/TG7X4AXm1qJACQmZTEg8mA
+```
+
+## 神作！吾爱大佬出品！
+
+```
+https://mp.weixin.qq.com/s/eY068-EDxmm8jFUoe-yESA
 ```

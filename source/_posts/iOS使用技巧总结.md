@@ -14,6 +14,10 @@ tags:
 <!-- more -->
 
 ```
+越狱
+https://ios.cfw.guide/
+
+
 重新登录appleID后会安装很多app
 
 原因应该是之前下他们的时候下到一半就没下，然后重新登录后会自动完成没下完的部分
@@ -41,6 +45,10 @@ https://github.com/mineek/sunst0rm
 
 iOS马甲包
 https://github.com/lightank/LTVestbagDemo
+
+
+Charles Proxy抓IPA包
+https://sspai.com/post/36122
 ```
 
 # 捷径
@@ -202,1576 +210,831 @@ https://jiejingku.net/category/shortcuts
 
 ### 声音
 
-#### 虾米音乐
-
 ```
+# 虾米音乐
 https://www.icloud.com/shortcuts/a3f2abecad1c4ed7b35d81e67c11069a
-```
 
-#### 网易云音乐
-
-```
+# 网易云音乐
 https://www.icloud.com/shortcuts/ce4f89e80cb7428ab82db298adec17dc
-```
 
-#### QQ音乐声控
-
-```
+# QQ音乐声控
 https://www.icloud.com/shortcuts/5741fbc3748d43d9a07fdd60ee0d8c5e
-```
 
-#### QQ音乐
-
-```
+# QQ音乐
 https://www.icloud.com/shortcuts/d16cb159b3d8447ebdd17390fe9813d2
-```
 
-#### 音乐全网下载
-
-```
+# 音乐全网下载
 https://www.icloud.com/shortcuts/be5bfd954e184cbbaccd0dae8189e818
-```
 
-#### 中国广播电台FM
-
-```
+# 中国广播电台FM
 https://www.icloud.com/shortcuts/4c40fb48bac94c24b6a0d9bfba181424
-```
 
-#### 录音
-
-```
+# 录音
 https://www.icloud.com/shortcuts/d114c56df5c44ffaa6492113037144c6
-```
 
-#### 百度语音合成
-
-```
+# 百度语音合成
 https://www.icloud.com/shortcuts/c051b5e6cab94d70926e3b9bbb29af36
-```
 
-#### 现在播放
-
-```
+# 现在播放
 https://workflow.is/workflows/3d954aa947474ed8b93d13f5b9d18625
-```
 
-#### 随机播放
-
-```
+# 随机播放
 https://workflow.is/workflows/7e2dab4135c24808b36a5384cde60b7d
-```
 
-#### 获取歌曲信息
-
-```
+# 获取歌曲信息
 https://workflow.is/workflows/70900391fdd6423ab2e6d925abf148cc
-```
 
-#### 添加一些歌曲
-
-```
+# 添加一些歌曲
 https://workflow.is/workflows/c5f6d0b19e7e4463af581c0011860443
-```
 
-#### 加入我的音乐
-
-```
+# 加入我的音乐
 https://workflow.is/workflows/5bf4367cdef74e3cbe5d4078bdac9882
-```
 
-#### 播放我的音乐
-
-```
+# 播放我的音乐
 https://workflow.is/workflows/39d58771c84c4a50af50b3a0e1f7bda7
-```
 
-#### Instagram分享音乐
-
-```
+# Instagram分享音乐
 https://workflow.is/workflows/402507226b8844258dee694d58b126e9
-```
 
-#### QQ音乐无损下载
-
-```
+# QQ音乐无损下载
 https://www.icloud.com/shortcuts/b2c51ca5e7324904aa5be02fae7c4045
-```
 
-#### 网易云音乐无损下载
-
-```
+# 网易云音乐无损下载
 https://www.icloud.com/shortcuts/a4e38fb4529d4cf4b43f844264fdecb2
-```
 
-#### 网易云助手
-
-```
+# 网易云助手
 https://www.icloud.com/shortcuts/d6ed49f0b11e418ba5c7797af719068f
-```
 
-#### 网易歌单工具箱
-
-```
+# 网易歌单工具箱
 https://www.icloud.com/shortcuts/8d71ed4b433d490aa6f5e71d2f2b4ea9
-```
 
-#### 音效盒子
-
-```
+# 音效盒子
 https://www.icloud.com/shortcuts/8f3593e814244e32a16bc821896f1b5e
-```
 
-#### 上朝网易云
-
-```
+# 上朝网易云
 https://www.icloud.com/shortcuts/401e94954a5a4a50951be0f2cf11372c
 ```
 
 ### 图片
 
-#### 应用图像至相机胶卷
-
 ```
+# 应用图像至相机胶卷
 https://workflow.is/workflows/613a8f5e6e714cc9aecaa4e76d981248
-```
 
-#### 保存照片
-
-```
+# 保存照片
 https://workflow.is/workflows/a6487b004917494b88fe0fc01f0ffbc6
-```
 
-#### 分享最新照片
-
-```
+# 分享最新照片
 https://workflow.is/workflows/5f9c56bfe6de447598a6d0440697c470
-```
 
-#### 拼接图像
-
-```
+# 拼接图像
 https://www.icloud.com/shortcuts/7a4129acb8df4f48b79ee930f1ce3d1f
-```
 
-#### 拼接长图
-
-```
+# 拼接长图
 https://www.icloud.com/shortcuts/07e7003f74b74216920b647eeb50ca17
-```
 
-#### GIF制作转换
-
-```
+# GIF制作转换
 https://www.icloud.com/shortcuts/f810ee7228c244ed9707c3dbbcad5ef1
-```
 
-#### 水印相机
-
-```
+# 水印相机
 https://www.icloud.com/shortcuts/65774ba01e514320b2640c40463a4cea
-```
 
-#### 位置查找
-
-以图查路线、拍照共享、清除照片元数据。
-
-```
+# 位置查找
+# 以图查路线、拍照共享、清除照片元数据
 https://www.icloud.com/shortcuts/ae804942349242ac98646c1c77c9aa7a
-```
 
-#### 视频调速
-
-```
+# 视频调速
 https://www.icloud.com/shortcuts/799955de8e204b95b63c305268a168dc
-```
 
-#### 以图搜图
-
-```
+# 以图搜图
 https://www.icloud.com/shortcuts/59d6bfaae10a465da7366127166f5639
-```
 
-#### 九宫格
-
-```
+# 九宫格
 https://www.icloud.com/shortcuts/8f8671ef0bff4545b3233d4415092e10
-```
 
-#### 传图
-
-```
+# 传图
 https://www.icloud.com/shortcuts/2c04bce6e62b4a398df88c8acaff3428
-```
 
-#### 删改拼图片
-
-```
+# 删改拼图片
 https://workflow.is/workflows/41cfefdd0eca448391ef78186555f221
-```
 
-#### 截图加壳
-
-```
+# 截图加壳
 https://www.icloud.com/shortcuts/e406b46a379548a69a1af503aeca37f4
 https://www.icloud.com/shortcuts/2e6b1c0a0a114014812bf26897b5a2aa
 https://www.icloud.com/shortcuts/7edc8f86d6ed4a96a43acacee36392de
-```
 
-#### 删除多张图片
-
-```
+# 删除多张图片
 https://workflow.is/workflows/c545d9c33b0f40d8a80712b282a19eb3
-```
 
-#### 调整照片
-
-调整原始照片，然后删除原稿。
-
-```
+# 调整照片
+# 调整原始照片，然后删除原稿
 https://workflow.is/workflows/014c0e9d263247979bc6a1c9894e07e4
-```
 
-
-
-
-
-
-#### 爬图片
-
-```
+# 爬图片
 https://www.icloud.com/shortcuts/65ea0d09069545cfa9abd78839763146
-```
 
-#### Bing壁纸
-
-```
+# Bing壁纸
 https://www.icloud.com/shortcuts/6d63fb492b094483aa18ce65b921ca0d
-```
 
-#### 图标与图链
-
-```
+# 图标与图链
 https://www.icloud.com/shortcuts/608014dbe70e45588653193fd8b1a4b9
 ```
 
 ### 视频
 
-#### 短视频去水印
-
 ```
+# 短视频去水印
 https://www.icloud.com/shortcuts/cf5f76704f9444c9aa17e2a2f85b4f5a
-```
 
-#### 拍摄GIF
-
-```
+# 拍摄GIF
 https://www.icloud.com/shortcuts/0d77fb02b4d64b17858db35b5008d8c0
-```
 
-#### 抖音去水印
-
-```
+# 抖音去水印
 https://www.icloud.com/shortcuts/c22783212e7a4918acf377546431fbeb
-```
 
-#### 下载Tumblr视频
-
-```
+# 下载Tumblr视频
 https://workflow.is/workflows/051ddcc30c984d47afe7b1fde9a403e7
 https://workflow.is/workflows/f8656cbb90524dffa1fe2eba8975946e
 https://workflow.is/workflows/087a0abf12c049dd9ab256afaec790c0
-```
 
-#### 新浪微博视频
-
-```
+# 新浪微博视频
 https://workflow.is/workflows/fd7fe0b7548046e689e9776b2182a8b1
-```
 
-#### 下载Twitter的GIF
-
-```
+# 下载Twitter的GIF
 https://workflow.is/workflows/aa9821c4bce44b6f8febcbda6245c1f0
-```
 
-#### 下载Youtube视频
-
-```
+# 下载Youtube视频
 https://workflow.is/workflows/ec284f18720c45e39ff31128e6d42602
 https://workflow.is/workflows/73971870942c49da96cae6a490aea8e0
 https://workflow.is/workflows/617578d73f8244a5afed2a1665c8e320
-```
 
-#### 电视直播
-
-```
+# 电视直播
 https://www.icloud.com/shortcuts/0f9322e7b1244db68eb9a61d06dd757f
 https://www.icloud.com/shortcuts/9a549e208d544532892f0fcc90dfaf8e
-```
 
-#### SKY电影
-
-```
+# SKY电影
 https://www.icloud.com/shortcuts/f29d4a33f2734b3b8f790ea5d591fd1e
-```
 
-#### 语音点播MV
-
-```
+# 语音点播MV
 https://www.icloud.com/shortcuts/d45086dbc5e042129ae2e7601cb41b5c
-```
 
-#### 手机电视
-
-```
+# 手机电视
 https://www.icloud.com/shortcuts/0695a29bd0224b7f84e9b696adeb4330
-```
 
-#### 在线电影
-
-```
+# 在线电影
 https://www.icloud.com/shortcuts/7f8220d6d2264fbb811c9f6add1fbe47
-```
 
-#### 香港电视直播
-
-```
+# 香港电视直播
 https://www.icloud.com/shortcuts/01e2ed40f598489393769d9707c8c248
-```
 
-#### 港澳台直播
-
-```
+# 港澳台直播
 https://www.icloud.com/shortcuts/653c5caaf997435788da1090e6b06406
-```
 
-#### 唐人影视
-
-```
+# 唐人影视
 https://www.icloud.com/shortcuts/022baf8d47bb449ab858bbcabcf408af
-```
 
-#### 电视节目选播
-
-```
+# 电视节目选播
 https://www.icloud.com/shortcuts/dff26dbe75df442f8e82b61ba06963ac
-```
 
-#### 翡翠台直播
-
-```
+# 翡翠台直播
 https://www.icloud.com/shortcuts/be2e98653ffb467dbc54acb45105c1b4
-```
 
-#### icdrama
-
-```
+# icdrama
 https://www.icloud.com/shortcuts/362700ca27a04a9f9797d4b28c11b63a
-```
 
-#### 小新在线影视
-
-```
+# 小新在线影视
 https://www.icloud.com/shortcuts/b77d3661dacd4651bcddb8cee863b1d1
-```
 
-#### 全能音视频下载
-
-```
+# 全能音视频下载
 https://www.icloud.com/shortcuts/b6f75b050fa84b49ae0ac8173fe976a7
-```
 
-#### 抖音无水印视频
-
-```
+# 抖音无水印视频
 https://www.icloud.com/shortcuts/b7698896dc8a4057b8174e989ec21198
 https://www.icloud.com/shortcuts/fa885e093ec443b2807040f2b3ad2bfd
-```
 
-#### 抖音音频下载
-
-```
+# 抖音音频下载
 https://www.icloud.com/shortcuts/e00730220f614ad193d69b5a75313dc3
-```
 
-#### 快手无水印下载
-
-```
+# 快手无水印下载
 https://www.icloud.com/shortcuts/b5221374c6024181ae19f7f759575035
 https://www.icloud.com/shortcuts/118a2c455bb54406979071a8942c556d
-```
 
-#### 万能视频下载
-
-```
+# 万能视频下载
 https://www.icloud.com/shortcuts/939dfd29e1d14800a00bc86a252ca84f
-```
 
-#### 电影动漫资源搜索
-
-```
+# 电影动漫资源搜索
 https://www.icloud.com/shortcuts/e1e9401dcb4340bd96d463cf194ebbbf
-```
 
-#### 全能视频VIP
-
-```
+# 全能视频VIP
 https://www.icloud.com/shortcuts/4a39135fc0284377a1236cbbb0bac53c
-```
 
-#### Viu TV99频道
-
-```
+# Viu TV99频道
 https://www.icloud.com/shortcuts/2e78d444d706470e95b3112557bbd13b
-```
 
-#### Youtube保存到任意App
-
-```
+# Youtube保存到任意App
 https://workflow.is/workflows/01fdf6b4a30d43fcb1ae5f01763b4abc
-```
 
-#### 贴吧视频下载
-
-```
+# 贴吧视频下载
 https://www.icloud.com/shortcuts/00975db818f846efb50df1489213b96e
-```
 
-#### 火山短视频去水印下载
-
-```
+# 火山短视频去水印下载
 https://www.icloud.com/shortcuts/6cf84eae2eba4717ae75ae10cdd3f722
-```
 
-#### 微博秒拍视频下载
-
-```
+# 微博秒拍视频下载
 https://www.icloud.com/shortcuts/e09a96b7e8bc4913bf8708f57cffce9f
-```
 
-#### Twitter视频下载
-
-```
+# Twitter视频下载
 https://www.icloud.com/shortcuts/0a9451a9f19a4a5c89afed57ef6fd9d9
 https://workflow.is/workflows/75562e41b6c74540903786ae9b6f1c50
-```
 
-#### 全网VIP视频解析
-
-```
+# 全网VIP视频解析
 https://www.icloud.com/shortcuts/8a10557abf924d5dbdaaef5e65248593
 https://www.icloud.com/shortcuts/58add5dba526413c862ac90d7cada939
-```
 
-#### 照片视频-GIF互转
-
-```
+# 照片视频-GIF互转
 https://www.icloud.com/shortcuts/6041338fea174bacb386b7b14446fa6f
 https://www.icloud.com/shortcuts/114d8f7e8fde44408c502723187f6a6e
-```
 
-#### 从视频提取音频
-
-```
+# 从视频提取音频
 https://www.icloud.com/shortcuts/5dd917b032e14d838554ea838dd6f978
-```
 
-#### QQ空间视频下载
-
-```
+# QQ空间视频下载
 https://www.icloud.com/shortcuts/da27ac884dc04dd0accb75eb19e27ccc
-```
 
-#### 获取B站封面视频
-
-```
+# 获取B站封面视频
 https://www.icloud.com/shortcuts/7d20ebb35d6441fcb9e0f0f6f225cbb41
-```
 
-#### bilibili视频下载
-
-```
+# bilibili视频下载
 https://www.icloud.com/shortcuts/7cfaa2d46b624e5093f9e13bded09ffc
 ```
 
-
-
-
-
 ### 词典
 
-#### 词典聚合
-
 ```
+# 词典聚合
 https://www.icloud.com/shortcuts/b40fa4ed278846e7b860674066b22c72
-```
 
-#### 成语词典
-
-```
+# 成语词典
 https://www.icloud.com/shortcuts/5e8af02dd0c04703a65f5d0285d36888
-```
 
-#### 新华字典
-
-```
+# 新华字典
 https://www.icloud.com/shortcuts/2a998ba59748437f8e8dd680c6fd67d3
 ```
 
 ### 剪贴板
 
-#### 复制到剪贴板
-
 ```
+# 复制到剪贴板
 https://workflow.is/workflows/3242da310c4a45ec8270a09e49e6aa37
-```
 
-#### 剪贴板翻译
-
-```
+# 剪贴板翻译
 https://workflow.is/workflows/5de0062c54c041a386be048dd84fa361
-```
 
-#### 剪切板列表
-
-```
+# 剪切板列表
 https://workflow.is/workflows/db3321f2eec84c4eb2caf29a6df81286
 ```
 
 ### 搜索
 
-#### 自定义搜索
-
 ```
+# 自定义搜索
 https://workflow.is/workflows/ac4b4abac0a2490e872b7134f5f9ca8a
-```
 
-#### 谷歌高级搜索
-
-```
+# 谷歌高级搜索
 https://workflow.is/workflows/6e7e0853ae664c5ea7a0bae7dad6941e
-```
 
-#### 搜索电话号码
-
-```
+# 搜索电话号码
 https://workflow.is/workflows/aa509941b57d48d4b51a0c2b1c06cf8c
-```
 
-#### 你不会自己百度么
-
-```
+# 你不会自己百度么
 https://www.icloud.com/shortcuts/0b23911b67b341188f663c26ce737440
-```
 
-#### 快捷百度搜索
-
-```
+# 快捷百度搜索
 https://www.icloud.com/shortcuts/030b88dff7bf40eba72fb9e2afb63dfb
-```
 
-
-#### 小草搜索
-
-```
+# 小草搜索
 https://www.icloud.com/shortcuts/dbec7cf292eb4601a7c9b35c51884146
 ```
 
 
 ### 天气
 
-#### 墨迹天气
-
 ```
+# 墨迹天气
 https://www.icloud.com/shortcuts/f038cb7c58934a94aca2b4610ee5f447
-```
 
-#### 墨迹天气实景图
-
-```
+# 墨迹天气实景图
 https://www.icloud.com/shortcuts/1ba7cca9510f4aa7910f6c2bf29e06f9
-```
 
-#### 彩云天气
-
-```
+# 彩云天气
 https://www.icloud.com/shortcuts/09661308cc0b455e96c5ee660d9946e3
-```
 
-#### 天气预报
-
-```
+# 天气预报
 https://www.icloud.com/shortcuts/274df58cd5354f6eb9630da30fdfba3e
-```
 
-#### 报时语音天气
-
-```
+# 报时语音天气
 https://www.icloud.com/shortcuts/298247c77d364f7b828c18cb2e05b9fe
-```
 
-#### 带背景音乐天气预报
-
-```
+# 带背景音乐天气预报
 https://www.icloud.com/shortcuts/31149463f4ca4df68148813331ea9603
-```
 
-#### 今天的天气
-
-```
+# 今天的天气
 https://workflow.is/workflows/cf6db9a3c90c4bc7adec27f739480937
 ```
 
 
 ### 社交
 
-#### Instagram全类型下载
-
 ```
+# Instagram全类型下载
 https://www.icloud.com/shortcuts/7f4f267f7b6f4f3299206d43cde5c4eb
 https://workflow.is/workflows/3a4f22ce8e794c7489a059224f3bc0b0
-```
 
-#### Instagram保存图片
-
-```
+# Instagram保存图片
 https://workflow.is/workflows/73aa53dfae9c45729befb49cdc6863f0
-```
 
-#### Tumblr解析下载
-
-```
+# Tumblr解析下载
 https://www.icloud.com/shortcuts/400c06379b014e08be927162689f6047
 https://www.icloud.com/shortcuts/6ac1b99b9e8340799d8b0c737cd0f314
-```
 
-#### Tumblr保存到相册
-
-```
+# Tumblr保存到相册
 https://workflow.is/workflows/897924d6858d47a4a6737733517a36eb
-```
 
-#### 微博热搜榜
-
-```
+# 微博热搜榜
 https://www.icloud.com/shortcuts/13c9b1f7cdbc434bbec2b28e577746ce
-```
 
-#### 新浪微博
-
-```
+# 新浪微博
 https://www.icloud.com/shortcuts/9994a3fdc685479d9b94fb6445a30536
-```
 
-#### tumblr展开网址
-
-```
+# tumblr展开网址
 https://workflow.is/workflows/62a9534d3ee1467080cd4136578d3d35
-```
 
-
-
-
-
-
-
-
-
-#### 即刻视频下载
-
-```
+# 即刻视频下载
 https://www.icloud.com/shortcuts/d6637e8536254a46ba81a09fabbad8f9
-```
 
-#### 即刻图片下载
-
-```
+# 即刻图片下载
 https://www.icloud.com/shortcuts/0f74a2c6ffbd4a59856612725ca22dc6
 ```
 
 ### 资源搜索与下载
 
-#### JS直链下载
-
-自定义JS直链下载列表，可选择下载全部或挑选部分进行下载。理论上可以下载任何文本文件，如conf、list、md等。
-
-下载文件保存在iCoud Drive/shortcuts/elecV2JS文件夹。每次运行都会清空该目录的旧文件。
-
 ```
+# JS直链下载
+# 自定义JS直链下载列表，可选择下载全部或挑选部分进行下载，理论上可以下载任何文本文件，如conf、list、md等
+# 下载文件保存在iCoud Drive/shortcuts/elecV2JS文件夹，每次运行都会清空该目录的旧文件
 https://www.icloud.com/shortcuts/50d7d8576dd74f7685811502ff72c078
-```
 
-#### 高清影视种子下载
-
-```
+# 高清影视种子下载
 https://www.icloud.com/shortcuts/c5672516fa5645918abc48577a30efd6
-```
 
-#### 迅雷安装器
-
-```
+# 迅雷安装器
 https://www.icloud.com/shortcuts/e7c0ad75a9bf46bf889ba4be5463a7de
-```
 
-#### 新磁力搜索
-
-```
+# 新磁力搜索
 https://www.icloud.com/shortcuts/9a68ed9c6ea54654a4e7b8918b426855
-```
 
-#### 小新下载器
-
-```
+# 小新下载器
 https://www.icloud.com/shortcuts/90d5942429f14f5095eb7a0664d7918b
-```
 
-#### 新磁力搜索
-
-```
+# 新磁力搜索
 https://www.icloud.com/shortcuts/9a68ed9c6ea54654a4e7b8918b426855
 ```
-
 
 ### 电商
 
-#### 京东签到
-
-下载stream并打开抓包，然后在Safari输入以下链接并登录京东账号。
-
 ```
-https://bean.m.jd.com
-```
-
-刷新网页后返回stream并停止抓包。点击抓包历史，找到带有plogin开头的链接并点击，再选择请求，找到自己的cookie并复制。安装以下捷径后运行，输入刚刚复制的cookie，即可完成一键签到。
-
-```
+# 京东签到
+# 下载stream并打开抓包，然后在Safari输入https://bean.m.jd.com并登录京东账号
+# 刷新网页后返回stream并停止抓包。点击抓包历史，找到带有plogin开头的链接并点击，再选择请求，找到自己的cookie并复制。安装以下捷径后运行，输入刚刚复制的cookie，即可完成一键签到
 https://www.icloud.com/shortcuts/35be01753adc49409a334464cb4c7470
-```
 
-#### 双十一淘宝自动养猫
-
-```
+# 双十一淘宝自动养猫
 https://www.icloud.com/shortcuts/db359887fea14a61b0f0cd7c43642e4f
-```
 
-#### 超级抢购助手
-
-```
+# 超级抢购助手
 https://www.icloud.com/shortcuts/dca53a0ff3704f22badb7009b828b495
-```
 
-#### 淘宝语音搜索
-
-```
+# 淘宝语音搜索
 https://www.icloud.com/shortcuts/ba79d6ae5a1f455eb296cc314cf82447
-```
 
-#### 淘宝语音搜索
-
-```
+# 淘宝语音搜索
 https://www.icloud.com/shortcuts/ba79d6ae5a1f455eb296cc314cf82447
-```
 
-
-
-
-
-
-
-#### 网购历史价格查询
-
-```
+# 网购历史价格查询
 https://www.icloud.com/shortcuts/e2c2777962384ffbbff3f04f2874ef67
 ```
 
 ### 电子支付
 
-#### 支付宝添加信用卡
-
 ```
+# 支付宝添加信用卡
 https://www.icloud.com/shortcuts/4aef0930744d461c92333e1afaa9accf
-```
 
-#### 三合一收款二维码生成
-
-```
+# 三合一收款二维码生成
 https://www.icloud.com/shortcuts/319f80622c234de8b811b7ba2d5a7228
-```
 
-#### 支付宝打赏
-
-```
+# 支付宝打赏
 https://www.icloud.com/shortcuts/bfe71390fe6a4d178d1f3f1a375765b7
-```
 
-#### 支付助手
-
-扫一扫、微信扫码、微信收款、支付宝扫码、Apple Pay、AA付款、查快递、蚂蚁森林、蚂蚁庄园、彩票、股票、运动、淘票票、乘车码、生活缴费、火车票等。
-
-```
+# 支付助手
+# 扫一扫、微信扫码、微信收款、支付宝扫码、Apple Pay、AA付款、查快递、蚂蚁森林、蚂蚁庄园、彩票、股票、运动、淘票票、乘车码、生活缴费、火车票等
 https://www.icloud.com/shortcuts/45c64b77d773411485eb1c697f36cd8c
-```
 
-#### 支付宝红包
-
-```
+# 支付宝红包
 https://www.icloud.com/shortcuts/abeb70e152f94a27871bb93abcc5475f
 ```
 
-
-
-
-
-
 ### 翻墙
 
-#### 批量节点获取
-
 ```
+# 批量节点获取
 https://www.icloud.com/shortcuts/69caa3c45c7e48b5b6f3da98cdaeeac7
-```
 
-#### 更新surge/shadowrocket主配置
-
-```
+# 更新surge/shadowrocket主配置
 https://workflow.is/workflows/55ecb14722f94d7c8c44ce3ce24d81c8
-```
 
-#### 小火箭
-
-```
+# 小火箭
 https://www.icloud.com/shortcuts/8e3d0a5482004b8ca0f7c65301fdc936
 ```
 
-
-
 ### APP
 
-#### App Store商店切换
-
 ```
+# App Store商店切换
 https://www.icloud.com/shortcuts/2910a1fd97404f149509cfd5612a046d
 https://www.icloud.com/shortcuts/015c63d4358142389f1c723b7475406d
-```
 
-#### App Store Region
-
-```
+# App Store Region
 https://www.icloud.com/shortcuts/5bb33439f8544ea4b9e708dd1b7a81ec
-```
 
-#### 限免软件
-
-```
+# 限免软件
 https://www.icloud.com/shortcuts/0e5e70111c2f49a9bc1f10629c6ca74e
-```
 
-#### 苹果应用安装器
-
-```
+# 苹果应用安装器
 https://www.icloud.com/shortcuts/0e2e25d73a7b4af0b6579158cf336dde
-```
 
-#### 查看app信息
-
-```
+# 查看app信息
 https://workflow.is/workflows/14f9deb92d4e42c4b286571b40533061
 ```
 
 ### 短链接与二维码
 
-#### 长短链接转换
-
 ```
+# 长短链接转换
 https://www.icloud.com/shortcuts/22a07d8aeff24a4d9f977e1c9d5d9d0f
-```
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-#### iCloud外链获取器
 
-```
+# iCloud外链获取器
 https://www.icloud.com/shortcuts/c45f40eca0ba4a06a48fb99da71df047
-```
 
-#### 短链接生成器
-
-```
+# 短链接生成器
 https://www.icloud.com/shortcuts/0c2ff4b4193b42779c192818c1a1e492
-```
 
-#### 二维码生成器
-
-```
+# 二维码生成器
 https://www.icloud.com/shortcuts/1a8fb9d0760e40ff94ae374d2cdff497
-```
 
-#### 制作/扫描二维码
-
-```
+# 制作/扫描二维码
 https://www.icloud.com/shortcuts/52490640004c4fc4b2ebfd038eaf651c
 https://workflow.is/workflows/3ed9b9ec4cf3463a9df0af7fca642e0b
-```
 
-#### 二维码识别器
-
-```
+# 二维码识别器
 https://www.icloud.com/shortcuts/ff1992922a504d8797821da55f384b67
-```
 
-#### 短链接
-
-```
+# 短链接
 https://www.icloud.com/shortcuts/23ea80da4460403082b33c82bb41b5ad
-```
 
-#### Shorten Link
-
-一款短链接聚合工具，支持国内外优质短链接平台获取。
-
-```
+# Shorten Link
+# 一款短链接聚合工具，支持国内外优质短链接平台获取
 https://www.icloud.com/shortcuts/e34d06d582884b19a32e4ecf5b9660e1
-```
 
-#### WIFI二维码
-
-```
+# WIFI二维码
 https://www.icloud.com/shortcuts/59b1018835d94018ba6097ff0462cda9
-```
 
-#### 万能扫码
-
-```
+# 万能扫码
 https://www.icloud.com/shortcuts/e247aa760193472db8588804a8ea76d0
-```
 
-
-
-
-
-
-
-
-#### 长短链接转换
-
-```
+# 长短链接转换
 https://www.icloud.com/shortcuts/22a07d8aeff24a4d9f977e1c9d5d9d0f
 ```
-
-
-
 
 ### 备份
 
-#### 一键备份所有捷径
-
 ```
+# 一键备份所有捷径
 https://www.icloud.com/shortcuts/6fbf11bce41b418396bf60ffaa5c14f3
-```
 
-#### AB Backup备份
-
-```
+# AB Backup备份
 https://workflow.is/workflows/3db6bdcda3104b3b9bbaea8ddf655670
-```
 
-#### 备份workflow工作流
-
-```
+# 备份workflow工作流
 https://workflow.is/workflows/c5421ebe19bd4bf885da8b74d2cbaded
 ```
 
 ### 工具箱
 
-#### 苹果工具箱
-
 ```
+# 苹果工具箱
 https://www.icloud.com/shortcuts/a7228c50afd94f2dbab9d160a8b5d50d
-```
 
-#### 小新工具箱
-
-```
+# 小新工具箱
 https://www.icloud.com/shortcuts/dad33a5b449f45ee98c60d528d1fd878
 ```
 
 ### 翻译
 
-#### 英译中Pro
-
 ```
+# 英译中Pro
 https://www.icloud.com/shortcuts/22805b54bdec4951bb36162e1f93c9bc
-```
 
-
-#### 网页翻译
-
-```
+# 网页翻译
 https://www.icloud.com/shortcuts/4c8839065dc44dda9ca22ecfc329cb18
-```
 
-#### 翻译
-
-```
+# 翻译
 https://workflow.is/workflows/a51df78f80414edf8469727f892d662d
 ```
 
-
 ### OCR与文字语音转换
 
-#### 百度语音合成
-
 ```
+# 百度语音合成
 https://www.icloud.com/shortcuts/c051b5e6cab94d70926e3b9bbb29af36
-```
 
-#### 文本转语音播放
-
-```
+# 文本转语音播放
 https://www.icloud.com/shortcuts/5f95555da1454ce3a8a99f3f689410ee
-```
 
-
-#### 图片文字识别
-
-```
+# 图片文字识别
 https://www.icloud.com/shortcuts/8aec6f5f73a54ecbab895bc468c60535
 ```
 
 ### 系统
 
-#### 群发短信
-
 ```
+# 群发短信
 https://www.icloud.com/shortcuts/587fb88a053f4a76a2a0594c0ca299f1
-```
 
-#### 查询未知号码来电信息
-
-```
+# 查询未知号码来电信息
 https://workflow.is/workflows/95b02bb18b2e4cfba06919034929a4d9
-```
 
-#### 信息照片导航
-
-```
+# 信息照片导航
 https://workflow.is/workflows/84daad7aa32f488f842356a246087a5b
-```
 
-#### 手机快捷设置
-
-```
+# 手机快捷设置
 https://workflow.is/workflows/f1e96f0ed0494d3288dc69c9083deab7
-```
 
-#### 信息翻译发送
-
-```
+# 信息翻译发送
 https://workflow.is/workflows/f1d0b3a07ecc47ecbb963651740f7b74
-```
 
-#### 提醒事项助手
-
-```
+# 提醒事项助手
 https://www.icloud.com/shortcuts/38a51eafd83440dc9dcbe401d86c8706
-```
 
-#### 系统开关设置
-
-```
+# 系统开关设置
 https://www.icloud.com/shortcuts/253fac20d197429292313f3bf3f104f3
-```
 
-#### 通知中心翻页
-
-```
+# 通知中心翻页
 https://workflow.is/workflows/7afbf6fa09204e5e837d52cab41f0497
-```
 
-#### 换铃声
-
-```
+# 换铃声
 https://www.icloud.com/shortcuts/9928bcde86fe45ada142fac6c82e6441
-```
 
-#### WIFI开关
-
-```
+# WIFI开关
 https://www.icloud.com/shortcuts/b63662901aa54a37bf791a9b9a638c3d
-```
 
-#### 一键重启
-
-```
+# 一键重启
 https://www.icloud.com/shortcuts/02fb4b468e534b569b14b22d9d0fd8bd
-```
 
-#### 低功耗模式
-
-```
+# 低功耗模式
 https://workflow.is/workflows/640ae7eb22f143a093c77215a6e373e2
-```
 
-#### 电池
-
-```
+# 电池
 https://workflow.is/workflows/febeed3ed07a4c78b9e77c2f48136a2a
 ```
 
-
 ### 签到
 
-#### 全网
-
 ```
+# 全网
 https://www.icloud.com/shortcuts/91af4b2564134654ad2dbc7bce54bbdf
-```
 
-#### 贴吧
-
-```
+# 贴吧
 https://www.icloud.com/shortcuts/5fd43b4ed6664fa4bcbf85bd2c18a408
-```
 
-#### 淘宝
-
-```
+# 淘宝
 https://www.icloud.com/shortcuts/d7286cd634544d0ab8ecaf4bd7ad376d
 ```
 
 ### 其它
 
-#### 网速测试
-
 ```
+# 网速测试
 https://www.icloud.com/shortcuts/0e5a81cb1076414680fd4f1a2d0c9094
-```
 
-
-#### 谷歌网盘转存助手
-
-```
+# 谷歌网盘转存助手
 https://www.icloud.com/shortcuts/51cdfaff6fd44ac295a8a34bd67e3da8
-```
 
-#### 健康码
-
-```
+# 健康码
 https://www.icloud.com/shortcuts/7b3a4c33ef374b7f8ef7eddcf4867234
-```
 
-#### 分享当前Wi-Fi
-
-```
+# 分享当前Wi-Fi
 https://www.icloud.com/shortcuts/926073374aa9498999756b17fadd9d28
-```
 
-#### 网盘搜
-
-```
+# 网盘搜
 https://www.icloud.com/shortcuts/feb916abb943481caa6a61335c2b224b
-```
 
-#### 抽奖工具
-
-```
+# 抽奖工具
 https://www.icloud.com/shortcuts/9dc04fa400f248ac9608e6d138a07de3
-```
 
-#### 人脸识别
-
-```
+# 人脸识别
 https://www.icloud.com/shortcuts/67175ef09c1d4e7da2d77d476506740f
-```
 
-#### 网络工具
-
-```
+# 网络工具
 https://www.icloud.com/shortcuts/74b26667ec774e6fbbfbe97c8aeff4e9
-```
 
-#### 保存到iCloud
-
-```
+# 保存到iCloud
 https://workflow.is/workflows/08f3cc0e184844339eb2f5caa58a316b
-```
 
-#### 低消耗
-
-```
+# 低消耗
 https://www.icloud.com/shortcuts/2d1a0e792358405fbb2462572962e6cd
-```
 
-#### 共享单车
-
-```
+# 共享单车
 https://www.icloud.com/shortcuts/259e77b79b884b0eb3b554d15672965f
-```
 
-#### 数羊
-
-```
+# 数羊
 https://www.icloud.com/shortcuts/9a9967b93caf4942b109d2efd59abbb3
-```
 
-#### 手机亮度调节
-
-```
+# 手机亮度调节
 https://www.icloud.com/shortcuts/1a1c0b2192d64550a4352eec7b8a1bfa
-```
 
-#### 压缩/解压
-
-```
+# 压缩/解压
 https://www.icloud.com/shortcuts/4a352c743eae47f7bda758429109773c
-```
 
-#### 程序改名加锁
-
-```
+# 程序改名加锁
 https://www.icloud.com/shortcuts/0c73f53b09a24ad88f9eeeb315794b81
-```
 
-#### 闪瞎你的眼
-
-```
+# 闪瞎你的眼
 https://www.icloud.com/shortcuts/225f35dab5c84a96b101bd6e3b4d3d1a
-```
 
-#### 修改步数
-
-QQ、微信、支付宝步数不能改变。
-
-```
+# 修改步数
+# QQ、微信、支付宝步数不能改变
 https://www.icloud.com/shortcuts/cc759611240742cfb48e9cb83fafb806
-```
-
-以下捷径可用于微信、支付宝。需要下载小米运动APP，然后下载捷径后将捷径中的配置修改为自己的账号和密码。
-
-```
+# 以下捷径可用于微信、支付宝。需要下载小米运动APP，然后下载捷径后将捷径中的配置修改为自己的账号和密码。
 https://www.icloud.com/shortcuts/ddc53a9e14d8415387a36a4cc46e3ad2
-```
 
-#### 附近免费WIFI
-
-```
+# 附近免费WIFI
 https://www.icloud.com/shortcuts/81c787aacc9d41c4a33410426f43ed4b
-```
 
-#### 在线福利6.1
-
-```
+# 在线福利6.1
 https://www.icloud.com/shortcuts/7bf3abd752fe4f62a74a6c3a0d08e4a4
-```
 
-#### 早上好
-
-```
+# 早上好
 https://www.icloud.com/shortcuts/2e673487577c4a45af9047e83ab276eb
-```
 
-#### 晚安
-
-```
+# 晚安
 https://www.icloud.com/shortcuts/de7f95054f414776b0aa93c91bd06604
-```
 
-#### 历史上的今天
-
-```
+# 历史上的今天
 https://www.icloud.com/shortcuts/eedc97baa8ec4c929312154af9a42ba3
-```
 
-
-
-
-#### 保存网页为pdf到ibook
-
-```
+# 保存网页为pdf到ibook
 https://workflow.is/workflows/2027271452ce4712853838f43550d326
-```
 
-#### 任天堂红白机小游戏
-
-```
+# 任天堂红白机小游戏
 https://www.icloud.com/shortcuts/61facc44bd0f4f16b7c13468cf08a4e3
-```
 
-#### 实时公交
-
-```
+# 实时公交
 https://www.icloud.com/shortcuts/aff4b5e0770b4a2cae6dae18249434d1
-```
 
-#### 油价语音播报
-
-```
+# 油价语音播报
 https://www.icloud.com/shortcuts/a187659e1a0a4ab585eb72a764e3fed7
-```
 
-#### 仙女棒
-
-```
+# 仙女棒
 https://www.icloud.com/shortcuts/e3a0675319994f6d87b16c7ea1b73c5c
-```
 
-#### 彩票开奖结果
-
-```
+# 彩票开奖结果
 https://www.icloud.com/shortcuts/ebc6541a714b42fb8cb4247d2b71ab77
-```
 
-#### 钉钉打卡
-
-```
+# 钉钉打卡
 https://www.icloud.com/shortcuts/7749df7b9c3342539b96d9aead7267ea
-```
 
-#### 图灵机器人
-
-```
+# 图灵机器人
 https://www.icloud.com/shortcuts/1ae4ce4344b54f15b8a9831e0ab81bb4
-```
 
-#### 运动播报
-
-```
+# 运动播报
 https://www.icloud.com/shortcuts/bc9e69c607ef40d08933aac0cd20588a
-```
 
-#### 知乎日报
-
-```
+# 知乎日报
 https://www.icloud.com/shortcuts/6f60912434e24f64b645d894ad78c47b
-```
 
-#### 百度知道日报
-
-```
+# 百度知道日报
 https://www.icloud.com/shortcuts/df85acb1585e481fa8d9de965743b046
-```
 
-
-#### 近期上映电影
-
-```
+# 近期上映电影
 https://www.icloud.com/shortcuts/32999ca5bdce4a879ba48e5890d1b257
-```
 
-#### 程序改名加锁
-
-```
+# 程序改名加锁
 https://www.icloud.com/shortcuts/0c73f53b09a24ad88f9eeeb315794b81
-```
 
-#### 老司机
-
-```
+# 老司机
 https://www.icloud.com/shortcuts/baaeae0d7d164472baed3e531673733b
-```
 
-#### 空气质量查询
-
-语音、自动定位、手动输入。
-
-```
+# 空气质量查询
+# 语音、自动定位、手动输入
 https://www.icloud.com/shortcuts/de1d387855b24990a0b6648c2eba3a5f
-```
 
-#### 追书神器
-
-```
+# 追书神器
 https://www.icloud.com/shortcuts/ec6c8f83043a4fb3885c4a302d7c2129
-```
 
-#### 骂人宝典
-
-```
+# 骂人宝典
 https://www.icloud.com/shortcuts/73ded407f0d7417899346a3b5aa6d8ff
-```
 
-#### 人脸识别
-
-```
+# 人脸识别
 https://www.icloud.com/shortcuts/67175ef09c1d4e7da2d77d476506740f
-```
 
-#### 修改步数
-
-QQ、微信、支付宝步数不能改变。
-
-```
-https://www.icloud.com/shortcuts/cc759611240742cfb48e9cb83fafb806
-```
-
-#### 睡眠声音
-
-```
+# 睡眠声音
 https://www.icloud.com/shortcuts/c9c50392fb7f4603af03cb9caf0fa9cb
-```
 
-#### 一言
-
-```
+# 一言
 https://www.icloud.com/shortcuts/cd37638ddd02421c966be16961db558f
 https://www.icloud.com/shortcuts/7f21e942496c46e9a7a98338d311a07a
-```
 
-#### 自定义勿扰时长
-
-```
+# 自定义勿扰时长
 https://www.icloud.com/shortcuts/92706b85621b42d2aaaf7cf296c749e5
-```
 
-#### 低消耗
-
-```
+# 低消耗
 https://www.icloud.com/shortcuts/2d1a0e792358405fbb2462572962e6cd
-```
 
-#### 高德地图语音导航
-
-```
+# 高德地图语音导航
 https://www.icloud.com/shortcuts/28b98b7fd9b84301955b72345e8515b1
-```
 
-#### 查快递
-
-```
+# 查快递
 https://www.icloud.com/shortcuts/04a23ce1b0b64c998519341752811e7e
-```
 
-#### Picsew Editor
-
-```
+# Picsew Editor
 https://www.icloud.com/shortcuts/fc50347ce3f047309001520ceecb12ee
-```
 
-#### 白描助手
-
-```
+# 白描助手
 https://www.icloud.com/shortcuts/20988a652e264b13889aa5db1ac3dbff
-```
 
-#### 多种外币转换
-
-```
+# 多种外币转换
 https://workflow.is/workflows/9570db942bfb45f18581bd36121573b0
-```
 
-#### 快递物件查询
-
-```
+# 快递物件查询
 https://workflow.is/workflows/177a3fd258ab4cfd806ff99df15d867c
-```
 
-#### 打开链接并复制密码
-
-```
+# 打开链接并复制密码
 https://workflow.is/workflows/e5846d5f70db404a914db7c6ae07e6c8
-```
 
-#### 货币换算
-
-```
+# 货币换算
 https://workflow.is/workflows/50f0132cbe654370bc35189e1cf31b86
-```
 
-#### 抛硬币
-
-```
+# 抛硬币
 https://workflow.is/workflows/4e37faab34864e1883c533754c788066
-```
 
-#### 合并PDF文件
-
-```
+# 合并PDF文件
 https://workflow.is/workflows/adbb5f464fba4bc68a42a31bf91d1c4c
-```
 
-#### 扩展和共享网址
-
-```
+# 扩展和共享网址
 https://workflow.is/workflows/acad8115a5564d6ea336b70b87dcab72
-```
 
-#### 计时器
-
-```
+# 计时器
 https://workflow.is/workflows/93fd0318d0e14cdaa32c5d021effaa8b
-```
 
-#### IP和位置
-
-找到IP和地理位置。
-
-```
+# IP和位置
 https://workflow.is/workflows/ea529c591a2740169388c0d2b8ca6505
-```
 
-#### 插接板书签离线
-
-```
+# 插接板书签离线
 https://workflow.is/workflows/78e3d1afef39487db3d4a96d55e9a131
-```
 
-#### 书签
-
-```
+# 书签
 https://workflow.is/workflows/86a36fe10ac54a0cbe21c0016e762dee
-```
 
-#### Biking Distance
-
-```
+# Biking Distance
 https://workflow.is/workflows/90b54056340742f2bd24ed45f894d22e
-```
 
-#### 旅行距离
-
-```
+# 旅行距离
 https://workflow.is/workflows/5e86637a392147449e7f0aebb3b18cf4
-```
 
-#### 莫尔斯电码编码器手电筒
-
-```
+# 莫尔斯电码编码器手电筒
 https://workflow.is/workflows/3f723d2d0e0a4c45b920281cf7d30284
-```
 
-#### 手电筒
-
-```
+# 手电筒
 https://workflow.is/workflows/31699d9bf6054e028c69286cdf932ce6
-```
 
-#### Translate
-
-```
+# Translate
 https://www.icloud.com/shortcuts/5ce941f97e7644e1951c3aa3cacf4804
-```
 
-#### 极搜
-
-```
+# 极搜
 https://www.icloud.com/shortcuts/9016687bcc894015ba2c7bbf3766359c
-```
 
-#### 文本分析
-
-```
+# 文本分析
 https://www.icloud.com/shortcuts/458e944a6e8b409695e069f92b5e7bc0
-```
 
-#### iiilab解析器
-
-```
+# iiilab解析器
 https://www.icloud.com/shortcuts/dbfdd71fdfd540ada81c08f8d24280b4
-```
 
-#### Parse Video X
-
-```
+# Parse Video X
 https://www.icloud.com/shortcuts/26224a223a344c0490ef1ecf91ee4ebc
+
+# 网页内容编辑
+https://www.icloud.com/shortcuts/c355a99f35174f488ed53e9499034e8f
 ```
 
 ## 自动化
@@ -2016,6 +1279,18 @@ https://usescarlet.com/scarlet.json
 https://ipa.cypwn.xyz/scarlet.json
 https://cydia.akemi.ai/
 https://repo.chariz.com/
+```
+
+#### 牛蛙助手
+
+```
+https://ios222.com/
+```
+
+#### NB全能助手
+
+```
+https://nbtool8.com/
 ```
 
 ### 通过APP
@@ -2442,3858 +1717,6 @@ https://dolphinios.oatmealdome.me/
 https://github.com/qnblackcat/uYouPlus
 ```
 
-# 越狱
-
-## 方法
-
-越狱工具适用范围如下。
-
-有根越狱指的是拥有系统根目录权限，系统文件可以读取和写入。无根越狱指的是没有系统根目录权限，系统文件只能读取而无法写入。
-
-完美越狱指的是设备重启后依旧是越狱状态。不完美越狱指的是设备重启后会恢复到未越狱环境，需要使用越狱工具重新激活环境。iOS 9.3以后均为不完美越狱。
-
-|     应用    |    基板    | 设备要求 |                   系统范围                   | 有根/无根越狱 |
-|-------------|------------|----------|----------------------------------------------|---------------|
-| Dopamine    |            | A12-A15  | 15.0-15.4.1                                  | 无根          |
-| XinaA15     |            | A12-A15  | 15.0-15.1.1                                  | 无根          |
-| Palera1n    |            | A8-A11   | 15.0-16.4.1                                  |               |
-| Checkra1n   | Substrate  | A7-A11   | 12.3-14+                                     |               |
-| Taurine     |            |          | 14+                                          |               |
-| Odyssey     |            | A9-A13   | 13.0-13.7                                    |               |
-| Unc0ver     | Substitute | A7-A13   | 12.0-12.2，12.4-14.3，14.3-14.5.1，14.6-14.8 |               |
-| Chimera     | Substitute | 64位设备 | 12.0-12.2，12.4                              |               |
-| Electra     | Substitute | 64位设备 | 11.0-11.4.1                                  |               |
-| Th0r        |            | 64位设备 | 11.2-11.3.1                                  |               |
-| DoubleH3lix |            | 64位设备 | 10.0-10.3.3                                  |               |
-| Meridian    |            | 64位设备 | 10.0-10.3.3                                  |               |
-| H3lix       |            | 32位设备 | 10.0-10.3.3                                  |               |
-| Yalu        |            | 64位设备 | 10.1-10.2                                    |               |
-| Phoenix     |            | 32位设备 | 9.1-9.3.6                                    |               |
-| 叉叉助手    |            | 64位设备 | 9.2-9.3.3                                    |               |
-| Jailbrea me |            | 32位设备 | 9.1-9.3.4                                    |               |
-| EtasonJB    |            | 32位设备 | 8.0-8.4.1                                    |               |
-| Pangu       |            |          | 7.0-7.1.2                                    |               |
-| P0sixspwn   |            |          | 6.0-6.1.6                                    |               |
-| RedSn0w     |            |          | 5.0-5.1.1                                    |               |
-| Greenp0sion |            |          | 4.0-4.3.5                                    |               |
-
-低版本的越狱可以用爱思助手。
-
-各种系统版本的安装方法可参照以下链接。
-
-```
-https://cydia-app.com/
-```
-
-可在手机上打开以下链接安装各越狱工具。
-
-```
-https://apporanges.lanzoui.com/b0cfcmzwj
-```
-
-### Dopamine
-
-#### 应用安装
-
-越狱后需要在Sileo安装Ellekit deb、PreferenceLoader-Rootless、AltList、libSandy、CCSupport、uikittools。
-
-```
-https://ellekit.space/dopamine/
-https://github.com/opa334/Dopamine
-```
-
-#### 清除越狱
-
-打开Filza，进入Private/Preboot，打开以jb为名的文件夹，确认内部有一个名为Proucursus的文件夹，且该文件夹内部有fugu15max的相关文件。回到上一层并删除jb为名的文件夹。返回根目录，删除var/jb。
-
-完成后打开TrollStore，进入Settings，点击Rebuild Icon Cache即可。
-
-#### 常见问题
-
-##### 越狱后打开APP闪退
-
-需要重启SpringBoard。打开TrollStore，进入Settings，点击Respring即可。
-
-### XinaA15
-
-#### 应用安装
-
-```
-https://xina.ss03.cn/
-https://apt.xina.vip/
-```
-
-#### 应用商店
-
-可使用Sileo-Xina。
-
-```
-# 官方版
-https://github.com/Sileo/Sileo/releases/tag/xina-beta-5
-
-# 修改版
-# 全面汉化，支持安装插件后注销、全部忽略更新
-https://github.com/HuChundong/Sileo
-```
-
-也可用Saily。
-
-```
-https://github.com/SailyTeam/Saily/releases
-```
-
-#### 插件
-
-##### Xina清除35条更新
-
-安装XinaA15后Sileo会出现35个更新。可通过安装该插件删除Procurs自带源以消除提示。
-
-```
-https://apt.ss03.cn/
-```
-
-##### MilkyWay2
-
-由于未添加iOS 15支持，需要安装MilkyWay2和MilkyWay2-iOS14Fix。或者安装lenglengyu源的版本即可。
-
-```
-http://www.lenglengyu.com/
-```
-
-##### 更换字体
-
-添加以下源，搜索Xina即可。
-
-```
-https://apt.ss03.cn/
-```
-
-#### 使用
-
-##### 手动安装Deb插件包
-
-打开XinaA15内置文件管理器，长按点击Deb安装即可。
-
-#### 常见问题
-
-##### 电脑端无法访问手机文件
-
-安装Apple File Conduit"2"插件后爱思助手可能仍然无法访问手机文件。可以打开爱思助手，选择工具箱-SSH通道-SCP客户端，即可访问。
-
-若需要在电脑端给手机安装插件，则将插件通过SCP客户端复制到手机端后，点击SCP客户端左上角的终端，输入以下命令即可。
-
-```
-dpkg -i [deb插件名称]
-uicache —all
-killall SpringBoard
-```
-
-##### 安装应用级插件出现白图标
-
-安装XinalConFix插件，然后重新安装XinaA15工具，激活越狱。
-
-```
-https://opa334.github.io/
-```
-
-##### Sileo刷新源出现522错误
-
-在Sileo越狱商店精选页面上，点击右上角头像，下拉找到缓存，直接点击两下，然后点击语音，开启使用系统语言，再点应用即可。
-
-### Unc0ver
-
-Unc0ver版本与机型和系统的对应表格如下。
-
-|       系统      |  支持机型 | 可用unc0ver版本 |
-|-----------------|-----------|-----------------|
-| iOS 13.0-13.7   | A9-A13    | 5.0.0-6.0.0     |
-| iOS 14.0-14.3   | A9-A14    | 6.0.0-6.2.0     |
-| iOS 14.4-14.5.1 | A12及以上 | 7.0.0-7.0.2     |
-| iOS 14.6-14.8   | A12-A13   | 8.0.0-8.0.2     |
-
-
-#### 应用安装
-
-##### 普通安装
-
-官网如下。
-
-```
-https://unc0ver.dev/
-```
-
-按照掉签IPA方法进行配置，然后打开以下链接进行安装。如果安装后无法打开，则尝试从电脑端通过AltStore自签。
-
-```
-https://www.lanzous.com/tp/icxyqaf
-https://www.lanzous.com/icxyqaf?p
-```
-
-打开安装好的unc0ver并进行安装。越狱完成后打开Cydia并刷新，更新所有的依赖后安装PreferenceLoader、AppList、RocketBootstrap这三个插件。
-
-注意，如果需要越狱的系统为14.3-14.5.1，且为iPhone XS（A12）及更新机型，则需要先安装AltStore，然后将unc0ver的安装包在手机上通过分享方式导入到AltStore进行自签。此时会利用Fugu14，使安装的unc0ver在重启后也能打开。
-
-```
-https://github.com/LinusHenze/Fugu14
-```
-
-##### 永不过期版本
-
-仅支持iOS 14.0-15.4.1系统。
-
-使用Unc0ver越狱后，才能安装永不过期版本。添加以下源后搜索unc0ver安装，注意需要选择正确的版本，可选择`6.0.2`、`6.1.1`、`6.1.2`、`6.2.0`、`8.0.2`。
-
-```
-https://cydia.ichitaso.com/
-```
-
-也可下载以下deb后，通过Filza安装。
-
-```
-https://apporanges.lanzoub.com/b0cfc799a
-https://www.aliyundrive.com/s/hzmbkEx8YaF
-https://pan.baidu.com/s/1AT6vYKDyPmawrW_6Pp3gQA?pwd=ybhk（提取码 / ybhk）
-```
-
-#### Sileo商店
-
-添加以下源并安装其中的Sileo Prep（checkra1n）。完成后打开Sileo刷新，找到Sileo源，找到Cydia Installer并安装，即可使Sileo和Cydia共存。
-
-```
-https://repo.getsileo.app
-```
-
-#### 清除越狱
-
-打开Unc0ver，在设置中打开Restore RootFS，回到主页点击按钮即可。
-
-#### 常见问题
-
-##### 进度条卡2或9
-
-换其他签名版本的unc0ver尝试。
-
-##### 进度条卡25
-
-unc0ver签名有问题，需重新进行安装unc0ver。
-
-##### 进度条卡31
-
-unc0ver的广告，直接往下拉即可，不要点进去广告详情。
-
-### Odyssey
-
-适用于iOS 13.0-13.5，A9-A13设备。下载链接如下。
-
-```
-https://theodyssey.dev/
-```
-
-#### 常见问题
-
-##### 第二次及以后出现无限黑屏/菊花并重启
-
-部分插件的冲突问题，导致引导RSD的时候出现卡滞。
-
-重启设备，在Odyssey关闭Enable Tweaks后进行激活越狱。
-
-越狱后打开Sileo，添加嘻哈源，搜索Odyssey Activation并安装即可，该方法不会有权限错误。也可打开NewTerm并执行以下命令，但有可能会出现权限错误。
-
-```
-rm /.disable_tweakinject && killall backboardd
-```
-
-##### 提示ERR_JAILBREAK
-
-打开Sileo并安装Odyssey Activation即可。或打开Fliza，找到根目录，删除.disable_tweakinject，然后点击/usr/bin/killall，在bash后面输入killall backboard，回车后自动注销。
-
-##### 卡在三分之一处
-
-飞行模式不能下载数据，漏洞出现利用循环BUG。安装Odyssey以后，要重启设备后十五秒再点JailBreak。
-
-##### 卡在三分之三处
-
-漏洞出现利用循环BUG，或执行刷新图标缓存即UICache时卡住。重启设备后十五秒再点JailBreak即可。
-
-### Taurine
-
-#### 普通安装
-
-下载链接如下。
-
-```
-https://taurine.app/
-```
-
-#### 永不过期版本
-
-需要用Taurine越狱后，才可以安装永不过期版本。添加以下源后，搜索taurine-permanent安装即可。
-
-```
-https://repo.theodyssey.dev/
-```
-
-也可下载以下deb包，然后通过Filza安装。
-
-```
-https://apporanges.lanzoub.com/b0cfc798j
-https://www.aliyundrive.com/s/oG2XUjBbEFA
-https://pan.baidu.com/s/1N9xFwIPtkVqx7G9AVGdHtQ?pwd=yzke（提取码 / yzke）
-```
-
-### Checkra1n
-
-#### 应用安装
-
-官网如下。
-
-```
-https://checkra.in/
-```
-
-下载后连接手机，打开电脑上的应用，Start即可。如果提示iOS版本过高，则先让手机进入恢复模式，然后再越狱，也可点击Options，勾选Allow untested iOS/iPadOS/tvOS versions。
-
-#### 内核配置
-
-越狱后从以下内核选择一种进行安装。
-
-##### OdysseyRa1n
-
-###### 安装
-
-手机端安装好Checkra1n后不要打开。确保电脑已安装usbmuxd，若未安装可在终端输入以下命令。
-
-```
-// MacOS
-brew install usbmuxd
-
-// Linux
-sudo apt install libusbmuxd-tools
-```
-
-将手机连接到电脑后，在终端输入以下命令以执行安装脚本。
-
-```
-curl http://chimera1n.aaronc.cn/CoolStar/chimera1n-deploy-linux-macos.sh | bash
-
-// 或
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/coolstar/Odyssey-bootstrap/master/procursus-deploy-linux-macos.sh)"
-```
-
-更新完APT和Sileo以后，安装libhooker。打开CheckRa1n，点击Start重新引导。
-
-###### Cydia商店
-
-在Sileo搜索Cydia Installer即可安装Cydia。若无此安装包，则添加以下源。
-
-```
-https://apt.bingner.com/
-```
-
-##### Checkra1n
-
-打开手机上的checkra1n软件，安装Cydia即可。
-
-##### Chimera1n
-
-###### 安装
-
-用爱思助手打开SSH通道，记住端口号。确保电脑已安装usbmuxd，安装方法同上。
-
-手机端安装好Checkra1n后不要打开。电脑端下载以下安装包，解压后编辑chimera1n.sh，将倒数两行的-p4444改为刚才记住的端口号，然后双击chimera1n.command安装，有错误提示可忽略。
-
-```
-https://geekben.org/38.html
-```
-
-Sileo安装好后更新所有依赖，然后安装libhooker bootstrapper(checkm8)插件。插件安装好后打开checkra1n，点击Start重新引导。
-
-完成后安装以下插件。安装前需在软件包界面点击右上角日期后面的小横线，开启开发者模式。
-
-```
-Applist
-Preferenceloader
-rocketbootstrap
-substitute
-substrate compatibility layer
-tweak injector
-conditionalwifi5
-```
-
-至此安装完成。注意，使用过程中不要更新除Sileo外的应用商店的插件依赖，否则将无法进入系统。
-
-###### Cydia商店
-
-安装Cydia会导致系统不稳定。
-
-Cydia安装包如下，注意不要装第四个deb。完成后安装`连个锤子`插件以修复权限。
-
-```
-https://www.lanzous.com/i6nfksh
-```
-
-#### 清除越狱
-
-在手机上打开Checkra1n，点击Restore System即可。
-
-#### 常见问题
-
-##### -20错误
-
-尝试勾选Options里面的Safe Mode，然后重新越狱。
-
-若无效，则打开手机并按照正常流程用checkra1n进入DFU模式。软件显示进入DFU模式成功后，iPhone7/8/X按住音量上键和音量下键，其余老机型按住音量上键和Home键，持续按一段时间，手机进入诊断模式。
-
-打开以下链接，下载minaUSB并安装。
-
-```
-https://appletech752.com/Downloads/minaUSB.pkg
-```
-
-打开终端输入以下命令，以使minaUSB能够打开。
-
-```
-xcode-select --install
-codesign -f -s - --deep /Applications/
-```
-
-打开minaUSB并点击Patch USB Restrict，提示完成后重新用checkra1n越狱即可。
-
-### Palera1n
-
-可认为是Checkra1n的15.0及更新版本。使用Rootful类型即可。
-
-```
-https://palera.in/
-
-# WinRa1n，Windows版
-https://onejailbreak.com/blog/winra1n-jailbreak/
-```
-
-### Doubleh3lix
-
-```
-https://doubleh3lix.tihmstar.net/
-```
-
-若越狱后重启设备导致越狱环境失效，可使用以下网站激活。
-
-```
-https://totally.not.spyware.lol/
-```
-
-### Meridian
-
-```
-https://meridian.sparkes.zone/
-```
-
-若越狱后重启设备导致越狱环境失效，可使用以下网站激活。
-
-```
-https://totally.not.spyware.lol/
-```
-
-### Phoenix
-
-```
-https://phoenixpwn.com/
-```
-
-### 其它工具
-
-```
-# ap0110
-# iOS 10，重启后可自动越狱
-https://github.com/athenusdev/ap0110
-
-# ayakurume
-# iOS 15，A8-A11设备
-https://github.com/dora2-iOS/ayakurume
-
-# Betelguese
-# 利用checkra1n越狱得到SSH，然后安装Sileo越狱商店
-https://github.com/23Aaron/Betelguese
-
-# ra1ncloud
-# iOS 15
-https://github.com/iarchiveml/ra1ncloud
-
-# Th0r
-https://github.com/pwned4ever/Th0r_Freya
-https://github.com/pwned4ever/Th-r
-
-# Blizzard
-https://geosn0w.github.io/
-https://github.com/GeoSn0w/Blizzard-Jailbreak-9
-https://geosn0w.github.io/getblizzard/
-https://github.com/GeoSn0w/Blizzard-Jailbreak
-```
-
-## 插件
-
-### 无根越狱插件
-
-兼容无根越狱的源如下。
-
-```
-# Karen源
-# AppSync Unified，随意安装IPA
-https://cydia.akemi.ai/
-
-# ElleKit基板、PreferenceLoader设置显示依赖(rootless)、Ampere电池(rootless)
-https://repo.acreson.cn
-
-# Shadow屏蔽(rootless)
-https://ios.jjolano.me
-
-# CCPower控制中心(rootless)、QQ净化(rootless)、微信净化(rootless)、Netskao
-https://repo.initnil.com
-
-# 密友助手(rootless)、斗图助手(rootless)
-https://apt.25mao.com
-
-# Sileo Night作者源
-https://repo.anamy.gay
-
-# 电话助手作者源
-# 电话助手
-# 魔术师，一键锁屏
-http://apt.htv123.com/
-
-# opa334作者源
-# Choicy，管理插件注入
-https://opa334.github.io/
-
-# Chariz源
-# LastLook，多功能息屏显示
-# Cylinder Reborn，给桌面翻页加上特效
-# Atria，自定义主屏幕图标布局
-# LastLook，熄屏显示
-# betterAlarm，锁屏计时器和闹钟显示插件
-# AlbumManager，照片相簿加锁
-# Bolders Reborn，自定义文件夹
-# SearchDots，模仿iOS 16系统桌面搜索按钮
-# SwipeExtenderX，原生键盘增强
-https://repo.chariz.com/
-
-# Ginsu作者源
-# Dodo，锁屏美化插件
-https://repo.ginsu.dev/
-
-# PoomSmart源
-# RecordPause，录像暂停
-# TapVideoConfig，视频录制弹窗选择分辨率
-# CC On&Off，在控制中心真正关闭WiFi/蓝牙
-# BlurryBadges，角标美化
-# AppColorClose，删除按钮自适应App图标颜色
-# Battery Health Enabler，开启电池健康
-https://poomsmart.github.io/repo/
-
-# Spark源
-# SnowBoard，主题插件
-# CCMusicArtwork，控制中心音乐模块显示正在播放音乐封面
-# AutoUnlockX，自动解锁
-https://sparkdev.me/
-
-# Sileo 官方源
-https://repo.anamy.gay/
-
-# TIGI Software 源
-# Filza、Apps Manager
-https://tigisoftware.com/cydia/
-
-# P2KDev源
-# SimpleBattery，状态栏电池增加百分比显示
-# SugarCane，控制中心亮度和音量添加百分比显示
-# ReachMore，便捷访问手势
-# 3DBadgeClear，快速清除通知角标
-# DeleteForeverXS，永久删除照片
-# EZSwipe，主屏幕向下滑动手势插件
-# TinyWidget14，锁屏音乐播放器
-# ScreenshotActions，给截图添加类似于iOS 16系统的拷贝并删除选项
-# LetMeKnow，电话接听振动
-# NewTab，给Safari底部添加新建页面+号按钮
-# ReachMore，便捷访问手势
-# QuitAll，一键清理后台
-# Sakal，锁屏添加天气等信息
-# iOS 15.0-15.4.1无根越狱
-https://p2kdev.github.io/repo/
-# iOS 14
-https://repo.packix.com/
-
-# Havoc源
-# Snapper 2，区域截图插件
-# CCCounters，控制中心显示倒计时
-# Macaron，给Dock栏添加图片
-# UnderDock，键盘底部添加快捷按钮
-# Lynx 2
-# Picarize，一键抠图
-# UnderDock，键盘增强
-# Stella，模拟雪花飘落
-# Anouk，给隐藏照片加锁
-# FloatingDockXVI，自定义Dock栏
-# Translomatic，快捷翻译
-# CopyLog，剪贴板插件
-# Ampere，给全面屏设备电池加上百分比
-# Hammer It，分词大爆炸
-# Snapper 3，区域截图
-# CCDNDTimer，控制中心勿扰模式增强
-# MenuSupport，将选择菜单图标按钮显示
-# DLEasy，国外社交App视频下载神器
-# Alpine，让iPhone使用tvOS精美弹窗
-# ENA，从照片中提取对象
-# Cardculator，卡片样式的计算器插件
-# InstaLauncher 2，应用快速启动
-# Uptime，控制中心显示开机后运行时间
-# DNDMyRecording，录屏勿扰
-# SquidGesture，全局手势插件
-https://havoc.app/
-
-# Limneos源
-# AudioRecorder XS，通话录音插件
-# DynamicPeninsula，灵动半岛插件
-# AquaBoard XS，添加水波纹特效
-# AnsweringMachine XS，来电自动应答
-# VoiceChanger XS，改变通话声音
-# Glow，让屏幕发光
-# BioProtect XS，程序保护插件
-https://limneos.net/repo/
-
-# alias20源
-# AdaptiveAirPodView，模仿iOS 17系统AirPods系列设备弹窗自适应深色模式
-# bfdecryptor，砸壳插件
-# CalcLog，计算器显示历史记录
-# Speedy，自定义动画速度
-# A-Shields，程序锁
-# Axon，锁屏通知归纳
-# Power4Options，电源增强插件
-# FakeSignalBar，自定义运营商
-https://alias20.gitlab.io/apt/
-
-# iCraze源
-# DarkPods，模仿iOS 17系统AirPods系列设备弹窗自适应深色模式
-# NotiCopy15，复制通知
-https://repo.icrazeios.com/
-
-# Creature源
-# TweakSettings，独立的插件设置
-# Shuffle，设置归类
-# Tranquil，背景音
-https://creaturecoding.com/repo/
-
-# AnthoPak源
-# AddToFolder，桌面App快速移动到指定文件夹
-# VideoSwipes，给默认视频播放器添加手势
-# PanCake，快速返回上一页
-https://repo.anthopak.dev/
-
-# Dcsyhi源
-# Zetsu，分屏插件
-# KBApp，在键盘底部添加快捷按钮或者App
-# ADKeyboard，键盘添加颜色
-https://dcsyhi1998.github.io/
-
-# Sopppra源
-# SettingsRevamp，设置自定义插件
-# Cache Magic Rootless，控制中心清除系统缓存
-# Cpu Magic Rootless，控制中心显示CPU实时信息
-# Memory Magic Rootless，控制中心显示RAM实时信息
-# Network Magic Rootless，控制中心显示网络信息
-# StatusTime，自定义状态栏日期和时间
-# TweakHub，快速呼出插件设置
-# KillApps，多功能一键清理后台
-https://sopppra.mooo.com/
-
-# Nebbs源
-# Edge 2，给屏幕边缘添加渐变色彩
-https://repo.itznebbs.com/
-
-# Lizynz源
-# IconOrder，自定义文件夹
-# FolderX，自定义文件夹插件
-https://lizynz.github.io/
-
-# SkyPian源
-# CCLocation，控制中心添加定位开关
-# CCRespring，控制中心一键注销
-# CCSettrings，控制中心添加设置开关
-# MiniLsp，锁屏迷你播放器
-# Kayoko，剪贴板记录和管理插件
-# CCScreenShot，控制中心截图
-# CCAutoBrightness，控制中心亮度自动调节
-https://skypain.github.io/repo/
-
-# akusio源
-# BackgrounderAction15 for CCSupport，应用程序最小化后保持后台运行
-# MilkyWay4，分屏插件
-https://akusio.github.io/
-
-# NoisyFlake开源项目
-# Velvet 2，自定义通知
-# AlbumManager，整理好保护照片
-# betterAlarm，漂亮的计时器和闹钟
-https://github.com/NoisyFlake
-
-# b4db1r3源
-# OCD，角标和名称自适应图标颜色
-# tappy，单击或双击状态栏时间显示自定义日期
-https://b4db1r3.github.io/d3vr3p0/
-
-# maxiwee源
-# noquickies，去除锁屏手电筒和相机快速按钮
-# NoDock，Dock栏透明背景
-# nobar，去除小横条
-# FiveIcon Dock，Dock栏五个图标
-https://maxiwee.de/
-
-# JunesiPhone源
-# HideDockBG，Dock栏增强
-https://junesiphone.com/supersecret/
-
-# Ginsu源
-# Dodo，锁屏插件
-# DualClock 2，为锁屏显示双时钟
-https://ginsu.dev/repo/
-
-# Fouad Raheb源
-# AppData，快速查看和管理应用程序详细数据
-https://apt.fouadraheb.com/
-
-# uz-ra源
-# medusa，在iPhone上启用iPad多任务功能
-https://uz-ra.github.io/
-
-# ZX02源
-# Frame，视频壁纸
-https://zerui18.github.io/zx02/
-https://zx02.yourepo.com/
-
-# ETHN源
-# ReachPlayer，便捷访问区域显示音乐播放器
-https://nahtedetihw.github.io/
-
-# MERONA源
-# A-Font，字体管理插件
-# A-Shields，程序锁
-https://repo.co.kr/
-
-# ichitaso源
-# NoUpdateMark，去除设置更新红点
-# HideKBSettings，隐藏键盘设置
-# PrimalFolder 2，将文件夹第一个图标作为文件夹封面
-https://cydia.ichitaso.com/
-
-# BigBoss源
-# App Library Disabler，去除App资源库
-# CCVibration，控制中心添加振动模块
-# WiFiQR，将WiFi网络生成二维码
-# HotspotQR，将个人热点网络生成二维码
-https://apt.thebigboss.org/repofiles/cydia/
-
-# 刀刀源
-# 插件汉化包
-https://xiangfeidexiaohuo.github.io/
-
-# 老牌猫源
-https://apt.25mao.com/
-
-# 赵楠源
-https://invalidunit.github.io/repo/
-
-# rob311源
-https://cydia.rob311.com/repo/
-
-# alexia源
-https://repo.alexia.lol/
-
-# MirO92源
-http://miro92.com/repo
-
-# iKarwan源
-# PMP，照片保护插件
-https://repo.ikghd.me/
-
-# Dhinak源
-https://dhinakg.github.io/repo/
-
-# DEB 备份，已安装的插件，提取和备份
-# 百度网盘（提取码6rsu）
-https://pan.baidu.com/s/1AHqn6osPVHSxtSuPQaabSA?pwd=6rsu 
-# 123云盘
-https://www.123pan.com/s/vgn0Vv-XchFv.html
-
-# CydiaGeek源
-# DoubleTapToLock，双击锁屏
-https://cydiageek.yourepo.com/
-
-# i0s_tweak3r源
-# ByeByeAppLibrary，禁用App资源库
-https://www.yourepo.com/
-```
-
-### 非越狱手机查看插件库
-
-可使用PostBox。
-
-```
-https://www.postbox.news/
-```
-
-### 插件库
-
-#### 越狱插件搜索
-
-```
-https://www.ios-repo-updates.com/
-https://jlippold.github.io/tweakCompatible/
-```
-
-#### Packix付费插件合集
-
-```
-链接 / https://pan.baidu.com/s/1OnBL77Tqn1og7iw3K90w2A
-密码 / zeg8
-```
-
-### 越狱源
-
-#### 自用越狱源
-
-```
-// 嘻哈源，必加
-http://repo.acreson.cn/
-
-// 其它
-https://repo.packix.com/
-https://rpetri.ch/repo/
-http://tateu.net/repo/
-https://rejail.ru/
-http://repo.feng.com/
-https://apt.bingner.com/
-http://apt.thebigboss.org/repofiles/cydia/
-https://repo.hackyouriphone.org/
-http://apt.modmyi.com/
-https://creaturecoding.com/repo/
-https://cydia.ichitaso.com/
-http://cydia.zodttd.com/repo/cydia/
-https://repo.dynastic.co/
-http://repo.qqtlr.com/
-https://cydia.akemi.ai/
-https://repo.rpgfarm.com/
-http://mrmadtw.github.io/repo/
-https://repo.initnil.com/
-https://apt.initnil.com/
-http://repo.pixelomer.com/
-https://ibreak.yourepo.com/
-https://repo.twickd.com/
-https://skitty.xyz/repo/
-https://apt.iphoneba.cn/
-https://repo.cydiabc.top/
-http://apt.coolstar.xyz/
-http://ibreak.yourepo.com/
-https://repo.icrazeios.com/
-https://kanam.me/repo/
-https://apt.25mao.com/
-http://limneos.net/repo/
-https://junesiphone.com/supersecret/
-https://evynw.github.io/
-https://soda-ldz.yourepo.com/
-https://Poomsmart.github.io/repo/
-https://sileo.top/
-https://cydia.kiiimo.org/
-
-// 以下源不能用Cydown
-https://apt.cydiakk.com/
-https://apt.abcydia.com/
-https://apt.cydia.love/
-https://apt.cydiavip.com/
-https://apt.wxhbts.com/
-https://apt.cydiami.com/
-https://apt.Fcydia.com/
-https://apt.cydiaba.cn/
-```
-
-#### 其它越狱源
-
-```
-http://zlxdike.github.io/repo/
-https://apt.fouadraheb.com/
-https://apt.geometricsoftware.se/
-https://henrikssonbrothers.com/cydia/repo/
-http://apt.iarrays.com/
-https://kanam.me/repo/
-https://repo.openpack.io/
-https://repo.niceios.com/
-https://repo.mtac.app/
-https://repo.menushka.ca/
-https://creaturesurvive.github.io/
-https://repo.anthopak.dev/
-https://captinc.me/
-https://jb365.github.io/
-https://repo.1conan.com/
-https://tweak.mario.net.in/
-https://repo.xyaman.xyz/
-https://nni43-repo.herokuapp.com/
-https://www.icaughtuapp.com/repo/
-https://midkin.eu/repo/
-https://repoiz.github.io/repoiz/
-https://denialpan.github.io/
-https://repo.chr1s.dev/
-https://repo.titand3v.com/
-https://cydia.alexbeals.com/
-https://foxfort.yourepo.com/
-https://galacticdev.me/
-https://repo.krit.me/
-http://beta.unlimapps.com/
-http://repo.qwertyuiop1379.com:7777/
-https://shepgoba.github.io/
-https://repo.tr1fecta.co/
-https://repo.basepack.co/
-https://mtac.app/repo/
-https://repo.festival.tf/
-https://myxxdev.github.io/
-https://xia0z.github.io/
-https://halo-michael.github.io/repo/
-https://repo.yfyf.fun/
-https://lzsxcl.github.io/repo/
-http://apt.clezz.com/
-```
-
-### 插件集合
-
-```
-CopyLog
-剪贴板管理神器
-
-Crane
-为每个应用程序创建多个容器，分身神器，一键切换帐户
-
-PullOver Pro
-侧边分屏
-无根越狱，Netskao源
-https://repo.initnil.com
-官方版本，c1d3r（很久没有更新）
-https://c1d3r.com/repo/
-
-WeChatCallk
-微信添加Callkit功能
-
-ShortLook
-优雅通知
-
-AFC2 For IOS11
-在电脑助手开通系统文件访问权限，能访问越狱文件，可以进行查看路径，在电脑修改文件等操作
-
-CallBar X
-来电通话显示插件
-
-vWallpaper 2
-来电可设置视频
-来电视频放置路径: /User/Media/vWallpaper2/VideosRingtones/  
-动态桌面和锁屏是放置路径： /User/Media/vWallpaper2/Videos/ 
-视频格式一定要mp4
-
-April
-省电插件
-apt.ss03.cn
-
-AnyWhere
-虚拟定位插件
-apt.abcydia.com
-
-
-IntelligentPass 4
-带特定蓝牙耳机或连接特定wifi时自动解锁
-apt.geometricsoftware.se
-
-
-Six（LS）
-锁屏界面变成iOS 6样式
-skitty.xyz/repo
-
-
-PPSSPP，PSP模拟器
-cydia.ppsspp.org
-
-
-
-软件源
-http://apt.abcydia.com（雷锋源）
-http://apt.cydiaba.cn（贴吧源）
-http://apt.ss03.cn（艾锋源）
-https://repo.packix.com（packix源）
-https://repo.lonestarx.net
-http://repo.auxiliudev.com
-http://beta.sparkservers.co.uk
-http://repo.auxiliumdev.com
-https://repo.xarold.com/
-https://cydia.angelxwind.net/
-http://limneos.net/repo
-http://julio.xarold.com/
-http://getdelta.co/
-http://beta.sparkservers.co.uk/
-https://repo.lonestarx.net/
-http://apt.thebigboss.org/repofiles/cydia
-
-
-
-
-软件插件
-AudioRecorder2 通话录音
-Cylinder 桌面翻页特效
-BetterCCXI 控制中心增强
-WiFi Passwd 密码备忘录
-FloatingDockXI 悬浮DocK
-batteryNotch 电池刘海
-App Admin 应用降级
-NoMoreSApps x全屏应用
-AnyWhere 虚拟定位+修改机型
-ToneEnabler 手动拖入铃声
-BatteryLife 电池信息
-SugarCane CC百分比
-CarBridge CarPlay汽车互联
-Xen HTML 锁屏与桌面挂件的搭载平台
-Boxy 3 强大的桌面图标布局自定义工具
-BeGreen 自定义电池符号
-FullSafari 让 iPhone 的 Safari 浏览器实现 iPad 的标签页浏览模式
-
-
-
-系统工具
-FakeClockUp 系统加速
-Fiza File 文件管理器
-Netfix Cydia 修复联网问题
-NGXPlay11 CarPlay 解锁
-Liberty Lite 屏蔽越狱检测
-SemiRestore11 /Rollectra IOS11.3~11.4B3平刷系统
-BioProtect X 指纹/面部加密
-PreferenceOrganizer 设置分类
-AppSync Unified 关闭签名
-NoBetaNag 屏蔽beta提示
-iCleaner Pro 系统清理
-Extender X 签名续签
-NoMoreSApps x全屏应用
-April 极限省电
-Icon Renamer 自定义APP名称
-DoubleTapLock[Public] 双击桌面屏幕锁屏
-ForceInPicture 视频画中画
-Apps Manager 应用数据清除/备份/恢复/传输等管理工具
-BioProtect X 应用与控制中心开关等指纹或面部解锁加密
-BetterCCXI 更新添加 iOS 11 控制中心天气显示
-PreviewBegone 去除截图左下角预览
-WeatherVane 一款可以在控制中心快速切换WIFI 和蓝牙设备的插件
-DoubleTapLock 一款快速锁屏插件
-LetMeknow 电话接通震动提醒插件
-RealCC 可以在控制中心真正的关闭WiFi 和蓝牙
-Snapper 2  截图增强插件
-EzCC 款为控制中心添加更多快捷按钮的插件
-ShowTouch  一款显示屏幕触控操作的插件
-ShieldXI 一款程序锁插件
-MagSafe 连接充电时手机弹出MagSafe充电画面
-Titan iOS 13画中画插件
-Vesta iOS 13右下角上滑呼出资源库
-Pinnie iOS 13把信息中常联系人置顶
-Ares 把Siri样式变成卡片或者横幅
-Quorra iOS 13仿 iOS 14 摄录提示
-Scorpion 设置来电通知窗口
-Velox Reloaded 桌面应用可展开类似于iOS 14小组件
-
-
-
-
-破解工具
-Flex3 程序修改器
-LocallAPStore  内购破解
-抖音不能停 
-
-
-主题美化
-LockPlusPro 锁屏主题平台
-Anemone 主题平台
-Zeppelin 运营商个性化
-ColorBadges 彩色角标
-ModernXI 不一样的信息通知风格
-ColorBanners 2 信息通知彩色风格
-
-
-
-DynamicPeninsula 灵动半岛
-limneos.net/repo
-
-
-SemiRestore11平刷插件，支持IOS11.3~11.4B3系统
-repo.packix.com
-
-
-IconCert 14，检测签名后应用显示剩余时间，显示在图标上
-apt.ss03.cn
-
-
-
-
-Houdini美化软件(iOS 10-10.3.2 and iOS 11-11.1.2)
-https://github.com/ihorlaitan/houdini-public
-
-
-
-
-仿iOS 14插件
-Titan，画中画插件
-Scorpion，通话窗口插件
-Velox Reloaded，桌面小组件插件
-Back Tap，轻点背面插件
-```
-
-#### 必备插件
-
-##### Apple File Conduit “2”
-
-即AFC2，可以允许电脑第三方助手直接访问设备越狱系统文件。
-
-```
-// 作者源地址
-https://cydia.ichitaso.com/
-
-// halo_michael打包源地址
-https://mrmadtw.github.io/repo
-
-// CDSQ打包源地址
-http://repo.feng.com
-```
-
-##### AppSync
-
-配合AFC2使用。
-
-##### OpenSSH
-
-电脑与手机连接的SSH通道。
-
-##### NewTerm 2
-
-终端工具。
-
-```
-https://cydia.hbang.ws
-https://repo.chariz.com
-```
-
-#### IPA签名
-
-##### ReProvision
-
-给IPA自签名。
-
-```
-https://repo.incendo.ws/
-```
-
-##### NoPlsOCSP
-
-阻止苹果证书被注销。
-
-```
-http://xnu.science/repo/
-```
-
-##### AppSync Unified
-
-屏蔽苹果对APP签名的检测，即可以直接安装未签名的破解版APP。
-
-```
-https://cydia.akemi.ai/
-```
-
-#### 越狱屏蔽
-
-##### A-Bypass
-
-越狱屏蔽插件。
-
-```
-https://repo.rpgfarm.com/
-```
-
-##### Liberty Lite
-
-越狱屏蔽插件。
-
-```
-http://ryleyangus.com/repo/
-```
-
-##### WeChatJailbreakHook
-
-屏蔽微信越狱检测。
-
-##### Shadow
-
-越狱屏蔽插件。
-
-```
-https://ios.jjolano.me/
-```
-
-##### UnSub
-
-屏蔽越狱检测。
-
-##### FlyJB
-
-越狱屏蔽插件。
-
-```
-https://repo.xsf1re.kr/
-```
-
-##### Choicy
-
-禁止注入插件。
-
-```
-https://opa334.github.io/
-```
-
-##### KernBypass
-
-从内核层面屏蔽越狱。若通过官方源安装插件，需要再安装NewTerm插件，并在NewTerm中执行以下命令。
-
-```
-su
-changerootfs &
-disown %1
-```
-
-若设备重启后插件失效，需要打开Filza，创建/var/MobileSoftwareUpdate/mnt1文件夹，然后打开NewTerm，输入su，密码为alpine，获取root权限，如此插件即可恢复正常。
-
-安装本插件后，用iCleaner Pro清理垃圾时可能会卡在清理OTA软件更新。且本插件对硬件损伤较大。
-
-```
-// 官方源
-https://akusio.github.io/
-
-// 嗨客源
-http://repo.qqtlr.com/
-```
-
-#### 虚拟定位与导航
-
-##### GPSmaster-GPS定位大师
-
-虚拟定位、虚拟导航等。
-
-##### Anywhere!--虚拟定位
-
-更改手机定位与手机型号。
-
-
-
-
-##### Fake GPS Pro
-
-虚拟定位。
-
-##### LoactionFakerX
-
-虚拟定位。
-
-#### 系统美化
-
-##### SnowBoard
-
-主题插件。
-
-```
-https://sparkdev.me/
-# 测试源
-http://beta.sparkservers.co.uk
-```
-
-##### ReachIt
-
-让iPhone单手操作模式下，原先上方空白处变成音乐播放器控制。
-
-```
-https://repo.nepeta.me/
-```
-
-##### Carrierizer
-
-自定义运营商名称。
-
-##### Anemone
-
-美化主题的平台。
-
-##### Cylinder
-
-主屏幕翻页动画。
-
-```
-http://cydia.r333d.com/
-```
-
-##### Edge
-
-屏幕圆角加渐变彩条。
-
-```
-https://apt.securarepo.io/
-```
-
-##### Xeon
-
-运营商自定义。
-
-```
-https://nexusrepo.kro.kr/
-```
-
-##### LatchKey
-
-自定义X设备锁屏图标。
-
-```
-https://repo.daus.ch/
-```
-
-##### PerfectTimeXS
-
-修改状态栏时间样式。
-
-```
-https://kingmehu.yourepo.com/
-```
-
-##### Genesis 2
-
-美化插件。
-
-```
-https://repo.packix.com/
-https://repo.dynastic.co/
-```
-
-##### Riveria
-
-美化插件。
-
-##### Twister
-
-美化插件。
-
-```
-https://repo.twickd.com/
-```
-
-##### PencilChargingIndicator
-
-拥有和Apple Pencil一样的充电动画。在设置中的Customize Notifications打开Replace Banners，即可让信息推送获得相同效果。
-
-```
-https://shiftcmdk.github.io/repo/
-```
-
-##### Bolders
-
-美观放大的文件夹扩展。
-
-```
-https://ndoizo.ca/
-```
-
-##### Shortlook
-
-漂亮的动画通知。
-
-##### Moveable9
-
-自定义状态栏各个符号的位置或直接隐藏。
-
-```
-http://tateu.net/repo/
-```
-
-##### Scorpion
-
-来电窗口迷你化。
-
-##### CallBar XS
-
-窗口模式来电通话，可通过CrackTool3的破解补丁破解内购。
-
-```
-// 作者源地址
-http://limneos.net/repo
-
-// Callbar X破解补丁(基于CrackTool3)源地址
-https://apt.cydiaba.cn/
-
-// 免费源地址
-https://pulandres.me/repo/
-```
-
-##### Atria
-
-自定义桌面布局。
-
-```
-https://repo.chariz.com/
-```
-
-##### Orion
-
-功能强大的系统调节插件。
-
-```
-# 插件源
-https://repo.chariz.com/
-
-# 依赖源
-https://limneos.net/repo/
-https://creaturecoding.com/repo/
-https://sparkdev.me/
-```
-
-##### Uranium
-
-界面元素自定义。
-
-```
-https://repo.packix.com/
-```
-
-##### WaveAway
-
-界面元素自定义。
-
-```
-https://repo.twickd.com/
-```
-
-#### 键盘
-
-##### EmojiPort
-
-更新系统的Emoji。
-
-```
-https://poomsmart.github.io/repo/
-```
-
-##### DockX
-
-在键盘底部增加更多实用按钮。
-
-```
-https://udevsharold.github.io/repo
-```
-
-##### EmojiPort Fonts
-
-让低版本的iOS系统使用最新的Emoji表情。
-
-```
-https://vxbakerxv.github.io/repo/
-```
-
-##### Barmoji
-
-为iPhone X/XS/Max/XR键盘底部添加一排常用Emoji表情。
-
-```
-https://beta.cpdigitaldarkroom.com/
-```
-
-#### 控制中心
-
-##### FlipConvert
-
-控制中心更多快捷方式。
-
-```
-https://julioverne.github.io/
-```
-
-##### RealCC
-
-控制中心直接关闭Wi-Fi与蓝牙而不是之前的断开当前连接。
-
-##### MissionControl
-
-控制中心自定义插件。
-
-```
-https://dylanduff.com/repo/
-```
-
-##### PowerModule
-
-增强iOS11/12控制中心。
-
-```
-https://repo.packix.com/
-```
-
-##### Modulus
-
-为控制中心添加模块。若安装后无效，则需手动安装CCsupport插件。
-
-```
-// 官方源地址
-https://repo.packix.com/
-
-// 免费源地址
-http://repo.hackyouriphone.org/
-```
-
-##### CCUptime
-
-控制中心查看设备运行时间的插件。
-
-```
-https://repo.packix.com/
-```
-
-#### 通知
-
-##### Goodges 2
-
-应用通知数显示在应用名称上。
-
-```
-https://apt.noisyflake.com/
-```
-
-##### LocationService (CCSupport)
-
-控制中心添加定位开关。
-
-##### ClearBadges3DTouch10
-
-通过3D Touch功能呼出Clear Badge Notifications按钮，清理应用角标通知。
-
-##### Evelyn's Collection
-
-锁屏挂件。
-
-```
-https://evynw.github.io/
-```
-
-##### Lisa
-
-锁屏通知聚合。
-
-```
-https://esquillidev.github.io/
-```
-
-##### Priority Hub
-
-通知按App分类显示。
-
-```
-https://kunderscore.gitlab.io/repo/
-```
-
-##### Tinybar
-
-缩小通知横幅。
-
-```
-http://capt.dreamcode.it
-```
-
-##### Priority Hub
-
-锁屏通知小图标显示插件。
-
-```
-https://kunderscore.gitlab.io/repo/
-```
-
-##### NotifierDots
-
-iPhone X右上角通知图标。
-
-```
-http://apt.mumiantech.com/
-```
-
-##### Nanobanners
-
-迷你通知横幅插件.
-
-```
-https://sugiuta.github.io/
-```
-
-##### Eyeplugs
-
-隐藏特定应用的通知。
-
-```
-https://repo.dynastic.co/
-```
-
-##### KeepItSimple
-
-快速清除锁屏通知。
-
-```
-https://repo.packix.com/
-```
-
-#### 设置页面
-
-##### ModernSettings
-
-为设置页提供更多选项。
-
-##### System Info
-
-显示更多系统信息。
-
-```
-https://apt.xninja.xyz/
-https://apt.arx8x.net/
-```
-
-##### Shuffle
-
-设置页面归类。
-
-```
-https://creaturecoding.com/repo/
-```
-
-##### SettingsWidgets
-
-在设置页面显示小组件。
-
-```
-https://shepgobarepo.github.io/
-```
-
-##### SettingsButtons
-
-为设置界面增加按钮。
-
-```
-https://repo.twickd.com/
-```
-
-#### 系统清理与加速
-
-##### AnimationsBeFast
-
-iOS系统动画加速。
-
-##### iCleaner Pro
-
-清理手机缓存垃圾。
-
-```
-# 正式源
-https://ib-soft.net/repo
-
-# 测试源
-https://ib-soft.net/repo/beta
-```
-
-##### CacheClearerX
-
-清理缓存插件。
-
-```
-https://alexpng.github.io/
-```
-
-##### QuitAll
-
-一键清理后台。
-
-```
-https://repo.chariz.com/
-```
-
-#### 越狱配置
-
-##### ConditionalWiFi5
-
-解决越狱之后新下载的APP没有联网权限的问题。
-
-##### CrashReporter
-
-记录插件问题，便于排查。
-
-```
-https://revulate.dev/
-```
-
-##### FLEXall
-
-状态栏手势调用FLEX。
-
-```
-https://DGh0st.github.io/
-```
-
-##### DenyPhotoAlbums
-
-隐藏照片应用里没必要的分类相簿。
-
-##### Bakgrunnur
-
-保持程序在后台运行。
-
-##### Succession
-
-平刷工具。
-
-```
-https://samgisaninja.github.io/
-```
-
-##### SnapBack
-
-创建系统快照。其中Orig-fs是越狱工具创建的快照备份，不可删除，可用于恢复到原始状态。一般只对Root分区创建快照，不要对Var分区操作。
-
-##### Cr4shed
-
-崩溃报告记录，有助于寻找导致崩溃的插件。
-
-##### Cydown
-
-免费下载Cydia里的收费插件，提取插件的DEB安装包等。
-
-```
-https://julio.hackyouriphone.org/
-```
-
-##### Sileo Remover
-
-移除Sileo。
-
-```
-https://repo.x4-applegate.com/
-```
-
-##### Batchomatic
-
-插件备份。
-
-##### EZTweakList
-
-Cydia平台导出源地址以及插件列表。
-
-```
-https://legitcomputerwhisperer.github.io/
-```
-
-##### ModernDepictions
-
-让Cydia实现Sileo主题风格。
-
-```
-http://repo.pixelomer.com/
-```
-
-##### #Installed
-
-让Cydia源显示已安装和总插件数量。
-
-```
-https://level3tjg.xyz/repo/
-```
-
-##### CydiaCounter
-
-统计Cydia所安装插件数量。
-
-```
-https://fidele007.github.io/
-```
-
-##### WishDia
-
-Cydia愿望清单。
-
-```
-https://julioverne.github.io/
-```
-
-##### addsource
-
-Cydia源管理增强。
-
-##### DismissProgress
-
-在插件安装界面增加关闭按钮。
-
-```
-https://poomsmart.github.io/repo/
-```
-
-##### NoPassAfterRespring（Safe）
-
-注销后无需锁屏密码，直接进入桌面。
-
-```
-http://brendonjkding.github.io/
-```
-
-
-#### 相机/照片与截屏
-
-##### Camera Tools
-
-相机增强工具。
-
-##### TapVideoConfig
-
-直接在相机视频/慢动作里切换拍摄大小。
-
-##### SilentScreenshot
-
-关闭截图咔嚓声、去除截图后停留在左下角的预览、自定义截图闪屏颜色等。
-
-```
-https://repo.packix.com/
-```
-
-##### DeleteForever
-
-为照片删除添加`Permanently`按钮，永久删除照片。
-
-##### QuickMarkup
-
-将标记按钮添加到照片编辑工具栏中。
-
-##### PhotoSize
-
-查看照片应用图片大小。
-
-##### Aperturize
-
-让iPhone 7/8 Plus和iPhone X双摄设备实现人像模式景深控制。
-
-```
-// 官方源地址
-https://repo.packix.com/
-
-// 免费源地址
-https://repo.xarold.com/
-```
-
-##### Shutter Depth Control
-
-与Aperturize插件一样。
-
-```
-https://jbrownllama.yourepo.com/
-```
-
-##### Snapper 2
-
-强大的截图插件。
-
-##### SneakyCam
-
-息屏拍照或录像。
-
-```
-https://haoict.github.io/cydia/
-```
-
-#### 关机与重启
-
-##### Sentinel
-
-防止手机关机后需重新越狱。
-
-##### PowerSelector
-
-快速注销、关机、软重启。
-
-#### 应用增强
-
-##### AppData
-
-查看APP数据。
-
-##### AppTweak13
-
-在应用上滑显示应用详情。
-
-##### Apps Manager
-
-强大的应用数据清除/备份/恢复/传输等管理工具，可通过CrackTool3免费激活内购。
-
-##### LocalIAPStore13
-
-破解应用内购。
-
-```
-https://paxcex.github.io/
-```
-
-##### Autotouch
-
-录制手指操作，然后自动重复操作。
-
-```
-// 官方源
-http://apt.autotouch.net/
-
-// 破解插件
-链接 / https://pan.baidu.com/s/1CeEpOs3aM-bSsZ7yLONHDw
-提取码 / 0fwD
-```
-
-##### WeChatCallKit
-
-重回微信与系统电话一样的接听显示界面。
-
-```
-http://apt.cydiaba.cn/
-https://apt.abcydia.com/
-```
-
-##### 微信助手密友
-
-使微信能够转发语音。
-
-```
-https://sileo.top
-```
-
-##### Aesthyrica
-
-Spotify增强。
-
-```
-https://aesthyrica.com/repo/
-```
-
-##### Cercube for Youtube
-
-Youtube扩展。
-
-```
-https://apt.alfhaily.me/
-```
-
-##### Youtube Tools
-
-同上。
-
-```
-https://jpet26.yourepo.com/
-```
-
-#### 应用降级
-
-##### AppStore++
-
-Appstore扩展，可用于应用降级。
-
-```
-https://cokepokes.github.io
-```
-
-若降级时发现无可用版本，可打开链接以查询特定应用版本的版本号ID。复制要降级到的版本ID，降级时点击Manual Install，将ID填写到对话框即可。
-
-```
-https://tools.lancely.tech/
-```
-
-##### App Admin
-
-App Store应用降级随意旧版。
-
-```
-http://beta.unlimapps.com
-```
-
-##### StoreSwitcher 2
-
-App Store快速切换账号。
-
-```
-http://subdiox.com/cydia/
-```
-
-#### 电话与录音
-
-##### AudioRecorder通话录音
-
-录取微信、电话等一切通话录音。
-
-```
-http://limneos.net/repo
-```
-
-##### xybp888
-
-电话助手。
-
-```
-http://apt.htv123.com/
-```
-
-##### Call Recorder/SuperRecorder
-
-通话录音插件。
-
-```
-http://hacx.org/repo/
-```
-
-##### AudioRecorder 2
-
-通话录音插件。
-
-```
-http://limneos.net/repo/
-```
-
-#### Safari
-
-##### Safari Features
-
-让iPhone上的Safari显示iPad样式的标签。
-
-##### FullSafari
-
-同Safari Features。
-
-```
-https://repo.lonestarx.net/
-```
-
-##### Tabsa
-
-同Safari Features。
-
-```
-https://r0wdrunner.github.io/repo/
-```
-
-##### Safari Plus
-
-增强iOS设备自带Safari浏览器功能。
-
-```
-https://opa334.github.io/
-```
-
-##### Selector
-
-实现Safari浏览器单句翻译功能。
-
-```
-https://repo.nepeta.me/
-```
-
-##### ForceInPicture
-
-开启自带浏览器视频画中画功能。
-
-##### WebShade
-
-网页深色模式。
-
-```
-https://wilsonthewolf.github.io/repo
-```
-
-#### 仿X手势
-
-##### HomeX
-
-旧机型使用iPhone X手势。
-
-```
-https://abxyap.github.io/repo/
-```
-
-##### HomeGesture
-
-老机型实现iPhone X手势界面操作，可自定义功能设置。若在安装过程中遇到com.spark.libsparkapplist依赖缺失的情况，添加以下源地址即可。
-
-```
-https://repo.packix.com
-```
-
-##### GestureXS
-
-仿iPhone X手势操作。
-
-#### 任务管理
-
-##### KillBackground
-
-一键清理后台插件。
-
-```
-http://cydia.ichitaso.com/
-```
-
-##### KillX
-
-一键清理多任务后台的插件。
-
-```
-https://cemck.github.io/repo
-```
-
-##### KillX Pro
-
-一键清理后台。
-
-##### Kill All Apps
-
-一键清理后台。
-
-```
-https://haoict.github.io/cydia/
-```
-
-#### 系统配置
-
-##### CCTomizer
-
-系统调整插件。
-
-##### FakeModel
-
-伪装设备机型。
-
-##### MilkyWay 2
-
-分屏插件。
-
-##### iNoSleep
-
-锁屏不断开Wi-Fi。
-
-##### Filza File Manager
-
-文件管理器。
-
-```
-http://tigisoftware.com/cydia/
-```
-
-##### NotesCreationDate13
-
-备忘录显示创建和修改的日期。
-
-##### BatteryRamp
-
-加速充电插件。
-
-##### ScreenRecording Time
-
-显示录屏时长。
-
-##### EasyAppOrientation
-
-锁定应用程序方向。
-
-```
-http://m156nrkvv.g2.xrea.com/repo/
-```
-
-##### ShowTouch
-
-录屏圆点。
-
-```
-https://repo.lonestarx.net/
-```
-
-##### LockPlus Pro
-
-锁屏增强。
-
-```
-https://junesiphone.com/supersecret/
-```
-
-##### Xeninfo
-
-```
-http://junesiphone.com/supersecret/
-```
-
-##### Xen HTML
-
-向主页面和锁屏页面添加组件。
-
-```
-https://xenpublic.incendo.ws/
-```
-
-##### CarBridge
-
-解除CarPlay限制，让第三方APP运行于CarPlay。
-
-```
-https://repo.chariz.io/
-```
-
-##### SwipeToDeleteContact
-
-直接可在iPhone通讯录里左滑删除名片。
-
-##### BetterRotate
-
-在屏幕锁定旋转的情况下允许视频横向旋转。
-
-```
-// 官方源地址
-https://repo.packix.com/
-
-// 免费源地址
-http://repo.hackyouriphone.org/
-```
-
-##### WiFi Passwords
-
-查看连接过的Wi-Fi密码。
-
-##### PerfectNetworkSpeedInfo
-
-网速悬浮窗。
-
-```
-https://johnzaro.github.io/cydia/
-```
-
-##### Copypasta
-
-剪贴板管理器。
-
-```
-https://repo.litten.love/
-```
-
-##### AV Orientation Lock
-
-视频播放器中添加方向锁定按钮。
-
-```
-https://repo.packix.com/
-```
-
-##### FPSIndicator
-
-游戏帧数显示。
-
-```
-http://brendonjkding.github.io/
-```
-
-#### 闹钟
-
-##### NextAlarm14
-
-显示下一个闹钟信息。
-
-```
-http://tateu.net/repo/
-```
-
-##### NappyTime14
-
-显示闹钟倒计时。
-
-```
-# 插件源
-https://arya1106.github.io/repo/
-
-# 汉化源
-http://repo.qqtlr.com/
-```
-
-#### 电话
-
-##### CallFavorites
-
-电话三维触控菜单显示收藏联系人。
-
-```
-https://repo.pixelomer.com/
-```
-
-#### 电量
-
-##### DrainCheck
-
-记录DND/LPM时间内的电量消耗情况。
-
-```
-# 插件源
-https://ginsudev.github.io/repo/
-
-# 汉化源
-http://repo.qqtlr.com/
-```
-
-##### LowLock
-
-锁屏低电量。
-
-```
-https://miro92.com/repo/
-```
-
-#### 暂不可用插件
-
-##### PullOver Pro
-
-从侧边唤出App，实现分屏操作。
-
-```
-https://c1d3r.com/repo/
-```
-
-##### KillMyApps
-
-锁屏不杀后台插件。
-
-##### PreferenceOrganizer 2
-
-对设置里的`系统设置`、`插件设置`、`App Store`进行归类整理。
-
-```
-https://cydia.angelxwind.net
-```
-
-##### FingerTouch
-
-类似`Touchr`，可以让Home键实现触控操作，比如单触返回桌面，双触打开后台，长触锁屏等，无需按下去，起到保护Home键的作用。
-
-##### BetterShutdown
-
-替关机键增加重启和注销选项。
-
-##### CrackTool3
-
-一键免费激活插件的内购项目。 
-
-##### SafeShutdown
-
-软关机。
-
-```
-https://kurrt.com/repo/
-```
-
-##### VideoAdsSpeed
-
-视频软件广告跳过。
-
-### 插件操作
-
-#### 重置插件设置
-
-用Filza删除/var/mobile/Library/Preferences中的对应plist文件即可。 
-
-### 插件出错排查
-
-若安装的插件不兼容或者冲突，一般会进入安全模式。此时打开Sileo卸载有问题的插件即可。
-
-可使用PowerSelector一键进入安全模式。
-
-
-
-## 补丁软件
-
-补丁软件可以修改APP，达到破解效果。
-
-### Flex 3
-
-#### 安装和破解
-
-源地址如下。
-
-```
-https://getdelta.co/
-```
-
-登录以下账号即可永久使用会员。
-
-```
-账号 / sundasheng521@qq.com
-密码 / 7758521a
-```
-
-#### 手动添加补丁
-
-打开Filza，进入路径/var/mobile/Library/Application Support/Flex3，使用文本编辑器打开patches.plist文件，拉到最下方，在末尾的`<dict>`后复制要添加的补丁代码，保存即可。
-
-#### 补丁制作
-
-下载FlexTool插件，在设置中选择要修改的APP。打开后可通过FlexTool定位到需要修改的函数位置。打开Flex，点击+号，选择要修改的APP，点击Add Units，点击APP名称以进行初次编译。编译完成后搜索刚才找到的函数，勾选并返回到补丁主界面。点击刚才选择的函数，修改其返回值即可。
-
-#### 补丁列表
-
-##### 支付宝十万步数
-
-```
-<dict>
-    <key>UUID</key>
-    <string>0A3D50C5-F2C6-4933-B997-C1647F3E109A</string>
-    <key>apiVersion</key>
-    <integer>3</integer>
-    <key>appIdentifier</key>
-    <string>com.alipay.iphoneclient</string>
-    <key>author</key>
-    <string>hyczby5218</string>
-    <key>cloudDescription</key>
-    <string>支付宝修改步数</string>
-    <key>cloudID</key>
-    <integer>46823</integer>
-    <key>downloadDate</key>
-    <integer>1551604711</integer>
-    <key>name</key>
-    <string>支付宝修改步数</string>
-    <key>switchedOn</key>
-    <true/>
-    <key>units</key>
-    <array>
-        <dict>
-            <key>methodObjc</key>
-            <dict>
-                <key>className</key>
-                <string>APStepInfo</string>
-                <key>displayName</key>
-                <string>-(long long) numberOfSteps</string>
-                <key>prefix</key>
-                <string>-</string>
-                <key>selector</key>
-                <string>numberOfSteps</string>
-                <key>typeEncoding</key>
-                <string>q16@0:8</string>
-            </dict>
-            <key>name</key>
-            <string>修改步数</string>
-            <key>overrides</key>
-            <array>
-                <dict>
-                    <key>argument</key>
-                    <integer>0</integer>
-                    <key>type</key>
-                    <dict>
-                        <key>subtype</key>
-                        <integer>0</integer>
-                        <key>type</key>
-                        <integer>9</integer>
-                    </dict>
-                    <key>value</key>
-                    <dict>
-                        <key>type</key>
-                        <integer>9</integer>
-                        <key>value</key>
-                        <integer>100000</integer>
-                    </dict>
-                </dict>
-            </array>
-        </dict>
-    </array>
-</dict>
-```
-
-##### Thor移除验证设备验证
-
-```
-<dict>
-    <key>UUID</key>
-    <string>AE872A89-5EB7-483D-B50A-88C29F6E20C9</string>
-    <key>apiVersion</key>
-    <integer>3</integer>
-    <key>appIdentifier</key>
-    <string>com.pixelcyber.dake.thor</string>
-    <key>author</key>
-    <string>zjh521901</string>
-    <key>cloudDescription</key>
-    <string>thor移除验证设备验证补丁</string>
-    <key>cloudID</key>
-    <integer>46126</integer>
-    <key>downloadDate</key>
-    <integer>1552100989</integer>
-    <key>name</key>
-    <string>Thor ·Fz夜</string>
-    <key>switchedOn</key>
-    <false/>
-    <key>units</key>
-    <array>
-        <dict>
-            <key>methodObjc</key>
-            <dict>
-                <key>className</key>
-                <string>AppReceiptValidator</string>
-                <key>displayName</key>
-                <string>-(void) prepareVerify</string>
-                <key>prefix</key>
-                <string>-</string>
-                <key>selector</key>
-                <string>prepareVerify</string>
-                <key>typeEncoding</key>
-                <string>v16@0:8</string>
-            </dict>
-            <key>name</key>
-            <string>🈲贩卖🈲谋利🈲</string>
-            <key>overrides</key>
-            <array/>
-        </dict>
-    </array>
-</dict>
-```
-
-### SuperCharge
-
-SuperCharge脚本的后缀名为st。将st脚本发送到手机，并用SuperCharge打开即可。源地址如下。
-
-```
-https://repo.supercharge.app/
-```
-
-## 免越狱安装越狱软件
-
-### FilzaEscaped15
-
-在未越狱的iOS 15.0-15.1.1，可使用FilzaEscaped15。需要自签。
-
-```
-https://basvtdevelopments.com/filzaescaped
-```
-
-#### 使用
-
-##### 修改X手势
-
-```
-1.打开FilzaEscaped 
-2.找路径：
-/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist 
-3.打开com.apple.MobileGestalt.plist
-4.选择CacheExtra-再找oPeik/9e8lQWMszEjbPzng 
-5.ArtworkDeviceSubType 点击右侧（i） 
-6.注意这个值一定要记得，预防你想恢复原来的样子，想恢复改为原来值就行。 
-7.值修改为：2436
-8.点击右上角存储，打开设置-显示与亮度-视图-改为放大，再改为标准即可实现X手势。
-```
-
-## 使用
-
-### 建立SSH连接
-
-将手机连接到电脑后，在电脑端打开爱思助手，在工具箱中选择打开SSH连接，记下IP和端口，其中127.0.0.1可以用localhost代替。
-
-打开终端并输入以下命令，即可建立SSH连接。
-
-```
-// 2222为端口，localhost为IP
-ssh -p 2222 root@localhost
-```
-
-### 屏蔽系统更新
-
-若为Unc0ver越狱，打开Unc0ver软件即有相关设置。其它平台可安装OTADisabler插件，官方源如下。
-
-```
-https://cydia.ichitaso.com
-```
-
-也可用iCleaner Pro屏蔽，在启动项中关闭OTA Update即可。
-
-也可用OTADisabler插件屏蔽。相反，OTAEnabler可启用系统更新。
-
-### 国行Apple Watch开通ECG
-
-系统要求为Watch OS 6.25+，iOS 13.5+。
-
-手机越狱后安装ECG Enabler插件，安装完成后重新配对手表即可。成功开启后可以清除越狱，只要不删除iPhone与Apple Watch之间的配对即可。
-
-### 应用多开
-
-#### 方法
-
-通过Slice 3插件即可。
-
-#### 添加插件支持
-
-打开Cydia，找到需要生效的插件，点击显示软件包内容，展开到DynamicLibraries，应当有xx.dylib和xx.plist两个文件。用Filza定位到以上位置，点开xx.plist，点击Bundles后面的`i`，点击`+`号后填写要添加插件支持的应用唯一标志符即可。该标志符可通过Filza的应用程序管理功能得到。
-
-### 应用砸壳
-
-AppStore下载的应用进行了数字版权加密处理，加密后的App无法被反编译。砸壳可以将已经安装的App解密，导出为ipa格式的文件。
-
-砸壳后才能自定义使用，如修改标识符实现双开、注入插件实现增强等，砸壳后可以跳过ID验证。
-
-砸壳后的App在越狱手机上可直接用Filza安装。
-
-#### 通过frida-ios-dump
-
-该方法适用于Mac，需要APP能够正常打开。
-
-##### 电脑端配置
-
-确保电脑已安装frida，Mac可通过Homebrew安装。安装完成后运行以下命令，若出现`Waiting for USB device to appear...`，则成功。
-
-```
-frida-ps -U
-```
-
-运行以下命令以克隆仓库。
-
-```
-git clone https://github.com/AloneMonkey/frida-ios-dump.git
-```
-
-连接手机到电脑，执行以下命令，查看手机是否已经被识别。
-
-```
-frida-ls-devices
-frida-ps -U
-```
-
-##### 手机端配置
-
-完成电脑端配置后，需要在手机上安装frida-server，版本需要和电脑端匹配。
-
-打开以下链接下载与电脑的frida对应的frida-server，并用Filza复制到手机的/usr/bin中，重命名为frida-server。在手机上用Filza找到刚刚复制进去的文件，调整其属性，将权限全部开放。
-
-然后在手机打开NewTerm，运行以下命令完成安装。
-
-```
-cd /usr/bin
-frida-server --version
-frida-server -D
-```
-
-frida-server也可用Cydia安装。打开Cydia并添加以下源安装即可，若无法下载可换用嘻哈源。
-
-```
-https://build.frida.re
-```
-
-##### 砸壳操作
-
-将手机和电脑进行连接，并确保两者连接到同一个Wi-Fi。
-
-用爱思助手打开手机的SSH通道，然后打开克隆好的仓库，修改dump.py中端口为连接手机SSH的端口。打开终端，执行以下命令以与手机进行SSH连接。
-
-```
-ssh root@127.0.0.1 -p1025
-```
-
-再新建一个终端，执行以下命令以列出手机所有安装的应用。
-
-```
-cd frida-ios-dump
-python3 dump.py -l
-```
-
-输入以下命令以进行砸壳。若提示`unable to access process with pid 1 from the current user account`，则需先在手机上打开APP。砸壳完成的APP将放到电脑的终端当前路径。
-
-```
-python3 dump.py [APP名称]（或BundleID）
-```
-
-#### 通过插件
-
-该方法需要APP能够正常打开。
-
-##### CrackerXI+
-
-安装CrackerXI+插件，源地址如下。
-
-```
-https://cydia.iphonecake.com/
-```
-
-打开插件，在设置中打开CrackerXI Hook、Remove UISupportedDevices、Set Minimum iOS version 10.0和Remove Watch App。在插件首页点击要砸壳的APP即可，砸壳后的APP放在手机的/var/mobile/Documents/CrackerXI/中。
-
-##### DumpDecrypter
-
-源地址如下。
-
-```
-https://repo.initnil.com/
-```
-
-### 游戏修改
-
-#### 必要插件
-
-一般需要IGG和Filza。
-
-IGG全称为iGameGuardian，用于修改游戏。安装用嘻哈源即可，官方源如下。
-
-```
-https://aquawu.github.io/igg/
-```
-
-进入插件配置，打开使用储存空间，下限设为0x00000000，上限设为0x150000000，并打开移除未匹配项，打开有号数，完成配置。
-
-#### 王者荣耀
-
-##### 修改快捷信息/语音库
-
-在语音库中清除任意数量的信息（比如4个），然后用`小心草丛`填入，不要点确定。切到IGG，选择smoba，I32搜索1。
-
-切回王者荣耀，删除4个`小心草丛`，选择4个`敌人消失`填入，不要点确定，再次切到IGG，I32搜索2。
-
-切回王者荣耀，删除4个`敌人消失`，选择4个`回防高地`填入，不要点确定，再次切到IGG，I32搜索3。
-
-切回王者荣耀，删除4个`回防高地`，选择4个`请求支援`填入，不要点确定，再次切到IGG，I32搜索4。
-
-切回王者荣耀，删除4个`请求支援`，分别选择`小心草丛`、`敌人消失`、`回防高地`、`请求支援`，不要点确定。再次切到IGG，上次得到的4-5个结果分别变成了1、2、3、4、5，把这几个数字换成所需要的消息，点确定即可。
-
-详细的快捷消息代码如下。
-
-| 代码 | 含义           |
-| ---- | -------------- |
-| 1    | 小心草丛       |
-| 2    | 敌人消失       |
-| 3    | 回防高地       |
-| 4    | 请求支援       |
-| 5    | 猥琐发育，别浪 |
-| 6    | 注意野区       |
-| 7    | 保护我方输出   |
-| 8    | 小心对方偷塔   |
-| 9    | 稳住，我们能赢 |
-| 10   | 大家打开语音   |
-| 11   | 跟着我         |
-| 12   | 注意分散站位   |
-| 13   | 注意保护后排   |
-| 14   | 等等我，马上到 |
-| 15   | 技能不全，撤退 |
-| 16   | 状态不好，撤退 |
-| 17   | 撤退，别打主宰 |
-| 18   | 撤退，别打暴君 |
-| 19   | 我回防高地     |
-| 20   | 集合埋伏       |
-| 21   | 清理兵线       |
-| 22   | 我拿buff，谢谢 |
-| 23   | 集合准备团战   |
-| 24   | 拖住，我偷塔   |
-| 25   | 集合进攻暴君   |
-| 26   | 集合进攻主宰   |
-| 27   | 全体进攻对抗路 |
-| 28   | 全体进攻中路   |
-| 29   | 全体进攻发育路 |
-| 30   | 优先攻击输出   |
-| 31   | 优先攻击突进   |
-| 32   | 优先推塔       |
-| 33   | 准备越塔强攻   |
-| 34   | 正在前往支援   |
-| 35   | 上去开团       |
-| 36   | 等我集合打团   |
-| 37   | 我来抓人了     |
-| 38   | 大招已经好了   |
-| 39   | 我去抓对抗路   |
-| 40   | 我去抓中路     |
-| 41   | 我去抓法语撸   |
-| 42   | 干得漂亮       |
-| 43   | 让我独享经验   |
-| 44   | [全部]抱歉     |
-| 45   | [全部]谢谢你   |
-| 46   | [全部]挑衅     |
-| 47   | 我拿BUFF再团   |
-| 48   | 别团，等人齐   |
-| 49   | 收到           |
-| 50   | 多观察小地图   |
-| 51   | 团不过先发育   |
-| 52   | 清完兵线再团   |
-| 53   | 继续推我回防   |
-| 54   | 当心敌方陷阱   |
-| 55   | I'll carry you |
-| 56   | 集合反蓝       |
-| 57   | 集合反红       |
-| 58   | 集合入侵野区   |
-| 59   | 帮我看红，谢谢 |
-| 60   | 帮我看蓝，谢谢 |
-| 61   | 我单带，别接团 |
-| 62   | 经济落后，别团 |
-| 63   | 兵线没到，撤退 |
-| 64   | 敌人偷塔，撤退 |
-| 65   | 打团了，别单带 |
-| 66   | 等我复活在团   |
-| 67   | 注意敌方绕后   |
-| 68   | 法师来拿蓝     |
-| 69   | 射手来拿红     |
-| 70   | 求让BUFF，谢谢 |
-| 71   | 交个朋友       |
-| 72   | 新年快乐       |
-| 73   | 集合进攻龙王   |
-| 74   | 撤退，别打龙王 |
-| 79   | 阵营-长城      |
-| 80   | 阵营-玄雍      |
-| 81   | 阵营-稷下      |
-| 86   | 裂开吧！敌人   |
-| 91   | 打团请保护我   |
-| 92   | 兄弟，我来了   |
-| 93   | 别急，有我     |
-| 94   | 大佬，救命     |
-
-##### 修改超长名字
-
-老账号使用改名卡，在输入框不要输入东西。新账号则在创建昵称界面不要输入文字。
-
-打开IGG并选择smoba，设置临近范围为0x9，然后i32搜索12。打开联合，i32搜索86400，这时只有一个结果。
-
-把12改成64，然后清除。再次打开设置，设置临近范围为0x21，然后i32搜索42。打开联合，i32搜索12，把12改成88。
-
-此时回到游戏界面修改即可，最长21个汉字或61个字母。
-
-##### 设置三个相同的想玩英雄
-
-在排位赛页面清除所有自定义英雄，选择第一个英雄（如赵云）。打开IGG并选择smoba，然后I32搜索107（赵云）。
-
-去掉赵云，再次选择一个英雄（如小乔）。打开IGG，I32搜索106（小乔），此时结果只剩下一个。
-
-点击内存，再点击右上角移动，此时会跳转到刚才的结果，且底部的两个数值为0。返回王者荣耀，随便选择三个英雄，再打开IGG，此时三个数字均发生变化。
-
-修改该三个数字为所需要的英雄代码。返回王者荣耀，点击确定，出现三个一样的头像即可。
-
-头像代码如下。
-
-| 代码 | 含义                 |
-| ---- | -------------------- |
-| 105  | 廉颇                 |
-| 106  | 小乔                 |
-| 107  | 赵云                 |
-| 108  | 墨子                 |
-| 109  | 妲己                 |
-| 110  | 嬴政                 |
-| 111  | 孙尚香               |
-| 112  | 鲁班七号             |
-| 113  | 庄周                 |
-| 114  | 刘婵                 |
-| 115  | 高渐离               |
-| 116  | 荆轲                 |
-| 117  | 钟无艳               |
-| 118  | 孙斌                 |
-| 119  | 扁鹊                 |
-| 120  | 白起                 |
-| 121  | 芈月                 |
-| 122  | 诸葛亮（旧）         |
-| 123  | 吕布                 |
-| 124  | 周瑜                 |
-| 125  | 庞统                 |
-| 126  | 夏侯淳               |
-| 127  | 甄姬                 |
-| 128  | 曹操                 |
-| 129  | 典韦                 |
-| 130  | 宫本武藏             |
-| 131  | 李白                 |
-| 132  | 马可波罗（旧）       |
-| 133  | 狄仁杰               |
-| 134  | 达摩                 |
-| 135  | 项羽                 |
-| 136  | 武则天               |
-| 137  | 司马懿               |
-| 138  | 孔夫子               |
-| 140  | 关羽                 |
-| 141  | 貂蝉                 |
-| 142  | 安琪拉               |
-| 143  | 安绿山               |
-| 144  | 程咬金               |
-| 146  | 露娜                 |
-| 148  | 姜子牙               |
-| 149  | 刘邦                 |
-| 150  | 韩信                 |
-| 152  | 王昭君               |
-| 153  | 兰陵王               |
-| 154  | 花木兰               |
-| 155  | 艾琳                 |
-| 156  | 张亮（旧）           |
-| 157  | 不知火舞             |
-| 158  | 八神庵               |
-| 162  | 娜可露露             |
-| 163  | 橘右京               |
-| 166  | 亚瑟                 |
-| 167  | 孙悟空               |
-| 168  | 牛头                 |
-| 169  | 后裔                 |
-| 170  | 刘备                 |
-| 171  | 张飞                 |
-| 173  | 李元芳               |
-| 174  | 虞姬                 |
-| 175  | 钟馗                 |
-| 176  | 杨玉环               |
-| 177  | 成吉思汗             |
-| 178  | 杨戬                 |
-| 179  | 女娲                 |
-| 180  | 哪吒                 |
-| 182  | 干将（旧）           |
-| 183  | 雅典娜               |
-| 184  | 蔡文姬               |
-| 186  | 太乙真人             |
-| 187  | 东皇太一             |
-| 189  | 鬼谷子               |
-| 190  | 诸葛亮               |
-| 191  | 大乔                 |
-| 192  | 黄忠                 |
-| 193  | 凯                   |
-| 194  | 苏烈                 |
-| 195  | 百里玄策             |
-| 196  | 百里守约             |
-| 197  | 异星                 |
-| 198  | 梦琪                 |
-| 199  | 公孙离               |
-| 207  | 封网                 |
-| 222  | 徐福                 |
-| 225  | 庞统（傀儡）         |
-| 237  | 司马懿               |
-| 240  | 觉醒关羽             |
-| 241  | 金龙                 |
-| 242  | 黑龙                 |
-| 243  | 红龙                 |
-| 244  | 绿龙                 |
-| 254  | 花木兰（重剑）       |
-| 305  | 廉颇（改版）         |
-| 310  | 嬴政                 |
-| 312  | 沈梦溪               |
-| 320  | 宫本武藏（强化）     |
-| 332  | 马可波罗             |
-| 333  | 马可波罗（加强）     |
-| 346  | 露娜（改版）         |
-| 355  | 艾琳（改版）         |
-| 356  | 张亮                 |
-| 366  | 亚瑟（改版）         |
-| 378  | 杨戬（改版）         |
-| 382  | 干将                 |
-| 501  | 明世隐               |
-| 502  | 裴擒虎               |
-| 503  | 狂铁                 |
-| 504  | 米莱狄               |
-| 505  | 瑶                   |
-| 506  | 云中君               |
-| 507  | 李信                 |
-| 508  | 伽罗                 |
-| 509  | 盾山                 |
-| 510  | 孙策                 |
-| 511  | 猪八戒               |
-| 512  | 囚徒                 |
-| 513  | 上官婉儿             |
-| 515  | 嫦娥                 |
-| 516  | 舜                   |
-| 518  | 马超                 |
-| 520  | 少司命               |
-| 522  | 东方曜               |
-| 523  | 西施                 |
-| 524  | 蒙犽                 |
-| 525  | 鲁班大师             |
-| 526  | 王翦                 |
-| 527  | 蒙恬                 |
-| 528  | 吕蒙                 |
-| 529  | 盘古                 |
-| 530  | 宫本武藏（改版）     |
-| 531  | 镜                   |
-| 532  | 镜（分身）           |
-| 533  | Zombie               |
-| 620  | 韩信                 |
-| 621  | 庄周                 |
-| 630  | 宫本武藏（改版强化） |
-| 654  | 母僵尸               |
-| 668  | Zombie               |
-| 675  | Zombie               |
-| 687  | Zombie               |
-| 700  | 坦克轮子             |
-| 701  | 坦克炮管             |
-| 732  | 马可波罗（旧）       |
-
-NPC皮肤代码如下。
-
-| 代码 | 含义             |
-| ---- | ---------------- |
-| 770  | 暴君             |
-| 771  | 主宰（英雄）     |
-| 772  | 暴君3vs3（英雄） |
-| 773  | 年兽（英雄）     |
-| 2025 | 暴君3vs3         |
-| 2145 | 主宰             |
-
-技能代码如下。
-
-| 代码  | 含义     |
-| ----- | -------- |
-| 80101 | 监视     |
-| 80102 | 治疗     |
-| 80103 | 晕眩     |
-| 80104 | 惩戒     |
-| 80105 | 干扰     |
-| 80106 | 隐遁     |
-| 80107 | 净化     |
-| 80108 | 斩杀     |
-| 80109 | 疾跑     |
-| 80110 | 狂暴     |
-| 80111 | 振奋     |
-| 80112 | 月之守护 |
-| 80115 | 闪现     |
-| 80116 | 寒冰惩戒 |
-| 80117 | 传送     |
-| 80121 | 弱化     |
-| 80122 | PVE闪现  |
-| 81102 | 坚定意志 |
-| 81107 | 不灭信仰 |
-| 81109 | 奔狼号令 |
-| 81110 | 幽梦之息 |
-| 81112 | 时光凝滞 |
-
-地图代码如下。
-
-| 代码  | 含义                   |
-| ----- | ---------------------- |
-| 4010  | 变身大乱斗（地图）     |
-| 41150 | 抢鲲大乱斗（娱乐地图） |
-| 20001 | 经典1v1（竞技地图）    |
-| 20002 | 经典3v3（竞技地图）    |
-| 20009 | 火焰山（娱乐地图）     |
-| 20011 | 经典5v5（竞技地图）    |
-| 20012 | 无限乱斗（娱乐地图）   |
-| 20013 | 无限火力（娱乐地图）   |
-| 20015 | 迷雾模式（娱乐地图）   |
-| 20016 | 荣耀峡谷（竞技地图）   |
-| 20017 | 无限乱斗（娱乐地图）   |
-| 20018 | 实战训练（地图）       |
-| 20028 | 五军对决（娱乐地图）   |
-| 20040 | 实战模拟（快速地图）   |
-| 20041 | 实战模拟（标准地图）   |
-| 20071 | 抢鲲模式（娱乐地图）   |
-| 20072 | 强化模式（娱乐地图）   |
-| 20080 | 快跑模式（娱乐地图）   |
-| 20099 | 无塔1v1（竞技地图）    |
-| 20699 | 无塔3v1（竞技地图）    |
-| 20999 | 无塔5v5（竞技地图）    |
-| 20111 | 征兆模式（竞技地图）   |
-| 20151 | CS模式（竞技地图）     |
-| 21000 | 峡谷大乱斗（地图）     |
-| 21001 | 峡谷大乱斗（地图）     |
-
-攻速上限代码如下。
-
-```
-163840000；32768000
-```
-
-TS视角如下。
-
-```
-1500000-165000  修改167888
-Online-基址FD38  Beta-基址FD68
-154444-174444  修改160001
-```
-
-3D视角如下。
-
-```
-1097285734
-```
-
-上帝视角如下。
-
-```
-1,081,006,571;
--1，25，
--1,125,398;
--1,082,130,432;
--1,088,838,298::37
-改
--1,082,130,32
-```
-
-##### 体验隐藏角色
-
-打开王者荣耀，进入单机模式，选择任意难度进入房间。任意选择英雄，此处以廉颇（105）为例。切到IGG，选择smoba，I32搜索105。
-
-回到王者荣耀，选择小乔（106），切到IGG，I32搜索106。点右上角开关，再点左上角全改，此处测试将数值改成武则天（136）。回到王者荣耀，点击皮肤，变成武则天，开局。
-
-退出本局游戏，再开一次房间，任意选个英雄，切到IGG，点全改，改为艾琳（155）或年兽（773）等其他特殊隐藏角色/NPC。回到王者荣耀，开局即可。
-
-若读条中英雄图像是白色，并且游戏崩溃，则划掉后台，重新操作。如再次操作依然崩溃，说明该英雄资源不存在，不支持修改。
-
-##### 享受定位特权
-
-下载王者人生APP并打开，可查找到能享受特权的店铺。以KFC为例，记住其位置。下载Wifi万能钥匙，查找该特权店对应的Wi-Fi名称，此处为KFC FREE WIFI。
-
-安装Fake GPS Pro插件，进入Wifi信息修改，设置成KFC FREE WIFI，MAC地址可以任意。安装Anywhere插件，寻找到特权店铺的位置，扎标，然后点击上面跳出的地址推荐，再选择应用到王者荣耀和王者人生。进入王者荣耀，若出现王者特权提示，则成功。否则需要在Anywhere中微调位置直至出现弹窗为止。
-
-或者可以通过修改经纬度的方式实现修改定位。打开flex3，添加王者荣耀，搜索privilegeManager，进入后再搜setuserlatitude longitude。勾选后返回，输入特权店的经纬度即可。修改Wi-Fi和MAC地址则同上。
-
-##### 修改荣耀战区
-
-修改定位方法同上，修改定位完成后进入游戏即可修改战区。注意每周一才可修改。
-
-##### 修改技能效果
-
-下列步骤必须在游戏中进行修改，且必须落地后在购买装备点击技能的时候进行修改。注意一局只能修改一次。
-
-打开王者荣耀后，IGG进入smoba，I32搜索`英雄代码+00`，如搜索墨子则为10800。打开联合开关，搜索100，关闭联合开关，搜索`英雄代码+00`，全部改0即可。
-
-常见代码及对应技能如下。
-
-| 代码 | 英雄名称 |        技能效果        |
-|------|----------|------------------------|
-|  108 | 墨子     | 无限击退（被动）       |
-|  112 | 鲁班     | 无限biubiubiu（被动）  |
-|  114 | 刘禅     | 无限锤（一技能）       |
-|  129 | 典韦     | 无限乱舞（一技能）     |
-|  133 | 狄仁杰   | 无限卡牌（强化被动）   |
-|  134 | 达摩     | 无限回血（强化被动）   |
-|  146 | 露娜     | 无限标记（强化被动）   |
-|  149 | 刘邦     | 无限剑气               |
-|  150 | 韩信     | 无限挑飞               |
-|  152 | 王昭君   | 无限下雨               |
-|  162 | 娜可露露 | 强化普攻               |
-|  163 | 橘右京   | 无限拔刀斩（被动）     |
-|  166 | 亚瑟     | 无限沉默（被动）       |
-|  167 | 孙悟空   | 无限棍子（被动）       |
-|  170 | 刘备     | 无限两次弹射           |
-|  194 | 苏烈     | 无限击飞               |
-|  198 | 梦琪     | 无限三爪击             |
-|  305 | 廉颇     | 强化普攻               |
-|  503 | 狂铁     | 无限击飞               |
-|  506 | 云中君   | 飞行状态下无限撕裂状态 |
-|  510 | 孙策     | 无限回血（被动）       |
-
-#### 激门峡谷
-
-以下方法不适用于iOS13以下系统。
-
-打开Filza，找到APP管理器，点击LOL右侧的`i`。点击主程序，进入wildrift.app目录，找到主程序wildrift，点击右侧的`i`。点击打开方式-十六进制编辑器，返回后点击主程序wildrift。
-
-按照以下内容完成修改后保存，然后重新下载游戏以避免闪退。
-
-##### 透视
-
-选择左侧地址码并输入`01FD1FD0`，将`08 41 40 39`修改为`08 00 80 D2`。
-
-##### 除雾
-
-选择左侧地址码并输入`01FCF238`，将`49 71 5F B8`修改为`C0 03 5F D6`。
-
-#### 王牌战士
-
-必须在游戏中进行修改，必须加载完之后修改，一局只能修改一次。
-
-##### 游击型英雄无后
-
-F32搜25，全部改0即可。
-
-##### 赵海龙独立无后
-
-F32搜25，联合F32搜35，全部改0即可。
-
-##### 赵海龙隐身
-
-F32搜0.0025，全部改99即可。
-
-##### 自瞄
-
-游戏中需要关闭辅助瞄准。
-
-i64搜4816377120，联合i64搜3212836864，修改为4811533255104790528即可。
-
-
-## 应用商店
-
-应用商店可在Cydia/Sileo通过插件的方式安装。
-
-### Zebra
-
-作者源如下。
-
-```
-https://getzbra.com/repo/
-https://getzbra.com/beta/
-```
-
-### Installer
-
-作者源如下。
-
-```
-https://apptapp.me/repo/
-```
-
-### AltStore
-
-添加以下源并按顺序安装AltDaemon、AppSync Unified、appinst (App Installer)、AltStore (ALPHA)即可。
-
-```
-https://pwnders.github.io/repo/
-https://cydia.akemi.ai/
-```
-
-## 常见问题
-
-### Cydia无法联网
-
-可用爱思助手安装1.2.3版本的乐网，暂时让Cydia联网。然后安装`连个锤子-越狱联网一键修复`插件，官方源如下。打开插件，点击修复网络，等待修复完成后注销即可。
-
-```
-http://apt.tinyapps.cn/
-```
-
-### Cydia提示证书无效
-
-修改系统时间到当前时间即可。
-
-### Cydia出现红色Depend依赖
-
-缺失依赖的越狱源失效，翻墙后重新刷新源即可。
-
-### Sileo提示「unable to fetch some archives」
-
-若在手机端已安装NewTerm插件，则打开NewTerm并执行以下命令即可。若未安装，则先通过SSH使电脑连接到手机，然后在电脑端执行以下命令。
-
-```
-apt-get update --fix-missing
-killall SpringBoard
-```
-
-### Slieo提示Target Packages is configured multiple times
-
-在Slieo和Cydia中添加的源地址与名字冲突，在两边均添加同一个源时可能会出现该情况。总体不影响使用，建议卸载Cydia，并在NewTerm输入以下命令以移除cydia.list文件。
-
-```
-/etc/apt/sources.list.d
-```
-
-### Slieo提示trying to overwrite 'xxx'，with is also in package xxx 1.0
-
-安装冲突。可以先卸载提示中的安装包，再尝试安装。
-
-### Slieo提示missing 'Description' field
-
-插件包缺少描述等相关信息。不影响环境和插件的使用。
-
-### Slieo提示'Version' field value '': version string is empty
-
-部分插件或脚本破坏了越狱环境。打开Fliza，进入路径/var/lib/dpkg/status，备份status文件后点击，选择文本编辑器模式打开。搜索lib.corefoundation，在Version一栏填写1676.10，存储即可。
-
-### Slieo提示Depends PreferenceLoader
-
-切换到软件包选项卡，点击日期旁边的三条横线，然后点击开发者以切换到开发者模式，然后搜索PreferenceLoader，安装即可。
-
-### 无法正常内购
-
-此问题是itunesstored进程无法正常启动所导致。若安装了内购破解插件，如LocalIAPStore，先尝试关闭或卸载。
-
-若无效，则可使用DaemonDisabler开启itunesstored进程，插件源如下。安装后在插件设置中打开com.apple.itunesstored.plist，然后软重启。
-
-```
-https://level3tjg.xyz/repo/
-```
-
-若仍无效，可尝试使用Choicy禁止注入itunesstored。安装Choicy插件并进入Choicy设置，选择进程配置-守护进程，拉到最底部，点击显示所有守护进程，找到itunesstored后点击进入，打开禁用插件注入开关。注销并测试是否可以正常内购。
-
-若依旧无法正常内购，可尝试重启或在安全模式下进行内购。
-
-### Chimera1n玩游戏闪退
-
-删除OpenSSH即可。
-
-### 电脑连接SSH时提示「WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!」
-
-打开用户目录下的.ssh/known_hosts文件，将有手机IP地址的记录删掉即可。
-
-### Taurine安装dash命令组后插件安装正常但卸载出错
-
-主要表现为Sileo提示需要更新bash并强制安装dash。dash命令组不具备支持mv、cp等命令，因此需要切换回bash命令组。
-
-打开Filza，进入`/bin`目录并点击sh文件右侧的叹号，若路径为/usr/bin/dash，则打开NewTerm并输入以下命令。
-
-```
-su
-# 获取超级权限，密码为alpine
-rm -f /bin/sh && ln -s /usr/bin/bash /bin/sh
-ldrestart
-```
-
-# TrollStore
-
-TrollStore可以在部分系统上利用漏洞，不越狱即可安装永不过期的IPA。利用该漏洞，可对系统Var目录进行读写。
-
-## 安装
-
-打开以下链接并按照步骤操作即可。
-
-```
-https://github.com/opa334/TrollStore
-```
-
-安装后需要安装ldid以允许安装未签名的应用。建议安装持久性助手，以避免重建图标缓存时TrollStore无法打开。如果安装时出错，可翻墙后重试。
-
-完成后，将需要安装的IPA分享到TrollStore即可安装。
-
-## 可用APP
-
-### 应用库
-
-```
-# 推荐
-https://github.com/Peng1029/trollrepo
-https://ipa.cypwn.xyz/
-
-# 其它
-https://ipa.store/
-https://pan.ios98.com/
-https://pan.qxnav.com/
-https://www.123pan.com/s/vgn0Vv-Qo3Fv
-https://pan.baidu.com/s/1f7qiHzFutQ3zN1-SQkFXSg?pwd=791g（提取码 / 791g）
-```
-
-### 越狱工具
-
-#### Unc0ver
-
-通过普通安装方式下载IPA并分享给TrollStore安装即可。
-
-若安装8.0.0-8.0.2版本，则还需要安装u0Launcher，安装完成后打开u0Launcher，它会自动跳转到unc0ver，正常越狱即可。
-
-```
-https://github.com/opa334/u0Launcher/releases
-```
-
-### 将deb转换为IPA
-
-可通过DebtoIPA，将越狱的deb插件转换为IPA。
-
-```
-https://github.com/sourcelocation/DebToIPA/releases
-```
-
-### APP降级
-
-```
-# DowngradeApp
-https://pan.baidu.com/s/17YQgjtw2Mf2W36iTG63w6Q?pwd=fxpf（提取码 / fxpf）
-https://share.weiyun.com/t0Lvr5ms
-
-# AppStore++
-# 原版包含广告，网盘包含去广告版本
-https://github.com/CokePokes/AppStorePlus-TrollStore
-https://www.123pan.com/s/vgn0Vv-9r3Fv
-```
-
-### 其它
-
-```
-# 资源库
-https://www.123pan.com/s/vgn0Vv-Qo3Fv
-https://pan.baidu.com/s/1f7qiHzFutQ3zN1-SQkFXSg?pwd=791g（提取码 / 791g）
-https://wwn.lanzouy.com/b00q85ctg（密码 / zdf）
-
-# Filza，包含原版和无Url Scheme版本
-# 部分App会通过检查Url Scheme查看是否安装Filza以判断当前是否越狱
-# 此时可使用无Url Scheme版本
-https://www.tigisoftware.com/default/?p=439
-
-# Apps Manager
-https://www.tigisoftware.com/default/?p=435
-
-# ResolutionSetter
-# 各个设备的分辨率可在该网站查看：https://www.apple.com.cn/iphone/compare/
-# 若修改分辨率后屏幕黑屏，重启手机即可
-https://github.com/Halo-Michael/ipas/blob/main/resolutionsetter.ipa
-
-# ResolutionSetterSwift
-https://github.com/haoict/haoict.github.io/tree/master/cydia/ipa
-
-# BlizzBoards
-https://appinstallerios.com/TrollStoreIPAs/BlizzardBoard.ipa
-
-# H5GG
-https://github.com/H5GG/H5GG
-
-# uYou+
-https://github.com/qnblackcat/uYouPlus/releases
-
-# OldOS
-https://github.com/zzanehip/The-OldOS-Project/releases
-
-# RingTonesManager
-https://share.initnil.com/With_TorllStore
-
-# NiceBattery
-https://www.niceios.com/download.php
-
-# 电池助手
-https://www.123pan.com/s/vgn0Vv-Ex3Fv
-https://pan.baidu.com/s/1YBIuBzHONOTwYZ0YTYZUVg?pwd=ik6g（提取码 / ik6g）
-
-# PostBox
-https://www.postbox.news/
-
-# 静音模块
-# 将文件用Filza放置到/var/Managed Preferences/mobile中，注销后即可在控制中心添加静音按钮
-https://www.123pan.com/s/vgn0Vv-5I3Fv
-https://pan.baidu.com/s/1N_-DkwRejMQOz_dBu9GZwA?pwd=hufn（提取码 / hufn）
-
-# ModMyIPA
-# 安装后通过修改现有IPA包的标识符，可实现应用多开
-https://github.com/powenn/ModMyIPA
-
-# 电话助手
-https://www.htv123.com/down/CallAssist_TrollStore.ipa
-
-# TrollTools
-# 多功能工具箱
-https://github.com/sourcelocation/TrollTools
-
-# WallpaperSetter，自定义浅色模式深色模式的墙纸
-https://github.com/Skittyblock/WallpaperSetter
-
-# CAPerfHUD，浮窗显示手机性能
-https://github.com/khanhduytran0/CAPerfHUD
-```
-
-## 操作技巧
-
-### 清理手机占用空间
-
-可用Filza清空`/var/db/diagnostics/Persist/`和`/var/db/diagnostics/Special/`目录。
-
-注意TrollStore无法安装iCleaner，因无法获取到iCleaner所需要的权限。
-
-## 轻松签+
-
-### 安装
-
-与TrollStore功能类似，但可以自定义IPA。利用TrollStore的漏洞可以安装永不掉签的轻松签版本，也可以选择已有的企业证书自签安装。
-
-```
-https://esign.yyyue.xyz/
-```
-
-### 使用
-
-通过修改标识符，可实现双开。通过移除库，可能可以去除广告弹窗，注意修改完后选择`仅修改配置，不签名`。
-
-# MacDirtyCow
-
-## 原理
-
-MacDirtyCow利用CVE-2022-46689漏洞，支持iOS 14.0-15.7.1，16.0-16.1.2，建议15.0及以上系统使用。
-
-利用该漏洞，可通过交换同等大小文件的方式覆盖文件实现，从而实现一些特权操作。注意覆盖的文件不能大于原文件，覆盖后会一直存在并占用内存，重启后得到释放。当占用内存过大时，可能会导致手机变卡、小组件无法载入、第三方输入法无法使用、手机自动注销等。
-
-MacDirtyCowDemo仓库如下。
-
-```
-https://github.com/zhuowei/MacDirtyCowDemo
-```
-
-## 可用App
-
-以下App均可通过TrollStore安装。
-
-### Cowabunga
-
-超强工具箱，下载链接如下。
-
-```
-https://github.com/leminlimez/Cowabunga
-```
-
-#### 自定义锁头
-
-选择工具-锁定，点击右上角导入锁头素材文件夹，选择素材即可。锁头素材下载链接如下。
-
-```
-https://www.123pan.com/s/vgn0Vv-xl3Fv.html
-```
-
-#### 自定义运行模式
-
-该漏洞可实现交换同等大小的文件，通过自定义运行模式可自定义需要交换的系统文件。
-
-点击工具-自定义运行模式，选择+号创建操作即可。创建操作完成后注销即可应用效果。
-
-##### 自定义蜂窝网络4G/5G显示
-
-创建操作，类型选择plist，路径为Localizable.strings的路径，如下。
-
-```
-# iOS 15
-/System/Library/PrivateFrameworks/UIKitCore.framework/zh_CN.lproj/Localizable.strings
-
-# iOS 16
-/System/Library/PrivateFrameworks/UIKitCore.framework/Localizable.loctable
-```
-
-plist类型选择binary，PLIST数据下点击添加属性，编辑新添加的属性。Key一栏输入`4G`，Value一栏输入需要自定义的内容，如`8G`。具体需要修改的项可直接用Filza查看该plist文件。同理也可将`5G`修改为`9G`等。
-
-修改后文件体积会增大，点击`计算大小`会出现红色的叉。此时需要删除一些项，使文件体积小于或等于原文件。点击添加属性，编辑新添加的属性。点击String，弹出菜单，选择Deleting。参考文件内的项目，可删掉部分无用Key，如5GUC、5GUW、5GE等。删除完成后重新点击`计算大小`，出现绿色的勾时视为成功。
-
-完成后注销手机即可应用操作。
-
-##### 自定义输入密码/滑动关机文字显示
-
-步骤与上面的类似，需要修改的plist如下。
-
-```
-# iOS 15
-/System/Library/PrivateFrameworks/SpringBoardUIServices.framework/zh_CN.lproj/SpringBoardUIServices.strings
-```
-
-可自定义的属性如下。
-
-```
-# 锁屏输入密码显示
-PASSCODE_MESA_ENTRY_PROMPT
-
-# 滑动关机显示
-POWER_DOWN_LOCK_LABEL
-```
-
-可删除的属性如下。
-
-```
-PHONE_BT_AND_WIFI_OFF_PROMPT
-```
-
-##### 自定义设置个人帐户文字显示
-
-需要修改的plist如下。
-
-```
-# iOS 15
-/System/Library/PrivateFrameworks/PreferencesUI.framework/zh_CN.lproj/Settings~iphone.strings
-```
-
-可自定义的属性如下。
-
-```
-# 设置个人帐户文字
-CASTLE_SUBTITLE
-
-# 设置顶部文字
-Settings
-
-# 设置飞行模式文字
-Airplane Mode
-
-# 设置通用项目文字
-General
-```
-
-可删除的属性如下。
-
-```
-# 监督模式提示
-SUPERVISION_IPHONE
-SUPERVISION_IPOD
-SUPERVISION_WITH_ORG_IPHONE
-SUPERVISION_WITH_ORG_IPOD
-```
-
-##### 自定义没有更早的通知文字显示
-
-需要修改的plist如下。
-
-```
-# iOS 15
-/System/Library/PrivateFrameworks/UserNotificationsUIKit.framework/zh_CN.lproj/Localizable.strings
-```
-
-可自定义的属性如下。
-
-```
-# 没有更早的通知文字
-NO_NOTIFICATION_HISTORY
-```
-
-可删除的属性如下。
-
-```
-NOTIFICATION_OPTIONS_TURN_OFF_APPLICATION_DURING_MINDFULNESS
-```
-
-##### 自定义电池健康最大容量值
-
-```
-/var/MobileSoftwareUpdate/Hardware/Battery/Library/Preferences/com.apple.batteryhealthdata.plist
-```
-
-需要修改的属性如下。不建议修改为80以下。
-
-```
-Maximum Capacity Percent
-```
-
-##### 自定义锁屏手电筒和相机图标
-
-创建操作，类型选择替换，路径如下。
-
-```
-/System/Library/PrivateFrameworks/CoverSheet.framework/Assets.car
-```
-
-替换数据一栏点击上传文件。文件下载链接如下。
-
-```
-# iOS 15
-https://github.com/34306/iPA/releases/download/MacDirtyCow_iPAs/ios15.car
-
-# iOS 16
-https://github.com/34306/iPA/releases/download/MacDirtyCow_iPAs/ios16.car
-```
-
-car文件可通过以下软件编辑。
-
-```
-https://github.com/SerenaKit/Samra
-```
-
-##### 自定义时钟图标
-
-与上述操作类似，替换路径如下。
-
-```
-/System/Library/PrivateFrameworks/SpringBoardHome.framework/Assets.car
-```
-
-文件下载链接如下。
-
-```
-# iOS 15/16均可用
-# Anime
-https://github.com/34306/iPA/releases/download/MacDirtyCow_iPAs/clock_anime.car
-
-# checkra1n
-https://github.com/34306/iPA/releases/download/MacDirtyCow_iPAs/clock_checkra1n.car
-```
-
-##### 自定义通知横幅阴影
-
-替换路径如下。
-
-```
-# 浅色模式
-/System/Library/PrivateFrameworks/PlatterKit.framework/platterVibrantShadowLight.visualstyleset
-
-# 深色模式
-/System/Library/PrivateFrameworks/PlatterKit.framework/platterVibrantShadowDark.visualstyleset
-```
-
-用于替换的文件下载链接如下，下载Notification.Shadow.zip即可。
-
-```
-https://github.com/roeegh/Mise/releases
-```
-
-##### 自定义系统默认英文键盘空格键
-
-替换路径如下。
-
-```
-/System/Library/TextInput/TextInput_en.bundle/Keyboard-en.plist
-```
-
-用于替换的文件下载链接如下，下载Custom.Spacebar.zip即可。
-
-```
-https://github.com/roeegh/Mise/releases
-```
-
-##### 自定义控制中心
-
-替换路径如下。
-
-```
-/System/Library/PrivateFrameworks/ControlCenterUI.framework/DefaultModuleSettings~iphone.plist
-```
-
-用于替换的文件下载链接如下，下载Better.CC.zip即可。
-
-```
-https://github.com/roeegh/Mise/releases
-```
-
-也可手动定义各组件的大小。用Filza打开上面的DefaultModuleSettings~iphone.plist文件，复制该文件至可编辑的地方，如Documents。打开复制后的文件，点击希望修改的项，修改其Size项中的width和height即可。
-
-```
-# 音乐模块
-com.apple.mediaremote.controlcenter.nowplaying
-
-# 亮度模块
-com.apple.control-center.DisplayModule
-
-# 音量模块
-com.apple.mediaremote.controlcenter.audio
-```
-
-修改完成后，将该文件作为替换文件即可。
-
-##### 自定义字体
-
-需要替换的文件路径如下。
-
-```
-# 锁屏时钟字体
-/System/Library/Fonts/CoreUI/SFUISoft.ttc
-
-# 中文字体
-/System/Library/Fonts/LanguageSupport/PingFang.ttc
-
-# 英文字体
-/System/Library/Fonts/CoreUI/SFUI.ttf
-
-# 系统键盘字体
-/System/Library/Fonts/CoreAddition/Keycaps.ttc  
-
-# 系统拨号键盘字体
-/System/Library/Fonts/CoreAddition/PhoneKeyCaps.ttf
-
-# 表情字体
-/System/Library/Fonts/CoreAddition/AppleColorEmoji-160px.ttc
-```
-
-### Misaka
-
-MacDirtyCow的插件商店。
-
-```
-https://www.123pan.com/s/vgn0Vv-1b3Fv.html
-```
-
-### FileSwitcherPro
-
-和Cowabunga的自定义运行模式基本相同，下载链接如下。
-
-```
-https://github.com/straight-tamago/FileSwitcherPro
-```
-
-打开后点击左上角设置，开启Replace Plist Auto Padding以在替换plist时自动调整大小。点击下面的+号，选择新建Folder，完成后进入文件夹，点击+号选择Bundle Item，可选择希望添加的项目，添加后开启，注销即可生效。
-
-也可自行替换文件。创建Original Item，ACTION的Type选择Replace File即为替换文件。
-
-### 主题美化
-
-可用APP如下。
-
-```
-# Mugunghwa
-# 将主题用Filza放置于var/mobile/Themes/mugunghwa/Themes即可
-# 主题图标的规律为，App标识符-large.png
-https://github.com/s8ngyu/Mugunghwa/releases
-
-# TrollTools
-https://github.com/sourcelocation/TrollTools/releases
-```
-
-主题包可在以下链接下载。
-
-```
-# 普通
-https://pan.baidu.com/s/1Ygj6RpzIFQYn0aGzGB5nFg?pwd=9nns（提取码 / 9nns）
-https://www.123pan.com/s/vgn0Vv-5J3Fv
-https://havoc.app/
-
-# 锁屏密码美化
-https://pan.baidu.com/s/1E4MDnPbJ9fdFx-kHqo68og?pwd=7wcu（提取码 / 7wcu）
-https://www.123pan.com/s/vgn0Vv-gw3Fv
-```
-
-### Santander
-
-文件管理器。
-
-```
-https://github.com/mineek/SantanderMacDirtyCow
-```
-
-可通过Santander修改分辨率，以在旧设备上实现灵动岛。打开Santander，点击右上角更多按钮，选择`Go to...`-`Other`，跳转到以下地址。
-
-```
-/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist
-```
-
-点击 CacheExtra 进入，在搜索框搜索opeik，找到ArtworkDeviceSubType选项即为分辨率。记住当前分辨率，然后点击进入，修改为相应分辨率。
-
-```
-iPhone 14 Pro / 2556
-iPhone 14 Pro Max / 2796
-```
-
-### Altstore突破三个签名限制
-
-更新至1.6.1后，在Settings界面的CREDITS上面三指向上划出开关，安装MacDirtyCow突破后即可签名第四个应用程序。
-
-### 其它
-
-```
-# ControlConfig，控制中心添加模块
-# 在App设定好模块后，在控制中心添加该模块即可
-https://github.com/f1shy-dev/ControlConfig
-
-# FileSwitcherX，工具箱
-https://github.com/straight-tamago/FileSwitcherX
-
-# 图标排序
-https://github.com/Avangelista/Appabetical
-
-# 字体更换
-https://github.com/ginsudev/WDBFontOverwrite
-
-# 修复企业证书失效
-https://github.com/BomberFish/Whitelist
-https://www.123pan.com/s/vgn0Vv-YO3Fv
-
-# 移除自签三个App限制
-https://github.com/zhuowei/WDBRemoveThreeAppLimit
-
-# 自定义状态栏
-https://github.com/Avangelista/StatusMagic
-
-# 修改分辨率，iOS 16老设备激活灵动岛
-https://github.com/matteozappia/DynamicCow
-
-# 自定义分辨率
-https://github.com/sourcelocation/ResSet16
-
-# 隐藏主页条
-https://github.com/straight-tamago/NoHomeBar
-
-# Dock栏透明
-https://github.com/straight-tamago/DockTransparent
-
-# 隐藏主页条+Dock栏透明
-https://github.com/leminlimez/DockHider
-
-# 一键注销
-# 将放大器添加到控制中心，然后打开一次App，就可以在控制中心一键注销
-https://github.com/straight-tamago/RespringCC
-
-# 状态栏显示秒数
-https://mp.weixin.qq.com/s/GNzXfiTchse4KeAD7iHrxQ
-
-# AppCommander，App备份
-https://github.com/BomberFish/AppCommander
-
-# DirtyCow，工具箱
-https://github.com/mineek/dirtycowapp
-```
-
-# Cowabunga Lite
-
-```
-https://github.com/leminlimez/CowabungaLite
-```
-
 # 密码与激活锁
 
 当iOS打开了查找我的iPhone功能且无有效的激活记录时，将会导致激活锁定，需要输入开启了查找我的iPhone对应的iCloud账号和密码才可解锁。若忘记密码，则需要绕过激活锁。
@@ -6337,1831 +1760,6 @@ mv /Applications/Setup.app/Setup/Applications/Setup.app/Setup.bak touch /Applica
 uicache --all 
 killall backboardd 
 killall -9 SpringBoard
-```
-
-# 网络调试工具
-
-## 基本概念
-
-### 节点
-
-通常代表一个运行着某个协议程序（SS、SSR、V2ray、Trojan等）的代理服务器，通过代理服务器可以实现流量的中转。
-
-### 策略组与规则
-
-策略组可以包含节点或其他策略组，具有多种不同的策略类型。策略组是节点或其它策略组的集合，嵌套后最终必定会指向一个具体的节点。
-
-策略组根据不同策略，分发规则传递过来的请求。规则决定了当一个请求进来时，如何通过匹配类型进行匹配，以及如何选用对应的策略。规则格式如下。
-
-```
-[匹配类型],[匹配关键字],[策略名称]
-// 如DOMAIN-SUFFIX,twimg.com,PROXY
-```
-
-策略组必须绑定规则才能起作用。规则指定使用哪个策略组，而策略组根据具体需求选择其中某一个节点，结果即该规则指定的网站将被转发到该节点。
-
-### 重写
-
-即URL Rewrite。在接收到HTTP请求时，工具会使用请求的URL去寻找是否存在匹配的重写规则，若满足规则，则会替换或修改HTTP请求中的URL，或替换请求响应体。重写格式如下。
-
-```
-[正则表达式],[替换内容],[重写类型]
-// 如https?://(www.)?g.cn https://www.google.com 302
-// 表示匹配到g.cn或www.g.cn的URL会302重定向到https://www.google.com
-```
-
-### MITM解密
-
-Man-in-the-MiddleAttack的缩写，即中间人攻击。中间人攻击方式可以解密https的请求。工具会根据配置的hostname和信任的CA证书解密相应的https请求和响应，解密后可以配合Rule和URL Rewrite进行分流。
-
-### Cron语句
-
-格式如下。
-
-```
-[M（分钟，0-59）] [H（小时，0-23）] [D（天，1-31）] [m（月，1-12）] [d（星期，0-6，0为星期天)]
-```
-
-特殊符号解释如下。
-
-| 符号 | 说明                   |
-| ---- | ---------------------- |
-| *    | 所有取值范围的数字     |
-| /    | 每（*/5代表每5个单位） |
-| -    | 从某个数字到某个数字   |
-| ,    | 分开几个离散的数字     |
-
-举例如下。
-
-| 语句             | 说明                                            |
-| ---------------- | ----------------------------------------------- |
-| 0 */2 * * *      | 每两个小时                                      |
-| 0 23-7/2,8 * * * | 23点到7点之间每两个小时，8点        |
-| 0 11 4 * 1-3     | 每月的4号和每星期周一到周三的11点 |
-| 0 4 1 1 *        | 1月1日早上4点                                   |
-| * * * * *        | 每分钟                                          |
-
-可通过以下网站编辑cron语句。
-
-```
-https://crontab.guru/
-https://tooltt.com/quartzcron/
-```
-
-### 配置文件
-
-网络调试工具用于配置自身相关设置的文件。一般包括节点、策略组、分流、重写、脚本、MITM解密等。一般而言，所有编辑都将对配置文件生效，分享配置文件即可分享本机的所有配置。
-
-### 正则表达式
-
-正则表达式是大小写敏感的。
-
-| 语法                    | 说明                                                         |
-| ----------------------- | ------------------------------------------------------------ |
-| .                       | 匹配除换行符以外的任意字符                                   |
-| \|                       | 或运算符，匹配符号前或后的字符                                                   |
-| \                       | 转义元字符（用于匹配保留字符，如[ ] ( ) { } . * + ? ^ $ \ \|）                                        |
-| `\<`                    | 词首定位（`\<love`）                                         |
-| `\>`                    | 词首定位（`love\>`）                                         |
-| \w                      | 匹配字母或数字或下划线或汉字                                 |
-| \W                      | 匹配任意不是字母、数字、下划线、汉字的字符                   |
-| \s                      | 匹配任意的空白符                                             |
-| \S                      | 匹配任意不是空白符的字符                                     |
-| \d                      | 匹配数字                                                     |
-| \D                      | 匹配任意非数字的字符                                         |
-| \b                      | 匹配单词的开始或结束                                         |
-| \B                      | 匹配不是单词开头或结束的位置                                 |
-| \f                  |   匹配一个换页符                     |
-| \n                  |   匹配一个换行符                     |
-| \r                  |   匹配一个回车符                      |
-| \t                  |   匹配一个制表符                     |
-| \v                  |   匹配一个垂直制表符                     |
-| \p                  |   匹配CR/LF（等同于\r\n），用来匹配DOS行终止符    |
-| `\(..\)`                | 匹配稍后将要使用的字符的标签（`\(love\)able\1er`）           |
-| ^                       | 匹配字符串的开始                                             |
-| $                       | 匹配字符串的结束                                             |
-| *                       | 重复零次或更多次                                             |
-| +                       | 重复一次或更多次                                             |
-| ?                       | 重复零次或一次                                               |
-| a\|b                    | 匹配a或b                                                     |
-| *?                      | 重复任意次，但尽可能少重复                                   |
-| +?                      | 重复1次或更多次，但尽可能少重复                              |
-| ??                      | 重复0次或1次，但尽可能少重复                                 |
-| {n}                     | 重复n次（`x\{m\}`表示字符x重复出现m次）                      |
-| {n,}                    | 重复n次或更多次（`x\{m,\}`表示字符x重复出现m次以上）         |
-| {n,}?                   | 重复n次以上，但尽可能少重复                                  |
-| {n,m}                   | 重复n到m次（`x\{m,n\}`表示字符x重复出现m到n次）              |
-| {n,m}?                  | 重复n到m次，但尽可能少重复                                   |
-| (exp)                   | 匹配exp，并捕获文本到自动命名的组里（`love(able|rs)`）       |
-| (..)(..)\1\2            | 标签匹配字符（`(love)able\1er`）                             |
-| (?<name>exp)            | 匹配exp，并捕获文本到名称为name的组里，也可以写成(?'name'exp) |
-| (?:exp)                 | 匹配exp，不捕获匹配的文本，也不给此分组分配组号              |
-| (?=exp)                 | 匹配exp前面的位置（正先行断言）                                            |
-| (?<=exp)                | 匹配exp后面的位置（正后发断言）                                            |
-| (?!exp)                 | 匹配后面跟的不是exp的位置（负先行断言）                                    |
-| (?<!exp)                | 匹配前面不是exp的位置（负后发断言）                                        |
-|  `[ ]`                  |                              匹配方括号内的任意字符（指定字符集）             |
-| [.]                    | 匹配英文句号                                     |
-| [^x]                    | 匹配除了x以外的任意字符                                      |
-| [^aeiou]                | 匹配除了aeiou这几个字母以外的任意字符                        |
-| [a-z]                   | 匹配a-z范围内的一个字符                                      |
-| [:alnum:]               | 字母与数字字符（`[[:alnum:]]+`）                             |
-| [:alpha:]               | 字母字符，包括大小写（`[[:alpha:]]{4}`）                     |
-| [:blank:]               | 空格与制表符（`[[:blank:]]*`）                               |
-| [:digit:]               | 数字字母（`[[:digit:]]?`）                                   |
-| [:lower:]               | 小写字母（`[[:lower:]]{5,}`）                                |
-| [:upper:]               | 大写字母（`[[:upper:]]+`）                                   |
-| [:punct:]               | 标点符号（`[[:punct:]]`）                                    |
-| [:space:]               | 包括换行符，回车等在内的所有空白（`[[:space:]]+`）           |
-| IgnoreCase              | 匹配时不区分大小写                                           |
-| Multiline               | 多行模式，更改^和`$`的含义，使它们分别在任意一行的行首和行尾匹配，而不仅仅在整个字符串的开头和结尾匹配。(在此模式下,$的精确含意是匹配\n之前的位置以及字符串结束前的位置) |
-| Singleline              | 单行模式，更改.的含义，使它与每一个字符匹配（包括换行符\n）  |
-| IgnorePatternWhitespace | 忽略空白，忽略表达式中的非转义空白并启用由#标记的注释        |
-| ExplicitCapture         | 显式捕获，仅捕获已被显式命名的组                             |
-|   i                 |     忽略大小写                   |
-|   g                 |     全局搜索                 |
-|   m                 |   多行修饰符：锚点元字符^、$工作范围在每行的起始    |
-
-示例如下。
-
-|     示例    |                                  说明                                  |
-|-------------|------------------------------------------------------------------------|
-| the         | 匹配the                                                                |
-| .ar         | 匹配一个任意字符后面跟着是a和r的字符串                                 |
-| [Tt]he      | 匹配the和The                                                           |
-| ar[.]       | 匹配ar.                                                                |
-| [^c]ar      | 匹配一个后面跟着ar的除了c的任意字符                                    |
-| [a-z]*      | 匹配一个行中所有以小写字母开头的字符串                                 |
-| \s*cat\s*   | 匹配0或更多个空格开头和0或更多个空格结尾的cat字符串                    |
-| c.+t        | 匹配以首字母c开头以t结尾，中间跟着至少一个字符的字符串                 |
-| [T]?he      | 匹配字符串he和The                                                      |
-| [0-9]{2,3}  | 匹配最少2位最多3位0~9的数字                                            |
-| [0-9]{2,}   | 匹配至少两位0~9的数字                                                  |
-| [0-9]{3}    | 匹配3位数字                                                            |
-| (at\.)$     | 匹配以at.结尾的字符串                                                  |
-| /The/gi     | 在全局搜索the和The（i表示忽略大小写，g表示全局搜索）                   |
-| /.(at)/g    | 搜索任意字符（除了换行）+at，并返回全部结果                            |
-| /at(.)?$/gm | 表示小写字符a后跟小写字符t，末尾可选除换行符外任意字符，匹配每行的结尾 |
-| /(.*at)/    | 贪婪匹配模式                                                           |
-| /(.*?at)/   | 惰性匹配模式                                                           |
-| (c\|g\|p)ar  | 匹配car或gar或par                      |
-| (T\|t)he\|car |  匹配(T\|t)he或car                    |
-|  \.?   |    选择性匹配.                       |
-|  ^(T\|t)he    | 匹配以The或the开头的字符串              |
-|  (T\|t)he(?=\sfat)   |  匹配The和the，且其后紧跟着（空格）fat   |
-|  (T\|t)he(?!\sfat)   |  匹配The和the，且其后不跟着（空格）fat             |
-|  (?<=(T\|t)he\s)(fat\|mat)   |     匹配fat和mat，且其前跟着The或the    |
-|  (?<!(T\|t)he\s)(cat)   |  匹配cat，且其前不跟着The或the             |
-
-### 响应码
-
-| 响应码 | 说明                                                         |
-| ------ | ------------------------------------------------------------ |
-| 200    | 请求被正常处理                                               |
-| 204    | 请求被受理，但没有资源可以返回                               |
-| 206    | 客户端只是请求资源的⼀部分，服务器只对请求的部分资源执⾏GET⽅法 |
-| 301    | 永久性重定向                                                 |
-| 302    | 临时重定向                                                   |
-| 303    | 与302状态码有相似功能，只是它希望客户端在请求⼀个URI的时候，能通过GET⽅法重定向到另⼀个URI上 |
-| 304    | 发送附带条件的请求时，条件不满足时返回，与重定向⽆关         |
-| 307    | 临时重定向，与302类似，只是强制要求使⽤POST⽅法              |
-| 400    | 请求报⽂语法有误，服务器⽆法识别                             |
-| 401    | 请求需要认证                                                 |
-| 403    | 请求的对应资源禁⽌被访问                                     |
-| 404    | 服务器无法找到对应资源                                       |
-| 500    | 服务器内部错误                                               |
-| 503    | 服务器正忙                                                   |
-
-## Loon
-
-### 懒人配置
-
-#### 通过链接
-
-打开软件，选择配置-编辑-从URL下载，导入以下配置。注意需要翻墙环境。
-
-```
-https://raw.githubusercontent.com/nzw9314/Loon/master/Loon.conf
-```
-
-在MITM生成安装新的CA证书，进入设备设置-通用-描述文件安装证书，在设置-通用-关于本机-证书信任设置中信任证书，然后即可开启连接开关。
-
-#### ~~通过捷径~~
-
-已失效。
-
-<details>
-<summary></summary>
-
-```
-https://www.icloud.com/shortcuts/5ba2ec8d144a4be188b9037498bbdd26
-```
-</details>
-
-### 节点
-
-#### 手动配置
-
-Loon支持Shadowsocks、ShadowsocksR和Vmess。可通过手动填写、扫描二维码或添加订阅的方式导入节点，也可以通过修改配置文件的方式导入，格式如下。
-
-```
-[Proxy]
-# SS
-# 节点名称=协议,服务器地址,服务器端口,加密协议,密码
-1 = Shadowsocks, 1.2.3.4, 443, aes-128-gcm, "password"
-2 = Shadowsocks, 1.2.3.4, 443, aes-128-gcm, "password"
-
-# SSR
-# 节点名称=协议,地址,端口,加密方式,密码,协议类型,{协议参数},混淆类型,{混淆参数}
-3 = ShadowsocksR, 1.2.3.4, 443, aes-256-cfb,"password",auth_aes128_md5,{},tls1.2_ticket_auth,{}
-4 = ShadowsocksR, 1.2.3.4, 10076, aes-128-cfb,"password",auth_aes128_md5,{},tls1.2_ticket_auth,{}
-
-# vmess
-# 节点名称=协议,服务器地址,端口,加密方式,UUID,传输方式:(tcp/ws),path:websocket握手header中的path,host:websocket握手header中的path,over-tls:是否tls,tls-name:远端服务器域名,skip-cert-verify:是否跳过证书校验（默认否）
-5 = vmess,1.2.3.4,10086,aes-128-gcm,"uuid",transport:ws,path:/,host:icloud.com,over-tls:true,tls-name:youtTlsServerName.com,skip-cert-verify:false
-
-# http
-# 不支持username/password
-ProxyHTTP = http, 1.2.3.4, 8888
-
-[Remote Proxy]
-# 订阅节点
-# 别名=订阅URL
-Subs = https://example/server-complete.txt
-```
-
-#### 节点筛选
-
-筛选类型如下。
-
-|     类型    |    说明    |
-|-------------|------------|
-| NodeSelect  | 节点选择   |
-| NameKeyword | 关键词筛选 |
-| NameRegex   | 正则筛选   |
-
-对于正则筛选，一般可采用以下正则表达式。
-
-|         类型        |    说明    |
-|---------------------|------------|
-| `(?=.*A)^(?=.*B)^.*$` | 既有A又有B |
-| (A)\|(B)            | 有A或B     |
-| `^((?!A).)*$ `        | 不含A      |
-| `(?=.*A)^((?!B).)^*$` | 有A，没有B |
-
-### 策略组
-
-#### 基本分类
-
-策略组由策略类型和子策略构成。策略组会根据策略类型选出流量最终使用的节点。一个策略组可以包含任何单个节点、订阅节点、策略组、内置策略。
-
-Loon支持的策略组如下。
-
-| 策略组名称 | 策略组类型 | 策略组类型分组 |                                                        说明                                                       |                               示例                               |
-|------------|------------|----------------|-------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
-| 手动选择   | select     | 自定义         | 在节点列表手动选择一个节点或策略组                                                                                | PROXY = select,Auto,1,2,3,4,Subs                                 |
-| 延迟测试   | url-test   | 自定义         | 向提供的url发出http header请求，根据返回结果选择测速最快的节点，默认间隔 600s，测速超时时间5s，为避免资源浪费，建议节点数不要过多（不支持嵌套策略组，且只支持单个节点和远端节点，其他会被忽略） | Auto=url-test,1,2,3,4,Subs,url=http://bing.com/,interval=600     |
-| 可用测试   | fallback   | 自定义         | 向提供的url发出http header请求，根据返回结果选择第一个可用的节点                                                  | Fallback=fallback,1,2,3,4,Subs,url=http://bing.com/,interval=600 |
-| 网络类型   | ssid       | 自定义         | 根据网络类型或路由器名称选择节点或策略组                                                                          | SSID=ssid,default=PROXY,cellular=DIRECT,"SSID名称"=PROXY         |
-| 直连       | DIRECT     | 内置           | 不进行代理                                                                                                        | 所有流量不通过代理                                               |
-| 拒绝       | REJECT     | 内置           | 阻止请求进行                                                                                                      | 通常用作去广告                                                   |
-
-#### 手动配置
-
-可通过主界面的策略组添加，也可通过修改配置文件的方式添加。
-
-```
-[Proxy Group]
-# 基于用户UI选择
-PROXY = select,Auto,1,2,3,4,Subs
-
-# url-test
-Auto = url-test,1,2,3,4,Subs,url = http://bing.com/,interval = 600
-
-# fallback
-Fallback = fallback,1,2,3,4,Subs,url = http://bing.com/,interval = 600
-
-# 别名 = ssid,默认 = 策略组名,蜂窝 = 策略， ssid名称 = 策略组名
-SSID = ssid, default = PROXY, cellular = DIRECT, "DivineEngine" = PROXY
-
-# 广告模式
-Advertising = select,REJECT,DIRECT
-
-# 白名单模式PROXY，黑名单模式DIRECT
-Final = select,PROXY,DIRECT
-```
-
-### 规则分流
-
-#### 基本分类
-
-Loon支持的规则如下。
-
-|      匹配名称      |    匹配类型    |                               说明                              |
-|--------------------|----------------|-----------------------------------------------------------------|
-| 基于域名后缀       | DOMAIN-SUFFIX  |                                                                 |
-| 基于域名完整匹配   | DOMAIN         |                                                                 |
-| 基于域名关键字     | DOMAIN-KEYWORD |                                                                 |
-| 基于用户代理串     | USER-AGENT     | 根据 Http 的 user-agent 值来进行匹配，支持带有*，？的通配符匹配 |
-| 基于URL正则        | URL-REGEX      |                                                                 |
-| 基于请求IP范围     | IP-CIDR        | 通常用作局域网匹配                                              |
-| 基于IP定位国家编码 | GEOIP          | CN中国                                                          |
-| 兜底匹配           | FINAL          | 如果没有匹配的规则，默认使用的匹配                              |
-
-Loon支持的策略类型如下。
-
-| 策略类型 |                          说明                         |
-|----------|-------------------------------------------------------|
-| DIRECT   | 直连，即所有流量不通过代理                            |
-| Proxy    | 走特定的策略组，可为[Proxy Group]或[Proxy] 中的自定值 |
-| REJECT   | 拒绝，通常用作去广告                              |
-
-#### 远程配置
-
-通过配置-订阅规则即可。
-
-#### 手动配置
-
-通过配置-单个规则进行添加即可，也可在配置文件中手动添加。
-
-```
-[Rule]
-# 本地规则
-# 规则类型,域名(部分类型可省略),策略
-# 可选项:force-remote-dns(Default:false),no-resolve
-DOMAIN,google.com,PROXY
-# GeoIP为中国的走直连
-GEOIP,CN,DIRECT
-# 兜底策略使用Final策略组
-FINAL,Final
-
-[Remote Rule]
-# 远程规则
-# URL,策略
-# 以下地址将使用PROXY策略组
-https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Rule/ExampleRule.list,PROXY
-```
-
-#### 规则测试
-
-可通过此功能确认某个域名命中了哪个规则。
-
-### 重写
-
-#### 基本分类
-
-Loon支持的重写规则如下。
-
-| 重写名称     | 重写类型 | 说明                                       |
-| ------------ | -------- | ------------------------------------------ |
-| 替换host字段 | header   | 请求头中匹配的host字段将会被替换内容所替换 |
-| 拒绝请求     | reject   |                                            |
-| 返回302响应  | 302      |                                            |
-| 返回307响应  | 307      |                                            |
-
-### 脚本
-
-#### 手动配置
-
-Loon原生支持surge脚本。点击本地脚本-`+`即可写脚本。点击所有脚本-`+`，脚本类型选择cron，即可设置自动运行脚本。支持本地脚本或远程脚本。
-
-配置文件中与脚本相关的配置如下。
-
-```
-[Script]
-enable = true  
-
-# 类型 值（http-request/response为正则表达式，corn为cron表达式） 参数
-# http-request ^https?:\/\/(www.)?(example)\.com script-path=localscript.js
-# http-response ^https?:\/\/(www.)?(example)\.com script-path=https://example.com/loon.js timeout=10 requires-body = true
-# cron "0 8 * * *" script-path=cron.js
-```
-
-各参数含义如下。
-
-|      参数     |                               含义                              |
-|---------------|-----------------------------------------------------------------|
-| script-path   | 脚本路径，可以是本地脚本地址（暂不支持文件夹）或者远程的URL地址 |
-| requires-body | true表示允许修改request和response body的值，默认值为false       |
-| timeout       | 执行脚本的最长超时时间，单位为秒                                |
-
-#### 脚本编写
-
-##### http-request
-
-表示处理请求的脚本，通过该脚本可以修改http请求。该脚本必须使用`$done({参数})`传参结束，参数可以为空，或为修改后的headers/body。示例如下。
-
-```
-# 添加本地脚本，命名为hello-request.js
-# 脚本中可用变量为
-# $request.url
-# $request.headers
-# $request.body
-let headers = $request.headers;
-headers['X-Modified-By'] = 'Loon';
-
-$done({headers});
-```
-
-##### http-response
-
-与http-request基本相同，主要区别为http-response表示处理请求响应。示例如下。
-
-```
-# 脚本中可用变量为
-# $request.url
-# $request.headers
-# $request.body
-# $response.headers
-# $response.body
-let headers = $response.headers;
-headers['X-Modified-By'] = 'Loon';
-
-$done({headers});
-```
-
-##### cron
-
-表示定期执行脚本。Loon支持两种类型的cron表达式，如下。
-
-|      类型     |                                        格式                                       |          说明          |
-|---------------|-----------------------------------------------------------------------------------|------------------------|
-| 5位（精确到分） | `<Minute> <Hour> <Day_of_the_Month> <Month_of_the_Year> <Day_of_the_Week>`          | 分、时、日、月、周     |
-| 6位（精确到秒） | `<Seconds><Minute> <Hour> <Day_of_the_Month> <Month_of_the_Year> <Day_of_the_Week>` | 秒、分、时、日、月、周 |
-
-示例如下。
-
-```
-# 新建一个本地脚本命名为hello-cron.js，复制下方内容
-# 配置文件[Script]添加cron "* * * * *" script-path=hello-cron.js
-# 启动Loon，每隔一分钟可看到通知栏提醒
-
-$notification.post("这是主标题"，"这是副标题", "hello-cron!");
-
-console.log("【调试一下】hello-cron");
-```
-
-#### 公共API
-
-目前支持如下API。
-
-|                                  API                                   |             说明             |
-|------------------------------------------------------------------------|------------------------------|
-| `$httpClient.get(url/options<Object>, callback<Function>)`               |                              |
-| `$httpClient.post(url/options<Object>, callback<Function>)`              |                              |
-| `$notification.post('title<String>', 'subTitle<String>','body<String>')` | 通知栏提醒                   |
-| `console.log('String')`                                                  | 打印日志                     |
-| `$persistentStore.write('data<String>', 'key<String>')`                  | 数据持久化写入，只允许字符串 |
-| `$persistentStore.read('key<String>')`                                   | 获取存放的数据               |
-
-$httpClient.get传参为URL的示例如下。
-
-```
-$httpClient.get('https://example.com/index', function(result){ console.log(result);});
-```
-
-$httpClient.get传参为object的示例如下。
-
-```
-var params = {
-    url:"https://api.example.com/post",
-    header: {
-        Host:"api.example.com",
-        Content-Type: "application/json"
-    },
-    body:"string"
-}
-
-$httpClient.get(param, function(result){ console.log(result);});
-```
-
-### 优先级
-
-#### 配置文件
-
-最新版本默认从上往下。
-
-#### 规则
-
-本地规则高于远程规则。
-
-DOMAIN-SUFFIX、DOMAIN、DOMAIN-KEYWORD、USER-AGENT按照在配置文件中的位置，通过自上而下的顺序匹配，满足优先匹配。URL-REGEX、IP-CIDR、GEOIP在最后校验。
-
-#### 策略组
-
-界面上的排序对于策略组功能无影响。
-
-#### 重写
-
-本地重写高于远程重写。
-
-根据正则表达式在配置文件中的位置，通过自上而下的顺序匹配，满足优先匹配。
-
-### URL Schemes
-
-Loon支持的URL Schemes如下。
-
-| URL Schemes                                           | 作用                                s                         |
-| ----------------------------------------------------- | ------------------------------------------------------------ |
-| loon://switch                                         | 开启或关闭Loon                                               |
-| loon://editconfig                                     | 打开Loon配置文件                                             |
-| loon://requestLists                                   | 打开最近请求                                                 |
-| loon://dnsRequests                                    | 打开DNS                                                      |
-| loon://LogLists                                       | 打开日志                                                     |
-| loon://import?sub=url | 导入配置，url为urlencode之后的字符串（如loon://import?sub=https%3A%2F%2Floon.now.sh%2Flazy-config%2Fdefault） |
-
-## Quantumult
-
-### 基本操作
-
-#### 节点选择
-
-点击主页中下部的图标，可选择节点并进行延迟。在访问的网站没有被规则命中，而又需要以代理方式连接时，将选择此处被选中的节点。注意，延迟与网速并无直接关系。
-
-主页右下角显示当前节点的信息。若出现五角星，代表该节点为中转节点。
-
-### 懒人配置
-
-打开软件，选择设置-下载配置文件，导入以下配置。注意需要翻墙环境。
-
-```
-https://raw.githubusercontent.com/lhie1/Rules/master/Quantumult/Quantumult.conf
-```
-
-点击设置-HTTPS解密，打开开关并按照流程信任证书即可。
-
-### 节点
-
-Quantumult仅支持obfs的简单混淆，包括http和tls，不支持v2ray-plugin的混淆。
-可直接点击设置-服务器添加单个节点，或点击设置-订阅添加订阅。
-
-也可通过修改配置文件的方式，如下。
-
-```
-Sample Offline 01 = shadowsocks, 204.79.197.200, 80, chacha20, "password", upstream-proxy=false, upstream-proxy-auth=false, obfs=http, obfs-host="bing.com"
-Sample Offline 02 = shadowsocksr, 204.79.197.200, 80, aes-128-cfb, "password", protocol=auth_chain_b, obfs=tls1.2_ticket_fastauth, obfs_param="bing.com"
-Sample v2ray = vmess, 127.0.0.1, 443, none, "dd56b429-39d5-3984-87ed-6811f34c3fd3", over-tls=false, certificate=1
-```
-
-### 规则分流
-
-#### 手动配置
-
-通过设置-订阅-`+`即可。保存后向左滑动条目并点击替换或增加以更新。
-
-对于分流类型，可采用以下链接。
-
-```
-https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/Pro.conf
-```
-
-对于链接阻止类型，可采用以下链接。
-
-```
-https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/Rejection.conf
-```
-
-### 策略组
-
-#### 基本分类
-
-策略组类型如下。
-
-|     类型     |                              说明                             |
-|--------------|---------------------------------------------------------------|
-| 静态策略     | 策略结果由用户确定                                            |
-| 延迟策略     | 选择策略组中延迟最低的节点进行连接                            |
-| 负载均衡策略 | 同一策略组的各服务器被轮流使用                                |
-| 环境策略     | 根据所处Wi-Fi的SSID或蜂窝网络环境，确定使用哪种策略组进行连接 |
-
-#### 使用方法
-
-以下例说明策略组的使用方法。
-
-假设有香港、新加坡、美国三个地区的节点组，其中每个地区的节点组可分为直连的当地主机节点组、上海-当地的IPLC节点组以及深圳-当地的IPLC节点组。根据需要，Youtube选用美国节点，HBO选用香港节点，Netflix任意选择，且选择节点组中最快的一个进行连接。此需要可以通过新建策略组来满足。
-
-选择设置-策略，点击+号。由于需要根据速度选择节点，因此类型选择延迟策略。以建立香港直连节点组为例，填写名称并选择所有香港的直连节点，保存。同理建立上海-香港IPLC节点组和深圳-香港IPLC节点组（第三类节点组）。完成后建立静态策略的策略组，选择刚才新建好的三个策略组，由此可得到一个包含三个节点组的大节点组（第二类节点组）。
-
-对于美国和新加坡也进行此操作，得到三个代表不同地区的大节点组。新建一个静态策略的策略组，选择这三个大节点组，从而得到一个综合所有节点组的超大节点组（第一类节点组）。示意如下。
-
-```
-└── 总策略组（静态策略）
-    ├── 香港（静态策略）
-    │   ├── 直连节点（延迟策略）
-    │   ├── 上海-香港IPLC节点（延迟策略）
-    │   └── 深圳-香港IPLC节点（延迟策略）
-    ├── 新加坡（静态策略）
-    │   ├── 直连节点（延迟策略）
-    │   ├── 上海-新加坡IPLC节点（延迟策略）
-    │   └── 深圳-新加坡IPLC节点（延迟策略）
-    └── 美国（静态策略）
-        ├── 直连节点（延迟策略）
-        ├── 上海-美国IPLC节点（延迟策略）
-        └── 深圳-美国IPLC节点（延迟策略）
-```
-
-在设置-订阅中左滑分流规则，选择替换。下滑找到Youtube专用节点，选择第二类的美国节点，找到HBO NOW&GO专用节点，选择第二类的香港节点，找到Netflix专用节点，选择第一类的节点，保存即可。
-
-### 其它
-
-#### 手机连接WiFi时停止分流
-
-编辑配置文件，在`[SUSPEND-SSID]`一项下输入Wi-Fi名称即可。
-
-## Shadowrocket
-
-可在手机上打开以下链接下载。
-
-```
-https://ltribe.lanzous.com/igUjnm6m6de
-```
-
-### 基本操作
-
-#### 开启代理共享
-
-选择设置-代理-代理共享-启用共享。其它设备与该手机连接到同一Wi-Fi下后，在系统设置中进入Wi-Fi详情，开启Wi-Fi的HTTP代理，类型选择手动，地址和端口填写Shadowrocket中提供的值即可。
-
-#### 场景使用
-
-场景配置无法写入配置文件。
-
-场景的使用可以使网络环境变化时（更改Wi-Fi或改成蜂窝数据）使用代理或直连模式。在主界面点击全局路由-设置-场景，新建一个场景，填写Wi-Fi的SSID并选择路由模式即可。
-
-#### 自动选择最快节点
-
-点击全局路由-分组，新增分组并选择服务器。完成后返回，打开`启用回退`即可。
-
-### 懒人配置
-
-打开软件，选择配置-添加配置，导入以下配置。注意需要翻墙环境。
-
-```
-https://raw.githubusercontent.com/w37fhy/QuantumultX/master/shadowrocket_diy.conf
-```
-
-点击远程配置中导入的链接，选择使用配置，等待文件下载到本地。下载到本地后点击本地文件中对应的配置，选择编辑配置-HTTPS解密，打开并按照流程信任证书即可。
-
-### 节点
-
-与其它软件不同的是，Shadowrocket的配置文件中不包含节点信息，节点信息被独立为一个json文件。
-
-通过首页的+号即可添加配置，支持Shadowsocks、ShadowsocksR、Vmess等，也可添加订阅。配置好节点后，可通过数据-导出节点生成json文件。需要导入节点信息时，点击数据-导入节点，选择json文件即可。
-
-### 规则分流
-
-#### 手动配置
-
-进入配置-`+`即可配置。
-
-对于分流类型，可采用以下链接。
-
-```
-https://raw.githubusercontent.com/ConnersHua/Profiles/master/Shadow/Pro.conf
-```
-
-对于去广告类型，可采用以下链接。
-
-```
-https://raw.githubusercontent.com/h2y/Shadowrocket-ADBlock-Rules/master/sr_top500_whitelist_ad.conf
-```
-
-
-## Kitsunebi
-
-### 节点
-
-在服务器-`+`即可添加，支持Vmess、Shadowsocks和SOCKS。
-
-### 规则分流
-
-#### 手动配置
-
-点击高级-规则集，点击右边的i，修改URL为远程规则集并存储即可。
-
-可使用以下链接。
-
-```
-https://raw.githubusercontent.com/aileiys/Kitsunebi/master/Kitsunebi.conf
-```
-
-## Surge
-
-### 破解
-
-越狱后下载以下插件并安装即可。
-
-```
-https://wws.lanzous.com/tp/i0Ge2dh3oeb
-```
-
-### 懒人配置
-
-点击左上角下拉菜单，选择从URL下载配置，复制以下链接并确定即可。完成后若菜单栏出现策略组，则成功。
-
-```
-https://raw.githubusercontent.com/nzw9314/Surge/master/Surge_Basic.conf
-```
-
-### 节点
-
-#### 手动配置
-
-在主界面点击代理服务器，选择添加代理即可添加单个节点，选择新的策略组并勾选使用外部代理列表则可添加订阅。也可直接修改配置文件，在`[proxy]`模块下填写即可。
-
-完成后点击外部资源，下拉到底部并点击立即更新。
-
-对于订阅，Surge无法直接添加订阅节点到proxy模块，应当在现有策略组中添加外部代理列表以添加订阅，在需要引用订阅节点的策略组后添加`policy-path=[订阅链接]`参数即可。注意每个策略组只能绑定一个订阅，对于多订阅则需要先整合为一个订阅链接，或通过一个策略组包含多个订阅策略组的形式。
-
-订阅文件格式与`[proxy]`模块下的写法一致，不包含`[proxy]`本身。注意必须是明文，不能进行base64加密。
-
-#### 切换
-
-点击策略组，进入相应策略组，选择需要切换的节点即可。
-
-### 策略组
-
-新建策略组时，在策略组类型中可选择模式，类型和含义与Loon基本一致。
-
-### 规则分流
-
-#### 匹配过程
-
-如果一个使用域名的请求遇到了一个IP类型规则（IP-CIDR/IP-CIDR6/GEOIP）且该规则不带有 no-resolve选项，那么将触发DNS查询。
-
-所以应将所有非IP类规则置于规则的顶部，将IP类规则置于尾部，避免并不需要进行本地DNS查询的请求产生额外的DNS查询。
-
-### 脚本
-
-可通过分析-脚本编辑器打开已有脚本进行编辑。
-
-### DNS
-
-在主页面点击DNS服务器即可编辑。
-
-如果经常使用的网络没有DNS劫持问题，配置为使用系统DNS配置并追加223.5.5.5和114.114.114.114作为冗余。如果经常使用的网络存在DNS劫持问题，配置为仅使用223.5.5.5和114.114.114.114。
-
-## Quantumult X
-
-### 正版判断
-
-Quantumult X引入了防共享机制，版本号右侧有绿色√的即为正版。若为问号，则代表被检测到有共享账号行为。
-
-若显示绿色问号，先删除TestFlight测试版，安装App Store最新版并运行，待版本信息显示为绿色√后再安装TestFlight测试版。
-
-若显示红色问号，则证明为盗版。若为非正版，Rewrite和MitM功能将被限制。
-
-关于共享验证，若不开启iCloud，则只能验证八台设备。若开启iCloud，则将有三个iCloud辅助验证名额。使用iCloud验证并无设备数量限制，以首次使用Quantumult X并开启iCloud功能的iCloud为准，注意App Store中的Apple ID与iCloud可以不一致。因此，若所有设备都使用同一个iCloud账号，则无数量限制。
-
-### 基本操作
-
-#### 三菱按钮
-
-长按三菱按钮可切换模式，左侧出现的更新按钮可一键更新所有节点。
-
-#### 延迟测试
-
-延迟测试可在主页面展开订阅，下拉即可。
-
-也可以长按节点名，选择`网页响应测试`来测对应节点/订阅的延迟，或者点按策略组图标。
-
-#### 双排图标
-
-在主界面中，向右滑动策略组图标至最左端后，再次向右滑可变为小图标，再次向右滑可变为双排。
-
-#### 隐藏VPN图标
-
-点击三菱图标，选择其他设置，在VPN下开启`排除路由0.0.0.0/31`即可。
-
-#### 网络活动日志模块
-
-在主界面中即可看到。该模块可以看到iOS所有网络请求。绿色小锁代表MitM命中域名，链接颜色变红则说明rewrite即重写规则规则生效。
-
-可通过该模块完成抓包行为，也可检查节点、策略、分流、重写、MitM的配置是否起作用。
-
-#### 注释符号
-
-`;`、`//`、`#`在配置文件中为注释符号。
-
-#### 开启iCloud
-
-点击三菱图标，选择其他设置，开启iCloud即可。
-
-若未开启iCloud，则相关文件将存到我的iPhone/Quantumult X目录，其中脚本将被放于Scripts文件夹。若开启，则变更为iCloud Drive/Quantumult X目录。
-
-#### 白色环形标志
-
-若主界面的策略组模块上有白色环形标志，则代表可以长按以添加或删除其中的节点。
-
-#### 配置文件快速定位
-
-点击右上角的方向图标按钮，可快速定位到配置文件的不同部分。
-
-### 懒人配置
-
-#### 通过链接
-
-点击三菱图标，选择配置文件中的导入，复制以下链接，点击确定。
-
-找到MinM模块，点击生成证书，提示生成成功。点击安装证书并按照流程完成信任即可。
-
-```
-https://raw.githubusercontent.com/nzw9314/QuantumultX/master/QuantumultX.conf
-```
-
-#### 通过托管绑定
-
-托管绑定的配置会自动与远端保持同步，更新时本地配置会被远端配置覆盖。
-
-支持绑定远程、本地、iCloud配置文件。若绑定iCloud配置文件，则APP内所做的修改会立即生效到配置文件本身。
-
-点击三菱图标，选择右上角的关联图标，填入配置链接或文件名。若引用iCloud配置文件，则需要将文件先放到iCloud Drive/QuantumultX/Profiles中，假设为QX01.txt，然后直接填写QX01.txt即可。
-
-#### 通过URL Scheme
-
-按照以下JSON方式填写，其中server_remote填写节点订阅链接，filter_remote填写分流规则，rewrite_remote填写复写规则链接。
-
-```
-{
-    "server_remote": [
-        "https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server.txt, tag=Sample-01",
-        "https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.txt, tag=Sample-02"
-    ],
-    "filter_remote": [
-        "https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Advertising.list, tag=去广告, enabled=true",
-        "https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Apple.list, tag=Apple服务, enabled=true",
-        "https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/China.list, tag=国内网站, enabled=true",
-        "https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/DomesticMedia.list, tag=国内视频, enabled=true",
-        "http://cloudcompute.lbyczf.com/x-rule-set?url=https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Media/Netflix.list, tag=📺Netflix, force-policy=📺 Netflix, enabled=true",
-        "http://cloudcompute.lbyczf.com/x-rule-set?url=https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Media/YouTube.list, tag=🎬Youtube, force-policy=🎬 Youtube, enabled=true",
-        "https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/ForeignMedia.list, tag=国外视频, enabled=true",
-        "https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Global.list, tag=国外网站, enabled=true",
-        "https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Hijacking.list, tag=运营商劫持, enabled=true"
-    ],
-    "rewrite_remote": [
-        " http://cloudcompute.lbyczf.com/quanx-rewrite, tag=Lhie1复写"
-    ]
-}
-```
-
-打开以下网站，复制以上代码并点击Encode，复制结果。
-
-```
-https://www.urlencoder.org/
-```
-
-将复制的结果加到如下格式，并在Safari打开该链接即可。
-
-```
-quantumult-x:///update-configuration?remote-resource=[结果]
-```
-
-### 通用
-
-#### SSID挂起
-
-指定在特定Wi-Fi环境下Quantumult X停止工作，只有`[task]`模块生效。示例如下。
-
-```
-[general]
-ssid_suspended_list = [Wi-Fi的SSID]
-```
-
-#### 运行模式切换
-
-可根据网络自动切换分流/直连/全局代理等模式，示例如下。其表示4G网络与普通Wi-Fi下运行filter分流模式，asus-5g 则切换为全局直连模式，asus则为全局代理模式。该模式与手动切换直连/全局代理等效，rewrite和task模块始终生效。
-
-```
-[general]
-running_mode_trigger=filter, filter, asus-5g:all_direct, asus: all_proxy
-```
-
-#### 资源解析器
-
-资源解析器可将任何格式的服务器订阅、规则、复写等资源转换成Quantumult X所支持的格式。
-
-##### 添加
-
-在编辑文件中加入以下代码即可。
-
-若提示没有自定义解析器，则长按右下角图标后点击左侧刷新按钮，更新资源，后台退出APP，直到出现解析器说明。
-
-```
-[general]
-resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
-```
-
-##### 参数说明
-
-| 参数         | 说明                                                         | 示例                       |
-| ------------ | ------------------------------------------------------------ | -------------------------- |
-| in/out       | 保留/排除，多参数（逻辑或）用`+`连接，逻辑与用`.`连接        |                            |
-| inhn/outhn   | 主机名筛选                                                   |                            |
-| regex        | 利用正则表达式以筛选节点                                     |                            |
-| emoji=1/2/-1 | 添加或删除节点名中的emoji旗帜（国行设备用 emoji=2）          |                            |
-| udp=1, tfo=1 | 开启udp-relay及fast-open（默认关闭，此参数对源类型为QuanX/Surge的链接无效） |                            |
-| rename       | rename=旧名@新名，以及`前缀@`，`@后缀`， 用`+`连接           | rename=香港@HK+[SS]@+@[1X] |
-| delreg       | 利用正则表达式以删除节点名中的字段                           |                            |
-| replace      | 正则替换server中的内容，可用于重命名、更改加密方式等需求     |                            |
-| cert=0       | 跳过证书验证（vmess/trojan），即强制tls-verification=false   |                            |
-| tls13=1      | 开启tls13=true（vmess/trojan）                               |                            |
-| sort=1/-1/ x | 根据节点名正序/逆序/随机排列                                 |                            |
-| info=1       | 开启通知提示流量信息（前提是原订阅链接有返回该信息），默认关闭 |                            |
-| policy=xx    | 分流规则专用，用于直接指定策略组或为Surge格式的rule-set生成策略组（默认Shawn策略组） |                            |
-| ntf=1        | 打开资源解析器的提示通知（默认关闭），rewrite/filter类型则会强制在out参数时开启通知提示被删除（禁用）的内容，以防止规则误删除 |                            |
-
-##### 示例
-
-示例如下。
-
-```
-// 远程订阅
-// 保留参数in=tls+ss，过滤参数out=http+2
-https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.txt#in=tls+ss&out=http+2
-
-// 分流规则
-https://Advertising.list#policy=Shawn&out=aweme
-```
-
-#### 查询节点信息
-
-可通过JS脚本实现在主界面查询节点信息，在点击相应的节点时出现节点相关内容。代码放到配置文件的`[general]`下即可。
-
-```
-[general]
-;geo_location_checker用于节点页面的信息展示
-geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/IP_API.js
-;geo_location_checker=http://api.ipstack.com/check?access_key=1c24147fb534e1a71cb35ff84de2d153&language=zh&output=json, https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/IPInfo.js
-;geo_location_checker=http://ifconfig.co/json,https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/IPConfig.js
-;geo_location_checker=http://extreme-ip-lookup.com/json/,https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/IPCheck.js
-```
-
-#### 设置关联图标
-
-设置profile_img_url参数可使关联成功后原关联图标出现图案。图片为108*108的png格式，PNG与png大小写敏感，地址可远程或本地。
-
-```
-[general]
-profile_img_url= https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/img/dragonball/1.PNG
-```
-
-#### 节点测试
-
-指定用于测试节点速度的网站。
-
-```
-[general]
-server_check_url=http://www.qualcomm.cn/generate_204
-```
-
-#### UDP端口白名单
-
-留空则默认为所有端口。不在白名单的端口将被丢弃。
-
-```
-[general]
-udp_whitelist=53, 123, 1900, 80-443
-```
-
-#### 其它
-
-```
-[general]
-;dns exclusion list中的域名将不使用fake-ip方式. 其它域名则全部采用fake-ip 及远程解析的模式
-;dns_exclusion_list=*.qq.com, qq.com
-
-;下列表中的内容将不经过QuantumultX的处理
-;excluded_routes=192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10, 10.0.0.0/8
-;icmp_auto_reply=true
-```
-
-### 节点
-
-对于订阅链接，Quantumult X支持流量使用统计。
-
-#### 手动配置
-
-点击三菱图标，选择节点中的添加即可手动输入Shadowsocks节点。选择扫码或URI可导入Shadowsocks、ShadowsocksR或Quantumult X格式的Vmess、Trojan和Https节点。
-
-选择节点中的引用，即可添加订阅。可使用远程订阅链接，也可以使用本地/iCloud文件路径进行引用。
-
-订阅文件格式与`[server_local]`模块下的写法一致，不包含`[server_local]`本身。注意必须是明文，不能进行base64加密。
-
-也可通过修改配置文件的方式导入，格式如下。
-
-```
-[server_local]
-# []表示可选项
-# SS
-shadowsocks=example.com:80, method=chacha20, password=pwd, obfs=http, obfs-host=bing.com, [obfs-uri=/resource/file], fast-open=false, udp-relay=false, [server_check_url=http://www.apple.com/generate_204], tag=Sample-A
-
-# SS+WS
-shadowsocks=example.com:80, method=aes-128-gcm, password=pwd, obfs=ws, [obfs-uri=/ws], fast-open=false, udp-relay=false, tag=Sample-E
-
-# SS+WS+TLS
-shadowsocks=example.com:443, method=aes-128-gcm, password=pwd, obfs=wss, obfs-uri=/ws, fast-open=false, udp-relay=false, tag=Sample-G
-
-# SSR
-shadowsocks=example.com:443, method=chacha20, password=pwd, ssr-protocol=auth_chain_b, ssr-protocol-param=def, obfs=tls1.2_ticket_fastauth, obfs-host=bing.com, tag=Sample-D
-
-# Vmess
-vmess=example.com:80, method=aes-128-gcm, password=23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, fast-open=false, udp-relay=false, tag=Sample-J
-
-# Vmess+WS
-vmess=example.com:80, method=chacha20-ietf-poly1305, password= 23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, obfs-host=ws-c.example.com, obfs=ws, obfs-uri=/ws, fast-open=false, udp-relay=false, tag=Sample-H
-
-# Vmess+WS+TLS
-vmess=ws-tls-b.example.com:443, method=chacha20-ietf-poly1305, password= 23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, obfs-host=ws-tls-b.example.com, obfs=wss, obfs-uri=/ws, tls-verification=true,fast-open=false, udp-relay=false, tag=Sample-I
-
-# Vmess+over TLS
-vmess=example.com:443, method=none, password=23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, obfs-host=vmess-over-tls.example.com, obfs=over-tls, tls-verification=true, fast-open=false, udp-relay=false, tag=Sample-L
-
-# Http
-http=http.example.com:80, username=name, password=pwd, fast-open=false, udp-relay=false, tag=http
-
-# Https
-http=https.example.com:443, username=name, password=pwd, over-tls=true, tls-verification=true, tls-host=example.com, fast-open=false, udp-relay=false, tag=http-tls
-
-# Trojan+TLS
-trojan=192.168.1.1:443, password=pwd, over-tls=true, [tls-host=example.com], tls-verification=true, fast-open=false, udp-relay=false, tag=trojan-tls
-
-[server_remote]
-# 远程订阅
-https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server.txt, tag=example1, enabled=true
-# 本地文件
-server.txt, tag=example2, enabled=true
-```
-
-#### 分组图标
-
-在配置文件中找到要添加图标的订阅链接，添加img-url参数即可，示例如下。注意图标格式必须为png，且分辨率必须为`108*108`像素。
-
-```
-img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/IPLC.png
-```
-
-### 策略组
-
-#### 基本分类
-
-Quantumult X支持的策略组类型如下。
-
-|     名称    |      类型      |                                           说明                                           |
-|-------------|----------------|------------------------------------------------------------------------------------------|
-| Static      | 静态策略组     | 可以嵌套其它所有类型的策略组，需手动选择路线/子策略组（需至少配置一个节点）          |
-| Available   | 健康检查策略组 | 只可直接套用节点，不可嵌套其它策略组，自动选择第一个可用的节点（需至少配置两个节点）     |
-| Round-Robin | 轮询策略组     | 只能直接套用节点，不可以嵌套其它策略组，按网络请求轮流使用所有节点（需至少配置两个节点） |
-| SSID        | SSID策略组     | 可以套用其它类型的策略组，根据网络/Wi-Fi切换节点/策略                                    |
-
-#### 手动配置
-
-在节点订阅列表中右滑，选择更多，即可将该订阅链接内所有节点直接绑定生成一个新策略组。支持生成static静态策略、available健康检查策略、round-robin负载均衡策略。该方式生成的策略组将与订阅链接绑定，节点也跟随订阅链接改变。也可通过配置文件的方式生成，在`[server-remote]`中填写即可，示例如下。
-
-```
-[server-remote]
-# 生成Hong Kong的策略组, 类型是static, 由as-policy决定
-https://xxxx.server.com, tag=Hong Kong, as-policy=static, enabled=true
-```
-
-若需要直接创建策略组，可直接编辑配置文件。示例如下。
-
-```
-[policy]
-# 静态策略组
-static=policy-name-1, Sample-A, Sample-B, Sample-C
-
-# 可用性策略组
-available=policy-name-2, Sample-A, Sample-B, Sample-C
-
-# 轮询策略组
-round-robin=policy-name-3, Sample-A, Sample-B, Sample-C
-
-# SSID策略组
-# ssid=组名,4g下默认策略,Wi-Fi下默认策略,wifi-A:策略A,wifi-B:策略B
-ssid = SSID Group, HK Group, HK Group, ASUS_5G:MO Group, AMG-5G:direct
-```
-
-直接创建策略组时，还可以通过正则表达式参数，将订阅/节点的一部分添加到策略组中，支持static静态策略、available健康检查策略、round-robin负载均衡策略。当筛选结果为空时，将自动设为直连模式。注意，若生成available健康检查策略组，则仅可包含一个节点，不可再混搭节点或其余策略组。
-
-正则表达式参数说明如下。
-
-|        参数        |             说明            |
-|--------------------|-----------------------------|
-| resource-tag-regex | 根据订阅名（tag）来筛选节点 |
-| server-tag-regex   | 根据节点名来筛选节点        |
-
-常用正则表达式如下。
-
-|         类型        |    说明    |
-|---------------------|------------|
-| `(A).*(B)` | 既有A又有B |
-| (A)\|(B)            | 有A或B     |
-| `^((?!A).)*$`        | 不含A      |
-| `(?!.*(A)).*(B)` | 没有A，有B |
-
-示例如下。
-
-```
-[policy]
-static=policy-name, resource-tag-regex=^sample, server-tag-regex=^example
-```
-
-#### 分组图标
-
-配置文件中相关配置末尾添加`img-url=`参数即可，与节点添加分组图标方法一致。
-
-### 规则分流
-
-#### 基本分类
-
-Quantumult X支持的分流策略如下。
-
-| 类型         | 说明               | 示例                                                       |
-| ------------ | ------------------ | ---------------------------------------------------------- |
-| HOST         | 完整域名匹配       | limbopro.xyz                                               |
-| HOST-SUFFIX  | 域名后缀匹配       |                                                            |
-| HOST-KEYWORD | 域名关键字匹配     | limboppro                                                  |
-| USER-AGENT   | 浏览器用户代理匹配 | *abc?                                                      |
-| IP-CIDR      | 无类别域间路由     | 192.168.x.x                                                |
-| GEOIP        | GeoIP数据库IP匹配  | 参数填US，则为美国IP数据库匹配，所有美国IP匹配该规则则执行 |
-
-#### 手动配置
-
-对于单条分流规则，可点击三菱按钮，选择分流中的添加即可。也可以在网络请求记录中找到对应记录，点击右上角漏斗符号直接添加。
-
-对于订阅，可点击三菱按钮，选择分流中的引用，点击+号即可添加。注意，对于同一请求的不同规则，在配置文件中位置较上的分流规则优先生效。
-
-对于规则类型，可采用以下链接。
-
-```
-https://raw.githubusercontent.com/lhie1/Rules/master/Quantumult/QuantumultX.conf
-https://raw.githubusercontent.com/shigalin/Config/master/QuantumultX.conf
-```
-
-对于规则类型，可采用以下链接。注意需开启策略偏好，并选择REJECT，否则将不会替换原有策略组，而自动创建新的策略组。
-
-```
-https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/AdRule.list
-https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/AdRuleTest.list
-```
-
-配置文件的相关内容如下。
-
-```
-[filter_remote]
-# 可使用force-policy来强制使用策略偏好，参数为要替换的策略组名
-# 远程订阅
-https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Advertising.list, tag=去广告, enabled=true
-
-# 本地文件
-advertising.txt, tag=🚦去广告，forcr-policy=reject, enabled=true
-```
-
-### 重写
-
-#### 手动配置
-
-对于本地重写，点击三菱图标，选择重写-添加即可。对于订阅，则选择重写-引用-`+`，复制链接并点击确定即可。
-
-对于脚本类型，可采用以下链接。
-
-```
-https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js.conf
-```
-
-对于去广告类型，可采用以下链接。
-
-```
-https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1.conf
-```
-
-配置文件的相关内容如下。
-
-```
-[rewrite_remote]
-# 远程链接
-https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Rewrite.conf, tag=神机复写规则，enabled=true
-
-# 本地/iCloud引用
-rewrite.txt, tag=本地复写, enabled=true
-
-[rewrite_local]
-^http://example\.com/resource1/1/ url reject
-^http://example\.com/resource1/2/ url reject-img
-```
-
-#### 脚本类型说明
-
-##### 配置
-
-重写功能可对特定链接调用脚本，从而实现去广告、破解VIP等功能。配置文件的相关内容如下。
-
-```
-[rewrite_remote]
-# 远程链接
-# 匹配网址 url 复写类型 脚本文件
-http://example\.com/resource5/ url script-response-body https://raw.githubusercontent.com/crossutility/Quantumult-X/master/sample-rewrite-with-script.js
-
-[rewrite_local]
-# 本地文件
-http://example\.com/resource5/ url script-response-body script_name.js
-```
-
-##### 查看
-
-在主界面选择重写规则，搜索response-body即可查看所有脚本类型的重写。
-
-
-### 任务
-
-#### 手动配置
-
-Quantumult X暂时不支持远程订阅任务脚本，即没有`[task_remote]`模块。因此需要将每一条任务脚本写到配置文件，但脚本的路径可以为本地或远程。
-
-在配置文件中手动添加`[task_local]`模块，并按照格式填写即可，示例如下。
-
-```
-[task_local]
-# 远程脚本
-# * * * * *为cron语句
-* * * * * http://example.com/name.js, tag=京东签到
-
-# 本地文件
-* * * * * name.js, tag=京东签到
-```
-
-如果是签到类task任务，一般还需要先获取对应的cookie。脚本内一般会有使用说明。
-
-#### 批量添加
-
-点击三菱按钮，进入`构造请求`，点击右上角的第一个按钮后点击`+`号，输入仓库地址后即可选择要添加的任务。
-
-#### 分组图标
-
-配置文件中相关配置末尾添加`img-url=`参数即可，与节点添加分组图标方法一致。
-
-## Thor
-
-应当使用Thor 1.3.4，以保证脚本能够正常使用。
-
-### 安装
-
-在电脑下载以下IPA并用同步推安装到手机。
-
-```
-https://code.aliyun.com/zwxsa/iOSbuy/raw/3501cba392d61d91d10b84f0a2524bf179d57ff3/Thor%201.3.4.ipa
-```
-
-安装完成后打开，点击闪电按钮以安装证书。若提示需要设备共存验证，则修改系统时间至验证后的时间，再打开Thor即可通过验证。
-
-如果不能通过认证，则卸载1.3.4版本的Thor并安装1.2.0版本的Thor，打开后安装证书和VPN。VPN安装完成后再安装Thor 1.3.4，重新安装证书并删除原来的证书即可，注意不要删除VPN。
-
-```
-https://ngxz.baklib.com/3a93/cfbe
-```
-
-在使用时不能直接从Thor的主界面打开抓包，需要在主界面中选择好规则后，进入系统设置-VPN，列表中选择Thor条目并开启VPN按钮即可。
-
-### 抓包
-#### IPA
-
-开启全局抓包后，在助手软件（如爱思助手）下载要抓包的应用，完成下载后回到Thor，打开抓包记录，搜索`ipa`，点击后缀名为ipa的记录，复制链接后打开Shu下载即可。
-
-也可以添加一个过滤器，在`包括关键字`一栏输入`ipa`并存储，以后使用该过滤器抓包即只抓到ipa记录。
-
-#### 翻墙节点
-
-开启全局抓包后，打开翻墙软件并进行连接，然后停止抓包，点击抓包记录，找到含有`connect`的记录并进入，切换到`概览`选项卡，点击`消息体`即可。
-
-#### 付费音乐
-
-开启全局抓包后，打开音乐软件（如QQ音乐），点击下载后回到Thor。选择抓包记录，后缀为`flac`的即为无损音乐格式。
-
-### 过滤器
-
-过滤器通过更改本地数据进⾏交互欺骗，从⽽达到APP破解等效果。
-
-#### 获取
-
-可通过以下捷径。
-
-```
-https://www.icloud.com/shortcuts/9097fa1569b6485b816d6fce8f7c8f4c
-```
-
-#### 制作
-
-以爱字幕APP为例说明制作方法。
-
-##### 查找修改数据
-
-开启Thor全局抓包，打开爱字幕APP，停留一段时间后即可关闭，然后关闭Thor抓包。
-
-进入Thor的抓包记录，寻找含有VIP数据的包，此处为`api/v1.user/info`这一数据。一般而言可寻找user或者info相关的路径。点击响应-application/json，即可进入消息体，摘录如下。复制该消息体的内容。
-
-```
-{
-    "status":1,
-    "msg":"success",
-    "result":{
-        "id":1641729,
-        "token":
-        "mobile":"",
-        "is_vip":0,
-        "nickname":"  ",
-        "photorul":"https://www.qlogo.cn",
-        "left_times":1,
-        "vip_end_time":0,
-        "permanent_vip":0,
-        "is_enterprise":0,
-        "is_new":0,
-        "new_user":1
-    }
-}
-```
-
-则目标为将is_vip改为1，且将vip_end_time改为一个非常大的时间戳。
-
-##### 完成修改
-
-退回抓包记录界面，在刚才的那条数据上左滑，点击更多-提取到过滤器，点击+号，点击添加过滤器，填写过滤器名称，并进入`包括域名`，点击+号，选择下面提供的域名。`包括关键字`同理。
-
-点击`挂载断点`，选择编辑-新建-响应消息体回传前-编辑-新建-判断条件，在操作对象里点击`@rep.api`。然后手打以下内容并保存，表示匹配到这条响应。注意`@rep.api`与`CONTAINS[cd]`间要有空格。
-
-```
-CONTAINS[cd] "api/v1.user/info"
-```
-
-返回上一页，点击编辑-添加表达式（条件满足时）-运算语法，选择`^替换/插入`-`@rsp.bodyText`（表示重写响应消息体），然后点击调试-调试表达式#1。将刚才消息体的内容复制到待匹配文本中，然后在正则表达式中输入需要匹配的修改位置，其中`\d`表示匹配一个数字，`\d+`表示匹配一串数字。
-
-现需匹配`"is_vip":0`，则在正则表达式中输入`"is_vip":\d`，点击匹配，即可找到该位置。然后点击设置替换值，输入`"is_vip":1`，点击替换即可。
-
-`"vip_end_time":0`同理，注意需要退出到匹配动作页，重新执行编辑-添加表达式（条件满足时）的步骤。其中时间戳可用Anubis中的日期格式化工具获得。
-
-制作完成后保存过滤器，选择开启即可。
-
-#### 修改
-
-选择一个过滤器并点击`i`-编辑，点击`挂载断点`下的断点，选择查看断点并修改即可。
-
-如果查看断点不可用，说明作者不允许修改该过滤器。为去除限制，点击`i`-导出，导出到Shu后解压到任意位置。打开解压好的文件，点击文件夹内的info.json，打开后选择导出文本-添加到备忘录。打开刚才保存的备忘录，将rights_protected改为0，然后将备忘录导出到Shu，重命名为info.json并覆盖原来的info.json即可。
-
-## Http Catcher
-
-### 安装
-
-1.1.11版本无内购。打开以下链接，选择Http Catcher 1.1.11进行安装。
-
-```
-https://ngxz.baklib.com/3a93/cfbe
-```
-
-安装完成后打开Http Catcher，打开HTTPS抓包，按照提示操作即可。
-
-### 重写
-
-Http Catcher的重写与Thor的过滤器功能类似。
-
-#### 导入
-
-直接将规则文件用Http Catcher打开即可。也可进入设置-重写，点击`+`号，选择`在文本编辑器中编辑`，复制规则内容即可。
-
-#### 制作
-
-以泼辣修图APP为例说明制作方法。
-
-##### 查找修改数据
-
-开启Http Catcher全局抓包，进入泼辣修图APP，点击恢复购买，完成后回到Http Catcher停止抓包。
-
-在刚抓到的数据里面找到路径为/v1/payments/appleiap/receipts/confirmation的数据，在响应里面可以看到响应消息体。分析购买前和购买后消息体的不同，可知需将响应状态码从400改为200，并修改`"isUnlimited":true`。
-
-##### 完成修改
-
-复制购买后的数据响应消息体，在需要重写的数据上左滑，点击更多-新建重写，填写名称。点击`位置`，删除PORT中的数值。
-
-点击`添加规则`，类型选择响应，行为选择Body，开启正则表达式，输入正则法则`.*\}`（表示全匹配），在`替换`中输入刚才复制的消息体。正则表达式可通过Anubis进行校验，以确认填写的表达式正确。
-
-完成后继续添加规则，类型选择响应，行为选择响应状态码，查找400并替换为200。保存重写规则并打开即可。
-
-
-
-
-#### 重写库
-
-```
-https://github.com/pm936/httpcatcher
-```
-
-## 附加功能
-### temperJS
-
-temperJS可以使油猴脚本在手机端运行。
-
-#### 安装
-
-可通过以下捷径安装。
-
-```
-https://www.icloud.com/shortcuts/7a21b797d6c34a59a3978683dabc6298
-```
-
-也可编辑网络调试工具的配置文件。对于Quantumult X，可添加以下重写。
-
-```
-hostname=greasyfork.org, openuserjs.org
-
-https:\/\/greasyfork\.org\/scripts\/.*\.user\.js url script-response-body https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GreasyFork/greasy-fork.js
-```
-
-对于Loon，可添加以下重写。
-
-```
-hostname=greasyfork.org, openuserjs.org
-
-http-response ^https:\/\/(greasyfork|openuserjs)\.org\/.*\/.*\.user\.js script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GreasyFork/greasy-fork.js, requires-body=true
-```
-
-对于Surge，可添加以下脚本。
-
-```
-[MITM]
-hostname=greasyfork.org, openuserjs.org
-
-[Script]
-Greasy Fork=type=http-response, pattern=^https:\/\/(greasyfork|openuserjs)\.org\/.*\/.*\.user\.js, script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GreasyFork/greasy-fork.js, requires-body=true
-```
-
-也可直接添加以下模块。
-
-```
-https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GreasyFork/Surge.sgmodule
-```
-
-#### 使用
-
-在手机端的浏览器打开greasyfork的脚本页，点击安装即可自动转换。
-
-### BoxJS
-
-BoxJS可帮助网络调试工具运行脚本时配置相关参数。
-
-#### 安装
-
-对于Surge，可添加模块，地址如下。
-
-```
-// 稳定版
-https://gitee.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.surge.sgmodule
-
-// 测试版
-https://gitee.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.surge.tf.sgmodule
-```
-
-对于Quantumult X，可添加重写，地址如下。
-
-```
-// 稳定版
-https://gitee.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.quanx.conf
-
-// 测试版
-https://gitee.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.quanx.tf.conf
-```
-
-对于Loon，可添加插件，地址如下。
-
-```
-// 稳定版
-https://gitee.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.loon.plugin
-
-// 测试版
-https://gitee.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.loon.tf.plugin
-```
-
-若需要更新BoxJS，更新调试工具的配置即可。
-
-#### 使用
-
-用手机打开以下链接，即可进入BoxJS页面。打开后点击分享-添加到主屏幕，可供以后快速访问。
-
-```
-http://boxjs.com/
-```
-
-##### 添加订阅
-
-点击`订阅`，添加以下订阅。
-
-```
-https://raw.githubusercontent.com/toulanboy/scripts/master/toulanboy.boxjs.json
-https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/box.js.json
-https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/evilbutcher.boxjs.json
-https://raw.githubusercontent.com/zZPiglet/Task/master/zZPiglet.boxjs.json
-https://jdsharedresourcescdn.azureedge.net/jdresource/lxk0301.boxjs.json
-https://ooxx.be/js/box.json
-https://raw.githubusercontent.com/NobyDa/Script/master/NobyDa_BoxJs.json
-https://raw.githubusercontent.com/Sunert/Scripts/master/Task/sunert.boxjs.json
-https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.json
-https://raw.githubusercontent.com/chouchoui/QuanX/master/vei.boxjs.json
-https://raw.githubusercontent.com/lowking/Scripts/master/lowking.boxjs.json
-https://raw.githubusercontent.com/songyangzz/QuantumultX/master/syzzzf.box.json
-https://raw.githubusercontent.com/toulanboy/scripts/master/toulanboy.boxjs.json
-https://raw.githubusercontent.com/id77/QuantumultX/master/box.json
-https://raw.githubusercontent.com/dompling/Script/master/dompling.boxjs.json
-https://raw.githubusercontent.com/CenBoMin/GithubSync/main/cenbomin.box.json
-https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/box/fries.boxjs.json
-https://raw.githubusercontent.com/DualSubs/DualSubs/main/box/DualSubs.box.json
-https://raw.githubusercontent.com/VirgilClyne/iRingo/main/box/iRingo.boxjs.json
-```
-
-##### 脚本配置
-
-当网络调试工具中运行的脚本要求配置BoxJs时，在BoxJs的搜索框输入脚本名称，并进行相关配置即可。
-
-##### 会话管理
-
-BoxJS可保存多个会话，每个会话可存储相应的Cookie信息。通过切换会话，可使同一脚本使用不同配置，从而实现多账号签到等功能。
-
-以京东多合一签到脚本为例，在BoxJS中打开该脚本配置，点击保存会话后即可保存当前的Cookie。删除当前Cookie并重新获取，完成后再次点击保存会话。通过应用不同的会话，即可对不同的账号进行签到。
-
-##### 配置备份
-
-可通过备份配置，完成配置在网络调试工具之间的迁移，如从Loon迁移到Quantumult X。
-
-点击我的-备份，生成全局变量，复制该值。需要导入配置时，点击我的-导入，复制刚才的值，点击还原即可。
-
-##### 壁纸
-
-点击应用-内置应用-偏好设置，在`背景图片清单`中复制以下内容即可。图片可根据需求替换。
-
-```
-无背景,
-跟随系统,跟随系统
-明亮,https://64.media.tumblr.com/451bca19ad0b695c08b54b4287e4f935/tumblr_nb70h5f6XN1rnbw6mo2_r1_1280.gifv
-暗黑,https://i.pinimg.com/originals/94/4a/85/944a85804c97622973fbae194ddc27ac.gif
-随机,https://uploadbeta.com/api/pictures/random
-推女郎,https://uploadbeta.com/api/pictures/random/?key=推女郎
-性感,https://uploadbeta.com/api/pictures/random/?key=性感
-车模,https://uploadbeta.com/api/pictures/random/?key=车模
-美腿,https://uploadbeta.com/api/pictures/random/?key=美腿
-美女,https://uploadbeta.com/api/pictures/random/?key=美女
-手机妹子,http://api.btstu.cn/sjbz/zsy.php
-手机美女,http://api.btstu.cn/sjbz/?m_lx=suiji
-```
-
-### Sub-store
-
-Sub-store可用于订阅转换。仓库如下。
-
-```
-https://github.com/Peng-YM/Sub-Store
-```
-
-#### 安装
-
-对于Loon，可点击配置-插件-`+`，添加以下插件。确保PROXY栏右侧区域不出现任何文字，点击保存即可。
-
-```
-https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Loon.plugin
-```
-
-也可在配置文件添加以下内容。
-
-```
-[MITM]
-hostname=sub.store
-
-[Script]
-http-request https?:\/\/sub\.store script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.js, requires-body=true, timeout=120, tag=Sub-Store
-```
-
-对于Surge，可添加以下模块订阅。
-
-```
-https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Surge.sgmodule
-```
-
-对于Quantumult X，可在配置文件添加以下内容。
-
-```
-[http_backend]
-https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.js, tag=Sub-Store, path=/, enabled=true
-```
-
-#### 使用
-
-对于Loon和Surge，打开以下网页即可。
-
-```
-https://sub-store.vercel.app
-```
-
-对于Quantumult X，需要从JSBox的Erots商店获取Sub-store脚本，然后运行JSBox版本。点击设置，查看环境是否为Quantumult X，若不是则需要切换为Quantumult X。
-
-##### 添加订阅
-
-点击订阅-`+`，填写订阅名称和地址，设置好后点击该条目可以看到订阅中包含的节点。
-
-##### 复制订阅
-
-可将Sub-store中配置好的的订阅同步到网络调试工具。以Loon为例，点击订阅，选择需要使用的订阅，并点击复制，回到Loon并添加该订阅即可。
-
-##### 组合订阅
-
-可以通过点击订阅-组合订阅-`+`，将多个订阅合并成一个订阅。
-
-##### 本地解析
-
-选择需要修改的订阅，点击编辑，即可对节点进行筛选。除常用选项外，还可以添加节点操作，可以添加多个同一类型的过滤模式，将会按照顺序执行。
-
-###### 正则过滤器
-
-对于正则过滤器，在保留模式下，关键词过滤只能单个匹配，多关键词则需要添加多个过滤器，而过滤模式则可匹配多个关键词。
-
-###### 正则重命名
-
-可以一次操作多个关键词。
-
-###### 脚本操作
-
-脚本操作可以为远程脚本或者本地脚本，脚本库如下。
-
-```
-https://github.com/Peng-YM/Sub-Store/tree/master/scripts
-```
-
-##### 云备份
-
-需要获取Github Token，其中Token的权限为repo和gist。
-
-##### 同步配置
-
-点击同步-`+`以添加配置。配置后点击复制，即可在对应的网络调试工具中使用该链接导入配置文件。
-
-## 相关说明
-
-### 延迟测试
-
-Surge、Shadowrocket、Quantumult的测试方式不同，因此结果差距较大。
-
-Surge测试的是从目标policy返回http response header数据包的时间。Shadowrocket支持ICMP/TCP两种测速方式，默认为ICMP模式，即Ping。Quantumult采用SSH测速模式（22端口）。
-
-### Q-Search-All-in-One复写
-
-开启该复写后，将Safari默认搜索引擎改为DuckDuckGo，然后在浏览器地址栏输入`gm [关键词]`可以直接Google搜图，输入`yd [关键词]`可以有道翻译。所有指令如下。
-
-|      指令     |          作用          |
-|---------------|------------------------|
-| gh [关键词]   | GitHub搜索             |
-| gm [关键词]   | Google图片搜索         |
-| sof [关键词]  | Stack Overflow搜索     |
-| se [关键词]   | StackExchange搜索      |
-| wiki [关键词] | 维基百科搜索           |
-| wk [关键词]   | 维基中文搜索           |
-| mg [关键词]   | Magi搜索               |
-| tf [关键词]   | Google搜索TestFlight   |
-| yd [关键词]   | 有道词典搜索           |
-| trc [关键词]  | Google译至中           |
-| tre [关键词]  | Google译至英           |
-| trj [关键词]  | Google译至日           |
-| db [关键词]   | 豆瓣搜索               |
-| zh [关键词]   | 知乎搜索               |
-| wb [关键词]   | 微博搜索               |
-| wx [关键词]   | 微信搜索               |
-| rd [关键词]   | Reddit搜索             |
-| ssp [关键词]  | 少数派搜索             |
-| csdn [关键词] | CSDN搜索               |
-| zdm [关键词]  | 什么值得买搜索         |
-| amz [关键词]  | 亚马逊搜索             |
-| jd [关键词]   | 京东搜索               |
-| tb [关键词]   | 淘宝搜索               |
-| tm [关键词]   | 天猫搜索               |
-| ac [关键词]   | Acfun搜索              |
-| bli [关键词]  | 哔哩哔哩搜索           |
-| ytb [关键词]  | YouTube搜索            |
-| ph [关键词]   | PornHub搜索            |
-| gd [关键词]   | Google Drive资源       |
-| tgd [关键词]  | TG搜索Google Drive资源 |
-| bi [关键词]   | 必应搜索               |
-| bd [关键词]   | 百度搜索               |
-| ddg [关键词]  | DuckDuckGo搜索         |
-| [关键词]      | Google搜索             |
-
-## 相关资源
-
-### 配置文件与规则
-
-Loon与Surge 3的配置文件一般通用。进入并挑选好所需规则集后，点开并点击Raw，复制链接到Loon并导入即可。
-
-#### Loon
-
-```
-https://github.com/nzw9314/Loon
-```
-
-#### Shadowrocket
-
-```
-https://github.com/h2y/Shadowrocket-ADBlock-Rules
-```
-
-#### Quantumult X
-
-```
-https://github.com/nzw9314/QuantumultX
-https://github.com/Orz-3/QuantumultX
-https://github.com/evilbutcher/Quantumult_X
-https://github.com/KOP-XIAO/QuantumultX/
-https://github.com/solikethis/QuantumultX-demo/
-```
-
-#### Surge
-
-```
-https://github.com/voneo/conf/tree/master/rule
-https://github.com/nzw9314/Surge
-https://github.com/Choler/Surge
-https://github.com/Blankwonder/surge-list
-https://github.com/KOP-XIAO/Surge-Rules
-https://github.com/nzw9314/surge-2/
-```
-
-#### 全平台
-
-```
-https://github.com/lhie1/Rules/tree/master
-https://github.com/wlaotou/Profiles
-https://github.com/limbopro/Profiles/tree/master
-https://github.com/yxiaocai/DivineEngine
-https://github.com/NavePnow/Profiles
-https://github.com/DivineEngine/Profiles/tree/master
-```
-
-### 脚本
-
-#### Quantumult X
-
-```
-https://github.com/jpcnmm/Scripting
-https://github.com/elecV2/QuantumultX-Tools
-```
-
-#### Surge
-
-```
-https://github.com/yichahucha/surge/tree/master
-https://github.com/MeetaGit/MeetaRules
-https://github.com/onewayticket255/Surge-Script
-```
-
-#### 全平台
-
-```
-https://github.com/jpcnmm/Scripting
-https://github.com/chavyleung/scripts
-https://github.com/Peng-YM/QuanX
-https://github.com/NobyDa/Script/tree/master
-https://github.com/zZPiglet/Task/tree/master
-```
-
-### 任务
-
-#### Quantumult X
-
-```
-https://github.com/Orz-3/QuantumultX/tree/master/Task
-```
-
-#### Surge
-
-```
-https://github.com/MeetaGit/MeetaRules/tree/m%CE%B1ster
-```
-
-### 模块
-
-#### Surge
-
-```
-https://github.com/onewayticket255/Surge-Script
-```
-
-### 图标组
-
-#### Quantumult X
-
-```
-https://github.com/elecV2/QuantumultX-ICON
-https://github.com/Koolson/Qure
-```
-
-#### 全平台
-
-```
-https://github.com/Orz-3/mini
-https://github.com/Orz-3/task
-https://github.com/Orz-3/face
-https://github.com/58xinian/icon
 ```
 
 # 软件操作
@@ -11733,281 +5331,6 @@ https://www.hurbai.com/ical.ics
 
 iPhone 11以下设备（不含），港版、韩版、英版、美版等仅支持移动和联通，不支持电信。可通过开通电信VoLTE的方式添加支持。
 
-# 系统降级
-
-## OTA延迟升级
-
-如果手机受监督，可推迟更新，适用于公司设备的情况。可参考以下内容延迟升级到iOS 14.8（方法已经失效）。
-
-```
-https://mp.weixin.qq.com/s/x4aeH2gp3J7E0HHX7s1Zng
-https://supervise.me/
-```
-
-## SHSH2备份
-
-SHSH2是高版本降级必备的文件。SHSH2仅能备份仍然开放验证的系统固件，因此建议每次更新完系统都备份SHSH2。
-
-### 越狱设备
-
-安装System Info插件，然后进入设置-通用-关于本机，在ECID上右滑后点击Save SHSH2即可。
-
-也可用TSSSaver插件，打开后点击`+`-Verify&Save即可保存。通过点击Saved Blobs-here可查看保存的SHSH2。注意该插件的使用需要翻墙，作者源如下。
-
-```
-http://repo.nullpixel.uk/
-```
-
-### 非越狱设备
-
-通过以下网站即可，设备的ECID可以在iTunes中查看。注意SHSH Host网站备份的SHSH2的G值为0x1111111111111111。
-
-```
-https://tsssaver.1conan.com/
-https://shsh.host/
-```
-
-## 工具
-
-### Futurerestore
-
-适用于高版本系统，需要有SHSH2备份。可在Mac/Windows使用。下载链接如下。
-
-```
-https://github.com/marijuanARM/futurerestore
-https://github.com/tihmstar/futurerestore
-```
-
-#### 固定G值
-
-即Generator值。G值在每次手机重启时会重置，所以需保持全程手机未关机。
-
-用记事本打开备份的SHSH2，搜索Generator即可看到文件中的G值。若使用的SHSH2为noapnonce，则G值默认为0x1111111111111111。如果使用的是apnonce，需要将设备G值固定为SHSH2中的值。
-
-以下方法均需确保手机处于越狱状态。
-
-##### 通过越狱软件
-
-若为unc0ver/Chimera/Electra越狱，可直接在手机上打开越狱软件，点击Set nonce设置G值。
-
-##### 通过dimentio
-
-安装Dimentio和NewTerm插件。打开NewTerm，输入以下命令，此处的0x1111111111111111即为G值。
-
-```
-su // 密码为alpine
-dimentio 0x1111111111111111
-```
-
-##### 通过Generator Auto Setter
-
-该插件可自动将设备G值设为特定值。安装插件后设置即可。
-
-#### 配置环境
-
-在电脑端需配置好环境。以Mac端为例，可在终端执行以下命令。
-
-```
-brew install automake autoconf libtool pkg-config
-git clone https://github.com/tihmstar/libirecovery && cd ./libirecovery && bash autogen.sh && make install
-git clone https://github.com/tihmstar/libcrippy && cd ./libcrippy && bash autogen.sh && make install
-git clone https://github.com/tihmstar/libfragmentzip && cd ./libfragmentzip && bash autogen.sh && make install
-cd /usr/local && sudo mkdir ssl && sudo chmod 777 /usr/local/ssl
-cd
-git clone https://github.com/openssl/openssl.git && cd openssl && ./config && make && sudo make install
-brew install curl
-brew install openssl
-ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
-ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
-ln -s /usr/local/Cellar/openssl/1.0.2j/bin/openssl openssl
-```
-
-#### 固件下载
-
-下载要降级的固件和当前固件，链接如下。
-
-```
-https://www.i4.cn/firmware.html
-https://act.feng.com/wetools/index.php?r=iosRom/index
-https://www.efreelife.com/ipsw/
-https://ipsw.me/
-```
-
-#### 固件降级
-
-将要降级到的固件重命名为restore.ipsw，对应版本的SHSH2文件重命名为blob.shsh2。打开终端并执行以下命令即可。
-
-```
-# 带基带文件
-./futurerestore -t shsh.shsh2 --latest-baseband --latest-sep restore.ipsw
-
-# 不带基带文件
-./futurerestore -t shsh.shsh2 --no-baseband --latest-sep restore.ipsw
-```
-
-如果提示找不到SEP Path，则需要手动从当前固件中提取。
-
-用WinRAR打开当前固件，解压出BuildManifest.plist文件，并改名为build.plist。
-
-在Firmware文件夹中找到以bbfw为后缀的基带文件。可能有多个文件符合要求，进入iPhone设置，点击通用-关于本机-调制解调器固件-查看版本号，选择版本号接近的即可。解压出该文件，并改名为bbfw.bbfw。
-
-在all_flash文件夹中找到以sep开头、im4p结尾的SEP文件，将符合手机主板型号的文件解压出，并改名为im4p.im4p，其中主板型号可以在爱思助手中找到，也可通过以下网站的Internal Name找到。
-
-```
-https://www.theiphonewiki.com/wiki/Models#iPhone
-```
-
-SEP主要负责处理Touch ID、Face ID认证与各种密码的核对工作，一般来说，相同大版本系统的SEP很大几率兼容，跨版本系统的SEP不兼容。
-
-然后使用以下命令即可刷机。
-
-```
-./futurerestore -t blob.shsh2 -b bbfw.bbfw -p build.plist -s im4p.im4p -m build.plist -w restore.ipsw
-```
-
-若为iPad Wifi版或iPod，由于没有基带文件，命令如下。
-
-```
-./futurerestore -t blob.shsh2 --no-baseband -p build.plist -s im4p.im4p -m build.plist -w restore.ipsw
-```
-
-<details>
-<summary>【进阶】使用图形化界面</summary>
-
-除了用命令行，也可用GUI界面。不需要先下载futurerestore，可直接使用GUI界面下载。
-
-```
-https://github.com/CoocooFroggy/FutureRestore-GUI/releases
-```
-</details>
-
-#### 常见问题
-
-##### ERROR: Unable to send iBEC to device.，Failed with errorcode=-8
-
-使用最新版Futurerestore工具。
-
-##### ERROR: Could not open ZIP archive '/var/tmp/ffffffffffffffffffffffffffffffff00000036FhdfWC': 19，Failed with errorcode=-11
-
-尝试更换工具和电脑。
-
-##### Getting SepNonce failed ERROR，Device is in an invalid state
-
-使用Mac版Futurerestore工具。
-
-##### ERROR Could not open ZIP archive (errorcode=-11)
-
-尝试更换电脑。
-
-##### Unable to place device into recovery mode from Normal mode，Failed with errorcode=-2
-
-设置随机数后重新启动或手动进入恢复模式后再尝试刷机，若问题依旧，则完全卸载iTunes所有组件重装iTunes重试。
-
-##### APTicket can't be used for restoring this device，Failed with errorcode=-45
-
-SHSH2无效。
-
-##### APTicket can't be used for this restore，Failed with errorcode=-44
-
-可能是SHSH2文件名错误。若无效，则将后缀名从shsh2改为plist，命令中的对应位置也进行修改。若仍然报错，则SHSH2无效。
-
-##### Unable to enter recovery mode，Failed with errorcode=-2
-
-iTunes驱动或USB数据线问题。更换数据线，完全卸载iTunes所有组件，重启电脑安装最新版iTunes。
-
-##### unsupported devicemode, please put device in recovery mode or normal mode，Failed with errorcode=-3
-
-进入恢复模式重试。
-
-##### ERROR: SEP does not match sepmanifest，Failed with errorcode=-67
-
-SEP文件错误，更换后重试。
-
-##### sep firmware isn't signed，Failed with errorcode=-3
-
-选择了关闭验证的固件中的SEP。选择iOS12.3或以上固件。
-
-##### Unable to place device into recovery mode from Normal mode，Failed with errorcode=-2
-
-iTunes驱动未启动或未正常工作。完全卸载iTunes后安装最新版iTunes重试。
-
-##### can't init, no device found，Failed with errorcode=-3
-
-重新插拔数据线。
-
-##### ERROR: Unable to find any build identities for SEP，Failed with errorcode=-5
-
-buildmanifest文件或SEP文件出现问题。
-
-##### Unable to place device into recovery mode from Normal mode (errorcode=8978449)
-
-设备无法进入正确的恢复模式。手机连接电脑后，电脑端使用爱思助手，手动将设备进入恢复模式，再重新输入指令开始刷机即可。
-
-##### SEP does not match sepmanifest (errorcode=54394897)
-
-SEP不兼容，无法进行刷机。手动提取基带、SEP等文件后重试。
-
-##### failed to reconnect to device in recovery <iBEC> mode (errorcode=65863697)
-
-无法在恢复模式下重新连接到设备，表示设备与电脑断开连接。使用苹果官方原装数据线，更换USB接口，保证良好连接的情况下，再进行刷机。
-
-##### Device ApNonce does not match APTicket nonce
-
-G值不匹配。设备的G值和备份SHSH2文件中的不一致，重新固定G值即可。
-
-##### SEP firmware is Not being signed
-
-所选SEP的固件已经关闭验证，尝试重新从开放验证的固件中提取SEP文件。
-
-### restoreM8
-
-restoreM8是Futurerestore的图形化版本，Futurerestore是用于供iPhone进行刷机操作的命令行软件。下载地址如下，降级方法同上。
-
-```
-https://github.com/80036nd/RestoreM8
-```
-
-### Pluvia
-
-适用于低版本系统，可在Mac使用。
-
-以iPhone 4为例说明其使用方法。下载Pluvia仓库并解压，准备好要降级的固件，放入Pluvia文件夹中。
-
-```
-https://github.com/parrotgeek1/Pluvia
-```
-
-保持翻墙条件，打开终端并切换到Pluvia所在目录，然后输入以下命令制作固件。
-
-```
-./make_ipsw.sh [固件名称]
-```
-
-让手机进入DFU模式，连接手机并输入以下命令进行刷机。
-
-```
-./restore.sh [自动生成的固件名称]
-```
-
-### ReRa1n
-
-适用于Linux。在终端输入以下命令即可。
-
-```
-git clone https://github.com/AidanGamzer/ReRa1n.git
-cd ReRa1n
-sudo chmod +x install.sh
-sudo chmod +x rera1n.sh
-./rera1n.sh
-```
-
-### Vieux
-
-仅支持部分设备。
-
-```
-https://github.com/MatthewPierson/Vieux
-```
 
 # 常见问题
 
@@ -12040,57 +5363,6 @@ https://mp.weixin.qq.com/s/S6DhF6P8f68ejPz9xoP5bw
 ```
 https://www.bilibili.com/video/BV137411M7sd
 https://www.bilibili.com/video/BV1Vj411f7Nu
-```
-
-## Shadowrocket使用教程
-
-```
-http://laob.me/2300/
-```
-
-## Loon不完全教程
-
-```
-https://www.notion.so/Loon-f0a98c39f5224c09b281c79837380431
-```
-
-## Quantumult的使用方法
-
-```
-https://xingkaixin.me/2019/05/01/How-to-use-Quantumult/
-```
-
-## Surge使用教程
-
-```
-https://merlinblog.xyz/wiki/surge.html
-```
-
-## Quantumult X不完全教程
-
-```
-https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917#8c6f0c7cc5174f34903b1aa7c010fb64
-https://merlinblog.xyz/wiki/quanx.html
-https://limbopro.xyz/archives/11115.html
-https://limbopro.xyz/archives/3846.html
-```
-
-## 关于策略组的理解
-
-```
-https://github.com/Fndroid/jsbox_script/wiki/%E5%85%B3%E4%BA%8E%E7%AD%96%E7%95%A5%E7%BB%84%E7%9A%84%E7%90%86%E8%A7%A3
-```
-
-## 你们碎碎念的解锁VIP会员的教程来了
-
-```
-https://mp.weixin.qq.com/s/ociRI8wQtRimseAYR1XONw
-```
-
-## 网球版解锁某个App永久内购的教程来了
-
-```
-https://mp.weixin.qq.com/s/gcJw46HrmJCfBcLSw4s3NA
 ```
 
 ## 捷径制作教学
@@ -12147,31 +5419,6 @@ https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=MzA5OTU0MTE1MQ==&s
 https://medium.com/zrealm-ios-dev/ios-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E5%88%9D%E9%AB%94%E9%A9%97-7498e1ff93ce
 ```
 
-## 利用Futurerestore进行iOS13的升、降级、平刷
-
-```
-https://therealketo.github.io/futurerestore-guide/
-https://iphoneba.cn/archives/1008.html
-```
-
-## Downgrade iOS Firmware using ReRa1n
-
-```
-https://fulltip.net/downgrade-ios-firmware-using-rera1n.html
-```
-
-## iphone4 8G国行完美降级
-
-```
-https://www.feng.com/post/12857525
-```
-
-## How to Fix Checkra1n Error -20 (unlock iPhone to use accessories)
-
-```
-https://www.youtube.com/watch?v=VHWFVwztNwU
-```
-
 ## LEECO - 捷径作品
 
 ```
@@ -12190,11 +5437,6 @@ https://github.com/coolstar/Odyssey-bootstrap
 https://www.antmoe.com/posts/77e27eac/index.html
 ```
 
-## iOS越狱教程-内存基址修改器的外番(二)
-
-```
-https://mp.weixin.qq.com/s/LJAhI2pGOlnmxne6TAnBCw
-```
 
 ## URL Scheme分享
 
@@ -12208,11 +5450,6 @@ https://st3376519.huoban.com/share/1985010/VGi2N5Vf0C1MVnHCVWiBc8L9g15c9VGJbMGcF
 https://www.limufang.com/post/526.html
 ```
 
-## iOS越狱教程-内存基址修改器的神奇之处(十二)
-
-```
-https://mp.weixin.qq.com/s/0Je9UhWjVTuK-WIDcP886A
-```
 
 ## 如何在苹果商店把App降级至任意版本
 
@@ -12220,11 +5457,6 @@ https://mp.weixin.qq.com/s/0Je9UhWjVTuK-WIDcP886A
 https://mp.weixin.qq.com/s/afXnjvgwA0aC3NaPg53l_g
 ```
 
-## iOS越狱教程-内存基址修改器的外番(三)
-
-```
-https://mp.weixin.qq.com/s/Il5_Gsbf89McIBM70zdNJg
-```
 
 ## 介绍 - BoxJs
 
@@ -12232,11 +5464,6 @@ https://mp.weixin.qq.com/s/Il5_Gsbf89McIBM70zdNJg
 https://chavyleung.gitbook.io/boxjs/
 ```
 
-## 利用Futurerestore进行iOS13的升、降级、平刷
-
-```
-https://mp.weixin.qq.com/s/h5EqUG9xxo-_nz9K5b9F-w
-```
 
 ## Sub-Store 教程
 
@@ -12262,15 +5489,6 @@ https://github.com/KOP-XIAO/QuantumultX/blob/master/QuantumultX_Profiles.conf
 https://github.com/crossutility/Quantumult-X/blob/master/sample.conf
 ```
 
-## Odyssey越狱工具常见问题/错误红字解决方案
-
-```
-https://mp.weixin.qq.com/s/mEvS3XOk323iimyRC-DDKQ
-https://mp.weixin.qq.com/s/p-hJIVyrYLtX3Qzr1BP4cg
-https://mp.weixin.qq.com/s/FqMaobhAI4iqaQ7bXj387Q
-https://mp.weixin.qq.com/s/ODNZikQQgVnsks1YGBvWFQ
-https://mp.weixin.qq.com/s/gVplvVFgLCCB0hZKCZJcSQ
-```
 
 ## futurerestore ，iOS 系统刷机到指定版本
 
@@ -12278,11 +5496,6 @@ https://mp.weixin.qq.com/s/gVplvVFgLCCB0hZKCZJcSQ
 https://mp.weixin.qq.com/s/L3vNBWcWWDUEPuziO0KdWA
 ```
 
-## Taurine/Odyssey越狱工具常见问题/错误红字解决方案(六)
-
-```
-https://mp.weixin.qq.com/s/1iz5ZVHkj3-6yyJUxVP45Q
-```
 
 ## 无法 OTA 更新系统，解决办法来了
 
@@ -12342,12 +5555,6 @@ https://mp.weixin.qq.com/s/ToZjqtRTgxPxswF02-H_oA
 
 ```
 https://mp.weixin.qq.com/s/zkolfG0Tvj8ImgKrJB80Vg
-```
-
-## iOS 越狱，官方源，作者源，推荐大集合
-
-```
-https://mp.weixin.qq.com/s/lSE0PSKA4PT09ChOrEwRRw
 ```
 
 ## Sideloadly，无需越狱，自签安装 IPA 文件，免费
@@ -12440,24 +5647,6 @@ https://mp.weixin.qq.com/s/_faR7J2tvxUunr1ZijdIig
 https://mp.weixin.qq.com/s/SIf8tWc1IH1ZZLHOiYG3Fw
 ```
 
-## Taurine，永不过期，免费安装，再也不用担心签名问题了，速度
-
-```
-https://mp.weixin.qq.com/s/OL2aJMRBApre3jkvEhKcQA
-```
-
-## unc0ver，永不过期，免费安装，再也不用担心签名问题了，速度
-
-```
-https://mp.weixin.qq.com/s/4UnkQ68bLQJFnVSJbXyHBg
-```
-
-## u0Launcher，永不过期版 unc0ver ，速度使用
-
-```
-https://mp.weixin.qq.com/s/ZsHpKOf_kTkImfJqQpv6Ow
-```
-
 ## [Tutorial] Save TONS of GB's on smaller storage iDevices!
 
 ```
@@ -12512,18 +5701,6 @@ https://mp.weixin.qq.com/s/dG4TWMeWlEfMmXyEKvYt2Q
 https://mp.weixin.qq.com/s/ux2yU0tRg2w5_fQIAJ_FvQ
 ```
 
-## iOS 系统，通知发光，无需越狱
-
-```
-https://mp.weixin.qq.com/s/SmPKL6stDiZAxzEz2jUN5w
-```
-
-## iOS 系统，自定义控制中心，无需越狱
-
-```
-https://mp.weixin.qq.com/s/XGrnvicqsBQpn6szBBWpjQ
-```
-
 ## FileSwitcherPro，多功能修改器（一）
 
 ```
@@ -12534,54 +5711,6 @@ https://mp.weixin.qq.com/s/pfHhe7kyiUAkt7TUKmLJ7g
 
 ```
 https://mp.weixin.qq.com/s/p7J3YK9eHFYq7LxvSqZ-VQ
-```
-
-## Fugu 15 Max (暂命名)越狱工具的正确引导方向以及常见问题解决方案(一)
-
-```
-https://mp.weixin.qq.com/s/4KHT_OJK8hcysjkb6y14CQ
-```
-
-## iOS 15.1.1 越狱，XinaA15 使用指南
-
-```
-https://mp.weixin.qq.com/s/bdOG9eX3IBiEL8FSDG-5OQ
-```
-
-## IOS9.1~9.3.5系统越狱方法
-
-```
-https://mp.weixin.qq.com/s/lWlrIbVWWNmPJLKURpDezA
-```
-
-## IOS10~10.3.3越狱方法
-
-```
-https://mp.weixin.qq.com/s/oqkAHqeMB-nTnaXg63-RrA
-```
-
-## 好消息！IOS10~10.3.3系统完美越狱
-
-```
-https://mp.weixin.qq.com/s/LFqg5FC7Ai0DVny__atxFw
-```
-
-## 分享三款插件，你一定会喜欢
-
-```
-https://mp.weixin.qq.com/s/GkZDxPiU7dBJHmTCFP1q2g
-```
-
-## 分享二款实用插件，你一定会喜欢
-
-```
-https://mp.weixin.qq.com/s/dmPGwIi6K-hkM-KayaDvFQ
-```
-
-## 省电插件已经更新，越狱已经修复
-
-```
-https://mp.weixin.qq.com/s/7FFxbg62JpPv9SLtEK2xXQ
 ```
 
 ## iOS 系统，电池、亮度、音量百分比，清除角标，快速控制中心，完全免费
@@ -13009,22 +6138,11 @@ https://mp.weixin.qq.com/s/2hmmLyQaSpupc9D9PYsmRQ
 https://mp.weixin.qq.com/s/FabYhz1LNwgic41A13kQdA
 ```
 
-## iOS 系统，自定义外观模式墙纸，无需越狱
-
-```
-https://mp.weixin.qq.com/s/SK-4YwXi1Gy9rsnmbcMMPg
-```
 
 ## iOS 系统，deb 备份，支持一键备份全部
 
 ```
 https://mp.weixin.qq.com/s/r6KxWQsuSBh72w6b4X21Sg
-```
-
-## iOS 系统，手机性能 HUD，无需越狱
-
-```
-https://mp.weixin.qq.com/s/SyG9g0jGYW2Uk5cjxQLIRQ
 ```
 
 ## iOS 系统，通知归纳，简洁美观
@@ -13069,64 +6187,10 @@ https://mp.weixin.qq.com/s/Shwv4N4lWlTVvDxGBrW23g
 https://mp.weixin.qq.com/s/MOrmpFG0SA8k62d0m9rQCA
 ```
 
-## iOS 15.1 XinaA15 越狱工具，更换字体仅需几秒
-
-```
-https://mp.weixin.qq.com/s/gL8vNR6RDb8F4LoUY-ttng
-```
-
-## 惊现！iOS 15.7.1 有根越狱，但会失去5G存储空间
-
-```
-https://mp.weixin.qq.com/s/SR4JnHA-W62ugkSA9EYy2Q
-```
-
-## iOS 14.5.1 越狱问题，百度网盘要提速？
-
-```
-https://mp.weixin.qq.com/s/cIDqspQ2TID9lY3APAx8_A
-```
-
-## 劲爆！iOS 15.4.1 ra1ncloud 已发布，确实能越狱
-
-```
-https://mp.weixin.qq.com/s/hWSzXxgj-HURTQ5jZM40fg
-```
-
 ## iOS 系统，全新全局手势神器，完全免费
 
 ```
 https://mp.weixin.qq.com/s/O6Dug7Cj3tT5I1d_hICaeA
-```
-
-## iOS 14.4.1 Betelguese 越狱发布，新系统出现
-
-```
-https://mp.weixin.qq.com/s/gQ2ZtdnWTIDiMS1S-95-WA
-```
-
-## iOS 14 ReProvision 续签进展，新越狱视频演示
-
-```
-https://mp.weixin.qq.com/s/TDOpIqIdmmcOyIwwa3zB_A
-```
-
-## iOS 14.3 越狱工具已出？降级工具再次更新
-
-```
-https://mp.weixin.qq.com/s/OT5Cuu-0Cl2wvkre5kqcag
-```
-
-## iOS 13.5 Blizzard 新越狱，操作官网已经出现
-
-```
-https://mp.weixin.qq.com/s/BNBOIfaUx8Fxuu7dzy9TnA
-```
-
-## iOS 13 也能享用 iOS 14 新功能，赶紧试试
-
-```
-https://mp.weixin.qq.com/s/q9yuPIOh0nl4hhoRo7j3AQ
 ```
 
 ## Scarlet，猩红，自签安装 IPA 文件，完全免费
@@ -13135,8 +6199,57 @@ https://mp.weixin.qq.com/s/q9yuPIOh0nl4hhoRo7j3AQ
 https://mp.weixin.qq.com/s/4Nt6K5KkkZr4247RlbQZog
 ```
 
-## 降级 iOS10.3.3 方法？并不是想象中容易
+
+## iOS 系统，已安装插件，提取和备份 deb
 
 ```
-https://mp.weixin.qq.com/s/VjyE55Vsn5OTISzg4eaeoA
+https://mp.weixin.qq.com/s/vQpyIPIyGY80DOJ2KOe1fg
+```
+
+## iOS 系统，砸壳，提取 IPA，支持中文
+
+```
+https://mp.weixin.qq.com/s/UfiM2Z346_KtRcQSk9HJZw
+```
+
+## iOS 15.4.1 Derootifier 更新，转无根插件
+
+```
+https://mp.weixin.qq.com/s/WpSy6G7vIYFWS0PmbhDXgQ
+```
+
+## iOS 系统，控制中心换个图标，有趣
+
+```
+https://mp.weixin.qq.com/s/nKzvEM2fIscdp0Wdlqprug
+```
+
+## iOS 16.5 系统，SimpleKFD 工具箱，一键监督，一键灵动岛
+
+```
+https://mp.weixin.qq.com/s/BxN8UzhyzcBC7oF59z5P0Q
+```
+
+## iOS 系统，新的 iPhone 分屏神器，众享丝滑
+
+```
+https://mp.weixin.qq.com/s/MeqS0proFrb5CHZ1LrNWAw
+```
+
+## 好东西，iOS 14 制作永久版应用，仅需几秒搞定
+
+```
+https://mp.weixin.qq.com/s/L-vudctVvu99yqcDEqXKXg
+```
+
+## 好东西，iOS 16.1.2 Files 文件管理器，确实有效
+
+```
+https://mp.weixin.qq.com/s/yGbrTzI_NejCerf0KrJeKQ
+```
+
+## 牛批！iOS 16.5 修改角标已发布，可改颜色
+
+```
+https://mp.weixin.qq.com/s/seEwRkgkCC77_PaICdqrlg
 ```

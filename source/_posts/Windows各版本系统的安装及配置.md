@@ -12,6 +12,13 @@ tags:
 
 <!-- more -->
 
+```
+搭建KMS服务器
+https://blog.csdn.net/gsls200808/article/details/50357921
+https://blog.csdn.net/gsls200808/article/details/50364104
+https://blog.csdn.net/gsls200808/article/details/72773249
+```
+
 # 系统支持性
 
 系统对MBR/GPT分区表的支持性如下。建议GPT分区表使用64位操作系统。
