@@ -12,7 +12,37 @@ tags:
 
 <!-- more -->
 
+# TODOS
+
 ```
+https://android.stackexchange.com/questions/156955/samsungs-equivalent-to-fastboots-temporary-flash
+
+
+https://github.com/HuskyDG/magisk-files
+
+https://android.stackexchange.com/questions/213167/how-does-magisk-work
+https://android.stackexchange.com/questions/218222/how-to-boot-system-as-root-device-always-as-rooted
+
+
+
+https://blog.csdn.net/u010783226/article/details/115752477
+
+
+
+
+https://www.reddit.com/r/LineageOS/comments/zs2ras/how_to_get_started_with_a_unsupported_device/
+
+
+
+https://sspai.com/post/73603
+https://sspai.com/post/53772
+https://sspai.com/post/53075
+
+
+https://github.com/GameTheory-/jodin3
+
+
+
 APK安装器——SAI
 https://github.com/Aefyr/SAI
 

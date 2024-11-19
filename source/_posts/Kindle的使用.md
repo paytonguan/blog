@@ -13,6 +13,16 @@ Kindle的使用技巧总结。
 
 <!-- more -->
 
+# TODOS
+
+```
+Kindle刷入安卓
+https://www.bilibili.com/video/BV1mV4y1H7aQ/
+https://post.smzdm.com/p/aoow0lkm/
+https://xdaforums.com/t/guide-installing-android-on-your-aging-kindle-e-reader.4450117/
+https://community.wvbtech.com/d/3027
+```
+
 # 电子书获取
 
 ## 在线阅读

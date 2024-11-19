@@ -13,6 +13,13 @@ Trollstore等。
 
 <!-- more -->
 
+# TODOS
+
+```
+# schemeshare
+https://mp.weixin.qq.com/s/xe25A0horQpOzNykY494Rw
+```
+
 # TrollStore
 
 TrollStore可以在部分系统上利用漏洞，不越狱即可安装永不过期的IPA。利用该漏洞，可对系统Var目录进行读写。
@@ -47,6 +54,12 @@ https://pan.baidu.com/s/1f7qiHzFutQ3zN1-SQkFXSg?pwd=791g（提取码 / 791g）
 
 # TrollSpeed，网速悬浮窗工具
 https://github.com/Lessica/TrollSpeed
+
+# TrollRecorder，通话录音工具
+https://github.com/Lessica/TrollRecorder
+
+# 爱啪思道，App Store辅助工具
+https://github.com/Lakr233/Asspp
 ```
 
 ### 越狱工具
@@ -155,6 +168,11 @@ https://github.com/khanhduytran0/CAPerfHUD
 
 # IPA提取器
 https://github.com/SmileZXLee/IpaDownloadTool
+
+# AppRhyme，音乐播放器
+https://github.com/canxin121/app_rhyme
+# 音源
+https://github.com/hhhackor/AppRhymeApi/raw/main/custom_api.evc
 ```
 
 ## 操作技巧
@@ -164,6 +182,13 @@ https://github.com/SmileZXLee/IpaDownloadTool
 可用Filza清空`/var/db/diagnostics/Persist/`和`/var/db/diagnostics/Special/`目录。
 
 注意TrollStore无法安装iCleaner，因无法获取到iCleaner所需要的权限。
+
+## 常见问题
+
+```
+# TrollStore 小技巧二：解决删除不干净
+https://mp.weixin.qq.com/s/cn_C33xMiyWcCt-jJa0Ejg
+```
 
 ## 轻松签+
 
@@ -178,6 +203,23 @@ https://esign.yyyue.xyz/
 ### 使用
 
 通过修改标识符，可实现双开。通过移除库，可能可以去除广告弹窗，注意修改完后选择`仅修改配置，不签名`。
+
+# TrollRestore
+
+## misakaX
+
+```
+https://github.com/straight-tamago/misakaX
+
+# 国行开启Apple Intelligence
+https://mp.weixin.qq.com/s/PiU95w6Ic1kNKnfWN1Jtfw
+```
+
+## Nugget
+
+```
+https://github.com/leminlimez/Nugget
+```
 
 # MacDirtyCow
 
@@ -202,6 +244,7 @@ https://github.com/zhuowei/MacDirtyCowDemo
 超强工具箱，下载链接如下。
 
 ```
+https://cowabun.ga/
 https://github.com/leminlimez/Cowabunga
 ```
 
@@ -677,6 +720,9 @@ https://github.com/mineek/dirtycowapp
 
 # FileManager
 https://github.com/mineek/FileManager
+
+# Filza Deco
+https://github.com/dobabaophuc1706/FilzaMod/releases
 ```
 
 # KFD
@@ -826,4 +872,147 @@ https://mp.weixin.qq.com/s/SmPKL6stDiZAxzEz2jUN5w
 
 ```
 https://mp.weixin.qq.com/s/XGrnvicqsBQpn6szBBWpjQ
+```
+## iOS 16.1.2 DirtyCow 已发布，可以实现一键替换
+
+```
+https://mp.weixin.qq.com/s/MOrmpFG0SA8k62d0m9rQCA
+```
+
+## iOS 系统，文件管理器发布，无需越狱
+
+```
+https://mp.weixin.qq.com/s/SICZ0FI7yUPOVBe8e5nb7w
+```
+
+## 奶牛系列官方网站，正式上线，请收藏
+
+```
+https://mp.weixin.qq.com/s/KSFRwIA3TPEIBu6HxShzAQ
+```
+
+## iOS 系统，听歌自由，速度
+
+```
+https://mp.weixin.qq.com/s/yeDc6y-dK7JCcNlwBG_e8Q
+```
+
+## misakaX，更新1.7，支持 iOS 16
+
+```
+https://mp.weixin.qq.com/s/1gkgYk_K-UZLMh9syK6lsg
+```
+
+## 新工具，金块
+
+```
+https://mp.weixin.qq.com/s/UqASjZN5qAkPZT9s7McZFA
+```
+
+## 关于 MacDirtyCow，支持的系统范围，必看
+
+```
+https://mp.weixin.qq.com/s/h9R_veKuOd2ienAHce9KYw
+```
+
+## FilzaEscaped15 来了，iOS 系统文件管理器，无需越狱
+
+```
+https://mp.weixin.qq.com/s/cDmx4doiumVOBZuuE9jUjg
+```
+
+## iOS 系统，自定义4G/5G，无需越狱，非常简单
+
+```
+https://mp.weixin.qq.com/s/2bbId2CsBfQMt8OxdBlHkw
+```
+
+## 黑科技，老款 iPhone 激活灵动岛，无需越狱，支持这些系统
+
+```
+https://mp.weixin.qq.com/s/_yDmSWBKnv7wGjtm_F7UqA
+```
+
+## 轻松签+，无需证书，永久签名，永不过期，无需越狱
+
+```
+https://mp.weixin.qq.com/s/STdwUdba7Pc8klnfzfcmlw
+```
+
+## iOS 永久签名，永不过期，无需越狱，完全免费，速度
+
+```
+https://mp.weixin.qq.com/s/fjD7CDQFZ_BGvCsz8qdyog
+```
+
+## FileSwitcherPro，多功能修改器（一）
+
+```
+https://mp.weixin.qq.com/s/pfHhe7kyiUAkt7TUKmLJ7g
+```
+
+## FileSwitcherPro，多功能修改器（二）如何替换文件
+
+```
+https://mp.weixin.qq.com/s/p7J3YK9eHFYq7LxvSqZ-VQ
+```
+
+## Since we don’t have iCleaner Pro for TrollStore, it’s possible to delete some large cache files from Filza without harm to the system.
+
+```
+https://www.reddit.com/r/Trollstore/comments/yhw4kb/since_we_dont_have_icleaner_pro_for_trollstore/
+```
+
+## iOS 系统，一键更换字体，大神接手，新版下载地址，必看
+
+```
+https://mp.weixin.qq.com/s/Rf8WAaKGz26pAWYSkCo6Bg
+```
+
+## iOS 系统，自定义小元素，个性十足
+
+```
+https://mp.weixin.qq.com/s/dG4TWMeWlEfMmXyEKvYt2Q
+```
+
+## iOS 系统，自定义锁屏手电筒和相机，简单
+
+```
+https://mp.weixin.qq.com/s/ux2yU0tRg2w5_fQIAJ_FvQ
+```
+
+## iOS 系统，桌面 App 快速移动到指定文件夹
+
+```
+https://mp.weixin.qq.com/s/5ImIQevXIN071Jc9nG-A0w
+```
+
+## iOS 系统，全新全局手势神器，完全免费
+
+```
+https://mp.weixin.qq.com/s/O6Dug7Cj3tT5I1d_hICaeA
+```
+
+## iOS 16.5 系统，SimpleKFD 工具箱，一键监督，一键灵动岛
+
+```
+https://mp.weixin.qq.com/s/BxN8UzhyzcBC7oF59z5P0Q
+```
+
+## 好东西，iOS 14 制作永久版应用，仅需几秒搞定
+
+```
+https://mp.weixin.qq.com/s/L-vudctVvu99yqcDEqXKXg
+```
+
+## 好东西，iOS 16.1.2 Files 文件管理器，确实有效
+
+```
+https://mp.weixin.qq.com/s/yGbrTzI_NejCerf0KrJeKQ
+```
+
+## 牛批！iOS 16.5 修改角标已发布，可改颜色
+
+```
+https://mp.weixin.qq.com/s/seEwRkgkCC77_PaICdqrlg
 ```

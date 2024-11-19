@@ -13,6 +13,18 @@ iOS越狱指南。
 
 <!-- more -->
 
+# TODOS
+
+```
+https://ios.cfw.guide/using-palen1x/
+
+
+https://www.reddit.com/r/jailbreak/comments/1tmvh7/question_what_exactly_is_bootstrap/
+https://onejailbreak.com/blog/iapstore-tweak/
+https://leavez.xyz/2017/02/12/mario-tweak/
+https://www.bilibili.com/read/cv12153485/
+```
+
 # 方法
 
 越狱工具适用范围如下。
@@ -21,31 +33,35 @@ iOS越狱指南。
 
 完美越狱指的是设备重启后依旧是越狱状态。不完美越狱指的是设备重启后会恢复到未越狱环境，需要使用越狱工具重新激活环境。iOS 9.3以后均为不完美越狱。
 
-|     应用    |    基板    | 设备要求 |                   系统范围                   | 有根/无根越狱 |
-|-------------|------------|----------|----------------------------------------------|---------------|
-| Dopamine    |            | A12-A15  | 15.0-15.4.1                                  | 无根          |
-| XinaA15     |            | A12-A15  | 15.0-15.1.1                                  | 无根          |
-| Palera1n    |            | A8-A11   | 15.0-16.4.1                                  |               |
-| Checkra1n   | Substrate  | A7-A11   | 12.3-14+                                     |               |
-| Taurine     |            |          | 14+                                          |               |
-| Odyssey     |            | A9-A13   | 13.0-13.7                                    |               |
-| Unc0ver     | Substitute | A7-A13   | 12.0-12.2，12.4-14.3，14.3-14.5.1，14.6-14.8 |               |
-| Chimera     | Substitute | 64位设备 | 12.0-12.2，12.4                              |               |
-| Electra     | Substitute | 64位设备 | 11.0-11.4.1                                  |               |
-| Th0r        |            | 64位设备 | 11.2-11.3.1                                  |               |
-| DoubleH3lix |            | 64位设备 | 10.0-10.3.3                                  |               |
-| Meridian    |            | 64位设备 | 10.0-10.3.3                                  |               |
-| H3lix       |            | 32位设备 | 10.0-10.3.3                                  |               |
-| Yalu        |            | 64位设备 | 10.1-10.2                                    |               |
-| Phoenix     |            | 32位设备 | 9.1-9.3.6                                    |               |
-| 叉叉助手    |            | 64位设备 | 9.2-9.3.3                                    |               |
-| Jailbrea me |            | 32位设备 | 9.1-9.3.4                                    |               |
-| wtfis       |            | 64位设备 | 8.0-8.4.1                                    |               |
-| EtasonJB    |            | 32位设备 | 8.0-8.4.1                                    |               |
-| Pangu       |            |          | 7.0-7.1.2                                    |               |
-| P0sixspwn   |            |          | 6.0-6.1.6                                    |               |
-| RedSn0w     |            |          | 5.0-5.1.1                                    |               |
-| Greenp0sion |            |          | 4.0-4.3.5                                    |               |
+|             应用            |    基板    | 设备要求 |                   系统范围                   | 有根/无根越狱 |
+|-----------------------------|------------|----------|----------------------------------------------|---------------|
+| Dopamine                    |            | A12-A15  | 15.0-15.4.1                                  | 无根          |
+| XinaA15                     |            | A12-A15  | 15.0-15.1.1                                  | 无根          |
+| SaiGon                      |            | A9-A11   | 15.0-15.8.2                                  | 无根          |
+| Def1nit3lyN0tAJa1lbr3akTool |            | iPhone X | 15.7 & 16.5                                  | 无根          |
+| NekoJB                      |            | A9-A11   | 15.0-15.7.6                                  |               |
+| Palera1n                    |            | A8-A11   | 15.0-16.4.1                                  |               |
+| Checkra1n                   | Substrate  | A7-A11   | 12.3-14+                                     |               |
+| Taurine                     |            |          | 14+                                          |               |
+| Odyssey                     |            | A9-A13   | 13.0-13.7                                    |               |
+| Unc0ver                     | Substitute | A7-A13   | 12.0-12.2，12.4-14.3，14.3-14.5.1，14.6-14.8 |               |
+| Chimera                     | Substitute | 64位设备 | 12.0-12.2，12.4                              |               |
+| Electra                     | Substitute | 64位设备 | 11.0-11.4.1                                  |               |
+| Th0r                        |            | 64位设备 | 11.2-11.3.1                                  |               |
+| DoubleH3lix                 |            | 64位设备 | 10.0-10.3.3                                  |               |
+| Meridian                    |            | 64位设备 | 10.0-10.3.3                                  |               |
+| H3lix                       |            | 32位设备 | 10.0-10.3.3                                  |               |
+| Yalu                        |            | 64位设备 | 10.1-10.2                                    |               |
+| Phoenix                     |            | 32位设备 | 9.1-9.3.6                                    |               |
+| kok3shi9                    |            | 64位设备 | 9.2-9.3.5                                    |               |
+| 叉叉助手                    |            | 64位设备 | 9.2-9.3.3                                    |               |
+| Jailbrea me                 |            | 32位设备 | 9.1-9.3.4                                    |               |
+| wtfis                       |            | 64位设备 | 8.0-8.4.1                                    |               |
+| EtasonJB                    |            | 32位设备 | 8.0-8.4.1                                    |               |
+| Pangu                       |            |          | 7.0-7.1.2                                    |               |
+| P0sixspwn                   |            |          | 6.0-6.1.6                                    |               |
+| RedSn0w                     |            |          | 5.0-5.1.1                                    |               |
+| Greenp0sion                 |            |          | 4.0-4.3.5                                    |               |
 
 低版本的越狱可以用爱思助手。
 
@@ -80,6 +96,10 @@ https://github.com/opa334/Dopamine
 
 ### 常见问题
 
+```
+https://mp.weixin.qq.com/s/5yzh14U7xC3Y0yVtVwdbIg
+```
+
 #### 越狱后打开APP闪退
 
 需要重启SpringBoard。打开TrollStore，进入Settings，点击Respring即可。
@@ -89,8 +109,10 @@ https://github.com/opa334/Dopamine
 ### 应用安装
 
 ```
+https://zhuxinlang.github.io/
 https://xina.ss03.cn/
 https://apt.xina.vip/
+https://github.com/NotDarkn/XinaA15
 ```
 
 ### 应用商店
@@ -169,6 +191,24 @@ https://opa334.github.io/
 #### Sileo刷新源出现522错误
 
 在Sileo越狱商店精选页面上，点击右上角头像，下拉找到缓存，直接点击两下，然后点击语音，开启使用系统语言，再点应用即可。
+
+## SaiGon
+
+```
+https://github.com/H0aHuynh/SaiGon15x/releases
+```
+
+## Def1nit3lyN0tAJa1lbr3akTool
+
+```
+https://github.com/KpwnZ/Def1nit3lyN0tAJa1lbr3akTool
+```
+
+## NekoJB
+
+```
+https://nekojb.hhls.xyz/
+```
 
 ## Unc0ver
 
@@ -470,6 +510,12 @@ https://totally.not.spyware.lol/
 https://phoenixpwn.com/
 ```
 
+## kok3shi9
+
+```
+https://kok3shidoll.web.app/kok3shi9.html
+```
+
 ## wtfis
 
 ```
@@ -512,6 +558,14 @@ https://github.com/kok3shidoll/ra1npoc
 # openra1n
 # palera1n的Windows版本
 https://github.com/wh1te4ever/openra1n
+
+# Freya
+# 支持A11及以下设备，支持iOS15.0-15.1系统
+https://github.com/pwned4ever/Freya15
+
+# kfund
+# 支持iPhone 6s，iOS 15.1
+https://github.com/wh1te4ever/kfund
 ```
 
 # 插件
@@ -523,6 +577,118 @@ https://github.com/wh1te4ever/openra1n
 ```
 # Derootifier，转无根插件
 https://github.com/haxi0/Derootifier
+
+# SixteenMusic，iOS 16系统风格的锁屏音乐播放器
+https://www.123pan.com/s/vgn0Vv-DkfFv.html
+
+# Witcher，应用切换器
+https://github.com/MatoiDev/Witcher
+
+# OCD，角标个性化
+https://www.123pan.com/s/vgn0Vv-zj4Fv.html
+
+# ClassicFolders，iOS 6风格的经典文件夹插件
+# ClassicFolders 3原版，支持iOS 13-14
+https://github.com/coolstar/classicfolders3-oss/
+# ClassicFolders 3编译版，支持iOS 15
+https://github.com/Lizynz/classicfolders3-oss/
+# ClassicFolders 2，支持 iOS 7-12
+https://github.com/coolstar/classicfolders2
+
+# No2Theft，保护手机
+https://www.123pan.com/s/vgn0Vv-TF4Fv.html
+
+# Bubble Apps，将常用应用像悬浮的泡泡一样显示
+https://www.123pan.com/s/vgn0Vv-13fFv.html
+
+# KuKu，横幅通知个性化类型
+https://www.123pan.com/s/vgn0Vv-QpxFv.html
+
+# Ventana，Windows 10风格的锁屏美化插件，支持iOS 8-14
+https://github.com/coolstar/ventana
+
+# ClassicLockScreen，经典锁屏插件，支持iOS 7-9
+https://github.com/coolstar/classiclockscreen
+
+# 3DSwitcher 2，3D 风格的应用切换器插件，支持iOS 9-10
+https://github.com/coolstar/3dswitcher2
+
+# Anemone，主题插件，支持iOS 11-13
+https://github.com/coolstar/anemone3
+https://github.com/coolstar/Anemone-app
+https://github.com/coolstar/anemone3extensions
+
+# Sleipnizer，Safari浏览器手势
+https://www.123pan.com/s/vgn0Vv-HmmFv.html
+
+# SafariX，Safari浏览器增强
+https://www.123pan.com/s/vgn0Vv-scoFv.html
+
+# TwistNTurn，智能旋转
+https://www.123pan.com/s/vgn0Vv-3AmFv.html
+
+# Ring，控制中心音量扩展
+https://www.123pan.com/s/vgn0Vv-4mmFv.html
+
+# SmartNotifications，智能通知
+https://www.123pan.com/s/vgn0Vv-somFv.html
+
+# Lynx 2，终极定制插件
+https://www.123pan.com/s/vgn0Vv-XdoFv.html
+
+# SimpleTime，修改锁屏时间和日期
+https://www.123pan.com/s/vgn0Vv-CQfFv.html
+
+# Vē，通知记录器
+https://github.com/AlexandraAurora/Ve
+
+# Pinnacle，App堆栈式插件
+https://www.123pan.com/s/vgn0Vv-6L1Fv.html
+
+# BigShot，一键长截图
+https://github.com/jontelang/BigShotJbSnapper3Plugin/tree/main/packages
+
+# Jade，控制中心美化
+https://www.123pan.com/s/vgn0Vv-0K9Fv.html
+
+# IPA Ranger，IPA下载器
+https://github.com/0xkuj/IPARanger
+
+# SmartNetwork，智能网络
+https://www.123pan.com/s/vgn0Vv-03mFv.html
+
+# Sleepizy 2，睡前音乐管理器
+https://www.123pan.com/s/vgn0Vv-XGoFv.html
+
+# Mineland，灵动岛下移
+https://github.com/34306/mineland
+
+# upsidedowned，颠倒显示
+https://github.com/34306/upsidedowned
+
+# Apple File Conduit "2"，允许计算机应用程序，通过 USB 访问设备完整的文件系统
+https://github.com/Cannathea/afc2d-arm64
+
+# WTVRBGLauncher，输入法语音转文字免跳转
+https://github.com/Lessica/WTVRBGLauncher
+
+# RemoveWidgetBackground，移除iOS系统小组件背景
+https://github.com/Lessica/RemoveWidgetBackground
+
+# Griddy，图标随意摆
+https://www.123684.com/s/vgn0Vv-ZkMFv
+
+# CC18，将控制中心模块变成圆形
+https://github.com/dayanch96/CC18
+
+# 禁字诀，禁止指定App摇一摇跳转
+https://www.123865.com/s/vgn0Vv-uXBFv
+
+# Colorful Wallpaper X，动态光影壁纸
+https://www.123pan.com/s/vgn0Vv-PgaFv
+
+# NotificationsGroupCount，计算锁屏分组通知数量
+https://www.123684.com/s/vgn0Vv-LaMFv
 ```
 
 兼容无根越狱的源如下。
@@ -538,8 +704,21 @@ https://repo.acreson.cn
 # Shadow屏蔽(rootless)
 https://ios.jjolano.me
 
-# CCPower控制中心(rootless)、QQ净化(rootless)、微信净化(rootless)、Netskao
+# Netskao源
+# PullOver Pro，侧边分屏
+# CCPower，控制中心
+# QQ净化
+# 微信净化
+# PullOver Pro，侧边分屏
+# DumpDecrypter，砸壳
+# ShowTouch，显示触摸轨迹
+# QQNotiAvatar，QQ通知显示联系人头像
+# WechatNotiAvatar，微信通知显示联系人头像
+# CCBadgeClear，控制中心一键清除角标
+# CCLiftToWake，控制中心添加抬起唤醒按钮
+# SmallBanners，迷你横幅
 https://repo.initnil.com
+https://jailrepo.initnil.com/
 
 # 密友助手(rootless)、斗图助手(rootless)
 https://apt.25mao.com
@@ -550,6 +729,7 @@ https://repo.anamy.gay
 # 电话助手作者源
 # 电话助手
 # 魔术师，一键锁屏
+# 灵动通知，使用灵动岛展示系统通知
 http://apt.htv123.com/
 
 # opa334作者源
@@ -567,6 +747,14 @@ https://opa334.github.io/
 # SearchDots，模仿iOS 16系统桌面搜索按钮
 # SwipeExtenderX，原生键盘增强
 # Akara，控制中心自定义
+# Glance，熄屏显示
+# Oneko，添加动态小猫
+# IAmLazy，插件备份
+# Zetsu，系统分屏
+# Mitsuha，音频可视化
+# QuickActions，自定义锁屏快捷
+# TweakReviewsDB，插件评分评论
+# PopOutButtons，按下按键弹出按钮指示器
 https://repo.chariz.com/
 
 # Ginsu作者源
@@ -580,6 +768,7 @@ https://repo.ginsu.dev/
 # BlurryBadges，角标美化
 # AppColorClose，删除按钮自适应App图标颜色
 # Battery Health Enabler，开启电池健康
+# Live Text Enabler，在不支持的设备上开启实况文本功能
 https://poomsmart.github.io/repo/
 
 # Spark源
@@ -609,6 +798,9 @@ https://tigisoftware.com/cydia/
 # ReachMore，便捷访问手势
 # QuitAll，一键清理后台
 # Sakal，锁屏添加天气等信息
+# LetMeDecline，锁屏来电增加拒接按钮
+# VideosUnmute，照片中播放视频时取消静音
+# CCBorder，控制中心模块自定义
 # iOS 15.0-15.4.1无根越狱
 https://p2kdev.github.io/repo/
 # iOS 14
@@ -650,6 +842,35 @@ https://repo.packix.com/
 # SmallSiri，缩小Siri
 # Centaur，重新设计通知中心
 # PowerModule，控制中心模块插件
+# Speedster，自定义动画速度
+# ShowMyTouches，触摸轨迹
+# Touch-Viz，触摸显示
+# Verxina，Dock 栏扩展
+# CopyVault，剪贴板
+# CloseAll，一键清除后台
+# QuitAll，一键清除后台
+# Mochi15，锁屏音乐
+# Lock Master，自定义系统锁定动画和声音
+# CircleApps15，添加App快捷启动
+# Prysm，全新的控制中心
+# Quart，通知和媒体播放器
+# Watermelon，WatchOS风格的精美锁屏小部件
+# Emerald，状态栏显示，药丸风格
+# Siliqua 2，AirPod手势控制
+# Siliqua Pro，AirPod手势控制
+# Noctis12，适合iOS 12系统的深色模式
+# Noctis Neo，外观模式伴侣
+# SmartRotate，智能方向锁
+# Maple，充电动画
+# NoctisXI，适合iOS 11系统的全局深色模式
+# AirpodsCompanion，音量滑块增加AirPods控件
+# Tinge，角标个性化颜色
+# BadgeSync，删除锁屏通知同步删除对应App角标
+# Remove Widget Background，透明小组件
+# Icon Restore，备份或恢复主屏幕图标布局
+# Single Mute，当开启静音时，时间旁边显示静音小图标
+# Single VPN，开启VPN时，状态栏WiFi或数据信号以指定颜色显示
+# Immortalizer，让应用无限制地在前台运行
 https://havoc.app/
 
 # Limneos源
@@ -660,6 +881,7 @@ https://havoc.app/
 # VoiceChanger XS，改变通话声音
 # Glow，让屏幕发光
 # BioProtect XS，程序保护插件
+# LiveCallTranslator，通话翻译
 https://limneos.net/repo/
 
 # alias20源
@@ -672,11 +894,19 @@ https://limneos.net/repo/
 # Power4Options，电源增强插件
 # FakeSignalBar，自定义运营商
 # BlurryAlerts，使用tvOS风格的弹窗
+# CoolCC Reborn，控制中心移除模块背景和添加边框
+# Axon，锁屏通知归纳
 https://alias20.gitlab.io/apt/
+
+# level3tjg
+# Installed，让Cydia源显示已安装和总插件数量
+# BetterCCBrightness，控制中心亮度添加更多扩展
+https://level3tjg.xyz/repo/
 
 # iCraze源
 # DarkPods，模仿iOS 17系统AirPods系列设备弹窗自适应深色模式
 # NotiCopy15，复制通知
+# HideQuickActions，去除锁屏快捷
 https://repo.icrazeios.com/
 
 # Creature源
@@ -741,6 +971,8 @@ https://github.com/NoisyFlake
 # b4db1r3源
 # OCD，角标和名称自适应图标颜色
 # tappy，单击或双击状态栏时间显示自定义日期
+# Tako，锁屏通知聚合
+# CozyBadges，角标个性化颜色
 https://b4db1r3.github.io/d3vr3p0/
 
 # maxiwee源
@@ -769,11 +1001,14 @@ https://uz-ra.github.io/
 
 # ZX02源
 # Frame，视频壁纸
+# CCDND，控制中心勿扰模式
+# CCDNDTimer，控制中心勿扰模式增强
 https://zerui18.github.io/zx02/
 https://zx02.yourepo.com/
 
 # ETHN源
 # ReachPlayer，便捷访问区域显示音乐播放器
+# LoopVideos，照片视频循环播放
 https://nahtedetihw.github.io/
 
 # MERONA源
@@ -785,6 +1020,10 @@ https://repo.co.kr/
 # NoUpdateMark，去除设置更新红点
 # HideKBSettings，隐藏键盘设置
 # PrimalFolder 2，将文件夹第一个图标作为文件夹封面
+# HideSerialNumber，自定义关于本机页面选项
+# RingerToggle，控制中心添加静音按钮
+# LocationService，控制中心定位开关
+# AutoBrightnessToggle，控制中心自动亮度调节开关
 https://cydia.ichitaso.com/
 
 # BigBoss源
@@ -792,16 +1031,19 @@ https://cydia.ichitaso.com/
 # CCVibration，控制中心添加振动模块
 # WiFiQR，将WiFi网络生成二维码
 # HotspotQR，将个人热点网络生成二维码
+# CustomLPM，自动开启低电量模式
 https://apt.thebigboss.org/repofiles/cydia/
 
 # 刀刀源
 # 插件汉化包
+# CCLess++，控制中心模块大集合
 https://xiangfeidexiaohuo.github.io/
 
 # 老牌猫源
 https://apt.25mao.com/
 
 # 赵楠源
+# Give me deb，自动保存deb安装包
 https://invalidunit.github.io/repo/
 
 # rob311源
@@ -832,7 +1074,111 @@ https://cydiageek.yourepo.com/
 
 # i0s_tweak3r源
 # ByeByeAppLibrary，禁用App资源库
+# LSTimeSeconds，锁屏显示秒数
 https://www.yourepo.com/
+
+# 0xkuj源
+# 3DAppVersionSpoofer，自定义App版本
+https://0xkuj.yourepo.com/
+
+# ugly-soul源
+# split-view-pro，分屏插件
+# dynamic-notifier，通知上岛
+# native-island-notifier，通知上岛
+https://ugly-soul.github.io/repo/
+
+# Nixuge源
+# NetworkManagerReborn，网络管理
+https://cydia.nixuge.me/
+
+# 乌贼力量源
+# LowPowersleep，锁屏自动低电量
+# DockX，在键盘底部添加快捷按钮
+# VPNIndicator，适合全面屏使用的VPN指示器
+# StatusBarSpeed，状态栏网速
+# RecordAnywhere，锁屏录屏
+https://lclrc.github.io/repo/
+
+# Brend0n源
+# NoPassAfterRespring（Safe），注销后无需锁屏密码，直接进入桌面
+# FPSIndicator，游戏帧数显示
+# DesktopLyrics，桌面歌词
+http://brendonjkding.github.io/
+
+# p0358源
+# PrideBars，自定义状态栏WiFi和信号颜色
+https://repo.p0358.net/
+
+# Skitty源
+# Six（LS），锁屏界面变成iOS 6样式
+# QuietDown，App单独静音
+# Sushi，歌曲变化时横幅提醒
+# Ersatz，全局范围内的替换文本
+# MoreComplications，iOS 16锁屏小组件增加行数
+# LightsOut，根据环境光传感器来切换系统深色模式
+https://skitty.xyz/repo/
+
+# MTAC源
+# Hydra，三维触控添加App快捷菜单
+# CCPowerMenu，控制中心电源增强
+https://mtac.app/repo/
+https://repo.mtac.app/
+
+# khanhduytran0源
+# TrollPad，后台分屏
+https://khanhduytran0.github.io/repo/
+
+# 艾锋源
+# April，省电插件
+# BypassRestrictionsPwd，抹去访问限制密码
+http://apt.ss03.cn
+
+# ethxnn88源
+# VisibleIsland，为老设备开启灵动岛
+https://ethxnn88.github.io/repo/
+
+# Sugiuta源
+# Nanobanners，迷你通知横幅
+# FrendaCC，控制中心图标美化
+# PlampyCC，控制中心图标美化
+# LPMNotification，移除低于20%电量弹窗
+https://sugiuta.github.io/
+
+# udevs源
+# DockX，在键盘底部增加更多实用按钮
+# DebHoarder，自动备份deb安装包
+https://udevsharold.github.io/repo
+
+# kingpuffdaddi源
+# CCBalance，控制中心添加音频平衡
+# CCMono，控制中心添加单声道模块
+# AudioMix，同时播放两个或多个音源
+# AlwaysDark，自定义App使用浅色或深色模式打开
+https://kingpuffdaddi.github.io/
+
+# dixtdf源
+# CCSupportShortcut，控制中心添加快速打开 URL 模块
+https://dixtdf.github.io/repo/
+
+# 0xkuj源
+# StoreSwitcher 2，App Store 快速切换账号
+https://0xkuj.github.io/kujman/
+
+# Nathan源
+# InternalStorageSettings，查看iPhone储存空间中系统数据
+https://nathan4s.lol/repo/
+
+# 34306源
+# replaced，删除手机设置关于本机页面里未知部件
+https://34306.github.io/
+
+# CreatureSurvive源
+# TweakSettings，独立的插件设置
+https://creaturecoding.com/repo/
+
+# Install Package Files源
+# MobileMeadow Reborn，添加草地效果
+https://pkgfiles.github.io/
 ```
 
 ## 非越狱手机查看插件库
@@ -864,8 +1210,9 @@ https://jlippold.github.io/tweakCompatible/
 ### 自用越狱源
 
 ```
-// 嘻哈源，必加
+// 必加
 http://repo.acreson.cn/
+https://invalidunit.github.io/netskao-archive/
 
 // 其它
 https://repo.packix.com/
@@ -928,7 +1275,6 @@ http://apt.iarrays.com/
 https://kanam.me/repo/
 https://repo.openpack.io/
 https://repo.niceios.com/
-https://repo.mtac.app/
 https://repo.menushka.ca/
 https://creaturesurvive.github.io/
 https://repo.anthopak.dev/
@@ -953,7 +1299,6 @@ http://repo.qwertyuiop1379.com:7777/
 https://shepgoba.github.io/
 https://repo.tr1fecta.co/
 https://repo.basepack.co/
-https://mtac.app/repo/
 https://repo.festival.tf/
 https://myxxdev.github.io/
 https://xia0z.github.io/
@@ -978,8 +1323,6 @@ Crane
 
 PullOver Pro
 侧边分屏
-无根越狱，Netskao源
-https://repo.initnil.com
 官方版本，c1d3r（很久没有更新）
 https://c1d3r.com/repo/
 
@@ -1001,10 +1344,6 @@ vWallpaper 2
 动态桌面和锁屏是放置路径： /User/Media/vWallpaper2/Videos/ 
 视频格式一定要mp4
 
-April
-省电插件
-apt.ss03.cn
-
 AnyWhere
 虚拟定位插件
 apt.abcydia.com
@@ -1013,11 +1352,6 @@ apt.abcydia.com
 IntelligentPass 4
 带特定蓝牙耳机或连接特定wifi时自动解锁
 apt.geometricsoftware.se
-
-
-Six（LS）
-锁屏界面变成iOS 6样式
-skitty.xyz/repo
 
 
 PPSSPP，PSP模拟器
@@ -1047,7 +1381,6 @@ http://apt.thebigboss.org/repofiles/cydia
 
 
 软件插件
-AudioRecorder2 通话录音
 Cylinder 桌面翻页特效
 BetterCCXI 控制中心增强
 WiFi Passwd 密码备忘录
@@ -1058,7 +1391,6 @@ NoMoreSApps x全屏应用
 AnyWhere 虚拟定位+修改机型
 ToneEnabler 手动拖入铃声
 BatteryLife 电池信息
-SugarCane CC百分比
 CarBridge CarPlay汽车互联
 Xen HTML 锁屏与桌面挂件的搭载平台
 Boxy 3 强大的桌面图标布局自定义工具
@@ -1504,14 +1836,6 @@ https://repo.twickd.com/
 https://poomsmart.github.io/repo/
 ```
 
-#### DockX
-
-在键盘底部增加更多实用按钮。
-
-```
-https://udevsharold.github.io/repo
-```
-
 #### EmojiPort Fonts
 
 让低版本的iOS系统使用最新的Emoji表情。
@@ -1642,14 +1966,6 @@ iPhone X右上角通知图标。
 
 ```
 http://apt.mumiantech.com/
-```
-
-#### Nanobanners
-
-迷你通知横幅插件.
-
-```
-https://sugiuta.github.io/
 ```
 
 #### Eyeplugs
@@ -1823,14 +2139,6 @@ https://legitcomputerwhisperer.github.io/
 http://repo.pixelomer.com/
 ```
 
-#### #Installed
-
-让Cydia源显示已安装和总插件数量。
-
-```
-https://level3tjg.xyz/repo/
-```
-
 #### CydiaCounter
 
 统计Cydia所安装插件数量。
@@ -1858,15 +2166,6 @@ Cydia源管理增强。
 ```
 https://poomsmart.github.io/repo/
 ```
-
-#### NoPassAfterRespring（Safe）
-
-注销后无需锁屏密码，直接进入桌面。
-
-```
-http://brendonjkding.github.io/
-```
-
 
 ### 相机/照片与截屏
 
@@ -2040,23 +2339,7 @@ App Store应用降级随意旧版。
 http://beta.unlimapps.com
 ```
 
-#### StoreSwitcher 2
-
-App Store快速切换账号。
-
-```
-http://subdiox.com/cydia/
-```
-
 ### 电话与录音
-
-#### AudioRecorder通话录音
-
-录取微信、电话等一切通话录音。
-
-```
-http://limneos.net/repo
-```
 
 #### xybp888
 
@@ -2312,14 +2595,6 @@ https://repo.litten.love/
 https://repo.packix.com/
 ```
 
-#### FPSIndicator
-
-游戏帧数显示。
-
-```
-http://brendonjkding.github.io/
-```
-
 ### 闹钟
 
 #### NextAlarm14
@@ -2376,14 +2651,6 @@ https://miro92.com/repo/
 
 ### 暂不可用插件
 
-#### PullOver Pro
-
-从侧边唤出App，实现分屏操作。
-
-```
-https://c1d3r.com/repo/
-```
-
 #### KillMyApps
 
 锁屏不杀后台插件。
@@ -2431,8 +2698,6 @@ https://kurrt.com/repo/
 若安装的插件不兼容或者冲突，一般会进入安全模式。此时打开Sileo卸载有问题的插件即可。
 
 可使用PowerSelector一键进入安全模式。
-
-
 
 # 补丁软件
 
@@ -3643,3 +3908,1096 @@ https://www.youtube.com/watch?v=VHWFVwztNwU
 ```
 https://mp.weixin.qq.com/s/SSYXT7gAnHCWU2-Nx7sKjg
 ```
+
+## iOS 系统，一键更改 App 版本，完全免费
+
+```
+https://mp.weixin.qq.com/s/fue2BvyCnxJwiyDYyYp1oQ
+```
+
+## 新的 iOS 16.5 越狱发布，支持这款机型
+
+```
+https://mp.weixin.qq.com/s/4yjcOhCeI-tNpSR7TEDSZQ
+```
+
+## iOS 15.0 - 15.7.6 越狱已发布，不用电脑
+
+```
+https://mp.weixin.qq.com/s/0MkrVtac2s2Yi2I2sOx3nQ
+```
+
+## iOS 系统，动画加速，飞速体验，免费
+
+```
+https://mp.weixin.qq.com/s/mZg28Cu6X_VUo_2ABSmk1w
+```
+
+## 好东西！iOS 16.5.1 新的分屏插件
+
+```
+https://mp.weixin.qq.com/s/Xu3zfZwp9lIYtxvcPA6NJQ
+```
+
+## iOS 系统，全新触摸，中文，免费
+
+```
+https://mp.weixin.qq.com/s/ligvymOcyvnOy-TYy_yVpg
+```
+
+## iOS 系统，Touch-Viz，漂亮，内有福利
+
+```
+https://mp.weixin.qq.com/s/A30VyA5M-RwlPG8VpdYkGQ
+```
+
+## iOS 系统，必备神器，功能丰富
+
+```
+https://mp.weixin.qq.com/s/L_-UQ4Eds90dZObqTh0WoQ
+```
+
+## iOS 系统，增强版，中文，免费
+
+```
+https://mp.weixin.qq.com/s/9H1SDdrU5BUZiCh_pvmLLQ
+```
+
+## iOS 系统，韦尔西纳，测试一下
+
+```
+https://mp.weixin.qq.com/s/ETJQ4RAEimW_yoO677vlTQ
+```
+
+## iOS 系统，CopyVault，好用
+
+```
+https://mp.weixin.qq.com/s/1e1zT3l82OpV787B4DCQ2g
+```
+
+## iOS 系统，iPhone 熄屏显示，新鲜
+
+```
+https://mp.weixin.qq.com/s/nRNoXhFtXZp7JUaKO52Brg
+```
+
+## 在 iPhone 上养一只可爱的小猫，有趣
+
+```
+https://mp.weixin.qq.com/s/yAwYNtCUej1RmVMI78Tj5Q
+```
+
+## iOS 系统，键盘增强，完全免费
+
+```
+https://mp.weixin.qq.com/s/Fh4nLBx5xXG7qBADVCoOKw
+```
+
+## iOS 系统，一键清除后台，两款，完全免费
+
+```
+https://mp.weixin.qq.com/s/buF4WXfLffbQXRBgwIEQ2w
+```
+
+## iOS 系统，iPhone 熄屏显示，炫酷
+
+```
+https://mp.weixin.qq.com/s/a52lAZOAU_0eUZussSil4A
+```
+
+## iOS 系统，轻量级剪贴板神器，完全免费
+
+```
+https://mp.weixin.qq.com/s/WZ6zOGvSO5JvCBxh1tGqEQ
+```
+
+## iOS 系统，iPhone 分屏神器，现已免费
+
+```
+https://mp.weixin.qq.com/s/3aokPB-iMBQ-18QlBzLksg
+```
+
+## iOS 系统，一键隐藏，保护隐私
+
+```
+https://mp.weixin.qq.com/s/djagf9zvDL2c0e--wh1sZg
+```
+
+## iOS 系统，照片加锁，保护隐私，现已免费
+
+```
+https://mp.weixin.qq.com/s/9eSKpU4UcaC8MTn-RhyAlA
+```
+
+## iOS 系统，卡片计算器，前端悬浮显示
+
+```
+https://mp.weixin.qq.com/s/i_N7eFDM1f-uZIqZpOSfEg
+```
+
+## iOS 系统，像 iPad 一样分屏，终于来了，免费
+
+```
+https://mp.weixin.qq.com/s/gew66tNDWV0fQXxKBb-vmg
+```
+
+
+## iOS 系统，电池、亮度、音量百分比，清除角标，快速控制中心，完全免费
+
+```
+https://mp.weixin.qq.com/s/tXfKj3_HgZB4frYFQ4dPww
+```
+
+## iOS 系统，截图神器，详细使用
+
+```
+https://mp.weixin.qq.com/s/F8_flUzRjaQhyUg6fT9tNQ
+```
+
+## iOS 系统，真正的 iPhone 通话录音，就这么简单
+
+```
+https://mp.weixin.qq.com/s/WUWIdWcWB1lwKMfvUr4CtQ
+```
+
+## iOS 系统，老设备立刻拥有灵动岛，来了
+
+```
+https://mp.weixin.qq.com/s/I1kZRanmJ-AJ0XAvlytSTg
+```
+
+## iOS 系统，弹窗自适应，独立设置，录像暂停，Dock 动图，完全免费
+
+```
+https://mp.weixin.qq.com/s/6JJ4kDy4r459QK3HLXyG2Q
+```
+
+## iOS 系统，真后台来了，完全免费
+
+```
+https://mp.weixin.qq.com/s/_O6ZMCZXneX56QzBosreug
+```
+
+## iOS 系统，终于来了，分词大爆炸，完全免费
+
+```
+https://mp.weixin.qq.com/s/dPqO2AgnIMbOFd7Bi46vOw
+```
+
+## iOS 系统，终于支持了，自定义桌面布局，完全免费
+
+```
+https://mp.weixin.qq.com/s/1X16PvIXr7I3sUCp4VhR7w
+```
+## iOS 系统，我的 iPhone 下雪啦，清凉
+
+```
+https://mp.weixin.qq.com/s/RvrDbrBdhT-Q_ut_ky-ZoQ
+```
+
+## iOS 系统，视频播放器手势，完全免费
+
+```
+https://mp.weixin.qq.com/s/MjA6oIQlPu54BJ7kaAvjIw
+```
+
+## iOS 系统，iPhone 来电自动应答，语音信箱
+
+```
+https://mp.weixin.qq.com/s/_kD65DEKCcCGtFh6WorJZw
+```
+
+## iOS 系统，给隐藏照片加锁，保护隐私
+
+```
+https://mp.weixin.qq.com/s/eDvNKbSDuvAuO8s3nhyrzQ
+```
+
+## iOS 系统，分屏神器，终于来了，完全免费
+
+```
+https://mp.weixin.qq.com/s/VxrfG_IMyJkOYxY9s7e5zA
+```
+
+
+## iOS 系统，接听振动，角标美化，状态栏日期和时间，完全免费
+
+```
+https://mp.weixin.qq.com/s/OUj0C7_-ssvjkJMXeTXPdQ
+```
+
+## iOS 16.2 AppSync 插件更新，可以任意安装IPA
+
+```
+https://mp.weixin.qq.com/s/szIA7ASYdH0VWrRjeQV7xw
+```
+
+## iOS 系统，让 iPhone 使用 tvOS 精美弹窗
+
+```
+https://mp.weixin.qq.com/s/RXv3JAiom4K1rnK3W_U8MA
+```
+
+## iOS 系统，漂亮锁屏，别具一格
+
+```
+https://mp.weixin.qq.com/s/lewysejGGbpwA87h0TTG5w
+```
+## iOS 系统，功能丰富，必备神器，完全免费
+
+```
+https://mp.weixin.qq.com/s/p0nLRsMwnku0oxJen3XprA
+```
+
+## 05.05 ｜ 近期插件更新，速看
+
+```
+https://mp.weixin.qq.com/s/AwNF8CjL2HmxH_dQ5-RJ7A
+```
+
+## 超爽！iOS 15.1 MilkyWay2 分屏，含安装教程
+
+```
+https://mp.weixin.qq.com/s/5dg5MCJ6QgVZnIU-4CL4Gg
+```
+
+## IOS11.2~11.3.1系统美化软件已发布，你会喜欢吗？
+
+```
+https://mp.weixin.qq.com/s/FabYhz1LNwgic41A13kQdA
+```
+
+## iOS 系统，deb 备份，支持一键备份全部
+
+```
+https://mp.weixin.qq.com/s/r6KxWQsuSBh72w6b4X21Sg
+```
+
+## iOS 系统，通知归纳，简洁美观
+
+```
+https://mp.weixin.qq.com/s/Jc7ou0mo4yB5_SMiXOw6KA
+```
+
+## iOS 系统，一键振动，禁用资源库，自定义运营商，自动解锁，完全免费
+
+```
+https://mp.weixin.qq.com/s/PbTZM37HmOShWP7QS7_B9g
+```
+
+## iOS 系统，漂亮的计时器和闹钟，现已免费
+
+```
+https://mp.weixin.qq.com/s/oyFHcmKanTsznQho6UNMfQ
+```
+
+## iOS 系统，iPhone 通话变声器
+
+```
+https://mp.weixin.qq.com/s/yFlqh8mhRNi2QWZ1F40X1Q
+```
+
+## iOS 系统，动画加速，纵享丝滑
+
+```
+https://mp.weixin.qq.com/s/j7Mr4tD4e_wjbyCUWg8KMQ
+```
+
+## iOS 系统，快速启动神器，丝滑
+
+```
+https://mp.weixin.qq.com/s/9HmfhMYfq_0KNNl1ct2t9A
+```
+
+## iOS 系统，超酷动态视频壁纸，完全免费
+
+```
+https://mp.weixin.qq.com/s/LdtVlkrCD7-NBBQ7qW-IsA
+```
+
+## iOS 系统，运行时间，一键截图，锁屏天气，完全免费
+
+```
+https://mp.weixin.qq.com/s/5P8bmTSbnkChQF3F3uJePQ
+```
+
+## iOS 系统，功能强大，保护隐私
+
+```
+https://mp.weixin.qq.com/s/I8yXnoW5gY0908uOUgFVYw
+```
+
+## iOS 系统，简洁好用的程序锁，免费
+
+```
+https://mp.weixin.qq.com/s/7atDcp31oCJZZVDgnhFtBg
+```
+
+## iOS 系统，去除红点，去除资源库，录屏勿扰，复制通知，图标文件夹
+
+```
+https://mp.weixin.qq.com/s/KecTqxZ-Unabb6ARu3toBQ
+```
+
+## iOS 系统，让 iPhone 快速返回，非常方便
+
+```
+https://mp.weixin.qq.com/s/m-UVmt0uggHyD7I6_8TYxA
+```
+
+## iOS 系统，已安装插件，提取和备份 deb
+
+```
+https://mp.weixin.qq.com/s/vQpyIPIyGY80DOJ2KOe1fg
+```
+
+## iOS 系统，设置归类，设置顶图，就这么简单
+
+```
+https://mp.weixin.qq.com/s/7q4zS2mpFX2DRGxrjwqbaA
+```
+
+## iOS 系统，炫酷跑马灯，完全免费
+
+```
+https://mp.weixin.qq.com/s/xpwCCukt4O5VWP3cnXBixA
+```
+
+## iOS 系统，自定义文件夹，支持批量拖放，中文菜单
+
+```
+https://mp.weixin.qq.com/s/_4eThM51DYngTEjxcsKRUA
+```
+
+## iOS 系统，控制中心一键定位，一键注销，迷你播放器，免费
+
+```
+https://mp.weixin.qq.com/s/U9ahH9U06lYYYa3yMv8xEg
+```
+
+## iOS 系统，炫酷翻页特效，重生
+
+```
+https://mp.weixin.qq.com/s/WGF1iK9QmUJQRgVDoUqLyg
+```
+
+## 电池百分比，iOS 16 样式，完全免费
+
+```
+https://mp.weixin.qq.com/s/LoeQYWJCKRAov-DXZ7wLHA
+```
+
+## 仿 iPhone 12 充电动画来了，旧款设备也能实现
+
+```
+https://mp.weixin.qq.com/s/qQpviEqnfhXfL-1tyBneqQ
+```
+
+## iOS 13 仿 14 插件，越狱设备可试
+
+```
+https://mp.weixin.qq.com/s/gyoD4gOr3Iwn6vnOgHreIQ
+```
+
+## 收藏啦！iOS15.1XinaA15越狱，PC访问系统文件
+
+```
+https://mp.weixin.qq.com/s/FsM3Ul-3KaDunLQF__xQ8Q
+```
+
+## 真的来了，iOS 15/16 灵动半岛插件，确实有灵动
+
+```
+https://mp.weixin.qq.com/s/4S3-4qV4SopGeTwA7lCCpw
+```
+
+## 新工具疑似完美越狱 / 阿里云盘扩容 / 扫黑风暴惨遭泄漏
+
+```
+https://mp.weixin.qq.com/s/GwVnPIfZoeZVIRS0IKkufg
+```
+
+## iOS14.8.1系统越狱新解锁，戴耳机也能解锁设备
+
+```
+https://mp.weixin.qq.com/s/rTLe1KdfRQiZ54SaH4G8Hw
+```
+
+## iOS 系统，一键抠图神器，无需升级 iOS 16
+
+```
+https://mp.weixin.qq.com/s/VadXLLO9iBKMnUN507VHxQ
+```
+
+## iOS 系统，带上皇冠，终于来了
+
+```
+https://mp.weixin.qq.com/s/jUTM2lVhOSLWBdr1HiMQQQ
+```
+
+## iOS 系统，Dopamine 越狱，官方源作者源推荐（一）
+
+```
+https://mp.weixin.qq.com/s/9IVsWkRaCcfrnSr4Ebupxw
+```
+
+## 二个越狱消息：新版Cydia将来出炉/IOS11.3.1平刷插件
+
+```
+https://mp.weixin.qq.com/s/2hmmLyQaSpupc9D9PYsmRQ
+```
+
+## iOS12.4 越狱工具无法安装？绕过 ID 新方法
+
+```
+https://mp.weixin.qq.com/s/3AqUY1R0hVxWYxScBlfNwA
+```
+
+## iOS 13.4.1 免越狱改X手势，Sileo 再次更新
+
+```
+https://mp.weixin.qq.com/s/qYrfrFd-kE5hRtr0thIdUg
+```
+
+## iOS 系统，主题美化，真主题，抢鲜使用，无需越狱，免费
+
+```
+https://mp.weixin.qq.com/s/eDl_Og4I-nFotAgNwp2AnA
+```
+
+## iOS 系统，控制中心换个图标，有趣
+
+```
+https://mp.weixin.qq.com/s/nKzvEM2fIscdp0Wdlqprug
+```
+
+## iOS 系统，iPhone 水特效，清凉
+
+```
+https://mp.weixin.qq.com/s/_ctkLwa00Vuh-IPbppx7DA
+```
+
+## 近期插件更新，看看
+
+```
+https://mp.weixin.qq.com/s/k81Vg0MjJJKnvfdQ9h9JUw
+```
+
+## iOS 系统，自定义 Dock 栏摆放数量
+
+```
+https://mp.weixin.qq.com/s/h3b5_npq65eCjks5y5LfOw
+```
+
+## iOS 系统，翻译神器，详细使用
+
+```
+https://mp.weixin.qq.com/s/qZ0Gj64bHNqfNmZpocSyBQ
+```
+
+## iOS 15.4.1 越狱，Dopamine 将支持简体中文
+
+```
+https://mp.weixin.qq.com/s/8rVGhvCy3jwpN_c3Hiwksg
+```
+
+## iOS 15.4.1 Derootifier 更新，转无根插件
+
+```
+https://mp.weixin.qq.com/s/WpSy6G7vIYFWS0PmbhDXgQ
+```
+
+## iOS 系统，新的 iPhone 分屏神器，众享丝滑
+
+```
+https://mp.weixin.qq.com/s/MeqS0proFrb5CHZ1LrNWAw
+```
+
+## iOS 系统，自定义锁头，漂亮
+
+```
+https://mp.weixin.qq.com/s/CWGHr0mO5YOcHvcPP0-DgA
+```
+
+## iOS 系统，新一代截图神器，来了
+
+```
+https://mp.weixin.qq.com/s/DZZxAcw8lLvczs-8rUcBMQ
+```
+
+## iOS 系统，iPhone 熄屏显示，精美
+
+```
+https://mp.weixin.qq.com/s/QQgXWmQiGO5kCLsMkH1plw
+```
+
+## iOS 系统，计算历史，角标，去除，勿扰增强，插件 Hub，完全免费
+
+```
+https://mp.weixin.qq.com/s/8HUs0mvFWZ5-ktek1YrxmA
+```
+
+
+
+
+## 如何在不同基板(框架)/APT(规范)下施展Cydia和Sileo的轮回骚操作
+
+```
+https://mp.weixin.qq.com/s/9oMQVCdudK_jYvTVw5zQTw
+```
+
+## Cydia for iOS7-iOS13 内各种红字、黄字常见错误解决方法全收录
+
+```
+https://mrmad.com.tw/cydia-red-yellow-error
+```
+
+## coolstar/Odyssey-bootstrap
+
+```
+https://github.com/coolstar/Odyssey-bootstrap
+```
+
+
+
+## iOS 系统，通知上岛，终于来了，免费
+
+```
+https://mp.weixin.qq.com/s/hmhS82ldAPGz13SrvdDXlg
+```
+
+## iOS 系统，新版，通知上岛，免费
+
+```
+https://mp.weixin.qq.com/s/LKNRCtao1hJ904z7GBd3RA
+```
+
+## iOS 系统，网络管理，重生
+
+```
+https://mp.weixin.qq.com/s/IJAs_AWQGgFUllICKsMkMA
+```
+
+## 无需更新系统，iOS 16 锁屏音乐播放器
+
+```
+https://mp.weixin.qq.com/s/Qgg-YsbZ2qxRByP3BvLOwQ
+```
+
+## iOS 系统，巫师，神奇切换器
+
+```
+https://mp.weixin.qq.com/s/5bDN0I2yoVoEE3z_fNzEhw
+https://mp.weixin.qq.com/s/kpO4zbZx_jf-eaAIwnTUwQ
+```
+
+## iOS 系统，新版 OCD，Dotto 重生
+
+```
+https://mp.weixin.qq.com/s/TgPBUlJ6hA6hB47LKbFYXA
+```
+
+## iOS 系统，经典，复活
+
+```
+https://mp.weixin.qq.com/s/jPYZSmac9A982G47oog4Bw
+```
+
+## iOS 系统，保护你的 iPhone
+
+```
+https://mp.weixin.qq.com/s/mPAYZHpTyowD6-cgkm-DrA
+```
+
+## iOS 系统，新玩具，泡泡应用
+
+```
+https://mp.weixin.qq.com/s/DPUNePAuUqr7wc15YCRyOA
+```
+
+## iOS 系统，IAmLazy 一键备份，就这么简单
+
+```
+https://mp.weixin.qq.com/s/9Fozz0htLjFJIMzZKalnuA
+```
+
+## iOS 系统，让 iPhone 续航更持久
+
+```
+https://mp.weixin.qq.com/s/qgDeqCa4bmIZO_Mb42ylZA
+```
+
+## iOS 系统，KuKu，重生
+
+```
+https://mp.weixin.qq.com/s/P-Tq4LH5w_RHe6ulSY3BAQ
+```
+
+## 强，分屏神器随意切换
+
+```
+https://mp.weixin.qq.com/s/fu4GwHb22wV9wTugeTS4kQ
+```
+
+## 大神被诏安，苹果给的实在是太多了
+
+```
+https://mp.weixin.qq.com/s/8aXpTlDo9o924uG1_4otkw
+```
+
+## iOS 15.x SaiGon 越狱更新，离有根接近
+
+```
+https://mp.weixin.qq.com/s/nMf9dsdkYUcc74h7sAsgZA
+```
+
+## iOS 系统，专业歌词，卡拉OK，中文免费
+
+```
+https://mp.weixin.qq.com/s/U4oQJVB-dOhNTfo2oCLooA
+```
+
+## iOS 系统，浏览器手势，便捷神器
+
+```
+https://mp.weixin.qq.com/s/dyslnxm8WUQlaYXhbnlbAQ
+```
+
+## iOS 系统，增强神器，终于来了，好用
+
+```
+https://mp.weixin.qq.com/s/TZegOgeQQ4yBz147n6iD-g
+```
+
+## iOS 系统，灵动通知，现已发布，丝滑
+
+```
+https://mp.weixin.qq.com/s/3_rDkLlOd4yoZfKYvDLyqw
+```
+
+## iOS 系统，智能旋转，好用
+
+```
+https://mp.weixin.qq.com/s/YZalAF-psZc05IksHbzevg
+```
+
+## iOS 系统，新玩意，Ring
+
+```
+https://mp.weixin.qq.com/s/N18_xeLW6ERG-8qTqEQyTw
+```
+
+## iOS 系统，彩虹信号
+
+```
+https://mp.weixin.qq.com/s/HQOalFFFihh2bsHCX92g-Q
+```
+
+## iOS 系统，一键清除后台，免费
+
+```
+https://mp.weixin.qq.com/s/cmhK9IgrbsYoknVPqoa-qA
+```
+
+## iOS 系统，智能通知，终于来了
+
+```
+https://mp.weixin.qq.com/s/skVXzhdfBzOheA16PJNSbA
+```
+
+## iOS 系统，酷CC，完全免费
+
+```
+https://mp.weixin.qq.com/s/0IVd_KbPOxc8HugXw4c1zw
+```
+
+## iOS 系统，通知聚合，漂亮，重生
+
+```
+https://mp.weixin.qq.com/s/MG4ilT2szAIuCx09xFrX0Q
+```
+
+## iOS 系统，通知归纳，复活
+
+```
+https://mp.weixin.qq.com/s/FAlH-OJY9pqVQE69HkM_iw
+```
+
+## iOS 系统，超强山猫，终极定制
+
+```
+https://mp.weixin.qq.com/s/x6o1CxrpmxZS_AKw6twWeQ
+```
+
+## iOS 系统，老牌分屏神器，复活，免费
+
+```
+https://mp.weixin.qq.com/s/KPnCZGIzGjwz4yzvyRm1AA
+```
+
+## iOS 系统，一键单独静音 App，快速方便
+
+```
+https://mp.weixin.qq.com/s/83NwvHGvrPnat2JfScHypQ
+```
+
+## iOS 系统，新玩意，寿司
+
+```
+https://mp.weixin.qq.com/s/FlIRiQsf7GMNSCipOX_Mzw
+```
+
+## iOS 系统，简单时间，效果不错
+
+```
+https://mp.weixin.qq.com/s/gmE_tbMuwVhOlIMUQfBH0A
+```
+
+## iOS 15 系统，Freya 越狱发布，手机端，无需电脑
+
+```
+https://mp.weixin.qq.com/s/lO4QUi5t0QOayFKEnJ_e0w
+```
+
+## iOS 系统，长蛇座，菜单 App 快捷
+
+```
+https://mp.weixin.qq.com/s/iumYTvAg59zTfw9CZ_OfWQ
+```
+
+## iOS 15 系统，新越狱工具发布
+
+```
+https://mp.weixin.qq.com/s/OnXArgrCST81xFdLL2HHhQ
+```
+
+## iOS 系统，Vē，通知记录，全部
+
+```
+https://mp.weixin.qq.com/s/2w9XBSYPo7iplrDIhacjZg
+```
+
+## iOS 系统，砸壳，完整权限
+
+```
+https://mp.weixin.qq.com/s/QazBuU0vS1h1xvAgbpdiwA
+```
+
+## iOS 16.6.1 TrollPad 后台分屏已发布
+
+```
+https://mp.weixin.qq.com/s/TnhjRLBJb07IqqFLq2bdZg
+```
+
+## iOS 系统，App 堆栈，终于来了
+
+```
+https://mp.weixin.qq.com/s/zSZTNRIGDGVfwYiXjkHmLQ
+```
+
+## iOS 系统，全局替换，神器？
+
+```
+https://mp.weixin.qq.com/s/AzWKXwpXyk5r-1UJewEcRw
+```
+
+## 更新了！iOS 16.x LCT 通话翻译，不怕听不懂
+
+```
+https://mp.weixin.qq.com/s/O0jYtJevqlvDD7ZV7CW64w
+```
+
+## iOS 系统，一键长截图，终于来了，独立使用，完全免费
+
+```
+https://mp.weixin.qq.com/s/pm4OONErIvjqIuVUw6-V6w
+```
+
+## iOS 系统，Mitsuha 现已复活
+
+```
+https://mp.weixin.qq.com/s/4W--zjn9KhVyuDFuMsiL8Q
+```
+
+## 无须刷机，破解iPhone访问限制密码方法
+
+```
+https://mp.weixin.qq.com/s/buJ1b3PzLmxn3-_ZIq51AA
+```
+
+## iOS 系统，全新控制中心，终于来了
+
+```
+https://mp.weixin.qq.com/s/ZB-RdZmZBbKp4LcCKC9Tow
+```
+
+## iOS 系统，IPA 下载器，完全免费
+
+```
+https://mp.weixin.qq.com/s/i0ViSJ2e8zbZ2ib4mpguwg
+```
+
+## iOS 系统，老设备一键灵动岛，完全免费
+
+```
+https://mp.weixin.qq.com/s/P8kuxCVVbko6SPegTH512g
+```
+
+## iOS 系统，Mochi15 锁屏音乐，已经免费
+
+```
+https://mp.weixin.qq.com/s/wbFuW40JrKVuINk0R0v75g
+```
+
+## iOS 系统，智能网络，增强 WiFi 信号
+
+```
+https://mp.weixin.qq.com/s/N55JDSXC_7CusZYzjcpebg
+```
+
+## iOS 系统，锁大师，现已上架 Havoc 源，免费
+
+```
+https://mp.weixin.qq.com/s/QOwYPFBHEgCgU9jxyK_FNw
+```
+
+## iOS 系统，新的精美控制中心，必看
+
+```
+https://mp.weixin.qq.com/s/gcsH0URHsh4z9awUIliP3Q
+```
+
+## iOS 16.6.1 新快捷插件，超级便捷
+
+```
+https://mp.weixin.qq.com/s/-tvVsysm4-IcfS908bZD2g
+```
+
+## XinaA15 新官网上线，请收藏
+
+```
+https://mp.weixin.qq.com/s/0MRRIOghnihTA-TSmv7s5g
+```
+
+## iOS 系统，伴着音乐入睡
+
+```
+https://mp.weixin.qq.com/s/beSu7v8Q_xXDY-yqHsYdGA
+```
+
+## iOS 17 系统，也能越狱？
+
+```
+https://mp.weixin.qq.com/s/B2EE4Tq6lFYmQH1koJucCQ
+```
+
+## 大神去世！
+
+```
+https://mp.weixin.qq.com/s/9eEgZCNwp2l2jGbixECdCA
+```
+
+## iOS 系统，增加小组件，音量控件，触摸轨迹，V指示器
+
+```
+https://mp.weixin.qq.com/s/QEJev2pngW595b2YalJZcw
+```
+
+## iOS 系统，让控制中心更好用
+
+```
+https://mp.weixin.qq.com/s/2qGFFYJTfQFO-3WhfWOv3w
+```
+
+## iOS 系统，电源增强，完全免费
+
+```
+https://mp.weixin.qq.com/s/d3rQlXgBi6yUHLYaR7dFxQ
+```
+
+## iOS 系统，下载 deb，提取 dylib 文件
+
+```
+https://mp.weixin.qq.com/s/bNU5OMIzpYcxWKz-plXy4Q
+```
+
+## 来啦！全新 iOS 16.6.1 启动灵动岛，可以下移显示
+
+```
+https://mp.weixin.qq.com/s/QtIyEdHQs0xaU-lwFzz2Gg
+```
+
+## iOS 16.6.1 颠倒显示，实现无刘海显示
+
+```
+https://mp.weixin.qq.com/s/wOdmdHV-c7dTBMvfafbCDw
+```
+
+## 大神更新，老牌神级，现已支持
+
+```
+https://mp.weixin.qq.com/s/HWtxgeob9SiuF-kiEeZwxA
+```
+
+## 无需升级 iOS 18，体验新功能，第一期
+
+```
+https://mp.weixin.qq.com/s/mNjjfCJT8i5-frfvxtw_JQ
+```
+
+## iOS 系统，精美控制中心，完全免费
+
+```
+https://mp.weixin.qq.com/s/6u4ijH_kdJObZ6D96kSPBg
+```
+
+## iOS 系统，继续，控制
+
+```
+https://mp.weixin.qq.com/s/7yPvxAXQo64eqb-ytT5HEw
+```
+
+## iOS 系统，角标，个性化角标
+
+```
+https://mp.weixin.qq.com/s/RbNw_DeCROx6nNFGLKVJdw
+```
+
+## iOS 系统，一键换号，来电拒接，取消静音，计算历史，备份安装包
+
+```
+https://mp.weixin.qq.com/s/B9VxGRXX_o803jwBnNJAlA
+```
+
+## iOS 系统，锁屏秒数，评论评分，状态栏网速，同时播放，自由深色
+
+```
+https://mp.weixin.qq.com/s/XcaRhBeFUiQloLsYMNxpjA
+```
+
+
+## 无需升级 iOS 18，体验新功能，第二期
+
+```
+https://mp.weixin.qq.com/s/4bmOb5UjTuPKAD4gHAtIWg
+```
+
+## 惊现！iOS 完美越狱已发布，仅支持这些系统
+
+```
+https://mp.weixin.qq.com/s/InUtCLs6zDVy3XJs2Vwp7A
+```
+
+## 系统数据，查看详细
+
+```
+https://mp.weixin.qq.com/s/4V9v4fkKp4-QdfSeK5HwBQ
+```
+
+## iOS 系统，语音免跳转，移除小组件背景，迷你横幅，环境光切换，独立设置
+
+```
+https://mp.weixin.qq.com/s/PPxn4cm_e9mZ_ZMSyJI1kQ
+```
+
+## 一键透明
+
+```
+https://mp.weixin.qq.com/s/h9k298Yf7XwYg5BkbkLkmQ
+```
+
+## 图标随意摆，终于来了
+
+```
+https://mp.weixin.qq.com/s/NqAHwQ3osTT554lkkOzehA
+```
+
+## 新玩法，无需升级 iOS 18 系统
+
+```
+https://mp.weixin.qq.com/s/4jc7XqYDaWjygjnrGHkqfw
+```
+
+## CC18
+
+```
+https://mp.weixin.qq.com/s/2IoMgsPUtw_KEWPBgpqokQ
+```
+
+## 小草，终于重生
+
+```
+https://mp.weixin.qq.com/s/AZXHdcDyIkyscLOZGZgw0Q
+```
+
+## 时光机
+
+```
+https://mp.weixin.qq.com/s/lzNyegaJs1c-2XMSWdQ5Ow
+```
+
+## 移除电量低于20%弹窗
+
+```
+https://mp.weixin.qq.com/s/-_4KYfb7cD92M-6Z3D7ATA
+```
+
+## 实用，免费！
+
+```
+https://mp.weixin.qq.com/s/2N1p-zeb8-to2OfDgaXbzQ
+```
+
+## 一大波！
+
+```
+https://mp.weixin.qq.com/s/6TOE5mzlksU2L464TekALA
+```
+
+## 速度，无需升级 iOS 18.1 系统
+
+```
+https://mp.weixin.qq.com/s/x13r70Cw5dNmfYhjxX5m6w
+```
+
+## CCBorder
+
+```
+https://mp.weixin.qq.com/s/b75d8mDoTN8SM37qqQ5z-w
+```
+
+## 神器，永生者！
+
+```
+https://mp.weixin.qq.com/s/4CXLdgvM6kUNeZqXLPYmnA
+```
+
+## iOS 14.6 - 14.8 系统越狱来了，你需要知道这些
+
+```
+https://mp.weixin.qq.com/s/zf3cJqinVIE4G8w7lJQLXQ
+```
+
+## unc0ver 更新 7.0.1 版本，真的是完美越狱吗？
+
+```
+https://mp.weixin.qq.com/s/dGvP2l4JwwkAMj-kevzoNw
+```
+
+## 王者荣耀修改教程
+
+```
+https://mp.weixin.qq.com/s/kawj3yg4lklM7BGrM4lXew
+https://mp.weixin.qq.com/s/5g0pjMRXkZc0g1hvs9oqoQ
+https://mp.weixin.qq.com/s/kAwToNnMArbyG9hk-nzalg
+https://mp.weixin.qq.com/s/trKrmzkOg8qUx9LVGu3WCg
+https://mp.weixin.qq.com/s/21gSod8io0L4ygYIK2C0vg
+https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=MzA5OTU0MTE1MQ==&scene=1&album_id=1318325233564172288#wechat_redirect
+```
+
+## 分享插件：55款插件一定有你喜欢的
+
+```
+https://mp.weixin.qq.com/s/VoZGTl5iwe98tlzrKThEfg
+```
+

@@ -13,12 +13,13 @@ iOS降级指南。
 
 <!-- more -->
 
-# OTA延迟升级
-
-如果手机受监督，可推迟更新，适用于公司设备的情况。可参考以下内容延迟升级到iOS 14.8（方法已经失效）。
+# TODOS
 
 ```
+# OTA延迟升级
+# 如果手机受监督，可推迟更新，适用于公司设备的情况。可参考以下内容延迟升级到iOS 14.8（方法已经失效）
 https://mp.weixin.qq.com/s/x4aeH2gp3J7E0HHX7s1Zng
+https://mp.weixin.qq.com/s/49wiD-MKZg8qM2ejbcvEmA
 https://supervise.me/
 ```
 
@@ -314,9 +315,21 @@ https://www.feng.com/post/12857525
 https://mp.weixin.qq.com/s/VjyE55Vsn5OTISzg4eaeoA
 ```
 
+## futurerestore ，iOS 系统刷机到指定版本
+
+```
+https://mp.weixin.qq.com/s/L3vNBWcWWDUEPuziO0KdWA
+```
+
 ## 利用Futurerestore进行iOS13的升、降级、平刷
 
 ```
 https://mp.weixin.qq.com/s/h5EqUG9xxo-_nz9K5b9F-w
+```
+
+## futurerestore 指南 ，iOS 系统刷机到指定版本
+
+```
+https://mp.weixin.qq.com/s/_faR7J2tvxUunr1ZijdIig
 ```
 

@@ -13,6 +13,20 @@ QuantumultX、Loon等。
 
 <!-- more -->
 
+# TODOS
+
+```
+https://surgio.js.org/
+https://github.com/tindy2013/subconverter/blob/master/README-cn.md
+
+https://github.com/hly0928/Proxy-profiles/tree/master/Surge/Module
+https://surge.mitsea.com/rule/domain-based
+
+https://stackoverflow.com/questions/40803016/adding-networkextension-framework-in-xcode
+https://developer.apple.com/documentation/networkextension
+https://juejin.cn/post/6844903829146697742
+```
+
 # 基本概念
 
 ## 节点
@@ -1888,3 +1902,29 @@ https://mp.weixin.qq.com/s/ociRI8wQtRimseAYR1XONw
 ```
 https://mp.weixin.qq.com/s/gcJw46HrmJCfBcLSw4s3NA
 ```
+
+## QuantumultX/QuantumultX_Profiles.conf
+
+```
+https://github.com/KOP-XIAO/QuantumultX/blob/master/QuantumultX_Profiles.conf
+```
+
+## Quantumult-X/sample.conf
+
+```
+https://github.com/crossutility/Quantumult-X/blob/master/sample.conf
+```
+
+## 介绍 - BoxJs
+
+```
+https://chavyleung.gitbook.io/boxjs/
+```
+
+
+## Sub-Store 教程
+
+```
+https://www.notion.so/Sub-Store-6259586994d34c11a4ced5c406264b46
+```
+

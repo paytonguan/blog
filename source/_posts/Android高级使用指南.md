@@ -12,6 +12,42 @@ Android Root等。
 
 <!-- more -->
 
+# TODOS
+
+```
+使用KernelSU_Action编译自己的KernelSU内核
+https://www.bilibili.com/opus/806004201667690498
+
+自己编译ROM
+https://github.com/shantanu-sarkar/CustomROM
+https://blog.yiyitec.com/2019/08/02/译如何移植-cyanogenos-lineageos-到您自己的手机/
+https://fat-tire.github.io/porting-intro.html
+https://medium.com/@daltonfury42/building-lineageos-for-your-device-a7d26ab50549
+https://xdaforums.com/t/guide-how-to-building-lineageos-for-an-unsupported-device.4419263/
+https://blog.lynnrin.moe/posts/ROM-bringup-guide-prebuilt/
+https://blog.lynnrin.moe/posts/oneplus/
+https://blog.lynnrin.moe/posts/dior-rom/
+
+提取vendor tree
+https://xdaforums.com/t/guide-extract-vendor-from-stock-firmware.4212587/
+https://baalajimaestro.me/posts/extract-vendor/
+
+
+三星内核
+https://android.googlesource.com/kernel/samsung.git/
+https://github.com/goldfish07/android_kernel_samsung_j8y18lte_old/blob/10/build_msm8917.sh
+
+
+
+Magisk
+https://blog.lynnrin.moe/posts/magisk
+
+
+
+TWRP
+https://blog.lynnrin.moe/posts/Razer_Phone_TWRP/
+```
+
 # 基本知识
 
 ## 恢复模式
@@ -942,9 +978,11 @@ https://desktop.firmware.mobi/
 https://forum.xda-developers.com/t/root-root-your-lg-g3-easily-with-purpledrake-lite-osx-linux-windows.2821000/
 ```
 
-# 系统
+# 刷入官方系统
 
-Android可以随意升降级。
+
+
+# 系统
 
 ## 官方ROM
 
