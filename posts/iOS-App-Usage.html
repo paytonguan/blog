@@ -29,7 +29,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://paytonguan.github.io/blog/posts/iOS-App-Usage/topic.jpg">
 <meta property="article:published_time" content="2024-08-12T05:18:29.000Z">
-<meta property="article:modified_time" content="2024-08-12T05:36:16.160Z">
+<meta property="article:modified_time" content="2024-11-19T06:08:19.670Z">
 <meta property="article:author" content="Payton">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/iOS-App-Usage/topic.jpg">
@@ -204,10 +204,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-08-12 13:18:29 / 修改时间：13:36:16" itemprop="dateCreated datePublished" datetime="2024-08-12T13:18:29+08:00">2024-08-12</time>
+              <time title="创建时间：2024-08-12 13:18:29" itemprop="dateCreated datePublished" datetime="2024-08-12T13:18:29+08:00">2024-08-12</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-11-19 14:08:19" itemprop="dateModified" datetime="2024-11-19T14:08:19+08:00">2024-11-19</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -224,14 +230,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>134k</span>
+              <span>135k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2:02</span>
+              <span>2:03</span>
             </span>
 
         </div>
@@ -247,8 +253,9 @@
 <p>iOS App使用指南。</p>
 <span id="more"></span>
 
-<h1 id="应用与IPA"><a href="#应用与IPA" class="headerlink" title="应用与IPA"></a>应用与IPA</h1><p>从App Store下载的IPA包含了账号信息。因此，安装别人的Apple ID下载的IPA，打开时会提示需要输入账号信息。这种APP可以通过重签名的方式，将账号信息替换为自己，从而进行安装。</p>
-<h2 id="限免"><a href="#限免" class="headerlink" title="限免"></a>限免</h2><h3 id="价格监测"><a href="#价格监测" class="headerlink" title="价格监测"></a>价格监测</h3><h4 id="通过Github-Actions"><a href="#通过Github-Actions" class="headerlink" title="通过Github Actions"></a>通过Github Actions</h4><p>打开以下链接，以Github账号登录后点击微信推送-绑定微信，完成绑定后点击首页-SCKEY，复制以备用。</p>
+
+<p>从App Store下载的IPA包含了账号信息。因此，安装别人的Apple ID下载的IPA，打开时会提示需要输入账号信息。这种APP可以通过重签名的方式，将账号信息替换为自己，从而进行安装。</p>
+<h1 id="限免"><a href="#限免" class="headerlink" title="限免"></a>限免</h1><h2 id="价格监测"><a href="#价格监测" class="headerlink" title="价格监测"></a>价格监测</h2><h3 id="通过Github-Actions"><a href="#通过Github-Actions" class="headerlink" title="通过Github Actions"></a>通过Github Actions</h3><p>打开以下链接，以Github账号登录后点击微信推送-绑定微信，完成绑定后点击首页-SCKEY，复制以备用。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://sc.ftqq.com/3.version</span><br></pre></td></tr></table></figure>
 
 <p>打开以下链接并fork该项目。</p>
@@ -258,14 +265,14 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">名称 / Secret</span><br><span class="line">值 / 上面复制的SCKEY</span><br></pre></td></tr></table></figure>
 
 <p>进入src&#x2F;list.json，修改文件内容以确定需要监控的APP。保存后点击Actions，开启功能后点击Star以激活。</p>
-<h3 id="应用库"><a href="#应用库" class="headerlink" title="应用库"></a>应用库</h3><p>暂时不可用。</p>
+<h2 id="应用库"><a href="#应用库" class="headerlink" title="应用库"></a>应用库</h2><p>暂时不可用。</p>
 <details>
 <summary></summary>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://app.666wlgzs.com/list/appstore/</span><br></pre></td></tr></table></figure>
 </details>
 
-<h2 id="签名"><a href="#签名" class="headerlink" title="签名"></a>签名</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>安装App Store的软件时，会对下载下来的IPA进行签名。安装非App Store的软件，需要手动对IPA进行签名。签名需要用到证书，分类如下。</p>
+<h1 id="签名"><a href="#签名" class="headerlink" title="签名"></a>签名</h1><p>安装App Store的软件时，会对下载下来的IPA进行签名。安装非App Store的软件，需要手动对IPA进行签名。签名需要用到证书，分类如下。</p>
 <table>
 <thead>
 <tr>
@@ -287,53 +294,53 @@
 </tr>
 </tbody></table>
 <p>现在大部分APP都是用企业证书进行签名。由于企业证书所签应用多，当应用违规时，证书容易被吊销，从而造成掉签现象。</p>
-<h3 id="通过Xcode"><a href="#通过Xcode" class="headerlink" title="通过Xcode"></a>通过Xcode</h3><p>将手机连接到电脑。打开Xcode，进入Preferences，在Accounts处登录自己的Apple ID。然后点击Manage Certificates申请证书，点击Download Manual Profiles下载证书。</p>
+<h2 id="通过Xcode"><a href="#通过Xcode" class="headerlink" title="通过Xcode"></a>通过Xcode</h2><p>将手机连接到电脑。打开Xcode，进入Preferences，在Accounts处登录自己的Apple ID。然后点击Manage Certificates申请证书，点击Download Manual Profiles下载证书。</p>
 <p>回到Xcode主页，点击Create a new Xcode project，选择Single View App，Team选择刚才申请的证书，Product Name和Organization Name可以随意填写。点击Create，然后在项目设置中将Deployment Info的Target选为自己手机的iOS版本，点击左上角的运行按钮，屏幕出现Succeed即可。</p>
 <p>从以下地址下载iOS App Signer并运行，Input File选择要签名的IPA，Signing Certificate选择刚才的证书，Provisioning Profile选择刚才新建项目的对应文件，点击Start。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://dantheman827.github.io/ios-app-signer/</span><br></pre></td></tr></table></figure>
 
 <p>回到Xcode，点击菜单栏的Window-Devices and Simulators，在Devices找到刚才创建的项目，点击+，等待黄色框消失即可。</p>
-<h3 id="通过自签软件"><a href="#通过自签软件" class="headerlink" title="通过自签软件"></a>通过自签软件</h3><h4 id="AltStore"><a href="#AltStore" class="headerlink" title="AltStore"></a>AltStore</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://altstore.io/</span><br></pre></td></tr></table></figure>
+<h2 id="通过自签软件"><a href="#通过自签软件" class="headerlink" title="通过自签软件"></a>通过自签软件</h2><h3 id="AltStore"><a href="#AltStore" class="headerlink" title="AltStore"></a>AltStore</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://altstore.io/</span><br></pre></td></tr></table></figure>
 
-<h5 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h5><h6 id="电脑安装AltStore等待很久无反应"><a href="#电脑安装AltStore等待很久无反应" class="headerlink" title="电脑安装AltStore等待很久无反应"></a>电脑安装AltStore等待很久无反应</h6><p>可尝试手机开热点，电脑连接热点安装；翻墙后安装；更换电脑；用虚拟机搭载macOS系统测试；关闭所有杀毒软件。</p>
-<h6 id="手机安装IPA显示找不到AltServer"><a href="#手机安装IPA显示找不到AltServer" class="headerlink" title="手机安装IPA显示找不到AltServer"></a>手机安装IPA显示找不到AltServer</h6><p>将手机连接电脑即可。若已经越狱，可安装AltStorePatch插件，即可不连接电脑。</p>
-<h6 id="手机安装IPA最后一步显示could-not-install"><a href="#手机安装IPA最后一步显示could-not-install" class="headerlink" title="手机安装IPA最后一步显示could not install"></a>手机安装IPA最后一步显示could not install</h6><p>退出电脑杀毒软件，或更换USB接口。</p>
-<h4 id="nullxImpactor"><a href="#nullxImpactor" class="headerlink" title="nullxImpactor"></a>nullxImpactor</h4><p>需要先安装AltStore并安装AltStore的邮件插件。签名时需保持邮件应用打开。</p>
+<h4 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h4><h5 id="电脑安装AltStore等待很久无反应"><a href="#电脑安装AltStore等待很久无反应" class="headerlink" title="电脑安装AltStore等待很久无反应"></a>电脑安装AltStore等待很久无反应</h5><p>可尝试手机开热点，电脑连接热点安装；翻墙后安装；更换电脑；用虚拟机搭载macOS系统测试；关闭所有杀毒软件。</p>
+<h5 id="手机安装IPA显示找不到AltServer"><a href="#手机安装IPA显示找不到AltServer" class="headerlink" title="手机安装IPA显示找不到AltServer"></a>手机安装IPA显示找不到AltServer</h5><p>将手机连接电脑即可。若已经越狱，可安装AltStorePatch插件，即可不连接电脑。</p>
+<h5 id="手机安装IPA最后一步显示could-not-install"><a href="#手机安装IPA最后一步显示could-not-install" class="headerlink" title="手机安装IPA最后一步显示could not install"></a>手机安装IPA最后一步显示could not install</h5><p>退出电脑杀毒软件，或更换USB接口。</p>
+<h3 id="nullxImpactor"><a href="#nullxImpactor" class="headerlink" title="nullxImpactor"></a>nullxImpactor</h3><p>需要先安装AltStore并安装AltStore的邮件插件。签名时需保持邮件应用打开。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://impactor.nullx.me/</span><br></pre></td></tr></table></figure>
 
-<h4 id="AltDeploy"><a href="#AltDeploy" class="headerlink" title="AltDeploy"></a>AltDeploy</h4><p>需要先安装AltStore并安装AltStore的邮件插件。签名时需保持邮件应用打开。</p>
+<h3 id="AltDeploy"><a href="#AltDeploy" class="headerlink" title="AltDeploy"></a>AltDeploy</h3><p>需要先安装AltStore并安装AltStore的邮件插件。签名时需保持邮件应用打开。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/pixelomer/AltDeploy</span><br></pre></td></tr></table></figure>
 
-<h4 id="Sideloadly"><a href="#Sideloadly" class="headerlink" title="Sideloadly"></a>Sideloadly</h4><p>仅支持签名并安装没有签名的IPA安装包。</p>
+<h3 id="Sideloadly"><a href="#Sideloadly" class="headerlink" title="Sideloadly"></a>Sideloadly</h3><p>仅支持签名并安装没有签名的IPA安装包。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://sideloadly.io/</span><br></pre></td></tr></table></figure>
 
-<h4 id="Cydia-Impactor"><a href="#Cydia-Impactor" class="headerlink" title="Cydia Impactor"></a>Cydia Impactor</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.cydiaimpactor.com/</span><br></pre></td></tr></table></figure>
+<h3 id="Cydia-Impactor"><a href="#Cydia-Impactor" class="headerlink" title="Cydia Impactor"></a>Cydia Impactor</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.cydiaimpactor.com/</span><br></pre></td></tr></table></figure>
 
-<h4 id="Scarlet"><a href="#Scarlet" class="headerlink" title="Scarlet"></a>Scarlet</h4><p>注意安装Mail Plugin时退出Clash，否则会因为端口占用而安装失败。</p>
+<h3 id="Scarlet"><a href="#Scarlet" class="headerlink" title="Scarlet"></a>Scarlet</h3><p>注意安装Mail Plugin时退出Clash，否则会因为端口占用而安装失败。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/DebianArch64/DebProvision</span><br></pre></td></tr></table></figure>
 
 <p>可用repo如下。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">https://raw.githubusercontent.com/azu0609/repo/main/scarlet_repo.json</span><br><span class="line">https://usescarlet.com/scarlet.json</span><br><span class="line">https://ipa.cypwn.xyz/scarlet.json</span><br><span class="line">https://cydia.akemi.ai/</span><br><span class="line">https://repo.chariz.com/</span><br></pre></td></tr></table></figure>
 
-<h4 id="牛蛙助手"><a href="#牛蛙助手" class="headerlink" title="牛蛙助手"></a>牛蛙助手</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://ios222.com/</span><br></pre></td></tr></table></figure>
+<h3 id="牛蛙助手"><a href="#牛蛙助手" class="headerlink" title="牛蛙助手"></a>牛蛙助手</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://ios222.com/</span><br></pre></td></tr></table></figure>
 
-<h4 id="NB全能助手"><a href="#NB全能助手" class="headerlink" title="NB全能助手"></a>NB全能助手</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://nbtool8.com/</span><br></pre></td></tr></table></figure>
+<h3 id="NB全能助手"><a href="#NB全能助手" class="headerlink" title="NB全能助手"></a>NB全能助手</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://nbtool8.com/</span><br></pre></td></tr></table></figure>
 
-<h3 id="通过APP"><a href="#通过APP" class="headerlink" title="通过APP"></a>通过APP</h3><p>可用闪电签、山猪签、轻松签、魔力签。魔力签官网如下。</p>
+<h2 id="通过APP"><a href="#通过APP" class="headerlink" title="通过APP"></a>通过APP</h2><p>可用闪电签、山猪签、轻松签、魔力签。魔力签官网如下。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://ios-tool.com</span><br></pre></td></tr></table></figure>
 
 <p>签名前需先添加证书。下载的证书包括p12和mobileprovision为后缀名的两个文件，先用签名APP打开p12文件，然后再打开mobileprovision文件即可。</p>
-<h2 id="TestFilght"><a href="#TestFilght" class="headerlink" title="TestFilght"></a>TestFilght</h2><p>TestFilght是苹果提供开发者应用测试的平台。</p>
-<h3 id="应用降级"><a href="#应用降级" class="headerlink" title="应用降级"></a>应用降级</h3><p>打开TestFilght，点击要降级的应用，选择以前的Build，根据需要选择版本即可。</p>
-<h3 id="应用库-1"><a href="#应用库-1" class="headerlink" title="应用库"></a>应用库</h3><p>暂时失效。</p>
+<h1 id="TestFilght"><a href="#TestFilght" class="headerlink" title="TestFilght"></a>TestFilght</h1><p>TestFilght是苹果提供开发者应用测试的平台。</p>
+<h2 id="应用降级"><a href="#应用降级" class="headerlink" title="应用降级"></a>应用降级</h2><p>打开TestFilght，点击要降级的应用，选择以前的Build，根据需要选择版本即可。</p>
+<h2 id="应用库-1"><a href="#应用库-1" class="headerlink" title="应用库"></a>应用库</h2><p>暂时失效。</p>
 <details>
 <summary></summary>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://testflight.center/</span><br></pre></td></tr></table></figure>
 </details>
 
-<h2 id="IPA安装"><a href="#IPA安装" class="headerlink" title="IPA安装"></a>IPA安装</h2><h3 id="手机端"><a href="#手机端" class="headerlink" title="手机端"></a>手机端</h3><h4 id="通过上传到蓝奏云"><a href="#通过上传到蓝奏云" class="headerlink" title="通过上传到蓝奏云"></a>通过上传到蓝奏云</h4><p>IPA上传到蓝奏云后即可直接进行安装。</p>
-<h4 id="通过itms-services协议"><a href="#通过itms-services协议" class="headerlink" title="通过itms-services协议"></a>通过itms-services协议</h4><p>苹果允许用itms-services服务协议来直接在iOS安装应用程序。将要安装的IPA和安装时显示的图片上传到OneDrive，获取分享外链，然后通过以下网站将两者转换为直链。</p>
+<h1 id="IPA安装"><a href="#IPA安装" class="headerlink" title="IPA安装"></a>IPA安装</h1><h2 id="手机端"><a href="#手机端" class="headerlink" title="手机端"></a>手机端</h2><h3 id="通过上传到蓝奏云"><a href="#通过上传到蓝奏云" class="headerlink" title="通过上传到蓝奏云"></a>通过上传到蓝奏云</h3><p>IPA上传到蓝奏云后即可直接进行安装。</p>
+<h3 id="通过itms-services协议"><a href="#通过itms-services协议" class="headerlink" title="通过itms-services协议"></a>通过itms-services协议</h3><p>苹果允许用itms-services服务协议来直接在iOS安装应用程序。将要安装的IPA和安装时显示的图片上传到OneDrive，获取分享外链，然后通过以下网站将两者转换为直链。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://onedrive.gimhoy.com/</span><br></pre></td></tr></table></figure>
 
 <p>打开记事本并复制以下代码，其中software-package的url改为IPA的链接，display-image的url改为图片的链接。然后另存为plist文件。</p>
@@ -342,7 +349,7 @@
 <p>将编辑完成的plist文件上传到OneDrive，生成分享外链并转换为直链，然后将链接按照以下格式拼接即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">itms-services://?action=download-manifest&amp;url=[地址]</span><br></pre></td></tr></table></figure>
 
-<h4 id="通过Shu"><a href="#通过Shu" class="headerlink" title="通过Shu"></a>通过Shu</h4><p>通过以下链接安装Shu。如果提示输入ID，则连接电脑并使用爱思助手安装。</p>
+<h3 id="通过Shu"><a href="#通过Shu" class="headerlink" title="通过Shu"></a>通过Shu</h3><p>通过以下链接安装Shu。如果提示输入ID，则连接电脑并使用爱思助手安装。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.lanzous.com/i3r11qd</span><br></pre></td></tr></table></figure>
 
 <p>把下面代码保存到备忘录，然后把ipa文件添加到Wi-Fi共享，改成app.ipa，注意需保持Wi-Fi处于连接状态。最小化Shu，单击备忘录里的代码即可直接安装ipa。</p>
@@ -354,13 +361,13 @@
 <p>也可通过捷径进行安装。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.icloud.com/shortcuts/319f80622c234de8b811b7ba2d5a7228</span><br></pre></td></tr></table></figure>
 
-<h3 id="电脑端"><a href="#电脑端" class="headerlink" title="电脑端"></a>电脑端</h3><h4 id="通过iTunes"><a href="#通过iTunes" class="headerlink" title="通过iTunes"></a>通过iTunes</h4><p>将手机连接到电脑，打开iTunes，登录IPA对应的Apple ID，并对此电脑授权。在资源管理器找到要安装的IPA，拖入iTunes手机下<code>我的设备上</code>区域即可。</p>
-<h3 id="掉签IPA处理"><a href="#掉签IPA处理" class="headerlink" title="掉签IPA处理"></a>掉签IPA处理</h3><p>打开设置中的无线局域网，点击已连接WiFi后面的菜单键，在最下方选择配置代理。模式选择自动，并将以下地址填入URL中，然后存储。</p>
+<h2 id="电脑端"><a href="#电脑端" class="headerlink" title="电脑端"></a>电脑端</h2><h3 id="通过iTunes"><a href="#通过iTunes" class="headerlink" title="通过iTunes"></a>通过iTunes</h3><p>将手机连接到电脑，打开iTunes，登录IPA对应的Apple ID，并对此电脑授权。在资源管理器找到要安装的IPA，拖入iTunes手机下<code>我的设备上</code>区域即可。</p>
+<h2 id="掉签IPA处理"><a href="#掉签IPA处理" class="headerlink" title="掉签IPA处理"></a>掉签IPA处理</h2><p>打开设置中的无线局域网，点击已连接WiFi后面的菜单键，在最下方选择配置代理。模式选择自动，并将以下地址填入URL中，然后存储。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://ffapple.com</span><br></pre></td></tr></table></figure>
 
 <p>设置完毕后断开WiFi，再打开，让手机重连WiFi。在设置中清除Safari历史记录与网站数据，再开启飞行模式，即可通过上述方法安装。</p>
-<h2 id="IPA抓取"><a href="#IPA抓取" class="headerlink" title="IPA抓取"></a>IPA抓取</h2><h3 id="旧版"><a href="#旧版" class="headerlink" title="旧版"></a>旧版</h3><p>抓取旧版软件前，本Apple ID需先下载过该APP。</p>
-<h4 id="推荐版本"><a href="#推荐版本" class="headerlink" title="推荐版本"></a>推荐版本</h4><p>推荐旧版IPA版本如下。一般一次付费制APP转订阅制APP时，可先下载新版，再降级到旧版已获取免费内购。</p>
+<h1 id="IPA抓取"><a href="#IPA抓取" class="headerlink" title="IPA抓取"></a>IPA抓取</h1><h2 id="旧版"><a href="#旧版" class="headerlink" title="旧版"></a>旧版</h2><p>抓取旧版软件前，本Apple ID需先下载过该APP。</p>
+<h3 id="推荐版本"><a href="#推荐版本" class="headerlink" title="推荐版本"></a>推荐版本</h3><p>推荐旧版IPA版本如下。一般一次付费制APP转订阅制APP时，可先下载新版，再降级到旧版已获取免费内购。</p>
 <table>
 <thead>
 <tr>
@@ -1135,21 +1142,21 @@
 <td>无广告</td>
 </tr>
 </tbody></table>
-<h4 id="通过爱思助手"><a href="#通过爱思助手" class="headerlink" title="通过爱思助手"></a>通过爱思助手</h4><p>爱思助手有安装旧版的功能。</p>
-<h4 id="通过软件"><a href="#通过软件" class="headerlink" title="通过软件"></a>通过软件</h4><h5 id="免iTunes下载"><a href="#免iTunes下载" class="headerlink" title="免iTunes下载"></a>免iTunes下载</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=1863801</span><br></pre></td></tr></table></figure>
+<h3 id="通过爱思助手"><a href="#通过爱思助手" class="headerlink" title="通过爱思助手"></a>通过爱思助手</h3><p>爱思助手有安装旧版的功能。</p>
+<h3 id="通过软件"><a href="#通过软件" class="headerlink" title="通过软件"></a>通过软件</h3><h4 id="免iTunes下载"><a href="#免iTunes下载" class="headerlink" title="免iTunes下载"></a>免iTunes下载</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=1863801</span><br></pre></td></tr></table></figure>
 
 <p>适用于Windows。首先安装iTunes12.6.3，该版本是iTunes最后一个有商店的版本。下载链接如下。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 官方下载</span><br><span class="line">https://support.apple.com/zh-cn/HT208079</span><br><span class="line"></span><br><span class="line"># 其它</span><br><span class="line">https://www.jianshu.com/p/33bbfaa6acfd</span><br></pre></td></tr></table></figure>
 
 <p>如果之前有安装新版的iTunes，换回旧版后运行iTunes时，可能会提示<code>不能读取文件iTunes Library.itl，因为它是由更高版本的iTunes所创建的</code>。此时查找iTunes Library.itl并删除该文件即可。</p>
-<h5 id="IOS旧版App下载工具"><a href="#IOS旧版App下载工具" class="headerlink" title="IOS旧版App下载工具"></a>IOS旧版App下载工具</h5><p>下载地址如下。打不开或者打开报错，需安装Microsoft. NET Framework 4.0，双击安装包中的<code>打不开的请安装.exe</code>即可。</p>
+<h4 id="IOS旧版App下载工具"><a href="#IOS旧版App下载工具" class="headerlink" title="IOS旧版App下载工具"></a>IOS旧版App下载工具</h4><p>下载地址如下。打不开或者打开报错，需安装Microsoft. NET Framework 4.0，双击安装包中的<code>打不开的请安装.exe</code>即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://www.pc6.com/softview/SoftView_743492.html</span><br><span class="line">http://www.ddooo.com/softdown/165173.htm</span><br></pre></td></tr></table></figure>
 
 <p>打开iTunes并登录自己账号，然后点击菜单栏-账户-我的账户，输入密码登录后，在软件上进行配置并启动即可。</p>
-<h5 id="iOS任意版本号APP下载"><a href="#iOS任意版本号APP下载" class="headerlink" title="iOS任意版本号APP下载"></a>iOS任意版本号APP下载</h5><p>下载地址如下，使用方法与上述软件基本一致。</p>
+<h4 id="iOS任意版本号APP下载"><a href="#iOS任意版本号APP下载" class="headerlink" title="iOS任意版本号APP下载"></a>iOS任意版本号APP下载</h4><p>下载地址如下，使用方法与上述软件基本一致。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://www.52pojie.cn/thread-1284776-1-1.html</span><br><span class="line">https://www.lanzoux.com/i1BaVhg2m7e</span><br></pre></td></tr></table></figure>
 
-<h4 id="通过Charles-Proxy"><a href="#通过Charles-Proxy" class="headerlink" title="通过Charles Proxy"></a>通过Charles Proxy</h4><p>可用于Mac。在Mac上首先需要安装iTunes 12.6.5.3，可通过Retroactive安装。</p>
+<h3 id="通过Charles-Proxy"><a href="#通过Charles-Proxy" class="headerlink" title="通过Charles Proxy"></a>通过Charles Proxy</h3><p>可用于Mac。在Mac上首先需要安装iTunes 12.6.5.3，可通过Retroactive安装。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/cormiertyshawn895/Retroactive</span><br></pre></td></tr></table></figure>
 
 <p>通过以下网站下载Charles Proxy。</p>
@@ -1159,23 +1166,50 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 来源为https://juejin.cn/post/6844903733478817800</span><br><span class="line">Registered Name / https://zhile.io</span><br><span class="line">License Key / 48891cf209c6d32bf4</span><br><span class="line"></span><br><span class="line"># 激活码计算器</span><br><span class="line">https://www.zzzmode.com/mytools/charles/</span><br><span class="line">https://www.charles.ren/</span><br></pre></td></tr></table></figure>
 
 
-<h3 id="已购买但已下架"><a href="#已购买但已下架" class="headerlink" title="已购买但已下架"></a>已购买但已下架</h3><p>安装iMazing和破解补丁，补丁链接如下。安装好iMazing后，将补丁复制到iMazing安装根目录，运行补丁，点击patch即可。</p>
+<h2 id="已购买但已下架"><a href="#已购买但已下架" class="headerlink" title="已购买但已下架"></a>已购买但已下架</h2><p>安装iMazing和破解补丁，补丁链接如下。安装好iMazing后，将补丁复制到iMazing安装根目录，运行补丁，点击patch即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">链接 / https://pan.baidu.com/s/181YRRqo5t2mtx9EYaYRWYg</span><br><span class="line">提取码 / 26fe</span><br></pre></td></tr></table></figure>
 
 <p>打开iMazing，连接手机后点击<code>管理应用程序</code>，在资料库标签页即可下载已下架的APP，下载完成后右键选择导出IPA即可。导出的IPA可用iMazing或助手类软件安装。</p>
-<h2 id="IPA处理"><a href="#IPA处理" class="headerlink" title="IPA处理"></a>IPA处理</h2><h3 id="去除旧版更新提示"><a href="#去除旧版更新提示" class="headerlink" title="去除旧版更新提示"></a>去除旧版更新提示</h3><p>用解压软件打开IPA，删除iTunesmeradata.plist即可。若无法直接用解压软件打开，可先修改后缀名为ZIP，删除后再修改回IPA。</p>
-<h2 id="购买AppStore外区礼品卡"><a href="#购买AppStore外区礼品卡" class="headerlink" title="购买AppStore外区礼品卡"></a>购买AppStore外区礼品卡</h2><p>将支付宝地区切换为美国，然后点击出境-折扣礼卡，滑到最底部点击查看，搜索<code>iTunes</code>即可。</p>
-<h2 id="相关APP"><a href="#相关APP" class="headerlink" title="相关APP"></a>相关APP</h2><h3 id="旧版APP"><a href="#旧版APP" class="headerlink" title="旧版APP"></a>旧版APP</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://www.lanzous.com/b0f76484f</span><br><span class="line">https://www.lanzous.com/b0f7a3l6d</span><br></pre></td></tr></table></figure>
+<h1 id="IPA处理"><a href="#IPA处理" class="headerlink" title="IPA处理"></a>IPA处理</h1><h2 id="去除旧版更新提示"><a href="#去除旧版更新提示" class="headerlink" title="去除旧版更新提示"></a>去除旧版更新提示</h2><p>用解压软件打开IPA，删除iTunesmeradata.plist即可。若无法直接用解压软件打开，可先修改后缀名为ZIP，删除后再修改回IPA。</p>
+<h1 id="购买AppStore外区礼品卡"><a href="#购买AppStore外区礼品卡" class="headerlink" title="购买AppStore外区礼品卡"></a>购买AppStore外区礼品卡</h1><p>将支付宝地区切换为美国，然后点击出境-折扣礼卡，滑到最底部点击查看，搜索<code>iTunes</code>即可。</p>
+<h1 id="相关APP"><a href="#相关APP" class="headerlink" title="相关APP"></a>相关APP</h1><h2 id="旧版APP"><a href="#旧版APP" class="headerlink" title="旧版APP"></a>旧版APP</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://www.lanzous.com/b0f76484f</span><br><span class="line">https://www.lanzous.com/b0f7a3l6d</span><br></pre></td></tr></table></figure>
 
-<h3 id="破解APP"><a href="#破解APP" class="headerlink" title="破解APP"></a>破解APP</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://sideload.tweakboxapp.com/</span><br></pre></td></tr></table></figure>
+<h2 id="破解APP"><a href="#破解APP" class="headerlink" title="破解APP"></a>破解APP</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://sideload.tweakboxapp.com/</span><br></pre></td></tr></table></figure>
 
-<h3 id="其他APP"><a href="#其他APP" class="headerlink" title="其他APP"></a>其他APP</h3><h4 id="DolphiniOS"><a href="#DolphiniOS" class="headerlink" title="DolphiniOS"></a>DolphiniOS</h4><p>PPSSPP模拟器。</p>
+<h2 id="其他APP"><a href="#其他APP" class="headerlink" title="其他APP"></a>其他APP</h2><h3 id="DolphiniOS"><a href="#DolphiniOS" class="headerlink" title="DolphiniOS"></a>DolphiniOS</h3><p>PPSSPP模拟器。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://dolphinios.oatmealdome.me/</span><br></pre></td></tr></table></figure>
 
-<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># uYouPlus</span><br><span class="line">https://github.com/qnblackcat/uYouPlus</span><br></pre></td></tr></table></figure>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># uYouPlus</span><br><span class="line">https://github.com/qnblackcat/uYouPlus</span><br></pre></td></tr></table></figure>
 
 
 <h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="AppStore降价监控"><a href="#AppStore降价监控" class="headerlink" title="AppStore降价监控"></a>AppStore降价监控</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.antmoe.com/posts/77e27eac/index.html</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Sideloadly，无需越狱，自签安装-IPA-文件，免费"><a href="#Sideloadly，无需越狱，自签安装-IPA-文件，免费" class="headerlink" title="Sideloadly，无需越狱，自签安装 IPA 文件，免费"></a>Sideloadly，无需越狱，自签安装 IPA 文件，免费</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/gM4nv-WLyysWmM3BtLFr5w</span><br></pre></td></tr></table></figure>
+
+<h2 id="Scarlet，猩红，自签安装-IPA-文件，完全免费"><a href="#Scarlet，猩红，自签安装-IPA-文件，完全免费" class="headerlink" title="Scarlet，猩红，自签安装 IPA 文件，完全免费"></a>Scarlet，猩红，自签安装 IPA 文件，完全免费</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/4Nt6K5KkkZr4247RlbQZog</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-系统，砸壳，提取-IPA，支持中文"><a href="#iOS-系统，砸壳，提取-IPA，支持中文" class="headerlink" title="iOS 系统，砸壳，提取 IPA，支持中文"></a>iOS 系统，砸壳，提取 IPA，支持中文</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/UfiM2Z346_KtRcQSk9HJZw</span><br></pre></td></tr></table></figure>
+
+<h2 id="如何在苹果商店把App降级至任意版本"><a href="#如何在苹果商店把App降级至任意版本" class="headerlink" title="如何在苹果商店把App降级至任意版本"></a>如何在苹果商店把App降级至任意版本</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/afXnjvgwA0aC3NaPg53l_g</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用Xcode签名IPA教程"><a href="#使用Xcode签名IPA教程" class="headerlink" title="使用Xcode签名IPA教程"></a>使用Xcode签名IPA教程</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/edwIuv8DyXklLT00RsdavA</span><br></pre></td></tr></table></figure>
+
+<h2 id="IOS逆向-APP砸壳"><a href="#IOS逆向-APP砸壳" class="headerlink" title="IOS逆向-APP砸壳"></a>IOS逆向-APP砸壳</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/jZHAr_i0IL72EpBYQCibMQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="windows上ios-App一键砸壳教程-不需要ssh"><a href="#windows上ios-App一键砸壳教程-不需要ssh" class="headerlink" title="windows上ios App一键砸壳教程(不需要ssh)"></a>windows上ios App一键砸壳教程(不需要ssh)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://bbs.pediy.com/thread-252384.htm</span><br></pre></td></tr></table></figure>
+
+<h2 id="CrackerXI-，砸壳，提取-IPA"><a href="#CrackerXI-，砸壳，提取-IPA" class="headerlink" title="CrackerXI+，砸壳，提取 IPA"></a>CrackerXI+，砸壳，提取 IPA</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/SIf8tWc1IH1ZZLHOiYG3Fw</span><br></pre></td></tr></table></figure>
+
+<h2 id="别怪我白嫖哈，这可是你自己上架的功能全解锁版"><a href="#别怪我白嫖哈，这可是你自己上架的功能全解锁版" class="headerlink" title="别怪我白嫖哈，这可是你自己上架的功能全解锁版"></a>别怪我白嫖哈，这可是你自己上架的功能全解锁版</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/zkolfG0Tvj8ImgKrJB80Vg</span><br></pre></td></tr></table></figure>
+
+<h2 id="你所珍藏的历史旧版本-app"><a href="#你所珍藏的历史旧版本-app" class="headerlink" title="你所珍藏的历史旧版本 app"></a>你所珍藏的历史旧版本 app</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.v2ex.com/t/452086?p=2</span><br></pre></td></tr></table></figure>
+
+<h2 id="【IOS】常用旧版软件ID整理分享"><a href="#【IOS】常用旧版软件ID整理分享" class="headerlink" title="【IOS】常用旧版软件ID整理分享"></a>【IOS】常用旧版软件ID整理分享</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.jianshu.com/p/5a28dacba975</span><br></pre></td></tr></table></figure>
+
+<h2 id="其他-【IOS】好用的旧版APP-—6-3更新—"><a href="#其他-【IOS】好用的旧版APP-—6-3更新—" class="headerlink" title="[其他] 【IOS】好用的旧版APP —6.3更新—"></a>[其他] 【IOS】好用的旧版APP —6.3更新—</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.52pojie.cn/thread-741535-1-4.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-系统，砸壳，提取-IPA"><a href="#iOS-系统，砸壳，提取-IPA" class="headerlink" title="iOS 系统，砸壳，提取 IPA"></a>iOS 系统，砸壳，提取 IPA</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/POKnLnXEcaV_WeFRlkTSJg</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -1254,7 +1288,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E4%B8%8EIPA"><span class="nav-text">应用与IPA</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%90%E5%85%8D"><span class="nav-text">限免</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%B7%E6%A0%BC%E7%9B%91%E6%B5%8B"><span class="nav-text">价格监测</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87Github-Actions"><span class="nav-text">通过Github Actions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%BA%93"><span class="nav-text">应用库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%BE%E5%90%8D"><span class="nav-text">签名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87Xcode"><span class="nav-text">通过Xcode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E8%87%AA%E7%AD%BE%E8%BD%AF%E4%BB%B6"><span class="nav-text">通过自签软件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#AltStore"><span class="nav-text">AltStore</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85AltStore%E7%AD%89%E5%BE%85%E5%BE%88%E4%B9%85%E6%97%A0%E5%8F%8D%E5%BA%94"><span class="nav-text">电脑安装AltStore等待很久无反应</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E5%AE%89%E8%A3%85IPA%E6%98%BE%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0AltServer"><span class="nav-text">手机安装IPA显示找不到AltServer</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E5%AE%89%E8%A3%85IPA%E6%9C%80%E5%90%8E%E4%B8%80%E6%AD%A5%E6%98%BE%E7%A4%BAcould-not-install"><span class="nav-text">手机安装IPA最后一步显示could not install</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nullxImpactor"><span class="nav-text">nullxImpactor</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AltDeploy"><span class="nav-text">AltDeploy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sideloadly"><span class="nav-text">Sideloadly</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cydia-Impactor"><span class="nav-text">Cydia Impactor</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Scarlet"><span class="nav-text">Scarlet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%9B%E8%9B%99%E5%8A%A9%E6%89%8B"><span class="nav-text">牛蛙助手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NB%E5%85%A8%E8%83%BD%E5%8A%A9%E6%89%8B"><span class="nav-text">NB全能助手</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87APP"><span class="nav-text">通过APP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TestFilght"><span class="nav-text">TestFilght</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E9%99%8D%E7%BA%A7"><span class="nav-text">应用降级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%BA%93-1"><span class="nav-text">应用库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IPA%E5%AE%89%E8%A3%85"><span class="nav-text">IPA安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E7%AB%AF"><span class="nav-text">手机端</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E4%B8%8A%E4%BC%A0%E5%88%B0%E8%93%9D%E5%A5%8F%E4%BA%91"><span class="nav-text">通过上传到蓝奏云</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87itms-services%E5%8D%8F%E8%AE%AE"><span class="nav-text">通过itms-services协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87Shu"><span class="nav-text">通过Shu</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E8%84%91%E7%AB%AF"><span class="nav-text">电脑端</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87iTunes"><span class="nav-text">通过iTunes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%89%E7%AD%BEIPA%E5%A4%84%E7%90%86"><span class="nav-text">掉签IPA处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IPA%E6%8A%93%E5%8F%96"><span class="nav-text">IPA抓取</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A7%E7%89%88"><span class="nav-text">旧版</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E7%89%88%E6%9C%AC"><span class="nav-text">推荐版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E7%88%B1%E6%80%9D%E5%8A%A9%E6%89%8B"><span class="nav-text">通过爱思助手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E8%BD%AF%E4%BB%B6"><span class="nav-text">通过软件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%8DiTunes%E4%B8%8B%E8%BD%BD"><span class="nav-text">免iTunes下载</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#IOS%E6%97%A7%E7%89%88App%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7"><span class="nav-text">IOS旧版App下载工具</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#iOS%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%AC%E5%8F%B7APP%E4%B8%8B%E8%BD%BD"><span class="nav-text">iOS任意版本号APP下载</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87Charles-Proxy"><span class="nav-text">通过Charles Proxy</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%B2%E8%B4%AD%E4%B9%B0%E4%BD%86%E5%B7%B2%E4%B8%8B%E6%9E%B6"><span class="nav-text">已购买但已下架</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IPA%E5%A4%84%E7%90%86"><span class="nav-text">IPA处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%BB%E9%99%A4%E6%97%A7%E7%89%88%E6%9B%B4%E6%96%B0%E6%8F%90%E7%A4%BA"><span class="nav-text">去除旧版更新提示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%AD%E4%B9%B0AppStore%E5%A4%96%E5%8C%BA%E7%A4%BC%E5%93%81%E5%8D%A1"><span class="nav-text">购买AppStore外区礼品卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3APP"><span class="nav-text">相关APP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A7%E7%89%88APP"><span class="nav-text">旧版APP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A0%B4%E8%A7%A3APP"><span class="nav-text">破解APP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96APP"><span class="nav-text">其他APP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DolphiniOS"><span class="nav-text">DolphiniOS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-text">其他</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AppStore%E9%99%8D%E4%BB%B7%E7%9B%91%E6%8E%A7"><span class="nav-text">AppStore降价监控</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%99%90%E5%85%8D"><span class="nav-text">限免</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%B7%E6%A0%BC%E7%9B%91%E6%B5%8B"><span class="nav-text">价格监测</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87Github-Actions"><span class="nav-text">通过Github Actions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%BA%93"><span class="nav-text">应用库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AD%BE%E5%90%8D"><span class="nav-text">签名</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87Xcode"><span class="nav-text">通过Xcode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E8%87%AA%E7%AD%BE%E8%BD%AF%E4%BB%B6"><span class="nav-text">通过自签软件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AltStore"><span class="nav-text">AltStore</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85AltStore%E7%AD%89%E5%BE%85%E5%BE%88%E4%B9%85%E6%97%A0%E5%8F%8D%E5%BA%94"><span class="nav-text">电脑安装AltStore等待很久无反应</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E5%AE%89%E8%A3%85IPA%E6%98%BE%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0AltServer"><span class="nav-text">手机安装IPA显示找不到AltServer</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E5%AE%89%E8%A3%85IPA%E6%9C%80%E5%90%8E%E4%B8%80%E6%AD%A5%E6%98%BE%E7%A4%BAcould-not-install"><span class="nav-text">手机安装IPA最后一步显示could not install</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nullxImpactor"><span class="nav-text">nullxImpactor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AltDeploy"><span class="nav-text">AltDeploy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sideloadly"><span class="nav-text">Sideloadly</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cydia-Impactor"><span class="nav-text">Cydia Impactor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scarlet"><span class="nav-text">Scarlet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%9B%E8%9B%99%E5%8A%A9%E6%89%8B"><span class="nav-text">牛蛙助手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NB%E5%85%A8%E8%83%BD%E5%8A%A9%E6%89%8B"><span class="nav-text">NB全能助手</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87APP"><span class="nav-text">通过APP</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TestFilght"><span class="nav-text">TestFilght</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E9%99%8D%E7%BA%A7"><span class="nav-text">应用降级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%BA%93-1"><span class="nav-text">应用库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IPA%E5%AE%89%E8%A3%85"><span class="nav-text">IPA安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E7%AB%AF"><span class="nav-text">手机端</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E4%B8%8A%E4%BC%A0%E5%88%B0%E8%93%9D%E5%A5%8F%E4%BA%91"><span class="nav-text">通过上传到蓝奏云</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87itms-services%E5%8D%8F%E8%AE%AE"><span class="nav-text">通过itms-services协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87Shu"><span class="nav-text">通过Shu</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E8%84%91%E7%AB%AF"><span class="nav-text">电脑端</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87iTunes"><span class="nav-text">通过iTunes</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%89%E7%AD%BEIPA%E5%A4%84%E7%90%86"><span class="nav-text">掉签IPA处理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IPA%E6%8A%93%E5%8F%96"><span class="nav-text">IPA抓取</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A7%E7%89%88"><span class="nav-text">旧版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E7%89%88%E6%9C%AC"><span class="nav-text">推荐版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E7%88%B1%E6%80%9D%E5%8A%A9%E6%89%8B"><span class="nav-text">通过爱思助手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E8%BD%AF%E4%BB%B6"><span class="nav-text">通过软件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%8DiTunes%E4%B8%8B%E8%BD%BD"><span class="nav-text">免iTunes下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IOS%E6%97%A7%E7%89%88App%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7"><span class="nav-text">IOS旧版App下载工具</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#iOS%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%AC%E5%8F%B7APP%E4%B8%8B%E8%BD%BD"><span class="nav-text">iOS任意版本号APP下载</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87Charles-Proxy"><span class="nav-text">通过Charles Proxy</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%B2%E8%B4%AD%E4%B9%B0%E4%BD%86%E5%B7%B2%E4%B8%8B%E6%9E%B6"><span class="nav-text">已购买但已下架</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IPA%E5%A4%84%E7%90%86"><span class="nav-text">IPA处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%BB%E9%99%A4%E6%97%A7%E7%89%88%E6%9B%B4%E6%96%B0%E6%8F%90%E7%A4%BA"><span class="nav-text">去除旧版更新提示</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B4%AD%E4%B9%B0AppStore%E5%A4%96%E5%8C%BA%E7%A4%BC%E5%93%81%E5%8D%A1"><span class="nav-text">购买AppStore外区礼品卡</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3APP"><span class="nav-text">相关APP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A7%E7%89%88APP"><span class="nav-text">旧版APP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%B4%E8%A7%A3APP"><span class="nav-text">破解APP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96APP"><span class="nav-text">其他APP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DolphiniOS"><span class="nav-text">DolphiniOS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-text">其他</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AppStore%E9%99%8D%E4%BB%B7%E7%9B%91%E6%8E%A7"><span class="nav-text">AppStore降价监控</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sideloadly%EF%BC%8C%E6%97%A0%E9%9C%80%E8%B6%8A%E7%8B%B1%EF%BC%8C%E8%87%AA%E7%AD%BE%E5%AE%89%E8%A3%85-IPA-%E6%96%87%E4%BB%B6%EF%BC%8C%E5%85%8D%E8%B4%B9"><span class="nav-text">Sideloadly，无需越狱，自签安装 IPA 文件，免费</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scarlet%EF%BC%8C%E7%8C%A9%E7%BA%A2%EF%BC%8C%E8%87%AA%E7%AD%BE%E5%AE%89%E8%A3%85-IPA-%E6%96%87%E4%BB%B6%EF%BC%8C%E5%AE%8C%E5%85%A8%E5%85%8D%E8%B4%B9"><span class="nav-text">Scarlet，猩红，自签安装 IPA 文件，完全免费</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E7%A0%B8%E5%A3%B3%EF%BC%8C%E6%8F%90%E5%8F%96-IPA%EF%BC%8C%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87"><span class="nav-text">iOS 系统，砸壳，提取 IPA，支持中文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8%E8%8B%B9%E6%9E%9C%E5%95%86%E5%BA%97%E6%8A%8AApp%E9%99%8D%E7%BA%A7%E8%87%B3%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%AC"><span class="nav-text">如何在苹果商店把App降级至任意版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Xcode%E7%AD%BE%E5%90%8DIPA%E6%95%99%E7%A8%8B"><span class="nav-text">使用Xcode签名IPA教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IOS%E9%80%86%E5%90%91-APP%E7%A0%B8%E5%A3%B3"><span class="nav-text">IOS逆向-APP砸壳</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#windows%E4%B8%8Aios-App%E4%B8%80%E9%94%AE%E7%A0%B8%E5%A3%B3%E6%95%99%E7%A8%8B-%E4%B8%8D%E9%9C%80%E8%A6%81ssh"><span class="nav-text">windows上ios App一键砸壳教程(不需要ssh)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CrackerXI-%EF%BC%8C%E7%A0%B8%E5%A3%B3%EF%BC%8C%E6%8F%90%E5%8F%96-IPA"><span class="nav-text">CrackerXI+，砸壳，提取 IPA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%AB%E6%80%AA%E6%88%91%E7%99%BD%E5%AB%96%E5%93%88%EF%BC%8C%E8%BF%99%E5%8F%AF%E6%98%AF%E4%BD%A0%E8%87%AA%E5%B7%B1%E4%B8%8A%E6%9E%B6%E7%9A%84%E5%8A%9F%E8%83%BD%E5%85%A8%E8%A7%A3%E9%94%81%E7%89%88"><span class="nav-text">别怪我白嫖哈，这可是你自己上架的功能全解锁版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E6%89%80%E7%8F%8D%E8%97%8F%E7%9A%84%E5%8E%86%E5%8F%B2%E6%97%A7%E7%89%88%E6%9C%AC-app"><span class="nav-text">你所珍藏的历史旧版本 app</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%90IOS%E3%80%91%E5%B8%B8%E7%94%A8%E6%97%A7%E7%89%88%E8%BD%AF%E4%BB%B6ID%E6%95%B4%E7%90%86%E5%88%86%E4%BA%AB"><span class="nav-text">【IOS】常用旧版软件ID整理分享</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96-%E3%80%90IOS%E3%80%91%E5%A5%BD%E7%94%A8%E7%9A%84%E6%97%A7%E7%89%88APP-%E2%80%946-3%E6%9B%B4%E6%96%B0%E2%80%94"><span class="nav-text">[其他] 【IOS】好用的旧版APP —6.3更新—</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E7%A0%B8%E5%A3%B3%EF%BC%8C%E6%8F%90%E5%8F%96-IPA"><span class="nav-text">iOS 系统，砸壳，提取 IPA</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1270,7 +1304,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-count">51</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1345,7 +1379,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">30:25</span>
+    <span title="站点阅读时长">30:31</span>
 </div>
 
         
