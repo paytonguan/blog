@@ -929,8 +929,6 @@ Root后将无法通过OTA升级的方式升级系统，只能通过线刷的方�
 
 ## Magisk
 
-### 安装
-
 从以下链接下载Magisk Manager。
 
 ```
@@ -949,13 +947,7 @@ https://github.com/topjohnwu/Magisk
 
 若Ramdisk为No，其余一致，Magisk只能劫持recovery分区，此时则需要修补recovery.img，步骤与上面基本一致，注意修补时需要确保Recovery Mode为勾选状态。这种修补下正常开机Magisk将不运行，需要按下进入恢复模式的按键组合，等待设备屏幕亮起后松开按键，此时Magisk将正常运行。若需要进入到真正的恢复模式，需要在屏幕亮起时长按音量上键。这种情况下不能用第三方recovery安装或升级Magisk。
 
-### 模块
-
-
-
-## 其它方法
-
-### 通过CF-Auto-Root
+## CF-Auto-Root
 
 不推荐，在Samsung J3300下实测失败。
 
@@ -966,9 +958,7 @@ https://autoroot.chainfire.eu/
 https://desktop.firmware.mobi/
 ```
 
-### 通过工具
-
-#### PurpleDrake
+## PurpleDrake
 
 可用于LG G3。
 
@@ -978,17 +968,11 @@ https://desktop.firmware.mobi/
 https://forum.xda-developers.com/t/root-root-your-lg-g3-easily-with-purpledrake-lite-osx-linux-windows.2821000/
 ```
 
-# 刷入官方系统
-
-
-
 # 系统
 
-## 官方ROM
+## 三星ROM
 
-### 三星
-
-#### 下载
+### 下载
 
 可在以下网站下载固件。
 
@@ -1020,7 +1004,7 @@ https://nerdschalk.com/samsung-galaxy-j3-firmware/
 https://samsungfirmware.net/samsung-galaxy-j3-pro-2017-sm-j3300-repair-firmware/
 ```
 
-#### 刷入
+### 刷入
 
 三星需要专用的线刷工具Odin，下载链接如下。
 
@@ -1063,17 +1047,17 @@ https://samsungusbdriver.com/
 Odin通过名称识别该包需要刷入的分区，因此tar包中需要刷入到boot分区的必须命名为boot.img，刷入到recovery分区的必须命名为recovery.img，否则刷入将出错。
 </details>
 
-#### 参见问题
+### 参见问题
 
-##### 刷入时提示SW REV CHECK FAIL
+#### 刷入时提示SW REV CHECK FAIL
 
 刷入版本低的ROM时会出现该错误。更新ROM时会同时更新Bootloader，更新的Bootloader不允许刷入旧的Bootloader。
 
-### 氧OS
+## 氧OS
 
 适用于一加手机。
 
-#### 下载
+### 下载
 
 ```
 # OnePlus 7
@@ -1082,7 +1066,7 @@ Odin通过名称识别该包需要刷入的分区，因此tar包中需要刷入�
 https://forum.xda-developers.com/t/oneplus-7-rom-ota-oxygen-os-repo-of-oxygen-os-builds.3937152/
 ```
 
-#### 刷入
+### 刷入
 
 刷入前需先下载好氧OS，并解锁Bootloader。
 
@@ -1109,36 +1093,7 @@ http://www.oneplusbbs.com/thread-2805359-1.html
 如果希望在系统内升级并保留TWRP和Magisk，需要将ROM、TWRP包和magisk安装包全部导入手机存储中，使用系统设置中的系统升级来升级系统后，在Magisk Manager的Modules页面，通过+按钮刷入TWRP包，然后点击Magisk旁边的Install-Install-Direct Install以及Install-Install-Install to Inactive Slot，重启手机。
 </details>
 
-## 自定义ROM
-
-自定义ROM有LineageOS、pixel-experience、MoKee ROM、Havoc OS、Nitrogen-OS、OmniROM等。Samsung J3300均不支持这些自定义ROM。
-
-使用自定义ROM前一般均需对手机进行Root，解锁Bootloader，刷入TWRP。刷入自定义ROM前一般需要擦除数据，以TWRP为例，进入TWRP recovery后，选择Wipe-Advanced Wipe，勾选Dalvik/ART Cache、Cache、Data、Internal Storage、System以完成擦除。
-
-```
-# PixelExperience
-https://download.pixelexperience.org/
-
-# OmniROM
-https://omnirom.org/
-
-# Nitrogen OS
-https://theunlockr.com/rom/nitrogen-os-rom/
-
-# AOSPEXTENDED ROM
-https://www.aospextended.com/
-
-# dotOS
-https://droidontime.com/
-
-# Resurrection Remix OS
-https://resurrectionremix.com/
-
-# MoKee
-https://download.mokeedev.com/
-```
-
-### LineageOS
+## LineageOS
 
 CyanogenMod的继承者。LineageOS可在旧款Android手机上流畅运行。
 
@@ -1152,7 +1107,9 @@ LineageOS不带Google框架，需要自行下载，链接如下。
 https://opengapps.org/
 ```
 
-## 机型适配
+### 机型适配
+
+#### 基本知识
 
 自行编译ROM必须获得内核源码、设备树和供应商文件。
 
@@ -1201,7 +1158,7 @@ https://forum.xda-developers.com/t/guide-how-to-make-a-device-tree-for-your-phon
 </manifest>
 ```
 
-### LineageOS
+#### 编译
 
 如果设备有官方维护，则直接运行以下命令即可。
 
@@ -1229,6 +1186,36 @@ https://forum.xda-developers.com/t/guide-how-to-build-an-unsupported-rom-using-s
 https://www.cnblogs.com/luoyesiqiu/p/10701419.html
 https://acytoo.com/ladder/build-lineageos-for-tab-s/
 https://mystery00.github.io/2017/04/23/%E7%BC%96%E8%AF%91LineageOS/
+```
+
+
+## 其它ROM
+
+自定义ROM有LineageOS、pixel-experience、MoKee ROM、Havoc OS、Nitrogen-OS、OmniROM等。Samsung J3300均不支持这些自定义ROM。
+
+使用自定义ROM前一般均需对手机进行Root，解锁Bootloader，刷入TWRP。刷入自定义ROM前一般需要擦除数据，以TWRP为例，进入TWRP recovery后，选择Wipe-Advanced Wipe，勾选Dalvik/ART Cache、Cache、Data、Internal Storage、System以完成擦除。
+
+```
+# PixelExperience
+https://download.pixelexperience.org/
+
+# OmniROM
+https://omnirom.org/
+
+# Nitrogen OS
+https://theunlockr.com/rom/nitrogen-os-rom/
+
+# AOSPEXTENDED ROM
+https://www.aospextended.com/
+
+# dotOS
+https://droidontime.com/
+
+# Resurrection Remix OS
+https://resurrectionremix.com/
+
+# MoKee
+https://download.mokeedev.com/
 ```
 
 # 参考教程

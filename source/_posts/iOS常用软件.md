@@ -2074,6 +2074,23 @@ https://shenlu.lanzous.com/ic7grkh
 提取码 / f9r8
 ```
 
+# 其它
+
+```
+# 旧版APP
+https://www.lanzous.com/b0f76484f
+https://www.lanzous.com/b0f7a3l6d
+
+# 破解APP
+https://sideload.tweakboxapp.com/
+
+# 其他APP
+## DolphiniOS，PPSSPP模拟器
+https://dolphinios.oatmealdome.me/
+## uYouPlus
+https://github.com/qnblackcat/uYouPlus
+```
+
 # 常见问题
 
 ## 跳过双重验证

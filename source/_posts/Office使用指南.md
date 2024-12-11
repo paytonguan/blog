@@ -12,6 +12,13 @@ Office使用指南。
 
 <!-- more -->
 
+# TODOS
+
+```
+# 操作教程
+http://www.wordlm.com/
+```
+
 # 下载
 
 可通过Office Tool。

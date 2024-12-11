@@ -668,6 +668,34 @@ InfoTip=[需要添加的备注]
 https://gitee.com/alwcel/FolderMeta
 ```
 
+## 主题美化
+
+### 桌面
+
+可通过以下软件。
+
+```
+http://www.huoying666.com/
+https://www.rainmeter.net/
+```
+
+### 指针
+
+指针库如下。
+
+```
+http://www.cursors-4u.com/
+https://zhutix.com/tag/cursors/
+```
+
+### 图标
+
+图标库如下。
+
+```
+https://zhutix.com/tag/tubiao/
+```
+
 # 常见问题
 
 ## 分区表错误导致硬盘无法识别

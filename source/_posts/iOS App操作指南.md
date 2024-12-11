@@ -557,42 +557,114 @@ https://www.charles.ren/
 
 用解压软件打开IPA，删除iTunesmeradata.plist即可。若无法直接用解压软件打开，可先修改后缀名为ZIP，删除后再修改回IPA。
 
+# IPA砸壳
+
+AppStore下载的应用进行了数字版权加密处理，加密后的App无法被反编译。砸壳可以将已经安装的App解密，导出为ipa格式的文件。
+
+砸壳后才能自定义使用，如修改标识符实现双开、注入插件实现增强等，砸壳后可以跳过ID验证。
+
+砸壳后的App在越狱手机上可直接用Filza安装。
+
+## 通过frida-ios-dump
+
+该方法适用于Mac，需要APP能够正常打开。
+
+### 电脑端配置
+
+确保电脑已安装frida，Mac可通过Homebrew安装。安装完成后运行以下命令，若出现`Waiting for USB device to appear...`，则成功。
+
+```
+frida-ps -U
+```
+
+运行以下命令以克隆仓库。
+
+```
+git clone https://github.com/AloneMonkey/frida-ios-dump.git
+```
+
+连接手机到电脑，执行以下命令，查看手机是否已经被识别。
+
+```
+frida-ls-devices
+frida-ps -U
+```
+
+### 手机端配置
+
+完成电脑端配置后，需要在手机上安装frida-server，版本需要和电脑端匹配。
+
+打开以下链接下载与电脑的frida对应的frida-server，并用Filza复制到手机的/usr/bin中，重命名为frida-server。在手机上用Filza找到刚刚复制进去的文件，调整其属性，将权限全部开放。
+
+然后在手机打开NewTerm，运行以下命令完成安装。
+
+```
+cd /usr/bin
+frida-server --version
+frida-server -D
+```
+
+frida-server也可用Cydia安装。打开Cydia并添加以下源安装即可，若无法下载可换用嘻哈源。
+
+```
+https://build.frida.re
+```
+
+### 砸壳操作
+
+将手机和电脑进行连接，并确保两者连接到同一个Wi-Fi。
+
+用爱思助手打开手机的SSH通道，然后打开克隆好的仓库，修改dump.py中端口为连接手机SSH的端口。打开终端，执行以下命令以与手机进行SSH连接。
+
+```
+ssh root@127.0.0.1 -p1025
+```
+
+再新建一个终端，执行以下命令以列出手机所有安装的应用。
+
+```
+cd frida-ios-dump
+python3 dump.py -l
+```
+
+输入以下命令以进行砸壳。若提示`unable to access process with pid 1 from the current user account`，则需先在手机上打开APP。砸壳完成的APP将放到电脑的终端当前路径。
+
+```
+python3 dump.py [APP名称]（或BundleID）
+```
+
+## 通过插件
+
+该方法需要APP能够正常打开。
+
+### CrackerXI+
+
+安装CrackerXI+插件，源地址如下。
+
+```
+https://cydia.iphonecake.com/
+```
+
+打开插件，在设置中打开CrackerXI Hook、Remove UISupportedDevices、Set Minimum iOS version 10.0和Remove Watch App。在插件首页点击要砸壳的APP即可，砸壳后的APP放在手机的/var/mobile/Documents/CrackerXI/中。
+
+### DumpDecrypter
+
+源地址如下。
+
+```
+https://repo.initnil.com/
+```
+
+### AppsDump
+
+```
+https://pan.baidu.com/s/1AwXfV5BsMj4Pf_bTaQUXUw?pwd=42ni
+https://www.123pan.com/s/vgn0Vv-vfHFv.html
+```
+
 # 购买AppStore外区礼品卡
 
 将支付宝地区切换为美国，然后点击出境-折扣礼卡，滑到最底部点击查看，搜索`iTunes`即可。
-
-# 相关APP
-
-## 旧版APP
-
-```
-https://www.lanzous.com/b0f76484f
-https://www.lanzous.com/b0f7a3l6d
-```
-
-## 破解APP
-
-```
-https://sideload.tweakboxapp.com/
-```
-
-## 其他APP
-
-### DolphiniOS
-
-PPSSPP模拟器。
-
-```
-https://dolphinios.oatmealdome.me/
-```
-
-### 其他
-
-```
-# uYouPlus
-https://github.com/qnblackcat/uYouPlus
-```
-
 
 # 参考教程
 

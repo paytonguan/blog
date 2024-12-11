@@ -926,6 +926,22 @@ EFI32或EFI64。
 ioreg -l -p IODeviceTree | grep firmware-abi
 ```
 
+# 终端替代
+
+可使用以下软件。
+
+## iTerm2
+
+```
+https://iterm2.com/
+```
+
+## Hyper
+
+```
+https://hyper.is/
+```
+
 # 参考教程
 
 ## Mac terminal 清屏快捷键
