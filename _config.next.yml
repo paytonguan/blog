@@ -177,19 +177,19 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  GitHub: https://github.com/guanpeiheng1 || fab fa-github
-  E-Mail: mailto:guanpeiheng1@gmail.com || fa fa-envelope
-  Weibo: https://weibo.com/paytonguan || fab fa-weibo
-  Google: https://plus.google.com/guanpeiheng1 || fab fa-google
+  # GitHub: https://github.com/guanpeiheng1 || fab fa-github
+  # E-Mail: mailto:guanpeiheng1@gmail.com || fa fa-envelope
+  # Weibo: https://weibo.com/paytonguan || fab fa-weibo
+  # Google: https://plus.google.com/guanpeiheng1 || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
-  FB Page: https://www.facebook.com/guanpeiheng1 || fab fa-facebook
+  # FB Page: https://www.facebook.com/guanpeiheng1 || fab fa-facebook
   #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
-  YouTube: https://youtube.com/guanpeiheng1 || fab fa-youtube
-  Instagram: https://instagram.com/guanpeiheng1 || fab fa-instagram
+  # YouTube: https://youtube.com/guanpeiheng1 || fab fa-youtube
+  # Instagram: https://instagram.com/guanpeiheng1 || fab fa-instagram
   #Skype: skype:yourname?call|chat || fab fa-skype
 
 social_icons:
-  enable: true
+  enable: false
   icons_only: true
   transition: true
 

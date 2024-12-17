@@ -396,6 +396,12 @@ https://www.icloud.com/shortcuts/608014dbe70e45588653193fd8b1a4b9
 ## 视频
 
 ```
+# 视频下载
+https://www.icloud.com/shortcuts/ea4b9552510947ef8f38054c633a4016
+https://www.icloud.com/shortcuts/137f39c3b9ff413fb8cfa22364796f70
+https://www.icloud.com/shortcuts/7b2d1a35a42445fa8b5dd029ec801984
+https://www.icloud.com/shortcuts/056f72ab0eff4ade9ef5af325982e99b
+
 # 短视频去水印
 https://www.icloud.com/shortcuts/cf5f76704f9444c9aa17e2a2f85b4f5a
 
