@@ -23,6 +23,158 @@ https://ltribe.lanzout.com/iBikg0qpcl7c
 
 ```
 https://www.ghxi.com/
+https://github.com/Awesome-Windows/Awesome/blob/master/README-cn.md
+https://amazing-apps.gitbook.io/windows-apps-that-amaze-us/zh-cn
+```
+
+# 下载工具
+
+优先选择IDM，也可以用XDM。
+
+## IDM
+
+在Windows XP上使用可能会造成连不上网的问题。破解版下载链接如下。
+
+```
+https://ltribe.lanzout.com/itOtx0257b4f
+```
+
+### 不调用IDM下载
+
+按住Alt键再点击下载按钮即可。
+
+### 断点续传
+
+打开主界面，在所需任务上右键并点击`刷新下载地址`。获取URL后复制，在刚才的任务上右键点击属性，将地址一栏替换为刚才复制的URL，继续下载即可。
+
+### 设置多线程
+
+进入设置，选择连接，连接类型/速度选择`较高速率连接`，默认最大连接数按照需求选择。建议小于2G的文件可以开32线程，大于2G的文件减少到8-16线程。
+
+### 插件修复
+
+#### Chrome
+
+打开以下链接进行安装即可。
+
+```
+https://chrome.google.com/webstore/detail/idm-integration-module/ngpampappnmepgilojfohadhhmbhlaek
+```
+
+#### Edge
+
+打开以下链接进行安装即可。
+
+```
+ms-windows-store://review/?PFN=TonecInc.IDMIntegrationModule_e7b5mm5d3r6v2
+```
+
+### 悬浮嗅探窗修复
+
+首先尝试重新启用浏览器扩展，并在IDM扩展属性中勾选允许访问文件网址。
+
+若无效，着进入IDM设置，在常规选项卡下取消勾选`使用高级浏览器集成`。进入`C:\Users\你的用户名\AppData\Roaming\IDM`，删除该目录下所有文件，重新测试悬浮窗是否可用。
+
+也可尝试使用IE浏览器。
+
+### 下载直播视频
+
+打开`C:\Users\你的用户名\AppData\Roaming\IDM\DwnlData`， 进入路径内部直至看到一份没有后缀名的文件。若要停止录制，则将文件复制一份，并添加后缀名`ts`或`mp4`即可。
+
+## XDM
+
+```
+https://subhra74.github.io/xdm/
+```
+
+## Tracker
+
+列表如下。
+
+```
+https://www.52pojie.cn/thread-1032873-1-1.html
+https://github.com/XIU2/TrackersListCollection
+https://trackerslist.com/#/zh
+https://github.com/ngosang/trackerslist
+http://github.itzmx.com/1265578519/OpenTracker/master/tracker.txt
+https://newtrackon.com/list
+http://www.torrenttrackerlist.com/torrent-tracker-list
+https://tinytorrent.net/best-torrent-tracker-list-updated/
+```
+
+## qBittorrent
+
+```
+https://github.com/c0re100/qBittorrent-Enhanced-Edition
+https://www.qbittorrent.org/
+```
+
+## NDM
+
+```
+http://www.neatdownloadmanager.com/index.php/en/
+```
+
+## FDM
+
+```
+https://www.freedownloadmanager.org/zh/
+```
+
+## Xdown
+
+```
+https://xdown.org/
+```
+
+## DL磁力下载
+
+```
+https://www.lanzous.com/i68544h
+```
+
+## 迅雷X
+
+可无限循环获得试用会员加速。
+
+```
+https://www.52pojie.cn/thread-1012585-1-1.html
+```
+
+其它破解版如下。
+
+```
+https://www.lanzoui.com/iXVgXj24kyj
+```
+
+## BitComet
+
+原版软件下载链接如下。
+
+```
+http://www.bitcomet.com/en
+```
+
+破解版如下。
+
+```
+https://www.lanzous.com/b073c7g4f
+https://www.52pojie.cn/thread-1034122-1-1.html
+https://www.52pojie.cn/thread-1049654-1-1.html
+```
+
+点比特彗星里上方栏位的`工具`-`电驴插件`-`显示插件窗口`，拉长弹出来的插件窗口，点击`工具`-`直接下载`，复制要下载的ed2k链接后回车即可。
+
+## ADM
+
+```
+https://ltribe.lanzous.com/iKhZAmi4mqh
+```
+
+## 文件蜈蚣
+
+```
+http://www.filecxx.com
 ```
 
 # 文件传输

@@ -12,13 +12,11 @@ tags:
 
 <!-- more -->
 
-# 系统技巧
-
-## 查看系统版本
+# 查看系统版本
 
 点击菜单栏中的关于本机即可。或在磁盘工具中也能看到磁盘对应的系统版本。
 
-## 系统网络在线重装
+# 系统网络在线重装
 
 在开机时按住以下快捷键之一即可。
 
@@ -28,13 +26,13 @@ tags:
 | Option+Command+R       | 升级到最新版macOS                                 |
 | Shift+Option+Command+R | 安装出厂时的macOS或与其最接近的官方仍在提供的版本 |
 
-## 访问Mac共享
+# 访问Mac共享
 
 在Mac打开设置，选择共享-文件共享，点击`选项`，勾选两个复选框，并勾选用于共享的用户。回到设置页面，打开`网络偏好设置`，选择活跃的连接，点击高级-WINS，输入Windows的工作组名称，一般为WORKGROUP。
 
 在Windows端打开运行，输入`\\[Mac的IP地址]`即可访问。
 
-## 旧款Mac安装Catalina
+# 旧款Mac安装Catalina
 
 使用macOS Catalina Patcher即可。
 
@@ -42,7 +40,7 @@ tags:
 http://dosdude1.com/catalina/
 ```
 
-## 直接下载Boot Camp驱动程序
+# 直接下载Boot Camp驱动程序
 
 使用Brigadier即可。
 
@@ -50,7 +48,7 @@ http://dosdude1.com/catalina/
 https://github.com/timsutton/brigadier/releases
 ```
 
-## 安全模式下读取EFI分区
+# 安全模式下读取EFI分区
 
 注意，此法不能读取内置Windows分区和外接驱动器（非APFS/HFS）分区。
 
@@ -71,7 +69,7 @@ sudo chown -Rf 0:0 /kexts/msdosfs.kext
 sudo kextload /kexts/msdosfs.kext
 ```
 
-## 连接ZJU有线网络
+# 连接ZJU有线网络
 
 打开系统偏好设置-网络，点击+，接口选择vpn，类型选L2TP/IPSec，完成后填写下列信息。
 
@@ -95,11 +93,11 @@ l2tpnoipsec // 第一个字母为小写L
 
 按Esc后输入`:wq`并回车，回到网络设置界面。连接上述设置好的VPN，正常情况下连接成功。
 
-## 重置蓝牙配置
+# 重置蓝牙配置
 
 进入系统盘的/Library/Preference，删除`com.apple.Bluetooth.plist`文件后重启即可。
 
-## 备份EFI分区脚本
+# 备份EFI分区脚本
 
 脚本地址如下，运行EFI Backup-Restore.command即可。
 
@@ -107,7 +105,7 @@ l2tpnoipsec // 第一个字母为小写L
 https://github.com/corpnewt/EFI-Backup-Restore
 ```
 
-## 系统精简
+# 系统精简
 
 打开终端并输入以下命令。
 
@@ -171,15 +169,15 @@ launchctl unload -wF com.apple.metadata.mds.spindump.plist
 #launchctl unload -wF org.cups.cups-lpd.plist
 ```
 
-## 更换字体
+# 更换字体
 
 打开/System/Library/Frameworks/ApplicationServices.framework/Frameworks/CoreText.framework/Resources/DefaultFontFallbacks.plist，将STHeitiSC-Light进行修改即可，如冬青黑体简体中文W3为HiraginoSansGB-W3。
 
-## 远程控制
+# 远程控制
 
 可通过iMessage，打开后选择或新建对方的信息会话，点击右上角后选择共享即可。
 
-## 删除Launchpad的废图标
+# 删除Launchpad的废图标
 
 打开访达，选择前往-前往文件夹，输入`/private/var/folders`并回车。在本路径下搜索`com.apple.dock.launchpad`，双击进去可看到db。
 
@@ -192,13 +190,13 @@ cd /private/var/folders/[...]/db
 sqlite3 db "delete from apps where title='[需要删除的应用名称]';"&&killall Dock
 ```
 
-## Menu Bar操作
+# Menu Bar操作
 
 按住Command键并拖动菜单栏图标可调整其顺序，拖出菜单栏则清除此图标。
 
 若菜单栏上没有图标，则转至`/System/Library/CoreServices/Menu Extras`，直接用鼠标将Eject.menu拖放至菜单栏即可。
 
-## 常用快捷键
+# 常用快捷键
 
 Mac键盘与普通键盘键位对应如下表。 
 
@@ -242,23 +240,23 @@ Mac键盘与普通键盘键位对应如下表。
 | Command+O                     | Ctrl+O                 | 打开所选文件               |
 | Command+Shift+Delete          | Ctrl+Shift+Backspace   | 清倒废纸篓                 |
 
-## 临时禁止通知中心弹出通知
+# 临时禁止通知中心弹出通知
 
 按住`Option`后点击右上角通知中心图标即可。
 
-## 把PNG转成JPG
+# 把PNG转成JPG
 
 直接修改后缀名即可。
 
-## 触控板设置三指拖移
+# 触控板设置三指拖移
 
 进入系统偏好设置-辅助功能-鼠标与触控板-触控板选项…，勾选启用拖移并选择三指拖移即可。
 
-## 归类文件
+# 归类文件
 
 选中多个文件，右键选择`使用多个文件新建文件夹`。
 
-## 显示隐藏文件
+# 显示隐藏文件
 
 利用`command（⌘）+shift+.`即可。
 
@@ -274,11 +272,11 @@ defaults write com.apple.finder AppleShowAllFiles -bool false
 // 或defaults write com.apple.finder AppleShowAllFiles NO
 ```
 
-## 删除所有短信
+# 删除所有短信
 
 设置短信为保留30天，然后设置日期，拨动往后的几个月份直至短信被删除即可。
 
-## QQ功能扩展
+# QQ功能扩展
 
 下载以下仓库，解压后在终端运行Other文件夹中的`install.sh`即可。
 
@@ -286,7 +284,7 @@ defaults write com.apple.finder AppleShowAllFiles -bool false
 https://github.com/TKkk-iOSer/QQPlugin-macOS/tree/master
 ```
 
-## 微信功能扩展
+# 微信功能扩展
 
 该插件已造成封号，不推荐使用。
 
@@ -308,7 +306,7 @@ https://github.com/MustangYM/WeChatExtension-ForMac
 open -n /Applications/WeChat.app
 ```
 
-## Quick Look插件
+# Quick Look插件
 
 通过安装Quick Look插件，可以在点击空格预览的时候有更多功能，仓库如下。
 
@@ -323,7 +321,7 @@ brew cask install [插件名]
 ```
 
 
-## Xcode SDK文件
+# Xcode SDK文件
 
 用于为Xcode提供旧版SDK文件。
 

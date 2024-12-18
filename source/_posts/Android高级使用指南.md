@@ -927,7 +927,9 @@ patch -p2 < no_reboot_into_bootloader.diff
 
 Root后将无法通过OTA升级的方式升级系统，只能通过线刷的方式。
 
-## Magisk
+## 安装
+
+### Magisk
 
 从以下链接下载Magisk Manager。
 
@@ -947,7 +949,7 @@ https://github.com/topjohnwu/Magisk
 
 若Ramdisk为No，其余一致，Magisk只能劫持recovery分区，此时则需要修补recovery.img，步骤与上面基本一致，注意修补时需要确保Recovery Mode为勾选状态。这种修补下正常开机Magisk将不运行，需要按下进入恢复模式的按键组合，等待设备屏幕亮起后松开按键，此时Magisk将正常运行。若需要进入到真正的恢复模式，需要在屏幕亮起时长按音量上键。这种情况下不能用第三方recovery安装或升级Magisk。
 
-## CF-Auto-Root
+### CF-Auto-Root
 
 不推荐，在Samsung J3300下实测失败。
 
@@ -958,7 +960,7 @@ https://autoroot.chainfire.eu/
 https://desktop.firmware.mobi/
 ```
 
-## PurpleDrake
+### PurpleDrake
 
 可用于LG G3。
 
@@ -967,6 +969,61 @@ https://desktop.firmware.mobi/
 ```
 https://forum.xda-developers.com/t/root-root-your-lg-g3-easily-with-purpledrake-lite-osx-linux-windows.2821000/
 ```
+
+
+## 软件与框架
+
+### Busybox
+
+提供Android上缺失的Linux命令行实现，如dirname等。Root后通过以下APP安装即可。
+
+```
+https://github.com/meefik/busybox
+```
+
+### 文件管理
+
+可用Root Explorer、MT文件管理器。
+
+### 系统工具
+
+#### Scene
+
+用于锁CPU频率、超频等。
+
+```
+https://www.coolapk.com/apk/com.omarea.vtools
+```
+
+#### 澜系统工具箱
+
+实现删温控等功能。
+
+```
+https://www.coolapk.com/apk/xzr.La.systemtoolbox
+```
+
+#### Devcheck Pro
+
+查看机器硬件配置。
+
+```
+https://www.yxssp.com/23173.html
+```
+
+#### Termux
+
+手机上使用终端。可以没有Root权限。
+
+```
+https://f-droid.org/zh_Hans/packages/com.termux/
+```
+
+### 游戏修改
+
+#### GameGuardian
+
+游戏修改器。
 
 # 系统
 

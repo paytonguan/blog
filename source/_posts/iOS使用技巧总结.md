@@ -97,15 +97,69 @@ https://mp.weixin.qq.com/s/wIPMP7VFhD1pVh8DVICZIg
 https://mp.weixin.qq.com/s/qFf5d4bjNoUh2gsxcyvQBA
 ```
 
-# Home键失灵
+# 硬件技巧
+
+## Home键失灵
 
 越狱后可安装CCSettings插件在控制中心添加主屏幕按钮，或安装Activator插件实现手势操作。
 
-# 电源键失灵
+## 电源键失灵
 
 可通过爱思助手完成重启。
 
-# 添加日历订阅
+# 系统技巧
+
+## 恢复模式
+
+### 进入
+
+#### 正常方法
+
+彻底关闭设备，并且将设备与PC断开连接。长按Home键的同时将设备连接到计算机，不要松开Home键，直到在设备屏幕上看到`连接到iTunes`的图片。
+
+#### 备选方法
+
+可在按键失灵时使用。用爱思助手即可。
+
+### 退出
+
+按住电源键十秒即可。通过爱思助手进入的需要通过爱思助手退出。
+
+## DFU模式
+
+### 进入
+
+#### 正常方法
+
+把设备连接到PC后关闭设备，同时按住Home键和电源键十秒后松开电源键，继续按住Home键，直到在电脑上看到识别到DFU状态下的USB设备。
+
+#### 按键失灵方法
+
+##### 通过脚本
+
+把设备连接到Windows后下载以下压缩包，解压后双击`DFU.bat`即可。
+
+```
+https://feng-bbs-att-1255531212.file.myqcloud.com/2011/10/15/2472983_DFU.rar
+```
+
+##### 通过固件
+
+该方法适合早期的iPhone，主要是iOS7及以下的系统。安装较早版本的iTunes（10或11），并下载当前系统的固件。然后下载Redsn0w，链接如下。
+
+```
+http://www.iphonehacks.com/download-redsn0w
+```
+
+下载完成后以管理员身份运行Redsn0w，选择Extras-Even More-DFU IPSW，选取下载好的固件，等待制作完成。然后连接手机并打开iTunes，连接成功后按住Shift并点击恢复，选择制作好的DFU固件，刷机完成后即进入DFU模式。
+
+### 退出
+
+按住Home键和电源键十秒，设备关机之后重新启动设备即可。
+
+# 操作技巧
+
+## 添加日历订阅
 
 点击设置-日历-账户-添加账户-其他-添加已订阅的日历，填入服务器地址即可。推荐订阅如下。
 
@@ -129,55 +183,8 @@ http://icalshare.com/
 https://sspai.com/post/43209
 ```
 
-# 恢复模式
 
-## 进入
-
-### 正常方法
-
-彻底关闭设备，并且将设备与PC断开连接。长按Home键的同时将设备连接到计算机，不要松开Home键，直到在设备屏幕上看到`连接到iTunes`的图片。
-
-### 备选方法
-
-可在按键失灵时使用。用爱思助手即可。
-
-## 退出
-
-按住电源键十秒即可。通过爱思助手进入的需要通过爱思助手退出。
-
-# DFU模式
-
-## 进入
-
-### 正常方法
-
-把设备连接到PC后关闭设备，同时按住Home键和电源键十秒后松开电源键，继续按住Home键，直到在电脑上看到识别到DFU状态下的USB设备。
-
-### 按键失灵方法
-
-#### 通过脚本
-
-把设备连接到Windows后下载以下压缩包，解压后双击`DFU.bat`即可。
-
-```
-https://feng-bbs-att-1255531212.file.myqcloud.com/2011/10/15/2472983_DFU.rar
-```
-
-#### 通过固件
-
-该方法适合早期的iPhone，主要是iOS7及以下的系统。安装较早版本的iTunes（10或11），并下载当前系统的固件。然后下载Redsn0w，链接如下。
-
-```
-http://www.iphonehacks.com/download-redsn0w
-```
-
-下载完成后以管理员身份运行Redsn0w，选择Extras-Even More-DFU IPSW，选取下载好的固件，等待制作完成。然后连接手机并打开iTunes，连接成功后按住Shift并点击恢复，选择制作好的DFU固件，刷机完成后即进入DFU模式。
-
-## 退出
-
-按住Home键和电源键十秒，设备关机之后重新启动设备即可。
-
-# 修改步数
+## 修改步数
 
 下载`乐心健康`，登录并在设置中选择数据共享，开启需要修改步数的APP。打开以下网页，登录并修改步数即可。
 
@@ -185,7 +192,7 @@ http://www.iphonehacks.com/download-redsn0w
 http://step.xbmmw.top/
 ```
 
-# 修改定位
+## 修改定位
 
 可通过以下网站查询经纬度。
 
@@ -193,15 +200,15 @@ http://step.xbmmw.top/
 http://www.gpsspg.com/maps.htm
 ```
 
-## 通过爱思助手
+### 通过爱思助手
 
 通过爱思助手的虚拟定位功能即可。
 
-## 通过抓包
+### 通过抓包
 
 打开网络调试软件（如Thor）后，打开需要修改定位的App，点击定位相关按钮，查找关于location的数据包，进入经纬度进行修改即可。注意经纬度的小数点精确的位数。
 
-# 查看电池循环次数
+## 查看电池循环次数
 
 打开设置-隐私-分析与改进，保证`共享iPhone分析`处于打开状态，然后点击`分析数据`，下拉并在搜索框搜索`log-aggregated`，找到时间最近的文件，点击右上角并选择`存储到文件`，保存到手机中。
 
@@ -211,7 +218,7 @@ http://www.gpsspg.com/maps.htm
 https://www.icloud.com/shortcuts/df02957b73414724b94fa58e0a836461
 ```
 
-# 日历添加法定节假日安排
+## 日历添加法定节假日安排
 
 打开日历APP，点击日历-添加日历-添加订阅日历，链接如下。
 
@@ -219,22 +226,22 @@ https://www.icloud.com/shortcuts/df02957b73414724b94fa58e0a836461
 https://www.hurbai.com/ical.ics
 ```
 
-# 将iPad作为电脑副屏
+## 将iPad作为电脑副屏
 
 有线连接可使用Duet Display、Twomon、Splashtop Wired XDisplay。无线连接可使用Spacesdesk、Duet Air、Moonlight。将平板作为数位板则可考虑EasyCanvas、Astropad Studio。
 
 也可使用Splashtop。在iPad安装Splashtop Personal，打开后点击`我想在封闭网路中使用Splashtop`，按照提示在电脑安装Splashtop Streamer并连接即可。如果希望将iPad作为扩展屏，则可购买HDMI欺骗器并接到电脑上，然后切换投影模式为扩展即可。
 
-# 系统清理
+## 系统清理
 
 在设置中将系统时间调后一个多月，等待片刻再恢复自动校准时间。
 
-# iOS 13双网变全网通
+## iOS 13双网变全网通
 
 iPhone 11以下设备（不含），港版、韩版、英版、美版等仅支持移动和联通，不支持电信。可通过开通电信VoLTE的方式添加支持。
 
 
-# 密码与激活锁
+## 密码与激活锁
 
 当iOS打开了查找我的iPhone功能且无有效的激活记录时，将会导致激活锁定，需要输入开启了查找我的iPhone对应的iCloud账号和密码才可解锁。若忘记密码，则需要绕过激活锁。
 
@@ -278,7 +285,7 @@ uicache --all
 killall backboardd 
 killall -9 SpringBoard
 ```
-# 切换AppStore账号后自动下载App的解决
+## 切换AppStore账号后自动下载App的解决
 
 进入AppStore中的账号详情，点击`删除此设备`即可。
 

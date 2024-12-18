@@ -327,60 +327,6 @@ https://www.jianshu.com/p/9b85dce0dcb7
 
 # 软件与框架
 
-## Root专用
-
-### Busybox
-
-提供Android上缺失的Linux命令行实现，如dirname等。Root后通过以下APP安装即可。
-
-```
-https://github.com/meefik/busybox
-```
-
-### 文件管理
-
-可用Root Explorer、MT文件管理器。
-
-### 系统工具
-
-#### Scene
-
-用于锁CPU频率、超频等。
-
-```
-https://www.coolapk.com/apk/com.omarea.vtools
-```
-
-#### 澜系统工具箱
-
-实现删温控等功能。
-
-```
-https://www.coolapk.com/apk/xzr.La.systemtoolbox
-```
-
-#### Devcheck Pro
-
-查看机器硬件配置。
-
-```
-https://www.yxssp.com/23173.html
-```
-
-#### Termux
-
-手机上使用终端。可以没有Root权限。
-
-```
-https://f-droid.org/zh_Hans/packages/com.termux/
-```
-
-### 游戏修改
-
-#### GameGuardian
-
-游戏修改器。
-
 ## Xposed
 
 ### 安装
