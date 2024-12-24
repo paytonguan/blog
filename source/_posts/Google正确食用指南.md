@@ -7351,6 +7351,217 @@ def credit_card_number(prefixList, howMany=1, length=16):
     return result
 ```
 
+## DNS
+
+### DNS列表
+
+普通DNS如下。
+
+|    供应商     |         主DNS         |          备用DNS          |                      备注                      |
+|---------------|-----------------------|---------------------------|------------------------------------------------|
+| Google        | 8.8.8.8               | 4.4.4.4                   | https://developers.google.com/speed/public-dns |
+| OpenDNS       | 208.67.222.222        | 208.67.220.220            | https://www.opendns.com/                       |
+| Level3        | 209.244.0.3           | 209.244.0.4               |                                                |
+| DNS Advantage | 156.154.70.1          | 156.154.71.1              |                                                |
+| Verizon       | 4.2.2.1               | 4.2.2.1                   |                                                |
+| SmartViper    | 208.76.50.50          | 208.76.51.51              | https://www.markosweb.com/free-dns/            |
+| AIXYZ DNS     | 123.206.21.48         | 115.159.146.99            |                                                |
+| HelloDNS      | 123.56.46.123         | 182.254.185.148           |                                                |
+| Ali           | 223.5.5.5             | 223.6.6.6                 |                                                |
+| Tencent       | 119.29.29.29          | 119.28.28.28              |                                                |
+| 114           | 114.114.114.114       | 114.114.115.115           |                                                |
+| rubyfish DoT  | tls://rubyfish.cn:853 | tls://dns.rubyfish.cn:853 |                                                |
+| rubyfish DoH  | https://rubyfish.cn   | https://dns.rubyfish.cn   |                                                |
+
+带安全功能的DNS如下。
+
+|       供应商       |      主DNS      |     备用DNS     |
+|--------------------|-----------------|-----------------|
+| Norton ConnectSafe | 198.153.192.40  | 198.153.194.40  |
+|                    | 198.153.192.50  | 198.153.194.50  |
+|                    | 198.153.192.60  | 198.153.194.60  |
+| Comodo Secure DNS  | 8.26.56.26      | 8.20.247.20     |
+| Securly            | 184.169.143.224 | 184.169.161.155 |
+| ScrubIT            | 67.138.54.100   | 207.225.209.66  |
+
+### DNS供应商
+
+```
+# 阿里云公共DNS
+https://www.alidns.com/setup/
+
+# Public DNS
+https://www.publicdns.xyz/public/puntcat.html
+
+# Yandex.DNS
+https://dns.yandex.com/
+
+# Freenom World
+http://www.freenom.world/zh/index.html
+
+# 1.1.1.1
+https://1.1.1.1/
+
+# Quad9
+https://quad9.net/
+
+# OpenNIC
+https://www.opennic.org/
+
+# 京东智联云
+https://www.jdcloud.com/cn/products/jd-cloud-dns
+
+# 华为云
+https://www.huaweicloud.com/product/dns.html
+
+# DNS.COM
+https://www.dns.com/
+
+# dnsever
+https://www.dnsever.com/
+
+# Zoneedit
+https://www.zoneedit.com/
+
+# DNS EXIT，免费动态DNS，托管DNS服务
+https://www.dnsexit.com/
+
+# GeoScaling DNS2，每月最多100万个DNS请求
+https://www.geoscaling.com/
+
+# DNS.LA
+https://www.dns.la/
+
+# 八戒DNS
+https://www.bajiedns.com/
+
+# DNS盾
+https://www.dnsdun.com/
+
+# xip.io
+http://xip.io/
+
+# dynv6
+https://dynv6.com/
+
+# SPDYN
+https://www.spdyn.de/
+
+# FreeDNS
+https://freedns.afraid.org/
+
+# DYNDNSS
+https://dyndnss.net/eng/
+
+# ClouDNS
+https://asia.cloudns.net/
+
+# DNSPOD
+https://www.dnspod.cn/
+https://www.dnspod.com/
+# 优惠券
+https://www.dnspod.cn/promo/coupon
+https://cloud.tencent.com/act/pro/DNSPodDomainsCarnival?fromSource=gwzcw.1293314.1293314.1293314&cps_key=98e3b13dc4a1659435daf62289161ee5
+
+# Duck DNS
+https://www.duckdns.org/
+
+# FreeDNS
+https://freedns.afraid.org/
+
+# LuaDNS
+https://www.luadns.com/
+
+# Hurricane Electric Free DNS Management
+https://dns.he.net/
+
+# Dynu
+https://www.dynu.com/
+
+# no.ip
+https://www.noip.com/
+
+# ZoneWatcher
+https://zonewatcher.com/
+
+# Zoneedit
+https://www.zoneedit.com/free-dns/
+
+# Lilore
+https://zilore.com/en/dns
+
+# GratisDNS
+https://web.gratisdns.dk/domaener/dns/
+
+# Selectel
+https://old.selectel.ru/en/services/additional/dns/
+
+# PointDNS
+https://pointhq.com/developer
+
+# NS1
+https://ns1.com/
+
+# DomainTools
+https://www.domaintools.com/
+```
+
+### DNS服务程序
+
+```
+# Overture
+https://github.com/shawn1m/overture
+
+# glider
+https://github.com/nadoo/glider
+
+# dnsmasq-china-list
+https://github.com/felixonmars/dnsmasq-china-list
+
+# ChinaDNS
+https://github.com/aa65535/ChinaDNS
+```
+
+## Hosts
+
+### 源
+
+```
+# GoogleHosts
+https://github.com/googlehosts/hosts
+
+# ipv6-hosts
+https://github.com/lennylxx/ipv6-hosts
+```
+
+### 管理工具
+
+```
+# SwitchHosts!
+https://oldj.github.io/SwitchHosts/
+
+# Gas Mask
+https://www.macupdate.com/app/mac/29949/gas-mask/
+
+# Hozz
+https://blog.zhangruipeng.me/Hozz/
+```
+
+## GeoIP
+
+```
+# Free IP Geolocation API
+https://freegeoip.app/
+
+# GeoDataSource
+https://www.geodatasource.com/
+
+# Maxmind
+https://dev.maxmind.com/geoip/geoip2/geolite2/
+https://geolite.clash.dev/
+https://github.com/Dreamacro/maxmind-geoip
+```
+
 # 参考教程
 
 ## trojan-gfw/trojan
@@ -7688,4 +7899,25 @@ https://mp.weixin.qq.com/s/Ay9pfz0CLb_8R_CNQ5jCbw
 
 ```
 https://mp.weixin.qq.com/s/ubJNdNdY1T5QqtCP-5wwag
+```
+
+
+
+
+
+
+
+
+
+
+## 免费DNS推荐 （国外篇）
+
+```
+https://51.ruyo.net/609.html
+```
+
+## 国内外提供免费的域名DNS解析的服务商
+
+```
+https://51.ruyo.net/13274.html
 ```

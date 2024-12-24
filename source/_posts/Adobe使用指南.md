@@ -15,7 +15,8 @@ Adobe使用指南。
 # 下载
 
 ```
-https://www.whg6.com/22301.html
+https://www.didixk.com/34506.html
+https://github.com/davleone/Adobe-Photoshop-for-Mac-2024-and-Windows
 ```
 
 # 破解补丁

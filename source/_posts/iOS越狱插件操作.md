@@ -114,6 +114,7 @@ https://repo.chariz.com/
 | Orion           | 系统调节插件               |
 | QuitAll         | 一键清理后台               |
 | CarBridge       | 让第三方APP运行于CarPlay   |
+| EmoZoom         | 调整表情符号大小           |
 
 ## Ginsu作者源
 
@@ -284,6 +285,8 @@ https://havoc.app/
 | KeepItSimple             | 快速清除锁屏通知                                 |
 | SilentScreenshot         | 关闭截图咔嚓声，去除截图预览，自定义截图闪屏颜色 |
 | HomeGesture              | 老机型实现iPhone X手势界面操作                   |
+| Sanjeh                   | 花式电池弹出窗口                                 |
+| SquidExtender            | 键盘扩展                                         |
 
 ## Limneos源
 
@@ -593,6 +596,7 @@ https://cydia.ichitaso.com/
 | Apple File Conduit “2” | 允许电脑第三方助手直接访问设备越狱系统文件 |
 | KillBackground         | 一键清理后台                               |
 | OTADisabler            | 屏蔽系统更新                               |
+| SettingsRevamp         | 设置自定义                                 |
 
 ## BigBoss源
 
@@ -666,10 +670,11 @@ https://cydiageek.yourepo.com/
 https://www.yourepo.com/
 ```
 
-|       插件       |      作用     |
-|------------------|---------------|
-| ByeByeAppLibrary | 禁用App资源库 |
-| LSTimeSeconds    | 锁屏显示秒数  |
+|       插件       |         作用         |
+|------------------|----------------------|
+| ByeByeAppLibrary | 禁用App资源库        |
+| LSTimeSeconds    | 锁屏显示秒数         |
+| LockMoji15+      | 使用表情符号代替锁头 |
 
 ## 0xkuj源
 
@@ -1974,6 +1979,22 @@ https://share.weiyun.com/3l8BCWg0
 链接 / https://pan.baidu.com/s/1CeEpOs3aM-bSsZ7yLONHDw
 提取码 / 0fwD
 
+# Centra，自定义控制中心模块大小
+https://www.123684.com/s/vgn0Vv-7EwFv
+
+# Appaze 3，App特定设置
+https://pan.quark.cn/s/cfe1ff686c8d
+
+# Bridge，iOS体验watchOS桌面布局
+https://www.123684.com/s/vgn0Vv-feMFv
+
+# Shijima，桌面宠物
+https://pan.quark.cn/s/c3fe4fc2b437
+https://www.123684.com/s/vgn0Vv-fZMFv
+
+# ReplyActions，快速回复
+https://www.123684.com/s/vgn0Vv-s9wFv
+
 # Deb备份
 https://pan.baidu.com/s/18Kr9bvLt6_7X2zkjJgXVxg?pwd=i2r9
 https://pan.baidu.com/s/1AHqn6osPVHSxtSuPQaabSA?pwd=6rsu
@@ -3023,4 +3044,64 @@ https://mp.weixin.qq.com/s/4bmOb5UjTuPKAD4gHAtIWg
 
 ```
 https://mp.weixin.qq.com/s/VoZGTl5iwe98tlzrKThEfg
+```
+
+## 新玩法，Centra！
+
+```
+https://mp.weixin.qq.com/s/-MEXxPfLPctloyzIH6FG0A
+```
+
+## 神器，终于来了
+
+```
+https://mp.weixin.qq.com/s/ZWW1W5h2RT0o-cIyyck3hw
+```
+
+## 重生，免费
+
+```
+https://mp.weixin.qq.com/s/StqxCWBQUR-YfutVa-rUQQ
+```
+
+## 新玩具，桑杰！
+
+```
+https://mp.weixin.qq.com/s/5JJ8aCAVlES54fXkhkzhlg
+```
+
+## EmoZoom，无需升级 iOS 18.1 系统
+
+```
+https://mp.weixin.qq.com/s/xGgeWpEPdBZ7DkJSLY0s8g
+```
+
+## iPhone 一秒变手表
+
+```
+https://mp.weixin.qq.com/s/ZA_Vpt8ySW3XqC4anIOpGA
+```
+
+## Shijima
+
+```
+https://mp.weixin.qq.com/s/zxIL6ATqVIv7IJwtVNk1jw
+```
+
+## ReplyActions
+
+```
+https://mp.weixin.qq.com/s/4XHby9ytB_jdIW0hljl0ew
+```
+
+## SquidExtender，好用
+
+```
+https://mp.weixin.qq.com/s/-WOtLpvIBPNDX00paj-ITg
+```
+
+## LockMoji15+
+
+```
+https://mp.weixin.qq.com/s/s6wCAwXLAfLygl_d7lsXHA
 ```

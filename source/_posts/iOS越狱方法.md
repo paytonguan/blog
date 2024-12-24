@@ -38,6 +38,7 @@ iOS越狱方法。
 | Th0r                        |            | 64位设备 | 11.2-11.3.1                                  |               |
 | DoubleH3lix                 |            | 64位设备 | 10.0-10.3.3                                  |               |
 | Meridian                    |            | 64位设备 | 10.0-10.3.3                                  |               |
+| Socket                      |            | 32位设备 | 10.x                                         |               |
 | H3lix                       |            | 32位设备 | 10.0-10.3.3                                  |               |
 | Yalu                        |            | 64位设备 | 10.1-10.2                                    |               |
 | Phoenix                     |            | 32位设备 | 9.1-9.3.6                                    |               |
@@ -45,6 +46,7 @@ iOS越狱方法。
 | 叉叉助手                    |            | 64位设备 | 9.2-9.3.3                                    |               |
 | Jailbrea me                 |            | 32位设备 | 9.1-9.3.4                                    |               |
 | wtfis                       |            | 64位设备 | 8.0-8.4.1                                    |               |
+| EverPwnage                  |            | 32位设备 | 8.0-9.0.2                                    |               |
 | EtasonJB                    |            | 32位设备 | 8.0-8.4.1                                    |               |
 | Pangu                       |            |          | 7.0-7.1.2                                    |               |
 | P0sixspwn                   |            |          | 6.0-6.1.6                                    |               |
@@ -492,6 +494,12 @@ https://meridian.sparkes.zone/
 https://totally.not.spyware.lol/
 ```
 
+# Socket
+
+```
+https://github.com/staturnzz/socket
+```
+
 # Phoenix
 
 ```
@@ -502,6 +510,14 @@ https://phoenixpwn.com/
 
 ```
 https://kok3shidoll.web.app/kok3shi9.html
+```
+
+# EverPwnage
+
+完美越狱。
+
+```
+https://github.com/LukeZGD/EverPwnage
 ```
 
 # wtfis

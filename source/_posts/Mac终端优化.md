@@ -234,6 +234,29 @@ brew upgrade
 
 Python的图形化界面依赖。
 
+### 操作技巧
+
+#### 安装被disable的包
+
+执行以下命令。
+
+```
+brew tap homebrew/core --force
+brew edit [需要安装的包]
+```
+
+在打开的编辑器中，去除类似以下内容的行。
+
+```
+disable! date: "2022-07-31", because: :unmaintained
+```
+
+保存后用以下命令安装即可。
+
+```
+HOMEBREW_NO_INSTALL_FROM_API=1 brew install [需要安装的包]
+```
+
 ### 常见问题
 
 #### brew install xxx 404
@@ -966,4 +989,10 @@ https://segmentfault.com/a/1190000022813972
 
 ```
 https://brew.idayer.com/
+```
+
+## Can you install disabled Homebrew packages?
+
+```
+https://stackoverflow.com/questions/73586208/can-you-install-disabled-homebrew-packages/73595534
 ```

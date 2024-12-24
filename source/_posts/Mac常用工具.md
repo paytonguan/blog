@@ -258,6 +258,12 @@ https://vox.rocks/mac-music-player/download
 
 # 其它
 
+## Parallels Desktop
+
+```
+https://gitee.com/cssec/ParallelsDesktopCrack
+```
+
 ## Touchbar Pet
 
 Touchbar养宠物。

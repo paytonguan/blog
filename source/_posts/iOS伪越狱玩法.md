@@ -106,7 +106,25 @@ https://github.com/opa334/TrollStore
 
 完成后，将需要安装的IPA分享到TrollStore即可安装。
 
+可使用以下项目对Trollstore进行汉化。
+
+```
+https://github.com/sbwml/TrollStore_zh_Hans
+```
+
 ### 操作技巧
+
+#### 屏蔽系统更新
+
+用Filza打开/usr/bin/vm_stat，单击文件运行，键盘切换为英文，长按空白界面粘贴以下指令并运行即可。
+
+```
+# 禁止更新
+rm -rf /var/MobileSoftwareUpdate/MobileAsset/AssetsV2/* && chflags schg,schange,simmutable /var/MobileSoftwareUpdate/MobileAsset/AssetsV2
+
+# 恢复更新
+chflags noschg,noschange,nosimmutable /var/MobileSoftwareUpdate/MobileAsset/AssetsV2
+```
 
 #### 清理手机占用空间
 
@@ -123,6 +141,27 @@ https://esign.yyyue.xyz/
 ```
 
 通过修改标识符，可实现双开。通过移除库，可能可以去除广告弹窗，注意修改完后选择`仅修改配置，不签名`。
+
+### TrollFools
+
+可往App注入插件。
+
+#### 可用插件
+
+```
+# 插件库
+https://www.123pan.com/s/vgn0Vv-ZTaFv.html
+https://pan.quark.cn/s/4d23a616c1b2
+
+# Lucky Speeder，游戏或广告加速
+https://github.com/kekeimiku/LuckySpeeder
+
+# DisableAccelerometer，禁用加速度传感器
+https://github.com/DevelopCubeLab/DisableAccelerometer
+
+# ShakeShield，屏蔽加速度计
+https://github.com/huami1314/ShakeShield
+```
 
 ## MacDirtyCow
 
@@ -189,6 +228,9 @@ https://raw.githubusercontent.com/tyler10290/MisakaRepoBackup/main/repo.json
 https://gist.githubusercontent.com/c22dev/af8dd3a760330eb31da5f8751af1b487/raw/6eb744fabc6eb0eb3352ce41c9a08ce5c38c4e6a/index.json
 https://dobabaophuc1706.github.io/repo/
 https://puck.roeegh.com/repo.json
+https://www.appfair.net/fairapps-ios.json
+https://repo.starfiles.co/
+https://raw.githubusercontent.com/swaggyP36000/TrollStore-IPAs/main/apps.json
 ```
 
 # Cowabunga/Cluckabunga
@@ -573,6 +615,7 @@ https://github.com/sourcelocation/TrollTools/releases
 # 普通
 https://pan.baidu.com/s/1Ygj6RpzIFQYn0aGzGB5nFg?pwd=9nns（提取码 / 9nns）
 https://www.123pan.com/s/vgn0Vv-5J3Fv
+https://www.123pan.com/s/vgn0Vv-jEaFv.html
 https://havoc.app/
 
 # 锁屏密码美化
@@ -650,6 +693,11 @@ https://github.com/mineek/dirtycowapp
 
 # FileManager
 https://github.com/mineek/FileManager
+
+# CyMusic，音乐软件
+https://github.com/gyc-12/music-player-master
+# 音源
+https://www.123684.com/s/vgn0Vv-a8MFv
 ```
 
 ## Trollstore专用
@@ -761,6 +809,15 @@ https://github.com/SmileZXLee/IpaDownloadTool
 https://github.com/canxin121/app_rhyme
 # 音源
 https://github.com/hhhackor/AppRhymeApi/raw/main/custom_api.evc
+
+# Blossom，用视频作为壁纸
+https://github.com/inyourwalls/Blossom
+
+# AnimationSpeed，动画加速
+https://www.123865.com/s/vgn0Vv-IowFv
+
+# RebootTools，一键重启
+https://github.com/DevelopCubeLab/RebootTools
 ```
 
 ## KFD专用
@@ -1009,4 +1066,46 @@ https://mp.weixin.qq.com/s/yGbrTzI_NejCerf0KrJeKQ
 
 ```
 https://mp.weixin.qq.com/s/seEwRkgkCC77_PaICdqrlg
+```
+
+## 新工具，Blossom ！
+
+```
+https://mp.weixin.qq.com/s/HhRDXervYkIAVXZPn0UdMw
+```
+
+## 让 iPhone 再战三年！
+
+```
+https://mp.weixin.qq.com/s/5ycNjO5_4zHZlwheR8bVbA
+```
+
+## 新玩法，加速
+
+```
+https://mp.weixin.qq.com/s/uO_QLNaMm9dR90DCkHq0Eg
+```
+
+## 一键重启 ！
+
+```
+https://mp.weixin.qq.com/s/_funZkt1EJfJj6z_XdeRDQ
+```
+
+## 禁止摇一摇！
+
+```
+https://mp.weixin.qq.com/s/m4dxYgTWV8Olml-QUgYCsw
+```
+
+## 汉化，简体中文
+
+```
+https://mp.weixin.qq.com/s/b3zLL1IIxIPmJ4YWFVMO4w
+```
+
+## iOS 系统，音乐，速度
+
+```
+https://mp.weixin.qq.com/s/s7gMo2w-0f0t53JT7_skyw
 ```

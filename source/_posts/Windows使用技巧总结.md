@@ -17,6 +17,13 @@ Windows相关技巧。
 ```
 Office 365 E5 账号申请及永久续期教程
 https://logi.im/script/permanently-keeping-an-office-e5-account.html
+
+Windows Subsystem for Android
+https://gist.github.com/nufeng1999/9ffb42044bc9b239c89180684819cabe
+https://mp.weixin.qq.com/s/uxTyovtZH1rASeNmZhqaLw
+
+Windows Server 2003 (NT 5.2.3790.0) build guide
+https://rentry.co/build-win2k3#additional-info
 ```
 
 # 系统技巧
@@ -708,6 +715,10 @@ https://zhutix.com/tag/tubiao/
 
 如果仍然不行，则点击安全-添加-高级-立即查找，然后一路确定即可。
 
+## 网站PING不通但能访问
+
+有可能为该网站禁用了ICMP回应或者开启了ICMP过滤。
+
 ## 蓝屏
 
 一般由硬件的驱动与软件程序的不兼容造成程序的冲突而引起，或主机内部系统程序造成硬件执行异常。
@@ -721,6 +732,12 @@ copy C:\windows\system32\config\RegBack\* C:\windows\system32\config
 ```
 
 # 参考教程
+
+## Windows环境下的安装gcc(c语言环境)
+
+```
+https://www.cnblogs.com/fps2tao/p/11539712.html
+```
 
 ## 安装好电驴插件后，怎么用来下ED2K
 
@@ -807,3 +824,10 @@ https://51.ruyo.net/4780.html
 ```
 https://gist.github.com/nufeng1999/9ffb42044bc9b239c89180684819cabe
 ```
+
+## 为什么有些网站PING不通但又能访问.
+
+```
+https://www.cnblogs.com/kunlunmountain/p/5945756.html
+```
+

@@ -16,6 +16,9 @@ iOS越狱指南。
 # TODOS
 
 ```
+iOS越狱教程-内存基址修改器的神奇之处(十三)
+https://mp.weixin.qq.com/s/IY3t96fbzfTybupXzuY5uA
+
 https://ios.cfw.guide/using-palen1x/
 
 
@@ -681,6 +684,24 @@ F32搜0.0025，全部改99即可。
 游戏中需要关闭辅助瞄准。
 
 i64搜4816377120，联合i64搜3212836864，修改为4811533255104790528即可。
+
+# 系统多开
+
+旧系统可使用coolbooter。
+
+```
+https://coolbooter.com/
+```
+
+coolbooter需要用1.5版本。若使用socket越狱，则需要重签app以获取权限。
+
+使用前先安装newterm2和container-resign，然后打开newterm2并输入以下命令。完成后打开coolbooter即可。
+
+```
+# 密码alpine
+su
+container-resign /Applications/coolbooter.app/coolbooter
+```
 
 # 建立SSH连接
 

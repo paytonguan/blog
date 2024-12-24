@@ -382,12 +382,21 @@ https://github.com/LSPosed/LSPatch
 https://github.com/WindySha/Xpatch
 ```
 
-### 模块使用
+### 模块
 
 在下载页面即可下载模块。也可通过以下网站下载。
 
 ```
 https://repo.xposed.info/module-overview
+```
+
+一些模块如下。
+
+```
+# 去广告
+https://repo.xposed.info/module/tw.fatminmin.xposed.minminguard
+https://www.coolapk.com/apk/com.dahuo.sunflower.xp.none 
+https://repo.xposed.info/module/com.gy.xposed.skip
 ```
 
 ## 自动化操作

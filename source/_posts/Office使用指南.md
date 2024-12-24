@@ -21,10 +21,16 @@ http://www.wordlm.com/
 
 # 下载
 
-可通过Office Tool。
+Windows可通过Office Tool。
 
 ```
 https://otp.landian.vip/
+```
+
+Mac可通过以下链接下载。
+
+```
+https://github.com/alsyundawy/Microsoft-Office-For-MacOS
 ```
 
 # 激活

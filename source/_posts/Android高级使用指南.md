@@ -1063,7 +1063,11 @@ https://samsungfirmware.net/samsung-galaxy-j3-pro-2017-sm-j3300-repair-firmware/
 
 ### 刷入
 
-三星需要专用的线刷工具Odin，下载链接如下。
+三星需要专用的线刷工具。
+
+#### Windows
+
+对于Windows，需要使用Odin，下载链接如下。
 
 ```
 https://odindownload.com/
@@ -1103,6 +1107,22 @@ https://samsungusbdriver.com/
 
 Odin通过名称识别该包需要刷入的分区，因此tar包中需要刷入到boot分区的必须命名为boot.img，刷入到recovery分区的必须命名为recovery.img，否则刷入将出错。
 </details>
+
+#### Mac
+
+对于Mac，需使用Heimdall。下载链接如下。
+
+```
+https://git.sr.ht/~grimler/Heimdall
+https://wiki.lineageos.org/devices/ks01lte/install/#preparing-for-installation
+https://blob.lineageos.org/downloads/heimdall/Heimdall-macOS-master-012220.dmg
+```
+
+使用示例如下。
+
+```
+heimdall flash --VBMETA vbmeta.img --RECOVERY recovery.img --no-reboot
+```
 
 ### 参见问题
 
@@ -1372,4 +1392,10 @@ https://www.jianshu.com/p/88066f6c12b3
 ```
 https://www.twblogs.net/a/5be370f62b717720b51d82d1
 https://www.jianshu.com/p/912d61c4a184
+```
+
+## Odin and Heimdall: Free Your Samsung Android
+
+```
+https://wrily.foad.me.uk/odin-and-heimdall-free-your-samsung-android
 ```
