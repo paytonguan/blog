@@ -18,6 +18,9 @@ iOS常用软件。
 ```
 # 零基础入门 JSBox
 https://mp.weixin.qq.com/s/yEL6PGNkWqtJGTkstlce9Q
+
+# 软件库
+https://appdb.to/
 ```
 
 # Scriptable
