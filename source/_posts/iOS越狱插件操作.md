@@ -115,6 +115,7 @@ https://repo.chariz.com/
 | QuitAll         | 一键清理后台               |
 | CarBridge       | 让第三方APP运行于CarPlay   |
 | EmoZoom         | 调整表情符号大小           |
+| Cask 3          | 菜单翻动炫酷动画           |
 
 ## Ginsu作者源
 
@@ -887,9 +888,10 @@ https://34306.github.io/
 https://pkgfiles.github.io/
 ```
 
-|         插件        |     作用     |
-|---------------------|--------------|
-| MobileMeadow Reborn | 添加草地效果 |
+|         插件        |             作用             |
+|---------------------|------------------------------|
+| MobileMeadow Reborn | 添加草地效果                 |
+| CanvasSync          | 将正在播放的音乐封面作为壁纸 |
 
 ## c1d3r源
 
@@ -3104,4 +3106,16 @@ https://mp.weixin.qq.com/s/-WOtLpvIBPNDX00paj-ITg
 
 ```
 https://mp.weixin.qq.com/s/s6wCAwXLAfLygl_d7lsXHA
+```
+
+## 炫酷 ！
+
+```
+https://mp.weixin.qq.com/s/kBqxfzGUEp3PwBdAfP2DgQ
+```
+
+## 音乐壁纸 ！
+
+```
+https://mp.weixin.qq.com/s/tJ5hwTqtJiY8_T2zaAtZUA
 ```

@@ -575,6 +575,10 @@ https://github.com/wh1te4ever/kfund
 # 支持iOS 10-10.3.2，11-11.1.2
 # 非完整越狱
 https://github.com/ihorlaitan/houdini-public
+
+# Lyncis
+# 支持iOS 7.1.x，32位设备，完美越狱
+https://github.com/staturnzz/lyncis
 ```
 
 # 常见问题
@@ -835,4 +839,10 @@ https://mp.weixin.qq.com/s/zf3cJqinVIE4G8w7lJQLXQ
 
 ```
 https://mp.weixin.qq.com/s/dGvP2l4JwwkAMj-kevzoNw
+```
+
+## 一键完美越狱工具发布 ，无需电脑！
+
+```
+https://mp.weixin.qq.com/s/eH9j5pFAFpsgtX4WTUngLA
 ```

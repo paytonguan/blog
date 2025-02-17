@@ -818,6 +818,21 @@ https://www.123865.com/s/vgn0Vv-IowFv
 
 # RebootTools，一键重启
 https://github.com/DevelopCubeLab/RebootTools
+
+# ExtractApp，提取App
+https://github.com/DevelopCubeLab/ExtractApp
+
+# BatteryInfo，电池信息
+https://github.com/DevelopCubeLab/BatteryInfo
+
+# UiharuX Pro，App 快捷启动、跑马灯、灵动岛、雪花飘落、控制面板等
+https://github.com/straight-tamago/UiharuX
+
+# ClearFilzaResidue，清理Filza残留
+https://github.com/DevelopCubeLab/ClearFilzaResidue
+
+# MuffinStore Jailed，安装指定旧版应用
+https://github.com/mineek/MuffinStoreJailed-Public
 ```
 
 ## KFD专用
@@ -1108,4 +1123,28 @@ https://mp.weixin.qq.com/s/b3zLL1IIxIPmJ4YWFVMO4w
 
 ```
 https://mp.weixin.qq.com/s/s7gMo2w-0f0t53JT7_skyw
+```
+
+## 好东西！iOS 17.0 巨魔查电池，详细记录循环信息
+
+```
+https://mp.weixin.qq.com/s/fg6gnTBYJ8ktS6Id_aQpgQ
+```
+
+## 伪装，开启 CallKit！
+
+```
+https://mp.weixin.qq.com/s/Awu1ErsQi32UzNaLcpBUzA
+```
+
+## 清除残留 ！
+
+```
+https://mp.weixin.qq.com/s/wU_Tesa3OCZUMKWvK5WbRA
+```
+
+## 新工具，抢鲜
+
+```
+https://mp.weixin.qq.com/s/UFucgW1usFSvQX7BRJ0rZQ
 ```
