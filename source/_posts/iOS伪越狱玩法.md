@@ -163,6 +163,16 @@ https://github.com/DevelopCubeLab/DisableAccelerometer
 https://github.com/huami1314/ShakeShield
 ```
 
+### 半越狱
+
+```
+# Bootstrap
+https://github.com/roothide/Bootstrap
+
+# Serotonin
+https://github.com/SerotoninApp/Serotonin
+```
+
 ## MacDirtyCow
 
 MacDirtyCow利用CVE-2022-46689漏洞，支持iOS 14.0-15.7.1，16.0-16.1.2，建议15.0及以上系统使用。
@@ -197,6 +207,12 @@ https://github.com/Lrdsnow/SimpleKFD
 
 # PureKFD
 https://github.com/Lrdsnow/PureKFD
+
+# Picasso
+https://github.com/sourcelocation/Picasso-v3
+
+# TrollApps
+https://github.com/TheResonanceTeam/TrollApps
 ```
 
 ## 可用Repo
@@ -231,6 +247,35 @@ https://puck.roeegh.com/repo.json
 https://www.appfair.net/fairapps-ios.json
 https://repo.starfiles.co/
 https://raw.githubusercontent.com/swaggyP36000/TrollStore-IPAs/main/apps.json
+
+# TrollApps源
+https://raw.githubusercontent.com/burritosoftware/altstore/refs/heads/master/channels/personalchannel.json
+https://raw.githubusercontent.com/burritosoftware/altstore/refs/heads/master/channels/burritob.json
+https://quarksources.github.io/dist/altstore-complete.min.json
+https://appmarket.tech/altstore.json
+https://raw.githubusercontent.com/burritosoftware/altstore/refs/heads/master/channels/burritosource.json
+https://ipa.cypwn.xyz/cypwn.json
+https://ipa.cypwn.xyz/cypwn_ts.json
+https://flyinghead.github.io/flycast-builds/altstore.json
+https://alts.lao.sb
+https://altstore.oatmealdome.me/
+https://theodyssey.dev/altstore/odysseysource.json
+https://raw.githubusercontent.com/vizunchik/AltStoreRus/master/apps.json
+https://pokemmo.com/altstore/
+https://provenance-emu.com/apps.json
+https://raw.githubusercontent.com/qnblackcat/AltStore/gh-pages/apps.json
+https://quarksources.github.io/dist/quantumsource.min.json
+https://quarksources.github.io/dist/quantumsource%2B%2B.min.json
+https://quarksources.github.io/quarksource-cracked.json
+https://randomblock1.com/altstore/apps.json
+https://repo.starfiles.co
+https://taurine.app/altstore/taurinestore.json
+https://alt.getutm.app
+https://wuxu1.github.io/wuxu-complete.json
+https://wuxu1.github.io/wuxu-complete-plus.json
+https://ish.app/altstore.json
+https://raw.githubusercontent.com/swaggyP36000/TrollStore-IPAs/main/apps.json
+https://esign.yyyue.xyz/app.json
 ```
 
 # Cowabunga/Cluckabunga
@@ -698,6 +743,36 @@ https://github.com/mineek/FileManager
 https://github.com/gyc-12/music-player-master
 # 音源
 https://www.123684.com/s/vgn0Vv-a8MFv
+
+# InfusePlus
+https://github.com/dayanch96/InfusePlus
+
+# Feather，在手机上签名和安装IPA
+https://github.com/khcrysalis/Feather
+
+# UTM，虚拟机
+https://github.com/utmapp/UTM
+
+# PojavLauncher，Minecraft Java版启动器
+https://github.com/PojavLauncherTeam/PojavLauncher_iOS
+
+# Hiddify，网络代理工具
+https://github.com/hiddify/hiddify-app
+
+# Ignited，游戏模拟器
+https://github.com/LitRitt/Ignited
+
+# Cardio，修改Apple Pay图标
+https://github.com/cisc0disco/Cardio
+
+# Azula，将dylib注入IPA
+https://github.com/Paisseon/Azula
+
+# CarTube，CarPlay上运行YouTube
+https://github.com/Avangelista/CarTube
+
+# Aemulo，读取、写入和模拟NFC
+https://github.com/Aemulo/Release
 ```
 
 ## Trollstore专用
@@ -708,6 +783,8 @@ https://www.123684.com/s/vgn0Vv-a8MFv
 https://github.com/Peng1029/trollrepo
 https://ipa.cypwn.xyz/
 # 其它
+https://github.com/34306/TrollStoreiPA
+https://github.com/swaggyP36000/TrollStore-IPAs
 https://ipa.store/
 https://pan.ios98.com/
 https://pan.qxnav.com/
@@ -720,7 +797,7 @@ https://github.com/Lessica/TrollSpeed
 # TrollRecorder，通话录音工具
 https://github.com/Lessica/TrollRecorder
 
-# 爱啪思道，App Store辅助工具
+# Asspp，App Store辅助工具
 https://github.com/Lakr233/Asspp
 
 # DowngradeApp
@@ -802,7 +879,7 @@ https://github.com/Skittyblock/WallpaperSetter
 # CAPerfHUD，浮窗显示手机性能
 https://github.com/khanhduytran0/CAPerfHUD
 
-# IPA提取器
+# IpaDownloadTool，IPA提取器
 https://github.com/SmileZXLee/IpaDownloadTool
 
 # AppRhyme，音乐播放器
@@ -825,14 +902,75 @@ https://github.com/DevelopCubeLab/ExtractApp
 # BatteryInfo，电池信息
 https://github.com/DevelopCubeLab/BatteryInfo
 
-# UiharuX Pro，App 快捷启动、跑马灯、灵动岛、雪花飘落、控制面板等
+# UiharuX Pro，App快捷启动、跑马灯、灵动岛、雪花飘落、控制面板等
 https://github.com/straight-tamago/UiharuX
 
 # ClearFilzaResidue，清理Filza残留
 https://github.com/DevelopCubeLab/ClearFilzaResidue
 
-# MuffinStore Jailed，安装指定旧版应用
+# MuffinStore，安装指定旧版应用
+https://github.com/mineek/MuffinStore
 https://github.com/mineek/MuffinStoreJailed-Public
+
+# TimeBomb 2，按需触发自旋锁恐慌
+https://github.com/opa334/TimeBomb2
+
+# WiFiList，WiFi密码查看器
+https://www.123865.com/s/vgn0Vv-nBgFv
+
+# 分屏
+https://www.123912.com/s/ifH9-z2hy3
+
+# Write Now，写作助手
+https://github.com/OwnGoalStudio/WriteNow
+
+# Helium，状态栏小部件
+https://github.com/leminlimez/Helium
+
+# AnimationSpeed，动画加速
+https://github.com/DevelopCubeLab/AnimationSpeed
+
+# Reveil，系统安全分析工具
+https://github.com/Lessica/Reveil
+
+# InstaSpring，系统注销
+https://github.com/haxi0/InstaSpring
+
+# TrollLEDs，控制闪光灯
+https://github.com/PoomSmart/TrollLEDs
+
+# TrollDecryptor，应用砸壳
+https://github.com/wh1te4ever/TrollDecryptor
+
+# Geranium，守护进程管理器、清理器、监控器
+https://github.com/c22dev/Geranium
+
+# ChargeLimiter，电池保护
+https://github.com/lich4/ChargeLimiter
+
+# Zomigle，解除对watchOS兼容性的限制
+https://github.com/HAHALOSAH/Zomigle
+
+# AppIndex，应用程序管理器
+https://github.com/NSAntoine/AppIndex
+
+# WDBRemoveThreeAppLimit，移除自签应用只能安装三个的限制
+https://github.com/zhuowei/WDBRemoveThreeAppLimit
+
+# CAPerfHUDSwift，设备状态显示
+https://github.com/BomberFish/CAPerfHUDSwift
+
+# batteried，电池状态上放置图标
+https://github.com/34306/batteried
+
+# SuperIcons，修改应用图标
+https://github.com/huami1314/SuperIcons
+
+# TrollAppDuplicator，应用复制
+https://github.com/BreakOnCrash/TrollAppDuplicator
+
+# LiveContainer，不安装App即可运行它
+https://github.com/khanhduytran0/LiveContainer
 ```
 
 ## KFD专用
@@ -1147,4 +1285,21 @@ https://mp.weixin.qq.com/s/wU_Tesa3OCZUMKWvK5WbRA
 
 ```
 https://mp.weixin.qq.com/s/UFucgW1usFSvQX7BRJ0rZQ
+```
+## opa334 发布新工具：时间炸弹 ！
+
+```
+https://mp.weixin.qq.com/s/DGwz8udg4EQ-gahRatyopg
+```
+
+## UI 速度，让 iPhone 再战三年！
+
+```
+https://mp.weixin.qq.com/s/4ZmRmn9M9fVpPMCS2PI69g
+```
+
+## 好东西！iOS 17.0 新的巨魔分屏工具，稳定性超强
+
+```
+https://mp.weixin.qq.com/s/iNRzYjSzFCJkAKDRV3hdOg
 ```

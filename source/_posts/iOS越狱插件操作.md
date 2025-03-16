@@ -67,11 +67,12 @@ https://jailrepo.initnil.com/
 http://apt.htv123.com/
 ```
 
-|   插件   |          作用          |
-|----------|------------------------|
-| xybp888  | 电话助手               |
-| 魔术师   | 一键锁屏               |
-| 灵动通知 | 使用灵动岛展示系统通知 |
+|          插件         |           作用           |
+|-----------------------|--------------------------|
+| xybp888               | 电话助手                 |
+| 魔术师                | 一键锁屏                 |
+| 灵动通知              | 使用灵动岛展示系统通知   |
+| No Apple MobileRepair | 禁止设置页面显示维修记录 |
 
 ## opa334作者源
 
@@ -116,6 +117,7 @@ https://repo.chariz.com/
 | CarBridge       | 让第三方APP运行于CarPlay   |
 | EmoZoom         | 调整表情符号大小           |
 | Cask 3          | 菜单翻动炫酷动画           |
+| Reboot Helper   | 定时执行注销、重启等操作   |
 
 ## Ginsu作者源
 
@@ -288,6 +290,7 @@ https://havoc.app/
 | HomeGesture              | 老机型实现iPhone X手势界面操作                   |
 | Sanjeh                   | 花式电池弹出窗口                                 |
 | SquidExtender            | 键盘扩展                                         |
+| CalculatorHistory        | 计算器显示计算历史记录                           |
 
 ## Limneos源
 
@@ -622,6 +625,7 @@ https://xiangfeidexiaohuo.github.io/
 |   插件   |        作用        |
 |----------|--------------------|
 | CCLess++ | 控制中心模块大集合 |
+| GoodWiFi | 查看更多WiFi信息   |
 
 ## 老牌猫源
 
@@ -716,13 +720,14 @@ https://cydia.nixuge.me/
 https://lclrc.github.io/repo/
 ```
 
-|      插件      |            作用           |
-|----------------|---------------------------|
-| LowPowersleep  | 锁屏自动低电量            |
-| DockX          | 在键盘底部添加快捷按钮    |
-| VPNIndicator   | 适合全面屏使用的VPN指示器 |
-| StatusBarSpeed | 状态栏网速                |
-| RecordAnywhere | 锁屏录屏                  |
+|      插件      |                 作用                 |
+|----------------|--------------------------------------|
+| LowPowersleep  | 锁屏自动低电量                       |
+| DockX          | 在键盘底部添加快捷按钮               |
+| VPNIndicator   | 适合全面屏使用的VPN指示器            |
+| StatusBarSpeed | 状态栏网速                           |
+| RecordAnywhere | 锁屏录屏                             |
+| CCCalc         | 控制中心长按计算器模块变成真正计算器 |
 
 ## Brend0n源
 
@@ -892,6 +897,7 @@ https://pkgfiles.github.io/
 |---------------------|------------------------------|
 | MobileMeadow Reborn | 添加草地效果                 |
 | CanvasSync          | 将正在播放的音乐封面作为壁纸 |
+| Pokébox Reborn      | 神奇宝贝风格的通知           |
 
 ## c1d3r源
 
@@ -1532,6 +1538,27 @@ https://julio.hackyouriphone.org/
 |--------|---------------------------|
 | Cydown | 免费下载Cydia里的收费插件 |
 
+## 真皮源
+
+```
+https://rootless.zq666.eu.org/
+```
+
+|     插件    |       作用       |
+|-------------|------------------|
+| Hello Speed | 调节系统动画速度 |
+
+
+## Deno源
+
+```
+https://6gr8.github.io/deno.io/
+```
+
+|    插件    |             作用             |
+|------------|------------------------------|
+| LockTouchX | 为应用添加指纹、面容身份验证 |
+
 ## Ginsu源
 
 ```
@@ -1996,6 +2023,12 @@ https://www.123684.com/s/vgn0Vv-fZMFv
 
 # ReplyActions，快速回复
 https://www.123684.com/s/vgn0Vv-s9wFv
+
+# PowerSettings，在设置App中添加电源选项
+https://github.com/NightwindDev/PowerSettings
+
+# SettingsWiFiPassword，查看已连接过的WiFi密码
+https://github.com/NightwindDev/SettingsWiFiPassword
 
 # Deb备份
 https://pan.baidu.com/s/18Kr9bvLt6_7X2zkjJgXVxg?pwd=i2r9
@@ -3118,4 +3151,46 @@ https://mp.weixin.qq.com/s/kBqxfzGUEp3PwBdAfP2DgQ
 
 ```
 https://mp.weixin.qq.com/s/tJ5hwTqtJiY8_T2zaAtZUA
+```
+
+## LockTouchX，无需升级 iOS 18 系统
+
+```
+https://mp.weixin.qq.com/s/lgX4dweSn3xTgiq7VOVlKw
+```
+
+## 计算，增强！
+
+```
+https://mp.weixin.qq.com/s/TXEfw1jFycCiajoI0aanaA
+```
+
+## Pokébox 重生
+
+```
+https://mp.weixin.qq.com/s/dJJJ08kmAwNvinLWmw5jvw
+```
+
+## 去除设置红点，去除未知部件！
+
+```
+https://mp.weixin.qq.com/s/n5wZeVnjYgvX7IUMqA5kcg
+```
+
+## PowerSettings !
+
+```
+https://mp.weixin.qq.com/s/Ad8mBzyxR9rZI5LEfoA7xQ
+```
+
+## WiFi 密码！
+
+```
+https://mp.weixin.qq.com/s/8Sa7V_YCwto2aWr8u9mFgg
+```
+
+## 定时维护！
+
+```
+https://mp.weixin.qq.com/s/pve2_k_1UJuH3ix__jWEPw
 ```
