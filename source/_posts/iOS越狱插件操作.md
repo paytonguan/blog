@@ -1883,6 +1883,9 @@ https://jlippold.github.io/tweakCompatible/
 部分可直接下载的插件如下。
 
 ```
+# AppStore Troller，在AppStore获取/购买一个高于当前系统版本的App
+https://github.com/mineek/appstoretroller
+
 # PermasigneriOS，iOS14.0-15.4.1生成永久版绕过签名App
 https://github.com/powenn/permasigneriOS
 
@@ -3193,4 +3196,10 @@ https://mp.weixin.qq.com/s/8Sa7V_YCwto2aWr8u9mFgg
 
 ```
 https://mp.weixin.qq.com/s/pve2_k_1UJuH3ix__jWEPw
+```
+
+## 神器！低系统，安装要求高系统的应用！
+
+```
+https://mp.weixin.qq.com/s/yoRmPFgNC2wk2xohGf4jvA
 ```

@@ -288,6 +288,14 @@ sudo chmod +x rera1n.sh
 https://github.com/MatthewPierson/Vieux
 ```
 
+## turdus merula
+
+支持A9(X)和A10(X)设备。
+
+```
+https://sep.lol/
+```
+
 # 参考教程
 
 ## 利用Futurerestore进行iOS13的升、降级、平刷
@@ -333,3 +341,9 @@ https://mp.weixin.qq.com/s/h5EqUG9xxo-_nz9K5b9F-w
 https://mp.weixin.qq.com/s/_faR7J2tvxUunr1ZijdIig
 ```
 
+
+## iOS 系统，完美降级工具，终于发布！
+
+```
+https://mp.weixin.qq.com/s/1hq7Rlak8SPAUYak4vz1AA
+```
