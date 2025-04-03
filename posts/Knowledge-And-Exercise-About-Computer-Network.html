@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="计算机网络相关知识与习题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络相关知识与习题">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/Knowledge-And-Exercise-About-Computer-Network.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="计算机网络相关知识与习题。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/Knowledge-And-Exercise-About-Computer-Network/topic.jpg">
+<meta property="article:published_time" content="2024-12-18T13:40:57.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.590Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/Knowledge-And-Exercise-About-Computer-Network/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/Knowledge-And-Exercise-About-Computer-Network.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>计算机网络相关知识与习题 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/Knowledge-And-Exercise-About-Computer-Network.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          计算机网络相关知识与习题
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-12-18 21:40:57" itemprop="dateCreated datePublished" datetime="2024-12-18T21:40:57+08:00">2024-12-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>32k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>29 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/Knowledge-And-Exercise-About-Computer-Network/topic.jpg"></p>
+<p>计算机网络相关知识与习题。</p>
+<span id="more"></span>
+
+<h1 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 数字证书</span><br><span class="line">https://hoochanlon.github.io/fq-book/#/abc/dc_zhenshu</span><br><span class="line">https://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html</span><br><span class="line"></span><br><span class="line"># 使用MQTT客户端连接阿里云MQTT服务器</span><br><span class="line">https://yq.aliyun.com/articles/592279</span><br><span class="line"></span><br><span class="line"># 使用TinyLink完成MQTT通信</span><br><span class="line">http://linklab.tinylink.cn/static/tutorial/tutorial05.html</span><br><span class="line"></span><br><span class="line"># 阿里云IoT Studio物模型入门</span><br><span class="line">http://linklab.tinylink.cn/static/tutorial/tutorial06.html</span><br></pre></td></tr></table></figure>
+
+<h1 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h1><h2 id="GNS3"><a href="#GNS3" class="headerlink" title="GNS3"></a>GNS3</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 安装和使用</span><br><span class="line">https://github.com/GNS3/gns3-gui/releases</span><br><span class="line">https://github.com/zhang0peter/gns3-intro/</span><br><span class="line">https://blog.csdn.net/zhangpeterx/article/details/86407065</span><br><span class="line"></span><br><span class="line"># RIP配置</span><br><span class="line">https://jingyan.baidu.com/article/00a07f38043ff782d028dc23.html</span><br><span class="line">https://jingyan.baidu.com/article/a65957f4ec38d224e77f9b4d.html</span><br><span class="line">https://zhidao.baidu.com/question/2051649583868305907.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="简单Socket连接"><a href="#简单Socket连接" class="headerlink" title="简单Socket连接"></a>简单Socket连接</h2><h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">#ifndef _CRT_SECURE_NO_WARNINGS</span><br><span class="line">#define _CRT_SECURE_NO_WARNINGS</span><br><span class="line">#endif</span><br><span class="line"> </span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;string.h&gt;</span><br><span class="line">#include &lt;errno.h&gt;</span><br><span class="line">#include &lt;sys/types.h&gt;</span><br><span class="line">#include &lt;winsock2.h&gt;</span><br><span class="line"> </span><br><span class="line">#pragma  comment(lib,&quot;ws2_32.lib&quot;)</span><br><span class="line"> </span><br><span class="line">#define MAXLINE 4096</span><br><span class="line"> </span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	SOCKET listenfd;</span><br><span class="line">	int connfd;</span><br><span class="line">	struct sockaddr_in servaddr;</span><br><span class="line">	char buff[MAXLINE + 1];</span><br><span class="line">	int n;</span><br><span class="line"> </span><br><span class="line">	// windows 下需要初始化socket</span><br><span class="line">	WORD sockVersion = MAKEWORD(2, 2);</span><br><span class="line">	WSADATA wsaData;</span><br><span class="line">	if (WSAStartup(sockVersion, &amp;wsaData) != 0)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;init socket error: %s(error: %d)\n&quot;, strerror(errno), errno);</span><br><span class="line">		system(&quot;pause&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	// end socket初始化</span><br><span class="line"> </span><br><span class="line">	if ((listenfd = socket(AF_INET, SOCK_STREAM, 0)) == -1)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;create socket error: %s(error: %d)\n&quot;, strerror(errno), errno);</span><br><span class="line">		system(&quot;pause&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	memset(&amp;servaddr, 0, sizeof(servaddr));</span><br><span class="line">	servaddr.sin_family = AF_INET;</span><br><span class="line">	servaddr.sin_addr.s_addr = htonl(INADDR_ANY);</span><br><span class="line">	servaddr.sin_port = htons(6666);</span><br><span class="line"> </span><br><span class="line">	if (bind(listenfd, (struct sockaddr*)&amp;servaddr, sizeof(servaddr)) == -1)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;bind socket error: %s(errno: %d)\n&quot;, strerror(errno), errno);</span><br><span class="line">		system(&quot;pause&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	if (listen(listenfd, 10) == -1)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;listen socket error: %s(errno: %d)\n&quot;, strerror(errno), errno);</span><br><span class="line">		system(&quot;pause&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	printf(&quot;======waiting for client&#x27;s request======\n&quot;);</span><br><span class="line">	if ((connfd = accept(listenfd, NULL, NULL)) == -1)</span><br><span class="line">	&#123;</span><br><span class="line">			printf(&quot;accept socket error: %s(errno: %d)&quot;, strerror(errno), errno);</span><br><span class="line">			system(&quot;pause&quot;);</span><br><span class="line">			return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	// 接收消息</span><br><span class="line">	while (true)</span><br><span class="line">	&#123;</span><br><span class="line">		memset(buff, 0, sizeof(buff));</span><br><span class="line">		n = recv(connfd, buff, MAXLINE, 0);</span><br><span class="line">		buff[n] = &#x27;\0&#x27;;</span><br><span class="line">		printf(&quot;recv msg from client: %s\n&quot;, buff);</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	// 释放socket</span><br><span class="line">	closesocket(connfd);</span><br><span class="line">	closesocket(listenfd);</span><br><span class="line"> </span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">#ifndef _CRT_SECURE_NO_WARNINGS</span><br><span class="line">#define _CRT_SECURE_NO_WARNINGS</span><br><span class="line">#endif</span><br><span class="line"> </span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;string.h&gt;</span><br><span class="line">#include &lt;errno.h&gt;</span><br><span class="line">#include &lt;sys/types.h&gt;</span><br><span class="line">#include &lt;winsock2.h&gt;</span><br><span class="line">#include &lt;WS2tcpip.h&gt;</span><br><span class="line"> </span><br><span class="line">#pragma  comment(lib,&quot;ws2_32.lib&quot;)</span><br><span class="line"> </span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int    sockfd, n;</span><br><span class="line">	char   recvline[4096], sendline[4096];</span><br><span class="line">	struct sockaddr_in servaddr;</span><br><span class="line"> </span><br><span class="line">	WORD sockVersion = MAKEWORD(2, 2);</span><br><span class="line">	WSADATA wsaData;</span><br><span class="line">	if (WSAStartup(sockVersion, &amp;wsaData) != 0)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;init socket error: %s(error: %d)\n&quot;, strerror(errno), errno);</span><br><span class="line">		system(&quot;pause&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	printf(&quot;please enter service ipv4 address: &quot;);</span><br><span class="line">	char IPV4[20];</span><br><span class="line">	gets(IPV4);</span><br><span class="line"> </span><br><span class="line">	if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) &lt; 0)&#123;</span><br><span class="line">		printf(&quot;create socket error: %s(errno: %d)\n&quot;, strerror(errno), errno);</span><br><span class="line">		system(&quot;pause&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	memset(&amp;servaddr, 0, sizeof(servaddr));</span><br><span class="line">	servaddr.sin_family = AF_INET;</span><br><span class="line">	servaddr.sin_port = htons(6666);</span><br><span class="line"> </span><br><span class="line">	if (inet_pton(AF_INET, IPV4, &amp;servaddr.sin_addr) &lt;= 0)&#123;</span><br><span class="line">		printf(&quot;inet_pton error for %s\n&quot;, IPV4);</span><br><span class="line">		system(&quot;pause&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	if (connect(sockfd, (struct sockaddr*)&amp;servaddr, sizeof(servaddr)) &lt; 0)&#123;</span><br><span class="line">		printf(&quot;connect error: %s(errno: %d)\n&quot;, strerror(errno), errno);</span><br><span class="line">		system(&quot;pause&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	while (true)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;send msg to server: \n&quot;);</span><br><span class="line">		memset(sendline, 0, sizeof(sendline));</span><br><span class="line">		fgets(sendline, 4096, stdin);</span><br><span class="line">		if (send(sockfd, sendline, strlen(sendline), 0) &lt; 0)</span><br><span class="line">		&#123;</span><br><span class="line">			printf(&quot;send msg error: %s(errno: %d)\n&quot;, strerror(errno), errno);</span><br><span class="line">			system(&quot;pause&quot;);</span><br><span class="line">			return 0;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	closesocket(sockfd);</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="课本习题"><a href="#课本习题" class="headerlink" title="课本习题"></a>课本习题</h1><h2 id="【第一章】引言"><a href="#【第一章】引言" class="headerlink" title="【第一章】引言"></a>【第一章】引言</h2><hr>
+<p>Q:<br>Imagine that you have trained your St. Bernard, Bernie, to carry a box of three 8mm tapes instead of a flask of brandy. (When your disk fills up, you consider that an emergency.) These tapes each contain 7 gigabytes. The dog can travel to your side, wherever you may be, at 18 km&#x2F;hour. For what range of distances does Bernie have a higher data rate than a transmission line whose data rate (excluding overhead) is 150 Mbps?</p>
+<p>A:<br>7 * 1000 * 8 * 3 &#x2F; (d &#x2F; 5) &#x3D; 150<br>d &#x3D; 5600m</p>
+<hr>
+<p>Q:<br>An alternative to a LAN is simply a big timesharing system with terminals for all users. Give two advantages of a client-server system using a LAN.</p>
+<p>A:</p>
+<ol>
+<li>可以更好地利用网络资源，timesharing system容易造成资源浪费</li>
+<li>构建简单，客户机和服务机上各运行一个进程即可</li>
+</ol>
+<hr>
+<p>Q:<br>The performance of a client-server system is influenced by two network factors: the bandwidth of the network (how many bits&#x2F;sec it can transport) and the latency (how many seconds it takes for the first bit to get from the client to the server). Give an example of a network that exhibits high bandwidth and high latency. Then give an example of one with low bandwidth and low latency.</p>
+<p>A:<br>(1) 下载大型文件，建立连接需要很久，一旦建立下载很快<br>(2) 语音通话，不能有高延迟<br>A transcontinental fiber link might have many gigabits&#x2F;sec of bandwidth, but the latency will also be high due to the speed of light propagation over thousands of kilometers. In contrast, a 56-kbps modem calling a computer in the same building has low bandwidth and low latency.</p>
+<hr>
+<p>Q:<br>Besides bandwidth and latency, what other parameter is needed to give a good characterization of the quality of service offered by a network used for digitized voice traffic?</p>
+<p>A:<br>(1) 丢包率<br>(2) 安全性<br>(3) 断点传输<br>(4) 对语音通话而言，统一的传输时间也很重要</p>
+<hr>
+<p>Q:<br>A factor in the delay of a store-and-forward packet-switching system is how long it takes to store and forward a packet through a switch. If switching time is 10 μsec, is this likely to be a major factor in the response of a client-server system where the client is in New York and the server is in California? Assume the propagation speed in copper and fiber to be 2&#x2F;3 the speed of light in vacuum.</p>
+<p>A:<br>2000km &#x2F; 200000km&#x2F;s &#x3D; 10ms<br>It won’t be a major factor.</p>
+<hr>
+<p>Q:<br>A client-server system uses a satellite network, with the satellite at a height of 40,000 km. What is the best-case delay in response to a request?</p>
+<p>A:<br>40,000 * 2 &#x2F; 300000 &#x3D; 267ms</p>
+<hr>
+<p>Q:<br>In the future, when everyone has a home terminal connected to a computer network, instant public referendums on important pending legislation will become possible. Ultimately, existing legislatures could be eliminated, to let the will of the people be expressed directly. The positive aspects of such a direct democracy are fairly obvious; discuss some of the negative aspects.</p>
+<p>A:<br>安全性存在问题</p>
+<hr>
+<p>Q:<br>A collection of five routers is to be connected in a point-to-point subnet. Between each pair of routers, the designers may put a high-speed line, a medium-speed line, a low-speed line, or no line. If it takes 100 ms of computer time to generate and inspect each topology, how long will it take to inspect all of them?</p>
+<p>A:<br>4 ^ (4 + 3 + 2 + 1) * 100ms &#x3D; more than one day</p>
+<hr>
+<p>Q:<br>A disadvantage of a broadcast subnet is the capacity wasted when multiple hosts attempt to access the channel at the same time. As a simplistic example, suppose that time is divided into discrete slots, with each of the n hosts attempting to use the channel with probability p during each slot. What fraction of the slots are wasted due to collisions?</p>
+<p>A:<br>P &#x3D; 1 - n * p * (1 - p) ^ (n - 1) - p ^ n</p>
+<hr>
+<p>Q:<br>What are two reasons for using layered protocols?</p>
+<p>A:<br>(1) 使得层与层之间不会影响，一层内的协议更新不会使得整个网络连接发生变化<br>(2) 把大的任务分细，明确各层提供的服务</p>
+<hr>
+<p>Q:<br>The president of the Specialty Paint Corp. gets the idea to work with a local beer brewer to produce an invisible beer can (as an anti-litter measure). The president tells her legal department to look into it, and they in turn ask engineering for help. As a result, the chief engineer calls his counterpart at the other company to discuss the technical aspects of the project. The engineers then report back to their respective legal departments, which then confer by telephone to arrange the legal aspects. Finally, the two corporate presidents discuss the financial side of the deal. Is this an example of a multilayer protocol in the sense of the OSI model?</p>
+<p>A:<br>除了第一层（最底层，这里是engineer），高层之间不能有直接通信。</p>
+<hr>
+<p>Q:<br>What is the principal difference between connectionless communication and connection-oriented communication?</p>
+<p>A:<br>面向连接的服务是先建立连接再通信。无连接服务是在传输时候带上目标地址，然后交由网络去通信。</p>
+<hr>
+<p>Q:<br>Two networks each provide reliable connection-oriented service. One of them offers a reliable byte stream and the other offers a reliable message stream. Are these identical? If so, why is the distinction made? If not, give an example of how they differ.</p>
+<p>A:<br>message的话每条信息有确定边界，而byte stream则没有确定边界。</p>
+<hr>
+<p>Q:<br>What does ‘’negotiation’’ mean when discussing network protocols? Give an example.</p>
+<p>A:<br>协商就是建立一个双方接受的通信规则。</p>
+<hr>
+<p>Q:<br>Which of the OSI layers handles each of the following: (a) Dividing the transmitted bit stream into frames. (b) Determining which route through the subnet to use.</p>
+<p>A:<br>Data link layer and Network layer<br>数据是在data link层被划分为帧（frame）的</p>
+<hr>
+<p>Q:<br>If the unit exchanged at the data link level is called a frame and the unit exchanged at the network level is called a packet, do frames encapsulate packets or do packets encapsulate frames? Explain your answer.</p>
+<p>A:<br>高层的应该被封到低层里去。</p>
+<hr>
+<p>Q:<br>A system has an n-layer protocol hierarchy. Applications generate messages of length M bytes. At each of the layers, an h-byte header is added. What fraction of the network bandwidth is filled with headers?</p>
+<p>A:<br>hn &#x2F; (M + hn)</p>
+<hr>
+<p>Q:<br>List two ways in which the OSI reference model and the TCP&#x2F;IP reference model are the same. Now list two ways in which they differ.</p>
+<p>A:<br>OSI:<br>Application<br>Representation<br>Session<br>Transmission<br>Network<br>Data link<br>Physical</p>
+<p>TCP&#x2F;IP:<br>Application: HTTP, SMTP, RTP, DNS<br>Transmission: TCP, UDP<br>internet: IP (Internet Protocal), ICMP<br>Link: DSL, SONET, 802.11, Ethernet</p>
+<hr>
+<p>Q:<br>What is the main difference between TCP and UDP?</p>
+<p>A:<br>TCP is connection oriented, reliable, fast.<br>UDP is connectionless oriented, unreliable, slow.</p>
+<hr>
+<p>Q:<br>When a file is transferred between two computers, two acknowledgement strategies are possible. In the first one, the file is chopped up into packets, which are individually acknowledged by the receiver, but the file transfer as a whole is not acknowledged. In the second one, the packets are not acknowledged individually, but the entire file is acknowledged when it arrives. Discuss these two approaches.</p>
+<p>A:<br>If the network is reliable, use the second one.</p>
+<hr>
+<p>Q:<br>How long was a bit on the original 802.3 standard in meters? Use a transmission speed of 10 Mbps and assume the propagation speed in coax is 2&#x2F;3 the speed of light in vacuum.</p>
+<p>A:<br>802.3是以太网，这里计算出来是20米</p>
+<hr>
+<p>Q:<br>An image is 1024 x 768 pixels with 3 bytes&#x2F;pixel. Assume the image is uncompressed. How long does it take to transmit it over a 56-kbps modem channel? Over a 1-Mbps cable modem? Over a 10-Mbps Ethernet? Over 100-Mbps Ethernet?</p>
+<p>A:<br>337s, 19s, 1.9s, 0.19s</p>
+<hr>
+<p>Q:<br>Ethernet and wireless networks have some similarities and some differences. One property of Ethernet is that only one frame at a time can be transmitted on an Ethernet. Does 802.11 share this property with Ethernet? Discuss your answer.</p>
+<p>A:<br>Wireless networks also transmit one frame at a time, but determining when one can send is more difficult. Ethernet is a broadcast bus so the sender can just listen to see if there is any traffic before sending. Due to range issues with wireless, a sender cannot be sure that there are not other transmissions just because it cannot “hear” other transmissions. Wireless senders use either a central base station or use methods discussed in Chapter 4 to avoid collisions.</p>
+<hr>
+<p>Q:<br>Wireless networks are easy to install, which makes them inexpensive since installation costs usually far overshadow equipment costs. Nevertheless, they also have some disadvantages. Name two of them.</p>
+<p>A:<br>无法控制范围，容易被人利用。任何人可以接收到传送中的包。此外，传输更慢。</p>
+<hr>
+<p>Q:<br>List two advantages and two disadvantages of having international standards for network protocols.</p>
+<p>A:<br>好处：统一的标准使得兼容性更好，成本降低。<br>坏处：不好的标准可能很难被淘汰，比如OSI比TCP／IP先进但没有被采用。</p>
+<h2 id="【第五章】网络层"><a href="#【第五章】网络层" class="headerlink" title="【第五章】网络层"></a>【第五章】网络层</h2><hr>
+<p>Q:<br>Give two example computer applications for which connection-oriented service is appropriate. Now give two examples for which connectionless service is best.</p>
+<p>A:<br>面向连接服务：SSH，文件传输<br>无连接服务：视频通话，游戏在线对战，需要快速应答的服务一般需要无连接服务。</p>
+<hr>
+<p>Q:<br>Are there any circumstances when connection-oriented service will (or at least should) deliver packets out of order? Explain.</p>
+<p>A:<br>Circumstance是情况的意思，在terminal中ctrl-c应该被最先传送，而不是排在队尾。</p>
+<hr>
+<p>Q:<br>Datagram subnets route each packet as a separate unit, independent of all others. Virtual-circuit subnets do not have to do this, since each data packet follows a predetermined route. Does this observation mean that virtual-circuit subnets do not need the capability to route isolated packets from an arbitrary source to an arbitrary destination? Explain your answer.</p>
+<p>A:<br>并不是如此，虚电路网络对不同方向的数据包需要建立不同的虚电路，因此也要具备这样的能力。补充：在建立虚电路的时候需要把setup package从任意端传输到任意接收方。</p>
+<hr>
+<p>Q:<br>Give three examples of protocol parameters that might be negotiated when a connection is set up.</p>
+<p>A:<br>IP协议，协商IP包的最大跳数，是否可以分段，还有出错时的处理方式。</p>
+<hr>
+<p>Q:<br>Consider the following design problem concerning implementation of virtual-circuit service. If virtual circuits are used internal to the subnet, each data packet must have a 3-byte header and each router must tie up 8 bytes of storage for circuit identification. If datagrams are used internally, 15-byte headers are needed but no router table space is required. Transmission capacity costs 1 cent per 106 bytes, per hop. Very fast router memory can be purchased for 1 cent per byte and is depreciated over two years, assuming a 40-hour business week. The statistically average session runs for 1000 sec, in which time 200 packets are transmitted. The mean packet requires four hops. Which implementation is cheaper, and by how much?</p>
+<p>A:<br>Virtual Circuits: 200 * 3 * 4 &#x2F; 10 ^ 6 + 1000 * 8 * 5 &#x2F; 2 &#x2F; 52 &#x2F; 40 &#x2F; 3600<br>Datagrams: 15 * 4 * 200 &#x2F; 10 ^ 6</p>
+<hr>
+<p>Q:<br>Assuming that all routers and hosts are working properly and that all software in both is free of all errors, is there any chance, however small, that a packet will be delivered to the wrong destination?</p>
+<p>A:<br>错误可能出在低层上，比如物理层</p>
+<hr>
+<p>Q:<br>Give a simple heuristic for finding two paths through a network from a given source to a given destination that can survive the loss of any communication line (assuming two such paths exist). The routers are considered reliable enough, so it is not necessary to worry about the possibility of router crashes.</p>
+<p>A:<br>先找出一条最短路径，再把这条路径删除，找出另一条最短路径。只要两条路径没有公共部分即可。</p>
+<hr>
+<p>Q:<br>Consider the subnet of Fig.5-12(a). Distance vector routing is used, and the following vectors have just come in to router C: from B: (5, 0, 8, 12, 6, 2); from D: (16, 12, 6, 0, 9, 10); and from E: (7, 6, 3, 9, 0, 4). The measured delays to B, D, and E, are 6, 3, and 5, respectively. What is C’s new routing table? Give both the outgoing line to use and the expected delay.</p>
+<p>A:<br>这题是距离矢量算法。</p>
+<p>C 到 A 11 经过 B<br>A 11 B<br>B 6  B<br>C 0  -<br>D 3  D<br>E 5  E<br>F 8  B</p>
+<hr>
+<p>Q:<br>If delays are recorded as 8-bit numbers in a 50-router network, and delay vectors are exchanged twice a second, how much bandwidth per (full-duplex) line is chewed up by the distributed routing algorithm? Assume that each router has three lines to other routers.</p>
+<p>A:<br>每个路由器需要维护一张400bit的表，因此传输0.5s一次会浪费单个方向800bps的带宽。</p>
+<hr>
+<p>Q:<br>In Fig. 5-14 the Boolean OR of the two sets of ACF bits are 111 in every row. Is this just an accident here, or does it hold for all subnets under all circumstances?</p>
+<p>A:<br>这题讲的是链路状态路由算法。这个永远是对的，ACK标志标志表示来自哪里，它可能由两条路线过来，而发送标志表示要发送往哪里。</p>
+<hr>
+<p>Q:<br>For hierarchical routing with 4800 routers, what region and cluster sizes should be chosen to minimize the size of the routing table for a three-layer hierarchy? A good starting place is the hypothesis that a solution with k clusters of k regions of k routers is close to optimal, which means that k is about the cube root of 4800 (around 16). Use trial and error to check out combinations where all three parameters are in the general vicinity of 16.</p>
+<p>A:<br>这题讲的是层次路由。层次可以分许多层，和网络中路由器的数量规模有关。16 15 20</p>
+<hr>
+<p>Q:<br>In the text it was stated that when a mobile host is not at home, packets sent to its home LAN are intercepted by its home agent on that LAN. For an IP network on an 802.3 LAN, how does the home agent accomplish this interception?</p>
+<p>A:<br>在ARP广播时相应家乡代理自己的MAC地址，实际上就是拥有了主机的IP地址。家乡代理拥有主机的IP地址即可截获。<br>Conceivably it might go into promiscuous mode, reading all frames dropped onto the LAN, but this is very inefficient. Instead, what is normally done is that the home agent tricks the router into thinking it is the mobile host by re- sponding to ARP requests. When the router gets an IP packet destined for the mobile host, it broadcasts an ARP query asking for the 802.3 MAC-level ad- dress of the machine with that IP address. When the mobile host is not around, the home agent responds to the ARP, so the router associates the mobile user’s IP address with the home agent’s 802.3 MAC-level address.</p>
+<hr>
+<p>Q:<br>Looking at the subnet of Fig. 5-6, how many packets are generated by a broadcast from B, using (a) reverse path forwarding? (b) the sink tree?</p>
+<p>A:<br>(a) reverse path forwarding，路由器接收到广播包时，检查是否是自己给广播源发包的路径，是的话说明是从最优路径发过来的，这时给所有其他节点发包，最后算下来发了21次。<br>(b) sink tree是汇集树，是由B到所有节点最短路径的集合，这样发的话发14个包，每个树枝必会到一个节点，而且不会重复。</p>
+<hr>
+<p>Q:<br>Suppose that node B in Fig. 5-20 has just rebooted and has no routing information in its tables. It suddenly needs a route to H. It sends out broadcasts with TTL set to 1, 2, 3, and so on. How many rounds does it take to find a route?</p>
+<p>A:<br>这题考查自组织网络路由，就是路由器本身也在移动的情况。TTL分别设置为1，2，3是为了使搜索半径不断增大。由于B和H距离为3，因此TTL设置为3的时候可以发现，因此3轮可以发现路由。</p>
+<hr>
+<p>Q:<br>As a possible congestion control mechanism in a subnet using virtual circuits internally, a router could refrain from acknowledging a received packet until (1) it knows its last transmission along the virtual circuit was received successfully and (2) it has a free buffer. For simplicity, assume that the routers use a stop-and-wait protocol and that each virtual circuit has one buffer dedicated to it for each direction of traffic. If it takes T sec to transmit a packet (data or acknowledgement) and there are n routers on the path, what is the rate at which packets are delivered to the destination host? Assume that transmission errors are rare and that the host-router connection is infinitely fast.</p>
+<p>A:<br>讲的是拥塞控制，这个方法不好，需要前一个包完全确认了才能传输下一个包。<br>The protocol is terrible. Let time be slotted in units of T sec. In slot 1 the source router sends the first packet. At the start of slot 2, the second router has received the packet but cannot acknowledge it yet. At the start of slot 3, the third router has received the packet, but it cannot acknowledge it either, so all the routers behind it are still hanging. The first acknowledgement can only be sent when the destination host takes the packet from the destination router. Now the acknowledgement begins propagating back. It takes two full transits of the network, 2(n − 1)T sec, before the source router can send the second packet. Thus, the throughput is one packet every 2(n − 1)T sec.</p>
+<hr>
+<p>Q:<br>Describe two major differences between the ECN and the RED method.</p>
+<p>A:<br>这两种是拥塞控制算法。<br>ECN (Explicit Congestion Notification, 显式拥塞通知)，路由器在它转发的数据包上打上标记，发出信号，接收方注意到拥塞时，发送应答包的同时告知发送方，让发送方降低传送速率。<br>RED (Random Early Detection, 随机早期检测), 路由器维护一个运行队列长度的平均值，当超过阈值的时候就开始随机丢弃数据包，快速发送方发现丢包就开始降低发送速率。<br>主要区别是一个显式通知，一个隐式通知，一个是缓存区开始不够了才通知，另一个是提前预知。</p>
+<hr>
+<p>Q:<br>An ATM network uses a token bucket scheme for traffic shaping. A new token is put into the bucket every 5 μsec. Each token is good for one cell, which contains 48 bytes of data. What is the maximum sustainable data rate?</p>
+<p>A:<br>With a token every 5 μsec, 200,000 cells&#x2F;sec can be sent. Each packet holds 48 data bytes or 384 bits. The net data rate is then 76.8 Mbps.</p>
+<hr>
+<p>Q:<br>A computer on a 6-Mbps network is regulated by a token bucket. The token bucket is filled at a rate of 1 Mbps. It is initially filled to capacity with 8 megabits. How long can the computer transmit at the full 6 Mbps?</p>
+<p>A:<br>8 &#x2F; (6 - 1) &#x3D; 1.6s</p>
+<hr>
+<p>Q:<br>The CPU in a router can process 2 million packets&#x2F;sec. The load offered to it is 1.5 million packets&#x2F;sec. If a route from source to destination contains 10 routers, how much time is spent being queued and serviced by the CPUs?</p>
+<p>A:<br>这题用到排队论，服务速率为2，到达速率为1.5，那么服务时间为1／2million &#x2F; (1 - 1.5 &#x2F; 2) &#x3D; 2us。10个routers就是20us。</p>
+<hr>
+<p>Q:<br>Consider the user of differentiated services with expedited forwarding. Is there a guarantee that expedited packets experience a shorter delay than regular packets? Why or why not?</p>
+<p>A:<br>不保证，过多包被标记为加速的，那么可能反而变慢了。</p>
+<hr>
+<p>Q:<br>Suppose that host A is connected to a router R 1, R 1 is connected to another router, R 2, and R 2 is connected to host B. Suppose that a TCP message that contains 900 bytes of data and 20 bytes of TCP header is passed to the IP code at host A for delivery to B. Show the Total length, Identification, DF, MF, and Fragment offset fields of the IP header in each packet transmitted over the three links. Assume that link A-R1 can support a maximum frame size of 1024 bytes including a 14-byte frame header, link R1-R2 can support a maximum frame size of 512 bytes, including an 8-byte frame header, and link R2-B can support a maximum frame size of 512 bytes including a 12- byte frame header.</p>
+<p>A:<br>Link A-R1 :<br>Length: 900 + 20 (TCP) + 20 (IP) &#x3D; 940 Bytes, ID:X , DF:0 , MF:0 , Fragment offset:0<br>Link R1-R2:<br>(1) Length &#x3D; 500; ID &#x3D; x; DF &#x3D; 0; MF &#x3D; 1; Offset &#x3D; 0 (2) Length &#x3D; 460; ID &#x3D; x; DF &#x3D; 0; MF &#x3D; 0; Offset &#x3D; 60<br>Link R2-B:<br>(1) Length &#x3D; 500; ID &#x3D; x; DF &#x3D; 0; MF &#x3D; 1; Offset &#x3D; 0 (2) Length &#x3D; 460; ID &#x3D; x; DF &#x3D; 0; MF &#x3D; 0; Offset &#x3D; 60<br>不用去考虑数据链路层的成帧部分，IP协议不关心。</p>
+<hr>
+<p>Q:<br>A router is blasting out IP packets whose total length (data plus header) is 1024 bytes. Assuming that packets live for 10 sec, what is the maximum line speed the router can operate at without danger of cycling through the IP datagram ID number space?</p>
+<p>A:<br>IP包的ID字段拥有16位，因此65536个不同编号。65536 ＊ 1024 * 8 &#x2F; 10 &#x3D; 54 Gbps</p>
+<hr>
+<p>Q:<br>An IP datagram using the Strict source routing option has to be fragmented. Do you think the option is copied into each fragment, or is it sufficient to just put it in the first fragment? Explain your answer.</p>
+<p>A:<br>Strict Source Routing 严格源路由，是IPv4头的可选项，表明该包必须经过指定路由。必须要在每个fragment都要包括。</p>
+<hr>
+<p>Q:<br>Suppose that instead of using 16 bits for the network part of a class B address originally, 20 bits had been used. How many class B networks would there have been?</p>
+<p>A:<br>B类地址，前缀10定死，因此18bits可以用，所以有2^18个B类网络。</p>
+<hr>
+<p>Q:<br>A network on the Internet has a subnet mask of 255.255.240.0. What is the maximum number of hosts it can handle?</p>
+<p>A:<br>4096</p>
+<hr>
+<p>Q:<br>为什么以太网地址不能特定于一个网络，而IP地址却可以？</p>
+<p>A:<br>Each Ethernet adapter sold in stores comes hardwired with an Ethernet (MAC) address in it. When burning the address into the card, the manufac- turer has no idea where in the world the card will be used, making the address useless for routing. In contrast, IP addresses are either assigned either stati- cally or dynamically by an ISP or company, which knows exactly how to get to the host getting the IP address.</p>
+<hr>
+<p>Q:<br>A large number of consecutive IP address are available starting at 198.16.0.0. Suppose that four organizations, A, B, C, and D, request 4000, 2000, 4000, and 8000 addresses, respectively, and in that order. For each of these, give the first IP address assigned, the last IP address assigned, and the mask in the w.x.y.z&#x2F;s notation.</p>
+<p>A:<br>A: 198.16.0.0 – 198.16.15.255 written as 198.16.0.0&#x2F;20<br>B: 198.16.16.0 – 198.23.15.255 written as 198.16.16.0&#x2F;21<br>C: 198.16.32.0 – 198.47.15.255 written as 198.16.32.0&#x2F;20<br>D: 198.16.64.0 – 198.95.15.255 written as 198.16.64.0&#x2F;19</p>
+<hr>
+<p>Q:<br>A router has just received the following new IP addresses: 57.6.96.0&#x2F;21, 57.6.104.0&#x2F;21, 57.6.112.0&#x2F;21, and 57.6.120.0&#x2F;21. If all of them use the same outgoing line, can they be aggregated? If so, to what? If not, why not?</p>
+<p>A:<br>可以聚合成57.6.96.0&#x2F;19, 这个时候会有57.6.120.0&#x2F;21没有被聚合，但是有最大匹配原则所以不要紧。</p>
+<hr>
+<p>Q:<br>The set of IP addresses from 29.18.0.0 to 19.18.128.255 has been aggregated to 29.18.0.0&#x2F;17. However, there is a gap of 1024 unassigned addresses from 29.18.60.0 to 29.18.63.255 that are now suddenly assigned to a host using a different outgoing line. Is it now necessary to split up the aggregate address into its constituent blocks, add the new block to the table, and then see if any reaggregation is possible? If not, what can be done instead?</p>
+<p>A:<br>不需要，因为有最长匹配，所以单独聚合即可。</p>
+<hr>
+<p>Q:<br>Many companies have a policy of having two (or more) routers connecting the company to the Internet to provide some redundancy in case one of them goes down. Is this policy still possible with NAT? Explain your answer.</p>
+<p>A:<br>After NAT is installed, it is crucial that all the packets pertaining to a single connection pass in and out of the company via the same router, since that is where the mapping is kept. If each router has its own IP address and all traffic belonging to a given connection can be sent to the same router, the mapping can be done correctly and multihoming with NAT can be made to work.<br>所以是可以的，只要网络中的每个主机发给特定router即可。</p>
+<hr>
+<p>Q:<br>Describe a way to reassemble IP fragments at the destination.</p>
+<p>A:<br>In the general case, the problem is nontrivial. Fragments may arrive out of order and some may be missing. On a retransmission, the datagram may be fragmented in different-sized chunks. Furthermore, the total size is not known until the last fragment arrives. Probably the only way to handle reassembly is to buffer all the pieces until the last fragment arrives and the size is known. Then build a buffer of the right size, and put the fragments into the buffer, maintaining a bit map with 1 bit per 8 bytes to keep track of which bytes are present in the buffer. When all the bits in the bit map are 1, the datagram is complete.<br>所以就是等尾巴来，就可以确定总长度，然后等所有分段都来就可以重组了。</p>
+<hr>
+<p>Q:<br>Most IP datagram reassembly algorithms have a timer to avoid having a lost fragment tie up reassembly buffers forever. Suppose that a datagram is fragmented into four fragments. The first three fragments arrive, but the last one is delayed. Eventually, the timer goes off and the three fragments in the receiver’s memory are discarded. A little later, the last fragment stumbles in. What should be done with it?</p>
+<p>A:<br>前三段已经被discard了，那么第四段再来会被当成新的，过一段时间一样被扔。</p>
+<hr>
+<p>Q:<br>In both IP and ATM, the checksum covers only the header and not the data. Why do you suppose this design was chosen?</p>
+<p>A:<br>其他部分的checksum可以交给上层协议，而且开销太大，此外头的错误非常严重。</p>
+<hr>
+<p>Q:<br>A person who lives in Boston travels to Minneapolis, taking her portable computer with her. To her surprise, the LAN at her destination in Minneapolis is a wireless IP LAN, so she does not have to plug in. Is it still necessary to go through the entire business with home agents and foreign agents to make e-mail and other traffic arrive correctly?</p>
+<p>A:<br>当然需要，无线网是数据链路层和物理层的事情，和IP层无关，还是要利用家乡代理。</p>
+<hr>
+<p>Q:<br>The Protocol field used in the IPv4 header is not present in the fixed IPv6 header. Why not?</p>
+<p>A:<br>因为在IPv6头中有一个字段叫下一个头，会说明该字段要交给哪一种上层协议处理。</p>
+<hr>
+<p>Q:<br>When the IPv6 protocol is introduced, does the ARP protocol have to be changed? If so, are the changes conceptual or technical?</p>
+<p>A:<br>不需要做任何改变，只是IP地址需要更长的空间而已。</p>
+<h2 id="【第六章】传输层"><a href="#【第六章】传输层" class="headerlink" title="【第六章】传输层"></a>【第六章】传输层</h2><hr>
+<p>Q:<br>In our example transport primitives of Fig.6-2, LISTEN is a blocking call. Is this strictly necessary? If not, explain how a nonblocking primitive could be used. What advantage would this have over the scheme described in the text?</p>
+<p>A:<br>The LISTEN call could indicate a willingness to establish new connections but not block. When an attempt to connect was made, the caller could be given a signal. It would then execute, say, OK or REJECT to accept or reject the con- nection. In our original scheme, this flexibility is lacking.</p>
+<hr>
+<p>Q:<br>像bittorrent这种点对点应用如何区分哪个是connect哪个listen呢？</p>
+<p>A:<br>可以竞争，也可以随机，也可以由上层协议控制。</p>
+<hr>
+<p>Q:<br>假设网络层是百分百正确的那么三次握手协议会有什么样的变化？</p>
+<p>A:<br>第三次握手就没有必要了，主机2收到主机1的请求时，直接就确立连接，返回给1确认信息后，1也确立连接。</p>
+<hr>
+<p>Q:<br>Suppose that the clock-driven scheme for generating initial sequence numbers isused with a 15-bit wide clock counter. The clock ticks once every 100 msec, and the maximum packet lifetime is 60 sec. How often need resynchronization take place<br>(a) in the worst case?<br>(b) when the data consumes 240 sequence numbers&#x2F;min?</p>
+<p>A:<br>首先，现在的规定是这样的，通信的时候初始段的序号等于始终序号，因此在x秒的时候同步的信号序号为x，注意，建立连接之后，序号就和时间无关了。<br>第二，在时间x时，不允许发送x+T(T是lifetime)序号的段，这是为什么呢？因为你这个段会生存T秒，而在随后的T秒内如果要建立一个连接，可能会和你现在发的这个段序号一样的懂吗？<br>(a) 题目是这样的，假设在70秒的时候，你建立了一个连接，这个时候你发出去的信号序号为70。注意，之后你要发送的序号是71，然后你一直忍着不发（这就是最坏的情况），然后时间绕了一圈回来了，时间变成了11秒，此时你再想发71，对不起，规则不允许，因为在11秒的时候，不允许发71。这就是最坏情况了，所以必须重新同步一次。答案是3276.8-60&#x3D;3216.8<br>(b) 这个时候变成追及问题，最后计算出来结果是5361.3<br>总结，你发送速率与时钟速率越接近，需要同步的间隔就越长。但是如果一上来超过时钟速率就直接GG。<br>因为这种方法不好所以后来创造了三次握手，两边的初始序列号都是随机值，就不需要那么麻烦的时钟什么的啦。只要双方确认了，后面都好办。</p>
+<hr>
+<p>Q:<br>Imagine that a two-way handshake rather than a three-way handshake were used to<br>set up connections. In other words, the third message was not required. Are deadlocks now possible? Give an example or show that none exist.</p>
+<p>A:<br>有可能出问题，主机2的确认被延迟了，那么可能会建立起一个重复的连接。</p>
+<hr>
+<p>Q:<br>Consider the problem of recovering from host crashes (i.e.,Fig.6-18). If the interval between writing and sending an acknowledgement, or vice versa, can be made relatively small, what are the two best sender-receiver strategies for minimizing the chance of a protocol failure?</p>
+<p>A:<br>If the AW or WA time is small, the events AC(W) and WC(A) are unlikely events. The sender should retransmit in state S1; the receiver’s order does not matter.</p>
+<hr>
+<p>Q:<br>Discuss the advantages and disadvantages of credits versus sliding window protocols.</p>
+<p>A:<br>滑动窗口协议用于流量控制。<br>The sliding window is simpler, having only one set of parameters (the win- dow edges) to manage. Furthermore, the problem of a window being increased and then decreased, with the segments arriving in the wrong order, does not occur. However, the credit scheme is more flexible, allowing a dynamic management of the buffering, separate from the acknowledgements.</p>
+<hr>
+<p>Q:<br>Why does UDP exist? Would it not have been enough to just let user processes send raw IP packets?</p>
+<p>A:<br>无法确认端口。</p>
+<hr>
+<p>Q:<br>A client sends a 128-byte request to a server located 100 km away over a 1-gigabit optical fiber. What is the efficiency of the line during the remote procedure call?</p>
+<p>A:<br>发送包需要128 * 8&#x2F;1G＝1.024us, 在路上的时间100km&#x2F;200000 &#x3D; 50us，然后一来一回100us，因此利用率约为1%。所以说这个时候的制约不是带宽而是距离。</p>
+<hr>
+<p>Q:<br>Both UDP and TCP use port numbers to identify the destination entity when delivering a message. Give two reasons for why these protocols invented a new abstract ID (port numbers), instead of using process IDs, which already existed when these protocols were designed.</p>
+<p>A:<br>进程id动态变化，不易管理，端口号可以被进程绑定，而且一些知名服务需要用固定端口号。<br>Here are three reasons. First, process IDs are OS-specific. Using process IDs would have made these protocols OS-dependent. Second, a single process may establish multiple channels of communications. A single process ID (per process) as the destination identifier cannot be used to distinguish between these channels. Third, having processes listen on well-known ports is easy, but well-known process IDs are impossible.</p>
+<hr>
+<p>Q:<br>何时选用基于UDP的RPC，合适使用基于TCP的RPC。</p>
+<p>A:<br>RPC是远程过程调用，可以建立客户端－服务器应用。如果请求不是幂等的（幂等是如同计数器加一这种命令，执行次数不同会产生不同结果），那就可以考虑使用UDP。同时，如果传递的数据包并不大，可以考虑使用UDP。</p>
+<hr>
+<p>Q:<br>最小TCP MTU的总长度是多少？包括TCP和IP的开销，但是不包括数据链路层的开销。</p>
+<p>A:<br>MTU是最大传输单元，最小的TCP MTU可以设置，如果一台主机不设置的话默认是536+20&#x3D;556字节的TCP段。Internet要求每台主机至少能够处理556字节的段。</p>
+<hr>
+<p>Q:<br>RTP is used to transmit CD-quality audio, which makes a pair of 16-bit samples 44,100 times&#x2F;sec, one sample for each of the stereo channels. How many packets per second must RTP transmit?</p>
+<p>A:<br>按照标准答案的理解，RTP的一个packet只能传输1024字节，不清楚这个规定是在哪里。<br>Each sample occupies 4 bytes. This gives a total of 256 samples per packet. There are 44,100 samples&#x2F;sec, so with 256 samples&#x2F;packet, it takes 44100&#x2F;256 or 172 packets to transmit one second’s worth of music.</p>
+<hr>
+<p>Q:<br>Would it be possible to place the RTP code in the operating system kernel, along with the UDP code? Explain your answer.</p>
+<p>A:<br>Sure. The caller would have to provide all the needed information, but there is no reason RTP could not be in the kernel, just as UDP is.</p>
+<hr>
+<p>Q:<br>主机1的端口p和主机2的端口q之间可能存在多个TCP连接吗？</p>
+<p>A:<br>不可能，一对端口之间只能有一个TCP连接。一个进程可以有多个TCP连接。</p>
+<hr>
+<p>Q:<br>ACK标志位有什么用？</p>
+<p>A:<br>ACK标志位用来表示ACK字段是否有意义。其实在连接已经建立起来之后ACK标志位已经没有意义了，因为ACK是必须的。而在连接建立的过程中，这是非常重要的。</p>
+<hr>
+<p>Q:<br>为什么TCP段的有效载荷是65495字节？</p>
+<p>A:<br>因为TCP长度为16位标示，所以最多65535字节，然后去掉TCP头20字节，去掉IP头20字节。剩下65495字节。</p>
+<hr>
+<p>Q:<br>Consider the effect of using slow start on a line with a 10-msec round-trip time and no congestion. The receive window is 24 KB and the maximum segment size is 2 KB. How<br>long does it take before the first full window can be sent?</p>
+<p>A:<br>慢速启动是TCP协议中拥塞控制的一个算法。<br>The first bursts contain 2K, 4K, 8K, and 16K bytes, respectively. The next one is 24 KB and occurs after 40 msec.</p>
+<hr>
+<p>Q:<br>Suppose that the TCP congestion window is set to 18 KB and a timeout occurs. How big will the window be if the next four transmission bursts are all successful? Assume that the maximum segment size is 1 KB.</p>
+<p>A:<br>拥塞控制的算法，TCP维护一个拥塞窗口。<br>The next transmission will be 1 maximum segment size. Then 2, 4, and 8. So after four successes, it will be 8 KB.</p>
+<hr>
+<p>Q:<br>A TCP machine is sending full windows of 65,535 bytes over a 1-Gbps channel that has a 10-msec one-way delay. What is the maximum throughput achievable? What is the line efficiency?</p>
+<p>A:<br>有延迟的网络传输效率和窗口大小，延迟有很大关系。<br>One window can be sent every 20 msec. This gives 50 windows&#x2F;sec, for a maximum data rate of about 3.3 million bytes&#x2F;sec. The line efficiency is then 26.4 Mbps&#x2F;1000 Mbps or 2.6 percent.</p>
+<hr>
+<p>Q:<br>What is the fastest line speed at which a host can blast out 1500-byte TCP payloads with a 120-sec maximum packet lifetime without having the sequence numbers wrap around? Take TCP, IP, and Ethernet overhead into consideration. Assume that Ethernet frames may be sent continuously.</p>
+<p>A:<br>TCP中每个Byte会占用一个序号，而TCP的sequence number是32位的，所以可以每120s发送2^32Bytes信息，然而1500B信息需要1500+20+20+26(以太网)的段帧来发送因此需要的带宽为2 ^ 32 * 8 * 1566 &#x2F; 1500 &#x2F; 120 &#x3D; 299Mbps。<br>The goal is to send 2^32 bytes in 120 sec or 35,791,394 payload bytes&#x2F;sec. This is 23,860 1500-byte frames&#x2F;sec. The TCP overhead is 20 bytes. The IP overhead is 20 bytes. The Ethernet overhead is 26 bytes. This means that for 1500 bytes of payload, 1566 bytes must be sent. If we are to send 23,860 frames of 1566 bytes every second, we need a line of 299 Mbps. With any- thing faster than this we run the risk of two different TCP segments having the same sequence number at the same time.</p>
+<hr>
+<p>Q:<br>为什么那么多人在为了ipv4的局限性做努力，而对TCP的局限性却没有人这样做。</p>
+<p>A:<br>根本原因是IP协议运行在所有路由器上。<br>IP is a network level protocol while TCP is an end-to-end transport level protocol. Any change in the protocol specification of IP must be incorporated on all routers in the Internet. On the other hand, TCP can works fine as long as the two end points are running compatible versions. Thus, it is possible to have many different versions of TCP running at the same time on different hosts, but not this is not the case with IP.</p>
+<hr>
+<p>Q:<br>In a network that has a maximum TPDU size of 128 bytes, a maximum TPDU lifetime of 30 sec, and an 8-bit sequence number, what is the maximum data rate per connection?</p>
+<p>A:<br>TPDU指Transport Protocol Data Unit，协议数据单元。<br>2 ^ 8 * 128 * 8 &#x2F; 30 &#x3D; 8.7kbps</p>
+<hr>
+<p>Q:<br>Suppose that you are measuring the time to receive a TPDU. When an interrupt occurs, you read out the system clock in milliseconds. When the TPDU is fully processed, you read out the clock again. You measure 0 msec 270,000 times and 1 msec 730,000 times. How long does it take to receive a TPDU?</p>
+<p>A:<br>27次是0ms，73次是1ms，那么平均是730us。</p>
+<hr>
+<p>Q:<br>A CPU executes instructions at the rate of 1000 MIPS. Data can be copied 64 bits at a time, with each word copied costing 10 instructions. If an coming packet has to be copied four times, can this system handle a 1-Gbps line? For simplicity, assume that all instructions, even those instructions that read or write memory, run at the full 1000- MIPS rate.</p>
+<p>A:<br>1000M * 64 &#x2F;10 &#x2F; 4 &#x3D; 1.6 Gbps &gt; 1Gbps，故可以。</p>
+<hr>
+<p>Q:<br>For a 1-Gbps network operating over 4000 km, the delay is the limiting factor, not the bandwidth. Consider a MAN with the average source and destination 20 km apart. At what data rate does the round-trip delay due to the speed of light equal the transmission delay for a 1-KB packet?</p>
+<p>A:<br>20 * 2 &#x2F; 200000 &#x3D; 200us延迟。发送1KB要200us的话，带宽至少要1024 * 8 * 1 &#x2F; 200u &#x3D; 40 Mbps。</p>
+<hr>
+<p>Q:<br>What is the bandwidth-delay product for a 50-Mbps channel on a geostationary satellite? If the packets are all 1500 bytes (including overhead), how big should the window be in packets?</p>
+<p>A:<br>The round-trip delay is about 540 msec, so with a 50-Mbps channel the bandwidth-product delay is 27 megabits or 3,375,000 bytes. With packets of 1500 bytes, it takes 2250 packets to fill the pipe, so the window should be at least 2250 packets.</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/Knowledge-About-CS.html" rel="prev" title="计算机技术相关知识">
+      <i class="fa fa-chevron-left"></i> 计算机技术相关知识
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/Knowledge-About-iOS-Development.html" rel="next" title="iOS开发相关知识">
+      iOS开发相关知识 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B5%84%E6%96%99"><span class="nav-text">资料</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C"><span class="nav-text">实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GNS3"><span class="nav-text">GNS3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95Socket%E8%BF%9E%E6%8E%A5"><span class="nav-text">简单Socket连接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="nav-text">服务端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-text">客户端</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%BE%E6%9C%AC%E4%B9%A0%E9%A2%98"><span class="nav-text">课本习题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%90%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%91%E5%BC%95%E8%A8%80"><span class="nav-text">【第一章】引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%90%E7%AC%AC%E4%BA%94%E7%AB%A0%E3%80%91%E7%BD%91%E7%BB%9C%E5%B1%82"><span class="nav-text">【第五章】网络层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%90%E7%AC%AC%E5%85%AD%E7%AB%A0%E3%80%91%E4%BC%A0%E8%BE%93%E5%B1%82"><span class="nav-text">【第六章】传输层</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

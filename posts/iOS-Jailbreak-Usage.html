@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="iOS越狱指南。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS越狱使用指南">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/iOS-Jailbreak-Usage.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="iOS越狱指南。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/iOS-Jailbreak-Usage/topic.jpg">
+<meta property="article:published_time" content="2023-11-10T03:33:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.560Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/iOS-Jailbreak-Usage/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/iOS-Jailbreak-Usage.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>iOS越狱使用指南 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/iOS-Jailbreak-Usage.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          iOS越狱使用指南
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-10 11:33:29" itemprop="dateCreated datePublished" datetime="2023-11-10T11:33:29+08:00">2023-11-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>12k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>11 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/iOS-Jailbreak-Usage/topic.jpg"></p>
+<p>iOS越狱指南。</p>
+<span id="more"></span>
+
+<h1 id="TODOS"><a href="#TODOS" class="headerlink" title="TODOS"></a>TODOS</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">iOS越狱教程-内存基址修改器的神奇之处(十三)</span><br><span class="line">https://mp.weixin.qq.com/s/IY3t96fbzfTybupXzuY5uA</span><br><span class="line"></span><br><span class="line">https://ios.cfw.guide/using-palen1x/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">https://www.reddit.com/r/jailbreak/comments/1tmvh7/question_what_exactly_is_bootstrap/</span><br><span class="line">https://onejailbreak.com/blog/iapstore-tweak/</span><br><span class="line">https://leavez.xyz/2017/02/12/mario-tweak/</span><br><span class="line">https://www.bilibili.com/read/cv12153485/</span><br></pre></td></tr></table></figure>
+
+<h1 id="应用商店"><a href="#应用商店" class="headerlink" title="应用商店"></a>应用商店</h1><p>应用商店可在Cydia&#x2F;Sileo通过插件的方式安装。</p>
+<h2 id="Zebra"><a href="#Zebra" class="headerlink" title="Zebra"></a>Zebra</h2><p>作者源如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://getzbra.com/repo/</span><br><span class="line">https://getzbra.com/beta/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Installer"><a href="#Installer" class="headerlink" title="Installer"></a>Installer</h2><p>作者源如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://apptapp.me/repo/</span><br></pre></td></tr></table></figure>
+
+<h2 id="AltStore"><a href="#AltStore" class="headerlink" title="AltStore"></a>AltStore</h2><p>添加以下源并按顺序安装AltDaemon、AppSync Unified、appinst (App Installer)、AltStore (ALPHA)即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://pwnders.github.io/repo/</span><br><span class="line">https://cydia.akemi.ai/</span><br></pre></td></tr></table></figure>
+
+<h1 id="补丁软件"><a href="#补丁软件" class="headerlink" title="补丁软件"></a>补丁软件</h1><p>补丁软件可以修改APP，达到破解效果。</p>
+<h2 id="Flex-3"><a href="#Flex-3" class="headerlink" title="Flex 3"></a>Flex 3</h2><h3 id="安装和破解"><a href="#安装和破解" class="headerlink" title="安装和破解"></a>安装和破解</h3><p>源地址如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://getdelta.co/</span><br></pre></td></tr></table></figure>
+
+<p>登录以下账号即可永久使用会员。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">账号 / sundasheng521@qq.com</span><br><span class="line">密码 / 7758521a</span><br></pre></td></tr></table></figure>
+
+<h3 id="手动添加补丁"><a href="#手动添加补丁" class="headerlink" title="手动添加补丁"></a>手动添加补丁</h3><p>打开Filza，进入路径&#x2F;var&#x2F;mobile&#x2F;Library&#x2F;Application Support&#x2F;Flex3，使用文本编辑器打开patches.plist文件，拉到最下方，在末尾的<code>&lt;dict&gt;</code>后复制要添加的补丁代码，保存即可。</p>
+<h3 id="补丁制作"><a href="#补丁制作" class="headerlink" title="补丁制作"></a>补丁制作</h3><p>下载FlexTool插件，在设置中选择要修改的APP。打开后可通过FlexTool定位到需要修改的函数位置。打开Flex，点击+号，选择要修改的APP，点击Add Units，点击APP名称以进行初次编译。编译完成后搜索刚才找到的函数，勾选并返回到补丁主界面。点击刚才选择的函数，修改其返回值即可。</p>
+<h3 id="补丁列表"><a href="#补丁列表" class="headerlink" title="补丁列表"></a>补丁列表</h3><h4 id="支付宝十万步数"><a href="#支付宝十万步数" class="headerlink" title="支付宝十万步数"></a>支付宝十万步数</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">&lt;dict&gt;</span><br><span class="line">    &lt;key&gt;UUID&lt;/key&gt;</span><br><span class="line">    &lt;string&gt;0A3D50C5-F2C6-4933-B997-C1647F3E109A&lt;/string&gt;</span><br><span class="line">    &lt;key&gt;apiVersion&lt;/key&gt;</span><br><span class="line">    &lt;integer&gt;3&lt;/integer&gt;</span><br><span class="line">    &lt;key&gt;appIdentifier&lt;/key&gt;</span><br><span class="line">    &lt;string&gt;com.alipay.iphoneclient&lt;/string&gt;</span><br><span class="line">    &lt;key&gt;author&lt;/key&gt;</span><br><span class="line">    &lt;string&gt;hyczby5218&lt;/string&gt;</span><br><span class="line">    &lt;key&gt;cloudDescription&lt;/key&gt;</span><br><span class="line">    &lt;string&gt;支付宝修改步数&lt;/string&gt;</span><br><span class="line">    &lt;key&gt;cloudID&lt;/key&gt;</span><br><span class="line">    &lt;integer&gt;46823&lt;/integer&gt;</span><br><span class="line">    &lt;key&gt;downloadDate&lt;/key&gt;</span><br><span class="line">    &lt;integer&gt;1551604711&lt;/integer&gt;</span><br><span class="line">    &lt;key&gt;name&lt;/key&gt;</span><br><span class="line">    &lt;string&gt;支付宝修改步数&lt;/string&gt;</span><br><span class="line">    &lt;key&gt;switchedOn&lt;/key&gt;</span><br><span class="line">    &lt;true/&gt;</span><br><span class="line">    &lt;key&gt;units&lt;/key&gt;</span><br><span class="line">    &lt;array&gt;</span><br><span class="line">        &lt;dict&gt;</span><br><span class="line">            &lt;key&gt;methodObjc&lt;/key&gt;</span><br><span class="line">            &lt;dict&gt;</span><br><span class="line">                &lt;key&gt;className&lt;/key&gt;</span><br><span class="line">                &lt;string&gt;APStepInfo&lt;/string&gt;</span><br><span class="line">                &lt;key&gt;displayName&lt;/key&gt;</span><br><span class="line">                &lt;string&gt;-(long long) numberOfSteps&lt;/string&gt;</span><br><span class="line">                &lt;key&gt;prefix&lt;/key&gt;</span><br><span class="line">                &lt;string&gt;-&lt;/string&gt;</span><br><span class="line">                &lt;key&gt;selector&lt;/key&gt;</span><br><span class="line">                &lt;string&gt;numberOfSteps&lt;/string&gt;</span><br><span class="line">                &lt;key&gt;typeEncoding&lt;/key&gt;</span><br><span class="line">                &lt;string&gt;q16@0:8&lt;/string&gt;</span><br><span class="line">            &lt;/dict&gt;</span><br><span class="line">            &lt;key&gt;name&lt;/key&gt;</span><br><span class="line">            &lt;string&gt;修改步数&lt;/string&gt;</span><br><span class="line">            &lt;key&gt;overrides&lt;/key&gt;</span><br><span class="line">            &lt;array&gt;</span><br><span class="line">                &lt;dict&gt;</span><br><span class="line">                    &lt;key&gt;argument&lt;/key&gt;</span><br><span class="line">                    &lt;integer&gt;0&lt;/integer&gt;</span><br><span class="line">                    &lt;key&gt;type&lt;/key&gt;</span><br><span class="line">                    &lt;dict&gt;</span><br><span class="line">                        &lt;key&gt;subtype&lt;/key&gt;</span><br><span class="line">                        &lt;integer&gt;0&lt;/integer&gt;</span><br><span class="line">                        &lt;key&gt;type&lt;/key&gt;</span><br><span class="line">                        &lt;integer&gt;9&lt;/integer&gt;</span><br><span class="line">                    &lt;/dict&gt;</span><br><span class="line">                    &lt;key&gt;value&lt;/key&gt;</span><br><span class="line">                    &lt;dict&gt;</span><br><span class="line">                        &lt;key&gt;type&lt;/key&gt;</span><br><span class="line">                        &lt;integer&gt;9&lt;/integer&gt;</span><br><span class="line">                        &lt;key&gt;value&lt;/key&gt;</span><br><span class="line">                        &lt;integer&gt;100000&lt;/integer&gt;</span><br><span class="line">                    &lt;/dict&gt;</span><br><span class="line">                &lt;/dict&gt;</span><br><span class="line">            &lt;/array&gt;</span><br><span class="line">        &lt;/dict&gt;</span><br><span class="line">    &lt;/array&gt;</span><br><span class="line">&lt;/dict&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Thor移除验证设备验证"><a href="#Thor移除验证设备验证" class="headerlink" title="Thor移除验证设备验证"></a>Thor移除验证设备验证</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;dict&gt;</span><br><span class="line">    &lt;key&gt;UUID&lt;/key&gt;</span><br><span class="line">    &lt;string&gt;AE872A89-5EB7-483D-B50A-88C29F6E20C9&lt;/string&gt;</span><br><span class="line">    &lt;key&gt;apiVersion&lt;/key&gt;</span><br><span class="line">    &lt;integer&gt;3&lt;/integer&gt;</span><br><span class="line">    &lt;key&gt;appIdentifier&lt;/key&gt;</span><br><span class="line">    &lt;string&gt;com.pixelcyber.dake.thor&lt;/string&gt;</span><br><span class="line">    &lt;key&gt;author&lt;/key&gt;</span><br><span class="line">    &lt;string&gt;zjh521901&lt;/string&gt;</span><br><span class="line">    &lt;key&gt;cloudDescription&lt;/key&gt;</span><br><span class="line">    &lt;string&gt;thor移除验证设备验证补丁&lt;/string&gt;</span><br><span class="line">    &lt;key&gt;cloudID&lt;/key&gt;</span><br><span class="line">    &lt;integer&gt;46126&lt;/integer&gt;</span><br><span class="line">    &lt;key&gt;downloadDate&lt;/key&gt;</span><br><span class="line">    &lt;integer&gt;1552100989&lt;/integer&gt;</span><br><span class="line">    &lt;key&gt;name&lt;/key&gt;</span><br><span class="line">    &lt;string&gt;Thor ·Fz夜&lt;/string&gt;</span><br><span class="line">    &lt;key&gt;switchedOn&lt;/key&gt;</span><br><span class="line">    &lt;false/&gt;</span><br><span class="line">    &lt;key&gt;units&lt;/key&gt;</span><br><span class="line">    &lt;array&gt;</span><br><span class="line">        &lt;dict&gt;</span><br><span class="line">            &lt;key&gt;methodObjc&lt;/key&gt;</span><br><span class="line">            &lt;dict&gt;</span><br><span class="line">                &lt;key&gt;className&lt;/key&gt;</span><br><span class="line">                &lt;string&gt;AppReceiptValidator&lt;/string&gt;</span><br><span class="line">                &lt;key&gt;displayName&lt;/key&gt;</span><br><span class="line">                &lt;string&gt;-(void) prepareVerify&lt;/string&gt;</span><br><span class="line">                &lt;key&gt;prefix&lt;/key&gt;</span><br><span class="line">                &lt;string&gt;-&lt;/string&gt;</span><br><span class="line">                &lt;key&gt;selector&lt;/key&gt;</span><br><span class="line">                &lt;string&gt;prepareVerify&lt;/string&gt;</span><br><span class="line">                &lt;key&gt;typeEncoding&lt;/key&gt;</span><br><span class="line">                &lt;string&gt;v16@0:8&lt;/string&gt;</span><br><span class="line">            &lt;/dict&gt;</span><br><span class="line">            &lt;key&gt;name&lt;/key&gt;</span><br><span class="line">            &lt;string&gt;🈲贩卖🈲谋利🈲&lt;/string&gt;</span><br><span class="line">            &lt;key&gt;overrides&lt;/key&gt;</span><br><span class="line">            &lt;array/&gt;</span><br><span class="line">        &lt;/dict&gt;</span><br><span class="line">    &lt;/array&gt;</span><br><span class="line">&lt;/dict&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="SuperCharge"><a href="#SuperCharge" class="headerlink" title="SuperCharge"></a>SuperCharge</h2><p>SuperCharge脚本的后缀名为st。将st脚本发送到手机，并用SuperCharge打开即可。源地址如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://repo.supercharge.app/</span><br></pre></td></tr></table></figure>
+
+<h1 id="游戏修改"><a href="#游戏修改" class="headerlink" title="游戏修改"></a>游戏修改</h1><h2 id="必要插件"><a href="#必要插件" class="headerlink" title="必要插件"></a>必要插件</h2><p>一般需要IGG和Filza。</p>
+<p>IGG全称为iGameGuardian，用于修改游戏。安装用嘻哈源即可，官方源如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://aquawu.github.io/igg/</span><br></pre></td></tr></table></figure>
+
+<p>进入插件配置，打开使用储存空间，下限设为0x00000000，上限设为0x150000000，并打开移除未匹配项，打开有号数，完成配置。</p>
+<h2 id="王者荣耀"><a href="#王者荣耀" class="headerlink" title="王者荣耀"></a>王者荣耀</h2><h3 id="修改快捷信息-x2F-语音库"><a href="#修改快捷信息-x2F-语音库" class="headerlink" title="修改快捷信息&#x2F;语音库"></a>修改快捷信息&#x2F;语音库</h3><p>在语音库中清除任意数量的信息（比如4个），然后用<code>小心草丛</code>填入，不要点确定。切到IGG，选择smoba，I32搜索1。</p>
+<p>切回王者荣耀，删除4个<code>小心草丛</code>，选择4个<code>敌人消失</code>填入，不要点确定，再次切到IGG，I32搜索2。</p>
+<p>切回王者荣耀，删除4个<code>敌人消失</code>，选择4个<code>回防高地</code>填入，不要点确定，再次切到IGG，I32搜索3。</p>
+<p>切回王者荣耀，删除4个<code>回防高地</code>，选择4个<code>请求支援</code>填入，不要点确定，再次切到IGG，I32搜索4。</p>
+<p>切回王者荣耀，删除4个<code>请求支援</code>，分别选择<code>小心草丛</code>、<code>敌人消失</code>、<code>回防高地</code>、<code>请求支援</code>，不要点确定。再次切到IGG，上次得到的4-5个结果分别变成了1、2、3、4、5，把这几个数字换成所需要的消息，点确定即可。</p>
+<p>详细的快捷消息代码如下。</p>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>小心草丛</td>
+</tr>
+<tr>
+<td>2</td>
+<td>敌人消失</td>
+</tr>
+<tr>
+<td>3</td>
+<td>回防高地</td>
+</tr>
+<tr>
+<td>4</td>
+<td>请求支援</td>
+</tr>
+<tr>
+<td>5</td>
+<td>猥琐发育，别浪</td>
+</tr>
+<tr>
+<td>6</td>
+<td>注意野区</td>
+</tr>
+<tr>
+<td>7</td>
+<td>保护我方输出</td>
+</tr>
+<tr>
+<td>8</td>
+<td>小心对方偷塔</td>
+</tr>
+<tr>
+<td>9</td>
+<td>稳住，我们能赢</td>
+</tr>
+<tr>
+<td>10</td>
+<td>大家打开语音</td>
+</tr>
+<tr>
+<td>11</td>
+<td>跟着我</td>
+</tr>
+<tr>
+<td>12</td>
+<td>注意分散站位</td>
+</tr>
+<tr>
+<td>13</td>
+<td>注意保护后排</td>
+</tr>
+<tr>
+<td>14</td>
+<td>等等我，马上到</td>
+</tr>
+<tr>
+<td>15</td>
+<td>技能不全，撤退</td>
+</tr>
+<tr>
+<td>16</td>
+<td>状态不好，撤退</td>
+</tr>
+<tr>
+<td>17</td>
+<td>撤退，别打主宰</td>
+</tr>
+<tr>
+<td>18</td>
+<td>撤退，别打暴君</td>
+</tr>
+<tr>
+<td>19</td>
+<td>我回防高地</td>
+</tr>
+<tr>
+<td>20</td>
+<td>集合埋伏</td>
+</tr>
+<tr>
+<td>21</td>
+<td>清理兵线</td>
+</tr>
+<tr>
+<td>22</td>
+<td>我拿buff，谢谢</td>
+</tr>
+<tr>
+<td>23</td>
+<td>集合准备团战</td>
+</tr>
+<tr>
+<td>24</td>
+<td>拖住，我偷塔</td>
+</tr>
+<tr>
+<td>25</td>
+<td>集合进攻暴君</td>
+</tr>
+<tr>
+<td>26</td>
+<td>集合进攻主宰</td>
+</tr>
+<tr>
+<td>27</td>
+<td>全体进攻对抗路</td>
+</tr>
+<tr>
+<td>28</td>
+<td>全体进攻中路</td>
+</tr>
+<tr>
+<td>29</td>
+<td>全体进攻发育路</td>
+</tr>
+<tr>
+<td>30</td>
+<td>优先攻击输出</td>
+</tr>
+<tr>
+<td>31</td>
+<td>优先攻击突进</td>
+</tr>
+<tr>
+<td>32</td>
+<td>优先推塔</td>
+</tr>
+<tr>
+<td>33</td>
+<td>准备越塔强攻</td>
+</tr>
+<tr>
+<td>34</td>
+<td>正在前往支援</td>
+</tr>
+<tr>
+<td>35</td>
+<td>上去开团</td>
+</tr>
+<tr>
+<td>36</td>
+<td>等我集合打团</td>
+</tr>
+<tr>
+<td>37</td>
+<td>我来抓人了</td>
+</tr>
+<tr>
+<td>38</td>
+<td>大招已经好了</td>
+</tr>
+<tr>
+<td>39</td>
+<td>我去抓对抗路</td>
+</tr>
+<tr>
+<td>40</td>
+<td>我去抓中路</td>
+</tr>
+<tr>
+<td>41</td>
+<td>我去抓法语撸</td>
+</tr>
+<tr>
+<td>42</td>
+<td>干得漂亮</td>
+</tr>
+<tr>
+<td>43</td>
+<td>让我独享经验</td>
+</tr>
+<tr>
+<td>44</td>
+<td>[全部]抱歉</td>
+</tr>
+<tr>
+<td>45</td>
+<td>[全部]谢谢你</td>
+</tr>
+<tr>
+<td>46</td>
+<td>[全部]挑衅</td>
+</tr>
+<tr>
+<td>47</td>
+<td>我拿BUFF再团</td>
+</tr>
+<tr>
+<td>48</td>
+<td>别团，等人齐</td>
+</tr>
+<tr>
+<td>49</td>
+<td>收到</td>
+</tr>
+<tr>
+<td>50</td>
+<td>多观察小地图</td>
+</tr>
+<tr>
+<td>51</td>
+<td>团不过先发育</td>
+</tr>
+<tr>
+<td>52</td>
+<td>清完兵线再团</td>
+</tr>
+<tr>
+<td>53</td>
+<td>继续推我回防</td>
+</tr>
+<tr>
+<td>54</td>
+<td>当心敌方陷阱</td>
+</tr>
+<tr>
+<td>55</td>
+<td>I’ll carry you</td>
+</tr>
+<tr>
+<td>56</td>
+<td>集合反蓝</td>
+</tr>
+<tr>
+<td>57</td>
+<td>集合反红</td>
+</tr>
+<tr>
+<td>58</td>
+<td>集合入侵野区</td>
+</tr>
+<tr>
+<td>59</td>
+<td>帮我看红，谢谢</td>
+</tr>
+<tr>
+<td>60</td>
+<td>帮我看蓝，谢谢</td>
+</tr>
+<tr>
+<td>61</td>
+<td>我单带，别接团</td>
+</tr>
+<tr>
+<td>62</td>
+<td>经济落后，别团</td>
+</tr>
+<tr>
+<td>63</td>
+<td>兵线没到，撤退</td>
+</tr>
+<tr>
+<td>64</td>
+<td>敌人偷塔，撤退</td>
+</tr>
+<tr>
+<td>65</td>
+<td>打团了，别单带</td>
+</tr>
+<tr>
+<td>66</td>
+<td>等我复活在团</td>
+</tr>
+<tr>
+<td>67</td>
+<td>注意敌方绕后</td>
+</tr>
+<tr>
+<td>68</td>
+<td>法师来拿蓝</td>
+</tr>
+<tr>
+<td>69</td>
+<td>射手来拿红</td>
+</tr>
+<tr>
+<td>70</td>
+<td>求让BUFF，谢谢</td>
+</tr>
+<tr>
+<td>71</td>
+<td>交个朋友</td>
+</tr>
+<tr>
+<td>72</td>
+<td>新年快乐</td>
+</tr>
+<tr>
+<td>73</td>
+<td>集合进攻龙王</td>
+</tr>
+<tr>
+<td>74</td>
+<td>撤退，别打龙王</td>
+</tr>
+<tr>
+<td>79</td>
+<td>阵营-长城</td>
+</tr>
+<tr>
+<td>80</td>
+<td>阵营-玄雍</td>
+</tr>
+<tr>
+<td>81</td>
+<td>阵营-稷下</td>
+</tr>
+<tr>
+<td>86</td>
+<td>裂开吧！敌人</td>
+</tr>
+<tr>
+<td>91</td>
+<td>打团请保护我</td>
+</tr>
+<tr>
+<td>92</td>
+<td>兄弟，我来了</td>
+</tr>
+<tr>
+<td>93</td>
+<td>别急，有我</td>
+</tr>
+<tr>
+<td>94</td>
+<td>大佬，救命</td>
+</tr>
+</tbody></table>
+<h3 id="修改超长名字"><a href="#修改超长名字" class="headerlink" title="修改超长名字"></a>修改超长名字</h3><p>老账号使用改名卡，在输入框不要输入东西。新账号则在创建昵称界面不要输入文字。</p>
+<p>打开IGG并选择smoba，设置临近范围为0x9，然后i32搜索12。打开联合，i32搜索86400，这时只有一个结果。</p>
+<p>把12改成64，然后清除。再次打开设置，设置临近范围为0x21，然后i32搜索42。打开联合，i32搜索12，把12改成88。</p>
+<p>此时回到游戏界面修改即可，最长21个汉字或61个字母。</p>
+<h3 id="设置三个相同的想玩英雄"><a href="#设置三个相同的想玩英雄" class="headerlink" title="设置三个相同的想玩英雄"></a>设置三个相同的想玩英雄</h3><p>在排位赛页面清除所有自定义英雄，选择第一个英雄（如赵云）。打开IGG并选择smoba，然后I32搜索107（赵云）。</p>
+<p>去掉赵云，再次选择一个英雄（如小乔）。打开IGG，I32搜索106（小乔），此时结果只剩下一个。</p>
+<p>点击内存，再点击右上角移动，此时会跳转到刚才的结果，且底部的两个数值为0。返回王者荣耀，随便选择三个英雄，再打开IGG，此时三个数字均发生变化。</p>
+<p>修改该三个数字为所需要的英雄代码。返回王者荣耀，点击确定，出现三个一样的头像即可。</p>
+<p>头像代码如下。</p>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>105</td>
+<td>廉颇</td>
+</tr>
+<tr>
+<td>106</td>
+<td>小乔</td>
+</tr>
+<tr>
+<td>107</td>
+<td>赵云</td>
+</tr>
+<tr>
+<td>108</td>
+<td>墨子</td>
+</tr>
+<tr>
+<td>109</td>
+<td>妲己</td>
+</tr>
+<tr>
+<td>110</td>
+<td>嬴政</td>
+</tr>
+<tr>
+<td>111</td>
+<td>孙尚香</td>
+</tr>
+<tr>
+<td>112</td>
+<td>鲁班七号</td>
+</tr>
+<tr>
+<td>113</td>
+<td>庄周</td>
+</tr>
+<tr>
+<td>114</td>
+<td>刘婵</td>
+</tr>
+<tr>
+<td>115</td>
+<td>高渐离</td>
+</tr>
+<tr>
+<td>116</td>
+<td>荆轲</td>
+</tr>
+<tr>
+<td>117</td>
+<td>钟无艳</td>
+</tr>
+<tr>
+<td>118</td>
+<td>孙斌</td>
+</tr>
+<tr>
+<td>119</td>
+<td>扁鹊</td>
+</tr>
+<tr>
+<td>120</td>
+<td>白起</td>
+</tr>
+<tr>
+<td>121</td>
+<td>芈月</td>
+</tr>
+<tr>
+<td>122</td>
+<td>诸葛亮（旧）</td>
+</tr>
+<tr>
+<td>123</td>
+<td>吕布</td>
+</tr>
+<tr>
+<td>124</td>
+<td>周瑜</td>
+</tr>
+<tr>
+<td>125</td>
+<td>庞统</td>
+</tr>
+<tr>
+<td>126</td>
+<td>夏侯淳</td>
+</tr>
+<tr>
+<td>127</td>
+<td>甄姬</td>
+</tr>
+<tr>
+<td>128</td>
+<td>曹操</td>
+</tr>
+<tr>
+<td>129</td>
+<td>典韦</td>
+</tr>
+<tr>
+<td>130</td>
+<td>宫本武藏</td>
+</tr>
+<tr>
+<td>131</td>
+<td>李白</td>
+</tr>
+<tr>
+<td>132</td>
+<td>马可波罗（旧）</td>
+</tr>
+<tr>
+<td>133</td>
+<td>狄仁杰</td>
+</tr>
+<tr>
+<td>134</td>
+<td>达摩</td>
+</tr>
+<tr>
+<td>135</td>
+<td>项羽</td>
+</tr>
+<tr>
+<td>136</td>
+<td>武则天</td>
+</tr>
+<tr>
+<td>137</td>
+<td>司马懿</td>
+</tr>
+<tr>
+<td>138</td>
+<td>孔夫子</td>
+</tr>
+<tr>
+<td>140</td>
+<td>关羽</td>
+</tr>
+<tr>
+<td>141</td>
+<td>貂蝉</td>
+</tr>
+<tr>
+<td>142</td>
+<td>安琪拉</td>
+</tr>
+<tr>
+<td>143</td>
+<td>安绿山</td>
+</tr>
+<tr>
+<td>144</td>
+<td>程咬金</td>
+</tr>
+<tr>
+<td>146</td>
+<td>露娜</td>
+</tr>
+<tr>
+<td>148</td>
+<td>姜子牙</td>
+</tr>
+<tr>
+<td>149</td>
+<td>刘邦</td>
+</tr>
+<tr>
+<td>150</td>
+<td>韩信</td>
+</tr>
+<tr>
+<td>152</td>
+<td>王昭君</td>
+</tr>
+<tr>
+<td>153</td>
+<td>兰陵王</td>
+</tr>
+<tr>
+<td>154</td>
+<td>花木兰</td>
+</tr>
+<tr>
+<td>155</td>
+<td>艾琳</td>
+</tr>
+<tr>
+<td>156</td>
+<td>张亮（旧）</td>
+</tr>
+<tr>
+<td>157</td>
+<td>不知火舞</td>
+</tr>
+<tr>
+<td>158</td>
+<td>八神庵</td>
+</tr>
+<tr>
+<td>162</td>
+<td>娜可露露</td>
+</tr>
+<tr>
+<td>163</td>
+<td>橘右京</td>
+</tr>
+<tr>
+<td>166</td>
+<td>亚瑟</td>
+</tr>
+<tr>
+<td>167</td>
+<td>孙悟空</td>
+</tr>
+<tr>
+<td>168</td>
+<td>牛头</td>
+</tr>
+<tr>
+<td>169</td>
+<td>后裔</td>
+</tr>
+<tr>
+<td>170</td>
+<td>刘备</td>
+</tr>
+<tr>
+<td>171</td>
+<td>张飞</td>
+</tr>
+<tr>
+<td>173</td>
+<td>李元芳</td>
+</tr>
+<tr>
+<td>174</td>
+<td>虞姬</td>
+</tr>
+<tr>
+<td>175</td>
+<td>钟馗</td>
+</tr>
+<tr>
+<td>176</td>
+<td>杨玉环</td>
+</tr>
+<tr>
+<td>177</td>
+<td>成吉思汗</td>
+</tr>
+<tr>
+<td>178</td>
+<td>杨戬</td>
+</tr>
+<tr>
+<td>179</td>
+<td>女娲</td>
+</tr>
+<tr>
+<td>180</td>
+<td>哪吒</td>
+</tr>
+<tr>
+<td>182</td>
+<td>干将（旧）</td>
+</tr>
+<tr>
+<td>183</td>
+<td>雅典娜</td>
+</tr>
+<tr>
+<td>184</td>
+<td>蔡文姬</td>
+</tr>
+<tr>
+<td>186</td>
+<td>太乙真人</td>
+</tr>
+<tr>
+<td>187</td>
+<td>东皇太一</td>
+</tr>
+<tr>
+<td>189</td>
+<td>鬼谷子</td>
+</tr>
+<tr>
+<td>190</td>
+<td>诸葛亮</td>
+</tr>
+<tr>
+<td>191</td>
+<td>大乔</td>
+</tr>
+<tr>
+<td>192</td>
+<td>黄忠</td>
+</tr>
+<tr>
+<td>193</td>
+<td>凯</td>
+</tr>
+<tr>
+<td>194</td>
+<td>苏烈</td>
+</tr>
+<tr>
+<td>195</td>
+<td>百里玄策</td>
+</tr>
+<tr>
+<td>196</td>
+<td>百里守约</td>
+</tr>
+<tr>
+<td>197</td>
+<td>异星</td>
+</tr>
+<tr>
+<td>198</td>
+<td>梦琪</td>
+</tr>
+<tr>
+<td>199</td>
+<td>公孙离</td>
+</tr>
+<tr>
+<td>207</td>
+<td>封网</td>
+</tr>
+<tr>
+<td>222</td>
+<td>徐福</td>
+</tr>
+<tr>
+<td>225</td>
+<td>庞统（傀儡）</td>
+</tr>
+<tr>
+<td>237</td>
+<td>司马懿</td>
+</tr>
+<tr>
+<td>240</td>
+<td>觉醒关羽</td>
+</tr>
+<tr>
+<td>241</td>
+<td>金龙</td>
+</tr>
+<tr>
+<td>242</td>
+<td>黑龙</td>
+</tr>
+<tr>
+<td>243</td>
+<td>红龙</td>
+</tr>
+<tr>
+<td>244</td>
+<td>绿龙</td>
+</tr>
+<tr>
+<td>254</td>
+<td>花木兰（重剑）</td>
+</tr>
+<tr>
+<td>305</td>
+<td>廉颇（改版）</td>
+</tr>
+<tr>
+<td>310</td>
+<td>嬴政</td>
+</tr>
+<tr>
+<td>312</td>
+<td>沈梦溪</td>
+</tr>
+<tr>
+<td>320</td>
+<td>宫本武藏（强化）</td>
+</tr>
+<tr>
+<td>332</td>
+<td>马可波罗</td>
+</tr>
+<tr>
+<td>333</td>
+<td>马可波罗（加强）</td>
+</tr>
+<tr>
+<td>346</td>
+<td>露娜（改版）</td>
+</tr>
+<tr>
+<td>355</td>
+<td>艾琳（改版）</td>
+</tr>
+<tr>
+<td>356</td>
+<td>张亮</td>
+</tr>
+<tr>
+<td>366</td>
+<td>亚瑟（改版）</td>
+</tr>
+<tr>
+<td>378</td>
+<td>杨戬（改版）</td>
+</tr>
+<tr>
+<td>382</td>
+<td>干将</td>
+</tr>
+<tr>
+<td>501</td>
+<td>明世隐</td>
+</tr>
+<tr>
+<td>502</td>
+<td>裴擒虎</td>
+</tr>
+<tr>
+<td>503</td>
+<td>狂铁</td>
+</tr>
+<tr>
+<td>504</td>
+<td>米莱狄</td>
+</tr>
+<tr>
+<td>505</td>
+<td>瑶</td>
+</tr>
+<tr>
+<td>506</td>
+<td>云中君</td>
+</tr>
+<tr>
+<td>507</td>
+<td>李信</td>
+</tr>
+<tr>
+<td>508</td>
+<td>伽罗</td>
+</tr>
+<tr>
+<td>509</td>
+<td>盾山</td>
+</tr>
+<tr>
+<td>510</td>
+<td>孙策</td>
+</tr>
+<tr>
+<td>511</td>
+<td>猪八戒</td>
+</tr>
+<tr>
+<td>512</td>
+<td>囚徒</td>
+</tr>
+<tr>
+<td>513</td>
+<td>上官婉儿</td>
+</tr>
+<tr>
+<td>515</td>
+<td>嫦娥</td>
+</tr>
+<tr>
+<td>516</td>
+<td>舜</td>
+</tr>
+<tr>
+<td>518</td>
+<td>马超</td>
+</tr>
+<tr>
+<td>520</td>
+<td>少司命</td>
+</tr>
+<tr>
+<td>522</td>
+<td>东方曜</td>
+</tr>
+<tr>
+<td>523</td>
+<td>西施</td>
+</tr>
+<tr>
+<td>524</td>
+<td>蒙犽</td>
+</tr>
+<tr>
+<td>525</td>
+<td>鲁班大师</td>
+</tr>
+<tr>
+<td>526</td>
+<td>王翦</td>
+</tr>
+<tr>
+<td>527</td>
+<td>蒙恬</td>
+</tr>
+<tr>
+<td>528</td>
+<td>吕蒙</td>
+</tr>
+<tr>
+<td>529</td>
+<td>盘古</td>
+</tr>
+<tr>
+<td>530</td>
+<td>宫本武藏（改版）</td>
+</tr>
+<tr>
+<td>531</td>
+<td>镜</td>
+</tr>
+<tr>
+<td>532</td>
+<td>镜（分身）</td>
+</tr>
+<tr>
+<td>533</td>
+<td>Zombie</td>
+</tr>
+<tr>
+<td>620</td>
+<td>韩信</td>
+</tr>
+<tr>
+<td>621</td>
+<td>庄周</td>
+</tr>
+<tr>
+<td>630</td>
+<td>宫本武藏（改版强化）</td>
+</tr>
+<tr>
+<td>654</td>
+<td>母僵尸</td>
+</tr>
+<tr>
+<td>668</td>
+<td>Zombie</td>
+</tr>
+<tr>
+<td>675</td>
+<td>Zombie</td>
+</tr>
+<tr>
+<td>687</td>
+<td>Zombie</td>
+</tr>
+<tr>
+<td>700</td>
+<td>坦克轮子</td>
+</tr>
+<tr>
+<td>701</td>
+<td>坦克炮管</td>
+</tr>
+<tr>
+<td>732</td>
+<td>马可波罗（旧）</td>
+</tr>
+</tbody></table>
+<p>NPC皮肤代码如下。</p>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>770</td>
+<td>暴君</td>
+</tr>
+<tr>
+<td>771</td>
+<td>主宰（英雄）</td>
+</tr>
+<tr>
+<td>772</td>
+<td>暴君3vs3（英雄）</td>
+</tr>
+<tr>
+<td>773</td>
+<td>年兽（英雄）</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>暴君3vs3</td>
+</tr>
+<tr>
+<td>2145</td>
+<td>主宰</td>
+</tr>
+</tbody></table>
+<p>技能代码如下。</p>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>80101</td>
+<td>监视</td>
+</tr>
+<tr>
+<td>80102</td>
+<td>治疗</td>
+</tr>
+<tr>
+<td>80103</td>
+<td>晕眩</td>
+</tr>
+<tr>
+<td>80104</td>
+<td>惩戒</td>
+</tr>
+<tr>
+<td>80105</td>
+<td>干扰</td>
+</tr>
+<tr>
+<td>80106</td>
+<td>隐遁</td>
+</tr>
+<tr>
+<td>80107</td>
+<td>净化</td>
+</tr>
+<tr>
+<td>80108</td>
+<td>斩杀</td>
+</tr>
+<tr>
+<td>80109</td>
+<td>疾跑</td>
+</tr>
+<tr>
+<td>80110</td>
+<td>狂暴</td>
+</tr>
+<tr>
+<td>80111</td>
+<td>振奋</td>
+</tr>
+<tr>
+<td>80112</td>
+<td>月之守护</td>
+</tr>
+<tr>
+<td>80115</td>
+<td>闪现</td>
+</tr>
+<tr>
+<td>80116</td>
+<td>寒冰惩戒</td>
+</tr>
+<tr>
+<td>80117</td>
+<td>传送</td>
+</tr>
+<tr>
+<td>80121</td>
+<td>弱化</td>
+</tr>
+<tr>
+<td>80122</td>
+<td>PVE闪现</td>
+</tr>
+<tr>
+<td>81102</td>
+<td>坚定意志</td>
+</tr>
+<tr>
+<td>81107</td>
+<td>不灭信仰</td>
+</tr>
+<tr>
+<td>81109</td>
+<td>奔狼号令</td>
+</tr>
+<tr>
+<td>81110</td>
+<td>幽梦之息</td>
+</tr>
+<tr>
+<td>81112</td>
+<td>时光凝滞</td>
+</tr>
+</tbody></table>
+<p>地图代码如下。</p>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>4010</td>
+<td>变身大乱斗（地图）</td>
+</tr>
+<tr>
+<td>41150</td>
+<td>抢鲲大乱斗（娱乐地图）</td>
+</tr>
+<tr>
+<td>20001</td>
+<td>经典1v1（竞技地图）</td>
+</tr>
+<tr>
+<td>20002</td>
+<td>经典3v3（竞技地图）</td>
+</tr>
+<tr>
+<td>20009</td>
+<td>火焰山（娱乐地图）</td>
+</tr>
+<tr>
+<td>20011</td>
+<td>经典5v5（竞技地图）</td>
+</tr>
+<tr>
+<td>20012</td>
+<td>无限乱斗（娱乐地图）</td>
+</tr>
+<tr>
+<td>20013</td>
+<td>无限火力（娱乐地图）</td>
+</tr>
+<tr>
+<td>20015</td>
+<td>迷雾模式（娱乐地图）</td>
+</tr>
+<tr>
+<td>20016</td>
+<td>荣耀峡谷（竞技地图）</td>
+</tr>
+<tr>
+<td>20017</td>
+<td>无限乱斗（娱乐地图）</td>
+</tr>
+<tr>
+<td>20018</td>
+<td>实战训练（地图）</td>
+</tr>
+<tr>
+<td>20028</td>
+<td>五军对决（娱乐地图）</td>
+</tr>
+<tr>
+<td>20040</td>
+<td>实战模拟（快速地图）</td>
+</tr>
+<tr>
+<td>20041</td>
+<td>实战模拟（标准地图）</td>
+</tr>
+<tr>
+<td>20071</td>
+<td>抢鲲模式（娱乐地图）</td>
+</tr>
+<tr>
+<td>20072</td>
+<td>强化模式（娱乐地图）</td>
+</tr>
+<tr>
+<td>20080</td>
+<td>快跑模式（娱乐地图）</td>
+</tr>
+<tr>
+<td>20099</td>
+<td>无塔1v1（竞技地图）</td>
+</tr>
+<tr>
+<td>20699</td>
+<td>无塔3v1（竞技地图）</td>
+</tr>
+<tr>
+<td>20999</td>
+<td>无塔5v5（竞技地图）</td>
+</tr>
+<tr>
+<td>20111</td>
+<td>征兆模式（竞技地图）</td>
+</tr>
+<tr>
+<td>20151</td>
+<td>CS模式（竞技地图）</td>
+</tr>
+<tr>
+<td>21000</td>
+<td>峡谷大乱斗（地图）</td>
+</tr>
+<tr>
+<td>21001</td>
+<td>峡谷大乱斗（地图）</td>
+</tr>
+</tbody></table>
+<p>攻速上限代码如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">163840000；32768000</span><br></pre></td></tr></table></figure>
+
+<p>TS视角如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1500000-165000  修改167888</span><br><span class="line">Online-基址FD38  Beta-基址FD68</span><br><span class="line">154444-174444  修改160001</span><br></pre></td></tr></table></figure>
+
+<p>3D视角如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1097285734</span><br></pre></td></tr></table></figure>
+
+<p>上帝视角如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1,081,006,571;</span><br><span class="line">-1，25，</span><br><span class="line">-1,125,398;</span><br><span class="line">-1,082,130,432;</span><br><span class="line">-1,088,838,298::37</span><br><span class="line">改</span><br><span class="line">-1,082,130,32</span><br></pre></td></tr></table></figure>
+
+<h3 id="体验隐藏角色"><a href="#体验隐藏角色" class="headerlink" title="体验隐藏角色"></a>体验隐藏角色</h3><p>打开王者荣耀，进入单机模式，选择任意难度进入房间。任意选择英雄，此处以廉颇（105）为例。切到IGG，选择smoba，I32搜索105。</p>
+<p>回到王者荣耀，选择小乔（106），切到IGG，I32搜索106。点右上角开关，再点左上角全改，此处测试将数值改成武则天（136）。回到王者荣耀，点击皮肤，变成武则天，开局。</p>
+<p>退出本局游戏，再开一次房间，任意选个英雄，切到IGG，点全改，改为艾琳（155）或年兽（773）等其他特殊隐藏角色&#x2F;NPC。回到王者荣耀，开局即可。</p>
+<p>若读条中英雄图像是白色，并且游戏崩溃，则划掉后台，重新操作。如再次操作依然崩溃，说明该英雄资源不存在，不支持修改。</p>
+<h3 id="享受定位特权"><a href="#享受定位特权" class="headerlink" title="享受定位特权"></a>享受定位特权</h3><p>下载王者人生APP并打开，可查找到能享受特权的店铺。以KFC为例，记住其位置。下载Wifi万能钥匙，查找该特权店对应的Wi-Fi名称，此处为KFC FREE WIFI。</p>
+<p>安装Fake GPS Pro插件，进入Wifi信息修改，设置成KFC FREE WIFI，MAC地址可以任意。安装Anywhere插件，寻找到特权店铺的位置，扎标，然后点击上面跳出的地址推荐，再选择应用到王者荣耀和王者人生。进入王者荣耀，若出现王者特权提示，则成功。否则需要在Anywhere中微调位置直至出现弹窗为止。</p>
+<p>或者可以通过修改经纬度的方式实现修改定位。打开flex3，添加王者荣耀，搜索privilegeManager，进入后再搜setuserlatitude longitude。勾选后返回，输入特权店的经纬度即可。修改Wi-Fi和MAC地址则同上。</p>
+<h3 id="修改荣耀战区"><a href="#修改荣耀战区" class="headerlink" title="修改荣耀战区"></a>修改荣耀战区</h3><p>修改定位方法同上，修改定位完成后进入游戏即可修改战区。注意每周一才可修改。</p>
+<h3 id="修改技能效果"><a href="#修改技能效果" class="headerlink" title="修改技能效果"></a>修改技能效果</h3><p>下列步骤必须在游戏中进行修改，且必须落地后在购买装备点击技能的时候进行修改。注意一局只能修改一次。</p>
+<p>打开王者荣耀后，IGG进入smoba，I32搜索<code>英雄代码+00</code>，如搜索墨子则为10800。打开联合开关，搜索100，关闭联合开关，搜索<code>英雄代码+00</code>，全部改0即可。</p>
+<p>常见代码及对应技能如下。</p>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>英雄名称</th>
+<th>技能效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>108</td>
+<td>墨子</td>
+<td>无限击退（被动）</td>
+</tr>
+<tr>
+<td>112</td>
+<td>鲁班</td>
+<td>无限biubiubiu（被动）</td>
+</tr>
+<tr>
+<td>114</td>
+<td>刘禅</td>
+<td>无限锤（一技能）</td>
+</tr>
+<tr>
+<td>129</td>
+<td>典韦</td>
+<td>无限乱舞（一技能）</td>
+</tr>
+<tr>
+<td>133</td>
+<td>狄仁杰</td>
+<td>无限卡牌（强化被动）</td>
+</tr>
+<tr>
+<td>134</td>
+<td>达摩</td>
+<td>无限回血（强化被动）</td>
+</tr>
+<tr>
+<td>146</td>
+<td>露娜</td>
+<td>无限标记（强化被动）</td>
+</tr>
+<tr>
+<td>149</td>
+<td>刘邦</td>
+<td>无限剑气</td>
+</tr>
+<tr>
+<td>150</td>
+<td>韩信</td>
+<td>无限挑飞</td>
+</tr>
+<tr>
+<td>152</td>
+<td>王昭君</td>
+<td>无限下雨</td>
+</tr>
+<tr>
+<td>162</td>
+<td>娜可露露</td>
+<td>强化普攻</td>
+</tr>
+<tr>
+<td>163</td>
+<td>橘右京</td>
+<td>无限拔刀斩（被动）</td>
+</tr>
+<tr>
+<td>166</td>
+<td>亚瑟</td>
+<td>无限沉默（被动）</td>
+</tr>
+<tr>
+<td>167</td>
+<td>孙悟空</td>
+<td>无限棍子（被动）</td>
+</tr>
+<tr>
+<td>170</td>
+<td>刘备</td>
+<td>无限两次弹射</td>
+</tr>
+<tr>
+<td>194</td>
+<td>苏烈</td>
+<td>无限击飞</td>
+</tr>
+<tr>
+<td>198</td>
+<td>梦琪</td>
+<td>无限三爪击</td>
+</tr>
+<tr>
+<td>305</td>
+<td>廉颇</td>
+<td>强化普攻</td>
+</tr>
+<tr>
+<td>503</td>
+<td>狂铁</td>
+<td>无限击飞</td>
+</tr>
+<tr>
+<td>506</td>
+<td>云中君</td>
+<td>飞行状态下无限撕裂状态</td>
+</tr>
+<tr>
+<td>510</td>
+<td>孙策</td>
+<td>无限回血（被动）</td>
+</tr>
+</tbody></table>
+<h2 id="激门峡谷"><a href="#激门峡谷" class="headerlink" title="激门峡谷"></a>激门峡谷</h2><p>以下方法不适用于iOS13以下系统。</p>
+<p>打开Filza，找到APP管理器，点击LOL右侧的<code>i</code>。点击主程序，进入wildrift.app目录，找到主程序wildrift，点击右侧的<code>i</code>。点击打开方式-十六进制编辑器，返回后点击主程序wildrift。</p>
+<p>按照以下内容完成修改后保存，然后重新下载游戏以避免闪退。</p>
+<h3 id="透视"><a href="#透视" class="headerlink" title="透视"></a>透视</h3><p>选择左侧地址码并输入<code>01FD1FD0</code>，将<code>08 41 40 39</code>修改为<code>08 00 80 D2</code>。</p>
+<h3 id="除雾"><a href="#除雾" class="headerlink" title="除雾"></a>除雾</h3><p>选择左侧地址码并输入<code>01FCF238</code>，将<code>49 71 5F B8</code>修改为<code>C0 03 5F D6</code>。</p>
+<h2 id="王牌战士"><a href="#王牌战士" class="headerlink" title="王牌战士"></a>王牌战士</h2><p>必须在游戏中进行修改，必须加载完之后修改，一局只能修改一次。</p>
+<h3 id="游击型英雄无后"><a href="#游击型英雄无后" class="headerlink" title="游击型英雄无后"></a>游击型英雄无后</h3><p>F32搜25，全部改0即可。</p>
+<h3 id="赵海龙独立无后"><a href="#赵海龙独立无后" class="headerlink" title="赵海龙独立无后"></a>赵海龙独立无后</h3><p>F32搜25，联合F32搜35，全部改0即可。</p>
+<h3 id="赵海龙隐身"><a href="#赵海龙隐身" class="headerlink" title="赵海龙隐身"></a>赵海龙隐身</h3><p>F32搜0.0025，全部改99即可。</p>
+<h3 id="自瞄"><a href="#自瞄" class="headerlink" title="自瞄"></a>自瞄</h3><p>游戏中需要关闭辅助瞄准。</p>
+<p>i64搜4816377120，联合i64搜3212836864，修改为4811533255104790528即可。</p>
+<h1 id="系统多开"><a href="#系统多开" class="headerlink" title="系统多开"></a>系统多开</h1><p>旧系统可使用coolbooter。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://coolbooter.com/</span><br></pre></td></tr></table></figure>
+
+<p>coolbooter需要用1.5版本。若使用socket越狱，则需要重签app以获取权限。</p>
+<p>使用前先安装newterm2和container-resign，然后打开newterm2并输入以下命令。完成后打开coolbooter即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 密码alpine</span><br><span class="line">su</span><br><span class="line">container-resign /Applications/coolbooter.app/coolbooter</span><br></pre></td></tr></table></figure>
+
+<h1 id="建立SSH连接"><a href="#建立SSH连接" class="headerlink" title="建立SSH连接"></a>建立SSH连接</h1><p>将手机连接到电脑后，在电脑端打开爱思助手，在工具箱中选择打开SSH连接，记下IP和端口，其中127.0.0.1可以用localhost代替。</p>
+<p>打开终端并输入以下命令，即可建立SSH连接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 2222为端口，localhost为IP</span><br><span class="line">ssh -p 2222 root@localhost</span><br></pre></td></tr></table></figure>
+
+<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="Cydia无法联网"><a href="#Cydia无法联网" class="headerlink" title="Cydia无法联网"></a>Cydia无法联网</h2><p>可用爱思助手安装1.2.3版本的乐网，暂时让Cydia联网。然后安装<code>连个锤子-越狱联网一键修复</code>插件，官方源如下。打开插件，点击修复网络，等待修复完成后注销即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://apt.tinyapps.cn/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Cydia提示证书无效"><a href="#Cydia提示证书无效" class="headerlink" title="Cydia提示证书无效"></a>Cydia提示证书无效</h2><p>修改系统时间到当前时间即可。</p>
+<h2 id="Cydia出现红色Depend依赖"><a href="#Cydia出现红色Depend依赖" class="headerlink" title="Cydia出现红色Depend依赖"></a>Cydia出现红色Depend依赖</h2><p>缺失依赖的越狱源失效，翻墙后重新刷新源即可。</p>
+<h2 id="Sileo提示「unable-to-fetch-some-archives」"><a href="#Sileo提示「unable-to-fetch-some-archives」" class="headerlink" title="Sileo提示「unable to fetch some archives」"></a>Sileo提示「unable to fetch some archives」</h2><p>若在手机端已安装NewTerm插件，则打开NewTerm并执行以下命令即可。若未安装，则先通过SSH使电脑连接到手机，然后在电脑端执行以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get update --fix-missing</span><br><span class="line">killall SpringBoard</span><br></pre></td></tr></table></figure>
+
+<h2 id="Slieo提示Target-Packages-is-configured-multiple-times"><a href="#Slieo提示Target-Packages-is-configured-multiple-times" class="headerlink" title="Slieo提示Target Packages is configured multiple times"></a>Slieo提示Target Packages is configured multiple times</h2><p>在Slieo和Cydia中添加的源地址与名字冲突，在两边均添加同一个源时可能会出现该情况。总体不影响使用，建议卸载Cydia，并在NewTerm输入以下命令以移除cydia.list文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/apt/sources.list.d</span><br></pre></td></tr></table></figure>
+
+<h2 id="Slieo提示trying-to-overwrite-‘xxx’，with-is-also-in-package-xxx-1-0"><a href="#Slieo提示trying-to-overwrite-‘xxx’，with-is-also-in-package-xxx-1-0" class="headerlink" title="Slieo提示trying to overwrite ‘xxx’，with is also in package xxx 1.0"></a>Slieo提示trying to overwrite ‘xxx’，with is also in package xxx 1.0</h2><p>安装冲突。可以先卸载提示中的安装包，再尝试安装。</p>
+<h2 id="Slieo提示missing-‘Description’-field"><a href="#Slieo提示missing-‘Description’-field" class="headerlink" title="Slieo提示missing ‘Description’ field"></a>Slieo提示missing ‘Description’ field</h2><p>插件包缺少描述等相关信息。不影响环境和插件的使用。</p>
+<h2 id="Slieo提示’Version’-field-value-‘’-version-string-is-empty"><a href="#Slieo提示’Version’-field-value-‘’-version-string-is-empty" class="headerlink" title="Slieo提示’Version’ field value ‘’: version string is empty"></a>Slieo提示’Version’ field value ‘’: version string is empty</h2><p>部分插件或脚本破坏了越狱环境。打开Fliza，进入路径&#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;status，备份status文件后点击，选择文本编辑器模式打开。搜索lib.corefoundation，在Version一栏填写1676.10，存储即可。</p>
+<h2 id="Slieo提示Depends-PreferenceLoader"><a href="#Slieo提示Depends-PreferenceLoader" class="headerlink" title="Slieo提示Depends PreferenceLoader"></a>Slieo提示Depends PreferenceLoader</h2><p>切换到软件包选项卡，点击日期旁边的三条横线，然后点击开发者以切换到开发者模式，然后搜索PreferenceLoader，安装即可。</p>
+<h2 id="无法正常内购"><a href="#无法正常内购" class="headerlink" title="无法正常内购"></a>无法正常内购</h2><p>此问题是itunesstored进程无法正常启动所导致。若安装了内购破解插件，如LocalIAPStore，先尝试关闭或卸载。</p>
+<p>若无效，则可使用DaemonDisabler开启itunesstored进程，插件源如下。安装后在插件设置中打开com.apple.itunesstored.plist，然后软重启。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://level3tjg.xyz/repo/</span><br></pre></td></tr></table></figure>
+
+<p>若仍无效，可尝试使用Choicy禁止注入itunesstored。安装Choicy插件并进入Choicy设置，选择进程配置-守护进程，拉到最底部，点击显示所有守护进程，找到itunesstored后点击进入，打开禁用插件注入开关。注销并测试是否可以正常内购。</p>
+<p>若依旧无法正常内购，可尝试重启或在安全模式下进行内购。</p>
+<h2 id="电脑连接SSH时提示「WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED-」"><a href="#电脑连接SSH时提示「WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED-」" class="headerlink" title="电脑连接SSH时提示「WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!」"></a>电脑连接SSH时提示「WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!」</h2><p>打开用户目录下的.ssh&#x2F;known_hosts文件，将有手机IP地址的记录删掉即可。</p>
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="iOS越狱教程-内存基址修改器的外番-二"><a href="#iOS越狱教程-内存基址修改器的外番-二" class="headerlink" title="iOS越狱教程-内存基址修改器的外番(二)"></a>iOS越狱教程-内存基址修改器的外番(二)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/LJAhI2pGOlnmxne6TAnBCw</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS越狱教程-内存基址修改器的神奇之处-十二"><a href="#iOS越狱教程-内存基址修改器的神奇之处-十二" class="headerlink" title="iOS越狱教程-内存基址修改器的神奇之处(十二)"></a>iOS越狱教程-内存基址修改器的神奇之处(十二)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/0Je9UhWjVTuK-WIDcP886A</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS越狱教程-内存基址修改器的外番-三"><a href="#iOS越狱教程-内存基址修改器的外番-三" class="headerlink" title="iOS越狱教程-内存基址修改器的外番(三)"></a>iOS越狱教程-内存基址修改器的外番(三)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/Il5_Gsbf89McIBM70zdNJg</span><br></pre></td></tr></table></figure>
+
+<h2 id="王者荣耀修改教程"><a href="#王者荣耀修改教程" class="headerlink" title="王者荣耀修改教程"></a>王者荣耀修改教程</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/kawj3yg4lklM7BGrM4lXew</span><br><span class="line">https://mp.weixin.qq.com/s/5g0pjMRXkZc0g1hvs9oqoQ</span><br><span class="line">https://mp.weixin.qq.com/s/kAwToNnMArbyG9hk-nzalg</span><br><span class="line">https://mp.weixin.qq.com/s/trKrmzkOg8qUx9LVGu3WCg</span><br><span class="line">https://mp.weixin.qq.com/s/21gSod8io0L4ygYIK2C0vg</span><br><span class="line">https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;__biz=MzA5OTU0MTE1MQ==&amp;scene=1&amp;album_id=1318325233564172288#wechat_redirect</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/Instructions-Of-Spotify.html" rel="prev" title="Spotify使用指南">
+      <i class="fa fa-chevron-left"></i> Spotify使用指南
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/iOS-Network-Tool-Usage.html" rel="next" title="iOS网络调试工具的使用">
+      iOS网络调试工具的使用 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TODOS"><span class="nav-text">TODOS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97"><span class="nav-text">应用商店</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Zebra"><span class="nav-text">Zebra</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Installer"><span class="nav-text">Installer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AltStore"><span class="nav-text">AltStore</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A5%E4%B8%81%E8%BD%AF%E4%BB%B6"><span class="nav-text">补丁软件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Flex-3"><span class="nav-text">Flex 3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%92%8C%E7%A0%B4%E8%A7%A3"><span class="nav-text">安装和破解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E8%A1%A5%E4%B8%81"><span class="nav-text">手动添加补丁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A5%E4%B8%81%E5%88%B6%E4%BD%9C"><span class="nav-text">补丁制作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A5%E4%B8%81%E5%88%97%E8%A1%A8"><span class="nav-text">补丁列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%94%AF%E4%BB%98%E5%AE%9D%E5%8D%81%E4%B8%87%E6%AD%A5%E6%95%B0"><span class="nav-text">支付宝十万步数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Thor%E7%A7%BB%E9%99%A4%E9%AA%8C%E8%AF%81%E8%AE%BE%E5%A4%87%E9%AA%8C%E8%AF%81"><span class="nav-text">Thor移除验证设备验证</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SuperCharge"><span class="nav-text">SuperCharge</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B8%B8%E6%88%8F%E4%BF%AE%E6%94%B9"><span class="nav-text">游戏修改</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%85%E8%A6%81%E6%8F%92%E4%BB%B6"><span class="nav-text">必要插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80"><span class="nav-text">王者荣耀</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E5%BF%AB%E6%8D%B7%E4%BF%A1%E6%81%AF-x2F-%E8%AF%AD%E9%9F%B3%E5%BA%93"><span class="nav-text">修改快捷信息&#x2F;语音库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E8%B6%85%E9%95%BF%E5%90%8D%E5%AD%97"><span class="nav-text">修改超长名字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E4%B8%89%E4%B8%AA%E7%9B%B8%E5%90%8C%E7%9A%84%E6%83%B3%E7%8E%A9%E8%8B%B1%E9%9B%84"><span class="nav-text">设置三个相同的想玩英雄</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%93%E9%AA%8C%E9%9A%90%E8%97%8F%E8%A7%92%E8%89%B2"><span class="nav-text">体验隐藏角色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%AB%E5%8F%97%E5%AE%9A%E4%BD%8D%E7%89%B9%E6%9D%83"><span class="nav-text">享受定位特权</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E8%8D%A3%E8%80%80%E6%88%98%E5%8C%BA"><span class="nav-text">修改荣耀战区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%8A%80%E8%83%BD%E6%95%88%E6%9E%9C"><span class="nav-text">修改技能效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BF%80%E9%97%A8%E5%B3%A1%E8%B0%B7"><span class="nav-text">激门峡谷</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%8F%E8%A7%86"><span class="nav-text">透视</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%99%A4%E9%9B%BE"><span class="nav-text">除雾</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%8B%E7%89%8C%E6%88%98%E5%A3%AB"><span class="nav-text">王牌战士</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%B8%E5%87%BB%E5%9E%8B%E8%8B%B1%E9%9B%84%E6%97%A0%E5%90%8E"><span class="nav-text">游击型英雄无后</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B5%B5%E6%B5%B7%E9%BE%99%E7%8B%AC%E7%AB%8B%E6%97%A0%E5%90%8E"><span class="nav-text">赵海龙独立无后</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B5%B5%E6%B5%B7%E9%BE%99%E9%9A%90%E8%BA%AB"><span class="nav-text">赵海龙隐身</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E7%9E%84"><span class="nav-text">自瞄</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%A4%9A%E5%BC%80"><span class="nav-text">系统多开</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8BSSH%E8%BF%9E%E6%8E%A5"><span class="nav-text">建立SSH连接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cydia%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91"><span class="nav-text">Cydia无法联网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cydia%E6%8F%90%E7%A4%BA%E8%AF%81%E4%B9%A6%E6%97%A0%E6%95%88"><span class="nav-text">Cydia提示证书无效</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cydia%E5%87%BA%E7%8E%B0%E7%BA%A2%E8%89%B2Depend%E4%BE%9D%E8%B5%96"><span class="nav-text">Cydia出现红色Depend依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sileo%E6%8F%90%E7%A4%BA%E3%80%8Cunable-to-fetch-some-archives%E3%80%8D"><span class="nav-text">Sileo提示「unable to fetch some archives」</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Slieo%E6%8F%90%E7%A4%BATarget-Packages-is-configured-multiple-times"><span class="nav-text">Slieo提示Target Packages is configured multiple times</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Slieo%E6%8F%90%E7%A4%BAtrying-to-overwrite-%E2%80%98xxx%E2%80%99%EF%BC%8Cwith-is-also-in-package-xxx-1-0"><span class="nav-text">Slieo提示trying to overwrite ‘xxx’，with is also in package xxx 1.0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Slieo%E6%8F%90%E7%A4%BAmissing-%E2%80%98Description%E2%80%99-field"><span class="nav-text">Slieo提示missing ‘Description’ field</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Slieo%E6%8F%90%E7%A4%BA%E2%80%99Version%E2%80%99-field-value-%E2%80%98%E2%80%99-version-string-is-empty"><span class="nav-text">Slieo提示’Version’ field value ‘’: version string is empty</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Slieo%E6%8F%90%E7%A4%BADepends-PreferenceLoader"><span class="nav-text">Slieo提示Depends PreferenceLoader</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E5%86%85%E8%B4%AD"><span class="nav-text">无法正常内购</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E8%84%91%E8%BF%9E%E6%8E%A5SSH%E6%97%B6%E6%8F%90%E7%A4%BA%E3%80%8CWARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED-%E3%80%8D"><span class="nav-text">电脑连接SSH时提示「WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!」</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS%E8%B6%8A%E7%8B%B1%E6%95%99%E7%A8%8B-%E5%86%85%E5%AD%98%E5%9F%BA%E5%9D%80%E4%BF%AE%E6%94%B9%E5%99%A8%E7%9A%84%E5%A4%96%E7%95%AA-%E4%BA%8C"><span class="nav-text">iOS越狱教程-内存基址修改器的外番(二)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS%E8%B6%8A%E7%8B%B1%E6%95%99%E7%A8%8B-%E5%86%85%E5%AD%98%E5%9F%BA%E5%9D%80%E4%BF%AE%E6%94%B9%E5%99%A8%E7%9A%84%E7%A5%9E%E5%A5%87%E4%B9%8B%E5%A4%84-%E5%8D%81%E4%BA%8C"><span class="nav-text">iOS越狱教程-内存基址修改器的神奇之处(十二)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS%E8%B6%8A%E7%8B%B1%E6%95%99%E7%A8%8B-%E5%86%85%E5%AD%98%E5%9F%BA%E5%9D%80%E4%BF%AE%E6%94%B9%E5%99%A8%E7%9A%84%E5%A4%96%E7%95%AA-%E4%B8%89"><span class="nav-text">iOS越狱教程-内存基址修改器的外番(三)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E4%BF%AE%E6%94%B9%E6%95%99%E7%A8%8B"><span class="nav-text">王者荣耀修改教程</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

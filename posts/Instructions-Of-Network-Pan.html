@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="以百度网盘为例。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网盘使用指南">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/Instructions-Of-Network-Pan.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="以百度网盘为例。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/Instructions-Of-Network-Pan/topic.jpg">
+<meta property="article:published_time" content="2020-04-25T00:54:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.587Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/Instructions-Of-Network-Pan/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/Instructions-Of-Network-Pan.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>网盘使用指南 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/Instructions-Of-Network-Pan.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          网盘使用指南
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-25 08:54:29" itemprop="dateCreated datePublished" datetime="2020-04-25T08:54:29+08:00">2020-04-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Skill/" itemprop="url" rel="index"><span itemprop="name">Skill</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>6.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/Instructions-Of-Network-Pan/topic.jpg"></p>
+<p>以百度网盘为例。</p>
+<span id="more"></span>
+
+<h1 id="下载加速"><a href="#下载加速" class="headerlink" title="下载加速"></a>下载加速</h1><p>最新方法可见以下链接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.yuque.com/docs/share/8fe426f8-3ba6-4805-b382-733fb351c6ae</span><br></pre></td></tr></table></figure>
+
+<h2 id="Cheat-Engine"><a href="#Cheat-Engine" class="headerlink" title="Cheat Engine"></a>Cheat Engine</h2><p>下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://ltribe.lanzout.com/igKzK0r2tuze</span><br></pre></td></tr></table></figure>
+
+<p>打开百度网盘客户端和Cheat Engine，点击左上角图标打开进程列表，点击BaiduNetdiskHost.exe，右侧勾选<code>启用速度修改</code>，拉满即可。</p>
+<h2 id="百度企业网盘"><a href="#百度企业网盘" class="headerlink" title="百度企业网盘"></a>百度企业网盘</h2><p>打开以下链接以开启企业网盘，然后导入百度网盘文件并下载即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://eyun.baidu.com/enterprise/package</span><br></pre></td></tr></table></figure>
+
+<h2 id="BaiduNetdiskPlugin-macOS"><a href="#BaiduNetdiskPlugin-macOS" class="headerlink" title="BaiduNetdiskPlugin-macOS"></a>BaiduNetdiskPlugin-macOS</h2><p>打开终端，输入下列命令以执行破解脚本。注意，只适用于2.2.2及以下的版本，2.2.3以后均加入了监测机制。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Downloads &amp;&amp; git clone https://github.com/CodeTips/BaiduNetdiskPlugin-macOS.git &amp;&amp; ./BaiduNetdiskPlugin-macOS/Other/Install.sh</span><br></pre></td></tr></table></figure>
+
+<p>完成后打开百度云盘，此时要输入大概十次系统密码，进入云盘界面发现限速已经破解。下载时点击<code>免费试用</code>，倒计时将会保持在8秒。</p>
+<h2 id="KinhDown"><a href="#KinhDown" class="headerlink" title="KinhDown"></a>KinhDown</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://kinhdown.kinh.cc</span><br></pre></td></tr></table></figure>
+
+<h2 id="bdmaster"><a href="#bdmaster" class="headerlink" title="bdmaster"></a>bdmaster</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.lanzous.com/b825731/</span><br></pre></td></tr></table></figure>
+
+<h2 id="网盘直链下载助手"><a href="#网盘直链下载助手" class="headerlink" title="网盘直链下载助手"></a>网盘直链下载助手</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.baiduyun.wiki/</span><br></pre></td></tr></table></figure>
+
+<h2 id="PDown"><a href="#PDown" class="headerlink" title="PDown"></a>PDown</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://wwa.lanzous.com/i8sIMdl40be</span><br><span class="line">https://github.com/pdown2020/pdown</span><br></pre></td></tr></table></figure>
+
+<h2 id="Firefox-IDM"><a href="#Firefox-IDM" class="headerlink" title="Firefox+IDM"></a>Firefox+IDM</h2><h3 id="直接安装"><a href="#直接安装" class="headerlink" title="直接安装"></a>直接安装</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 32位浏览器</span><br><span class="line">https://lanzous.com/ibp84ud</span><br><span class="line"></span><br><span class="line">// 64位浏览器</span><br><span class="line">https://lanzous.com/ibp87vc</span><br><span class="line"></span><br><span class="line">// idm直装版</span><br><span class="line">https://lanzous.com/ibp884b</span><br></pre></td></tr></table></figure>
+
+<h3 id="手动安装"><a href="#手动安装" class="headerlink" title="手动安装"></a>手动安装</h3><p>在Chrome中安装好Tempermonkey，然后安装以下脚本。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://greasyfork.org/zh-CN/scripts/378301-%E7%BD%91%E7%9B%98%E5%8A%A9%E6%89%8B</span><br></pre></td></tr></table></figure>
+
+<h2 id="度盘速下"><a href="#度盘速下" class="headerlink" title="度盘速下"></a>度盘速下</h2><p>需要在IDM中设置下载任务时使用的用户代理为<code>LogStatistic</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://byu5.cn/baiduwp/</span><br></pre></td></tr></table></figure>
+
+<h2 id="雷鸟下载"><a href="#雷鸟下载" class="headerlink" title="雷鸟下载"></a>雷鸟下载</h2><p>暂时失效。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://thunderbird.lanzous.com/b01bdspaj</span><br></pre></td></tr></table></figure>
+
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># PanDownload修改版</span><br><span class="line">http://pandownload.net/</span><br><span class="line"></span><br><span class="line"># baiduwp</span><br><span class="line">https://github.com/TkzcM/baiduwp</span><br><span class="line"></span><br><span class="line"># KinhDown</span><br><span class="line">https://kinhdown.com/</span><br><span class="line"></span><br><span class="line"># 数码小站</span><br><span class="line">https://ltribe.lanzout.com/ijlMHxl14qf</span><br><span class="line"></span><br><span class="line"># 其它</span><br><span class="line">https://wwc.lanzouy.com/b03j3679i（密码 / 0000）</span><br></pre></td></tr></table></figure>
+
+<h1 id="网盘挂载"><a href="#网盘挂载" class="headerlink" title="网盘挂载"></a>网盘挂载</h1><p>可使用AList。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://alist.nn.ci/zh/</span><br></pre></td></tr></table></figure>
+
+<p>可搭配RaiDrive将网盘映射为本地磁盘。下载并安装以下安装包。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.raidrive.com.cn/</span><br></pre></td></tr></table></figure>
+
+<p>打开后点击添加-NAS-WebDav，取消勾选<code>地址</code>选项，填写<code>http://127.0.0.1:5244</code>，路径为<code>/dav</code>，输入帐号和密码后连接即可。</p>
+<h1 id="网盘中转"><a href="#网盘中转" class="headerlink" title="网盘中转"></a>网盘中转</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://www.mipony.net/en/</span><br><span class="line">https://suufun.com/</span><br></pre></td></tr></table></figure>
+
+<h1 id="网盘管理"><a href="#网盘管理" class="headerlink" title="网盘管理"></a>网盘管理</h1><h2 id="MultCloud"><a href="#MultCloud" class="headerlink" title="MultCloud"></a>MultCloud</h2><p>通过一个应用程序传输和管理多个云文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.multcloud.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="DockerRegisterCloud"><a href="#DockerRegisterCloud" class="headerlink" title="DockerRegisterCloud"></a>DockerRegisterCloud</h2><p>基于Docker仓库协议的网盘客户端，可以将目前众多的免费容器仓库服务用于网盘。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/xausky/DockerRegisterCloud</span><br></pre></td></tr></table></figure>
+
+<h1 id="百度网盘"><a href="#百度网盘" class="headerlink" title="百度网盘"></a>百度网盘</h1><h2 id="自动填写提取码"><a href="#自动填写提取码" class="headerlink" title="自动填写提取码"></a>自动填写提取码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 凌风云网盘助手</span><br><span class="line">https://plug.lingfengyun.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="视频倍速播放"><a href="#视频倍速播放" class="headerlink" title="视频倍速播放"></a>视频倍速播放</h2><p>切换为电脑版，或用夸克浏览器、Alook浏览器，或用ES文件管理器。也可使用以下脚本。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://greasyfork.org/zh-CN/scripts/382913</span><br></pre></td></tr></table></figure>
+
+<p>也可打开视频后按F12，切换到Console一栏并输入以下代码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">videojs.getPlayers(&quot;video-player&quot;).html5player.tech_.setPlaybackRate(2)</span><br></pre></td></tr></table></figure>
+
+<h2 id="免费领取会员"><a href="#免费领取会员" class="headerlink" title="免费领取会员"></a>免费领取会员</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://ltribe.lanzout.com/ifW0q015eqqd</span><br></pre></td></tr></table></figure>
+
+<h2 id="搜索网盘内容"><a href="#搜索网盘内容" class="headerlink" title="搜索网盘内容"></a>搜索网盘内容</h2><h3 id="网页"><a href="#网页" class="headerlink" title="网页"></a>网页</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">https://www.xiaokesoso.com/</span><br><span class="line">http://baiduyun.6miu.com/</span><br><span class="line">https://www.pansoso.com/</span><br><span class="line">http://www.rufengso.net/</span><br><span class="line">https://www.sobaidupan.com/</span><br><span class="line">https://www.lingfengyun.com/</span><br><span class="line">https://www.lanzou8.com/</span><br><span class="line">https://www.yunpanjingling.com/</span><br><span class="line">http://www.aisouziyuan.com/</span><br><span class="line">https://wowenda.com/</span><br><span class="line">https://so.pansoso.com/</span><br><span class="line">https://www.58wangpan.com/</span><br><span class="line">https://www.quzhuanpan.com/</span><br><span class="line">https://www.soyunpan.com/</span><br><span class="line">http://wangpan.renrensousuo.com/</span><br><span class="line">https://www.sov5.cn/</span><br><span class="line">http://www.verypan.com/</span><br><span class="line">http://uzi8.cn/</span><br><span class="line">http://www.weiyoou8.com/</span><br><span class="line">http://www.kengso.com/</span><br><span class="line">http://www.jisoupan.com/</span><br><span class="line">https://m.51caichang.com/</span><br><span class="line">http://slimego.cn/</span><br><span class="line">https://www.fastsoso.cn/</span><br><span class="line">http://xibianyun.com/</span><br><span class="line">https://www.xiaoso.net/</span><br><span class="line">http://magnet.chongbuluo.com/</span><br><span class="line">http://wpsoso.com/</span><br><span class="line">http://ct.vpan123.com/</span><br><span class="line">https://ujuso.com/</span><br><span class="line">https://www.xuesousou.com/</span><br><span class="line">https://panother.com/</span><br><span class="line">https://www.iizhi.cn/</span><br><span class="line">https://www.xuebapan.com/</span><br><span class="line">https://jujuso.com/</span><br><span class="line">https://www.sopandas.cn/</span><br><span class="line">https://tg.qianfan.app/</span><br><span class="line">https://zhaoziyuan.la/</span><br><span class="line">https://www.upyunso.com/</span><br><span class="line">https://yiso.fun/</span><br><span class="line">http://www.magicalsearch.cn/</span><br><span class="line"></span><br><span class="line"># 坑搜网系列，资源相同</span><br><span class="line">http://www.kengso.com/</span><br><span class="line">http://www.xgsoso.com/</span><br><span class="line">http://www.repanso.com/</span><br><span class="line">http://www.51dgw.com/</span><br><span class="line">http://www.yisopan.com/</span><br><span class="line">http://www.vpansou.com/</span><br><span class="line">http://www.pan58.com/</span><br><span class="line"></span><br><span class="line"># 大力盘系列，资源相同</span><br><span class="line">https://www.dalipan.com/</span><br><span class="line">https://www.dashengpan.com/</span><br><span class="line">https://www.luomapan.com/</span><br><span class="line">https://www.baimapan.com/</span><br><span class="line">http://www.yubaipan.com/</span><br><span class="line">https://www.feifeipan.com/</span><br><span class="line">https://www.feizhupan.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="手机端"><a href="#手机端" class="headerlink" title="手机端"></a>手机端</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://wwc.lanzouy.com/b03j72n2h（密码 / 0000）</span><br><span class="line">http://www.magicalsearch.cn/</span><br></pre></td></tr></table></figure>
+
+<h1 id="蓝奏云"><a href="#蓝奏云" class="headerlink" title="蓝奏云"></a>蓝奏云</h1><p>第三方客户端下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/chenhb23/lanzouyun-disk</span><br></pre></td></tr></table></figure>
+
+<h1 id="天翼云盘"><a href="#天翼云盘" class="headerlink" title="天翼云盘"></a>天翼云盘</h1><h2 id="不限速下载"><a href="#不限速下载" class="headerlink" title="不限速下载"></a>不限速下载</h2><h3 id="网页端下载视频"><a href="#网页端下载视频" class="headerlink" title="网页端下载视频"></a>网页端下载视频</h3><p>默认情况下网页端无法下载视频。此时可按F12打开浏览器开发者模式，用选择功能点击灰色的下载按钮，在右边找到包含disable的那行代码，双击修改删除disable即可。</p>
+<h3 id="通过网站"><a href="#通过网站" class="headerlink" title="通过网站"></a>通过网站</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://189.ly93.cc/</span><br><span class="line">https://api.ezini.vip/</span><br></pre></td></tr></table></figure>
+
+<h2 id="搜索云盘内容"><a href="#搜索云盘内容" class="headerlink" title="搜索云盘内容"></a>搜索云盘内容</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://yun.hei521.cn/</span><br><span class="line">https://qitablog.com/circle/tianyiyun</span><br></pre></td></tr></table></figure>
+
+<h1 id="阿里云盘"><a href="#阿里云盘" class="headerlink" title="阿里云盘"></a>阿里云盘</h1><h2 id="搜索云盘内容-1"><a href="#搜索云盘内容-1" class="headerlink" title="搜索云盘内容"></a>搜索云盘内容</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">https://yunpan123.com/</span><br><span class="line">https://www.panpanr.com/forum.php</span><br><span class="line">https://bbs.outfu.com/</span><br><span class="line">https://oook.xyz/</span><br><span class="line">https://pan.yuankongjian.com/</span><br><span class="line">https://panhub.cc/forum-37-3.html</span><br><span class="line">https://yun.hei521.cn/index.php/category/ali/</span><br><span class="line">https://docs.qq.com/sheet/DVHpJVmRhT3ViV09Q?tab=BB08J2</span><br><span class="line">https://qitablog.com/10426.html</span><br><span class="line">https://www.alipanso.com/</span><br><span class="line">https://www.niceso.fun/</span><br><span class="line">https://alipan.vip/</span><br><span class="line">https://www.alipansou.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="第三方客户端"><a href="#第三方客户端" class="headerlink" title="第三方客户端"></a>第三方客户端</h2><h3 id="CloudDrive"><a href="#CloudDrive" class="headerlink" title="CloudDrive"></a>CloudDrive</h3><p>可将云盘映射到本地。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># CloudDrive</span><br><span class="line">https://www.52pojie.cn/thread-1490131-1-1.html</span><br><span class="line"></span><br><span class="line"># CloudDrive控制器</span><br><span class="line">https://www.52pojie.cn/thread-1494401-1-1.html</span><br></pre></td></tr></table></figure>
+
+<p>该工具控制面板为以下地址。建议在设置中将默认的TempFolder改到非C盘。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:9798</span><br></pre></td></tr></table></figure>
+
+<h3 id="网盘助手"><a href="#网盘助手" class="headerlink" title="网盘助手"></a>网盘助手</h3><p>可从百度网盘转存文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://wwi.lanzoui.com/iBJ7osc0l9a</span><br></pre></td></tr></table></figure>
+
+<h3 id="阿里云盘小白羊版"><a href="#阿里云盘小白羊版" class="headerlink" title="阿里云盘小白羊版"></a>阿里云盘小白羊版</h3><p>支持秒传。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://www.123pan.com/s/jRZZVv-ZOxw.html</span><br><span class="line">https://github.com/liupan1890/aliyunpan</span><br></pre></td></tr></table></figure>
+
+<h1 id="其它网盘"><a href="#其它网盘" class="headerlink" title="其它网盘"></a>其它网盘</h1><h2 id="U-File"><a href="#U-File" class="headerlink" title="U-File"></a>U-File</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://u-file.cn/</span><br></pre></td></tr></table></figure>
+
+<h2 id="和彩云"><a href="#和彩云" class="headerlink" title="和彩云"></a>和彩云</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://yun.139.com/w/#/</span><br></pre></td></tr></table></figure>
+
+<h2 id="天翼云盘-1"><a href="#天翼云盘-1" class="headerlink" title="天翼云盘"></a>天翼云盘</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cloud.189.cn/</span><br></pre></td></tr></table></figure>
+
+<h2 id="沃云"><a href="#沃云" class="headerlink" title="沃云"></a>沃云</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.wocloud.com.cn/;</span><br></pre></td></tr></table></figure>
+
+<h2 id="和彩云-1"><a href="#和彩云-1" class="headerlink" title="和彩云"></a>和彩云</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://yun.139.com/w/#/</span><br></pre></td></tr></table></figure>
+
+<h2 id="曲奇云盘"><a href="#曲奇云盘" class="headerlink" title="曲奇云盘"></a>曲奇云盘</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.quqi.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="ASUS-WebStorage"><a href="#ASUS-WebStorage" class="headerlink" title="ASUS WebStorage"></a>ASUS WebStorage</h2><p>免费5G空间。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.asuswebstorage.com/navigate/a/#/index</span><br></pre></td></tr></table></figure>
+
+<h2 id="蓝奏云-1"><a href="#蓝奏云-1" class="headerlink" title="蓝奏云"></a>蓝奏云</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.lanzou.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="坚果云"><a href="#坚果云" class="headerlink" title="坚果云"></a>坚果云</h2><p>每月免费1G上传流量，3G下载流量。</p>
+<h2 id="6盘"><a href="#6盘" class="headerlink" title="6盘"></a>6盘</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://2dland.cn/</span><br><span class="line">https://www.liupan.net/</span><br></pre></td></tr></table></figure>
+
+<h2 id="超星云盘"><a href="#超星云盘" class="headerlink" title="超星云盘"></a>超星云盘</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://pan-yz.chaoxing.com/app/download</span><br></pre></td></tr></table></figure>
+
+<h2 id="盛天云盘"><a href="#盛天云盘" class="headerlink" title="盛天云盘"></a>盛天云盘</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://pan.bitqiu.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="90网盘"><a href="#90网盘" class="headerlink" title="90网盘"></a>90网盘</h2><p>有下载收益。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.90pan.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="小麦云盘"><a href="#小麦云盘" class="headerlink" title="小麦云盘"></a>小麦云盘</h2><p>免费5TB，最大单文件200MB。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://b.own-cloud.cn/</span><br></pre></td></tr></table></figure>
+
+<h2 id="PikPak"><a href="#PikPak" class="headerlink" title="PikPak"></a>PikPak</h2><p>迅雷海外版。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mypikpak.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="mega-nz"><a href="#mega-nz" class="headerlink" title="mega.nz"></a>mega.nz</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mega.nz/</span><br></pre></td></tr></table></figure>
+
+<h2 id="MediaFire"><a href="#MediaFire" class="headerlink" title="MediaFire"></a>MediaFire</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.mediafire.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Dropbox"><a href="#Dropbox" class="headerlink" title="Dropbox"></a>Dropbox</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.dropbox.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Google云端硬盘"><a href="#Google云端硬盘" class="headerlink" title="Google云端硬盘"></a>Google云端硬盘</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.google.com/drive/</span><br></pre></td></tr></table></figure>
+
+<h2 id="pCloud"><a href="#pCloud" class="headerlink" title="pCloud"></a>pCloud</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.pcloud.com/zh/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Getspace"><a href="#Getspace" class="headerlink" title="Getspace"></a>Getspace</h2><p>主机在立陶宛，免费50G云盘。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 注册地址</span><br><span class="line">https://getspace.lt/en/storage-cloud/</span><br><span class="line"></span><br><span class="line"># 登录地址</span><br><span class="line">https://i.getspace.eu/cloud/apps/files/</span><br><span class="line"></span><br><span class="line"># WebDav地址</span><br><span class="line"># 后续连接第三方APP时会用到</span><br><span class="line">https://i.getspace.eu/cloud/remote.php/webdav/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Yandex-Disk"><a href="#Yandex-Disk" class="headerlink" title="Yandex Disk"></a>Yandex Disk</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://disk.yandex.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Google-Drive"><a href="#Google-Drive" class="headerlink" title="Google Drive"></a>Google Drive</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://gd.zxd.workers.dev/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Koofr"><a href="#Koofr" class="headerlink" title="Koofr"></a>Koofr</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://k00.fr/rz0rx7r6</span><br></pre></td></tr></table></figure>
+
+<h2 id="TeraCLOUD"><a href="#TeraCLOUD" class="headerlink" title="TeraCLOUD"></a>TeraCLOUD</h2><p>主机在日本，免费10GB容量。输入邀请码<code>KSW25</code>可再获得5GB。如果使用免费帐户且未登录90天以上，则帐户和数据将被删除。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://teracloud.jp/en/</span><br></pre></td></tr></table></figure>
+
+<p>该网盘可挂载到VPS上，作为额外的磁盘使用。输入以下命令安装davfs2。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Ubuntu/Debian</span><br><span class="line">apt-get install davfs2</span><br><span class="line"></span><br><span class="line"># CentOS</span><br><span class="line">yum install davfs2</span><br></pre></td></tr></table></figure>
+
+<p>然后输入以下命令，其中网址需要替换为网盘详情页中的WebDAV URL。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir /TeraCloud</span><br><span class="line">mount -t davfs https://uno.teracloud.jp/dav/ /TeraCloud</span><br></pre></td></tr></table></figure>
+
+<p>输入以下命令以检查是否已经被挂载。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -h</span><br></pre></td></tr></table></figure>
+
+<p>可在本地挂载网盘。在Windows下可在资源管理器界面上右键，点击<code>添加一个网络位置</code>，网络地址为<code>https://nanao.teracloud.jp/dav/</code>，用户名和密码使用登录账户即可。</p>
+<p>在Linux下则可在终端输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yum -y install davfs2</span><br><span class="line">apt-get -y install davfs2</span><br><span class="line">sed -i &#x27;s/# use_locks       1/use_locks       0/g&#x27; /etc/davfs2/davfs2.conf</span><br><span class="line">echo &quot;[WebDAV地址] [用户名] [密码]&quot; &gt;&gt; /etc/davfs2/secrets</span><br><span class="line">mount.davfs [WebDAV地址] [挂载到的目录]</span><br></pre></td></tr></table></figure>
+
+<p>若需要开机自动挂载，则可执行以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;mount.davfs [WebDAV地址] [挂载到的目录]&quot; &gt;&gt; /etc/rc.local</span><br></pre></td></tr></table></figure>
+
+<h2 id="DOSDrive"><a href="#DOSDrive" class="headerlink" title="DOSDrive"></a>DOSDrive</h2><p>前50GB免费。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://dosdrive.com/</span><br></pre></td></tr></table></figure>
+
+<h1 id="分布式存储"><a href="#分布式存储" class="headerlink" title="分布式存储"></a>分布式存储</h1><h2 id="Google-Cloud-Storage"><a href="#Google-Cloud-Storage" class="headerlink" title="Google Cloud Storage"></a>Google Cloud Storage</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cloud.google.com/storage/</span><br></pre></td></tr></table></figure>
+
+<h2 id="网易数帆"><a href="#网易数帆" class="headerlink" title="网易数帆"></a>网易数帆</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.163yun.com/product-cloudcompute?h=fc</span><br></pre></td></tr></table></figure>
+
+<h2 id="阿里云对象存储OSS"><a href="#阿里云对象存储OSS" class="headerlink" title="阿里云对象存储OSS"></a>阿里云对象存储OSS</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.aliyun.com/product/oss</span><br></pre></td></tr></table></figure>
+
+<h2 id="腾讯云对象存储COS"><a href="#腾讯云对象存储COS" class="headerlink" title="腾讯云对象存储COS"></a>腾讯云对象存储COS</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cloud.tencent.com/product/cos</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/Instructions-Of-Telegram.html" rel="prev" title="Telegram使用指南">
+      <i class="fa fa-chevron-left"></i> Telegram使用指南
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/Instructions-Of-Scoop.html" rel="next" title="Scoop使用指南">
+      Scoop使用指南 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%8A%A0%E9%80%9F"><span class="nav-text">下载加速</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cheat-Engine"><span class="nav-text">Cheat Engine</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6%E4%BC%81%E4%B8%9A%E7%BD%91%E7%9B%98"><span class="nav-text">百度企业网盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BaiduNetdiskPlugin-macOS"><span class="nav-text">BaiduNetdiskPlugin-macOS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KinhDown"><span class="nav-text">KinhDown</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bdmaster"><span class="nav-text">bdmaster</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%9B%98%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B"><span class="nav-text">网盘直链下载助手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PDown"><span class="nav-text">PDown</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Firefox-IDM"><span class="nav-text">Firefox+IDM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E5%AE%89%E8%A3%85"><span class="nav-text">直接安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85"><span class="nav-text">手动安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%A6%E7%9B%98%E9%80%9F%E4%B8%8B"><span class="nav-text">度盘速下</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%B7%E9%B8%9F%E4%B8%8B%E8%BD%BD"><span class="nav-text">雷鸟下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E5%AE%83"><span class="nav-text">其它</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E7%9B%98%E6%8C%82%E8%BD%BD"><span class="nav-text">网盘挂载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E7%9B%98%E4%B8%AD%E8%BD%AC"><span class="nav-text">网盘中转</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E7%9B%98%E7%AE%A1%E7%90%86"><span class="nav-text">网盘管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MultCloud"><span class="nav-text">MultCloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DockerRegisterCloud"><span class="nav-text">DockerRegisterCloud</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98"><span class="nav-text">百度网盘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%86%99%E6%8F%90%E5%8F%96%E7%A0%81"><span class="nav-text">自动填写提取码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E5%80%8D%E9%80%9F%E6%92%AD%E6%94%BE"><span class="nav-text">视频倍速播放</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%8D%E8%B4%B9%E9%A2%86%E5%8F%96%E4%BC%9A%E5%91%98"><span class="nav-text">免费领取会员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E7%BD%91%E7%9B%98%E5%86%85%E5%AE%B9"><span class="nav-text">搜索网盘内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E9%A1%B5"><span class="nav-text">网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E7%AB%AF"><span class="nav-text">手机端</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%93%9D%E5%A5%8F%E4%BA%91"><span class="nav-text">蓝奏云</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%A9%E7%BF%BC%E4%BA%91%E7%9B%98"><span class="nav-text">天翼云盘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E9%99%90%E9%80%9F%E4%B8%8B%E8%BD%BD"><span class="nav-text">不限速下载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E9%A1%B5%E7%AB%AF%E4%B8%8B%E8%BD%BD%E8%A7%86%E9%A2%91"><span class="nav-text">网页端下载视频</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E7%BD%91%E7%AB%99"><span class="nav-text">通过网站</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E4%BA%91%E7%9B%98%E5%86%85%E5%AE%B9"><span class="nav-text">搜索云盘内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98"><span class="nav-text">阿里云盘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E4%BA%91%E7%9B%98%E5%86%85%E5%AE%B9-1"><span class="nav-text">搜索云盘内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-text">第三方客户端</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudDrive"><span class="nav-text">CloudDrive</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%9B%98%E5%8A%A9%E6%89%8B"><span class="nav-text">网盘助手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98%E5%B0%8F%E7%99%BD%E7%BE%8A%E7%89%88"><span class="nav-text">阿里云盘小白羊版</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E5%AE%83%E7%BD%91%E7%9B%98"><span class="nav-text">其它网盘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#U-File"><span class="nav-text">U-File</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%92%8C%E5%BD%A9%E4%BA%91"><span class="nav-text">和彩云</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A9%E7%BF%BC%E4%BA%91%E7%9B%98-1"><span class="nav-text">天翼云盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B2%83%E4%BA%91"><span class="nav-text">沃云</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%92%8C%E5%BD%A9%E4%BA%91-1"><span class="nav-text">和彩云</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B2%E5%A5%87%E4%BA%91%E7%9B%98"><span class="nav-text">曲奇云盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ASUS-WebStorage"><span class="nav-text">ASUS WebStorage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%93%9D%E5%A5%8F%E4%BA%91-1"><span class="nav-text">蓝奏云</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9D%9A%E6%9E%9C%E4%BA%91"><span class="nav-text">坚果云</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E7%9B%98"><span class="nav-text">6盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B6%85%E6%98%9F%E4%BA%91%E7%9B%98"><span class="nav-text">超星云盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%9B%E5%A4%A9%E4%BA%91%E7%9B%98"><span class="nav-text">盛天云盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#90%E7%BD%91%E7%9B%98"><span class="nav-text">90网盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E9%BA%A6%E4%BA%91%E7%9B%98"><span class="nav-text">小麦云盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PikPak"><span class="nav-text">PikPak</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mega-nz"><span class="nav-text">mega.nz</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MediaFire"><span class="nav-text">MediaFire</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dropbox"><span class="nav-text">Dropbox</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98"><span class="nav-text">Google云端硬盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pCloud"><span class="nav-text">pCloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Getspace"><span class="nav-text">Getspace</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Yandex-Disk"><span class="nav-text">Yandex Disk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-Drive"><span class="nav-text">Google Drive</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Koofr"><span class="nav-text">Koofr</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TeraCLOUD"><span class="nav-text">TeraCLOUD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOSDrive"><span class="nav-text">DOSDrive</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8"><span class="nav-text">分布式存储</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-Cloud-Storage"><span class="nav-text">Google Cloud Storage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E6%98%93%E6%95%B0%E5%B8%86"><span class="nav-text">网易数帆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8OSS"><span class="nav-text">阿里云对象存储OSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8COS"><span class="nav-text">腾讯云对象存储COS</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

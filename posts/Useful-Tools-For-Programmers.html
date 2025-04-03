@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="对程序员有用的工具集合。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="程序员工具集合及使用">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/Useful-Tools-For-Programmers.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="对程序员有用的工具集合。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/Useful-Tools-For-Programmers/topic.jpg">
+<meta property="article:published_time" content="2020-11-05T07:18:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.586Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/Useful-Tools-For-Programmers/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/Useful-Tools-For-Programmers.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>程序员工具集合及使用 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/Useful-Tools-For-Programmers.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          程序员工具集合及使用
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-11-05 15:18:29" itemprop="dateCreated datePublished" datetime="2020-11-05T15:18:29+08:00">2020-11-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Skill/" itemprop="url" rel="index"><span itemprop="name">Skill</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>10k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>10 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/Useful-Tools-For-Programmers/topic.jpg"></p>
+<p>对程序员有用的工具集合。</p>
+<span id="more"></span>
+
+<h1 id="TODOS"><a href="#TODOS" class="headerlink" title="TODOS"></a>TODOS</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"># NobyDa&#x27;s Blog</span><br><span class="line">https://nobyda.github.io/</span><br><span class="line"></span><br><span class="line"># ChatGPT教程</span><br><span class="line">https://gitlab.com/awesomeai/awesome-chatgpt-zh</span><br><span class="line"></span><br><span class="line"># Paypal优惠券/现金券套现</span><br><span class="line">https://www.on9gamer.com/directory/point_card/%E4%B8%AD%E5%9B%BD%E6%94%AF%E4%BB%98%E5%B9%B3%E5%8F%B0%E7%82%B9-Ping-Tai-Dian-(CN)/463</span><br><span class="line"></span><br><span class="line"># 内容合集</span><br><span class="line">http://www.100bestfreewebspace.com/searchPage0/Free-Host.html</span><br><span class="line">https://github.com/ramitsurana/awesome-kubernetes</span><br><span class="line">https://github.com/awesome-selfhosted/awesome-selfhosted</span><br><span class="line">https://github.com/ivbeg/awesome-status-pages</span><br><span class="line">https://github.com/bhnddowinf/vuejs-learn</span><br><span class="line">https://github.com/josephmisiti/awesome-machine-learning</span><br><span class="line"></span><br><span class="line"># Wifi破解</span><br><span class="line">http://www.52bug.cn/hkjs/2427.html</span><br><span class="line"></span><br><span class="line"># 论坛和博客</span><br><span class="line">https://axutongxue.com/</span><br><span class="line">https://www.imbushuo.net/blog/</span><br><span class="line">https://program-think.blogspot.com/</span><br><span class="line">https://shanyue.tech/</span><br><span class="line">https://g.widora.cn/</span><br><span class="line">https://www.cnblogs.com/</span><br><span class="line">https://masuit.com/</span><br><span class="line">https://www.freehao123.com/</span><br><span class="line">https://dev.to/</span><br><span class="line">https://www.mf8.biz/</span><br><span class="line">https://www.acexy.cn/</span><br><span class="line">https://masuit.com/</span><br><span class="line">https://salsa.debian.org/public</span><br><span class="line">https://www.nutgeek.com/</span><br><span class="line">https://pdf-lib.org/</span><br><span class="line">https://blog.yazawaniko.com/</span><br><span class="line">https://coderschool.cn/</span><br><span class="line">https://www.techspot.com/</span><br><span class="line">https://www.itengli.com/</span><br><span class="line">https://www.chengxuzhilu.com/</span><br><span class="line">https://jubt.gq/cn/index.html</span><br><span class="line">https://hao.su/tos.html</span><br><span class="line"></span><br><span class="line"># 其它</span><br><span class="line">https://51.ruyo.net/5570.html</span><br><span class="line">https://asia.cloudns.net/?utm_source=affiliate&amp;utm_medium=244749&amp;utm_campaign=affiliate&amp;utm_content=244749</span><br><span class="line">https://kb.adguard.com/en/general/dns-providers</span><br><span class="line">https://www.digitalocean.com/community/tutorials/how-to-set-up-an-object-storage-server-using-minio-on-ubuntu-18-04</span><br></pre></td></tr></table></figure>
+
+<h1 id="相关知识"><a href="#相关知识" class="headerlink" title="相关知识"></a>相关知识</h1><h2 id="云应用部署"><a href="#云应用部署" class="headerlink" title="云应用部署"></a>云应用部署</h2><p>通过存放到Github等代码平台的镜像仓库，可以在云服务商部署应用。仓库应当有docker，以供服务器创建容器。</p>
+<h2 id="IaaS-x2F-SaaS-x2F-BaaS"><a href="#IaaS-x2F-SaaS-x2F-BaaS" class="headerlink" title="IaaS&#x2F;SaaS&#x2F;BaaS"></a>IaaS&#x2F;SaaS&#x2F;BaaS</h2><p>IaaS指提供系统&#x2F;储存空间等硬件，软件需要手动安装。</p>
+<p>SaaS只能使用开发好的软件。</p>
+<p>BaaS一般类似于非关系数据库，但各供应商间不通用。</p>
+<h2 id="大厂泄露资料"><a href="#大厂泄露资料" class="headerlink" title="大厂泄露资料"></a>大厂泄露资料</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># Hacking Team</span><br><span class="line">http://ht.transparencytoolkit.org/</span><br><span class="line"></span><br><span class="line"># 网易</span><br><span class="line">https://mega.nz/#F!ewNxmbyT!toMSJLz44mpmQOO6W7j3Kg</span><br><span class="line">magnet:?xt=urn:btih:066c588a6fe43ce29a07c96e4063357eb18433ab</span><br><span class="line"></span><br><span class="line"># 乌云公开漏洞</span><br><span class="line">https://github.com/hanc00l/wooyun_public</span><br><span class="line"></span><br><span class="line"># 3DMax高清贴图</span><br><span class="line">链接 / https://share.weiyun.com/5TX2Fvk</span><br><span class="line">密码 / lo8n23</span><br></pre></td></tr></table></figure>
+
+<h1 id="学生专属项目"><a href="#学生专属项目" class="headerlink" title="学生专属项目"></a>学生专属项目</h1><h2 id="Office-365-E5"><a href="#Office-365-E5" class="headerlink" title="Office 365 E5"></a>Office 365 E5</h2><h3 id="教育版"><a href="#教育版" class="headerlink" title="教育版"></a>教育版</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">https://www.microsoft.com/en-us/education/products/office?tab=students?tab=students</span><br><span class="line">https://xyxywan.gitee.io/web/</span><br><span class="line">https://od.obagg.com/</span><br><span class="line">https://get.porta1.net/?__cf_chl_jschl_tk__=83c928ebbf99663237ea88805bc924e141699fc3-1605690660-0-AdnezinmvFMzpyB50OfoJCxwTtvM6LK4QCGvz5H-IApWWBURmgaDE8F0ls64UAmhogL2rFz9I9j43Pubz4pIwnxSBYE4x3LUVtmGSmxJey29d6JEKzRWYJGMb0aQKL9j8w0DROKY369MQ0x-ocjbi7gEo68wkc_SyIUuGf-1-I6fFbaWhNCIUod9O_08ANMH79Ws4y9fYn2_f9Xa6AocqNf_vFJYh54JbbrlrE6IhEcLLG0xcBJHzCiNutc417DtiVBbF-Nc93a966QfzJA0LccQIqVLez6kr-OFGE0JGeES_Ilbq1jjy52hyjn7sqxvtA#intro</span><br></pre></td></tr></table></figure>
+
+<h3 id="开发者账号"><a href="#开发者账号" class="headerlink" title="开发者账号"></a>开发者账号</h3><p>打开以下链接开通Office开发者账号，国家选择美国，可以所有选项都勾选。然后点击<code>SET UP E5 SUBSCRIPTION</code>，按照流程填写即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://developer.microsoft.com/en-us/office/profile/</span><br></pre></td></tr></table></figure>
+
+<h3 id="自动续订"><a href="#自动续订" class="headerlink" title="自动续订"></a>自动续订</h3><p>注册完成后打开以下链接，点击<code>Azure Active Directory</code>，进入后选择应用注册-新注册，账户类型选择<code>任何组织目录(任何 Azure AD 目录 – 多租户)中的帐户和个人 Microsoft 帐户(例如，Skype、Xbox)</code>，URI填写<code>http://localhost:53682/</code>，然后点击注册。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://portal.azure.com/</span><br></pre></td></tr></table></figure>
+
+<p>注册完成后记录<code>应用程序(客户端)ID</code>，然后点击左侧菜单API权限-添加权限-Microsoft Graph-委托的权限，勾选以下权限。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Files.Read.All</span><br><span class="line">Files.ReadWrite.All</span><br><span class="line">Sites.Read.All</span><br><span class="line">Sites.ReadWrite.All</span><br><span class="line">User.Read.All</span><br><span class="line">User.ReadWrite.All</span><br><span class="line">Directory.Read.All</span><br><span class="line">Directory.ReadWrite.All</span><br><span class="line">Mail.Read</span><br><span class="line">Mail.ReadWrite</span><br><span class="line">MailboxSettings.Read</span><br><span class="line">MailboxSettings.ReadWrite</span><br></pre></td></tr></table></figure>
+
+<p>完成后点击左侧证书和密码-新客户端密码，截止期限随意，添加后记录<code>值</code>以备用。</p>
+<p>在本机安装rclone，对于Mac可通过brew安装，其余平台可参考以下链接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://rclone.org/install/</span><br></pre></td></tr></table></figure>
+
+<p>然后输入以下命令，在弹出的窗口完成登录授权。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rclone authorize &quot;onedrive&quot; &quot;[应用程序(客户端)ID]&quot; &quot;[应用程序密码]&quot;</span><br></pre></td></tr></table></figure>
+
+<p>回到终端，复制<code>&quot;refresh_token&quot;</code>的内容，不包含双引号。</p>
+<p>打开以下项目并fork一份，然后修改1.txt，用刚才的<code>&quot;refresh_token&quot;</code>的内容覆盖。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/wangziyingwen/AutoApiSecret</span><br></pre></td></tr></table></figure>
+
+<p>然后点击Settings-Secrets，添加以下Secret。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">名称 / CONFIG_ID</span><br><span class="line">值 / id=r&#x27;[应用程序(客户端)ID]&#x27;</span><br><span class="line"></span><br><span class="line">名称 / CONFIG_KEY</span><br><span class="line">值 / secret=r&#x27;[应用程序密码]&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>添加后激活该Action即可。</p>
+<h2 id="Semaphore"><a href="#Semaphore" class="headerlink" title="Semaphore"></a>Semaphore</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://docs.semaphoreci.com/account-management/discounts/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Unreal-Engine"><a href="#Unreal-Engine" class="headerlink" title="Unreal Engine"></a>Unreal Engine</h2><p>教育版免费。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.unrealengine.com/zh-CN/education</span><br></pre></td></tr></table></figure>
+
+<h2 id="loom"><a href="#loom" class="headerlink" title="loom"></a>loom</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://support.loom.com/hc/en-us/articles/360006579637-Loom-Pro-Free-for-Students-and-Teachers/?ref=codegena.com</span><br></pre></td></tr></table></figure>
+
+<h2 id="Astah-UML"><a href="#Astah-UML" class="headerlink" title="Astah UML"></a>Astah UML</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://astah.net/products/free-student-license/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Tableau"><a href="#Tableau" class="headerlink" title="Tableau"></a>Tableau</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.tableau.com/academic/students</span><br></pre></td></tr></table></figure>
+
+<h2 id="StudentUniverse"><a href="#StudentUniverse" class="headerlink" title="StudentUniverse"></a>StudentUniverse</h2><p>面向30岁以下学生的旅游预订网站，提供学生航班折扣。中国大陆仅支持国航。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.studentuniverse.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Github-Education-Pack"><a href="#Github-Education-Pack" class="headerlink" title="Github Education Pack"></a>Github Education Pack</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://education.github.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Microsoft-Azure"><a href="#Microsoft-Azure" class="headerlink" title="Microsoft Azure"></a>Microsoft Azure</h2><p>免费12个月试用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://azure.microsoft.com/zh-cn/</span><br><span class="line">https://docs.microsoft.com/zh-cn/azure/education-hub/azure-dev-tools-teaching/program-faq</span><br></pre></td></tr></table></figure>
+
+<h3 id="充分使用Azure学生订阅免费额度"><a href="#充分使用Azure学生订阅免费额度" class="headerlink" title="充分使用Azure学生订阅免费额度"></a>充分使用Azure学生订阅免费额度</h3><p>教程如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.jianshu.com/p/9bdd35dc2341</span><br></pre></td></tr></table></figure>
+
+<h3 id="反代Google"><a href="#反代Google" class="headerlink" title="反代Google"></a>反代Google</h3><p>教程如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/4880.html</span><br></pre></td></tr></table></figure>
+
+<h3 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h3><p>教程如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/6499.html</span><br></pre></td></tr></table></figure>
+
+<h3 id="利用SendGrid免费计划发送邮件服务"><a href="#利用SendGrid免费计划发送邮件服务" class="headerlink" title="利用SendGrid免费计划发送邮件服务"></a>利用SendGrid免费计划发送邮件服务</h3><p>教程如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/15179.html</span><br></pre></td></tr></table></figure>
+
+<h3 id="Imagine激活Azure"><a href="#Imagine激活Azure" class="headerlink" title="Imagine激活Azure"></a>Imagine激活Azure</h3><p>以及免费膜法上网教程。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/3141.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="AWS"><a href="#AWS" class="headerlink" title="AWS"></a>AWS</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://aws.amazon.com/cn/education/awseducate/</span><br><span class="line">https://www.awseducate.com/Registration#APP_TYPE</span><br></pre></td></tr></table></figure>
+
+<h2 id="Autodesk"><a href="#Autodesk" class="headerlink" title="Autodesk"></a>Autodesk</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.autodesk.com.cn/education/home</span><br></pre></td></tr></table></figure>
+
+<h2 id="G-Suite-for-Education"><a href="#G-Suite-for-Education" class="headerlink" title="G Suite for Education"></a>G Suite for Education</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://edu.google.com/products/gsuite-for-education/</span><br></pre></td></tr></table></figure>
+
+<h2 id="LINGO-Educational-Research-License"><a href="#LINGO-Educational-Research-License" class="headerlink" title="LINGO Educational Research License"></a>LINGO Educational Research License</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.lindo.com/index.php?option=com_content&amp;view=article&amp;id=120&amp;Itemid=45</span><br></pre></td></tr></table></figure>
+
+<h2 id="Office-in-Education"><a href="#Office-in-Education" class="headerlink" title="Office in Education"></a>Office in Education</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://products.office.com/en-us/student?tab=students</span><br></pre></td></tr></table></figure>
+
+<h2 id="Pantheon"><a href="#Pantheon" class="headerlink" title="Pantheon"></a>Pantheon</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://pantheon.io/edu</span><br></pre></td></tr></table></figure>
+
+<h2 id="Axure"><a href="#Axure" class="headerlink" title="Axure"></a>Axure</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.axure.com/edu</span><br></pre></td></tr></table></figure>
+
+<h2 id="Tableau-1"><a href="#Tableau-1" class="headerlink" title="Tableau"></a>Tableau</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.tableau.com/zh-cn/academic</span><br></pre></td></tr></table></figure>
+
+<h2 id="Minecraft"><a href="#Minecraft" class="headerlink" title="Minecraft"></a>Minecraft</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://education.minecraft.net/get-started</span><br></pre></td></tr></table></figure>
+
+<h2 id="OriginPro-Student-Version"><a href="#OriginPro-Student-Version" class="headerlink" title="OriginPro Student Version"></a>OriginPro Student Version</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.originlab.com/OriginProLearning.aspx</span><br></pre></td></tr></table></figure>
+
+<h2 id="Notion"><a href="#Notion" class="headerlink" title="Notion"></a>Notion</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.notion.so/student</span><br></pre></td></tr></table></figure>
+
+<h2 id="Shapr3D"><a href="#Shapr3D" class="headerlink" title="Shapr3D"></a>Shapr3D</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.shapr3d.com/education</span><br></pre></td></tr></table></figure>
+
+<h2 id="Intel®-Software-Development-Tools"><a href="#Intel®-Software-Development-Tools" class="headerlink" title="Intel® Software Development Tools"></a>Intel® Software Development Tools</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://software.intel.com/content/www/us/en/develop/articles/qualify-for-free-software.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="Bootstrap-Studio"><a href="#Bootstrap-Studio" class="headerlink" title="Bootstrap Studio"></a>Bootstrap Studio</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://bootstrapstudio.io/pages/student-license</span><br></pre></td></tr></table></figure>
+
+<h2 id="MATLAB"><a href="#MATLAB" class="headerlink" title="MATLAB"></a>MATLAB</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://ww2.mathworks.cn/products/matlab/student.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="1Password"><a href="#1Password" class="headerlink" title="1Password"></a>1Password</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.studentappcentre.com/App/1Password</span><br></pre></td></tr></table></figure>
+
+<h2 id="invision"><a href="#invision" class="headerlink" title="invision"></a>invision</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.invisionapp.com/education</span><br></pre></td></tr></table></figure>
+
+<h2 id="Basecamp"><a href="#Basecamp" class="headerlink" title="Basecamp"></a>Basecamp</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://basecamp.com/discounts</span><br></pre></td></tr></table></figure>
+
+<h2 id="YNAB"><a href="#YNAB" class="headerlink" title="YNAB"></a>YNAB</h2><p>个人理财软件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.youneedabudget.com/college/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Adobe"><a href="#Adobe" class="headerlink" title="Adobe"></a>Adobe</h2><p>最多四折。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.adobe.com/creativecloud/buy/students.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="Squarespace"><a href="#Squarespace" class="headerlink" title="Squarespace"></a>Squarespace</h2><p>五折优惠。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.squarespace.com/students/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Azendoo"><a href="#Azendoo" class="headerlink" title="Azendoo"></a>Azendoo</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.azendoo.com/azendoo-for-education-special-offers/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Figma"><a href="#Figma" class="headerlink" title="Figma"></a>Figma</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.figma.com/education/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Tower"><a href="#Tower" class="headerlink" title="Tower"></a>Tower</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.git-tower.com/students/mac</span><br></pre></td></tr></table></figure>
+
+<h2 id="Lucidchart"><a href="#Lucidchart" class="headerlink" title="Lucidchart"></a>Lucidchart</h2><p>流程图绘制。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.lucidchart.com/pages/usecase/education</span><br></pre></td></tr></table></figure>
+
+<h2 id="Sketch-Education"><a href="#Sketch-Education" class="headerlink" title="Sketch Education"></a>Sketch Education</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.sketch.com/store/edu/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Asana"><a href="#Asana" class="headerlink" title="Asana"></a>Asana</h2><p>学生生活安排。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://asana.com/students?language=en</span><br></pre></td></tr></table></figure>
+
+<h2 id="Dashlane"><a href="#Dashlane" class="headerlink" title="Dashlane"></a>Dashlane</h2><p>为期一年的Dashlane高级版免费使用权。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.dashlane.com/students</span><br></pre></td></tr></table></figure>
+
+<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="Navicat-Premium"><a href="#Navicat-Premium" class="headerlink" title="Navicat Premium"></a>Navicat Premium</h2><p>可免费试用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://www.navicat.com.cn/sponsorship/education/student</span><br><span class="line">https://www.navicat.com.cn/products</span><br></pre></td></tr></table></figure>
+
+<h2 id="Scaleway"><a href="#Scaleway" class="headerlink" title="Scaleway"></a>Scaleway</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.scaleway.com/en/object-storage/</span><br></pre></td></tr></table></figure>
+
+<h2 id="DataStax"><a href="#DataStax" class="headerlink" title="DataStax"></a>DataStax</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://astra.datastax.com/register</span><br></pre></td></tr></table></figure>
+
+<h2 id="db4free"><a href="#db4free" class="headerlink" title="db4free"></a>db4free</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://db4free.net/</span><br></pre></td></tr></table></figure>
+
+<h2 id="ElephantSQL"><a href="#ElephantSQL" class="headerlink" title="ElephantSQL"></a>ElephantSQL</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.elephantsql.com/plans.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="FreeSQLdatabase"><a href="#FreeSQLdatabase" class="headerlink" title="FreeSQLdatabase"></a>FreeSQLdatabase</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.freesqldatabase.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="SQLGate"><a href="#SQLGate" class="headerlink" title="SQLGate"></a>SQLGate</h2><p>Github学生包可免费使用一年。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.sqlgate.com/student-pack</span><br></pre></td></tr></table></figure>
+
+<h2 id="mLab"><a href="#mLab" class="headerlink" title="mLab"></a>mLab</h2><p>mongoDB数据库。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mlab.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Free-MySQL-Hosting"><a href="#Free-MySQL-Hosting" class="headerlink" title="Free MySQL Hosting"></a>Free MySQL Hosting</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.freemysqlhosting.net/</span><br></pre></td></tr></table></figure>
+
+<h2 id="EasyDB"><a href="#EasyDB" class="headerlink" title="EasyDB"></a>EasyDB</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://easydb.io/</span><br></pre></td></tr></table></figure>
+
+<h2 id="n-point"><a href="#n-point" class="headerlink" title="n:point"></a>n:point</h2><p>JSON数据库。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.npoint.io/</span><br></pre></td></tr></table></figure>
+
+<h2 id="FREE-MYSQL"><a href="#FREE-MYSQL" class="headerlink" title="FREE MYSQL"></a>FREE MYSQL</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://remotemysql.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="ElephantSQL-1"><a href="#ElephantSQL-1" class="headerlink" title="ElephantSQL"></a>ElephantSQL</h2><p>PostgreSQL。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.elephantsql.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="DataStax-Astra"><a href="#DataStax-Astra" class="headerlink" title="DataStax Astra"></a>DataStax Astra</h2><p>免费使用5GB的空间。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://astra.datastax.com/register</span><br></pre></td></tr></table></figure>
+
+<h2 id="UNBOUNDED"><a href="#UNBOUNDED" class="headerlink" title="UNBOUNDED"></a>UNBOUNDED</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.unbounded.cloud/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Lambda-Store"><a href="#Lambda-Store" class="headerlink" title="Lambda Store"></a>Lambda Store</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://lambda.store/</span><br></pre></td></tr></table></figure>
+
+<h2 id="GrapheneDB"><a href="#GrapheneDB" class="headerlink" title="GrapheneDB"></a>GrapheneDB</h2><p>免费试用两周。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.graphenedb.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="EverSQL"><a href="#EverSQL" class="headerlink" title="EverSQL"></a>EverSQL</h2><p>数据库优化平台。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.eversql.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="caspio"><a href="#caspio" class="headerlink" title="caspio"></a>caspio</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://free.caspio.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="iH5"><a href="#iH5" class="headerlink" title="iH5"></a>iH5</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.ih5.cn/editor3/?nid=10985497</span><br></pre></td></tr></table></figure>
+
+<h2 id="Navicat-Premium-10"><a href="#Navicat-Premium-10" class="headerlink" title="Navicat Premium 10"></a>Navicat Premium 10</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">链接 / http://pan.baidu.com/s/1c2B1t1A</span><br><span class="line">密码 / s3sw</span><br></pre></td></tr></table></figure>
+
+<h2 id="DB-DESIGNER"><a href="#DB-DESIGNER" class="headerlink" title="DB DESIGNER"></a>DB DESIGNER</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.dbdesigner.net/</span><br></pre></td></tr></table></figure>
+
+<h2 id="restdb-io"><a href="#restdb-io" class="headerlink" title="restdb.io"></a>restdb.io</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://restdb.io/</span><br></pre></td></tr></table></figure>
+
+<h2 id="UNBOUNDED-1"><a href="#UNBOUNDED-1" class="headerlink" title="UNBOUNDED"></a>UNBOUNDED</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.unbounded.cloud/</span><br></pre></td></tr></table></figure>
+
+<h2 id="graphenedb"><a href="#graphenedb" class="headerlink" title="graphenedb"></a>graphenedb</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.graphenedb.com/</span><br></pre></td></tr></table></figure>
+
+<h1 id="安全沙箱"><a href="#安全沙箱" class="headerlink" title="安全沙箱"></a>安全沙箱</h1><h2 id="微步在线云沙箱"><a href="#微步在线云沙箱" class="headerlink" title="微步在线云沙箱"></a>微步在线云沙箱</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://s.threatbook.cn/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hybrid-Analysis"><a href="#Hybrid-Analysis" class="headerlink" title="Hybrid Analysis"></a>Hybrid Analysis</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.hybrid-analysis.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="腾讯哈勃分析系统"><a href="#腾讯哈勃分析系统" class="headerlink" title="腾讯哈勃分析系统"></a>腾讯哈勃分析系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://habo.qq.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Sndbox"><a href="#Sndbox" class="headerlink" title="Sndbox"></a>Sndbox</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://app.sndbox.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Anxin"><a href="#Anxin" class="headerlink" title="Anxin"></a>Anxin</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://scan.anxinsec.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="奇安信网站卫士"><a href="#奇安信网站卫士" class="headerlink" title="奇安信网站卫士"></a>奇安信网站卫士</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://wangzhan.qianxin.com/</span><br></pre></td></tr></table></figure>
+
+<h1 id="DevOps"><a href="#DevOps" class="headerlink" title="DevOps"></a>DevOps</h1><h2 id="UNPKG"><a href="#UNPKG" class="headerlink" title="UNPKG"></a>UNPKG</h2><p>npm上所有内容的快速全球内容交付网络。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://unpkg.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="blackfire"><a href="#blackfire" class="headerlink" title="blackfire"></a>blackfire</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blackfire.io/</span><br></pre></td></tr></table></figure>
+
+<h2 id="alwaysdata"><a href="#alwaysdata" class="headerlink" title="alwaysdata"></a>alwaysdata</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.alwaysdata.com/en/</span><br></pre></td></tr></table></figure>
+
+<h2 id="cloud66"><a href="#cloud66" class="headerlink" title="cloud66"></a>cloud66</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.cloud66.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="GitLab"><a href="#GitLab" class="headerlink" title="GitLab"></a>GitLab</h2><p>在30天内无限访问GitLab的所有功能。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://about.gitlab.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="appflow"><a href="#appflow" class="headerlink" title="appflow"></a>appflow</h2><p>免费试用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://ionicframework.com/appflow</span><br></pre></td></tr></table></figure>
+
+<h2 id="amezmo"><a href="#amezmo" class="headerlink" title="amezmo"></a>amezmo</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.amezmo.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="appcircle"><a href="#appcircle" class="headerlink" title="appcircle"></a>appcircle</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://appcircle.io/</span><br></pre></td></tr></table></figure>
+
+<h2 id="codefresh"><a href="#codefresh" class="headerlink" title="codefresh"></a>codefresh</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://codefresh.io/</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="Glype-Proxy搭建和安装"><a href="#Glype-Proxy搭建和安装" class="headerlink" title="Glype Proxy搭建和安装"></a>Glype Proxy搭建和安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://coderschool.cn/2491.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="You2PHP"><a href="#You2PHP" class="headerlink" title="You2PHP"></a>You2PHP</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://you2php.github.io/doc/</span><br></pre></td></tr></table></figure>
+
+<h2 id="少凡的独立博客"><a href="#少凡的独立博客" class="headerlink" title="少凡的独立博客"></a>少凡的独立博客</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://shaofan.org/</span><br></pre></td></tr></table></figure>
+
+<h2 id="如有乐享"><a href="#如有乐享" class="headerlink" title="如有乐享"></a>如有乐享</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/</span><br></pre></td></tr></table></figure>
+
+<h2 id="ACfox-Blog"><a href="#ACfox-Blog" class="headerlink" title="ACfox Blog"></a>ACfox Blog</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://fbk.ink/</span><br></pre></td></tr></table></figure>
+
+<h2 id="在校师生福利：Apple、微软、Adobe-等产品如何通过教育优惠购买"><a href="#在校师生福利：Apple、微软、Adobe-等产品如何通过教育优惠购买" class="headerlink" title="在校师生福利：Apple、微软、Adobe 等产品如何通过教育优惠购买"></a>在校师生福利：Apple、微软、Adobe 等产品如何通过教育优惠购买</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://sspai.com/post/39430</span><br></pre></td></tr></table></figure>
+
+<h2 id="qinghuaiorg-x2F-free-for-dev-zh-国内免费服务聚合"><a href="#qinghuaiorg-x2F-free-for-dev-zh-国内免费服务聚合" class="headerlink" title="qinghuaiorg&#x2F;free-for-dev-zh: 国内免费服务聚合"></a>qinghuaiorg&#x2F;free-for-dev-zh: 国内免费服务聚合</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/qinghuaiorg/free-for-dev-zh</span><br></pre></td></tr></table></figure>
+
+<h2 id="ripienaar-x2F-free-for-dev-A-list-of-SaaS-PaaS-and-IaaS-offerings-that-have-free-tiers-of-interest-to-devops-and-infradev"><a href="#ripienaar-x2F-free-for-dev-A-list-of-SaaS-PaaS-and-IaaS-offerings-that-have-free-tiers-of-interest-to-devops-and-infradev" class="headerlink" title="ripienaar&#x2F;free-for-dev: A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev"></a>ripienaar&#x2F;free-for-dev: A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/ripienaar/free-for-dev</span><br></pre></td></tr></table></figure>
+
+<h2 id="AchoArnold-x2F-discount-for-student-dev-This-is-list-of-discounts-on-software-SaaS-PaaS-IaaS-etc-and-other-offerings-for-developers-who-are-students"><a href="#AchoArnold-x2F-discount-for-student-dev-This-is-list-of-discounts-on-software-SaaS-PaaS-IaaS-etc-and-other-offerings-for-developers-who-are-students" class="headerlink" title="AchoArnold&#x2F;discount-for-student-dev: This is list of discounts on software (SaaS, PaaS, IaaS, etc.) and other offerings for developers who are students"></a>AchoArnold&#x2F;discount-for-student-dev: This is list of discounts on software (SaaS, PaaS, IaaS, etc.) and other offerings for developers who are students</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/AchoArnold/discount-for-student-dev</span><br></pre></td></tr></table></figure>
+
+<h2 id="FreeForStudents-Exclusive-Freebies-and-Discounts"><a href="#FreeForStudents-Exclusive-Freebies-and-Discounts" class="headerlink" title="FreeForStudents: Exclusive Freebies and Discounts"></a>FreeForStudents: Exclusive Freebies and Discounts</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.freeforstudents.org/</span><br></pre></td></tr></table></figure>
+
+<h2 id="ivmm-x2F-Student-resources-本文介绍的是利用学生、教职工身份可以享受到的相关学生优惠、教育优惠或教师优惠的权益，但也希望各位享受权利的同时不要忘记自己的义务，不要售卖、转手自己的学生优惠、教育优惠的资格，使得其他同学无法受益。"><a href="#ivmm-x2F-Student-resources-本文介绍的是利用学生、教职工身份可以享受到的相关学生优惠、教育优惠或教师优惠的权益，但也希望各位享受权利的同时不要忘记自己的义务，不要售卖、转手自己的学生优惠、教育优惠的资格，使得其他同学无法受益。" class="headerlink" title="ivmm&#x2F;Student-resources: 本文介绍的是利用学生、教职工身份可以享受到的相关学生优惠、教育优惠或教师优惠的权益，但也希望各位享受权利的同时不要忘记自己的义务，不要售卖、转手自己的学生优惠、教育优惠的资格，使得其他同学无法受益。"></a>ivmm&#x2F;Student-resources: 本文介绍的是利用学生、教职工身份可以享受到的相关学生优惠、教育优惠或教师优惠的权益，但也希望各位享受权利的同时不要忘记自己的义务，不要售卖、转手自己的学生优惠、教育优惠的资格，使得其他同学无法受益。</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/ivmm/Student-resources</span><br></pre></td></tr></table></figure>
+
+<h2 id="CentOS-x2F-Debian-x2F-Ubuntu网络重装系统一键脚本"><a href="#CentOS-x2F-Debian-x2F-Ubuntu网络重装系统一键脚本" class="headerlink" title="CentOS&#x2F;Debian&#x2F;Ubuntu网络重装系统一键脚本"></a>CentOS&#x2F;Debian&#x2F;Ubuntu网络重装系统一键脚本</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/5561.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="如何从微软官方直接下载Windows-10的ISO镜像"><a href="#如何从微软官方直接下载Windows-10的ISO镜像" class="headerlink" title="如何从微软官方直接下载Windows 10的ISO镜像"></a>如何从微软官方直接下载Windows 10的ISO镜像</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/10149.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="Google搜索实用技巧：帮你解除谷歌搜图安全搜索限制"><a href="#Google搜索实用技巧：帮你解除谷歌搜图安全搜索限制" class="headerlink" title="Google搜索实用技巧：帮你解除谷歌搜图安全搜索限制"></a>Google搜索实用技巧：帮你解除谷歌搜图安全搜索限制</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/748.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="Fikker网站缓存-x2F-反向代理-x2F-自建CDN软件"><a href="#Fikker网站缓存-x2F-反向代理-x2F-自建CDN软件" class="headerlink" title="Fikker网站缓存&#x2F;反向代理&#x2F;自建CDN软件"></a>Fikker网站缓存&#x2F;反向代理&#x2F;自建CDN软件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/7349.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="一键全自动DD安装Windows系统"><a href="#一键全自动DD安装Windows系统" class="headerlink" title="一键全自动DD安装Windows系统"></a>一键全自动DD安装Windows系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/6333.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="Windows一键重装系统为Linux-netboot-网络安装"><a href="#Windows一键重装系统为Linux-netboot-网络安装" class="headerlink" title="Windows一键重装系统为Linux (netboot,网络安装)"></a>Windows一键重装系统为Linux (netboot,网络安装)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/10538.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="Chrome安装离线扩展程序和非WebStore扩展程序方法"><a href="#Chrome安装离线扩展程序和非WebStore扩展程序方法" class="headerlink" title="Chrome安装离线扩展程序和非WebStore扩展程序方法"></a>Chrome安装离线扩展程序和非WebStore扩展程序方法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/10499.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="推荐几款比较顺眼的XShell配色方案"><a href="#推荐几款比较顺眼的XShell配色方案" class="headerlink" title="推荐几款比较顺眼的XShell配色方案"></a>推荐几款比较顺眼的XShell配色方案</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/6304.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="Xshell-x2F-Xftp-x2F-XshellPlus-5和6版本官方下载-”注册码”"><a href="#Xshell-x2F-Xftp-x2F-XshellPlus-5和6版本官方下载-”注册码”" class="headerlink" title="Xshell&#x2F;Xftp&#x2F;XshellPlus 5和6版本官方下载+”注册码”"></a>Xshell&#x2F;Xftp&#x2F;XshellPlus 5和6版本官方下载+”注册码”</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/11447.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="迈克菲（McAfee）杀毒软件无限叠加时间使用"><a href="#迈克菲（McAfee）杀毒软件无限叠加时间使用" class="headerlink" title="迈克菲（McAfee）杀毒软件无限叠加时间使用"></a>迈克菲（McAfee）杀毒软件无限叠加时间使用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/3945.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="Paypal优惠券-x2F-现金券的使用（套现）方法"><a href="#Paypal优惠券-x2F-现金券的使用（套现）方法" class="headerlink" title="Paypal优惠券&#x2F;现金券的使用（套现）方法"></a>Paypal优惠券&#x2F;现金券的使用（套现）方法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/6636.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="Listing-the-best-services-for-free-domain-email-addresses-in-2020"><a href="#Listing-the-best-services-for-free-domain-email-addresses-in-2020" class="headerlink" title="Listing the best services for free domain email addresses in 2020"></a>Listing the best services for free domain email addresses in 2020</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://dev.to/doobled/listing-the-best-services-for-free-domain-email-addresses-in-2020-3hkb</span><br></pre></td></tr></table></figure>
+
+<h2 id="Github上10个开源免费且优秀的后台控制面板"><a href="#Github上10个开源免费且优秀的后台控制面板" class="headerlink" title="Github上10个开源免费且优秀的后台控制面板"></a>Github上10个开源免费且优秀的后台控制面板</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.jianshu.com/p/3bc7404af887</span><br></pre></td></tr></table></figure>
+
+<h2 id="国外免费BT离线下载服务收集"><a href="#国外免费BT离线下载服务收集" class="headerlink" title="国外免费BT离线下载服务收集"></a>国外免费BT离线下载服务收集</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/4140.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="利用Github-Action刷Microsoft-365-E5开发者订阅API实现续订"><a href="#利用Github-Action刷Microsoft-365-E5开发者订阅API实现续订" class="headerlink" title="利用Github Action刷Microsoft 365 E5开发者订阅API实现续订"></a>利用Github Action刷Microsoft 365 E5开发者订阅API实现续订</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/15646.html</span><br><span class="line">https://www.bilibili.com/video/av95688306/</span><br></pre></td></tr></table></figure>
+
+<h2 id="hoochanlon-x2F-w3-goto-world"><a href="#hoochanlon-x2F-w3-goto-world" class="headerlink" title="hoochanlon&#x2F;w3-goto-world"></a>hoochanlon&#x2F;w3-goto-world</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/hoochanlon/w3-goto-world</span><br></pre></td></tr></table></figure>
+
+<h2 id="IPFS简单使用"><a href="#IPFS简单使用" class="headerlink" title="IPFS简单使用"></a>IPFS简单使用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://hoochanlon.github.io/fq-book/#/ipfs/ipfs-use-naive</span><br></pre></td></tr></table></figure>
+
+<h2 id="Aria2安装配置使用教程"><a href="#Aria2安装配置使用教程" class="headerlink" title="Aria2安装配置使用教程"></a>Aria2安装配置使用教程</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/2607.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="网盘被限速？不怕，我有私有云"><a href="#网盘被限速？不怕，我有私有云" class="headerlink" title="网盘被限速？不怕，我有私有云"></a>网盘被限速？不怕，我有私有云</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://xiaoyou66.com/archives/769</span><br></pre></td></tr></table></figure>
+
+<h2 id="jupyter安装及目录生成"><a href="#jupyter安装及目录生成" class="headerlink" title="jupyter安装及目录生成"></a>jupyter安装及目录生成</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.cnblogs.com/jayafsmw/p/12286580.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="那些在线的Jupyter"><a href="#那些在线的Jupyter" class="headerlink" title="那些在线的Jupyter"></a>那些在线的Jupyter</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/hxpjava1/article/details/86763331</span><br></pre></td></tr></table></figure>
+
+<h2 id="『推荐』FileRun网盘程序部署使用教程"><a href="#『推荐』FileRun网盘程序部署使用教程" class="headerlink" title="『推荐』FileRun网盘程序部署使用教程"></a>『推荐』FileRun网盘程序部署使用教程</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/5309.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="最新DaoCloud-io部署指南教程，将免费进行到底"><a href="#最新DaoCloud-io部署指南教程，将免费进行到底" class="headerlink" title="最新DaoCloud.io部署指南教程，将免费进行到底"></a>最新DaoCloud.io部署指南教程，将免费进行到底</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/3720.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="成倍提升你的手机听歌体验，这套免费方案绝对值得一试！"><a href="#成倍提升你的手机听歌体验，这套免费方案绝对值得一试！" class="headerlink" title="成倍提升你的手机听歌体验，这套免费方案绝对值得一试！"></a>成倍提升你的手机听歌体验，这套免费方案绝对值得一试！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/0IBJSIMSHJJJSYSWbM48Dw</span><br></pre></td></tr></table></figure>
+
+<h2 id="想不到吧，迅雷悄悄在国外搞了个无限制的免费离线下载网盘！"><a href="#想不到吧，迅雷悄悄在国外搞了个无限制的免费离线下载网盘！" class="headerlink" title="想不到吧，迅雷悄悄在国外搞了个无限制的免费离线下载网盘！"></a>想不到吧，迅雷悄悄在国外搞了个无限制的免费离线下载网盘！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/XNC_yyE8fWR62CXV1WD4ew</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/Subscription-Use.html" rel="prev" title="微信号与公众号使用指南">
+      <i class="fa fa-chevron-left"></i> 微信号与公众号使用指南
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/Instructions-Of-Mysql.html" rel="next" title="Mysql使用指南">
+      Mysql使用指南 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TODOS"><span class="nav-text">TODOS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86"><span class="nav-text">相关知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%91%E5%BA%94%E7%94%A8%E9%83%A8%E7%BD%B2"><span class="nav-text">云应用部署</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IaaS-x2F-SaaS-x2F-BaaS"><span class="nav-text">IaaS&#x2F;SaaS&#x2F;BaaS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E5%8E%82%E6%B3%84%E9%9C%B2%E8%B5%84%E6%96%99"><span class="nav-text">大厂泄露资料</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E7%94%9F%E4%B8%93%E5%B1%9E%E9%A1%B9%E7%9B%AE"><span class="nav-text">学生专属项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Office-365-E5"><span class="nav-text">Office 365 E5</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%99%E8%82%B2%E7%89%88"><span class="nav-text">教育版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E8%80%85%E8%B4%A6%E5%8F%B7"><span class="nav-text">开发者账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E7%BB%AD%E8%AE%A2"><span class="nav-text">自动续订</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Semaphore"><span class="nav-text">Semaphore</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unreal-Engine"><span class="nav-text">Unreal Engine</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#loom"><span class="nav-text">loom</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Astah-UML"><span class="nav-text">Astah UML</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tableau"><span class="nav-text">Tableau</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#StudentUniverse"><span class="nav-text">StudentUniverse</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github-Education-Pack"><span class="nav-text">Github Education Pack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Microsoft-Azure"><span class="nav-text">Microsoft Azure</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%85%E5%88%86%E4%BD%BF%E7%94%A8Azure%E5%AD%A6%E7%94%9F%E8%AE%A2%E9%98%85%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6"><span class="nav-text">充分使用Azure学生订阅免费额度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8D%E4%BB%A3Google"><span class="nav-text">反代Google</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1"><span class="nav-text">定时任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8SendGrid%E5%85%8D%E8%B4%B9%E8%AE%A1%E5%88%92%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1"><span class="nav-text">利用SendGrid免费计划发送邮件服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Imagine%E6%BF%80%E6%B4%BBAzure"><span class="nav-text">Imagine激活Azure</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AWS"><span class="nav-text">AWS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Autodesk"><span class="nav-text">Autodesk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#G-Suite-for-Education"><span class="nav-text">G Suite for Education</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LINGO-Educational-Research-License"><span class="nav-text">LINGO Educational Research License</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Office-in-Education"><span class="nav-text">Office in Education</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pantheon"><span class="nav-text">Pantheon</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Axure"><span class="nav-text">Axure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tableau-1"><span class="nav-text">Tableau</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Minecraft"><span class="nav-text">Minecraft</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OriginPro-Student-Version"><span class="nav-text">OriginPro Student Version</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Notion"><span class="nav-text">Notion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shapr3D"><span class="nav-text">Shapr3D</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Intel%C2%AE-Software-Development-Tools"><span class="nav-text">Intel® Software Development Tools</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bootstrap-Studio"><span class="nav-text">Bootstrap Studio</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MATLAB"><span class="nav-text">MATLAB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1Password"><span class="nav-text">1Password</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#invision"><span class="nav-text">invision</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Basecamp"><span class="nav-text">Basecamp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#YNAB"><span class="nav-text">YNAB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Adobe"><span class="nav-text">Adobe</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Squarespace"><span class="nav-text">Squarespace</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Azendoo"><span class="nav-text">Azendoo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Figma"><span class="nav-text">Figma</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tower"><span class="nav-text">Tower</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lucidchart"><span class="nav-text">Lucidchart</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sketch-Education"><span class="nav-text">Sketch Education</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Asana"><span class="nav-text">Asana</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dashlane"><span class="nav-text">Dashlane</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Navicat-Premium"><span class="nav-text">Navicat Premium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scaleway"><span class="nav-text">Scaleway</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DataStax"><span class="nav-text">DataStax</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#db4free"><span class="nav-text">db4free</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ElephantSQL"><span class="nav-text">ElephantSQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FreeSQLdatabase"><span class="nav-text">FreeSQLdatabase</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQLGate"><span class="nav-text">SQLGate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mLab"><span class="nav-text">mLab</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Free-MySQL-Hosting"><span class="nav-text">Free MySQL Hosting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EasyDB"><span class="nav-text">EasyDB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#n-point"><span class="nav-text">n:point</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FREE-MYSQL"><span class="nav-text">FREE MYSQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ElephantSQL-1"><span class="nav-text">ElephantSQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DataStax-Astra"><span class="nav-text">DataStax Astra</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UNBOUNDED"><span class="nav-text">UNBOUNDED</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lambda-Store"><span class="nav-text">Lambda Store</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GrapheneDB"><span class="nav-text">GrapheneDB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EverSQL"><span class="nav-text">EverSQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#caspio"><span class="nav-text">caspio</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iH5"><span class="nav-text">iH5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Navicat-Premium-10"><span class="nav-text">Navicat Premium 10</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DB-DESIGNER"><span class="nav-text">DB DESIGNER</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#restdb-io"><span class="nav-text">restdb.io</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UNBOUNDED-1"><span class="nav-text">UNBOUNDED</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#graphenedb"><span class="nav-text">graphenedb</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E5%85%A8%E6%B2%99%E7%AE%B1"><span class="nav-text">安全沙箱</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E6%AD%A5%E5%9C%A8%E7%BA%BF%E4%BA%91%E6%B2%99%E7%AE%B1"><span class="nav-text">微步在线云沙箱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hybrid-Analysis"><span class="nav-text">Hybrid Analysis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%85%BE%E8%AE%AF%E5%93%88%E5%8B%83%E5%88%86%E6%9E%90%E7%B3%BB%E7%BB%9F"><span class="nav-text">腾讯哈勃分析系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sndbox"><span class="nav-text">Sndbox</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Anxin"><span class="nav-text">Anxin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A5%87%E5%AE%89%E4%BF%A1%E7%BD%91%E7%AB%99%E5%8D%AB%E5%A3%AB"><span class="nav-text">奇安信网站卫士</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DevOps"><span class="nav-text">DevOps</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#UNPKG"><span class="nav-text">UNPKG</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#blackfire"><span class="nav-text">blackfire</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#alwaysdata"><span class="nav-text">alwaysdata</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cloud66"><span class="nav-text">cloud66</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitLab"><span class="nav-text">GitLab</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#appflow"><span class="nav-text">appflow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#amezmo"><span class="nav-text">amezmo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#appcircle"><span class="nav-text">appcircle</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#codefresh"><span class="nav-text">codefresh</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Glype-Proxy%E6%90%AD%E5%BB%BA%E5%92%8C%E5%AE%89%E8%A3%85"><span class="nav-text">Glype Proxy搭建和安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You2PHP"><span class="nav-text">You2PHP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%91%E5%87%A1%E7%9A%84%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2"><span class="nav-text">少凡的独立博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E6%9C%89%E4%B9%90%E4%BA%AB"><span class="nav-text">如有乐享</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ACfox-Blog"><span class="nav-text">ACfox Blog</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E6%A0%A1%E5%B8%88%E7%94%9F%E7%A6%8F%E5%88%A9%EF%BC%9AApple%E3%80%81%E5%BE%AE%E8%BD%AF%E3%80%81Adobe-%E7%AD%89%E4%BA%A7%E5%93%81%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E6%95%99%E8%82%B2%E4%BC%98%E6%83%A0%E8%B4%AD%E4%B9%B0"><span class="nav-text">在校师生福利：Apple、微软、Adobe 等产品如何通过教育优惠购买</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#qinghuaiorg-x2F-free-for-dev-zh-%E5%9B%BD%E5%86%85%E5%85%8D%E8%B4%B9%E6%9C%8D%E5%8A%A1%E8%81%9A%E5%90%88"><span class="nav-text">qinghuaiorg&#x2F;free-for-dev-zh: 国内免费服务聚合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ripienaar-x2F-free-for-dev-A-list-of-SaaS-PaaS-and-IaaS-offerings-that-have-free-tiers-of-interest-to-devops-and-infradev"><span class="nav-text">ripienaar&#x2F;free-for-dev: A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AchoArnold-x2F-discount-for-student-dev-This-is-list-of-discounts-on-software-SaaS-PaaS-IaaS-etc-and-other-offerings-for-developers-who-are-students"><span class="nav-text">AchoArnold&#x2F;discount-for-student-dev: This is list of discounts on software (SaaS, PaaS, IaaS, etc.) and other offerings for developers who are students</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FreeForStudents-Exclusive-Freebies-and-Discounts"><span class="nav-text">FreeForStudents: Exclusive Freebies and Discounts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ivmm-x2F-Student-resources-%E6%9C%AC%E6%96%87%E4%BB%8B%E7%BB%8D%E7%9A%84%E6%98%AF%E5%88%A9%E7%94%A8%E5%AD%A6%E7%94%9F%E3%80%81%E6%95%99%E8%81%8C%E5%B7%A5%E8%BA%AB%E4%BB%BD%E5%8F%AF%E4%BB%A5%E4%BA%AB%E5%8F%97%E5%88%B0%E7%9A%84%E7%9B%B8%E5%85%B3%E5%AD%A6%E7%94%9F%E4%BC%98%E6%83%A0%E3%80%81%E6%95%99%E8%82%B2%E4%BC%98%E6%83%A0%E6%88%96%E6%95%99%E5%B8%88%E4%BC%98%E6%83%A0%E7%9A%84%E6%9D%83%E7%9B%8A%EF%BC%8C%E4%BD%86%E4%B9%9F%E5%B8%8C%E6%9C%9B%E5%90%84%E4%BD%8D%E4%BA%AB%E5%8F%97%E6%9D%83%E5%88%A9%E7%9A%84%E5%90%8C%E6%97%B6%E4%B8%8D%E8%A6%81%E5%BF%98%E8%AE%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B9%89%E5%8A%A1%EF%BC%8C%E4%B8%8D%E8%A6%81%E5%94%AE%E5%8D%96%E3%80%81%E8%BD%AC%E6%89%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AD%A6%E7%94%9F%E4%BC%98%E6%83%A0%E3%80%81%E6%95%99%E8%82%B2%E4%BC%98%E6%83%A0%E7%9A%84%E8%B5%84%E6%A0%BC%EF%BC%8C%E4%BD%BF%E5%BE%97%E5%85%B6%E4%BB%96%E5%90%8C%E5%AD%A6%E6%97%A0%E6%B3%95%E5%8F%97%E7%9B%8A%E3%80%82"><span class="nav-text">ivmm&#x2F;Student-resources: 本文介绍的是利用学生、教职工身份可以享受到的相关学生优惠、教育优惠或教师优惠的权益，但也希望各位享受权利的同时不要忘记自己的义务，不要售卖、转手自己的学生优惠、教育优惠的资格，使得其他同学无法受益。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CentOS-x2F-Debian-x2F-Ubuntu%E7%BD%91%E7%BB%9C%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC"><span class="nav-text">CentOS&#x2F;Debian&#x2F;Ubuntu网络重装系统一键脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%BB%8E%E5%BE%AE%E8%BD%AF%E5%AE%98%E6%96%B9%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BDWindows-10%E7%9A%84ISO%E9%95%9C%E5%83%8F"><span class="nav-text">如何从微软官方直接下载Windows 10的ISO镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google%E6%90%9C%E7%B4%A2%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7%EF%BC%9A%E5%B8%AE%E4%BD%A0%E8%A7%A3%E9%99%A4%E8%B0%B7%E6%AD%8C%E6%90%9C%E5%9B%BE%E5%AE%89%E5%85%A8%E6%90%9C%E7%B4%A2%E9%99%90%E5%88%B6"><span class="nav-text">Google搜索实用技巧：帮你解除谷歌搜图安全搜索限制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fikker%E7%BD%91%E7%AB%99%E7%BC%93%E5%AD%98-x2F-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86-x2F-%E8%87%AA%E5%BB%BACDN%E8%BD%AF%E4%BB%B6"><span class="nav-text">Fikker网站缓存&#x2F;反向代理&#x2F;自建CDN软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E9%94%AE%E5%85%A8%E8%87%AA%E5%8A%A8DD%E5%AE%89%E8%A3%85Windows%E7%B3%BB%E7%BB%9F"><span class="nav-text">一键全自动DD安装Windows系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows%E4%B8%80%E9%94%AE%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E4%B8%BALinux-netboot-%E7%BD%91%E7%BB%9C%E5%AE%89%E8%A3%85"><span class="nav-text">Windows一键重装系统为Linux (netboot,网络安装)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chrome%E5%AE%89%E8%A3%85%E7%A6%BB%E7%BA%BF%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E5%92%8C%E9%9D%9EWebStore%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E6%96%B9%E6%B3%95"><span class="nav-text">Chrome安装离线扩展程序和非WebStore扩展程序方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E5%87%A0%E6%AC%BE%E6%AF%94%E8%BE%83%E9%A1%BA%E7%9C%BC%E7%9A%84XShell%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88"><span class="nav-text">推荐几款比较顺眼的XShell配色方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Xshell-x2F-Xftp-x2F-XshellPlus-5%E5%92%8C6%E7%89%88%E6%9C%AC%E5%AE%98%E6%96%B9%E4%B8%8B%E8%BD%BD-%E2%80%9D%E6%B3%A8%E5%86%8C%E7%A0%81%E2%80%9D"><span class="nav-text">Xshell&#x2F;Xftp&#x2F;XshellPlus 5和6版本官方下载+”注册码”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%88%E5%85%8B%E8%8F%B2%EF%BC%88McAfee%EF%BC%89%E6%9D%80%E6%AF%92%E8%BD%AF%E4%BB%B6%E6%97%A0%E9%99%90%E5%8F%A0%E5%8A%A0%E6%97%B6%E9%97%B4%E4%BD%BF%E7%94%A8"><span class="nav-text">迈克菲（McAfee）杀毒软件无限叠加时间使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Paypal%E4%BC%98%E6%83%A0%E5%88%B8-x2F-%E7%8E%B0%E9%87%91%E5%88%B8%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%88%E5%A5%97%E7%8E%B0%EF%BC%89%E6%96%B9%E6%B3%95"><span class="nav-text">Paypal优惠券&#x2F;现金券的使用（套现）方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Listing-the-best-services-for-free-domain-email-addresses-in-2020"><span class="nav-text">Listing the best services for free domain email addresses in 2020</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github%E4%B8%8A10%E4%B8%AA%E5%BC%80%E6%BA%90%E5%85%8D%E8%B4%B9%E4%B8%94%E4%BC%98%E7%A7%80%E7%9A%84%E5%90%8E%E5%8F%B0%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF"><span class="nav-text">Github上10个开源免费且优秀的后台控制面板</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BD%E5%A4%96%E5%85%8D%E8%B4%B9BT%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E6%9C%8D%E5%8A%A1%E6%94%B6%E9%9B%86"><span class="nav-text">国外免费BT离线下载服务收集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8Github-Action%E5%88%B7Microsoft-365-E5%E5%BC%80%E5%8F%91%E8%80%85%E8%AE%A2%E9%98%85API%E5%AE%9E%E7%8E%B0%E7%BB%AD%E8%AE%A2"><span class="nav-text">利用Github Action刷Microsoft 365 E5开发者订阅API实现续订</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hoochanlon-x2F-w3-goto-world"><span class="nav-text">hoochanlon&#x2F;w3-goto-world</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IPFS%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"><span class="nav-text">IPFS简单使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Aria2%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="nav-text">Aria2安装配置使用教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%9B%98%E8%A2%AB%E9%99%90%E9%80%9F%EF%BC%9F%E4%B8%8D%E6%80%95%EF%BC%8C%E6%88%91%E6%9C%89%E7%A7%81%E6%9C%89%E4%BA%91"><span class="nav-text">网盘被限速？不怕，我有私有云</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jupyter%E5%AE%89%E8%A3%85%E5%8F%8A%E7%9B%AE%E5%BD%95%E7%94%9F%E6%88%90"><span class="nav-text">jupyter安装及目录生成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%A3%E4%BA%9B%E5%9C%A8%E7%BA%BF%E7%9A%84Jupyter"><span class="nav-text">那些在线的Jupyter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%8E%E6%8E%A8%E8%8D%90%E3%80%8FFileRun%E7%BD%91%E7%9B%98%E7%A8%8B%E5%BA%8F%E9%83%A8%E7%BD%B2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="nav-text">『推荐』FileRun网盘程序部署使用教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E6%96%B0DaoCloud-io%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97%E6%95%99%E7%A8%8B%EF%BC%8C%E5%B0%86%E5%85%8D%E8%B4%B9%E8%BF%9B%E8%A1%8C%E5%88%B0%E5%BA%95"><span class="nav-text">最新DaoCloud.io部署指南教程，将免费进行到底</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E5%80%8D%E6%8F%90%E5%8D%87%E4%BD%A0%E7%9A%84%E6%89%8B%E6%9C%BA%E5%90%AC%E6%AD%8C%E4%BD%93%E9%AA%8C%EF%BC%8C%E8%BF%99%E5%A5%97%E5%85%8D%E8%B4%B9%E6%96%B9%E6%A1%88%E7%BB%9D%E5%AF%B9%E5%80%BC%E5%BE%97%E4%B8%80%E8%AF%95%EF%BC%81"><span class="nav-text">成倍提升你的手机听歌体验，这套免费方案绝对值得一试！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%83%B3%E4%B8%8D%E5%88%B0%E5%90%A7%EF%BC%8C%E8%BF%85%E9%9B%B7%E6%82%84%E6%82%84%E5%9C%A8%E5%9B%BD%E5%A4%96%E6%90%9E%E4%BA%86%E4%B8%AA%E6%97%A0%E9%99%90%E5%88%B6%E7%9A%84%E5%85%8D%E8%B4%B9%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%9B%98%EF%BC%81"><span class="nav-text">想不到吧，迅雷悄悄在国外搞了个无限制的免费离线下载网盘！</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

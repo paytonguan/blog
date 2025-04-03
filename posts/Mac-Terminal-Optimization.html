@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Mac终端优化。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac终端优化">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/Mac-Terminal-Optimization.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="Mac终端优化。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/Mac-Terminal-Optimization/topic.jpg">
+<meta property="article:published_time" content="2019-12-23T06:12:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.544Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/Mac-Terminal-Optimization/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/Mac-Terminal-Optimization.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Mac终端优化 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/Mac-Terminal-Optimization.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Mac终端优化
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-12-23 14:12:29" itemprop="dateCreated datePublished" datetime="2019-12-23T14:12:29+08:00">2019-12-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>14k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>13 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/Mac-Terminal-Optimization/topic.jpg"></p>
+<p>Mac终端优化。</p>
+<span id="more"></span>
+
+<h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Command+K</td>
+<td>清屏</td>
+</tr>
+</tbody></table>
+<h1 id="终端优化"><a href="#终端优化" class="headerlink" title="终端优化"></a>终端优化</h1><h2 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h2><p>Homebrew是类似于Linux的apt-get软件包管理器。</p>
+<h3 id="安装与卸载"><a href="#安装与卸载" class="headerlink" title="安装与卸载"></a>安装与卸载</h3><h4 id="官方途径"><a href="#官方途径" class="headerlink" title="官方途径"></a>官方途径</h4><p>在终端输入以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span><br><span class="line"></span><br><span class="line"># 卸载</span><br><span class="line">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="国内途径"><a href="#国内途径" class="headerlink" title="国内途径"></a>国内途径</h4><h5 id="最新方法"><a href="#最新方法" class="headerlink" title="最新方法"></a>最新方法</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;</span><br><span class="line"></span><br><span class="line"># 卸载</span><br><span class="line">/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/HomebrewUninstall.sh)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>或以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">/bin/bash -c &quot;$(curl -fsSL https://cdn.jsdelivr.net/gh/ineo6/homebrew-install/install.sh)&quot;</span><br><span class="line"></span><br><span class="line"># 卸载</span><br><span class="line">/bin/bash -c &quot;$(curl -fsSL https://cdn.jsdelivr.net/gh/ineo6/homebrew-install/uninstall.sh)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>若命令执行中卡在<code>Cloning into &#39;/usr/local/Homebrew/Library/Taps/homebrew/homebrew-core&#39;</code>，可执行以下命令后再重新执行脚本。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;$(brew --repo)/Library/Taps/&quot;</span><br><span class="line">mkdir homebrew &amp;&amp; cd homebrew</span><br><span class="line">git clone git://mirrors.ustc.edu.cn/homebrew-core.git</span><br></pre></td></tr></table></figure>
+
+<p>若为安装cask时卡住，则为以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;$(brew --repo)/Library/Taps/&quot;</span><br><span class="line">cd homebrew</span><br><span class="line">git clone https://mirrors.ustc.edu.cn/homebrew-cask.git</span><br></pre></td></tr></table></figure>
+
+<details>
+<summary>【进阶】对于M1芯片</summary>
+
+<p>M1芯片需要使用ARM版的Homebrew，安装路径为&#x2F;opt&#x2F;homebrew。安装完成后须在终端输入以下命令以设置环境变量。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># bash用户</span><br><span class="line">echo &#x27;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#x27; &gt;&gt; ~/.bash_profile</span><br><span class="line">eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;</span><br><span class="line"></span><br><span class="line"># zsh用户</span><br><span class="line">echo &#x27;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#x27; &gt;&gt; ~/.zshrc</span><br><span class="line">eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>也可在M1芯片安装普通的x86版，命令如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arch -x86_64 /bin/bash -c &quot;$(curl -fsSL https://cdn.jsdelivr.net/gh/ineo6/homebrew-install/install.sh)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>若同时安装了两个版本，需要在<del>&#x2F;.zshrc或</del>&#x2F;.bash_profile添加以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias abrew=&#x27;arch -arm64 /opt/homebrew/bin/brew&#x27;</span><br><span class="line">alias ibrew=&#x27;arch -x86_64 /usr/local/bin/brew&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>保存后，在终端输入<code>abrew</code>表示使用ARM版，输入<code>ibrew</code>表示使用x86版。</p>
+</details>
+
+<h5 id="失效教程"><a href="#失效教程" class="headerlink" title="失效教程"></a>失效教程</h5><details>
+<summary></summary>
+
+<p>在终端输入以下命令以获取install文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install &gt;&gt; brew_install</span><br></pre></td></tr></table></figure>
+
+<p>打开所获取的install文件（一般在用户目录），更改脚本中<code>BREW_REPO</code>和<code>CORE_TAP_REPO</code>两处，两个镜像源任选一个。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 中国科学技术大学源</span><br><span class="line">BREW_REPO = &quot;https://mirrors.ustc.edu.cn/brew.git&quot;.freeze</span><br><span class="line">CORE_TAP_REPO = &quot;https://mirrors.ustc.edu.cn/homebrew-core.git&quot;.freeze</span><br><span class="line"></span><br><span class="line">// 清华大学源</span><br><span class="line">BREW_REPO = &quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&quot;.freeze</span><br><span class="line">CORE_TAP_REPO = &quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&quot;.freeze</span><br></pre></td></tr></table></figure>
+
+<p>在终端输入以下命令以执行脚本即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby brew_install</span><br></pre></td></tr></table></figure>
+
+<p>卸载则输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd `brew --prefix`</span><br><span class="line">rm -rf Cellar</span><br><span class="line">brew prune</span><br><span class="line">rm `git ls-files`</span><br><span class="line">rm -r Library/Homebrew Library/Aliases Library/Formula Library/Contributions</span><br><span class="line">rm -rf .git</span><br><span class="line">rm -rf ~/Library/Caches/Homebrew</span><br></pre></td></tr></table></figure>
+</details>
+
+<h3 id="更换默认源"><a href="#更换默认源" class="headerlink" title="更换默认源"></a>更换默认源</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"># 中国科学技术大学源</span><br><span class="line">## 替换核心软件仓库</span><br><span class="line">cd &quot;$(brew --repo)&quot;</span><br><span class="line">git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git</span><br><span class="line"></span><br><span class="line">## 替换cask软件仓库</span><br><span class="line">cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</span><br><span class="line">git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git</span><br><span class="line"></span><br><span class="line">## 替换Bottles源</span><br><span class="line">## 以下二选一</span><br><span class="line">（bash用户）</span><br><span class="line">echo &#x27;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles&#x27; &gt;&gt; ~/.bash_profile</span><br><span class="line">source ~/.bash_profile</span><br><span class="line"></span><br><span class="line">（zsh用户）</span><br><span class="line">echo &#x27;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles&#x27; &gt;&gt; ~/.zshrc</span><br><span class="line">source ~/.zshrc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 清华大学源</span><br><span class="line">## 替换核心软件仓库</span><br><span class="line">cd &quot;$(brew --repo)&quot;</span><br><span class="line">git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git</span><br><span class="line"></span><br><span class="line">## 替换cask软件仓库</span><br><span class="line">cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</span><br><span class="line">git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git</span><br><span class="line"></span><br><span class="line">## 替换Bottles源</span><br><span class="line">## 以下二选一</span><br><span class="line">（bash用户）</span><br><span class="line">echo &#x27;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&#x27; &gt;&gt; ~/.bash_profile</span><br><span class="line">source ~/.bash_profile</span><br><span class="line"></span><br><span class="line">（zsh用户）</span><br><span class="line">echo &#x27;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&#x27; &gt;&gt; ~/.zshrc</span><br><span class="line">source ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<p>也可通过以下链接获取换源命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://brew.idayer.com/guide/change-source</span><br></pre></td></tr></table></figure>
+
+<p>完成后在终端输入以下命令更新Homebrew。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br><span class="line">brew upgrade</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>brew help</td>
+<td>帮助</td>
+</tr>
+<tr>
+<td>brew list</td>
+<td>列出安装包</td>
+</tr>
+<tr>
+<td>brew update</td>
+<td>更新Homebrew</td>
+</tr>
+<tr>
+<td>brew upgrade</td>
+<td>更新包</td>
+</tr>
+<tr>
+<td>brew install [包名]</td>
+<td>安装包</td>
+</tr>
+<tr>
+<td>brew install [包名]@版本</td>
+<td>安装固定的包</td>
+</tr>
+<tr>
+<td>brew uninstall [包名]</td>
+<td>卸载包</td>
+</tr>
+<tr>
+<td>brew info [包名]</td>
+<td>查看包信息</td>
+</tr>
+<tr>
+<td>brew -v</td>
+<td>Homebrew版本</td>
+</tr>
+<tr>
+<td>brew search [包名]</td>
+<td>搜索可安装的包</td>
+</tr>
+<tr>
+<td>brew autoremove</td>
+<td>自动卸载未用包</td>
+</tr>
+<tr>
+<td>brew cleanup</td>
+<td>清理所有包的旧版本</td>
+</tr>
+<tr>
+<td>brew outdated</td>
+<td>查看需要更新的包</td>
+</tr>
+<tr>
+<td>brew deps –installed –tree</td>
+<td>列出软件包的依赖关系</td>
+</tr>
+</tbody></table>
+<h3 id="常用包"><a href="#常用包" class="headerlink" title="常用包"></a>常用包</h3><h4 id="tree"><a href="#tree" class="headerlink" title="tree"></a>tree</h4><p>用树状结构表示当前目录下的文件层级。</p>
+<h4 id="tcl"><a href="#tcl" class="headerlink" title="tcl"></a>tcl</h4><p>Python的图形化界面依赖。</p>
+<h3 id="操作技巧"><a href="#操作技巧" class="headerlink" title="操作技巧"></a>操作技巧</h3><h4 id="安装被disable的包"><a href="#安装被disable的包" class="headerlink" title="安装被disable的包"></a>安装被disable的包</h4><p>执行以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew tap homebrew/core --force</span><br><span class="line">brew edit [需要安装的包]</span><br></pre></td></tr></table></figure>
+
+<p>在打开的编辑器中，去除类似以下内容的行。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">disable! date: &quot;2022-07-31&quot;, because: :unmaintained</span><br></pre></td></tr></table></figure>
+
+<p>保存后用以下命令安装即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HOMEBREW_NO_INSTALL_FROM_API=1 brew install [需要安装的包]</span><br></pre></td></tr></table></figure>
+
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><h4 id="brew-install-xxx-404"><a href="#brew-install-xxx-404" class="headerlink" title="brew install xxx 404"></a>brew install xxx 404</h4><p>bottles镜像地址更新，须在<del>&#x2F;.zshrc或</del>&#x2F;.bash_profile中修改HOMEBREW_BOTTLE_DOMAIN的值。可通过更换默认源中的链接获取最新的bottles镜像地址。</p>
+<h4 id="command-not-found-brew"><a href="#command-not-found-brew" class="headerlink" title="command not found: brew"></a>command not found: brew</h4><p>对于ARM版，需安装步骤添加环境变量。</p>
+<p>对于x86版，可尝试在<del>&#x2F;.zshrc或</del>&#x2F;.bash_profile手动添加以下环境变量。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># bash用户</span><br><span class="line">echo &#x27;eval &quot;$(/usr/local/Homebrew/bin/brew shellenv)&quot;&#x27; &gt;&gt; ~/.bash_profile</span><br><span class="line">eval &quot;$(/usr/local/Homebrew/bin/brew shellenv)&quot;</span><br><span class="line"></span><br><span class="line"># zsh用户</span><br><span class="line">echo &#x27;eval &quot;$(/usr/local/Homebrew/bin/brew shellenv)&quot;&#x27; &gt;&gt; ~/.zshrc</span><br><span class="line">eval &quot;$(/usr/local/Homebrew/bin/brew shellenv)&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置zsh为默认Shell"><a href="#设置zsh为默认Shell" class="headerlink" title="设置zsh为默认Shell"></a>设置zsh为默认Shell</h2><p>Catalina及以上系统默认shell已为zsh，无需设置。</p>
+<p>可在终端输入以下命令查看当前使用的shell和已安装的shell。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo $SHELL</span><br><span class="line">cat /etc/shells</span><br></pre></td></tr></table></figure>
+
+<p>若未安装zsh，可通过以下命令安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install zsh</span><br></pre></td></tr></table></figure>
+
+<p>输入以下命令，更换默认shell为zsh，重启终端生效。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s /bin/zsh</span><br></pre></td></tr></table></figure>
+
+<h2 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh-my-zsh"></a>oh-my-zsh</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>oh-my-zsh用于美化zsh终端，采用下列命令安装oh-my-zsh。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>在终端输入以下命令以打开配置文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<p>按i键以修改文件。修改<code>ZSH_THEME</code>，即可修改oh-my-zsh的主题。oh-my-zsh的GitHub Wiki页面提供了主题列表。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/robbyrussell/oh-my-zsh/wiki/themes</span><br></pre></td></tr></table></figure>
+
+<p>推荐使用以下主题。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=&quot;agnoster&quot;</span><br></pre></td></tr></table></figure>
+
+<p>在文件末尾加入以下代码，以在终端不显示电脑名称。输入后按<code>Esc</code>，然后输入<code>:wq</code>并回车，保存并退出。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DEFAULT_USER=$USER</span><br></pre></td></tr></table></figure>
+
+<p>修改完成后，需运行以下命令以更新zsh配置。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<p>使用agnoster主题需要安装Powerline字体。在终端运行以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/powerline/fonts.git --depth=1</span><br><span class="line">cd fonts</span><br><span class="line">./install.sh</span><br></pre></td></tr></table></figure>
+
+<p>在终端菜单点击偏好设置，在描述文件选项卡新建一个描述文件，将文本的字体修改为Powerline系的字体，注意需要在字体集中选择所有字体才能找到。保存后将该配置文件设置为默认，然后重启终端即可。</p>
+<p>若希望改变主题默认配色，可在配置文件中配置相应的ANSI颜色。</p>
+<h3 id="外置主题"><a href="#外置主题" class="headerlink" title="外置主题"></a>外置主题</h3><p>除使用oh-my-zsh内置主题，也可安装其它外置主题。</p>
+<h4 id="Powerlevel10k"><a href="#Powerlevel10k" class="headerlink" title="Powerlevel10k"></a>Powerlevel10k</h4><p>终端输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/themes/powerlevel10k</span><br></pre></td></tr></table></figure>
+
+<p>在~&#x2F;.zshrc修改以下内容，保存后重启终端。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">POWERLEVEL9K_MODE=&quot;nerdfont-complete&quot;</span><br><span class="line">ZSH_THEME=&quot;powerlevel10k/powerlevel10k</span><br></pre></td></tr></table></figure>
+
+<p>该主题需要使用Nerd Fonts。打开以下链接，下载Hack.zip后解压，安装其中的所有字体。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/ryanoasis/nerd-fonts/releases</span><br></pre></td></tr></table></figure>
+
+<p>完成后在终端的偏好设置中，将配置文件的字体设置为Hack Nerd Font。在终端自动配置流程将被触发，若未被触发，可运行以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p10k configure</span><br></pre></td></tr></table></figure>
+
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>在终端输入以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">upgrade_oh_my_zsh</span><br></pre></td></tr></table></figure>
+
+<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><h4 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a>zsh-syntax-highlighting</h4><p>语法高亮插件，在终端输入以下命令安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.oh-my-zsh/custom/plugins &amp;&amp;\</span><br><span class="line">git clone git://github.com/zsh-users/zsh-syntax-highlighting.git</span><br></pre></td></tr></table></figure>
+
+<p>修改~&#x2F;.zshrc中的plugins，添加<code>zsh-syntax-highlighting</code>即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">    zsh-syntax-highlighting</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h4 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a>zsh-autosuggestions</h4><p>自动建议补全插件，在终端输入以下命令安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/zsh-users/zsh-autosuggestions $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure>
+
+<p>修改~&#x2F;.zshrc中的plugins，添加<code>zsh-autosuggestions</code>即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">    zsh-autosuggestions</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h4 id="auto-jump"><a href="#auto-jump" class="headerlink" title="auto-jump"></a>auto-jump</h4><p>自动跳转插件，在终端输入以下命令安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone git://github.com/wting/autojump.git</span><br><span class="line">cd autojump</span><br><span class="line">./install.py or ./uninstall.py</span><br></pre></td></tr></table></figure>
+
+<p>也可通过brew安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install autojump</span><br></pre></td></tr></table></figure>
+
+<h4 id="incr"><a href="#incr" class="headerlink" title="incr"></a>incr</h4><p>自动补全插件。打开下面网站下载incr插件，并放置于<code>/.oh-my-zsh/customs/plugins/incr</code>中（若无则新建）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mimosa-pudica.net/zsh-incremental.html</span><br></pre></td></tr></table></figure>
+
+<p>修改~&#x2F;.zshrc，在文件末尾添加以下代码即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source $ZSH/custom/plugins/incr/incr*.zsh</span><br></pre></td></tr></table></figure>
+
+<h2 id="proxychains-ng"><a href="#proxychains-ng" class="headerlink" title="proxychains-ng"></a>proxychains-ng</h2><p>proxychains-ng用于终端翻墙，可用Homebrew安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install proxychains-ng</span><br></pre></td></tr></table></figure>
+
+<p>在终端输入以下命令以打开配置文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/etc/proxychains.conf</span><br></pre></td></tr></table></figure>
+
+<p>在<code>[ProxyList]</code>下注释掉原来的代理，并添加代理类型。示例如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socks5 127.0.0.1 9050</span><br></pre></td></tr></table></figure>
+
+<p>如果所在的网络很复杂，可能需要在配置文件中启用<code>dynamic_chain</code>，然后在<code>[ProxyList]</code>下添加多个代理。两种类型的区别如下。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>dynamic_chain</td>
+<td>按照列表中出现的代理服务器的先后顺序组成一条链，如果有代理服务器失效，则自动将其排除，但至少要有一个是有效的</td>
+</tr>
+<tr>
+<td>strict_chain（默认）</td>
+<td>按照后面列表中出现的代理服务器的先后顺序组成一条链，要求所有的代理服务器都是有效的</td>
+</tr>
+</tbody></table>
+<p>在<code>~/.zshrc</code>末尾添加如下内容并保存。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#   ---------------------------------------</span><br><span class="line">#   proxychain-ng config</span><br><span class="line">#   ---------------------------------------</span><br><span class="line">alias pc=&#x27;proxychains4&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>配置完成后即可使用，示例如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pc curl http://www.google.com</span><br></pre></td></tr></table></figure>
+
+<h1 id="终端命令"><a href="#终端命令" class="headerlink" title="终端命令"></a>终端命令</h1><p>macOS中用<code>\40</code>代表空格。</p>
+<h2 id="磁盘工具添加调试菜单"><a href="#磁盘工具添加调试菜单" class="headerlink" title="磁盘工具添加调试菜单"></a>磁盘工具添加调试菜单</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.DiskUtility DUDebugMenuEnabled 1</span><br></pre></td></tr></table></figure>
+
+<h2 id="显示Spotlight的搜索标题"><a href="#显示Spotlight的搜索标题" class="headerlink" title="显示Spotlight的搜索标题"></a>显示Spotlight的搜索标题</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mdimport /usr/include</span><br><span class="line">mdimport /usr/local/include</span><br><span class="line">mdimport /System/Library/Frameworks</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装Xcode-Command-Line"><a href="#安装Xcode-Command-Line" class="headerlink" title="安装Xcode Command Line"></a>安装Xcode Command Line</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
+
+<p>若提示<code>不能下载该软件，因为网络出现问题</code>，可打开以下链接，并搜索<code>Command Line</code>。可以通过在Mac App Store搜索Xcode，通过查看适合本机系统的Xcode版本以确定应当使用的Command Line版本。下载后安装即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://developer.apple.com/download/more/</span><br></pre></td></tr></table></figure>
+
+<h2 id="文件比较"><a href="#文件比较" class="headerlink" title="文件比较"></a>文件比较</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diff [文件1] [文件2]</span><br></pre></td></tr></table></figure>
+
+<h2 id="十进制转十六进制"><a href="#十进制转十六进制" class="headerlink" title="十进制转十六进制"></a>十进制转十六进制</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">printf &#x27;%x\n&#x27; [十进制数]</span><br></pre></td></tr></table></figure>
+
+<h2 id="获取开机日志"><a href="#获取开机日志" class="headerlink" title="获取开机日志"></a>获取开机日志</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">log show --predicate &quot;processID == 0&quot; --start $(date &quot;+%Y-%m-%d&quot;) --debug &gt; ~/Desktop/bootlog.txt</span><br></pre></td></tr></table></figure>
+
+<h2 id="应用多开"><a href="#应用多开" class="headerlink" title="应用多开"></a>应用多开</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open -n /Applications/xxxx.app</span><br></pre></td></tr></table></figure>
+
+<h2 id="测量系统放电瓦数"><a href="#测量系统放电瓦数" class="headerlink" title="测量系统放电瓦数"></a>测量系统放电瓦数</h2><p>若想保留此函数的功能，则需将此函数写入<code>~/.profile</code>中。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 将以下函数直接复制到终端运行</span><br><span class="line">watts() &#123;</span><br><span class="line">  FORMULA=$(system_profiler SPPowerDataType | awk &#x27;/Amperage\ \(mA\):/ &#123;printf $3&quot; * &quot;&#125;; /Voltage\ \(mV\):/ &#123;print $3&#125;&#x27;)</span><br><span class="line">  WATTS=$(echo &quot;scale=3; $&#123;FORMULA&#125; / 1000000&quot; | bc 2&gt;/dev/null)</span><br><span class="line">  if ! [[ $&#123;WATTS&#125; =~ [0-9] ]];</span><br><span class="line">  then</span><br><span class="line">    WATTS=0</span><br><span class="line">  fi</span><br><span class="line">  echo &quot;$&#123;WATTS&#125; mW&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 使用</span><br><span class="line">watts</span><br></pre></td></tr></table></figure>
+
+<h2 id="终端的电源活动监视器"><a href="#终端的电源活动监视器" class="headerlink" title="终端的电源活动监视器"></a>终端的电源活动监视器</h2><p>若想保留此函数的功能，则需将此函数写入<code>~/.profile</code>中。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 创建函数</span><br><span class="line">powertop() &#123;</span><br><span class="line">  top -stats pid,command,power -o power</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 调用</span><br><span class="line">powertop</span><br></pre></td></tr></table></figure>
+
+<h2 id="查询CPU运行情况"><a href="#查询CPU运行情况" class="headerlink" title="查询CPU运行情况"></a>查询CPU运行情况</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo powermetrics --show-process-energy</span><br></pre></td></tr></table></figure>
+
+<h2 id="把安装应用调成任意来源"><a href="#把安装应用调成任意来源" class="headerlink" title="把安装应用调成任意来源"></a>把安装应用调成任意来源</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo spctl --master-disable</span><br></pre></td></tr></table></figure>
+
+<h2 id="获取某磁盘的UUID"><a href="#获取某磁盘的UUID" class="headerlink" title="获取某磁盘的UUID"></a>获取某磁盘的UUID</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diskutil info diskXsY | grep -i &quot;Partition UUID&quot; | rev | cut -d&#x27; &#x27; -f 1 | rev</span><br></pre></td></tr></table></figure>
+
+<h2 id="取消4位数密码限制"><a href="#取消4位数密码限制" class="headerlink" title="取消4位数密码限制"></a>取消4位数密码限制</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pwpolicy -clearaccountpolicies</span><br><span class="line">passwd</span><br></pre></td></tr></table></figure>
+
+<h2 id="Catalina挂载系统分区"><a href="#Catalina挂载系统分区" class="headerlink" title="Catalina挂载系统分区"></a>Catalina挂载系统分区</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -S mount -uw / &amp;&amp; killall Finder</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看睡眠时间"><a href="#查看睡眠时间" class="headerlink" title="查看睡眠时间"></a>查看睡眠时间</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysctl -a | grep sleeptime</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看睡眠唤醒时间"><a href="#查看睡眠唤醒时间" class="headerlink" title="查看睡眠唤醒时间"></a>查看睡眠唤醒时间</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysctl -a | grep waketime</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看最近一天睡眠唤醒原因"><a href="#查看最近一天睡眠唤醒原因" class="headerlink" title="查看最近一天睡眠唤醒原因"></a>查看最近一天睡眠唤醒原因</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">log show --last 1d | grep &quot;Wake reason&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="检查AppleALC和Lilu是否工作正常"><a href="#检查AppleALC和Lilu是否工作正常" class="headerlink" title="检查AppleALC和Lilu是否工作正常"></a>检查AppleALC和Lilu是否工作正常</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">log show --predicate &#x27;process == &quot;kernel&quot; AND (eventMessage CONTAINS &quot;AppleALC&quot; OR eventMessage CONTAINS &quot;Lilu&quot;)&#x27; --style syslog –source</span><br></pre></td></tr></table></figure>
+
+<h2 id="关闭系统更新提醒红点"><a href="#关闭系统更新提醒红点" class="headerlink" title="关闭系统更新提醒红点"></a>关闭系统更新提醒红点</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.systempreferences AttentionPrefBundleIDs 0</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除权限不足的文件"><a href="#删除权限不足的文件" class="headerlink" title="删除权限不足的文件"></a>删除权限不足的文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rm -r -f [你要删除的文件（可以从Finder拖进来，支持多个）]</span><br></pre></td></tr></table></figure>
+
+<h2 id="关机"><a href="#关机" class="headerlink" title="关机"></a>关机</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo shutdown -h now</span><br></pre></td></tr></table></figure>
+
+<h2 id="开启原生SSD-Trim功能"><a href="#开启原生SSD-Trim功能" class="headerlink" title="开启原生SSD Trim功能"></a>开启原生SSD Trim功能</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo trimforce enable</span><br></pre></td></tr></table></figure>
+
+<h2 id="一键查询硬件信息"><a href="#一键查询硬件信息" class="headerlink" title="一键查询硬件信息"></a>一键查询硬件信息</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/daliansky/dell7000/master/Tools/archey)&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="笔记本插电源出提示音"><a href="#笔记本插电源出提示音" class="headerlink" title="笔记本插电源出提示音"></a>笔记本插电源出提示音</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 开启</span><br><span class="line">defaults write com.apple.PowerChime ChimeOnAllHardware -bool true; open /System/Library/CoreServices/PowerChime.app &amp;</span><br><span class="line"></span><br><span class="line">// 关闭</span><br><span class="line">defaults write com.apple.PowerChime ChimeOnAllHardware -bool false; killall PowerChime</span><br></pre></td></tr></table></figure>
+
+<h2 id="手动安装kexts"><a href="#手动安装kexts" class="headerlink" title="手动安装kexts"></a>手动安装kexts</h2><h3 id="移动kexts"><a href="#移动kexts" class="headerlink" title="移动kexts"></a>移动kexts</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 删除重名/错误的kexts</span><br><span class="line">sudo rm -Rf /Library/Extensions/KextToInstall.kext</span><br><span class="line">sudo rm -Rf /System/Library/Extensions/KextToInstall.kext</span><br><span class="line"></span><br><span class="line">// 把新kext移动到LE或SLE</span><br><span class="line">sudo cp -R KextToInstall.kext /Library/Extensions</span><br><span class="line">sudo cp -R KextToInstall.kext /System/Library/Extensions</span><br></pre></td></tr></table></figure>
+
+<h3 id="修复权限和重建缓存"><a href="#修复权限和重建缓存" class="headerlink" title="修复权限和重建缓存"></a>修复权限和重建缓存</h3><p>Mac不使用内核文件进行引导，而使用预链接内核。重建缓存即重建内核缓存&#x2F;预链接内核。可用以下终端命令，也可在磁盘工具中选择macOS磁盘并点击修复。以下命令仅适用于Catalina系统及以下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 修复权限</span><br><span class="line">sudo chmod -Rf 755 /S*/L*/E*</span><br><span class="line">sudo chown -Rf 0:0 /S*/L*/E*</span><br><span class="line">sudo chmod -Rf 755 /L*/E*</span><br><span class="line">sudo chown -Rf 0:0 /L*/E*</span><br><span class="line">sudo rm -Rf /S*/L*/PrelinkedKernels/*</span><br><span class="line">sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*</span><br><span class="line"></span><br><span class="line"># 重建缓存（法一）</span><br><span class="line"># 将-U后面的改为其它路径，即可在其它盘上进行重建缓存</span><br><span class="line">sudo touch -f /S*/L*/E*</span><br><span class="line">sudo touch -f /L*/E*</span><br><span class="line">sudo kextcache -Boot -U /</span><br><span class="line"></span><br><span class="line"># 重建缓存（法二）</span><br><span class="line">sudo kextcache -i /</span><br></pre></td></tr></table></figure>
+
+<h2 id="让AirDrop支持有线传输"><a href="#让AirDrop支持有线传输" class="headerlink" title="让AirDrop支持有线传输"></a>让AirDrop支持有线传输</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1 &amp;&amp; killall Finder</span><br></pre></td></tr></table></figure>
+
+<h2 id="清空iCloud、iMassage和FaceTime缓存"><a href="#清空iCloud、iMassage和FaceTime缓存" class="headerlink" title="清空iCloud、iMassage和FaceTime缓存"></a>清空iCloud、iMassage和FaceTime缓存</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Library/Caches/</span><br><span class="line">rm -R com.apple.Messages*</span><br><span class="line">rm -R com.apple.imfoundation*</span><br><span class="line">cd ~/Library/Preferences/</span><br><span class="line"></span><br><span class="line">rm com.apple.iChat*</span><br><span class="line">rm com.apple.icloud*</span><br><span class="line">rm com.apple.ids.service*</span><br><span class="line">rm com.apple.imagent*</span><br><span class="line">rm com.apple.imessage*</span><br><span class="line"> </span><br><span class="line">rm com.apple.imservice*</span><br><span class="line">rm -R ~/Library/Messages/</span><br></pre></td></tr></table></figure>
+
+<h2 id="终端ftp工具"><a href="#终端ftp工具" class="headerlink" title="终端ftp工具"></a>终端ftp工具</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 安装</span><br><span class="line">brew install inetutils</span><br><span class="line"></span><br><span class="line">// 使用</span><br><span class="line">ftp</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置macOS电源相关"><a href="#设置macOS电源相关" class="headerlink" title="设置macOS电源相关"></a>设置macOS电源相关</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">// 查看系统范围内的电源状态</span><br><span class="line">pmset -g</span><br><span class="line">pmset -g live</span><br><span class="line"></span><br><span class="line">// 查看电源状态</span><br><span class="line">pmset -g assertions</span><br><span class="line"></span><br><span class="line">// 从日志查看电源状态</span><br><span class="line">pmset -g log</span><br><span class="line"></span><br><span class="line">// -a针对所有电源，-b针对电池电源，-c针对壁式充电器电源，-u以UPS电源为目标</span><br><span class="line">// 休眠到内存（台式机默认设置）</span><br><span class="line">sudo pmset -a hibernatemodes 0</span><br><span class="line"></span><br><span class="line">// 休眠到硬盘</span><br><span class="line">sudo pmset -a hibernatemodes 1</span><br><span class="line"></span><br><span class="line">// 混合休眠（笔记本电脑默认配置）</span><br><span class="line">sudo pmset -a hibernatemodes 3</span><br><span class="line"></span><br><span class="line">// 省电休眠</span><br><span class="line">sudo pmset -a hibernatemode 25</span><br><span class="line"></span><br><span class="line">// 关闭powernap</span><br><span class="line">sudo pmset -a powernap 0</span><br><span class="line"></span><br><span class="line">// 关闭休眠</span><br><span class="line">sudo pmset -a autopoweroff 0</span><br><span class="line">sudo pmset -a standby 0</span><br><span class="line"></span><br><span class="line">// 重置设置</span><br><span class="line">pmset -a restoredefaults</span><br><span class="line"></span><br><span class="line">// 查看睡眠唤醒原因</span><br><span class="line">pmset -g log | grep -Ei &#x27;wake.*due&#x27;</span><br><span class="line"></span><br><span class="line">// 关闭硬盘摔落保护功能</span><br><span class="line">sudo pmset -a sms 0</span><br></pre></td></tr></table></figure>
+
+<p>下表为参数含义对照。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>proximitywake</td>
+<td>相同iCloud ID的设备靠近唤醒（1开启，0关闭）</td>
+</tr>
+<tr>
+<td>disksleep</td>
+<td>设置不活动后磁盘停止旋转之前的时间，值以分钟为单位（默认10）</td>
+</tr>
+<tr>
+<td>standby</td>
+<td>在系统已休眠一段时间后，此功能将从休眠转变为休眠状态（1开启，0关闭）</td>
+</tr>
+<tr>
+<td>standbydelayhigh&#x2F;standbydelaylow</td>
+<td>将睡眠会话写入磁盘并关闭内存电源之前的延迟（以秒为单位）。当电池电量超过50%时，使用standbydelaylow，当电池电量低于50%时，使用standbydelaylow。对于台式机，这些值应相同</td>
+</tr>
+<tr>
+<td>highstandbythreshold</td>
+<td>待机延迟的电池阈值（默认50%）</td>
+</tr>
+<tr>
+<td>autopoweroff</td>
+<td>从休眠状态转换为关闭状态</td>
+</tr>
+<tr>
+<td>autopoweroffdelay</td>
+<td>计算机关闭之前的延迟（以秒为单位）</td>
+</tr>
+</tbody></table>
+<h2 id="清空bootercfg存储在NVRAM的变量"><a href="#清空bootercfg存储在NVRAM的变量" class="headerlink" title="清空bootercfg存储在NVRAM的变量"></a>清空bootercfg存储在NVRAM的变量</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nvram bootercfg=&quot;log=0 debug=0&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="将逻辑卷转换为物理卷"><a href="#将逻辑卷转换为物理卷" class="headerlink" title="将逻辑卷转换为物理卷"></a>将逻辑卷转换为物理卷</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo diskutil corestorage revert /</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看加载驱动"><a href="#查看加载驱动" class="headerlink" title="查看加载驱动"></a>查看加载驱动</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 查看所有加载的驱动</span><br><span class="line">kextstat</span><br><span class="line"></span><br><span class="line">// 查看除苹果以外加载的驱动</span><br><span class="line">kextstat | grep -v &quot;com.apple&quot;</span><br><span class="line"></span><br><span class="line">// 查看加载的非官方驱动</span><br><span class="line">kextstat | grep -v &quot;com.apple&quot; | grep -v &quot;Energy&quot;</span><br><span class="line"></span><br><span class="line">// 查看特定名称的驱动（以ACPIplat为例）</span><br><span class="line">kextstat | grep -y acpiplat</span><br><span class="line">kextstat | grep -i acpiplat</span><br></pre></td></tr></table></figure>
+
+<h2 id="Finder显示完整文件路径"><a href="#Finder显示完整文件路径" class="headerlink" title="Finder显示完整文件路径"></a>Finder显示完整文件路径</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 显示</span><br><span class="line">defaults write com.apple.finder _FXShowPosixPathInTitle -bool TRUE &amp;&amp; killall Finder</span><br><span class="line"></span><br><span class="line">// 取消显示</span><br><span class="line">defaults write com.apple.finder _FXShowPosixPathInTitle -bool FALSE &amp;&amp; killall Finder</span><br></pre></td></tr></table></figure>
+
+<h2 id="用Finder打开终端当前路径"><a href="#用Finder打开终端当前路径" class="headerlink" title="用Finder打开终端当前路径"></a>用Finder打开终端当前路径</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open .</span><br></pre></td></tr></table></figure>
+
+<h2 id="终端调用Chrome"><a href="#终端调用Chrome" class="headerlink" title="终端调用Chrome"></a>终端调用Chrome</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 打开Chrome浏览器</span><br><span class="line">open -a Google\ Chrome --args -disable-web-security</span><br><span class="line"></span><br><span class="line">// 直接打开网站</span><br><span class="line">open www.baidu.com</span><br></pre></td></tr></table></figure>
+
+<h2 id="屏蔽系统更新"><a href="#屏蔽系统更新" class="headerlink" title="屏蔽系统更新"></a>屏蔽系统更新</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo softwareupdate --ignore &quot;macOS Catalina&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="去掉应用的小红点提示"><a href="#去掉应用的小红点提示" class="headerlink" title="去掉应用的小红点提示"></a>去掉应用的小红点提示</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.systempreferences AttentionPrefBundleIDs 0 &amp;&amp; killall Dock</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置Safari的开发功能"><a href="#配置Safari的开发功能" class="headerlink" title="配置Safari的开发功能"></a>配置Safari的开发功能</h2><p>或打开Safari后选择<code>偏好设置</code>，勾选<code>高级</code>选项卡下的<code>在菜单栏显示开发菜单</code>，也可达到相同效果。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 开启</span><br><span class="line">defaults write com.apple.Safari IncludeInternalDebugMenu 1</span><br><span class="line"></span><br><span class="line">// 关闭</span><br><span class="line">defaults write com.apple.Safari IncludeInternalDebugMenu 0</span><br></pre></td></tr></table></figure>
+
+<h2 id="制作Mac安装盘"><a href="#制作Mac安装盘" class="headerlink" title="制作Mac安装盘"></a>制作Mac安装盘</h2><p>以Sierra安装包为例。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/Sierra --applicationpath /Applications/Install\ macOS\ Sierra.app --nointeraction</span><br></pre></td></tr></table></figure>
+
+<h2 id="文件删除"><a href="#文件删除" class="headerlink" title="._文件删除"></a>._文件删除</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dot_clean [路径]</span><br><span class="line">// 或</span><br><span class="line">find . -type f -name &#x27;._*&#x27; -delete</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除-DS-Store"><a href="#删除-DS-Store" class="headerlink" title="删除.DS_Store"></a>删除.DS_Store</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -name &#x27;*.DS_Store&#x27; -type f -delete</span><br></pre></td></tr></table></figure>
+
+<h2 id="禁止-x2F-启用-DS-Store自动生成"><a href="#禁止-x2F-启用-DS-Store自动生成" class="headerlink" title="禁止&#x2F;启用.DS_Store自动生成"></a>禁止&#x2F;启用.DS_Store自动生成</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 禁止</span><br><span class="line">defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE</span><br><span class="line"></span><br><span class="line">// 启用</span><br><span class="line">defaults delete com.apple.desktopservices DSDontWriteNetworkStores</span><br></pre></td></tr></table></figure>
+
+<h2 id="zsh导入bash环境变量"><a href="#zsh导入bash环境变量" class="headerlink" title="zsh导入bash环境变量"></a>zsh导入bash环境变量</h2><p>向<code>~/.zshrc</code>添加以下代码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure>
+
+<p>在终端执行以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source .zshrc</span><br></pre></td></tr></table></figure>
+
+<h2 id="暂时在zsh中使用bash"><a href="#暂时在zsh中使用bash" class="headerlink" title="暂时在zsh中使用bash"></a>暂时在zsh中使用bash</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exec /bin/bash</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看EFI版本"><a href="#查看EFI版本" class="headerlink" title="查看EFI版本"></a>查看EFI版本</h2><p>EFI32或EFI64。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ioreg -l -p IODeviceTree | grep firmware-abi</span><br></pre></td></tr></table></figure>
+
+<h1 id="终端替代"><a href="#终端替代" class="headerlink" title="终端替代"></a>终端替代</h1><p>可使用以下软件。</p>
+<h2 id="iTerm2"><a href="#iTerm2" class="headerlink" title="iTerm2"></a>iTerm2</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://iterm2.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hyper"><a href="#Hyper" class="headerlink" title="Hyper"></a>Hyper</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://hyper.is/</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="Mac-terminal-清屏快捷键"><a href="#Mac-terminal-清屏快捷键" class="headerlink" title="Mac terminal 清屏快捷键"></a>Mac terminal 清屏快捷键</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/u010164190/article/details/78622884</span><br></pre></td></tr></table></figure>
+
+<h2 id="Homebrew国内如何自动安装（国内地址）"><a href="#Homebrew国内如何自动安装（国内地址）" class="headerlink" title="Homebrew国内如何自动安装（国内地址）"></a>Homebrew国内如何自动安装（国内地址）</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/111014448</span><br></pre></td></tr></table></figure>
+
+<h2 id="这篇-iTerm2-Oh-My-Zsh-教程手把手让你成为这条街最靓的仔"><a href="#这篇-iTerm2-Oh-My-Zsh-教程手把手让你成为这条街最靓的仔" class="headerlink" title="这篇 iTerm2 + Oh My Zsh 教程手把手让你成为这条街最靓的仔"></a>这篇 iTerm2 + Oh My Zsh 教程手把手让你成为这条街最靓的仔</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://segmentfault.com/a/1190000022813972</span><br></pre></td></tr></table></figure>
+
+<h2 id="镜像快速安装Homebrew教程"><a href="#镜像快速安装Homebrew教程" class="headerlink" title="镜像快速安装Homebrew教程"></a>镜像快速安装Homebrew教程</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://brew.idayer.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Can-you-install-disabled-Homebrew-packages"><a href="#Can-you-install-disabled-Homebrew-packages" class="headerlink" title="Can you install disabled Homebrew packages?"></a>Can you install disabled Homebrew packages?</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://stackoverflow.com/questions/73586208/can-you-install-disabled-homebrew-packages/73595534</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/Mac-Tools.html" rel="prev" title="Mac常用工具">
+      <i class="fa fa-chevron-left"></i> Mac常用工具
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/Sublime-Installation.html" rel="next" title="Sublime 3的使用">
+      Sublime 3的使用 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-text">快捷键</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%88%E7%AB%AF%E4%BC%98%E5%8C%96"><span class="nav-text">终端优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Homebrew"><span class="nav-text">Homebrew</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%B8%E8%BD%BD"><span class="nav-text">安装与卸载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%98%E6%96%B9%E9%80%94%E5%BE%84"><span class="nav-text">官方途径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BD%E5%86%85%E9%80%94%E5%BE%84"><span class="nav-text">国内途径</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9C%80%E6%96%B0%E6%96%B9%E6%B3%95"><span class="nav-text">最新方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%B1%E6%95%88%E6%95%99%E7%A8%8B"><span class="nav-text">失效教程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E9%BB%98%E8%AE%A4%E6%BA%90"><span class="nav-text">更换默认源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%8C%85"><span class="nav-text">常用包</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#tree"><span class="nav-text">tree</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tcl"><span class="nav-text">tcl</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E6%8A%80%E5%B7%A7"><span class="nav-text">操作技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%A2%ABdisable%E7%9A%84%E5%8C%85"><span class="nav-text">安装被disable的包</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#brew-install-xxx-404"><span class="nav-text">brew install xxx 404</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#command-not-found-brew"><span class="nav-text">command not found: brew</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AEzsh%E4%B8%BA%E9%BB%98%E8%AE%A4Shell"><span class="nav-text">设置zsh为默认Shell</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#oh-my-zsh"><span class="nav-text">oh-my-zsh</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E7%BD%AE%E4%B8%BB%E9%A2%98"><span class="nav-text">外置主题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Powerlevel10k"><span class="nav-text">Powerlevel10k</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0"><span class="nav-text">更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6"><span class="nav-text">插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#zsh-syntax-highlighting"><span class="nav-text">zsh-syntax-highlighting</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#zsh-autosuggestions"><span class="nav-text">zsh-autosuggestions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#auto-jump"><span class="nav-text">auto-jump</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#incr"><span class="nav-text">incr</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#proxychains-ng"><span class="nav-text">proxychains-ng</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4"><span class="nav-text">终端命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A3%81%E7%9B%98%E5%B7%A5%E5%85%B7%E6%B7%BB%E5%8A%A0%E8%B0%83%E8%AF%95%E8%8F%9C%E5%8D%95"><span class="nav-text">磁盘工具添加调试菜单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%BE%E7%A4%BASpotlight%E7%9A%84%E6%90%9C%E7%B4%A2%E6%A0%87%E9%A2%98"><span class="nav-text">显示Spotlight的搜索标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Xcode-Command-Line"><span class="nav-text">安装Xcode Command Line</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%AF%94%E8%BE%83"><span class="nav-text">文件比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6"><span class="nav-text">十进制转十六进制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%BC%80%E6%9C%BA%E6%97%A5%E5%BF%97"><span class="nav-text">获取开机日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%A4%9A%E5%BC%80"><span class="nav-text">应用多开</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E9%87%8F%E7%B3%BB%E7%BB%9F%E6%94%BE%E7%94%B5%E7%93%A6%E6%95%B0"><span class="nav-text">测量系统放电瓦数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%88%E7%AB%AF%E7%9A%84%E7%94%B5%E6%BA%90%E6%B4%BB%E5%8A%A8%E7%9B%91%E8%A7%86%E5%99%A8"><span class="nav-text">终端的电源活动监视器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2CPU%E8%BF%90%E8%A1%8C%E6%83%85%E5%86%B5"><span class="nav-text">查询CPU运行情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%8A%E5%AE%89%E8%A3%85%E5%BA%94%E7%94%A8%E8%B0%83%E6%88%90%E4%BB%BB%E6%84%8F%E6%9D%A5%E6%BA%90"><span class="nav-text">把安装应用调成任意来源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E6%9F%90%E7%A3%81%E7%9B%98%E7%9A%84UUID"><span class="nav-text">获取某磁盘的UUID</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%96%E6%B6%884%E4%BD%8D%E6%95%B0%E5%AF%86%E7%A0%81%E9%99%90%E5%88%B6"><span class="nav-text">取消4位数密码限制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Catalina%E6%8C%82%E8%BD%BD%E7%B3%BB%E7%BB%9F%E5%88%86%E5%8C%BA"><span class="nav-text">Catalina挂载系统分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E7%9D%A1%E7%9C%A0%E6%97%B6%E9%97%B4"><span class="nav-text">查看睡眠时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E7%9D%A1%E7%9C%A0%E5%94%A4%E9%86%92%E6%97%B6%E9%97%B4"><span class="nav-text">查看睡眠唤醒时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%9C%80%E8%BF%91%E4%B8%80%E5%A4%A9%E7%9D%A1%E7%9C%A0%E5%94%A4%E9%86%92%E5%8E%9F%E5%9B%A0"><span class="nav-text">查看最近一天睡眠唤醒原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A3%80%E6%9F%A5AppleALC%E5%92%8CLilu%E6%98%AF%E5%90%A6%E5%B7%A5%E4%BD%9C%E6%AD%A3%E5%B8%B8"><span class="nav-text">检查AppleALC和Lilu是否工作正常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E9%97%AD%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0%E6%8F%90%E9%86%92%E7%BA%A2%E7%82%B9"><span class="nav-text">关闭系统更新提醒红点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%9D%83%E9%99%90%E4%B8%8D%E8%B6%B3%E7%9A%84%E6%96%87%E4%BB%B6"><span class="nav-text">删除权限不足的文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E6%9C%BA"><span class="nav-text">关机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%90%AF%E5%8E%9F%E7%94%9FSSD-Trim%E5%8A%9F%E8%83%BD"><span class="nav-text">开启原生SSD Trim功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E9%94%AE%E6%9F%A5%E8%AF%A2%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF"><span class="nav-text">一键查询硬件信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%94%E8%AE%B0%E6%9C%AC%E6%8F%92%E7%94%B5%E6%BA%90%E5%87%BA%E6%8F%90%E7%A4%BA%E9%9F%B3"><span class="nav-text">笔记本插电源出提示音</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85kexts"><span class="nav-text">手动安装kexts</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%BB%E5%8A%A8kexts"><span class="nav-text">移动kexts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E5%A4%8D%E6%9D%83%E9%99%90%E5%92%8C%E9%87%8D%E5%BB%BA%E7%BC%93%E5%AD%98"><span class="nav-text">修复权限和重建缓存</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A9AirDrop%E6%94%AF%E6%8C%81%E6%9C%89%E7%BA%BF%E4%BC%A0%E8%BE%93"><span class="nav-text">让AirDrop支持有线传输</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%85%E7%A9%BAiCloud%E3%80%81iMassage%E5%92%8CFaceTime%E7%BC%93%E5%AD%98"><span class="nav-text">清空iCloud、iMassage和FaceTime缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%88%E7%AB%AFftp%E5%B7%A5%E5%85%B7"><span class="nav-text">终端ftp工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AEmacOS%E7%94%B5%E6%BA%90%E7%9B%B8%E5%85%B3"><span class="nav-text">设置macOS电源相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%85%E7%A9%BAbootercfg%E5%AD%98%E5%82%A8%E5%9C%A8NVRAM%E7%9A%84%E5%8F%98%E9%87%8F"><span class="nav-text">清空bootercfg存储在NVRAM的变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86%E9%80%BB%E8%BE%91%E5%8D%B7%E8%BD%AC%E6%8D%A2%E4%B8%BA%E7%89%A9%E7%90%86%E5%8D%B7"><span class="nav-text">将逻辑卷转换为物理卷</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%8A%A0%E8%BD%BD%E9%A9%B1%E5%8A%A8"><span class="nav-text">查看加载驱动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Finder%E6%98%BE%E7%A4%BA%E5%AE%8C%E6%95%B4%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84"><span class="nav-text">Finder显示完整文件路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8Finder%E6%89%93%E5%BC%80%E7%BB%88%E7%AB%AF%E5%BD%93%E5%89%8D%E8%B7%AF%E5%BE%84"><span class="nav-text">用Finder打开终端当前路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%88%E7%AB%AF%E8%B0%83%E7%94%A8Chrome"><span class="nav-text">终端调用Chrome</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%8F%E8%94%BD%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0"><span class="nav-text">屏蔽系统更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%BB%E6%8E%89%E5%BA%94%E7%94%A8%E7%9A%84%E5%B0%8F%E7%BA%A2%E7%82%B9%E6%8F%90%E7%A4%BA"><span class="nav-text">去掉应用的小红点提示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AESafari%E7%9A%84%E5%BC%80%E5%8F%91%E5%8A%9F%E8%83%BD"><span class="nav-text">配置Safari的开发功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%B6%E4%BD%9CMac%E5%AE%89%E8%A3%85%E7%9B%98"><span class="nav-text">制作Mac安装盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%88%A0%E9%99%A4"><span class="nav-text">._文件删除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4-DS-Store"><span class="nav-text">删除.DS_Store</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A6%81%E6%AD%A2-x2F-%E5%90%AF%E7%94%A8-DS-Store%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90"><span class="nav-text">禁止&#x2F;启用.DS_Store自动生成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zsh%E5%AF%BC%E5%85%A5bash%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-text">zsh导入bash环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9A%82%E6%97%B6%E5%9C%A8zsh%E4%B8%AD%E4%BD%BF%E7%94%A8bash"><span class="nav-text">暂时在zsh中使用bash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8BEFI%E7%89%88%E6%9C%AC"><span class="nav-text">查看EFI版本</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%88%E7%AB%AF%E6%9B%BF%E4%BB%A3"><span class="nav-text">终端替代</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#iTerm2"><span class="nav-text">iTerm2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hyper"><span class="nav-text">Hyper</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac-terminal-%E6%B8%85%E5%B1%8F%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-text">Mac terminal 清屏快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Homebrew%E5%9B%BD%E5%86%85%E5%A6%82%E4%BD%95%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%EF%BC%88%E5%9B%BD%E5%86%85%E5%9C%B0%E5%9D%80%EF%BC%89"><span class="nav-text">Homebrew国内如何自动安装（国内地址）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%99%E7%AF%87-iTerm2-Oh-My-Zsh-%E6%95%99%E7%A8%8B%E6%89%8B%E6%8A%8A%E6%89%8B%E8%AE%A9%E4%BD%A0%E6%88%90%E4%B8%BA%E8%BF%99%E6%9D%A1%E8%A1%97%E6%9C%80%E9%9D%93%E7%9A%84%E4%BB%94"><span class="nav-text">这篇 iTerm2 + Oh My Zsh 教程手把手让你成为这条街最靓的仔</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%95%9C%E5%83%8F%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85Homebrew%E6%95%99%E7%A8%8B"><span class="nav-text">镜像快速安装Homebrew教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Can-you-install-disabled-Homebrew-packages"><span class="nav-text">Can you install disabled Homebrew packages?</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

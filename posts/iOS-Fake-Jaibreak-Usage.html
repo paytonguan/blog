@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Trollstore等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS伪越狱玩法">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/iOS-Fake-Jaibreak-Usage.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="Trollstore等。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/iOS-Fake-Jaibreak-Usage/topic.jpg">
+<meta property="article:published_time" content="2023-11-10T05:18:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.555Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/iOS-Fake-Jaibreak-Usage/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/iOS-Fake-Jaibreak-Usage.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>iOS伪越狱玩法 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/iOS-Fake-Jaibreak-Usage.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          iOS伪越狱玩法
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-10 13:18:29" itemprop="dateCreated datePublished" datetime="2023-11-10T13:18:29+08:00">2023-11-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>23k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>21 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/iOS-Fake-Jaibreak-Usage/topic.jpg"></p>
+<p>Trollstore等。</p>
+<span id="more"></span>
+
+<h1 id="TODOS"><a href="#TODOS" class="headerlink" title="TODOS"></a>TODOS</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"># schemeshare</span><br><span class="line">https://mp.weixin.qq.com/s/xe25A0horQpOzNykY494Rw</span><br><span class="line"></span><br><span class="line"># TrollStore 小技巧二：解决删除不干净</span><br><span class="line">https://mp.weixin.qq.com/s/cn_C33xMiyWcCt-jJa0Ejg</span><br><span class="line"></span><br><span class="line"># 国行开启Apple Intelligence</span><br><span class="line">https://mp.weixin.qq.com/s/PiU95w6Ic1kNKnfWN1Jtfw</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">FilzaEscaped修改X手势</span><br><span class="line"></span><br><span class="line">1.打开FilzaEscaped </span><br><span class="line">2.找路径：</span><br><span class="line">/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist </span><br><span class="line">3.打开com.apple.MobileGestalt.plist</span><br><span class="line">4.选择CacheExtra-再找oPeik/9e8lQWMszEjbPzng </span><br><span class="line">5.ArtworkDeviceSubType 点击右侧（i） </span><br><span class="line">6.注意这个值一定要记得，预防你想恢复原来的样子，想恢复改为原来值就行。 </span><br><span class="line">7.值修改为：2436</span><br><span class="line">8.点击右上角存储，打开设置-显示与亮度-视图-改为放大，再改为标准即可实现X手势。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">PlankFilza修改为iPhone X手势</span><br><span class="line"></span><br><span class="line">打开PlankFilza工具</span><br><span class="line">找路径：</span><br><span class="line">/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist</span><br><span class="line">找到：</span><br><span class="line">CacheExtra↓</span><br><span class="line">oPeik/9e8IQWMszEjbPzng↓</span><br><span class="line">ArtworkDeviceSubType</span><br><span class="line">点击右边的符号，把这个值记起来，因为你恢复时，需要这个值恢复，不然就很麻烦。</span><br><span class="line">然后把这个值改成：2436</span><br><span class="line">然后点“储存”</span><br><span class="line">然后手机重启一下，这样就行了</span><br><span class="line">恢复方法：</span><br><span class="line">把 2436值改成原来数值，然后点右上角“储存”，重启一下手机即可恢复。 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">PlankFilza修改运营商名称</span><br><span class="line"></span><br><span class="line">打开PlankFilza工具</span><br><span class="line"></span><br><span class="line">找路径：</span><br><span class="line">var/mobile/Libray/Carrier Bundles/Overlay</span><br><span class="line">找这里就会显示你所有运营商文件，打开设置-通用-关于本机，看看运营商版本号多少，然后修改此版本号的文件。</span><br><span class="line">移动：46000 联通：46001 电信：46007</span><br><span class="line">点击进去，往下拉找到“StatusBarlmages”文件</span><br><span class="line">找到 ltem 0 和ltem 1 或 ltem 2</span><br><span class="line">把中国移动/中国联通/中国电信修改你喜欢名字</span><br><span class="line">然后右上角保存，返回Overlay点击右侧符号</span><br><span class="line">把访问权限所有者隐藏改成0555，右上角存储</span><br><span class="line">然后重启手机即可修改成功</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">PlankFilza修改关于本机信息</span><br><span class="line"></span><br><span class="line">这个就是可以修改关于本机型号及版本号等，直接找路径：</span><br><span class="line">/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist</span><br><span class="line">然后看看，你想修改什么内容，右上角保存，然后重启手机即可修改成功。</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装与使用"><a href="#安装与使用" class="headerlink" title="安装与使用"></a>安装与使用</h1><h2 id="Trollstore"><a href="#Trollstore" class="headerlink" title="Trollstore"></a>Trollstore</h2><p>TrollStore可以在部分系统上利用漏洞，不越狱即可安装永不过期的IPA。利用该漏洞，可对系统Var目录进行读写。</p>
+<p>打开以下链接并按照步骤操作即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/opa334/TrollStore</span><br></pre></td></tr></table></figure>
+
+<p>安装后需要安装ldid以允许安装未签名的应用。建议安装持久性助手，以避免重建图标缓存时TrollStore无法打开。如果安装时出错，可翻墙后重试。</p>
+<p>完成后，将需要安装的IPA分享到TrollStore即可安装。</p>
+<p>可使用以下项目对Trollstore进行汉化。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/sbwml/TrollStore_zh_Hans</span><br></pre></td></tr></table></figure>
+
+<h3 id="操作技巧"><a href="#操作技巧" class="headerlink" title="操作技巧"></a>操作技巧</h3><h4 id="屏蔽系统更新"><a href="#屏蔽系统更新" class="headerlink" title="屏蔽系统更新"></a>屏蔽系统更新</h4><p>用Filza打开&#x2F;usr&#x2F;bin&#x2F;vm_stat，单击文件运行，键盘切换为英文，长按空白界面粘贴以下指令并运行即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 禁止更新</span><br><span class="line">rm -rf /var/MobileSoftwareUpdate/MobileAsset/AssetsV2/* &amp;&amp; chflags schg,schange,simmutable /var/MobileSoftwareUpdate/MobileAsset/AssetsV2</span><br><span class="line"></span><br><span class="line"># 恢复更新</span><br><span class="line">chflags noschg,noschange,nosimmutable /var/MobileSoftwareUpdate/MobileAsset/AssetsV2</span><br></pre></td></tr></table></figure>
+
+<h4 id="清理手机占用空间"><a href="#清理手机占用空间" class="headerlink" title="清理手机占用空间"></a>清理手机占用空间</h4><p>可用Filza清空<code>/var/db/diagnostics/Persist/</code>和<code>/var/db/diagnostics/Special/</code>目录。</p>
+<p>注意TrollStore无法安装iCleaner，因无法获取到iCleaner所需要的权限。</p>
+<h3 id="轻松签"><a href="#轻松签" class="headerlink" title="轻松签+"></a>轻松签+</h3><p>与TrollStore功能类似，但可以自定义IPA。利用TrollStore的漏洞可以安装永不掉签的轻松签版本，也可以选择已有的企业证书自签安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://esign.yyyue.xyz/</span><br></pre></td></tr></table></figure>
+
+<p>通过修改标识符，可实现双开。通过移除库，可能可以去除广告弹窗，注意修改完后选择<code>仅修改配置，不签名</code>。</p>
+<h3 id="TrollFools"><a href="#TrollFools" class="headerlink" title="TrollFools"></a>TrollFools</h3><p>可往App注入插件。</p>
+<h4 id="可用插件"><a href="#可用插件" class="headerlink" title="可用插件"></a>可用插件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 插件库</span><br><span class="line">https://www.123pan.com/s/vgn0Vv-ZTaFv.html</span><br><span class="line">https://pan.quark.cn/s/4d23a616c1b2</span><br><span class="line"></span><br><span class="line"># Lucky Speeder，游戏或广告加速</span><br><span class="line">https://github.com/kekeimiku/LuckySpeeder</span><br><span class="line"></span><br><span class="line"># DisableAccelerometer，禁用加速度传感器</span><br><span class="line">https://github.com/DevelopCubeLab/DisableAccelerometer</span><br><span class="line"></span><br><span class="line"># ShakeShield，屏蔽加速度计</span><br><span class="line">https://github.com/huami1314/ShakeShield</span><br></pre></td></tr></table></figure>
+
+<h3 id="半越狱"><a href="#半越狱" class="headerlink" title="半越狱"></a>半越狱</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Bootstrap</span><br><span class="line">https://github.com/roothide/Bootstrap</span><br><span class="line"></span><br><span class="line"># Serotonin</span><br><span class="line">https://github.com/SerotoninApp/Serotonin</span><br></pre></td></tr></table></figure>
+
+<h2 id="MacDirtyCow"><a href="#MacDirtyCow" class="headerlink" title="MacDirtyCow"></a>MacDirtyCow</h2><p>MacDirtyCow利用CVE-2022-46689漏洞，支持iOS 14.0-15.7.1，16.0-16.1.2，建议15.0及以上系统使用。</p>
+<p>利用该漏洞，可通过交换同等大小文件的方式覆盖文件实现，从而实现一些特权操作。注意覆盖的文件不能大于原文件，覆盖后会一直存在并占用内存，重启后得到释放。当占用内存过大时，可能会导致手机变卡、小组件无法载入、第三方输入法无法使用、手机自动注销等。</p>
+<p>MacDirtyCowDemo仓库如下。直接使用利用MacDirtyCowDemo的App即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/zhuowei/MacDirtyCowDemo</span><br></pre></td></tr></table></figure>
+<h3 id="操作技巧-1"><a href="#操作技巧-1" class="headerlink" title="操作技巧"></a>操作技巧</h3><h4 id="Altstore突破三个签名限制"><a href="#Altstore突破三个签名限制" class="headerlink" title="Altstore突破三个签名限制"></a>Altstore突破三个签名限制</h4><p>更新至1.6.1后，在Settings界面的CREDITS上面三指向上划出开关，安装MacDirtyCow突破后即可签名第四个应用程序。</p>
+<h2 id="KFD"><a href="#KFD" class="headerlink" title="KFD"></a>KFD</h2><p>该漏洞可用于iOS 15.0-15.7.6和iOS16.0-16.5&amp;16.6b1。直接使用利用KFD的App即可。</p>
+<h1 id="插件商店"><a href="#插件商店" class="headerlink" title="插件商店"></a>插件商店</h1><p>可用插件商店如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># Misaka</span><br><span class="line">https://github.com/straight-tamago/misaka</span><br><span class="line"></span><br><span class="line"># SimpleKFD</span><br><span class="line">https://github.com/Lrdsnow/SimpleKFD</span><br><span class="line"></span><br><span class="line"># PureKFD</span><br><span class="line">https://github.com/Lrdsnow/PureKFD</span><br><span class="line"></span><br><span class="line"># Picasso</span><br><span class="line">https://github.com/sourcelocation/Picasso-v3</span><br><span class="line"></span><br><span class="line"># TrollApps</span><br><span class="line">https://github.com/TheResonanceTeam/TrollApps</span><br></pre></td></tr></table></figure>
+
+<h2 id="可用Repo"><a href="#可用Repo" class="headerlink" title="可用Repo"></a>可用Repo</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"># Picasso源</span><br><span class="line">https://raw.githubusercontent.com/Lrdsnow/lrdsnows-repo/main/PureKFD/manifest.json</span><br><span class="line">https://raw.githubusercontent.com/circularsprojects/circles-repo/main/manifest.json</span><br><span class="line">https://raw.githubusercontent.com/sourcelocation/Picasso-test-repo/main/manifest.json</span><br><span class="line">https://bomberfish.ca/PicassoRepos/Essentials/manifest.json</span><br><span class="line"></span><br><span class="line"># Misaka源</span><br><span class="line">https://raw.githubusercontent.com/shimajiron/Misaka_Network/main/repo.json</span><br><span class="line">https://raw.githubusercontent.com/34306/iPA/main/repo.json</span><br><span class="line">https://raw.githubusercontent.com/roeegh/Puck/main/repo.json</span><br><span class="line">https://raw.githubusercontent.com/huligang/coolwcat/main/repo.json</span><br><span class="line">https://yangjiii.tech/file/Repo/repo.json</span><br><span class="line">https://raw.githubusercontent.com/leminlimez/leminrepo/main/repo.json</span><br><span class="line">https://raw.githubusercontent.com/ichitaso/misaka/main/repo.json</span><br><span class="line">https://raw.githubusercontent.com/dobabaophuc1706/misakarepo/main/Repo/repo.json</span><br><span class="line">https://tweakrain.github.io/repos/misaka/misaka.json</span><br><span class="line">https://www.iwishkem.tk/misaka.json</span><br><span class="line">https://raw.githubusercontent.com/EPOS05/MisakaRepoEPOS/main/repo.json</span><br><span class="line">https://raw.githubusercontent.com/tdquang266/MDC/main/repo.json</span><br><span class="line">https://raw.githubusercontent.com/kloytofyexploiter/Misaka-repo_MRX/main/repo.json</span><br><span class="line">https://raw.githubusercontent.com/HackZy01/misio/main/repo.json</span><br><span class="line">https://raw.githubusercontent.com/p0s3id0n86/misakarepo/main/Repo/repo.json</span><br><span class="line">https://raw.githubusercontent.com/tyler10290/MisakaRepoBackup/main/repo.json</span><br><span class="line">https://gist.githubusercontent.com/c22dev/af8dd3a760330eb31da5f8751af1b487/raw/6eb744fabc6eb0eb3352ce41c9a08ce5c38c4e6a/index.json</span><br><span class="line">https://dobabaophuc1706.github.io/repo/</span><br><span class="line">https://puck.roeegh.com/repo.json</span><br><span class="line">https://www.appfair.net/fairapps-ios.json</span><br><span class="line">https://repo.starfiles.co/</span><br><span class="line">https://raw.githubusercontent.com/swaggyP36000/TrollStore-IPAs/main/apps.json</span><br><span class="line"></span><br><span class="line"># TrollApps源</span><br><span class="line">https://raw.githubusercontent.com/burritosoftware/altstore/refs/heads/master/channels/personalchannel.json</span><br><span class="line">https://raw.githubusercontent.com/burritosoftware/altstore/refs/heads/master/channels/burritob.json</span><br><span class="line">https://quarksources.github.io/dist/altstore-complete.min.json</span><br><span class="line">https://appmarket.tech/altstore.json</span><br><span class="line">https://raw.githubusercontent.com/burritosoftware/altstore/refs/heads/master/channels/burritosource.json</span><br><span class="line">https://ipa.cypwn.xyz/cypwn.json</span><br><span class="line">https://ipa.cypwn.xyz/cypwn_ts.json</span><br><span class="line">https://flyinghead.github.io/flycast-builds/altstore.json</span><br><span class="line">https://alts.lao.sb</span><br><span class="line">https://altstore.oatmealdome.me/</span><br><span class="line">https://theodyssey.dev/altstore/odysseysource.json</span><br><span class="line">https://raw.githubusercontent.com/vizunchik/AltStoreRus/master/apps.json</span><br><span class="line">https://pokemmo.com/altstore/</span><br><span class="line">https://provenance-emu.com/apps.json</span><br><span class="line">https://raw.githubusercontent.com/qnblackcat/AltStore/gh-pages/apps.json</span><br><span class="line">https://quarksources.github.io/dist/quantumsource.min.json</span><br><span class="line">https://quarksources.github.io/dist/quantumsource%2B%2B.min.json</span><br><span class="line">https://quarksources.github.io/quarksource-cracked.json</span><br><span class="line">https://randomblock1.com/altstore/apps.json</span><br><span class="line">https://repo.starfiles.co</span><br><span class="line">https://taurine.app/altstore/taurinestore.json</span><br><span class="line">https://alt.getutm.app</span><br><span class="line">https://wuxu1.github.io/wuxu-complete.json</span><br><span class="line">https://wuxu1.github.io/wuxu-complete-plus.json</span><br><span class="line">https://ish.app/altstore.json</span><br><span class="line">https://raw.githubusercontent.com/swaggyP36000/TrollStore-IPAs/main/apps.json</span><br><span class="line">https://esign.yyyue.xyz/app.json</span><br></pre></td></tr></table></figure>
+
+<h1 id="Cowabunga-x2F-Cluckabunga"><a href="#Cowabunga-x2F-Cluckabunga" class="headerlink" title="Cowabunga&#x2F;Cluckabunga"></a>Cowabunga&#x2F;Cluckabunga</h1><p>超强工具箱，下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">https://cowabun.ga/</span><br><span class="line"></span><br><span class="line"># Cowabunga</span><br><span class="line">https://github.com/leminlimez/Cowabunga</span><br><span class="line"># Cluckabunga</span><br><span class="line">https://github.com/leminlimez/Cluckabunga</span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义锁头"><a href="#自定义锁头" class="headerlink" title="自定义锁头"></a>自定义锁头</h2><p>选择工具-锁定，点击右上角导入锁头素材文件夹，选择素材即可。锁头素材下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.123pan.com/s/vgn0Vv-xl3Fv.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义运行模式"><a href="#自定义运行模式" class="headerlink" title="自定义运行模式"></a>自定义运行模式</h2><p>该漏洞可实现交换同等大小的文件，通过自定义运行模式可自定义需要交换的系统文件。</p>
+<p>点击工具-自定义运行模式，选择+号创建操作即可。创建操作完成后注销即可应用效果。</p>
+<h3 id="自定义蜂窝网络4G-x2F-5G显示"><a href="#自定义蜂窝网络4G-x2F-5G显示" class="headerlink" title="自定义蜂窝网络4G&#x2F;5G显示"></a>自定义蜂窝网络4G&#x2F;5G显示</h3><p>创建操作，类型选择plist，路径为Localizable.strings的路径，如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># iOS 15</span><br><span class="line">/System/Library/PrivateFrameworks/UIKitCore.framework/zh_CN.lproj/Localizable.strings</span><br><span class="line"></span><br><span class="line"># iOS 16</span><br><span class="line">/System/Library/PrivateFrameworks/UIKitCore.framework/Localizable.loctable</span><br></pre></td></tr></table></figure>
+
+<p>plist类型选择binary，PLIST数据下点击添加属性，编辑新添加的属性。Key一栏输入<code>4G</code>，Value一栏输入需要自定义的内容，如<code>8G</code>。具体需要修改的项可直接用Filza查看该plist文件。同理也可将<code>5G</code>修改为<code>9G</code>等。</p>
+<p>修改后文件体积会增大，点击<code>计算大小</code>会出现红色的叉。此时需要删除一些项，使文件体积小于或等于原文件。点击添加属性，编辑新添加的属性。点击String，弹出菜单，选择Deleting。参考文件内的项目，可删掉部分无用Key，如5GUC、5GUW、5GE等。删除完成后重新点击<code>计算大小</code>，出现绿色的勾时视为成功。</p>
+<p>完成后注销手机即可应用操作。</p>
+<h3 id="自定义输入密码-x2F-滑动关机文字显示"><a href="#自定义输入密码-x2F-滑动关机文字显示" class="headerlink" title="自定义输入密码&#x2F;滑动关机文字显示"></a>自定义输入密码&#x2F;滑动关机文字显示</h3><p>步骤与上面的类似，需要修改的plist如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># iOS 15</span><br><span class="line">/System/Library/PrivateFrameworks/SpringBoardUIServices.framework/zh_CN.lproj/SpringBoardUIServices.strings</span><br></pre></td></tr></table></figure>
+
+<p>可自定义的属性如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 锁屏输入密码显示</span><br><span class="line">PASSCODE_MESA_ENTRY_PROMPT</span><br><span class="line"></span><br><span class="line"># 滑动关机显示</span><br><span class="line">POWER_DOWN_LOCK_LABEL</span><br></pre></td></tr></table></figure>
+
+<p>可删除的属性如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PHONE_BT_AND_WIFI_OFF_PROMPT</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义设置个人帐户文字显示"><a href="#自定义设置个人帐户文字显示" class="headerlink" title="自定义设置个人帐户文字显示"></a>自定义设置个人帐户文字显示</h3><p>需要修改的plist如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># iOS 15</span><br><span class="line">/System/Library/PrivateFrameworks/PreferencesUI.framework/zh_CN.lproj/Settings~iphone.strings</span><br></pre></td></tr></table></figure>
+
+<p>可自定义的属性如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 设置个人帐户文字</span><br><span class="line">CASTLE_SUBTITLE</span><br><span class="line"></span><br><span class="line"># 设置顶部文字</span><br><span class="line">Settings</span><br><span class="line"></span><br><span class="line"># 设置飞行模式文字</span><br><span class="line">Airplane Mode</span><br><span class="line"></span><br><span class="line"># 设置通用项目文字</span><br><span class="line">General</span><br></pre></td></tr></table></figure>
+
+<p>可删除的属性如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 监督模式提示</span><br><span class="line">SUPERVISION_IPHONE</span><br><span class="line">SUPERVISION_IPOD</span><br><span class="line">SUPERVISION_WITH_ORG_IPHONE</span><br><span class="line">SUPERVISION_WITH_ORG_IPOD</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义没有更早的通知文字显示"><a href="#自定义没有更早的通知文字显示" class="headerlink" title="自定义没有更早的通知文字显示"></a>自定义没有更早的通知文字显示</h3><p>需要修改的plist如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># iOS 15</span><br><span class="line">/System/Library/PrivateFrameworks/UserNotificationsUIKit.framework/zh_CN.lproj/Localizable.strings</span><br></pre></td></tr></table></figure>
+
+<p>可自定义的属性如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 没有更早的通知文字</span><br><span class="line">NO_NOTIFICATION_HISTORY</span><br></pre></td></tr></table></figure>
+
+<p>可删除的属性如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NOTIFICATION_OPTIONS_TURN_OFF_APPLICATION_DURING_MINDFULNESS</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义电池健康最大容量值"><a href="#自定义电池健康最大容量值" class="headerlink" title="自定义电池健康最大容量值"></a>自定义电池健康最大容量值</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/var/MobileSoftwareUpdate/Hardware/Battery/Library/Preferences/com.apple.batteryhealthdata.plist</span><br></pre></td></tr></table></figure>
+
+<p>需要修改的属性如下。不建议修改为80以下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Maximum Capacity Percent</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义锁屏手电筒和相机图标"><a href="#自定义锁屏手电筒和相机图标" class="headerlink" title="自定义锁屏手电筒和相机图标"></a>自定义锁屏手电筒和相机图标</h3><p>创建操作，类型选择替换，路径如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/System/Library/PrivateFrameworks/CoverSheet.framework/Assets.car</span><br></pre></td></tr></table></figure>
+
+<p>替换数据一栏点击上传文件。文件下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># iOS 15</span><br><span class="line">https://github.com/34306/iPA/releases/download/MacDirtyCow_iPAs/ios15.car</span><br><span class="line"></span><br><span class="line"># iOS 16</span><br><span class="line">https://github.com/34306/iPA/releases/download/MacDirtyCow_iPAs/ios16.car</span><br></pre></td></tr></table></figure>
+
+<p>car文件可通过以下软件编辑。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/SerenaKit/Samra</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义控制中心连接按钮"><a href="#自定义控制中心连接按钮" class="headerlink" title="自定义控制中心连接按钮"></a>自定义控制中心连接按钮</h3><p>创建操作，类型选择替换，路径如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/System/Library/ControlCenter/Bundles/ConnectivityModule.bundle/Assets.car</span><br></pre></td></tr></table></figure>
+
+<p>替换数据一栏点击上传文件。文件下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/34306/iPA/releases/download/MacDirtyCow_iPAs/CC.car</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义时钟图标"><a href="#自定义时钟图标" class="headerlink" title="自定义时钟图标"></a>自定义时钟图标</h3><p>与上述操作类似，替换路径如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/System/Library/PrivateFrameworks/SpringBoardHome.framework/Assets.car</span><br></pre></td></tr></table></figure>
+
+<p>文件下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># iOS 15/16均可用</span><br><span class="line"># Anime</span><br><span class="line">https://github.com/34306/iPA/releases/download/MacDirtyCow_iPAs/clock_anime.car</span><br><span class="line"></span><br><span class="line"># checkra1n</span><br><span class="line">https://github.com/34306/iPA/releases/download/MacDirtyCow_iPAs/clock_checkra1n.car</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义通知横幅阴影"><a href="#自定义通知横幅阴影" class="headerlink" title="自定义通知横幅阴影"></a>自定义通知横幅阴影</h3><p>替换路径如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 浅色模式</span><br><span class="line">/System/Library/PrivateFrameworks/PlatterKit.framework/platterVibrantShadowLight.visualstyleset</span><br><span class="line"></span><br><span class="line"># 深色模式</span><br><span class="line">/System/Library/PrivateFrameworks/PlatterKit.framework/platterVibrantShadowDark.visualstyleset</span><br></pre></td></tr></table></figure>
+
+<p>用于替换的文件下载链接如下，下载Notification.Shadow.zip即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/roeegh/Mise/releases</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义系统默认英文键盘空格键"><a href="#自定义系统默认英文键盘空格键" class="headerlink" title="自定义系统默认英文键盘空格键"></a>自定义系统默认英文键盘空格键</h3><p>替换路径如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/System/Library/TextInput/TextInput_en.bundle/Keyboard-en.plist</span><br></pre></td></tr></table></figure>
+
+<p>用于替换的文件下载链接如下，下载Custom.Spacebar.zip即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/roeegh/Mise/releases</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义控制中心"><a href="#自定义控制中心" class="headerlink" title="自定义控制中心"></a>自定义控制中心</h3><p>替换路径如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/System/Library/PrivateFrameworks/ControlCenterUI.framework/DefaultModuleSettings~iphone.plist</span><br></pre></td></tr></table></figure>
+
+<p>用于替换的文件下载链接如下，下载Better.CC.zip即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/roeegh/Mise/releases</span><br></pre></td></tr></table></figure>
+
+<p>也可手动定义各组件的大小。用Filza打开上面的DefaultModuleSettings~iphone.plist文件，复制该文件至可编辑的地方，如Documents。打开复制后的文件，点击希望修改的项，修改其Size项中的width和height即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 音乐模块</span><br><span class="line">com.apple.mediaremote.controlcenter.nowplaying</span><br><span class="line"></span><br><span class="line"># 亮度模块</span><br><span class="line">com.apple.control-center.DisplayModule</span><br><span class="line"></span><br><span class="line"># 音量模块</span><br><span class="line">com.apple.mediaremote.controlcenter.audio</span><br></pre></td></tr></table></figure>
+
+<p>修改完成后，将该文件作为替换文件即可。</p>
+<h3 id="自定义字体"><a href="#自定义字体" class="headerlink" title="自定义字体"></a>自定义字体</h3><p>需要替换的文件路径如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># 锁屏时钟字体</span><br><span class="line">/System/Library/Fonts/CoreUI/SFUISoft.ttc</span><br><span class="line"></span><br><span class="line"># 中文字体</span><br><span class="line">/System/Library/Fonts/LanguageSupport/PingFang.ttc</span><br><span class="line"></span><br><span class="line"># 英文字体</span><br><span class="line">/System/Library/Fonts/CoreUI/SFUI.ttf</span><br><span class="line"></span><br><span class="line"># 系统键盘字体</span><br><span class="line">/System/Library/Fonts/CoreAddition/Keycaps.ttc  </span><br><span class="line"></span><br><span class="line"># 系统拨号键盘字体</span><br><span class="line">/System/Library/Fonts/CoreAddition/PhoneKeyCaps.ttf</span><br><span class="line"></span><br><span class="line"># 表情字体</span><br><span class="line">/System/Library/Fonts/CoreAddition/AppleColorEmoji-160px.ttc</span><br></pre></td></tr></table></figure>
+
+<h1 id="FileSwitcherPro"><a href="#FileSwitcherPro" class="headerlink" title="FileSwitcherPro"></a>FileSwitcherPro</h1><p>和Cowabunga的自定义运行模式基本相同，下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/straight-tamago/FileSwitcherPro</span><br></pre></td></tr></table></figure>
+
+<p>打开后点击左上角设置，开启Replace Plist Auto Padding以在替换plist时自动调整大小。点击下面的+号，选择新建Folder，完成后进入文件夹，点击+号选择Bundle Item，可选择希望添加的项目，添加后开启，注销即可生效。</p>
+<p>也可自行替换文件。创建Original Item，ACTION的Type选择Replace File即为替换文件。</p>
+<h2 id="更换App提示音"><a href="#更换App提示音" class="headerlink" title="更换App提示音"></a>更换App提示音</h2><p>用Filza进入&#x2F;var&#x2F;containers&#x2F;Bundle&#x2F;Application&#x2F;，然后找到需要替换修改提示音的App。以微信为例，为com.tencent.xin文件夹，进入后搜索in.caf，复制该文件路径。</p>
+<p>打开FileSwitcherPro，点击右侧+号，选择Original Item选项，在TARGET中填入上述路径。在Type中选择Replace File，然后点击File Select，选中要用于覆盖的音频文件。点击Add，然后Apply和Restart即可。</p>
+<h2 id="更换App-UI"><a href="#更换App-UI" class="headerlink" title="更换App UI"></a>更换App UI</h2><p>同上，替换Assets.car即可。</p>
+<h1 id="Santander"><a href="#Santander" class="headerlink" title="Santander"></a>Santander</h1><p>文件管理器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/mineek/SantanderMacDirtyCow</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改分辨率"><a href="#修改分辨率" class="headerlink" title="修改分辨率"></a>修改分辨率</h2><p>可通过修改分辨率以在旧设备上实现灵动岛。打开Santander，点击右上角更多按钮，选择<code>Go to...</code>-<code>Other</code>，跳转到以下地址。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist</span><br></pre></td></tr></table></figure>
+
+<p>点击 CacheExtra 进入，在搜索框搜索opeik，找到ArtworkDeviceSubType选项即为分辨率。记住当前分辨率，然后点击进入，修改为相应分辨率。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iPhone 14 Pro / 2556</span><br><span class="line">iPhone 14 Pro Max / 2796</span><br></pre></td></tr></table></figure>
+
+<h2 id="系统声音替换"><a href="#系统声音替换" class="headerlink" title="系统声音替换"></a>系统声音替换</h2><p>目录如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/System/Library/Audio/UISounds/</span><br></pre></td></tr></table></figure>
+
+<p>长按对应文件并选择Replace即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 键盘音频</span><br><span class="line">Tock.caf</span><br><span class="line"></span><br><span class="line"># 键盘音频</span><br><span class="line">key_press_click.caf</span><br><span class="line"></span><br><span class="line"># 锁屏音频</span><br><span class="line">lock.caf</span><br></pre></td></tr></table></figure>
+
+<h2 id="透明文件夹"><a href="#透明文件夹" class="headerlink" title="透明文件夹"></a>透明文件夹</h2><p>路径如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/System/Library/PrivateFrameworks/SpringBoardHome.framework/</span><br></pre></td></tr></table></figure>
+
+<p>长按对应文件并选择Replace即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">folderDark.materialrecipe</span><br><span class="line">folderLight.materialrecipe</span><br></pre></td></tr></table></figure>
+
+<h1 id="主题美化"><a href="#主题美化" class="headerlink" title="主题美化"></a>主题美化</h1><p>可用APP如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Mugunghwa</span><br><span class="line"># 将主题用Filza放置于var/mobile/Themes/mugunghwa/Themes即可</span><br><span class="line"># 主题图标的规律为，App标识符-large.png</span><br><span class="line">https://github.com/s8ngyu/Mugunghwa/releases</span><br><span class="line"></span><br><span class="line"># TrollTools</span><br><span class="line">https://github.com/sourcelocation/TrollTools/releases</span><br></pre></td></tr></table></figure>
+
+<p>主题包可在以下链接下载。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 普通</span><br><span class="line">https://pan.baidu.com/s/1Ygj6RpzIFQYn0aGzGB5nFg?pwd=9nns（提取码 / 9nns）</span><br><span class="line">https://www.123pan.com/s/vgn0Vv-5J3Fv</span><br><span class="line">https://www.123pan.com/s/vgn0Vv-jEaFv.html</span><br><span class="line">https://havoc.app/</span><br><span class="line"></span><br><span class="line"># 锁屏密码美化</span><br><span class="line">https://pan.baidu.com/s/1E4MDnPbJ9fdFx-kHqo68og?pwd=7wcu（提取码 / 7wcu）</span><br><span class="line">https://www.123pan.com/s/vgn0Vv-gw3Fv</span><br></pre></td></tr></table></figure>
+
+<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><h2 id="通用工具"><a href="#通用工具" class="headerlink" title="通用工具"></a>通用工具</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"># FilzaEscaped，免越狱文件管理器，可用于iOS 15及以下系统</span><br><span class="line">https://basvtdevelopments.com/filzaescaped</span><br><span class="line"></span><br><span class="line"># PlankFilza，免越狱文件管理器</span><br><span class="line">https://github.com/brandonplank/PlankFilza</span><br><span class="line"></span><br><span class="line"># PostBox，非越狱手机查看插件库</span><br><span class="line">https://www.postbox.news/</span><br><span class="line"></span><br><span class="line"># Filza Deco</span><br><span class="line">https://github.com/dobabaophuc1706/FilzaMod</span><br><span class="line"></span><br><span class="line"># ControlConfig，控制中心添加模块</span><br><span class="line"># 在App设定好模块后，在控制中心添加该模块即可</span><br><span class="line">https://github.com/f1shy-dev/ControlConfig</span><br><span class="line"></span><br><span class="line"># FileSwitcherX，工具箱</span><br><span class="line">https://github.com/straight-tamago/FileSwitcherX</span><br><span class="line"></span><br><span class="line"># 图标排序</span><br><span class="line">https://github.com/Avangelista/Appabetical</span><br><span class="line"></span><br><span class="line"># 字体更换</span><br><span class="line">https://github.com/ginsudev/WDBFontOverwrite</span><br><span class="line"></span><br><span class="line"># 修复企业证书失效</span><br><span class="line">https://github.com/BomberFish/Whitelist</span><br><span class="line">https://www.123pan.com/s/vgn0Vv-YO3Fv</span><br><span class="line"></span><br><span class="line"># 移除自签三个App限制</span><br><span class="line">https://github.com/zhuowei/WDBRemoveThreeAppLimit</span><br><span class="line"></span><br><span class="line"># 自定义状态栏</span><br><span class="line">https://github.com/Avangelista/StatusMagic</span><br><span class="line"></span><br><span class="line"># 修改分辨率，iOS 16老设备激活灵动岛</span><br><span class="line">https://github.com/matteozappia/DynamicCow</span><br><span class="line"></span><br><span class="line"># 自定义分辨率</span><br><span class="line">https://github.com/sourcelocation/ResSet16</span><br><span class="line"></span><br><span class="line"># 隐藏主页条</span><br><span class="line">https://github.com/straight-tamago/NoHomeBar</span><br><span class="line"></span><br><span class="line"># Dock栏透明</span><br><span class="line">https://github.com/straight-tamago/DockTransparent</span><br><span class="line"></span><br><span class="line"># 隐藏主页条+Dock栏透明</span><br><span class="line">https://github.com/leminlimez/DockHider</span><br><span class="line"></span><br><span class="line"># 一键注销</span><br><span class="line"># 将放大器添加到控制中心，然后打开一次App，就可以在控制中心一键注销</span><br><span class="line">https://github.com/straight-tamago/RespringCC</span><br><span class="line"></span><br><span class="line"># 状态栏显示秒数</span><br><span class="line">https://mp.weixin.qq.com/s/GNzXfiTchse4KeAD7iHrxQ</span><br><span class="line"></span><br><span class="line"># AppCommander，App备份</span><br><span class="line">https://github.com/BomberFish/AppCommander</span><br><span class="line"></span><br><span class="line"># DirtyCow，工具箱</span><br><span class="line">https://github.com/mineek/dirtycowapp</span><br><span class="line"></span><br><span class="line"># FileManager</span><br><span class="line">https://github.com/mineek/FileManager</span><br><span class="line"></span><br><span class="line"># CyMusic，音乐软件</span><br><span class="line">https://github.com/gyc-12/music-player-master</span><br><span class="line"># 音源</span><br><span class="line">https://www.123684.com/s/vgn0Vv-a8MFv</span><br><span class="line"></span><br><span class="line"># InfusePlus</span><br><span class="line">https://github.com/dayanch96/InfusePlus</span><br><span class="line"></span><br><span class="line"># Feather，在手机上签名和安装IPA</span><br><span class="line">https://github.com/khcrysalis/Feather</span><br><span class="line"></span><br><span class="line"># UTM，虚拟机</span><br><span class="line">https://github.com/utmapp/UTM</span><br><span class="line"></span><br><span class="line"># PojavLauncher，Minecraft Java版启动器</span><br><span class="line">https://github.com/PojavLauncherTeam/PojavLauncher_iOS</span><br><span class="line"></span><br><span class="line"># Hiddify，网络代理工具</span><br><span class="line">https://github.com/hiddify/hiddify-app</span><br><span class="line"></span><br><span class="line"># Ignited，游戏模拟器</span><br><span class="line">https://github.com/LitRitt/Ignited</span><br><span class="line"></span><br><span class="line"># Cardio，修改Apple Pay图标</span><br><span class="line">https://github.com/cisc0disco/Cardio</span><br><span class="line"></span><br><span class="line"># Azula，将dylib注入IPA</span><br><span class="line">https://github.com/Paisseon/Azula</span><br><span class="line"></span><br><span class="line"># CarTube，CarPlay上运行YouTube</span><br><span class="line">https://github.com/Avangelista/CarTube</span><br><span class="line"></span><br><span class="line"># Aemulo，读取、写入和模拟NFC</span><br><span class="line">https://github.com/Aemulo/Release</span><br></pre></td></tr></table></figure>
+
+<h2 id="Trollstore专用"><a href="#Trollstore专用" class="headerlink" title="Trollstore专用"></a>Trollstore专用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br></pre></td><td class="code"><pre><span class="line"># 应用库</span><br><span class="line"># 推荐</span><br><span class="line">https://github.com/Peng1029/trollrepo</span><br><span class="line">https://ipa.cypwn.xyz/</span><br><span class="line"># 其它</span><br><span class="line">https://github.com/34306/TrollStoreiPA</span><br><span class="line">https://github.com/swaggyP36000/TrollStore-IPAs</span><br><span class="line">https://ipa.store/</span><br><span class="line">https://pan.ios98.com/</span><br><span class="line">https://pan.qxnav.com/</span><br><span class="line">https://www.123pan.com/s/vgn0Vv-Qo3Fv</span><br><span class="line">https://pan.baidu.com/s/1f7qiHzFutQ3zN1-SQkFXSg?pwd=791g（提取码 / 791g）</span><br><span class="line"></span><br><span class="line"># TrollSpeed，网速悬浮窗工具</span><br><span class="line">https://github.com/Lessica/TrollSpeed</span><br><span class="line"></span><br><span class="line"># TrollRecorder，通话录音工具</span><br><span class="line">https://github.com/Lessica/TrollRecorder</span><br><span class="line"></span><br><span class="line"># Asspp，App Store辅助工具</span><br><span class="line">https://github.com/Lakr233/Asspp</span><br><span class="line"></span><br><span class="line"># DowngradeApp</span><br><span class="line">https://pan.baidu.com/s/17YQgjtw2Mf2W36iTG63w6Q?pwd=fxpf（提取码 / fxpf）</span><br><span class="line">https://share.weiyun.com/t0Lvr5ms</span><br><span class="line"></span><br><span class="line"># AppStore++</span><br><span class="line"># 原版包含广告，网盘包含去广告版本</span><br><span class="line">https://github.com/CokePokes/AppStorePlus-TrollStore</span><br><span class="line">https://www.123pan.com/s/vgn0Vv-9r3Fv</span><br><span class="line"></span><br><span class="line"># deb转换为IPA</span><br><span class="line">https://github.com/sourcelocation/DebToIPA/releases</span><br><span class="line"></span><br><span class="line"># Unc0ver</span><br><span class="line"># 若安装8.0.0-8.0.2版本，则还需要安装u0Launcher，安装完成后打开u0Launcher，它会自动跳转到unc0ver，正常越狱即可</span><br><span class="line">https://github.com/opa334/u0Launcher/releases</span><br><span class="line"></span><br><span class="line"># Filza，包含原版和无Url Scheme版本</span><br><span class="line"># 部分App会通过检查Url Scheme查看是否安装Filza以判断当前是否越狱</span><br><span class="line"># 此时可使用无Url Scheme版本</span><br><span class="line">https://www.tigisoftware.com/default/?p=439</span><br><span class="line"></span><br><span class="line"># Apps Manager</span><br><span class="line">https://www.tigisoftware.com/default/?p=435</span><br><span class="line"></span><br><span class="line"># ResolutionSetter</span><br><span class="line"># 各个设备的分辨率可在该网站查看：https://www.apple.com.cn/iphone/compare/</span><br><span class="line"># 若修改分辨率后屏幕黑屏，重启手机即可</span><br><span class="line">https://github.com/Halo-Michael/ipas/blob/main/resolutionsetter.ipa</span><br><span class="line"></span><br><span class="line"># ResolutionSetterSwift</span><br><span class="line">https://github.com/haoict/haoict.github.io/tree/master/cydia/ipa</span><br><span class="line"></span><br><span class="line"># BlizzBoards</span><br><span class="line">https://appinstallerios.com/TrollStoreIPAs/BlizzardBoard.ipa</span><br><span class="line"></span><br><span class="line"># H5GG</span><br><span class="line">https://github.com/H5GG/H5GG</span><br><span class="line"></span><br><span class="line"># uYou+</span><br><span class="line">https://github.com/qnblackcat/uYouPlus/releases</span><br><span class="line"></span><br><span class="line"># OldOS</span><br><span class="line">https://github.com/zzanehip/The-OldOS-Project/releases</span><br><span class="line"></span><br><span class="line"># RingTonesManager</span><br><span class="line">https://share.initnil.com/With_TorllStore</span><br><span class="line"></span><br><span class="line"># NiceBattery</span><br><span class="line">https://www.niceios.com/download.php</span><br><span class="line"></span><br><span class="line"># 电池助手</span><br><span class="line">https://www.123pan.com/s/vgn0Vv-Ex3Fv</span><br><span class="line">https://pan.baidu.com/s/1YBIuBzHONOTwYZ0YTYZUVg?pwd=ik6g（提取码 / ik6g）</span><br><span class="line"></span><br><span class="line"># PostBox</span><br><span class="line">https://www.postbox.news/</span><br><span class="line"></span><br><span class="line"># 静音模块</span><br><span class="line"># 将文件用Filza放置到/var/Managed Preferences/mobile中，注销后即可在控制中心添加静音按钮</span><br><span class="line">https://www.123pan.com/s/vgn0Vv-5I3Fv</span><br><span class="line">https://pan.baidu.com/s/1N_-DkwRejMQOz_dBu9GZwA?pwd=hufn（提取码 / hufn）</span><br><span class="line"></span><br><span class="line"># ModMyIPA</span><br><span class="line"># 安装后通过修改现有IPA包的标识符，可实现应用多开</span><br><span class="line">https://github.com/powenn/ModMyIPA</span><br><span class="line"></span><br><span class="line"># 电话助手</span><br><span class="line">https://www.htv123.com/down/CallAssist_TrollStore.ipa</span><br><span class="line"></span><br><span class="line"># TrollTools</span><br><span class="line"># 多功能工具箱</span><br><span class="line">https://github.com/sourcelocation/TrollTools</span><br><span class="line"></span><br><span class="line"># WallpaperSetter，自定义浅色模式深色模式的墙纸</span><br><span class="line">https://github.com/Skittyblock/WallpaperSetter</span><br><span class="line"></span><br><span class="line"># CAPerfHUD，浮窗显示手机性能</span><br><span class="line">https://github.com/khanhduytran0/CAPerfHUD</span><br><span class="line"></span><br><span class="line"># IpaDownloadTool，IPA提取器</span><br><span class="line">https://github.com/SmileZXLee/IpaDownloadTool</span><br><span class="line"></span><br><span class="line"># AppRhyme，音乐播放器</span><br><span class="line">https://github.com/canxin121/app_rhyme</span><br><span class="line"># 音源</span><br><span class="line">https://github.com/hhhackor/AppRhymeApi/raw/main/custom_api.evc</span><br><span class="line"></span><br><span class="line"># Blossom，用视频作为壁纸</span><br><span class="line">https://github.com/inyourwalls/Blossom</span><br><span class="line"></span><br><span class="line"># AnimationSpeed，动画加速</span><br><span class="line">https://www.123865.com/s/vgn0Vv-IowFv</span><br><span class="line"></span><br><span class="line"># RebootTools，一键重启</span><br><span class="line">https://github.com/DevelopCubeLab/RebootTools</span><br><span class="line"></span><br><span class="line"># ExtractApp，提取App</span><br><span class="line">https://github.com/DevelopCubeLab/ExtractApp</span><br><span class="line"></span><br><span class="line"># BatteryInfo，电池信息</span><br><span class="line">https://github.com/DevelopCubeLab/BatteryInfo</span><br><span class="line"></span><br><span class="line"># UiharuX Pro，App快捷启动、跑马灯、灵动岛、雪花飘落、控制面板等</span><br><span class="line">https://github.com/straight-tamago/UiharuX</span><br><span class="line"></span><br><span class="line"># ClearFilzaResidue，清理Filza残留</span><br><span class="line">https://github.com/DevelopCubeLab/ClearFilzaResidue</span><br><span class="line"></span><br><span class="line"># MuffinStore，安装指定旧版应用</span><br><span class="line">https://github.com/mineek/MuffinStore</span><br><span class="line">https://github.com/mineek/MuffinStoreJailed-Public</span><br><span class="line"></span><br><span class="line"># TimeBomb 2，按需触发自旋锁恐慌</span><br><span class="line">https://github.com/opa334/TimeBomb2</span><br><span class="line"></span><br><span class="line"># WiFiList，WiFi密码查看器</span><br><span class="line">https://www.123865.com/s/vgn0Vv-nBgFv</span><br><span class="line"></span><br><span class="line"># 分屏</span><br><span class="line">https://www.123912.com/s/ifH9-z2hy3</span><br><span class="line"></span><br><span class="line"># Write Now，写作助手</span><br><span class="line">https://github.com/OwnGoalStudio/WriteNow</span><br><span class="line"></span><br><span class="line"># Helium，状态栏小部件</span><br><span class="line">https://github.com/leminlimez/Helium</span><br><span class="line"></span><br><span class="line"># AnimationSpeed，动画加速</span><br><span class="line">https://github.com/DevelopCubeLab/AnimationSpeed</span><br><span class="line"></span><br><span class="line"># Reveil，系统安全分析工具</span><br><span class="line">https://github.com/Lessica/Reveil</span><br><span class="line"></span><br><span class="line"># InstaSpring，系统注销</span><br><span class="line">https://github.com/haxi0/InstaSpring</span><br><span class="line"></span><br><span class="line"># TrollLEDs，控制闪光灯</span><br><span class="line">https://github.com/PoomSmart/TrollLEDs</span><br><span class="line"></span><br><span class="line"># TrollDecryptor，应用砸壳</span><br><span class="line">https://github.com/wh1te4ever/TrollDecryptor</span><br><span class="line"></span><br><span class="line"># Geranium，守护进程管理器、清理器、监控器</span><br><span class="line">https://github.com/c22dev/Geranium</span><br><span class="line"></span><br><span class="line"># ChargeLimiter，电池保护</span><br><span class="line">https://github.com/lich4/ChargeLimiter</span><br><span class="line"></span><br><span class="line"># Zomigle，解除对watchOS兼容性的限制</span><br><span class="line">https://github.com/HAHALOSAH/Zomigle</span><br><span class="line"></span><br><span class="line"># AppIndex，应用程序管理器</span><br><span class="line">https://github.com/NSAntoine/AppIndex</span><br><span class="line"></span><br><span class="line"># WDBRemoveThreeAppLimit，移除自签应用只能安装三个的限制</span><br><span class="line">https://github.com/zhuowei/WDBRemoveThreeAppLimit</span><br><span class="line"></span><br><span class="line"># CAPerfHUDSwift，设备状态显示</span><br><span class="line">https://github.com/BomberFish/CAPerfHUDSwift</span><br><span class="line"></span><br><span class="line"># batteried，电池状态上放置图标</span><br><span class="line">https://github.com/34306/batteried</span><br><span class="line"></span><br><span class="line"># SuperIcons，修改应用图标</span><br><span class="line">https://github.com/huami1314/SuperIcons</span><br><span class="line"></span><br><span class="line"># TrollAppDuplicator，应用复制</span><br><span class="line">https://github.com/BreakOnCrash/TrollAppDuplicator</span><br><span class="line"></span><br><span class="line"># LiveContainer，不安装App即可运行它</span><br><span class="line">https://github.com/khanhduytran0/LiveContainer</span><br></pre></td></tr></table></figure>
+
+<h2 id="KFD专用"><a href="#KFD专用" class="headerlink" title="KFD专用"></a>KFD专用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># posi0nKFD</span><br><span class="line">https://github.com/GenericCoding/kfd</span><br><span class="line"></span><br><span class="line"># KFDColors</span><br><span class="line"># 修改角标颜色</span><br><span class="line">https://wwqw.lanzouk.com/b0198pbsd</span><br></pre></td></tr></table></figure>
+
+<h2 id="TrollRestore专用"><a href="#TrollRestore专用" class="headerlink" title="TrollRestore专用"></a>TrollRestore专用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># misakaX</span><br><span class="line">https://github.com/straight-tamago/misakaX</span><br><span class="line"></span><br><span class="line"># Nugget</span><br><span class="line">https://github.com/leminlimez/Nugget</span><br><span class="line"></span><br><span class="line"># Cowabunga Lite</span><br><span class="line">https://github.com/leminlimez/CowabungaLite</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="iOS-系统，真网速悬浮窗，无需越狱"><a href="#iOS-系统，真网速悬浮窗，无需越狱" class="headerlink" title="iOS 系统，真网速悬浮窗，无需越狱"></a>iOS 系统，真网速悬浮窗，无需越狱</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/j4I1rATrvKwF6rpQDf4YVg</span><br></pre></td></tr></table></figure>
+
+<h2 id="超爽！iOS-16-1-2-更换-App-提示音，不用越狱"><a href="#超爽！iOS-16-1-2-更换-App-提示音，不用越狱" class="headerlink" title="超爽！iOS 16.1.2 更换 App 提示音，不用越狱"></a>超爽！iOS 16.1.2 更换 App 提示音，不用越狱</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/3Q-zpaIBDrAsfduWZLpYUg</span><br></pre></td></tr></table></figure>
+
+<h2 id="真好玩，实现-iOS-16-1-2-透明文件夹，不用越狱"><a href="#真好玩，实现-iOS-16-1-2-透明文件夹，不用越狱" class="headerlink" title="真好玩，实现 iOS 16.1.2 透明文件夹，不用越狱"></a>真好玩，实现 iOS 16.1.2 透明文件夹，不用越狱</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/C8z-ozXvEsMw3rosKF_S4g</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-16-5-Misaka-替代品，插件源通用"><a href="#iOS-16-5-Misaka-替代品，插件源通用" class="headerlink" title="iOS 16.5 Misaka 替代品，插件源通用"></a>iOS 16.5 Misaka 替代品，插件源通用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/A2bwFZRAjviM6-9I5US1lw</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-16-5-系统，PureKFD-插件商店，无需越狱，支持这些系统"><a href="#iOS-16-5-系统，PureKFD-插件商店，无需越狱，支持这些系统" class="headerlink" title="iOS 16.5 系统，PureKFD 插件商店，无需越狱，支持这些系统"></a>iOS 16.5 系统，PureKFD 插件商店，无需越狱，支持这些系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/hwycMbSa2O2TYhBddNxeaQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-14-3-PlankFilza-来了，免越狱修改-X-手势"><a href="#iOS-14-3-PlankFilza-来了，免越狱修改-X-手势" class="headerlink" title="iOS 14.3 PlankFilza 来了，免越狱修改 X 手势"></a>iOS 14.3 PlankFilza 来了，免越狱修改 X 手势</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/Fs3Qj3flAC2KgBw7OGAKzw</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="电池百分比显示，终于来了，无需越狱"><a href="#电池百分比显示，终于来了，无需越狱" class="headerlink" title="电池百分比显示，终于来了，无需越狱"></a>电池百分比显示，终于来了，无需越狱</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/zxIvLXdJIZ0zn_8JXhnLVQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="新款电池百分比显示，状态栏显示，功能丰富，无需越狱"><a href="#新款电池百分比显示，状态栏显示，功能丰富，无需越狱" class="headerlink" title="新款电池百分比显示，状态栏显示，功能丰富，无需越狱"></a>新款电池百分比显示，状态栏显示，功能丰富，无需越狱</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/Bifd41nNVdn5t5DIWZA4tg</span><br></pre></td></tr></table></figure>
+
+<h2 id="IPA-提取器，完全免费，无需越狱"><a href="#IPA-提取器，完全免费，无需越狱" class="headerlink" title="IPA 提取器，完全免费，无需越狱"></a>IPA 提取器，完全免费，无需越狱</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/jF8rUJpkxylM4TdoEHsDJA</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-系统，手机性能-HUD，无需越狱"><a href="#iOS-系统，手机性能-HUD，无需越狱" class="headerlink" title="iOS 系统，手机性能 HUD，无需越狱"></a>iOS 系统，手机性能 HUD，无需越狱</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/SyG9g0jGYW2Uk5cjxQLIRQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-系统，自定义外观模式墙纸，无需越狱"><a href="#iOS-系统，自定义外观模式墙纸，无需越狱" class="headerlink" title="iOS 系统，自定义外观模式墙纸，无需越狱"></a>iOS 系统，自定义外观模式墙纸，无需越狱</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/SK-4YwXi1Gy9rsnmbcMMPg</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-系统，通知发光，无需越狱"><a href="#iOS-系统，通知发光，无需越狱" class="headerlink" title="iOS 系统，通知发光，无需越狱"></a>iOS 系统，通知发光，无需越狱</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/SmPKL6stDiZAxzEz2jUN5w</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-系统，自定义控制中心，无需越狱"><a href="#iOS-系统，自定义控制中心，无需越狱" class="headerlink" title="iOS 系统，自定义控制中心，无需越狱"></a>iOS 系统，自定义控制中心，无需越狱</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/XGrnvicqsBQpn6szBBWpjQ</span><br></pre></td></tr></table></figure>
+<h2 id="iOS-16-1-2-DirtyCow-已发布，可以实现一键替换"><a href="#iOS-16-1-2-DirtyCow-已发布，可以实现一键替换" class="headerlink" title="iOS 16.1.2 DirtyCow 已发布，可以实现一键替换"></a>iOS 16.1.2 DirtyCow 已发布，可以实现一键替换</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/MOrmpFG0SA8k62d0m9rQCA</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-系统，文件管理器发布，无需越狱"><a href="#iOS-系统，文件管理器发布，无需越狱" class="headerlink" title="iOS 系统，文件管理器发布，无需越狱"></a>iOS 系统，文件管理器发布，无需越狱</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/SICZ0FI7yUPOVBe8e5nb7w</span><br></pre></td></tr></table></figure>
+
+<h2 id="奶牛系列官方网站，正式上线，请收藏"><a href="#奶牛系列官方网站，正式上线，请收藏" class="headerlink" title="奶牛系列官方网站，正式上线，请收藏"></a>奶牛系列官方网站，正式上线，请收藏</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/KSFRwIA3TPEIBu6HxShzAQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-系统，听歌自由，速度"><a href="#iOS-系统，听歌自由，速度" class="headerlink" title="iOS 系统，听歌自由，速度"></a>iOS 系统，听歌自由，速度</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/yeDc6y-dK7JCcNlwBG_e8Q</span><br></pre></td></tr></table></figure>
+
+<h2 id="misakaX，更新1-7，支持-iOS-16"><a href="#misakaX，更新1-7，支持-iOS-16" class="headerlink" title="misakaX，更新1.7，支持 iOS 16"></a>misakaX，更新1.7，支持 iOS 16</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/1gkgYk_K-UZLMh9syK6lsg</span><br></pre></td></tr></table></figure>
+
+<h2 id="新工具，金块"><a href="#新工具，金块" class="headerlink" title="新工具，金块"></a>新工具，金块</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/UqASjZN5qAkPZT9s7McZFA</span><br></pre></td></tr></table></figure>
+
+<h2 id="关于-MacDirtyCow，支持的系统范围，必看"><a href="#关于-MacDirtyCow，支持的系统范围，必看" class="headerlink" title="关于 MacDirtyCow，支持的系统范围，必看"></a>关于 MacDirtyCow，支持的系统范围，必看</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/h9R_veKuOd2ienAHce9KYw</span><br></pre></td></tr></table></figure>
+
+<h2 id="FilzaEscaped15-来了，iOS-系统文件管理器，无需越狱"><a href="#FilzaEscaped15-来了，iOS-系统文件管理器，无需越狱" class="headerlink" title="FilzaEscaped15 来了，iOS 系统文件管理器，无需越狱"></a>FilzaEscaped15 来了，iOS 系统文件管理器，无需越狱</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/cDmx4doiumVOBZuuE9jUjg</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-系统，自定义4G-x2F-5G，无需越狱，非常简单"><a href="#iOS-系统，自定义4G-x2F-5G，无需越狱，非常简单" class="headerlink" title="iOS 系统，自定义4G&#x2F;5G，无需越狱，非常简单"></a>iOS 系统，自定义4G&#x2F;5G，无需越狱，非常简单</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/2bbId2CsBfQMt8OxdBlHkw</span><br></pre></td></tr></table></figure>
+
+<h2 id="黑科技，老款-iPhone-激活灵动岛，无需越狱，支持这些系统"><a href="#黑科技，老款-iPhone-激活灵动岛，无需越狱，支持这些系统" class="headerlink" title="黑科技，老款 iPhone 激活灵动岛，无需越狱，支持这些系统"></a>黑科技，老款 iPhone 激活灵动岛，无需越狱，支持这些系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/_yDmSWBKnv7wGjtm_F7UqA</span><br></pre></td></tr></table></figure>
+
+<h2 id="轻松签-，无需证书，永久签名，永不过期，无需越狱"><a href="#轻松签-，无需证书，永久签名，永不过期，无需越狱" class="headerlink" title="轻松签+，无需证书，永久签名，永不过期，无需越狱"></a>轻松签+，无需证书，永久签名，永不过期，无需越狱</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/STdwUdba7Pc8klnfzfcmlw</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-永久签名，永不过期，无需越狱，完全免费，速度"><a href="#iOS-永久签名，永不过期，无需越狱，完全免费，速度" class="headerlink" title="iOS 永久签名，永不过期，无需越狱，完全免费，速度"></a>iOS 永久签名，永不过期，无需越狱，完全免费，速度</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/fjD7CDQFZ_BGvCsz8qdyog</span><br></pre></td></tr></table></figure>
+
+<h2 id="FileSwitcherPro，多功能修改器（一）"><a href="#FileSwitcherPro，多功能修改器（一）" class="headerlink" title="FileSwitcherPro，多功能修改器（一）"></a>FileSwitcherPro，多功能修改器（一）</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/pfHhe7kyiUAkt7TUKmLJ7g</span><br></pre></td></tr></table></figure>
+
+<h2 id="FileSwitcherPro，多功能修改器（二）如何替换文件"><a href="#FileSwitcherPro，多功能修改器（二）如何替换文件" class="headerlink" title="FileSwitcherPro，多功能修改器（二）如何替换文件"></a>FileSwitcherPro，多功能修改器（二）如何替换文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/p7J3YK9eHFYq7LxvSqZ-VQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="Since-we-don’t-have-iCleaner-Pro-for-TrollStore-it’s-possible-to-delete-some-large-cache-files-from-Filza-without-harm-to-the-system"><a href="#Since-we-don’t-have-iCleaner-Pro-for-TrollStore-it’s-possible-to-delete-some-large-cache-files-from-Filza-without-harm-to-the-system" class="headerlink" title="Since we don’t have iCleaner Pro for TrollStore, it’s possible to delete some large cache files from Filza without harm to the system."></a>Since we don’t have iCleaner Pro for TrollStore, it’s possible to delete some large cache files from Filza without harm to the system.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.reddit.com/r/Trollstore/comments/yhw4kb/since_we_dont_have_icleaner_pro_for_trollstore/</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-系统，一键更换字体，大神接手，新版下载地址，必看"><a href="#iOS-系统，一键更换字体，大神接手，新版下载地址，必看" class="headerlink" title="iOS 系统，一键更换字体，大神接手，新版下载地址，必看"></a>iOS 系统，一键更换字体，大神接手，新版下载地址，必看</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/Rf8WAaKGz26pAWYSkCo6Bg</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-系统，自定义小元素，个性十足"><a href="#iOS-系统，自定义小元素，个性十足" class="headerlink" title="iOS 系统，自定义小元素，个性十足"></a>iOS 系统，自定义小元素，个性十足</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/dG4TWMeWlEfMmXyEKvYt2Q</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-系统，自定义锁屏手电筒和相机，简单"><a href="#iOS-系统，自定义锁屏手电筒和相机，简单" class="headerlink" title="iOS 系统，自定义锁屏手电筒和相机，简单"></a>iOS 系统，自定义锁屏手电筒和相机，简单</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/ux2yU0tRg2w5_fQIAJ_FvQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-系统，桌面-App-快速移动到指定文件夹"><a href="#iOS-系统，桌面-App-快速移动到指定文件夹" class="headerlink" title="iOS 系统，桌面 App 快速移动到指定文件夹"></a>iOS 系统，桌面 App 快速移动到指定文件夹</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/5ImIQevXIN071Jc9nG-A0w</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-系统，全新全局手势神器，完全免费"><a href="#iOS-系统，全新全局手势神器，完全免费" class="headerlink" title="iOS 系统，全新全局手势神器，完全免费"></a>iOS 系统，全新全局手势神器，完全免费</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/O6Dug7Cj3tT5I1d_hICaeA</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-16-5-系统，SimpleKFD-工具箱，一键监督，一键灵动岛"><a href="#iOS-16-5-系统，SimpleKFD-工具箱，一键监督，一键灵动岛" class="headerlink" title="iOS 16.5 系统，SimpleKFD 工具箱，一键监督，一键灵动岛"></a>iOS 16.5 系统，SimpleKFD 工具箱，一键监督，一键灵动岛</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/BxN8UzhyzcBC7oF59z5P0Q</span><br></pre></td></tr></table></figure>
+
+<h2 id="好东西，iOS-14-制作永久版应用，仅需几秒搞定"><a href="#好东西，iOS-14-制作永久版应用，仅需几秒搞定" class="headerlink" title="好东西，iOS 14 制作永久版应用，仅需几秒搞定"></a>好东西，iOS 14 制作永久版应用，仅需几秒搞定</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/L-vudctVvu99yqcDEqXKXg</span><br></pre></td></tr></table></figure>
+
+<h2 id="好东西，iOS-16-1-2-Files-文件管理器，确实有效"><a href="#好东西，iOS-16-1-2-Files-文件管理器，确实有效" class="headerlink" title="好东西，iOS 16.1.2 Files 文件管理器，确实有效"></a>好东西，iOS 16.1.2 Files 文件管理器，确实有效</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/yGbrTzI_NejCerf0KrJeKQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="牛批！iOS-16-5-修改角标已发布，可改颜色"><a href="#牛批！iOS-16-5-修改角标已发布，可改颜色" class="headerlink" title="牛批！iOS 16.5 修改角标已发布，可改颜色"></a>牛批！iOS 16.5 修改角标已发布，可改颜色</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/seEwRkgkCC77_PaICdqrlg</span><br></pre></td></tr></table></figure>
+
+<h2 id="新工具，Blossom-！"><a href="#新工具，Blossom-！" class="headerlink" title="新工具，Blossom ！"></a>新工具，Blossom ！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/HhRDXervYkIAVXZPn0UdMw</span><br></pre></td></tr></table></figure>
+
+<h2 id="让-iPhone-再战三年！"><a href="#让-iPhone-再战三年！" class="headerlink" title="让 iPhone 再战三年！"></a>让 iPhone 再战三年！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/5ycNjO5_4zHZlwheR8bVbA</span><br></pre></td></tr></table></figure>
+
+<h2 id="新玩法，加速"><a href="#新玩法，加速" class="headerlink" title="新玩法，加速"></a>新玩法，加速</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/uO_QLNaMm9dR90DCkHq0Eg</span><br></pre></td></tr></table></figure>
+
+<h2 id="一键重启-！"><a href="#一键重启-！" class="headerlink" title="一键重启 ！"></a>一键重启 ！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/_funZkt1EJfJj6z_XdeRDQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="禁止摇一摇！"><a href="#禁止摇一摇！" class="headerlink" title="禁止摇一摇！"></a>禁止摇一摇！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/m4dxYgTWV8Olml-QUgYCsw</span><br></pre></td></tr></table></figure>
+
+<h2 id="汉化，简体中文"><a href="#汉化，简体中文" class="headerlink" title="汉化，简体中文"></a>汉化，简体中文</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/b3zLL1IIxIPmJ4YWFVMO4w</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-系统，音乐，速度"><a href="#iOS-系统，音乐，速度" class="headerlink" title="iOS 系统，音乐，速度"></a>iOS 系统，音乐，速度</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/s7gMo2w-0f0t53JT7_skyw</span><br></pre></td></tr></table></figure>
+
+<h2 id="好东西！iOS-17-0-巨魔查电池，详细记录循环信息"><a href="#好东西！iOS-17-0-巨魔查电池，详细记录循环信息" class="headerlink" title="好东西！iOS 17.0 巨魔查电池，详细记录循环信息"></a>好东西！iOS 17.0 巨魔查电池，详细记录循环信息</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/fg6gnTBYJ8ktS6Id_aQpgQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="伪装，开启-CallKit！"><a href="#伪装，开启-CallKit！" class="headerlink" title="伪装，开启 CallKit！"></a>伪装，开启 CallKit！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/Awu1ErsQi32UzNaLcpBUzA</span><br></pre></td></tr></table></figure>
+
+<h2 id="清除残留-！"><a href="#清除残留-！" class="headerlink" title="清除残留 ！"></a>清除残留 ！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/wU_Tesa3OCZUMKWvK5WbRA</span><br></pre></td></tr></table></figure>
+
+<h2 id="新工具，抢鲜"><a href="#新工具，抢鲜" class="headerlink" title="新工具，抢鲜"></a>新工具，抢鲜</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/UFucgW1usFSvQX7BRJ0rZQ</span><br></pre></td></tr></table></figure>
+<h2 id="opa334-发布新工具：时间炸弹-！"><a href="#opa334-发布新工具：时间炸弹-！" class="headerlink" title="opa334 发布新工具：时间炸弹 ！"></a>opa334 发布新工具：时间炸弹 ！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/DGwz8udg4EQ-gahRatyopg</span><br></pre></td></tr></table></figure>
+
+<h2 id="UI-速度，让-iPhone-再战三年！"><a href="#UI-速度，让-iPhone-再战三年！" class="headerlink" title="UI 速度，让 iPhone 再战三年！"></a>UI 速度，让 iPhone 再战三年！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/4ZmRmn9M9fVpPMCS2PI69g</span><br></pre></td></tr></table></figure>
+
+<h2 id="好东西！iOS-17-0-新的巨魔分屏工具，稳定性超强"><a href="#好东西！iOS-17-0-新的巨魔分屏工具，稳定性超强" class="headerlink" title="好东西！iOS 17.0 新的巨魔分屏工具，稳定性超强"></a>好东西！iOS 17.0 新的巨魔分屏工具，稳定性超强</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/iNRzYjSzFCJkAKDRV3hdOg</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/iOS-Jailbreak-Tweaks-Guide.html" rel="prev" title="iOS越狱插件操作">
+      <i class="fa fa-chevron-left"></i> iOS越狱插件操作
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/iOS-Jailbreak-Method.html" rel="next" title="iOS越狱方法">
+      iOS越狱方法 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TODOS"><span class="nav-text">TODOS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8"><span class="nav-text">安装与使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Trollstore"><span class="nav-text">Trollstore</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E6%8A%80%E5%B7%A7"><span class="nav-text">操作技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%8F%E8%94%BD%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0"><span class="nav-text">屏蔽系统更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%85%E7%90%86%E6%89%8B%E6%9C%BA%E5%8D%A0%E7%94%A8%E7%A9%BA%E9%97%B4"><span class="nav-text">清理手机占用空间</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%BB%E6%9D%BE%E7%AD%BE"><span class="nav-text">轻松签+</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TrollFools"><span class="nav-text">TrollFools</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="nav-text">可用插件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%8A%E8%B6%8A%E7%8B%B1"><span class="nav-text">半越狱</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MacDirtyCow"><span class="nav-text">MacDirtyCow</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E6%8A%80%E5%B7%A7-1"><span class="nav-text">操作技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Altstore%E7%AA%81%E7%A0%B4%E4%B8%89%E4%B8%AA%E7%AD%BE%E5%90%8D%E9%99%90%E5%88%B6"><span class="nav-text">Altstore突破三个签名限制</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KFD"><span class="nav-text">KFD</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6%E5%95%86%E5%BA%97"><span class="nav-text">插件商店</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E7%94%A8Repo"><span class="nav-text">可用Repo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cowabunga-x2F-Cluckabunga"><span class="nav-text">Cowabunga&#x2F;Cluckabunga</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%94%81%E5%A4%B4"><span class="nav-text">自定义锁头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%90%E8%A1%8C%E6%A8%A1%E5%BC%8F"><span class="nav-text">自定义运行模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%9C%82%E7%AA%9D%E7%BD%91%E7%BB%9C4G-x2F-5G%E6%98%BE%E7%A4%BA"><span class="nav-text">自定义蜂窝网络4G&#x2F;5G显示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BE%93%E5%85%A5%E5%AF%86%E7%A0%81-x2F-%E6%BB%91%E5%8A%A8%E5%85%B3%E6%9C%BA%E6%96%87%E5%AD%97%E6%98%BE%E7%A4%BA"><span class="nav-text">自定义输入密码&#x2F;滑动关机文字显示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AE%BE%E7%BD%AE%E4%B8%AA%E4%BA%BA%E5%B8%90%E6%88%B7%E6%96%87%E5%AD%97%E6%98%BE%E7%A4%BA"><span class="nav-text">自定义设置个人帐户文字显示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B2%A1%E6%9C%89%E6%9B%B4%E6%97%A9%E7%9A%84%E9%80%9A%E7%9F%A5%E6%96%87%E5%AD%97%E6%98%BE%E7%A4%BA"><span class="nav-text">自定义没有更早的通知文字显示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%94%B5%E6%B1%A0%E5%81%A5%E5%BA%B7%E6%9C%80%E5%A4%A7%E5%AE%B9%E9%87%8F%E5%80%BC"><span class="nav-text">自定义电池健康最大容量值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%94%81%E5%B1%8F%E6%89%8B%E7%94%B5%E7%AD%92%E5%92%8C%E7%9B%B8%E6%9C%BA%E5%9B%BE%E6%A0%87"><span class="nav-text">自定义锁屏手电筒和相机图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E5%88%B6%E4%B8%AD%E5%BF%83%E8%BF%9E%E6%8E%A5%E6%8C%89%E9%92%AE"><span class="nav-text">自定义控制中心连接按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%97%B6%E9%92%9F%E5%9B%BE%E6%A0%87"><span class="nav-text">自定义时钟图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%80%9A%E7%9F%A5%E6%A8%AA%E5%B9%85%E9%98%B4%E5%BD%B1"><span class="nav-text">自定义通知横幅阴影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B3%BB%E7%BB%9F%E9%BB%98%E8%AE%A4%E8%8B%B1%E6%96%87%E9%94%AE%E7%9B%98%E7%A9%BA%E6%A0%BC%E9%94%AE"><span class="nav-text">自定义系统默认英文键盘空格键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E5%88%B6%E4%B8%AD%E5%BF%83"><span class="nav-text">自定义控制中心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93"><span class="nav-text">自定义字体</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FileSwitcherPro"><span class="nav-text">FileSwitcherPro</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2App%E6%8F%90%E7%A4%BA%E9%9F%B3"><span class="nav-text">更换App提示音</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2App-UI"><span class="nav-text">更换App UI</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Santander"><span class="nav-text">Santander</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E5%88%86%E8%BE%A8%E7%8E%87"><span class="nav-text">修改分辨率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%A3%B0%E9%9F%B3%E6%9B%BF%E6%8D%A2"><span class="nav-text">系统声音替换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%8F%E6%98%8E%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-text">透明文件夹</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96"><span class="nav-text">主题美化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7"><span class="nav-text">工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="nav-text">通用工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Trollstore%E4%B8%93%E7%94%A8"><span class="nav-text">Trollstore专用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KFD%E4%B8%93%E7%94%A8"><span class="nav-text">KFD专用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TrollRestore%E4%B8%93%E7%94%A8"><span class="nav-text">TrollRestore专用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E7%9C%9F%E7%BD%91%E9%80%9F%E6%82%AC%E6%B5%AE%E7%AA%97%EF%BC%8C%E6%97%A0%E9%9C%80%E8%B6%8A%E7%8B%B1"><span class="nav-text">iOS 系统，真网速悬浮窗，无需越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B6%85%E7%88%BD%EF%BC%81iOS-16-1-2-%E6%9B%B4%E6%8D%A2-App-%E6%8F%90%E7%A4%BA%E9%9F%B3%EF%BC%8C%E4%B8%8D%E7%94%A8%E8%B6%8A%E7%8B%B1"><span class="nav-text">超爽！iOS 16.1.2 更换 App 提示音，不用越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9C%9F%E5%A5%BD%E7%8E%A9%EF%BC%8C%E5%AE%9E%E7%8E%B0-iOS-16-1-2-%E9%80%8F%E6%98%8E%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%8C%E4%B8%8D%E7%94%A8%E8%B6%8A%E7%8B%B1"><span class="nav-text">真好玩，实现 iOS 16.1.2 透明文件夹，不用越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-16-5-Misaka-%E6%9B%BF%E4%BB%A3%E5%93%81%EF%BC%8C%E6%8F%92%E4%BB%B6%E6%BA%90%E9%80%9A%E7%94%A8"><span class="nav-text">iOS 16.5 Misaka 替代品，插件源通用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-16-5-%E7%B3%BB%E7%BB%9F%EF%BC%8CPureKFD-%E6%8F%92%E4%BB%B6%E5%95%86%E5%BA%97%EF%BC%8C%E6%97%A0%E9%9C%80%E8%B6%8A%E7%8B%B1%EF%BC%8C%E6%94%AF%E6%8C%81%E8%BF%99%E4%BA%9B%E7%B3%BB%E7%BB%9F"><span class="nav-text">iOS 16.5 系统，PureKFD 插件商店，无需越狱，支持这些系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-14-3-PlankFilza-%E6%9D%A5%E4%BA%86%EF%BC%8C%E5%85%8D%E8%B6%8A%E7%8B%B1%E4%BF%AE%E6%94%B9-X-%E6%89%8B%E5%8A%BF"><span class="nav-text">iOS 14.3 PlankFilza 来了，免越狱修改 X 手势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E6%B1%A0%E7%99%BE%E5%88%86%E6%AF%94%E6%98%BE%E7%A4%BA%EF%BC%8C%E7%BB%88%E4%BA%8E%E6%9D%A5%E4%BA%86%EF%BC%8C%E6%97%A0%E9%9C%80%E8%B6%8A%E7%8B%B1"><span class="nav-text">电池百分比显示，终于来了，无需越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E6%AC%BE%E7%94%B5%E6%B1%A0%E7%99%BE%E5%88%86%E6%AF%94%E6%98%BE%E7%A4%BA%EF%BC%8C%E7%8A%B6%E6%80%81%E6%A0%8F%E6%98%BE%E7%A4%BA%EF%BC%8C%E5%8A%9F%E8%83%BD%E4%B8%B0%E5%AF%8C%EF%BC%8C%E6%97%A0%E9%9C%80%E8%B6%8A%E7%8B%B1"><span class="nav-text">新款电池百分比显示，状态栏显示，功能丰富，无需越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IPA-%E6%8F%90%E5%8F%96%E5%99%A8%EF%BC%8C%E5%AE%8C%E5%85%A8%E5%85%8D%E8%B4%B9%EF%BC%8C%E6%97%A0%E9%9C%80%E8%B6%8A%E7%8B%B1"><span class="nav-text">IPA 提取器，完全免费，无需越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E6%89%8B%E6%9C%BA%E6%80%A7%E8%83%BD-HUD%EF%BC%8C%E6%97%A0%E9%9C%80%E8%B6%8A%E7%8B%B1"><span class="nav-text">iOS 系统，手机性能 HUD，无需越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F%E5%A2%99%E7%BA%B8%EF%BC%8C%E6%97%A0%E9%9C%80%E8%B6%8A%E7%8B%B1"><span class="nav-text">iOS 系统，自定义外观模式墙纸，无需越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E9%80%9A%E7%9F%A5%E5%8F%91%E5%85%89%EF%BC%8C%E6%97%A0%E9%9C%80%E8%B6%8A%E7%8B%B1"><span class="nav-text">iOS 系统，通知发光，无需越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E5%88%B6%E4%B8%AD%E5%BF%83%EF%BC%8C%E6%97%A0%E9%9C%80%E8%B6%8A%E7%8B%B1"><span class="nav-text">iOS 系统，自定义控制中心，无需越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-16-1-2-DirtyCow-%E5%B7%B2%E5%8F%91%E5%B8%83%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%AE%9E%E7%8E%B0%E4%B8%80%E9%94%AE%E6%9B%BF%E6%8D%A2"><span class="nav-text">iOS 16.1.2 DirtyCow 已发布，可以实现一键替换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E5%8F%91%E5%B8%83%EF%BC%8C%E6%97%A0%E9%9C%80%E8%B6%8A%E7%8B%B1"><span class="nav-text">iOS 系统，文件管理器发布，无需越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A5%B6%E7%89%9B%E7%B3%BB%E5%88%97%E5%AE%98%E6%96%B9%E7%BD%91%E7%AB%99%EF%BC%8C%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%BA%BF%EF%BC%8C%E8%AF%B7%E6%94%B6%E8%97%8F"><span class="nav-text">奶牛系列官方网站，正式上线，请收藏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%90%AC%E6%AD%8C%E8%87%AA%E7%94%B1%EF%BC%8C%E9%80%9F%E5%BA%A6"><span class="nav-text">iOS 系统，听歌自由，速度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#misakaX%EF%BC%8C%E6%9B%B4%E6%96%B01-7%EF%BC%8C%E6%94%AF%E6%8C%81-iOS-16"><span class="nav-text">misakaX，更新1.7，支持 iOS 16</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%B7%A5%E5%85%B7%EF%BC%8C%E9%87%91%E5%9D%97"><span class="nav-text">新工具，金块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E-MacDirtyCow%EF%BC%8C%E6%94%AF%E6%8C%81%E7%9A%84%E7%B3%BB%E7%BB%9F%E8%8C%83%E5%9B%B4%EF%BC%8C%E5%BF%85%E7%9C%8B"><span class="nav-text">关于 MacDirtyCow，支持的系统范围，必看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FilzaEscaped15-%E6%9D%A5%E4%BA%86%EF%BC%8CiOS-%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%8C%E6%97%A0%E9%9C%80%E8%B6%8A%E7%8B%B1"><span class="nav-text">FilzaEscaped15 来了，iOS 系统文件管理器，无需越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E8%87%AA%E5%AE%9A%E4%B9%894G-x2F-5G%EF%BC%8C%E6%97%A0%E9%9C%80%E8%B6%8A%E7%8B%B1%EF%BC%8C%E9%9D%9E%E5%B8%B8%E7%AE%80%E5%8D%95"><span class="nav-text">iOS 系统，自定义4G&#x2F;5G，无需越狱，非常简单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BB%91%E7%A7%91%E6%8A%80%EF%BC%8C%E8%80%81%E6%AC%BE-iPhone-%E6%BF%80%E6%B4%BB%E7%81%B5%E5%8A%A8%E5%B2%9B%EF%BC%8C%E6%97%A0%E9%9C%80%E8%B6%8A%E7%8B%B1%EF%BC%8C%E6%94%AF%E6%8C%81%E8%BF%99%E4%BA%9B%E7%B3%BB%E7%BB%9F"><span class="nav-text">黑科技，老款 iPhone 激活灵动岛，无需越狱，支持这些系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%BB%E6%9D%BE%E7%AD%BE-%EF%BC%8C%E6%97%A0%E9%9C%80%E8%AF%81%E4%B9%A6%EF%BC%8C%E6%B0%B8%E4%B9%85%E7%AD%BE%E5%90%8D%EF%BC%8C%E6%B0%B8%E4%B8%8D%E8%BF%87%E6%9C%9F%EF%BC%8C%E6%97%A0%E9%9C%80%E8%B6%8A%E7%8B%B1"><span class="nav-text">轻松签+，无需证书，永久签名，永不过期，无需越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E6%B0%B8%E4%B9%85%E7%AD%BE%E5%90%8D%EF%BC%8C%E6%B0%B8%E4%B8%8D%E8%BF%87%E6%9C%9F%EF%BC%8C%E6%97%A0%E9%9C%80%E8%B6%8A%E7%8B%B1%EF%BC%8C%E5%AE%8C%E5%85%A8%E5%85%8D%E8%B4%B9%EF%BC%8C%E9%80%9F%E5%BA%A6"><span class="nav-text">iOS 永久签名，永不过期，无需越狱，完全免费，速度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FileSwitcherPro%EF%BC%8C%E5%A4%9A%E5%8A%9F%E8%83%BD%E4%BF%AE%E6%94%B9%E5%99%A8%EF%BC%88%E4%B8%80%EF%BC%89"><span class="nav-text">FileSwitcherPro，多功能修改器（一）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FileSwitcherPro%EF%BC%8C%E5%A4%9A%E5%8A%9F%E8%83%BD%E4%BF%AE%E6%94%B9%E5%99%A8%EF%BC%88%E4%BA%8C%EF%BC%89%E5%A6%82%E4%BD%95%E6%9B%BF%E6%8D%A2%E6%96%87%E4%BB%B6"><span class="nav-text">FileSwitcherPro，多功能修改器（二）如何替换文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Since-we-don%E2%80%99t-have-iCleaner-Pro-for-TrollStore-it%E2%80%99s-possible-to-delete-some-large-cache-files-from-Filza-without-harm-to-the-system"><span class="nav-text">Since we don’t have iCleaner Pro for TrollStore, it’s possible to delete some large cache files from Filza without harm to the system.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E4%B8%80%E9%94%AE%E6%9B%B4%E6%8D%A2%E5%AD%97%E4%BD%93%EF%BC%8C%E5%A4%A7%E7%A5%9E%E6%8E%A5%E6%89%8B%EF%BC%8C%E6%96%B0%E7%89%88%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%EF%BC%8C%E5%BF%85%E7%9C%8B"><span class="nav-text">iOS 系统，一键更换字体，大神接手，新版下载地址，必看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B0%8F%E5%85%83%E7%B4%A0%EF%BC%8C%E4%B8%AA%E6%80%A7%E5%8D%81%E8%B6%B3"><span class="nav-text">iOS 系统，自定义小元素，个性十足</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E9%94%81%E5%B1%8F%E6%89%8B%E7%94%B5%E7%AD%92%E5%92%8C%E7%9B%B8%E6%9C%BA%EF%BC%8C%E7%AE%80%E5%8D%95"><span class="nav-text">iOS 系统，自定义锁屏手电筒和相机，简单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E6%A1%8C%E9%9D%A2-App-%E5%BF%AB%E9%80%9F%E7%A7%BB%E5%8A%A8%E5%88%B0%E6%8C%87%E5%AE%9A%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-text">iOS 系统，桌面 App 快速移动到指定文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%85%A8%E6%96%B0%E5%85%A8%E5%B1%80%E6%89%8B%E5%8A%BF%E7%A5%9E%E5%99%A8%EF%BC%8C%E5%AE%8C%E5%85%A8%E5%85%8D%E8%B4%B9"><span class="nav-text">iOS 系统，全新全局手势神器，完全免费</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-16-5-%E7%B3%BB%E7%BB%9F%EF%BC%8CSimpleKFD-%E5%B7%A5%E5%85%B7%E7%AE%B1%EF%BC%8C%E4%B8%80%E9%94%AE%E7%9B%91%E7%9D%A3%EF%BC%8C%E4%B8%80%E9%94%AE%E7%81%B5%E5%8A%A8%E5%B2%9B"><span class="nav-text">iOS 16.5 系统，SimpleKFD 工具箱，一键监督，一键灵动岛</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A5%BD%E4%B8%9C%E8%A5%BF%EF%BC%8CiOS-14-%E5%88%B6%E4%BD%9C%E6%B0%B8%E4%B9%85%E7%89%88%E5%BA%94%E7%94%A8%EF%BC%8C%E4%BB%85%E9%9C%80%E5%87%A0%E7%A7%92%E6%90%9E%E5%AE%9A"><span class="nav-text">好东西，iOS 14 制作永久版应用，仅需几秒搞定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A5%BD%E4%B8%9C%E8%A5%BF%EF%BC%8CiOS-16-1-2-Files-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%8C%E7%A1%AE%E5%AE%9E%E6%9C%89%E6%95%88"><span class="nav-text">好东西，iOS 16.1.2 Files 文件管理器，确实有效</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%9B%E6%89%B9%EF%BC%81iOS-16-5-%E4%BF%AE%E6%94%B9%E8%A7%92%E6%A0%87%E5%B7%B2%E5%8F%91%E5%B8%83%EF%BC%8C%E5%8F%AF%E6%94%B9%E9%A2%9C%E8%89%B2"><span class="nav-text">牛批！iOS 16.5 修改角标已发布，可改颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%B7%A5%E5%85%B7%EF%BC%8CBlossom-%EF%BC%81"><span class="nav-text">新工具，Blossom ！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A9-iPhone-%E5%86%8D%E6%88%98%E4%B8%89%E5%B9%B4%EF%BC%81"><span class="nav-text">让 iPhone 再战三年！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E7%8E%A9%E6%B3%95%EF%BC%8C%E5%8A%A0%E9%80%9F"><span class="nav-text">新玩法，加速</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E9%94%AE%E9%87%8D%E5%90%AF-%EF%BC%81"><span class="nav-text">一键重启 ！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A6%81%E6%AD%A2%E6%91%87%E4%B8%80%E6%91%87%EF%BC%81"><span class="nav-text">禁止摇一摇！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%89%E5%8C%96%EF%BC%8C%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87"><span class="nav-text">汉化，简体中文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E9%9F%B3%E4%B9%90%EF%BC%8C%E9%80%9F%E5%BA%A6"><span class="nav-text">iOS 系统，音乐，速度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A5%BD%E4%B8%9C%E8%A5%BF%EF%BC%81iOS-17-0-%E5%B7%A8%E9%AD%94%E6%9F%A5%E7%94%B5%E6%B1%A0%EF%BC%8C%E8%AF%A6%E7%BB%86%E8%AE%B0%E5%BD%95%E5%BE%AA%E7%8E%AF%E4%BF%A1%E6%81%AF"><span class="nav-text">好东西！iOS 17.0 巨魔查电池，详细记录循环信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%AA%E8%A3%85%EF%BC%8C%E5%BC%80%E5%90%AF-CallKit%EF%BC%81"><span class="nav-text">伪装，开启 CallKit！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%85%E9%99%A4%E6%AE%8B%E7%95%99-%EF%BC%81"><span class="nav-text">清除残留 ！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%B7%A5%E5%85%B7%EF%BC%8C%E6%8A%A2%E9%B2%9C"><span class="nav-text">新工具，抢鲜</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#opa334-%E5%8F%91%E5%B8%83%E6%96%B0%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%97%B6%E9%97%B4%E7%82%B8%E5%BC%B9-%EF%BC%81"><span class="nav-text">opa334 发布新工具：时间炸弹 ！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UI-%E9%80%9F%E5%BA%A6%EF%BC%8C%E8%AE%A9-iPhone-%E5%86%8D%E6%88%98%E4%B8%89%E5%B9%B4%EF%BC%81"><span class="nav-text">UI 速度，让 iPhone 再战三年！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A5%BD%E4%B8%9C%E8%A5%BF%EF%BC%81iOS-17-0-%E6%96%B0%E7%9A%84%E5%B7%A8%E9%AD%94%E5%88%86%E5%B1%8F%E5%B7%A5%E5%85%B7%EF%BC%8C%E7%A8%B3%E5%AE%9A%E6%80%A7%E8%B6%85%E5%BC%BA"><span class="nav-text">好东西！iOS 17.0 新的巨魔分屏工具，稳定性超强</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

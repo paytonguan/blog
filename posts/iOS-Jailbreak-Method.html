@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="iOS越狱方法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS越狱方法">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/iOS-Jailbreak-Method.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="iOS越狱方法。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/iOS-Jailbreak-Method/topic.jpg">
+<meta property="article:published_time" content="2023-11-10T05:33:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.567Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/iOS-Jailbreak-Method/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/iOS-Jailbreak-Method.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>iOS越狱方法 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/iOS-Jailbreak-Method.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          iOS越狱方法
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-10 13:33:29" itemprop="dateCreated datePublished" datetime="2023-11-10T13:33:29+08:00">2023-11-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>11k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>10 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/iOS-Jailbreak-Method/topic.jpg"></p>
+<p>iOS越狱方法。</p>
+<span id="more"></span>
+
+<h1 id="相关知识"><a href="#相关知识" class="headerlink" title="相关知识"></a>相关知识</h1><p>越狱工具适用范围如下。</p>
+<p>有根越狱指的是拥有系统根目录权限，系统文件可以读取和写入。无根越狱指的是没有系统根目录权限，系统文件只能读取而无法写入。</p>
+<p>完美越狱指的是设备重启后依旧是越狱状态。不完美越狱指的是设备重启后会恢复到未越狱环境，需要使用越狱工具重新激活环境。iOS 9.3以后均为不完美越狱。</p>
+<table>
+<thead>
+<tr>
+<th>应用</th>
+<th>基板</th>
+<th>设备要求</th>
+<th>系统范围</th>
+<th>有根&#x2F;无根越狱</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Dopamine</td>
+<td></td>
+<td>A12-A15</td>
+<td>15.0-15.4.1</td>
+<td>无根</td>
+</tr>
+<tr>
+<td>XinaA15</td>
+<td></td>
+<td>A12-A15</td>
+<td>15.0-15.1.1</td>
+<td>无根</td>
+</tr>
+<tr>
+<td>SaiGon</td>
+<td></td>
+<td>A9-A11</td>
+<td>15.0-15.8.2</td>
+<td>无根</td>
+</tr>
+<tr>
+<td>Def1nit3lyN0tAJa1lbr3akTool</td>
+<td></td>
+<td>iPhone X</td>
+<td>15.7 &amp; 16.5</td>
+<td>无根</td>
+</tr>
+<tr>
+<td>NekoJB</td>
+<td></td>
+<td>A9-A11</td>
+<td>15.0-15.7.6</td>
+<td></td>
+</tr>
+<tr>
+<td>Palera1n</td>
+<td></td>
+<td>A8-A11</td>
+<td>15.0-16.4.1</td>
+<td></td>
+</tr>
+<tr>
+<td>Checkra1n</td>
+<td>Substrate</td>
+<td>A7-A11</td>
+<td>12.3-14+</td>
+<td></td>
+</tr>
+<tr>
+<td>Taurine</td>
+<td></td>
+<td></td>
+<td>14+</td>
+<td></td>
+</tr>
+<tr>
+<td>Odyssey</td>
+<td></td>
+<td>A9-A13</td>
+<td>13.0-13.7</td>
+<td></td>
+</tr>
+<tr>
+<td>Unc0ver</td>
+<td>Substitute</td>
+<td>A7-A13</td>
+<td>12.0-12.2，12.4-14.3，14.3-14.5.1，14.6-14.8</td>
+<td></td>
+</tr>
+<tr>
+<td>Chimera</td>
+<td>Substitute</td>
+<td>64位设备</td>
+<td>12.0-12.2，12.4</td>
+<td></td>
+</tr>
+<tr>
+<td>Electra</td>
+<td>Substitute</td>
+<td>64位设备</td>
+<td>11.0-11.4.1</td>
+<td></td>
+</tr>
+<tr>
+<td>Th0r</td>
+<td></td>
+<td>64位设备</td>
+<td>11.2-11.3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>DoubleH3lix</td>
+<td></td>
+<td>64位设备</td>
+<td>10.0-10.3.3</td>
+<td></td>
+</tr>
+<tr>
+<td>Meridian</td>
+<td></td>
+<td>64位设备</td>
+<td>10.0-10.3.3</td>
+<td></td>
+</tr>
+<tr>
+<td>Socket</td>
+<td></td>
+<td>32位设备</td>
+<td>10.x</td>
+<td></td>
+</tr>
+<tr>
+<td>H3lix</td>
+<td></td>
+<td>32位设备</td>
+<td>10.0-10.3.3</td>
+<td></td>
+</tr>
+<tr>
+<td>Yalu</td>
+<td></td>
+<td>64位设备</td>
+<td>10.1-10.2</td>
+<td></td>
+</tr>
+<tr>
+<td>Phoenix</td>
+<td></td>
+<td>32位设备</td>
+<td>9.1-9.3.6</td>
+<td></td>
+</tr>
+<tr>
+<td>kok3shi9</td>
+<td></td>
+<td>64位设备</td>
+<td>9.2-9.3.5</td>
+<td></td>
+</tr>
+<tr>
+<td>叉叉助手</td>
+<td></td>
+<td>64位设备</td>
+<td>9.2-9.3.3</td>
+<td></td>
+</tr>
+<tr>
+<td>Jailbrea me</td>
+<td></td>
+<td>32位设备</td>
+<td>9.1-9.3.4</td>
+<td></td>
+</tr>
+<tr>
+<td>wtfis</td>
+<td></td>
+<td>64位设备</td>
+<td>8.0-8.4.1</td>
+<td></td>
+</tr>
+<tr>
+<td>EverPwnage</td>
+<td></td>
+<td>32位设备</td>
+<td>8.0-9.0.2</td>
+<td></td>
+</tr>
+<tr>
+<td>EtasonJB</td>
+<td></td>
+<td>32位设备</td>
+<td>8.0-8.4.1</td>
+<td></td>
+</tr>
+<tr>
+<td>Pangu</td>
+<td></td>
+<td></td>
+<td>7.0-7.1.2</td>
+<td></td>
+</tr>
+<tr>
+<td>P0sixspwn</td>
+<td></td>
+<td></td>
+<td>6.0-6.1.6</td>
+<td></td>
+</tr>
+<tr>
+<td>RedSn0w</td>
+<td></td>
+<td></td>
+<td>5.0-5.1.1</td>
+<td></td>
+</tr>
+<tr>
+<td>Greenp0sion</td>
+<td></td>
+<td></td>
+<td>4.0-4.3.5</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>低版本的越狱可以用爱思助手。</p>
+<p>各种系统版本的安装方法可参照以下链接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cydia-app.com/</span><br></pre></td></tr></table></figure>
+
+<p>可在手机上打开以下链接安装各越狱工具。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://apporanges.lanzoui.com/b0cfcmzwj</span><br></pre></td></tr></table></figure>
+
+<h1 id="Dopamine"><a href="#Dopamine" class="headerlink" title="Dopamine"></a>Dopamine</h1><h2 id="应用安装"><a href="#应用安装" class="headerlink" title="应用安装"></a>应用安装</h2><p>越狱后需要在Sileo安装Ellekit deb、PreferenceLoader-Rootless、AltList、libSandy、CCSupport、uikittools。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://ellekit.space/dopamine/</span><br><span class="line">https://github.com/opa334/Dopamine</span><br></pre></td></tr></table></figure>
+
+<h2 id="清除越狱"><a href="#清除越狱" class="headerlink" title="清除越狱"></a>清除越狱</h2><p>打开Filza，进入Private&#x2F;Preboot，打开以jb为名的文件夹，确认内部有一个名为Proucursus的文件夹，且该文件夹内部有fugu15max的相关文件。回到上一层并删除jb为名的文件夹。返回根目录，删除var&#x2F;jb。</p>
+<p>完成后打开TrollStore，进入Settings，点击Rebuild Icon Cache即可。</p>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/5yzh14U7xC3Y0yVtVwdbIg</span><br></pre></td></tr></table></figure>
+
+<h3 id="越狱后打开APP闪退"><a href="#越狱后打开APP闪退" class="headerlink" title="越狱后打开APP闪退"></a>越狱后打开APP闪退</h3><p>需要重启SpringBoard。打开TrollStore，进入Settings，点击Respring即可。</p>
+<h1 id="XinaA15"><a href="#XinaA15" class="headerlink" title="XinaA15"></a>XinaA15</h1><h2 id="应用安装-1"><a href="#应用安装-1" class="headerlink" title="应用安装"></a>应用安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">https://zhuxinlang.github.io/</span><br><span class="line">https://xina.ss03.cn/</span><br><span class="line">https://apt.xina.vip/</span><br><span class="line">https://github.com/NotDarkn/XinaA15</span><br></pre></td></tr></table></figure>
+
+<h2 id="应用商店"><a href="#应用商店" class="headerlink" title="应用商店"></a>应用商店</h2><p>可使用Sileo-Xina。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 官方版</span><br><span class="line">https://github.com/Sileo/Sileo/releases/tag/xina-beta-5</span><br><span class="line"></span><br><span class="line"># 修改版</span><br><span class="line"># 全面汉化，支持安装插件后注销、全部忽略更新</span><br><span class="line">https://github.com/HuChundong/Sileo</span><br></pre></td></tr></table></figure>
+
+<p>也可用Saily。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/SailyTeam/Saily/releases</span><br></pre></td></tr></table></figure>
+
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><h3 id="Xina清除35条更新"><a href="#Xina清除35条更新" class="headerlink" title="Xina清除35条更新"></a>Xina清除35条更新</h3><p>安装XinaA15后Sileo会出现35个更新。可通过安装该插件删除Procurs自带源以消除提示。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://apt.ss03.cn/</span><br></pre></td></tr></table></figure>
+
+<h3 id="MilkyWay2"><a href="#MilkyWay2" class="headerlink" title="MilkyWay2"></a>MilkyWay2</h3><p>由于未添加iOS 15支持，需要安装MilkyWay2和MilkyWay2-iOS14Fix。或者安装lenglengyu源的版本即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.lenglengyu.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="更换字体"><a href="#更换字体" class="headerlink" title="更换字体"></a>更换字体</h3><p>添加以下源，搜索Xina即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://apt.ss03.cn/</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="手动安装Deb插件包"><a href="#手动安装Deb插件包" class="headerlink" title="手动安装Deb插件包"></a>手动安装Deb插件包</h3><p>打开XinaA15内置文件管理器，长按点击Deb安装即可。</p>
+<h2 id="常见问题-1"><a href="#常见问题-1" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="电脑端无法访问手机文件"><a href="#电脑端无法访问手机文件" class="headerlink" title="电脑端无法访问手机文件"></a>电脑端无法访问手机文件</h3><p>安装Apple File Conduit”2”插件后爱思助手可能仍然无法访问手机文件。可以打开爱思助手，选择工具箱-SSH通道-SCP客户端，即可访问。</p>
+<p>若需要在电脑端给手机安装插件，则将插件通过SCP客户端复制到手机端后，点击SCP客户端左上角的终端，输入以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dpkg -i [deb插件名称]</span><br><span class="line">uicache —all</span><br><span class="line">killall SpringBoard</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装应用级插件出现白图标"><a href="#安装应用级插件出现白图标" class="headerlink" title="安装应用级插件出现白图标"></a>安装应用级插件出现白图标</h3><p>安装XinalConFix插件，然后重新安装XinaA15工具，激活越狱。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://opa334.github.io/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sileo刷新源出现522错误"><a href="#Sileo刷新源出现522错误" class="headerlink" title="Sileo刷新源出现522错误"></a>Sileo刷新源出现522错误</h3><p>在Sileo越狱商店精选页面上，点击右上角头像，下拉找到缓存，直接点击两下，然后点击语音，开启使用系统语言，再点应用即可。</p>
+<h1 id="SaiGon"><a href="#SaiGon" class="headerlink" title="SaiGon"></a>SaiGon</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/H0aHuynh/SaiGon15x/releases</span><br></pre></td></tr></table></figure>
+
+<h1 id="Def1nit3lyN0tAJa1lbr3akTool"><a href="#Def1nit3lyN0tAJa1lbr3akTool" class="headerlink" title="Def1nit3lyN0tAJa1lbr3akTool"></a>Def1nit3lyN0tAJa1lbr3akTool</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/KpwnZ/Def1nit3lyN0tAJa1lbr3akTool</span><br></pre></td></tr></table></figure>
+
+<h1 id="NekoJB"><a href="#NekoJB" class="headerlink" title="NekoJB"></a>NekoJB</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://nekojb.hhls.xyz/</span><br></pre></td></tr></table></figure>
+
+<h1 id="Unc0ver"><a href="#Unc0ver" class="headerlink" title="Unc0ver"></a>Unc0ver</h1><p>Unc0ver版本与机型和系统的对应表格如下。</p>
+<table>
+<thead>
+<tr>
+<th>系统</th>
+<th>支持机型</th>
+<th>可用unc0ver版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>iOS 13.0-13.7</td>
+<td>A9-A13</td>
+<td>5.0.0-6.0.0</td>
+</tr>
+<tr>
+<td>iOS 14.0-14.3</td>
+<td>A9-A14</td>
+<td>6.0.0-6.2.0</td>
+</tr>
+<tr>
+<td>iOS 14.4-14.5.1</td>
+<td>A12及以上</td>
+<td>7.0.0-7.0.2</td>
+</tr>
+<tr>
+<td>iOS 14.6-14.8</td>
+<td>A12-A13</td>
+<td>8.0.0-8.0.2</td>
+</tr>
+</tbody></table>
+<h2 id="应用安装-2"><a href="#应用安装-2" class="headerlink" title="应用安装"></a>应用安装</h2><h3 id="普通安装"><a href="#普通安装" class="headerlink" title="普通安装"></a>普通安装</h3><p>官网如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://unc0ver.dev/</span><br></pre></td></tr></table></figure>
+
+<p>按照掉签IPA方法进行配置，然后打开以下链接进行安装。如果安装后无法打开，则尝试从电脑端通过AltStore自签。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://www.lanzous.com/tp/icxyqaf</span><br><span class="line">https://www.lanzous.com/icxyqaf?p</span><br></pre></td></tr></table></figure>
+
+<p>打开安装好的unc0ver并进行安装。越狱完成后打开Cydia并刷新，更新所有的依赖后安装PreferenceLoader、AppList、RocketBootstrap这三个插件。</p>
+<p>注意，如果需要越狱的系统为14.3-14.5.1，且为iPhone XS（A12）及更新机型，则需要先安装AltStore，然后将unc0ver的安装包在手机上通过分享方式导入到AltStore进行自签。此时会利用Fugu14，使安装的unc0ver在重启后也能打开。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/LinusHenze/Fugu14</span><br></pre></td></tr></table></figure>
+
+<h3 id="永不过期版本"><a href="#永不过期版本" class="headerlink" title="永不过期版本"></a>永不过期版本</h3><p>仅支持iOS 14.0-15.4.1系统。</p>
+<p>使用Unc0ver越狱后，才能安装永不过期版本。添加以下源后搜索unc0ver安装，注意需要选择正确的版本，可选择<code>6.0.2</code>、<code>6.1.1</code>、<code>6.1.2</code>、<code>6.2.0</code>、<code>8.0.2</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cydia.ichitaso.com/</span><br></pre></td></tr></table></figure>
+
+<p>也可下载以下deb后，通过Filza安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://apporanges.lanzoub.com/b0cfc799a</span><br><span class="line">https://www.aliyundrive.com/s/hzmbkEx8YaF</span><br><span class="line">https://pan.baidu.com/s/1AT6vYKDyPmawrW_6Pp3gQA?pwd=ybhk（提取码 / ybhk）</span><br></pre></td></tr></table></figure>
+
+<h2 id="Sileo商店"><a href="#Sileo商店" class="headerlink" title="Sileo商店"></a>Sileo商店</h2><p>添加以下源并安装其中的Sileo Prep（checkra1n）。完成后打开Sileo刷新，找到Sileo源，找到Cydia Installer并安装，即可使Sileo和Cydia共存。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://repo.getsileo.app</span><br></pre></td></tr></table></figure>
+
+<h2 id="清除越狱-1"><a href="#清除越狱-1" class="headerlink" title="清除越狱"></a>清除越狱</h2><p>打开Unc0ver，在设置中打开Restore RootFS，回到主页点击按钮即可。</p>
+<h2 id="常见问题-2"><a href="#常见问题-2" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="进度条卡2或9"><a href="#进度条卡2或9" class="headerlink" title="进度条卡2或9"></a>进度条卡2或9</h3><p>换其他签名版本的unc0ver尝试。</p>
+<h3 id="进度条卡25"><a href="#进度条卡25" class="headerlink" title="进度条卡25"></a>进度条卡25</h3><p>unc0ver签名有问题，需重新进行安装unc0ver。</p>
+<h3 id="进度条卡31"><a href="#进度条卡31" class="headerlink" title="进度条卡31"></a>进度条卡31</h3><p>unc0ver的广告，直接往下拉即可，不要点进去广告详情。</p>
+<h1 id="Odyssey"><a href="#Odyssey" class="headerlink" title="Odyssey"></a>Odyssey</h1><p>适用于iOS 13.0-13.5，A9-A13设备。下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://theodyssey.dev/</span><br></pre></td></tr></table></figure>
+
+<h2 id="常见问题-3"><a href="#常见问题-3" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="第二次及以后出现无限黑屏-x2F-菊花并重启"><a href="#第二次及以后出现无限黑屏-x2F-菊花并重启" class="headerlink" title="第二次及以后出现无限黑屏&#x2F;菊花并重启"></a>第二次及以后出现无限黑屏&#x2F;菊花并重启</h3><p>部分插件的冲突问题，导致引导RSD的时候出现卡滞。</p>
+<p>重启设备，在Odyssey关闭Enable Tweaks后进行激活越狱。</p>
+<p>越狱后打开Sileo，添加嘻哈源，搜索Odyssey Activation并安装即可，该方法不会有权限错误。也可打开NewTerm并执行以下命令，但有可能会出现权限错误。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm /.disable_tweakinject &amp;&amp; killall backboardd</span><br></pre></td></tr></table></figure>
+
+<h3 id="提示ERR-JAILBREAK"><a href="#提示ERR-JAILBREAK" class="headerlink" title="提示ERR_JAILBREAK"></a>提示ERR_JAILBREAK</h3><p>打开Sileo并安装Odyssey Activation即可。或打开Fliza，找到根目录，删除.disable_tweakinject，然后点击&#x2F;usr&#x2F;bin&#x2F;killall，在bash后面输入killall backboard，回车后自动注销。</p>
+<h3 id="卡在三分之一处"><a href="#卡在三分之一处" class="headerlink" title="卡在三分之一处"></a>卡在三分之一处</h3><p>飞行模式不能下载数据，漏洞出现利用循环BUG。安装Odyssey以后，要重启设备后十五秒再点JailBreak。</p>
+<h3 id="卡在三分之三处"><a href="#卡在三分之三处" class="headerlink" title="卡在三分之三处"></a>卡在三分之三处</h3><p>漏洞出现利用循环BUG，或执行刷新图标缓存即UICache时卡住。重启设备后十五秒再点JailBreak即可。</p>
+<h1 id="Taurine"><a href="#Taurine" class="headerlink" title="Taurine"></a>Taurine</h1><h2 id="普通安装-1"><a href="#普通安装-1" class="headerlink" title="普通安装"></a>普通安装</h2><p>下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://taurine.app/</span><br></pre></td></tr></table></figure>
+
+<h2 id="永不过期版本-1"><a href="#永不过期版本-1" class="headerlink" title="永不过期版本"></a>永不过期版本</h2><p>需要用Taurine越狱后，才可以安装永不过期版本。添加以下源后，搜索taurine-permanent安装即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://repo.theodyssey.dev/</span><br></pre></td></tr></table></figure>
+
+<p>也可下载以下deb包，然后通过Filza安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://apporanges.lanzoub.com/b0cfc798j</span><br><span class="line">https://www.aliyundrive.com/s/oG2XUjBbEFA</span><br><span class="line">https://pan.baidu.com/s/1N9xFwIPtkVqx7G9AVGdHtQ?pwd=yzke（提取码 / yzke）</span><br></pre></td></tr></table></figure>
+
+<h1 id="Checkra1n"><a href="#Checkra1n" class="headerlink" title="Checkra1n"></a>Checkra1n</h1><h2 id="应用安装-3"><a href="#应用安装-3" class="headerlink" title="应用安装"></a>应用安装</h2><p>官网如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://checkra.in/</span><br></pre></td></tr></table></figure>
+
+<p>下载后连接手机，打开电脑上的应用，Start即可。如果提示iOS版本过高，则先让手机进入恢复模式，然后再越狱，也可点击Options，勾选Allow untested iOS&#x2F;iPadOS&#x2F;tvOS versions。</p>
+<h2 id="内核配置"><a href="#内核配置" class="headerlink" title="内核配置"></a>内核配置</h2><p>越狱后从以下内核选择一种进行安装。</p>
+<h3 id="OdysseyRa1n"><a href="#OdysseyRa1n" class="headerlink" title="OdysseyRa1n"></a>OdysseyRa1n</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>手机端安装好Checkra1n后不要打开。确保电脑已安装usbmuxd，若未安装可在终端输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// MacOS</span><br><span class="line">brew install usbmuxd</span><br><span class="line"></span><br><span class="line">// Linux</span><br><span class="line">sudo apt install libusbmuxd-tools</span><br></pre></td></tr></table></figure>
+
+<p>将手机连接到电脑后，在终端输入以下命令以执行安装脚本。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">curl http://chimera1n.aaronc.cn/CoolStar/chimera1n-deploy-linux-macos.sh | bash</span><br><span class="line"></span><br><span class="line">// 或</span><br><span class="line">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/coolstar/Odyssey-bootstrap/master/procursus-deploy-linux-macos.sh)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>更新完APT和Sileo以后，安装libhooker。打开CheckRa1n，点击Start重新引导。</p>
+<h4 id="Cydia商店"><a href="#Cydia商店" class="headerlink" title="Cydia商店"></a>Cydia商店</h4><p>在Sileo搜索Cydia Installer即可安装Cydia。若无此安装包，则添加以下源。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://apt.bingner.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Checkra1n-1"><a href="#Checkra1n-1" class="headerlink" title="Checkra1n"></a>Checkra1n</h3><p>打开手机上的checkra1n软件，安装Cydia即可。</p>
+<h3 id="Chimera1n"><a href="#Chimera1n" class="headerlink" title="Chimera1n"></a>Chimera1n</h3><h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><p>用爱思助手打开SSH通道，记住端口号。确保电脑已安装usbmuxd，安装方法同上。</p>
+<p>手机端安装好Checkra1n后不要打开。电脑端下载以下安装包，解压后编辑chimera1n.sh，将倒数两行的-p4444改为刚才记住的端口号，然后双击chimera1n.command安装，有错误提示可忽略。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://geekben.org/38.html</span><br></pre></td></tr></table></figure>
+
+<p>Sileo安装好后更新所有依赖，然后安装libhooker bootstrapper(checkm8)插件。插件安装好后打开checkra1n，点击Start重新引导。</p>
+<p>完成后安装以下插件。安装前需在软件包界面点击右上角日期后面的小横线，开启开发者模式。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Applist</span><br><span class="line">Preferenceloader</span><br><span class="line">rocketbootstrap</span><br><span class="line">substitute</span><br><span class="line">substrate compatibility layer</span><br><span class="line">tweak injector</span><br><span class="line">conditionalwifi5</span><br></pre></td></tr></table></figure>
+
+<p>至此安装完成。注意，使用过程中不要更新除Sileo外的应用商店的插件依赖，否则将无法进入系统。</p>
+<h4 id="Cydia商店-1"><a href="#Cydia商店-1" class="headerlink" title="Cydia商店"></a>Cydia商店</h4><p>安装Cydia会导致系统不稳定。</p>
+<p>Cydia安装包如下，注意不要装第四个deb。完成后安装<code>连个锤子</code>插件以修复权限。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.lanzous.com/i6nfksh</span><br></pre></td></tr></table></figure>
+
+<h2 id="清除越狱-2"><a href="#清除越狱-2" class="headerlink" title="清除越狱"></a>清除越狱</h2><p>在手机上打开Checkra1n，点击Restore System即可。</p>
+<h2 id="常见问题-4"><a href="#常见问题-4" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="20错误"><a href="#20错误" class="headerlink" title="-20错误"></a>-20错误</h3><p>尝试勾选Options里面的Safe Mode，然后重新越狱。</p>
+<p>若无效，则打开手机并按照正常流程用checkra1n进入DFU模式。软件显示进入DFU模式成功后，iPhone7&#x2F;8&#x2F;X按住音量上键和音量下键，其余老机型按住音量上键和Home键，持续按一段时间，手机进入诊断模式。</p>
+<p>打开以下链接，下载minaUSB并安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://appletech752.com/Downloads/minaUSB.pkg</span><br></pre></td></tr></table></figure>
+
+<p>打开终端输入以下命令，以使minaUSB能够打开。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br><span class="line">codesign -f -s - --deep /Applications/</span><br></pre></td></tr></table></figure>
+
+<p>打开minaUSB并点击Patch USB Restrict，提示完成后重新用checkra1n越狱即可。</p>
+<h1 id="Palera1n"><a href="#Palera1n" class="headerlink" title="Palera1n"></a>Palera1n</h1><p>可认为是Checkra1n的15.0及更新版本。使用Rootful类型即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">https://palera.in/</span><br><span class="line"></span><br><span class="line"># WinRa1n，Windows版</span><br><span class="line">https://onejailbreak.com/blog/winra1n-jailbreak/</span><br></pre></td></tr></table></figure>
+
+<h1 id="Doubleh3lix"><a href="#Doubleh3lix" class="headerlink" title="Doubleh3lix"></a>Doubleh3lix</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://doubleh3lix.tihmstar.net/</span><br></pre></td></tr></table></figure>
+
+<p>若越狱后重启设备导致越狱环境失效，可使用以下网站激活。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://totally.not.spyware.lol/</span><br></pre></td></tr></table></figure>
+
+<h1 id="Meridian"><a href="#Meridian" class="headerlink" title="Meridian"></a>Meridian</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://meridian.sparkes.zone/</span><br></pre></td></tr></table></figure>
+
+<p>若越狱后重启设备导致越狱环境失效，可使用以下网站激活。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://totally.not.spyware.lol/</span><br></pre></td></tr></table></figure>
+
+<h1 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/staturnzz/socket</span><br></pre></td></tr></table></figure>
+
+<h1 id="Phoenix"><a href="#Phoenix" class="headerlink" title="Phoenix"></a>Phoenix</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://phoenixpwn.com/</span><br></pre></td></tr></table></figure>
+
+<h1 id="kok3shi9"><a href="#kok3shi9" class="headerlink" title="kok3shi9"></a>kok3shi9</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://kok3shidoll.web.app/kok3shi9.html</span><br></pre></td></tr></table></figure>
+
+<h1 id="EverPwnage"><a href="#EverPwnage" class="headerlink" title="EverPwnage"></a>EverPwnage</h1><p>完美越狱。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/LukeZGD/EverPwnage</span><br></pre></td></tr></table></figure>
+
+<h1 id="wtfis"><a href="#wtfis" class="headerlink" title="wtfis"></a>wtfis</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/therealclarity/wtfis</span><br></pre></td></tr></table></figure>
+
+<h1 id="其它工具"><a href="#其它工具" class="headerlink" title="其它工具"></a>其它工具</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"># ap0110</span><br><span class="line"># iOS 10，重启后可自动越狱</span><br><span class="line">https://github.com/athenusdev/ap0110</span><br><span class="line"></span><br><span class="line"># ayakurume</span><br><span class="line"># iOS 15，A8-A11设备</span><br><span class="line">https://github.com/dora2-iOS/ayakurume</span><br><span class="line"></span><br><span class="line"># Betelguese</span><br><span class="line"># 利用checkra1n越狱得到SSH，然后安装Sileo越狱商店</span><br><span class="line">https://github.com/23Aaron/Betelguese</span><br><span class="line"></span><br><span class="line"># ra1ncloud</span><br><span class="line"># iOS 15</span><br><span class="line">https://github.com/iarchiveml/ra1ncloud</span><br><span class="line"></span><br><span class="line"># Th0r</span><br><span class="line">https://github.com/pwned4ever/Th0r_Freya</span><br><span class="line">https://github.com/pwned4ever/Th-r</span><br><span class="line"></span><br><span class="line"># Blizzard</span><br><span class="line">https://geosn0w.github.io/</span><br><span class="line">https://github.com/GeoSn0w/Blizzard-Jailbreak-9</span><br><span class="line">https://geosn0w.github.io/getblizzard/</span><br><span class="line">https://github.com/GeoSn0w/Blizzard-Jailbreak</span><br><span class="line"></span><br><span class="line"># ra1npoc</span><br><span class="line"># 用iPhone/iPad进行checkra1n越狱</span><br><span class="line">https://github.com/kok3shidoll/ra1npoc</span><br><span class="line"></span><br><span class="line"># openra1n</span><br><span class="line"># palera1n的Windows版本</span><br><span class="line">https://github.com/wh1te4ever/openra1n</span><br><span class="line"></span><br><span class="line"># Freya</span><br><span class="line"># 支持A11及以下设备，支持iOS15.0-15.1系统</span><br><span class="line">https://github.com/pwned4ever/Freya15</span><br><span class="line"></span><br><span class="line"># kfund</span><br><span class="line"># 支持iPhone 6s，iOS 15.1</span><br><span class="line">https://github.com/wh1te4ever/kfund</span><br><span class="line"></span><br><span class="line"># Houdini</span><br><span class="line"># 支持iOS 10-10.3.2，11-11.1.2</span><br><span class="line"># 非完整越狱</span><br><span class="line">https://github.com/ihorlaitan/houdini-public</span><br><span class="line"></span><br><span class="line"># Lyncis</span><br><span class="line"># 支持iOS 7.1.x，32位设备，完美越狱</span><br><span class="line">https://github.com/staturnzz/lyncis</span><br></pre></td></tr></table></figure>
+
+<h1 id="常见问题-5"><a href="#常见问题-5" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="Chimera1n玩游戏闪退"><a href="#Chimera1n玩游戏闪退" class="headerlink" title="Chimera1n玩游戏闪退"></a>Chimera1n玩游戏闪退</h2><p>删除OpenSSH即可。</p>
+<h2 id="Taurine安装dash命令组后插件安装正常但卸载出错"><a href="#Taurine安装dash命令组后插件安装正常但卸载出错" class="headerlink" title="Taurine安装dash命令组后插件安装正常但卸载出错"></a>Taurine安装dash命令组后插件安装正常但卸载出错</h2><p>主要表现为Sileo提示需要更新bash并强制安装dash。dash命令组不具备支持mv、cp等命令，因此需要切换回bash命令组。</p>
+<p>打开Filza，进入<code>/bin</code>目录并点击sh文件右侧的叹号，若路径为&#x2F;usr&#x2F;bin&#x2F;dash，则打开NewTerm并输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">su</span><br><span class="line"># 获取超级权限，密码为alpine</span><br><span class="line">rm -f /bin/sh &amp;&amp; ln -s /usr/bin/bash /bin/sh</span><br><span class="line">ldrestart</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="Odyssey越狱工具常见问题-x2F-错误红字解决方案"><a href="#Odyssey越狱工具常见问题-x2F-错误红字解决方案" class="headerlink" title="Odyssey越狱工具常见问题&#x2F;错误红字解决方案"></a>Odyssey越狱工具常见问题&#x2F;错误红字解决方案</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/mEvS3XOk323iimyRC-DDKQ</span><br><span class="line">https://mp.weixin.qq.com/s/p-hJIVyrYLtX3Qzr1BP4cg</span><br><span class="line">https://mp.weixin.qq.com/s/FqMaobhAI4iqaQ7bXj387Q</span><br><span class="line">https://mp.weixin.qq.com/s/ODNZikQQgVnsks1YGBvWFQ</span><br><span class="line">https://mp.weixin.qq.com/s/gVplvVFgLCCB0hZKCZJcSQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="Taurine-x2F-Odyssey越狱工具常见问题-x2F-错误红字解决方案-六"><a href="#Taurine-x2F-Odyssey越狱工具常见问题-x2F-错误红字解决方案-六" class="headerlink" title="Taurine&#x2F;Odyssey越狱工具常见问题&#x2F;错误红字解决方案(六)"></a>Taurine&#x2F;Odyssey越狱工具常见问题&#x2F;错误红字解决方案(六)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/1iz5ZVHkj3-6yyJUxVP45Q</span><br></pre></td></tr></table></figure>
+
+<h2 id="Taurine，永不过期，免费安装，再也不用担心签名问题了，速度"><a href="#Taurine，永不过期，免费安装，再也不用担心签名问题了，速度" class="headerlink" title="Taurine，永不过期，免费安装，再也不用担心签名问题了，速度"></a>Taurine，永不过期，免费安装，再也不用担心签名问题了，速度</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/OL2aJMRBApre3jkvEhKcQA</span><br></pre></td></tr></table></figure>
+
+<h2 id="unc0ver，永不过期，免费安装，再也不用担心签名问题了，速度"><a href="#unc0ver，永不过期，免费安装，再也不用担心签名问题了，速度" class="headerlink" title="unc0ver，永不过期，免费安装，再也不用担心签名问题了，速度"></a>unc0ver，永不过期，免费安装，再也不用担心签名问题了，速度</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/4UnkQ68bLQJFnVSJbXyHBg</span><br></pre></td></tr></table></figure>
+
+<h2 id="u0Launcher，永不过期版-unc0ver-，速度使用"><a href="#u0Launcher，永不过期版-unc0ver-，速度使用" class="headerlink" title="u0Launcher，永不过期版 unc0ver ，速度使用"></a>u0Launcher，永不过期版 unc0ver ，速度使用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/ZsHpKOf_kTkImfJqQpv6Ow</span><br></pre></td></tr></table></figure>
+
+<h2 id="Fugu-15-Max-暂命名-越狱工具的正确引导方向以及常见问题解决方案-一"><a href="#Fugu-15-Max-暂命名-越狱工具的正确引导方向以及常见问题解决方案-一" class="headerlink" title="Fugu 15 Max (暂命名)越狱工具的正确引导方向以及常见问题解决方案(一)"></a>Fugu 15 Max (暂命名)越狱工具的正确引导方向以及常见问题解决方案(一)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/4KHT_OJK8hcysjkb6y14CQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-15-1-1-越狱，XinaA15-使用指南"><a href="#iOS-15-1-1-越狱，XinaA15-使用指南" class="headerlink" title="iOS 15.1.1 越狱，XinaA15 使用指南"></a>iOS 15.1.1 越狱，XinaA15 使用指南</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/bdOG9eX3IBiEL8FSDG-5OQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="IOS9-1-9-3-5系统越狱方法"><a href="#IOS9-1-9-3-5系统越狱方法" class="headerlink" title="IOS9.1~9.3.5系统越狱方法"></a>IOS9.1~9.3.5系统越狱方法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/lWlrIbVWWNmPJLKURpDezA</span><br></pre></td></tr></table></figure>
+
+<h2 id="IOS10-10-3-3越狱方法"><a href="#IOS10-10-3-3越狱方法" class="headerlink" title="IOS10~10.3.3越狱方法"></a>IOS10~10.3.3越狱方法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/oqkAHqeMB-nTnaXg63-RrA</span><br></pre></td></tr></table></figure>
+
+<h2 id="好消息！IOS10-10-3-3系统完美越狱"><a href="#好消息！IOS10-10-3-3系统完美越狱" class="headerlink" title="好消息！IOS10~10.3.3系统完美越狱"></a>好消息！IOS10~10.3.3系统完美越狱</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/LFqg5FC7Ai0DVny__atxFw</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-14-4-1-Betelguese-越狱发布，新系统出现"><a href="#iOS-14-4-1-Betelguese-越狱发布，新系统出现" class="headerlink" title="iOS 14.4.1 Betelguese 越狱发布，新系统出现"></a>iOS 14.4.1 Betelguese 越狱发布，新系统出现</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/gQ2ZtdnWTIDiMS1S-95-WA</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-14-ReProvision-续签进展，新越狱视频演示"><a href="#iOS-14-ReProvision-续签进展，新越狱视频演示" class="headerlink" title="iOS 14 ReProvision 续签进展，新越狱视频演示"></a>iOS 14 ReProvision 续签进展，新越狱视频演示</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/TDOpIqIdmmcOyIwwa3zB_A</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-14-3-越狱工具已出？降级工具再次更新"><a href="#iOS-14-3-越狱工具已出？降级工具再次更新" class="headerlink" title="iOS 14.3 越狱工具已出？降级工具再次更新"></a>iOS 14.3 越狱工具已出？降级工具再次更新</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/OT5Cuu-0Cl2wvkre5kqcag</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-13-5-Blizzard-新越狱，操作官网已经出现"><a href="#iOS-13-5-Blizzard-新越狱，操作官网已经出现" class="headerlink" title="iOS 13.5 Blizzard 新越狱，操作官网已经出现"></a>iOS 13.5 Blizzard 新越狱，操作官网已经出现</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/BNBOIfaUx8Fxuu7dzy9TnA</span><br></pre></td></tr></table></figure>
+
+<h2 id="新发现！iOS16-5-1-越狱方法，支持Windows系统"><a href="#新发现！iOS16-5-1-越狱方法，支持Windows系统" class="headerlink" title="新发现！iOS16.5.1 越狱方法，支持Windows系统"></a>新发现！iOS16.5.1 越狱方法，支持Windows系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/adD12hcazfibHN4GZFTcZw</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-8-4-1-终于可以越狱，长达8年时间"><a href="#iOS-8-4-1-终于可以越狱，长达8年时间" class="headerlink" title="iOS 8.4.1 终于可以越狱，长达8年时间"></a>iOS 8.4.1 终于可以越狱，长达8年时间</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/hcVjM3nTP0liIusBIVisiw</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-15-1-XinaA15-越狱工具，更换字体仅需几秒"><a href="#iOS-15-1-XinaA15-越狱工具，更换字体仅需几秒" class="headerlink" title="iOS 15.1 XinaA15 越狱工具，更换字体仅需几秒"></a>iOS 15.1 XinaA15 越狱工具，更换字体仅需几秒</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/gL8vNR6RDb8F4LoUY-ttng</span><br></pre></td></tr></table></figure>
+
+<h2 id="惊现！iOS-15-7-1-有根越狱，但会失去5G存储空间"><a href="#惊现！iOS-15-7-1-有根越狱，但会失去5G存储空间" class="headerlink" title="惊现！iOS 15.7.1 有根越狱，但会失去5G存储空间"></a>惊现！iOS 15.7.1 有根越狱，但会失去5G存储空间</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/SR4JnHA-W62ugkSA9EYy2Q</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-14-5-1-越狱问题，百度网盘要提速？"><a href="#iOS-14-5-1-越狱问题，百度网盘要提速？" class="headerlink" title="iOS 14.5.1 越狱问题，百度网盘要提速？"></a>iOS 14.5.1 越狱问题，百度网盘要提速？</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/cIDqspQ2TID9lY3APAx8_A</span><br></pre></td></tr></table></figure>
+
+<h2 id="劲爆！iOS-15-4-1-ra1ncloud-已发布，确实能越狱"><a href="#劲爆！iOS-15-4-1-ra1ncloud-已发布，确实能越狱" class="headerlink" title="劲爆！iOS 15.4.1 ra1ncloud 已发布，确实能越狱"></a>劲爆！iOS 15.4.1 ra1ncloud 已发布，确实能越狱</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/hWSzXxgj-HURTQ5jZM40fg</span><br></pre></td></tr></table></figure>
+
+<h2 id="有点牛！iPhone为iPhone引导越狱，不依赖电脑"><a href="#有点牛！iPhone为iPhone引导越狱，不依赖电脑" class="headerlink" title="有点牛！iPhone为iPhone引导越狱，不依赖电脑"></a>有点牛！iPhone为iPhone引导越狱，不依赖电脑</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/K_17t1HFCe7gB07z-gbaAQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="How-to-Fix-Checkra1n-Error-20-unlock-iPhone-to-use-accessories"><a href="#How-to-Fix-Checkra1n-Error-20-unlock-iPhone-to-use-accessories" class="headerlink" title="How to Fix Checkra1n Error -20 (unlock iPhone to use accessories)"></a>How to Fix Checkra1n Error -20 (unlock iPhone to use accessories)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.youtube.com/watch?v=VHWFVwztNwU</span><br></pre></td></tr></table></figure>
+
+<h2 id="新的-iOS-16-5-越狱发布，支持这款机型"><a href="#新的-iOS-16-5-越狱发布，支持这款机型" class="headerlink" title="新的 iOS 16.5 越狱发布，支持这款机型"></a>新的 iOS 16.5 越狱发布，支持这款机型</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/4yjcOhCeI-tNpSR7TEDSZQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-15-0-15-7-6-越狱已发布，不用电脑"><a href="#iOS-15-0-15-7-6-越狱已发布，不用电脑" class="headerlink" title="iOS 15.0 - 15.7.6 越狱已发布，不用电脑"></a>iOS 15.0 - 15.7.6 越狱已发布，不用电脑</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/0MkrVtac2s2Yi2I2sOx3nQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="收藏啦！iOS15-1XinaA15越狱，PC访问系统文件"><a href="#收藏啦！iOS15-1XinaA15越狱，PC访问系统文件" class="headerlink" title="收藏啦！iOS15.1XinaA15越狱，PC访问系统文件"></a>收藏啦！iOS15.1XinaA15越狱，PC访问系统文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/FsM3Ul-3KaDunLQF__xQ8Q</span><br></pre></td></tr></table></figure>
+
+<h2 id="新工具疑似完美越狱-x2F-阿里云盘扩容-x2F-扫黑风暴惨遭泄漏"><a href="#新工具疑似完美越狱-x2F-阿里云盘扩容-x2F-扫黑风暴惨遭泄漏" class="headerlink" title="新工具疑似完美越狱 &#x2F; 阿里云盘扩容 &#x2F; 扫黑风暴惨遭泄漏"></a>新工具疑似完美越狱 &#x2F; 阿里云盘扩容 &#x2F; 扫黑风暴惨遭泄漏</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/GwVnPIfZoeZVIRS0IKkufg</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS14-8-1系统越狱新解锁，戴耳机也能解锁设备"><a href="#iOS14-8-1系统越狱新解锁，戴耳机也能解锁设备" class="headerlink" title="iOS14.8.1系统越狱新解锁，戴耳机也能解锁设备"></a>iOS14.8.1系统越狱新解锁，戴耳机也能解锁设备</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/rTLe1KdfRQiZ54SaH4G8Hw</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-系统，Dopamine-越狱，官方源作者源推荐（一）"><a href="#iOS-系统，Dopamine-越狱，官方源作者源推荐（一）" class="headerlink" title="iOS 系统，Dopamine 越狱，官方源作者源推荐（一）"></a>iOS 系统，Dopamine 越狱，官方源作者源推荐（一）</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/9IVsWkRaCcfrnSr4Ebupxw</span><br></pre></td></tr></table></figure>
+
+<h2 id="二个越狱消息：新版Cydia将来出炉-x2F-IOS11-3-1平刷插件"><a href="#二个越狱消息：新版Cydia将来出炉-x2F-IOS11-3-1平刷插件" class="headerlink" title="二个越狱消息：新版Cydia将来出炉&#x2F;IOS11.3.1平刷插件"></a>二个越狱消息：新版Cydia将来出炉&#x2F;IOS11.3.1平刷插件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/2hmmLyQaSpupc9D9PYsmRQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS12-4-越狱工具无法安装？绕过-ID-新方法"><a href="#iOS12-4-越狱工具无法安装？绕过-ID-新方法" class="headerlink" title="iOS12.4 越狱工具无法安装？绕过 ID 新方法"></a>iOS12.4 越狱工具无法安装？绕过 ID 新方法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/3AqUY1R0hVxWYxScBlfNwA</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-15-4-1-越狱，Dopamine-将支持简体中文"><a href="#iOS-15-4-1-越狱，Dopamine-将支持简体中文" class="headerlink" title="iOS 15.4.1 越狱，Dopamine 将支持简体中文"></a>iOS 15.4.1 越狱，Dopamine 将支持简体中文</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/8rVGhvCy3jwpN_c3Hiwksg</span><br></pre></td></tr></table></figure>
+
+<h2 id="如何在不同基板-框架-x2F-APT-规范-下施展Cydia和Sileo的轮回骚操作"><a href="#如何在不同基板-框架-x2F-APT-规范-下施展Cydia和Sileo的轮回骚操作" class="headerlink" title="如何在不同基板(框架)&#x2F;APT(规范)下施展Cydia和Sileo的轮回骚操作"></a>如何在不同基板(框架)&#x2F;APT(规范)下施展Cydia和Sileo的轮回骚操作</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/9oMQVCdudK_jYvTVw5zQTw</span><br></pre></td></tr></table></figure>
+
+<h2 id="Cydia-for-iOS7-iOS13-内各种红字、黄字常见错误解决方法全收录"><a href="#Cydia-for-iOS7-iOS13-内各种红字、黄字常见错误解决方法全收录" class="headerlink" title="Cydia for iOS7-iOS13 内各种红字、黄字常见错误解决方法全收录"></a>Cydia for iOS7-iOS13 内各种红字、黄字常见错误解决方法全收录</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mrmad.com.tw/cydia-red-yellow-error</span><br></pre></td></tr></table></figure>
+
+<h2 id="coolstar-x2F-Odyssey-bootstrap"><a href="#coolstar-x2F-Odyssey-bootstrap" class="headerlink" title="coolstar&#x2F;Odyssey-bootstrap"></a>coolstar&#x2F;Odyssey-bootstrap</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/coolstar/Odyssey-bootstrap</span><br></pre></td></tr></table></figure>
+
+<h2 id="XinaA15-新官网上线，请收藏"><a href="#XinaA15-新官网上线，请收藏" class="headerlink" title="XinaA15 新官网上线，请收藏"></a>XinaA15 新官网上线，请收藏</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/0MRRIOghnihTA-TSmv7s5g</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-17-系统，也能越狱？"><a href="#iOS-17-系统，也能越狱？" class="headerlink" title="iOS 17 系统，也能越狱？"></a>iOS 17 系统，也能越狱？</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/B2EE4Tq6lFYmQH1koJucCQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="惊现！iOS-完美越狱已发布，仅支持这些系统"><a href="#惊现！iOS-完美越狱已发布，仅支持这些系统" class="headerlink" title="惊现！iOS 完美越狱已发布，仅支持这些系统"></a>惊现！iOS 完美越狱已发布，仅支持这些系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/InUtCLs6zDVy3XJs2Vwp7A</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-14-6-14-8-系统越狱来了，你需要知道这些"><a href="#iOS-14-6-14-8-系统越狱来了，你需要知道这些" class="headerlink" title="iOS 14.6 - 14.8 系统越狱来了，你需要知道这些"></a>iOS 14.6 - 14.8 系统越狱来了，你需要知道这些</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/zf3cJqinVIE4G8w7lJQLXQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="unc0ver-更新-7-0-1-版本，真的是完美越狱吗？"><a href="#unc0ver-更新-7-0-1-版本，真的是完美越狱吗？" class="headerlink" title="unc0ver 更新 7.0.1 版本，真的是完美越狱吗？"></a>unc0ver 更新 7.0.1 版本，真的是完美越狱吗？</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/dGvP2l4JwwkAMj-kevzoNw</span><br></pre></td></tr></table></figure>
+
+<h2 id="一键完美越狱工具发布-，无需电脑！"><a href="#一键完美越狱工具发布-，无需电脑！" class="headerlink" title="一键完美越狱工具发布 ，无需电脑！"></a>一键完美越狱工具发布 ，无需电脑！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/eH9j5pFAFpsgtX4WTUngLA</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/iOS-Fake-Jaibreak-Usage.html" rel="prev" title="iOS伪越狱玩法">
+      <i class="fa fa-chevron-left"></i> iOS伪越狱玩法
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/iOS-Downgrade-Guide.html" rel="next" title="iOS降级指南">
+      iOS降级指南 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86"><span class="nav-text">相关知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dopamine"><span class="nav-text">Dopamine</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%AE%89%E8%A3%85"><span class="nav-text">应用安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%85%E9%99%A4%E8%B6%8A%E7%8B%B1"><span class="nav-text">清除越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B6%8A%E7%8B%B1%E5%90%8E%E6%89%93%E5%BC%80APP%E9%97%AA%E9%80%80"><span class="nav-text">越狱后打开APP闪退</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#XinaA15"><span class="nav-text">XinaA15</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%AE%89%E8%A3%85-1"><span class="nav-text">应用安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97"><span class="nav-text">应用商店</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6"><span class="nav-text">插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Xina%E6%B8%85%E9%99%A435%E6%9D%A1%E6%9B%B4%E6%96%B0"><span class="nav-text">Xina清除35条更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MilkyWay2"><span class="nav-text">MilkyWay2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E5%AD%97%E4%BD%93"><span class="nav-text">更换字体</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85Deb%E6%8F%92%E4%BB%B6%E5%8C%85"><span class="nav-text">手动安装Deb插件包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-1"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E8%84%91%E7%AB%AF%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6"><span class="nav-text">电脑端无法访问手机文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%BA%94%E7%94%A8%E7%BA%A7%E6%8F%92%E4%BB%B6%E5%87%BA%E7%8E%B0%E7%99%BD%E5%9B%BE%E6%A0%87"><span class="nav-text">安装应用级插件出现白图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sileo%E5%88%B7%E6%96%B0%E6%BA%90%E5%87%BA%E7%8E%B0522%E9%94%99%E8%AF%AF"><span class="nav-text">Sileo刷新源出现522错误</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SaiGon"><span class="nav-text">SaiGon</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Def1nit3lyN0tAJa1lbr3akTool"><span class="nav-text">Def1nit3lyN0tAJa1lbr3akTool</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#NekoJB"><span class="nav-text">NekoJB</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Unc0ver"><span class="nav-text">Unc0ver</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%AE%89%E8%A3%85-2"><span class="nav-text">应用安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E5%AE%89%E8%A3%85"><span class="nav-text">普通安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B0%B8%E4%B8%8D%E8%BF%87%E6%9C%9F%E7%89%88%E6%9C%AC"><span class="nav-text">永不过期版本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sileo%E5%95%86%E5%BA%97"><span class="nav-text">Sileo商店</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%85%E9%99%A4%E8%B6%8A%E7%8B%B1-1"><span class="nav-text">清除越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-2"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%BA%A6%E6%9D%A1%E5%8D%A12%E6%88%969"><span class="nav-text">进度条卡2或9</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%BA%A6%E6%9D%A1%E5%8D%A125"><span class="nav-text">进度条卡25</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%BA%A6%E6%9D%A1%E5%8D%A131"><span class="nav-text">进度条卡31</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Odyssey"><span class="nav-text">Odyssey</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-3"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%8F%8A%E4%BB%A5%E5%90%8E%E5%87%BA%E7%8E%B0%E6%97%A0%E9%99%90%E9%BB%91%E5%B1%8F-x2F-%E8%8F%8A%E8%8A%B1%E5%B9%B6%E9%87%8D%E5%90%AF"><span class="nav-text">第二次及以后出现无限黑屏&#x2F;菊花并重启</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E7%A4%BAERR-JAILBREAK"><span class="nav-text">提示ERR_JAILBREAK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%A1%E5%9C%A8%E4%B8%89%E5%88%86%E4%B9%8B%E4%B8%80%E5%A4%84"><span class="nav-text">卡在三分之一处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%A1%E5%9C%A8%E4%B8%89%E5%88%86%E4%B9%8B%E4%B8%89%E5%A4%84"><span class="nav-text">卡在三分之三处</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Taurine"><span class="nav-text">Taurine</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E5%AE%89%E8%A3%85-1"><span class="nav-text">普通安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B0%B8%E4%B8%8D%E8%BF%87%E6%9C%9F%E7%89%88%E6%9C%AC-1"><span class="nav-text">永不过期版本</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Checkra1n"><span class="nav-text">Checkra1n</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%AE%89%E8%A3%85-3"><span class="nav-text">应用安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E6%A0%B8%E9%85%8D%E7%BD%AE"><span class="nav-text">内核配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OdysseyRa1n"><span class="nav-text">OdysseyRa1n</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cydia%E5%95%86%E5%BA%97"><span class="nav-text">Cydia商店</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Checkra1n-1"><span class="nav-text">Checkra1n</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Chimera1n"><span class="nav-text">Chimera1n</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-1"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cydia%E5%95%86%E5%BA%97-1"><span class="nav-text">Cydia商店</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%85%E9%99%A4%E8%B6%8A%E7%8B%B1-2"><span class="nav-text">清除越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-4"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#20%E9%94%99%E8%AF%AF"><span class="nav-text">-20错误</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Palera1n"><span class="nav-text">Palera1n</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Doubleh3lix"><span class="nav-text">Doubleh3lix</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Meridian"><span class="nav-text">Meridian</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Socket"><span class="nav-text">Socket</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Phoenix"><span class="nav-text">Phoenix</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#kok3shi9"><span class="nav-text">kok3shi9</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#EverPwnage"><span class="nav-text">EverPwnage</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#wtfis"><span class="nav-text">wtfis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E5%AE%83%E5%B7%A5%E5%85%B7"><span class="nav-text">其它工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-5"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Chimera1n%E7%8E%A9%E6%B8%B8%E6%88%8F%E9%97%AA%E9%80%80"><span class="nav-text">Chimera1n玩游戏闪退</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Taurine%E5%AE%89%E8%A3%85dash%E5%91%BD%E4%BB%A4%E7%BB%84%E5%90%8E%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E6%AD%A3%E5%B8%B8%E4%BD%86%E5%8D%B8%E8%BD%BD%E5%87%BA%E9%94%99"><span class="nav-text">Taurine安装dash命令组后插件安装正常但卸载出错</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Odyssey%E8%B6%8A%E7%8B%B1%E5%B7%A5%E5%85%B7%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-x2F-%E9%94%99%E8%AF%AF%E7%BA%A2%E5%AD%97%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-text">Odyssey越狱工具常见问题&#x2F;错误红字解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Taurine-x2F-Odyssey%E8%B6%8A%E7%8B%B1%E5%B7%A5%E5%85%B7%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-x2F-%E9%94%99%E8%AF%AF%E7%BA%A2%E5%AD%97%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-%E5%85%AD"><span class="nav-text">Taurine&#x2F;Odyssey越狱工具常见问题&#x2F;错误红字解决方案(六)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Taurine%EF%BC%8C%E6%B0%B8%E4%B8%8D%E8%BF%87%E6%9C%9F%EF%BC%8C%E5%85%8D%E8%B4%B9%E5%AE%89%E8%A3%85%EF%BC%8C%E5%86%8D%E4%B9%9F%E4%B8%8D%E7%94%A8%E6%8B%85%E5%BF%83%E7%AD%BE%E5%90%8D%E9%97%AE%E9%A2%98%E4%BA%86%EF%BC%8C%E9%80%9F%E5%BA%A6"><span class="nav-text">Taurine，永不过期，免费安装，再也不用担心签名问题了，速度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unc0ver%EF%BC%8C%E6%B0%B8%E4%B8%8D%E8%BF%87%E6%9C%9F%EF%BC%8C%E5%85%8D%E8%B4%B9%E5%AE%89%E8%A3%85%EF%BC%8C%E5%86%8D%E4%B9%9F%E4%B8%8D%E7%94%A8%E6%8B%85%E5%BF%83%E7%AD%BE%E5%90%8D%E9%97%AE%E9%A2%98%E4%BA%86%EF%BC%8C%E9%80%9F%E5%BA%A6"><span class="nav-text">unc0ver，永不过期，免费安装，再也不用担心签名问题了，速度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u0Launcher%EF%BC%8C%E6%B0%B8%E4%B8%8D%E8%BF%87%E6%9C%9F%E7%89%88-unc0ver-%EF%BC%8C%E9%80%9F%E5%BA%A6%E4%BD%BF%E7%94%A8"><span class="nav-text">u0Launcher，永不过期版 unc0ver ，速度使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fugu-15-Max-%E6%9A%82%E5%91%BD%E5%90%8D-%E8%B6%8A%E7%8B%B1%E5%B7%A5%E5%85%B7%E7%9A%84%E6%AD%A3%E7%A1%AE%E5%BC%95%E5%AF%BC%E6%96%B9%E5%90%91%E4%BB%A5%E5%8F%8A%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-%E4%B8%80"><span class="nav-text">Fugu 15 Max (暂命名)越狱工具的正确引导方向以及常见问题解决方案(一)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-15-1-1-%E8%B6%8A%E7%8B%B1%EF%BC%8CXinaA15-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97"><span class="nav-text">iOS 15.1.1 越狱，XinaA15 使用指南</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IOS9-1-9-3-5%E7%B3%BB%E7%BB%9F%E8%B6%8A%E7%8B%B1%E6%96%B9%E6%B3%95"><span class="nav-text">IOS9.1~9.3.5系统越狱方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IOS10-10-3-3%E8%B6%8A%E7%8B%B1%E6%96%B9%E6%B3%95"><span class="nav-text">IOS10~10.3.3越狱方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A5%BD%E6%B6%88%E6%81%AF%EF%BC%81IOS10-10-3-3%E7%B3%BB%E7%BB%9F%E5%AE%8C%E7%BE%8E%E8%B6%8A%E7%8B%B1"><span class="nav-text">好消息！IOS10~10.3.3系统完美越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-14-4-1-Betelguese-%E8%B6%8A%E7%8B%B1%E5%8F%91%E5%B8%83%EF%BC%8C%E6%96%B0%E7%B3%BB%E7%BB%9F%E5%87%BA%E7%8E%B0"><span class="nav-text">iOS 14.4.1 Betelguese 越狱发布，新系统出现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-14-ReProvision-%E7%BB%AD%E7%AD%BE%E8%BF%9B%E5%B1%95%EF%BC%8C%E6%96%B0%E8%B6%8A%E7%8B%B1%E8%A7%86%E9%A2%91%E6%BC%94%E7%A4%BA"><span class="nav-text">iOS 14 ReProvision 续签进展，新越狱视频演示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-14-3-%E8%B6%8A%E7%8B%B1%E5%B7%A5%E5%85%B7%E5%B7%B2%E5%87%BA%EF%BC%9F%E9%99%8D%E7%BA%A7%E5%B7%A5%E5%85%B7%E5%86%8D%E6%AC%A1%E6%9B%B4%E6%96%B0"><span class="nav-text">iOS 14.3 越狱工具已出？降级工具再次更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-13-5-Blizzard-%E6%96%B0%E8%B6%8A%E7%8B%B1%EF%BC%8C%E6%93%8D%E4%BD%9C%E5%AE%98%E7%BD%91%E5%B7%B2%E7%BB%8F%E5%87%BA%E7%8E%B0"><span class="nav-text">iOS 13.5 Blizzard 新越狱，操作官网已经出现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%8F%91%E7%8E%B0%EF%BC%81iOS16-5-1-%E8%B6%8A%E7%8B%B1%E6%96%B9%E6%B3%95%EF%BC%8C%E6%94%AF%E6%8C%81Windows%E7%B3%BB%E7%BB%9F"><span class="nav-text">新发现！iOS16.5.1 越狱方法，支持Windows系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-8-4-1-%E7%BB%88%E4%BA%8E%E5%8F%AF%E4%BB%A5%E8%B6%8A%E7%8B%B1%EF%BC%8C%E9%95%BF%E8%BE%BE8%E5%B9%B4%E6%97%B6%E9%97%B4"><span class="nav-text">iOS 8.4.1 终于可以越狱，长达8年时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-15-1-XinaA15-%E8%B6%8A%E7%8B%B1%E5%B7%A5%E5%85%B7%EF%BC%8C%E6%9B%B4%E6%8D%A2%E5%AD%97%E4%BD%93%E4%BB%85%E9%9C%80%E5%87%A0%E7%A7%92"><span class="nav-text">iOS 15.1 XinaA15 越狱工具，更换字体仅需几秒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%83%8A%E7%8E%B0%EF%BC%81iOS-15-7-1-%E6%9C%89%E6%A0%B9%E8%B6%8A%E7%8B%B1%EF%BC%8C%E4%BD%86%E4%BC%9A%E5%A4%B1%E5%8E%BB5G%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4"><span class="nav-text">惊现！iOS 15.7.1 有根越狱，但会失去5G存储空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-14-5-1-%E8%B6%8A%E7%8B%B1%E9%97%AE%E9%A2%98%EF%BC%8C%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E8%A6%81%E6%8F%90%E9%80%9F%EF%BC%9F"><span class="nav-text">iOS 14.5.1 越狱问题，百度网盘要提速？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%B2%E7%88%86%EF%BC%81iOS-15-4-1-ra1ncloud-%E5%B7%B2%E5%8F%91%E5%B8%83%EF%BC%8C%E7%A1%AE%E5%AE%9E%E8%83%BD%E8%B6%8A%E7%8B%B1"><span class="nav-text">劲爆！iOS 15.4.1 ra1ncloud 已发布，确实能越狱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E7%82%B9%E7%89%9B%EF%BC%81iPhone%E4%B8%BAiPhone%E5%BC%95%E5%AF%BC%E8%B6%8A%E7%8B%B1%EF%BC%8C%E4%B8%8D%E4%BE%9D%E8%B5%96%E7%94%B5%E8%84%91"><span class="nav-text">有点牛！iPhone为iPhone引导越狱，不依赖电脑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-Fix-Checkra1n-Error-20-unlock-iPhone-to-use-accessories"><span class="nav-text">How to Fix Checkra1n Error -20 (unlock iPhone to use accessories)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E7%9A%84-iOS-16-5-%E8%B6%8A%E7%8B%B1%E5%8F%91%E5%B8%83%EF%BC%8C%E6%94%AF%E6%8C%81%E8%BF%99%E6%AC%BE%E6%9C%BA%E5%9E%8B"><span class="nav-text">新的 iOS 16.5 越狱发布，支持这款机型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-15-0-15-7-6-%E8%B6%8A%E7%8B%B1%E5%B7%B2%E5%8F%91%E5%B8%83%EF%BC%8C%E4%B8%8D%E7%94%A8%E7%94%B5%E8%84%91"><span class="nav-text">iOS 15.0 - 15.7.6 越狱已发布，不用电脑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%B6%E8%97%8F%E5%95%A6%EF%BC%81iOS15-1XinaA15%E8%B6%8A%E7%8B%B1%EF%BC%8CPC%E8%AE%BF%E9%97%AE%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6"><span class="nav-text">收藏啦！iOS15.1XinaA15越狱，PC访问系统文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%B7%A5%E5%85%B7%E7%96%91%E4%BC%BC%E5%AE%8C%E7%BE%8E%E8%B6%8A%E7%8B%B1-x2F-%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98%E6%89%A9%E5%AE%B9-x2F-%E6%89%AB%E9%BB%91%E9%A3%8E%E6%9A%B4%E6%83%A8%E9%81%AD%E6%B3%84%E6%BC%8F"><span class="nav-text">新工具疑似完美越狱 &#x2F; 阿里云盘扩容 &#x2F; 扫黑风暴惨遭泄漏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS14-8-1%E7%B3%BB%E7%BB%9F%E8%B6%8A%E7%8B%B1%E6%96%B0%E8%A7%A3%E9%94%81%EF%BC%8C%E6%88%B4%E8%80%B3%E6%9C%BA%E4%B9%9F%E8%83%BD%E8%A7%A3%E9%94%81%E8%AE%BE%E5%A4%87"><span class="nav-text">iOS14.8.1系统越狱新解锁，戴耳机也能解锁设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8CDopamine-%E8%B6%8A%E7%8B%B1%EF%BC%8C%E5%AE%98%E6%96%B9%E6%BA%90%E4%BD%9C%E8%80%85%E6%BA%90%E6%8E%A8%E8%8D%90%EF%BC%88%E4%B8%80%EF%BC%89"><span class="nav-text">iOS 系统，Dopamine 越狱，官方源作者源推荐（一）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E4%B8%AA%E8%B6%8A%E7%8B%B1%E6%B6%88%E6%81%AF%EF%BC%9A%E6%96%B0%E7%89%88Cydia%E5%B0%86%E6%9D%A5%E5%87%BA%E7%82%89-x2F-IOS11-3-1%E5%B9%B3%E5%88%B7%E6%8F%92%E4%BB%B6"><span class="nav-text">二个越狱消息：新版Cydia将来出炉&#x2F;IOS11.3.1平刷插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS12-4-%E8%B6%8A%E7%8B%B1%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%EF%BC%9F%E7%BB%95%E8%BF%87-ID-%E6%96%B0%E6%96%B9%E6%B3%95"><span class="nav-text">iOS12.4 越狱工具无法安装？绕过 ID 新方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-15-4-1-%E8%B6%8A%E7%8B%B1%EF%BC%8CDopamine-%E5%B0%86%E6%94%AF%E6%8C%81%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87"><span class="nav-text">iOS 15.4.1 越狱，Dopamine 将支持简体中文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%8D%E5%90%8C%E5%9F%BA%E6%9D%BF-%E6%A1%86%E6%9E%B6-x2F-APT-%E8%A7%84%E8%8C%83-%E4%B8%8B%E6%96%BD%E5%B1%95Cydia%E5%92%8CSileo%E7%9A%84%E8%BD%AE%E5%9B%9E%E9%AA%9A%E6%93%8D%E4%BD%9C"><span class="nav-text">如何在不同基板(框架)&#x2F;APT(规范)下施展Cydia和Sileo的轮回骚操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cydia-for-iOS7-iOS13-%E5%86%85%E5%90%84%E7%A7%8D%E7%BA%A2%E5%AD%97%E3%80%81%E9%BB%84%E5%AD%97%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E5%85%A8%E6%94%B6%E5%BD%95"><span class="nav-text">Cydia for iOS7-iOS13 内各种红字、黄字常见错误解决方法全收录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#coolstar-x2F-Odyssey-bootstrap"><span class="nav-text">coolstar&#x2F;Odyssey-bootstrap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XinaA15-%E6%96%B0%E5%AE%98%E7%BD%91%E4%B8%8A%E7%BA%BF%EF%BC%8C%E8%AF%B7%E6%94%B6%E8%97%8F"><span class="nav-text">XinaA15 新官网上线，请收藏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-17-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E4%B9%9F%E8%83%BD%E8%B6%8A%E7%8B%B1%EF%BC%9F"><span class="nav-text">iOS 17 系统，也能越狱？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%83%8A%E7%8E%B0%EF%BC%81iOS-%E5%AE%8C%E7%BE%8E%E8%B6%8A%E7%8B%B1%E5%B7%B2%E5%8F%91%E5%B8%83%EF%BC%8C%E4%BB%85%E6%94%AF%E6%8C%81%E8%BF%99%E4%BA%9B%E7%B3%BB%E7%BB%9F"><span class="nav-text">惊现！iOS 完美越狱已发布，仅支持这些系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-14-6-14-8-%E7%B3%BB%E7%BB%9F%E8%B6%8A%E7%8B%B1%E6%9D%A5%E4%BA%86%EF%BC%8C%E4%BD%A0%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E8%BF%99%E4%BA%9B"><span class="nav-text">iOS 14.6 - 14.8 系统越狱来了，你需要知道这些</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unc0ver-%E6%9B%B4%E6%96%B0-7-0-1-%E7%89%88%E6%9C%AC%EF%BC%8C%E7%9C%9F%E7%9A%84%E6%98%AF%E5%AE%8C%E7%BE%8E%E8%B6%8A%E7%8B%B1%E5%90%97%EF%BC%9F"><span class="nav-text">unc0ver 更新 7.0.1 版本，真的是完美越狱吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E9%94%AE%E5%AE%8C%E7%BE%8E%E8%B6%8A%E7%8B%B1%E5%B7%A5%E5%85%B7%E5%8F%91%E5%B8%83-%EF%BC%8C%E6%97%A0%E9%9C%80%E7%94%B5%E8%84%91%EF%BC%81"><span class="nav-text">一键完美越狱工具发布 ，无需电脑！</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

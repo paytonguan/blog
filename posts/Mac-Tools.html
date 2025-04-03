@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Mac常用工具。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac常用工具">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/Mac-Tools.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="Mac常用工具。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/Mac-Tools/topic.jpg">
+<meta property="article:published_time" content="2019-12-20T06:12:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.543Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/Mac-Tools/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/Mac-Tools.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Mac常用工具 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/Mac-Tools.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Mac常用工具
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-12-20 14:12:29" itemprop="dateCreated datePublished" datetime="2019-12-20T14:12:29+08:00">2019-12-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/Mac-Tools/topic.jpg"></p>
+<p>Mac常用工具。</p>
+<span id="more"></span>
+
+<h1 id="APP库"><a href="#APP库" class="headerlink" title="APP库"></a>APP库</h1><h2 id="普通"><a href="#普通" class="headerlink" title="普通"></a>普通</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/catofmrlu/MacApps</span><br><span class="line">https://github.com/hemanth/awesome-pwa</span><br><span class="line">https://www.macupdate.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="破解"><a href="#破解" class="headerlink" title="破解"></a>破解</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">http://mac-torrent-download.net</span><br><span class="line">https://cmacapps.com</span><br><span class="line">https://xclient.info/</span><br><span class="line">https://www.waitsun.com/</span><br><span class="line">https://www.macbl.com/</span><br></pre></td></tr></table></figure>
+
+<h1 id="磁盘分区"><a href="#磁盘分区" class="headerlink" title="磁盘分区"></a>磁盘分区</h1><h2 id="Paragon-Hard-Disk-Manager"><a href="#Paragon-Hard-Disk-Manager" class="headerlink" title="Paragon Hard Disk Manager"></a>Paragon Hard Disk Manager</h2><p>磁盘分区。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.zhinin.com/paragon_hard_disk_manager-mac.html</span><br></pre></td></tr></table></figure>
+
+<h1 id="划词翻译"><a href="#划词翻译" class="headerlink" title="划词翻译"></a>划词翻译</h1><h2 id="Bob"><a href="#Bob" class="headerlink" title="Bob"></a>Bob</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/ripperhe/Bob</span><br></pre></td></tr></table></figure>
+
+<h1 id="OCR识别"><a href="#OCR识别" class="headerlink" title="OCR识别"></a>OCR识别</h1><h2 id="CaptuocrToy"><a href="#CaptuocrToy" class="headerlink" title="CaptuocrToy"></a>CaptuocrToy</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/gragrance/CaptuocrToy/releases</span><br></pre></td></tr></table></figure>
+
+<h1 id="系统性能与监控"><a href="#系统性能与监控" class="headerlink" title="系统性能与监控"></a>系统性能与监控</h1><h2 id="DPCIManager"><a href="#DPCIManager" class="headerlink" title="DPCIManager"></a>DPCIManager</h2><p>查看硬件信息。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://sourceforge.net/projects/dpcimanager/files/latest/download</span><br></pre></td></tr></table></figure>
+
+<h2 id="DarwinDumper"><a href="#DarwinDumper" class="headerlink" title="DarwinDumper"></a>DarwinDumper</h2><p>输出硬件信息。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://bitbucket.org/blackosx/darwindumper/downloads/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Geekbench"><a href="#Geekbench" class="headerlink" title="Geekbench"></a>Geekbench</h2><p>跑分软件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.geekbench.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Intel-Power-Gadget"><a href="#Intel-Power-Gadget" class="headerlink" title="Intel Power Gadget"></a>Intel Power Gadget</h2><p>查看CPU状态。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://software.intel.com/en-us/articles/intel-power-gadget</span><br></pre></td></tr></table></figure>
+
+<h2 id="iStat-Menus-6"><a href="#iStat-Menus-6" class="headerlink" title="iStat Menus 6"></a>iStat Menus 6</h2><p>用于性能监控。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 下载地址</span><br><span class="line">https://bjango.com/mac/istatmenus/</span><br><span class="line"></span><br><span class="line">// 注册信息</span><br><span class="line">Email: 982092332@qq.com</span><br><span class="line">SN: GAWAE-FCWQ3-P8NYB-C7GF7-NEDRT-Q5DTB-MFZG6-6NEQC-CRMUD-8MZ2K-66SRB-SU8EW-EDLZ9-TGH3S-8SGA</span><br></pre></td></tr></table></figure>
+
+<h2 id="IOJones"><a href="#IOJones" class="headerlink" title="IOJones"></a>IOJones</h2><p>IORegistryExplorer的替代品。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://sourceforge.net/projects/iojones/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Heaven"><a href="#Heaven" class="headerlink" title="Heaven"></a>Heaven</h2><p>显卡性能测试软件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://benchmark.unigine.com/heaven</span><br></pre></td></tr></table></figure>
+
+<h2 id="Novabench"><a href="#Novabench" class="headerlink" title="Novabench"></a>Novabench</h2><p>跑分软件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://novabench.com/download#personal</span><br></pre></td></tr></table></figure>
+
+<h2 id="CUDA-Z"><a href="#CUDA-Z" class="headerlink" title="CUDA-Z"></a>CUDA-Z</h2><p>查看Nvidia驱动。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://sourceforge.net/projects/cuda-z/</span><br></pre></td></tr></table></figure>
+
+<h2 id="AJA-System-Test"><a href="#AJA-System-Test" class="headerlink" title="AJA System Test"></a>AJA System Test</h2><p>测试磁盘速度。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://macdownload.informer.com/aja-system-test/download/</span><br></pre></td></tr></table></figure>
+
+<h2 id="MachineProfile"><a href="#MachineProfile" class="headerlink" title="MachineProfile"></a>MachineProfile</h2><p>查询电脑信息，Mac App Store可下载。</p>
+<h1 id="系统设置"><a href="#系统设置" class="headerlink" title="系统设置"></a>系统设置</h1><h2 id="Simple-Display-Rotation-Wrapper"><a href="#Simple-Display-Rotation-Wrapper" class="headerlink" title="Simple Display Rotation Wrapper"></a>Simple Display Rotation Wrapper</h2><p>屏幕旋转。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/fewtarius/displayrotation</span><br></pre></td></tr></table></figure>
+
+<h2 id="Scroll-Reverser"><a href="#Scroll-Reverser" class="headerlink" title="Scroll Reverser"></a>Scroll Reverser</h2><p>只改变鼠标滚轮方向而不改变触控板滑动方向，在终端输入以下命令安装。此APP会让三指点击失效。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install scroll-reverser</span><br></pre></td></tr></table></figure>
+
+<h2 id="ShowHiddenFiles"><a href="#ShowHiddenFiles" class="headerlink" title="ShowHiddenFiles"></a>ShowHiddenFiles</h2><p>显示&#x2F;隐藏文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://gotoes.org/sales/ShowHiddenFilesMacOSX/How_To_Show_Hidden_Files.php</span><br></pre></td></tr></table></figure>
+
+<h2 id="Trim-Enabler"><a href="#Trim-Enabler" class="headerlink" title="Trim Enabler"></a>Trim Enabler</h2><p>为SSD打开Trim功能。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cindori.org/trimenabler/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Pacifist"><a href="#Pacifist" class="headerlink" title="Pacifist"></a>Pacifist</h2><p>安装包文件提取工具。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.zhinin.com/pacifist-mac.html</span><br></pre></td></tr></table></figure>
+
+<p>注册码如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Name / Tom Smith</span><br><span class="line">Serial number / 4Ip8izH03A-0K48zlp3zw-1Sp</span><br></pre></td></tr></table></figure>
+
+<h2 id="EFI-MountianShow"><a href="#EFI-MountianShow" class="headerlink" title="EFI MountianShow"></a>EFI MountianShow</h2><p>挂载EFI分区。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.tonymacx86.com/threads/updated-efi-mounter-v3-renamed-to-efi-mountianshow.210413/</span><br></pre></td></tr></table></figure>
+
+<h2 id="RAMDisk-Utility"><a href="#RAMDisk-Utility" class="headerlink" title="RAMDisk Utility"></a>RAMDisk Utility</h2><p>生成内存缓存盘，程序在其中运行速度可明显提升。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.firewolf.science/2015/06/ramdisk-utility-for-os-x/</span><br></pre></td></tr></table></figure>
+
+<h2 id="TotalFinder"><a href="#TotalFinder" class="headerlink" title="TotalFinder"></a>TotalFinder</h2><p>Finder的增强。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.pc6.com/mac/113433.html</span><br></pre></td></tr></table></figure>
+
+<h1 id="系统优化"><a href="#系统优化" class="headerlink" title="系统优化"></a>系统优化</h1><h2 id="OnyX"><a href="#OnyX" class="headerlink" title="OnyX"></a>OnyX</h2><p>功能全面的系统清理工具。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.titanium-software.fr/en/onyx.html</span><br></pre></td></tr></table></figure>
+
+<h1 id="编辑工具"><a href="#编辑工具" class="headerlink" title="编辑工具"></a>编辑工具</h1><h2 id="Hex-Fiend"><a href="#Hex-Fiend" class="headerlink" title="Hex Fiend"></a>Hex Fiend</h2><p>Hex编辑器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://ridiculousfish.com/hexfiend/</span><br></pre></td></tr></table></figure>
+
+<h2 id="FileMerge"><a href="#FileMerge" class="headerlink" title="FileMerge"></a>FileMerge</h2><p>安装Xcode后即可搜索到，用于比较代码差异，常用于编写SSDT时比较打补丁前后的DSDT差异。</p>
+<h1 id="音乐播放"><a href="#音乐播放" class="headerlink" title="音乐播放"></a>音乐播放</h1><h2 id="VOX"><a href="#VOX" class="headerlink" title="VOX"></a>VOX</h2><p>音乐播放软件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://vox.rocks/mac-music-player/download</span><br></pre></td></tr></table></figure>
+
+<h1 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h1><h2 id="Parallels-Desktop"><a href="#Parallels-Desktop" class="headerlink" title="Parallels Desktop"></a>Parallels Desktop</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://gitee.com/cssec/ParallelsDesktopCrack</span><br></pre></td></tr></table></figure>
+
+<h2 id="Touchbar-Pet"><a href="#Touchbar-Pet" class="headerlink" title="Touchbar Pet"></a>Touchbar Pet</h2><p>Touchbar养宠物。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.cr173.com/mac/1100456.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="Classic-Finder"><a href="#Classic-Finder" class="headerlink" title="Classic Finder"></a>Classic Finder</h2><p>模仿旧版Finder。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://bitbucket.org/bszyman/classic-finder-app/downloads/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Itsycal"><a href="#Itsycal" class="headerlink" title="Itsycal"></a>Itsycal</h2><p>任务栏添加日历。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.mowglii.com/itsycal/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Keka"><a href="#Keka" class="headerlink" title="Keka"></a>Keka</h2><p>解压缩软件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.keka.io/zh-cn/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Magnet"><a href="#Magnet" class="headerlink" title="Magnet"></a>Magnet</h2><p>分屏软件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://macwk.com/soft/magnet</span><br><span class="line">https://www.zhinin.com/magnet-mac.html</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/Hackintosh-Advanced-Configuration.html" rel="prev" title="黑苹果的进阶操作">
+      <i class="fa fa-chevron-left"></i> 黑苹果的进阶操作
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/Mac-Terminal-Optimization.html" rel="next" title="Mac终端优化">
+      Mac终端优化 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#APP%E5%BA%93"><span class="nav-text">APP库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%AE%E9%80%9A"><span class="nav-text">普通</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%B4%E8%A7%A3"><span class="nav-text">破解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA"><span class="nav-text">磁盘分区</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Paragon-Hard-Disk-Manager"><span class="nav-text">Paragon Hard Disk Manager</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91"><span class="nav-text">划词翻译</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Bob"><span class="nav-text">Bob</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OCR%E8%AF%86%E5%88%AB"><span class="nav-text">OCR识别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CaptuocrToy"><span class="nav-text">CaptuocrToy</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E4%B8%8E%E7%9B%91%E6%8E%A7"><span class="nav-text">系统性能与监控</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#DPCIManager"><span class="nav-text">DPCIManager</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DarwinDumper"><span class="nav-text">DarwinDumper</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Geekbench"><span class="nav-text">Geekbench</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Intel-Power-Gadget"><span class="nav-text">Intel Power Gadget</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iStat-Menus-6"><span class="nav-text">iStat Menus 6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IOJones"><span class="nav-text">IOJones</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Heaven"><span class="nav-text">Heaven</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Novabench"><span class="nav-text">Novabench</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CUDA-Z"><span class="nav-text">CUDA-Z</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AJA-System-Test"><span class="nav-text">AJA System Test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MachineProfile"><span class="nav-text">MachineProfile</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE"><span class="nav-text">系统设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Simple-Display-Rotation-Wrapper"><span class="nav-text">Simple Display Rotation Wrapper</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scroll-Reverser"><span class="nav-text">Scroll Reverser</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ShowHiddenFiles"><span class="nav-text">ShowHiddenFiles</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Trim-Enabler"><span class="nav-text">Trim Enabler</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pacifist"><span class="nav-text">Pacifist</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EFI-MountianShow"><span class="nav-text">EFI MountianShow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RAMDisk-Utility"><span class="nav-text">RAMDisk Utility</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TotalFinder"><span class="nav-text">TotalFinder</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96"><span class="nav-text">系统优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#OnyX"><span class="nav-text">OnyX</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E8%BE%91%E5%B7%A5%E5%85%B7"><span class="nav-text">编辑工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hex-Fiend"><span class="nav-text">Hex Fiend</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FileMerge"><span class="nav-text">FileMerge</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE"><span class="nav-text">音乐播放</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#VOX"><span class="nav-text">VOX</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E5%AE%83"><span class="nav-text">其它</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Parallels-Desktop"><span class="nav-text">Parallels Desktop</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Touchbar-Pet"><span class="nav-text">Touchbar Pet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Classic-Finder"><span class="nav-text">Classic Finder</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Itsycal"><span class="nav-text">Itsycal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Keka"><span class="nav-text">Keka</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Magnet"><span class="nav-text">Magnet</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

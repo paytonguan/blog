@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="QuantumultX、Loon等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS网络调试工具的使用">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/iOS-Network-Tool-Usage.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="QuantumultX、Loon等。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/iOS-Network-Tool-Usage/topic.jpg">
+<meta property="article:published_time" content="2023-11-10T03:34:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.559Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/iOS-Network-Tool-Usage/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/iOS-Network-Tool-Usage.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>iOS网络调试工具的使用 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/iOS-Network-Tool-Usage.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          iOS网络调试工具的使用
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-10 11:34:29" itemprop="dateCreated datePublished" datetime="2023-11-10T11:34:29+08:00">2023-11-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/iOS-Network-Tool-Usage/topic.jpg"></p>
+<p>QuantumultX、Loon等。</p>
+<span id="more"></span>
+
+<h1 id="Thor"><a href="#Thor" class="headerlink" title="Thor"></a>Thor</h1><p>应当使用Thor 1.3.4，以保证脚本能够正常使用。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>在电脑下载以下IPA并用同步推安装到手机。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://code.aliyun.com/zwxsa/iOSbuy/raw/3501cba392d61d91d10b84f0a2524bf179d57ff3/Thor%201.3.4.ipa</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后打开，点击闪电按钮以安装证书。若提示需要设备共存验证，则修改系统时间至验证后的时间，再打开Thor即可通过验证。</p>
+<p>如果不能通过认证，则卸载1.3.4版本的Thor并安装1.2.0版本的Thor，打开后安装证书和VPN。VPN安装完成后再安装Thor 1.3.4，重新安装证书并删除原来的证书即可，注意不要删除VPN。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://ngxz.baklib.com/3a93/cfbe</span><br></pre></td></tr></table></figure>
+
+<p>在使用时不能直接从Thor的主界面打开抓包，需要在主界面中选择好规则后，进入系统设置-VPN，列表中选择Thor条目并开启VPN按钮即可。</p>
+<h2 id="抓包"><a href="#抓包" class="headerlink" title="抓包"></a>抓包</h2><h3 id="IPA"><a href="#IPA" class="headerlink" title="IPA"></a>IPA</h3><p>开启全局抓包后，在助手软件（如爱思助手）下载要抓包的应用，完成下载后回到Thor，打开抓包记录，搜索<code>ipa</code>，点击后缀名为ipa的记录，复制链接后打开Shu下载即可。</p>
+<p>也可以添加一个过滤器，在<code>包括关键字</code>一栏输入<code>ipa</code>并存储，以后使用该过滤器抓包即只抓到ipa记录。</p>
+<h3 id="翻墙节点"><a href="#翻墙节点" class="headerlink" title="翻墙节点"></a>翻墙节点</h3><p>开启全局抓包后，打开翻墙软件并进行连接，然后停止抓包，点击抓包记录，找到含有<code>connect</code>的记录并进入，切换到<code>概览</code>选项卡，点击<code>消息体</code>即可。</p>
+<h3 id="付费音乐"><a href="#付费音乐" class="headerlink" title="付费音乐"></a>付费音乐</h3><p>开启全局抓包后，打开音乐软件（如QQ音乐），点击下载后回到Thor。选择抓包记录，后缀为<code>flac</code>的即为无损音乐格式。</p>
+<h2 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h2><p>过滤器通过更改本地数据进⾏交互欺骗，从⽽达到APP破解等效果。</p>
+<h3 id="获取"><a href="#获取" class="headerlink" title="获取"></a>获取</h3><p>可通过以下捷径。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.icloud.com/shortcuts/9097fa1569b6485b816d6fce8f7c8f4c</span><br></pre></td></tr></table></figure>
+
+<h3 id="制作"><a href="#制作" class="headerlink" title="制作"></a>制作</h3><p>以爱字幕APP为例说明制作方法。</p>
+<h4 id="查找修改数据"><a href="#查找修改数据" class="headerlink" title="查找修改数据"></a>查找修改数据</h4><p>开启Thor全局抓包，打开爱字幕APP，停留一段时间后即可关闭，然后关闭Thor抓包。</p>
+<p>进入Thor的抓包记录，寻找含有VIP数据的包，此处为<code>api/v1.user/info</code>这一数据。一般而言可寻找user或者info相关的路径。点击响应-application&#x2F;json，即可进入消息体，摘录如下。复制该消息体的内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;status&quot;:1,</span><br><span class="line">    &quot;msg&quot;:&quot;success&quot;,</span><br><span class="line">    &quot;result&quot;:&#123;</span><br><span class="line">        &quot;id&quot;:1641729,</span><br><span class="line">        &quot;token&quot;:</span><br><span class="line">        &quot;mobile&quot;:&quot;&quot;,</span><br><span class="line">        &quot;is_vip&quot;:0,</span><br><span class="line">        &quot;nickname&quot;:&quot;  &quot;,</span><br><span class="line">        &quot;photorul&quot;:&quot;https://www.qlogo.cn&quot;,</span><br><span class="line">        &quot;left_times&quot;:1,</span><br><span class="line">        &quot;vip_end_time&quot;:0,</span><br><span class="line">        &quot;permanent_vip&quot;:0,</span><br><span class="line">        &quot;is_enterprise&quot;:0,</span><br><span class="line">        &quot;is_new&quot;:0,</span><br><span class="line">        &quot;new_user&quot;:1</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>则目标为将is_vip改为1，且将vip_end_time改为一个非常大的时间戳。</p>
+<h4 id="完成修改"><a href="#完成修改" class="headerlink" title="完成修改"></a>完成修改</h4><p>退回抓包记录界面，在刚才的那条数据上左滑，点击更多-提取到过滤器，点击+号，点击添加过滤器，填写过滤器名称，并进入<code>包括域名</code>，点击+号，选择下面提供的域名。<code>包括关键字</code>同理。</p>
+<p>点击<code>挂载断点</code>，选择编辑-新建-响应消息体回传前-编辑-新建-判断条件，在操作对象里点击<code>@rep.api</code>。然后手打以下内容并保存，表示匹配到这条响应。注意<code>@rep.api</code>与<code>CONTAINS[cd]</code>间要有空格。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CONTAINS[cd] &quot;api/v1.user/info&quot;</span><br></pre></td></tr></table></figure>
+
+<p>返回上一页，点击编辑-添加表达式（条件满足时）-运算语法，选择<code>^替换/插入</code>-<code>@rsp.bodyText</code>（表示重写响应消息体），然后点击调试-调试表达式#1。将刚才消息体的内容复制到待匹配文本中，然后在正则表达式中输入需要匹配的修改位置，其中<code>\d</code>表示匹配一个数字，<code>\d+</code>表示匹配一串数字。</p>
+<p>现需匹配<code>&quot;is_vip&quot;:0</code>，则在正则表达式中输入<code>&quot;is_vip&quot;:\d</code>，点击匹配，即可找到该位置。然后点击设置替换值，输入<code>&quot;is_vip&quot;:1</code>，点击替换即可。</p>
+<p><code>&quot;vip_end_time&quot;:0</code>同理，注意需要退出到匹配动作页，重新执行编辑-添加表达式（条件满足时）的步骤。其中时间戳可用Anubis中的日期格式化工具获得。</p>
+<p>制作完成后保存过滤器，选择开启即可。</p>
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>选择一个过滤器并点击<code>i</code>-编辑，点击<code>挂载断点</code>下的断点，选择查看断点并修改即可。</p>
+<p>如果查看断点不可用，说明作者不允许修改该过滤器。为去除限制，点击<code>i</code>-导出，导出到Shu后解压到任意位置。打开解压好的文件，点击文件夹内的info.json，打开后选择导出文本-添加到备忘录。打开刚才保存的备忘录，将rights_protected改为0，然后将备忘录导出到Shu，重命名为info.json并覆盖原来的info.json即可。</p>
+<h1 id="Http-Catcher"><a href="#Http-Catcher" class="headerlink" title="Http Catcher"></a>Http Catcher</h1><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>1.1.11版本无内购。打开以下链接，选择Http Catcher 1.1.11进行安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://ngxz.baklib.com/3a93/cfbe</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后打开Http Catcher，打开HTTPS抓包，按照提示操作即可。</p>
+<h2 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h2><p>Http Catcher的重写与Thor的过滤器功能类似。</p>
+<h3 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h3><p>直接将规则文件用Http Catcher打开即可。也可进入设置-重写，点击<code>+</code>号，选择<code>在文本编辑器中编辑</code>，复制规则内容即可。</p>
+<h3 id="制作-1"><a href="#制作-1" class="headerlink" title="制作"></a>制作</h3><p>以泼辣修图APP为例说明制作方法。</p>
+<h4 id="查找修改数据-1"><a href="#查找修改数据-1" class="headerlink" title="查找修改数据"></a>查找修改数据</h4><p>开启Http Catcher全局抓包，进入泼辣修图APP，点击恢复购买，完成后回到Http Catcher停止抓包。</p>
+<p>在刚抓到的数据里面找到路径为&#x2F;v1&#x2F;payments&#x2F;appleiap&#x2F;receipts&#x2F;confirmation的数据，在响应里面可以看到响应消息体。分析购买前和购买后消息体的不同，可知需将响应状态码从400改为200，并修改<code>&quot;isUnlimited&quot;:true</code>。</p>
+<h4 id="完成修改-1"><a href="#完成修改-1" class="headerlink" title="完成修改"></a>完成修改</h4><p>复制购买后的数据响应消息体，在需要重写的数据上左滑，点击更多-新建重写，填写名称。点击<code>位置</code>，删除PORT中的数值。</p>
+<p>点击<code>添加规则</code>，类型选择响应，行为选择Body，开启正则表达式，输入正则法则<code>.*\&#125;</code>（表示全匹配），在<code>替换</code>中输入刚才复制的消息体。正则表达式可通过Anubis进行校验，以确认填写的表达式正确。</p>
+<p>完成后继续添加规则，类型选择响应，行为选择响应状态码，查找400并替换为200。保存重写规则并打开即可。</p>
+<h3 id="重写库"><a href="#重写库" class="headerlink" title="重写库"></a>重写库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/pm936/httpcatcher</span><br></pre></td></tr></table></figure>
+
+<h1 id="temperJS"><a href="#temperJS" class="headerlink" title="temperJS"></a>temperJS</h1><p>temperJS可以使油猴脚本在手机端运行。</p>
+<h2 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h2><p>可通过以下捷径安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.icloud.com/shortcuts/7a21b797d6c34a59a3978683dabc6298</span><br></pre></td></tr></table></figure>
+
+<p>也可编辑网络调试工具的配置文件。对于Quantumult X，可添加以下重写。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hostname=greasyfork.org, openuserjs.org</span><br><span class="line"></span><br><span class="line">https:\/\/greasyfork\.org\/scripts\/.*\.user\.js url script-response-body https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GreasyFork/greasy-fork.js</span><br></pre></td></tr></table></figure>
+
+<p>对于Loon，可添加以下重写。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hostname=greasyfork.org, openuserjs.org</span><br><span class="line"></span><br><span class="line">http-response ^https:\/\/(greasyfork|openuserjs)\.org\/.*\/.*\.user\.js script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GreasyFork/greasy-fork.js, requires-body=true</span><br></pre></td></tr></table></figure>
+
+<p>对于Surge，可添加以下脚本。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[MITM]</span><br><span class="line">hostname=greasyfork.org, openuserjs.org</span><br><span class="line"></span><br><span class="line">[Script]</span><br><span class="line">Greasy Fork=type=http-response, pattern=^https:\/\/(greasyfork|openuserjs)\.org\/.*\/.*\.user\.js, script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GreasyFork/greasy-fork.js, requires-body=true</span><br></pre></td></tr></table></figure>
+
+<p>也可直接添加以下模块。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GreasyFork/Surge.sgmodule</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在手机端的浏览器打开greasyfork的脚本页，点击安装即可自动转换。</p>
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="你们碎碎念的解锁VIP会员的教程来了"><a href="#你们碎碎念的解锁VIP会员的教程来了" class="headerlink" title="你们碎碎念的解锁VIP会员的教程来了"></a>你们碎碎念的解锁VIP会员的教程来了</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/ociRI8wQtRimseAYR1XONw</span><br></pre></td></tr></table></figure>
+
+<h2 id="网球版解锁某个App永久内购的教程来了"><a href="#网球版解锁某个App永久内购的教程来了" class="headerlink" title="网球版解锁某个App永久内购的教程来了"></a>网球版解锁某个App永久内购的教程来了</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/gcJw46HrmJCfBcLSw4s3NA</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/iOS-Jailbreak-Usage.html" rel="prev" title="iOS越狱使用指南">
+      <i class="fa fa-chevron-left"></i> iOS越狱使用指南
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/iOS-Jailbreak-Tweaks-Guide.html" rel="next" title="iOS越狱插件操作">
+      iOS越狱插件操作 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Thor"><span class="nav-text">Thor</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%93%E5%8C%85"><span class="nav-text">抓包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IPA"><span class="nav-text">IPA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BF%BB%E5%A2%99%E8%8A%82%E7%82%B9"><span class="nav-text">翻墙节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%98%E8%B4%B9%E9%9F%B3%E4%B9%90"><span class="nav-text">付费音乐</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="nav-text">过滤器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96"><span class="nav-text">获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C"><span class="nav-text">制作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE"><span class="nav-text">查找修改数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%8C%E6%88%90%E4%BF%AE%E6%94%B9"><span class="nav-text">完成修改</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9"><span class="nav-text">修改</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Http-Catcher"><span class="nav-text">Http Catcher</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-1"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E5%86%99"><span class="nav-text">重写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5"><span class="nav-text">导入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C-1"><span class="nav-text">制作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE-1"><span class="nav-text">查找修改数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%8C%E6%88%90%E4%BF%AE%E6%94%B9-1"><span class="nav-text">完成修改</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E5%86%99%E5%BA%93"><span class="nav-text">重写库</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#temperJS"><span class="nav-text">temperJS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-2"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E4%BB%AC%E7%A2%8E%E7%A2%8E%E5%BF%B5%E7%9A%84%E8%A7%A3%E9%94%81VIP%E4%BC%9A%E5%91%98%E7%9A%84%E6%95%99%E7%A8%8B%E6%9D%A5%E4%BA%86"><span class="nav-text">你们碎碎念的解锁VIP会员的教程来了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%90%83%E7%89%88%E8%A7%A3%E9%94%81%E6%9F%90%E4%B8%AAApp%E6%B0%B8%E4%B9%85%E5%86%85%E8%B4%AD%E7%9A%84%E6%95%99%E7%A8%8B%E6%9D%A5%E4%BA%86"><span class="nav-text">网球版解锁某个App永久内购的教程来了</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

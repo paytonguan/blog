@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="分区表、引导方式和不同方式引导系统。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多方式引导启动系统">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/Multiple-Methods-To-Start-OS.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="分区表、引导方式和不同方式引导系统。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/Multiple-Methods-To-Start-OS/topic.jpg">
+<meta property="article:published_time" content="2020-04-10T10:41:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.576Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/Multiple-Methods-To-Start-OS/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/Multiple-Methods-To-Start-OS.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>多方式引导启动系统 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/Multiple-Methods-To-Start-OS.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          多方式引导启动系统
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-10 18:41:29" itemprop="dateCreated datePublished" datetime="2020-04-10T18:41:29+08:00">2020-04-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>6.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/Multiple-Methods-To-Start-OS/topic.jpg"></p>
+<p>分区表、引导方式和不同方式引导系统。</p>
+<span id="more"></span>
+
+<h1 id="相关知识"><a href="#相关知识" class="headerlink" title="相关知识"></a>相关知识</h1><h2 id="分区表"><a href="#分区表" class="headerlink" title="分区表"></a>分区表</h2><p>分区表用于存储分区信息，主要有MBR和GUID两种。</p>
+<h3 id="MBR"><a href="#MBR" class="headerlink" title="MBR"></a>MBR</h3><p>MBR分区表会在磁盘的第一个扇区写入引导代码，这些代码用来引导系统的启动，该扇区被称为主引导扇区。主引导扇区共512字节，内容如下。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>占用空间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>主引导记录MBR</td>
+<td>446字节</td>
+</tr>
+<tr>
+<td>磁盘分区表项DPT</td>
+<td>16×4&#x3D;64字节</td>
+</tr>
+<tr>
+<td>结束标志AA55（小端规则为55AA），被称为幻数</td>
+<td>2字节</td>
+</tr>
+</tbody></table>
+<p>由于DPT只有64字节，MBR分区表最多只能有四个分区，即三个主分区加一个扩展分区，或四个主分区。MBR的代码决定其引导类型，包括grub、Windows NT 5.0等，可视作是规定启动引导器的代码。</p>
+<p>每个分区的分区头部有本分区的引导信息，对于主分区而言称为PBR，对于扩展分区而言称为EBR。在扩展分区内可以进一步划分出无数个逻辑分区，主要是通过在每个逻辑分区的起始扇区建立一个虚拟MBR。注意，扩展分区&#x2F;逻辑分区不能被设为激活分区。</p>
+<h3 id="GUID-x2F-GPT"><a href="#GUID-x2F-GPT" class="headerlink" title="GUID&#x2F;GPT"></a>GUID&#x2F;GPT</h3><p>为了兼容性，GUID分区表即GPT磁盘的第一个扇区仍然为MBR，被称为保护MBR，然后是GPT头。与MBR不同的是，GPT磁盘的保护MBR只有一个标识为0xEE的分区，以标注这块硬盘使用GPT分区表。如果在这段代码中储存GPT分区表的一部分分区，则可以使不支持从GPT启动的操作系统从这个MBR启动，启动后只能操作MBR分区表中的分区。</p>
+<p>GPT需要有一个专门的EFI分区存放引导文件，这个EFI分区一般是FAT32或FAT16格式。EFI分区可以有多个，也可以只有一个，系统引导文件可以放到同一个地方，也可以分散放置。引导启动时，不同的系统文件会被识别为不同的引导项。</p>
+<p>引导文件写有启动磁盘信息，主要是识别系统种类以及磁盘的唯一标识GUID。每个分区也有分区表，其中前16字节是分区类型GUID，接下来的16字节是分区唯一标识GUID。GPT分区表主要通过GUID识别不同分区。</p>
+<h2 id="引导方式"><a href="#引导方式" class="headerlink" title="引导方式"></a>引导方式</h2><p>一般而言BIOS使用MBR分区表，而UEFI使用GPT分区表。然而由于GPT分区表也有MBR，因此理论上BIOS+GPT是可行的。同理UEFI+MBR也是可行的。</p>
+<h3 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h3><p>开机时，BIOS开电自检，然后读取MBR，根据MBR的引导代码启动系统。一般而言，BIOS会寻找可引导的活动分区，然后装入活动分区的PBR到内存，并把启动权移交系统。</p>
+<h3 id="UEFI"><a href="#UEFI" class="headerlink" title="UEFI"></a>UEFI</h3><p>开机时，电脑读取UEFI，UEFI寻找EFI分区并根据EFI分区的引导文件启动系统。</p>
+<h3 id="查看本机引导方式"><a href="#查看本机引导方式" class="headerlink" title="查看本机引导方式"></a>查看本机引导方式</h3><p>在Windows下Win+R，输入<code>msinfo32</code>并回车，在打开的窗口中查看<code>系统摘要</code>的内容，若显示为传统即为BIOS模式，显示为UEFI即为UEFI模式。</p>
+<h2 id="ESP-x2F-MSR分区"><a href="#ESP-x2F-MSR分区" class="headerlink" title="ESP&#x2F;MSR分区"></a>ESP&#x2F;MSR分区</h2><p>这两个分区均用于GPT分区表。</p>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>ESP分区即EFI分区。UEFI引导的电脑启动时，将从EFI分区读取启动配置。EFI分区一般为FAT格式，大小200-300M，可位于硬盘的任意位置，且一块硬盘可以存在多个EFI分区，只需把引导文件放置在EFI分区的EFI&#x2F;BOOT&#x2F;BOOTX64.efi即可。</p>
+<p>MSR分区为Windows系统创建的分区，用于保存某些数据，用途不大，可删除或并入EFI分区，在创建EFI分区时也不必创建MSR分区。</p>
+<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><p>EFI分区的EFI&#x2F;BOOT下，放置CLOVER文件夹引导Clover，放置Microsoft文件夹引导Windows。两者可同时放置。</p>
+<p>对其它系统添加引导时，BOOT需用Clover的BOOT文件夹，把另一个文件夹放置于&#x2F;EFI下，与CLOVER同级即可。Clover会自动识别出系统类型。</p>
+<h3 id="重建"><a href="#重建" class="headerlink" title="重建"></a>重建</h3><p>正常使用情况下，可对EFI分区中的EFI文件夹进行备份。</p>
+<p>若EFI分区损坏，可在DiskGenius下将EFI分区删除，右键所得空闲空间，点击<code>建立ESP/MBR分区</code>，对话框里只选择<code>建立ESP分区</code>，固态硬盘需勾选<code>对齐分区</code>。若弹出是否删除原有引导记录的提示，则选择<code>删除</code>，然后将备份好的EFI文件夹复制进去。</p>
+<p>打开<code>EasyUEFI</code>添加启动项，类型为<code>Linux</code>，路径为<code>/EFI/BOOT/BOOTX64.efi</code>。重启电脑并进入BIOS即可看到新建立的引导启动项，从此项启动即可。</p>
+<h1 id="移动硬盘多系统部署"><a href="#移动硬盘多系统部署" class="headerlink" title="移动硬盘多系统部署"></a>移动硬盘多系统部署</h1><h2 id="空间分配"><a href="#空间分配" class="headerlink" title="空间分配"></a>空间分配</h2><p>用DiskGenius对全盘进行格式化，并转换为GUID分区表。新建一个200-300MB的EFI分区，后分别建立Windows分区（NTFS格式）、MacOS分区（APFS格式）、Ubuntu分区（NTFS分区），其余留空。</p>
+<h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="通过Ghost"><a href="#通过Ghost" class="headerlink" title="通过Ghost"></a>通过Ghost</h4><p>GPT与MBR分区表均可使用ghost，但Ghost备份的系统只适用当前备份系统的机型，不同的主板不通用，且装载GHO的多个主机的SID一致，因此不适用于系统加域的网络环境。</p>
+<p>下载好Windows 10的gho版，在Windows或WinPE下用Ghost将gho镜像恢复到所要安装的分区。安装完成后，由于EFI分区内没有引导，无法启动Windows，故需从任一Windows系统下复制一份EFI到分区中，然后在PE环境打开BOOTICE进行引导修改。</p>
+<p>选择BCD编辑-其它BCD文件，路径为EFI\Microsoft\BOOT\BCD，点击<code>智能编辑模式</code>，启动磁盘&#x2F;分区改为装好Windows的移动硬盘&#x2F;分区，两个保存按钮均点击后退出即可。</p>
+<h4 id="通过WinNTSetup"><a href="#通过WinNTSetup" class="headerlink" title="通过WinNTSetup"></a>通过WinNTSetup</h4><p>下载Windows 10的ISO版本，在Windows或WinPE下打开<code>WinNTSetup安装器</code>。镜像选择ISO里的<code>\Sources\install.wim</code>，引导驱动器选择EFI分区，安装驱动器选择安装Windows 10的分区。保证引导驱动器右侧的三个选项均无红灯后点击安装，完成后重启电脑即可。</p>
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><h4 id="弹出「计算机意外地重新启动或遇到错误」"><a href="#弹出「计算机意外地重新启动或遇到错误」" class="headerlink" title="弹出「计算机意外地重新启动或遇到错误」"></a>弹出「计算机意外地重新启动或遇到错误」</h4><p>按下Shift+F10打开命令提示符，键入regedit并回车，启动注册表编辑器。转到HKEY_LOCAL_MACHINE\SYSTEM\Setup\Status\ChildCompletion，双击右侧窗格中的setup.exe，将数值数据从1修改为3，单击确定以应用更改。退出注册表编辑器并重新启动计算机即可。</p>
+<h4 id="重启后出现defaultuser0用户"><a href="#重启后出现defaultuser0用户" class="headerlink" title="重启后出现defaultuser0用户"></a>重启后出现defaultuser0用户</h4><p>在PE下打开NTPWEdit，加载移动硬盘分区的SAM，路径为Windows\System32\config，把所有用户密码都删掉，保存后重新进入系统即可。</p>
+<h2 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h2><p>参见黑苹果安装教程，安装磁盘改为移动硬盘即可。注意不要安装不必要的驱动，config.plist中不要放显卡和声卡注入项。</p>
+<p>将Clover文件夹与Microsoft文件夹放于同级，并将BOOT&#x2F;BOOTX64.efi替换成Clover的BOOTX64.efi即可引导。</p>
+<h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h2><p>参见Linux安装教程，安装磁盘改为移动硬盘。同理，让EFI分区的EFI&#x2F;BOOT下有ubuntu文件夹即可引导。</p>
+<h2 id="Chrome-OS"><a href="#Chrome-OS" class="headerlink" title="Chrome OS"></a>Chrome OS</h2><p>参见Chrome OS安装教程。注意，所有操作均从未分配空间中进行，因此最后移动硬盘将有两个EFI分区，一个用于引导Windows、Mac与Ubuntu，另一个用于引导Chrome OS。</p>
+<h2 id="引导菜单配置"><a href="#引导菜单配置" class="headerlink" title="引导菜单配置"></a>引导菜单配置</h2><p>经实验，移动硬盘的Clover启动项较易丢失，而Ubuntu启动项能够长期存在，因此在Ubuntu引导菜单添加Clover启动项，可确保黑苹果的成功引导。</p>
+<p>进入Ubuntu系统，在终端输入以下命令查询磁盘，记下EFI分区的<code>UUID</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo blkid</span><br></pre></td></tr></table></figure>
+
+<p>编辑系统盘的&#x2F;etc&#x2F;grub.d&#x2F;40_custom，在文件末尾添加以下内容并保存。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">menuentry &#x27;Mac OS X&#x27; --class os &#123;</span><br><span class="line">	insmod part_gpt</span><br><span class="line">	insmod fat</span><br><span class="line">	set root=&#x27;hd0,gpt1&#x27; // 此处修改为EFI分区位置</span><br><span class="line">search --no-floppy --fs-uuid --set=root C14D-581B // 此处修改为EFI分区的UUID后八位</span><br><span class="line">	chainloader /efi/Boot/bootx64.efi</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在终端输入以下命令更新grub引导器即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-grub</span><br></pre></td></tr></table></figure>
+
+<h2 id="手动启动引导项"><a href="#手动启动引导项" class="headerlink" title="手动启动引导项"></a>手动启动引导项</h2><p>若引导项丢失，可通过EFI Shell启动对应的系统引导文件。进入EFI Shell后按顺序输入以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">map -r -b</span><br><span class="line">// 进入所需要的驱动器，此处为fs7</span><br><span class="line">fs7:</span><br><span class="line">ls</span><br><span class="line">cd efi\boot\</span><br><span class="line">bootx64.efi</span><br></pre></td></tr></table></figure>
+
+<h1 id="引导器"><a href="#引导器" class="headerlink" title="引导器"></a>引导器</h1><h2 id="grub4dos"><a href="#grub4dos" class="headerlink" title="grub4dos"></a>grub4dos</h2><p>grub4dos可引导Windows的多种系统。</p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><p>下载grub4dos包，并将grldr、grldr.mbr和menu.lst复制到C盘根目录，其中grldr和grldr.mbr为引导文件，menu.lst为菜单配置文件。</p>
+<p>进入WinPE环境，打开Bootice并设置当前系统所在硬盘的MBR为grub4dos 0.46a，重启即可进入grub4dos界面。</p>
+<p>也可直接在C盘修改boot.ini，添加以下引导项即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\grldr.mbr=&quot;grub4dos&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>修改menu.lst即可增加或删除引导项。</p>
+<h4 id="WinNT内核"><a href="#WinNT内核" class="headerlink" title="WinNT内核"></a>WinNT内核</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// (hd0,0)为要引导的系统分区</span><br><span class="line">title WinNT</span><br><span class="line">fallback +1</span><br><span class="line">rootnoverity (hd0,0)</span><br><span class="line">chainloader /ntldr</span><br><span class="line">boot</span><br><span class="line">savedefault --wait=2</span><br></pre></td></tr></table></figure>
+
+<h4 id="DOS-x2F-Win9-x内核"><a href="#DOS-x2F-Win9-x内核" class="headerlink" title="DOS&#x2F;Win9.x内核"></a>DOS&#x2F;Win9.x内核</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// (hd0,1)为需要启动的分区</span><br><span class="line">// 除要启动的分区外，其余分区需要隐藏</span><br><span class="line">title Win9x/DOS</span><br><span class="line">fallback +1</span><br><span class="line">unhide (hd0,1)</span><br><span class="line">hide (hd0,2)</span><br><span class="line">...</span><br><span class="line">hide (hd0,n)</span><br><span class="line">rootnoverity (hd0,1)</span><br><span class="line">chainloader (hd0,1)/io.sys</span><br><span class="line">boot</span><br><span class="line">savedefault --wait=2</span><br></pre></td></tr></table></figure>
+
+<h4 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// ISO后缀可以改为IMG</span><br><span class="line">title ISO</span><br><span class="line">map (hd0,0)/name.iso (fd0)</span><br><span class="line">map --hook</span><br><span class="line">chainloader (fd0)+1</span><br><span class="line">rootnoverity (fd0)</span><br></pre></td></tr></table></figure>
+
+<h2 id="BootloaderChooser"><a href="#BootloaderChooser" class="headerlink" title="BootloaderChooser"></a>BootloaderChooser</h2><p>适用于UEFI引导，可在多引导的机器上选择需要引导的efi。</p>
+<p>下载以下链接中的BootX64.efi，复制到EFI分区中的EFI&#x2F;BOOT以替换即可。该引导器可以搜索所有的efi，为此可以引导不同版本的Clover或OpenCore，只需对CLOVERX64.efi或OpenCore.efi重命名即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/jief666/BootloaderChooser/tree/main/efi_files</span><br></pre></td></tr></table></figure>
+
+<h1 id="BIOS-GPT"><a href="#BIOS-GPT" class="headerlink" title="BIOS+GPT"></a>BIOS+GPT</h1><p>可通过模拟UEFI的方式，实现BIOS下的GPT硬盘引导。</p>
+<h2 id="Clover"><a href="#Clover" class="headerlink" title="Clover"></a>Clover</h2><p>通常使用Clover在BIOS下模拟UEFI。</p>
+<p>在Mac下打开Clover的pkg安装包，安装位置选择要安装的硬盘或U盘。点击自定，设置安装到boot0ss（或Boot0af）和Blockio、安装到ESP分区，并选择CloverEFI下的SATA（boot6），进行安装。从U盘启动，理论上启动时将出现<code>6_</code>并成功进入。若卡住，则选择CloverEFI下的BiosBlockIO进行安装，再次从U盘启动，理论上出现<code>7_</code>并成功进入。</p>
+<h2 id="OpenCore"><a href="#OpenCore" class="headerlink" title="OpenCore"></a>OpenCore</h2><p>注意该方法不能用在MBR，也不能在制作完成后更换为Clover引导文件。</p>
+<p>下载OpenCore后打开终端，执行以下命令，选择对应磁盘即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 64位的命令</span><br><span class="line">sudo [OpenCore路径]/Utilities/legacyBoot/BootInstall_X64.tool</span><br><span class="line"></span><br><span class="line"># 32位的命令</span><br><span class="line">sudo [OpenCore路径]/Utilities/legacyBoot/BootInstall_IA32.tool</span><br></pre></td></tr></table></figure>
+
+<h2 id="模拟器"><a href="#模拟器" class="headerlink" title="模拟器"></a>模拟器</h2><p>通过以下链接下载模拟UEFI。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://pan.baidu.com/s/1bnCNCTp#list/path=%2F</span><br></pre></td></tr></table></figure>
+
+<p>进入WinPE环境。将磁盘转换为GPT分区，开头划分出一个200-300MB的EFI分区，可以不建MSR分区。将EFI分区格式化为FAT32，复制压缩包内<code>EFI分区根目录</code>的文件到新建的EFI分区的根目录下。</p>
+<p>运行<code>bootice</code>文件夹里的<code>BOOTICE</code>程序，目标磁盘选择GPT磁盘，点击主引导记录，选择<code>恢复MBR</code>，恢复文件选择文件夹内的<code>boot0ss</code>。恢复完成后回到主界面，点击<code>分区引导记录</code>，目标分区选择EFI分区，点击<code>恢复PBR</code>，恢复文件选择文件夹内的<code>boot1f32alt</code>。完成后重启即可进入模拟UEFI环境。</p>
+<p>若需向GPT磁盘中在安装Windows，则可以先行分出另一个EFI分区，并对此分区添加盘符，利用WinNTSetup安装系统时将此EFI分区设为引导驱动器，安装完成后再次进行上述MBR和PBR的恢复操作。确认系统能够正常进入后，可保留当前EFI结构或者将EFI分区中的Microsoft文件夹复制到模拟UEFI所安装的EFI分区。注意，系统安装完成后不能进行更新操作，否则由于Windows更新会重写EFI分区，更新完成后会无法进入系统。</p>
+<p>完成后可以精简和更新EFI分区的内容。如果使用的是64位的UEFI，则可删掉driverIA32.efi，同时可以将CLOVERX64.efi替换为最新版本。</p>
+<p>注意，如果需要用Clover引导MBR磁盘下的Windows，则需要在drivers64UEFI文件夹里放置NTFS.efi，并编辑config.plist，在Scan标签页下勾选<code>Legacy</code>。</p>
+<h1 id="关闭BIOS安全启动"><a href="#关闭BIOS安全启动" class="headerlink" title="关闭BIOS安全启动"></a>关闭BIOS安全启动</h1><p>从以下地址下载镜像文件，并用Etcher写入U盘。在具有安全启动功能的PC上的首次启动将显示访问冲突消息框。按确定，然后选择<code>从文件注册证书</code>，选择ENROLL_THIS_KEY_IN_MOKMANAGER.cer并确认证书注册即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/ValdikSS/Super-UEFIinSecureBoot-Disk/releases</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="装系统不求人——硬盘的秘密深入"><a href="#装系统不求人——硬盘的秘密深入" class="headerlink" title="装系统不求人——硬盘的秘密深入"></a>装系统不求人——硬盘的秘密深入</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.paincker.com/sysinst-harddisk-details</span><br></pre></td></tr></table></figure>
+
+<h2 id="Dual-Booting-DOS-and-Windows-95-Follow-up"><a href="#Dual-Booting-DOS-and-Windows-95-Follow-up" class="headerlink" title="Dual Booting DOS and Windows 95 : Follow-up"></a>Dual Booting DOS and Windows 95 : Follow-up</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://retropcbuilder.blogspot.com/2016/11/dual-booting-dos-and-windows-95-follow.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="怎么让老电脑实现UEFI启动NVME-SSD固态硬盘进系统方法"><a href="#怎么让老电脑实现UEFI启动NVME-SSD固态硬盘进系统方法" class="headerlink" title="怎么让老电脑实现UEFI启动NVME SSD固态硬盘进系统方法"></a>怎么让老电脑实现UEFI启动NVME SSD固态硬盘进系统方法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.upantool.com/jiaocheng/ssd/2018/13568.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="无需U盘，任何机器可以用上32-x2F-64bit两种架构的UEFI"><a href="#无需U盘，任何机器可以用上32-x2F-64bit两种架构的UEFI" class="headerlink" title="无需U盘，任何机器可以用上32&#x2F;64bit两种架构的UEFI"></a>无需U盘，任何机器可以用上32&#x2F;64bit两种架构的UEFI</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://bbs.pcbeta.com/viewthread-1536721-1-1.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="How-to-Boot-Linux-ISO-Images-Directly-From-Your-Hard-Drive"><a href="#How-to-Boot-Linux-ISO-Images-Directly-From-Your-Hard-Drive" class="headerlink" title="How to Boot Linux ISO Images Directly From Your Hard Drive"></a>How to Boot Linux ISO Images Directly From Your Hard Drive</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.howtogeek.com/196933/how-to-boot-linux-iso-images-directly-from-your-hard-drive/</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/Some-Useful-Tools.html" rel="prev" title="一些常用的工具">
+      <i class="fa fa-chevron-left"></i> 一些常用的工具
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/Matlab-Installation.html" rel="next" title="Matlab的使用">
+      Matlab的使用 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86"><span class="nav-text">相关知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%8C%BA%E8%A1%A8"><span class="nav-text">分区表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MBR"><span class="nav-text">MBR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GUID-x2F-GPT"><span class="nav-text">GUID&#x2F;GPT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%AF%BC%E6%96%B9%E5%BC%8F"><span class="nav-text">引导方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#BIOS"><span class="nav-text">BIOS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UEFI"><span class="nav-text">UEFI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%9C%AC%E6%9C%BA%E5%BC%95%E5%AF%BC%E6%96%B9%E5%BC%8F"><span class="nav-text">查看本机引导方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ESP-x2F-MSR%E5%88%86%E5%8C%BA"><span class="nav-text">ESP&#x2F;MSR分区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8"><span class="nav-text">作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E5%BB%BA"><span class="nav-text">重建</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E5%A4%9A%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2"><span class="nav-text">移动硬盘多系统部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%88%86%E9%85%8D"><span class="nav-text">空间分配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows"><span class="nav-text">Windows</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87Ghost"><span class="nav-text">通过Ghost</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87WinNTSetup"><span class="nav-text">通过WinNTSetup</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%B9%E5%87%BA%E3%80%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%84%8F%E5%A4%96%E5%9C%B0%E9%87%8D%E6%96%B0%E5%90%AF%E5%8A%A8%E6%88%96%E9%81%87%E5%88%B0%E9%94%99%E8%AF%AF%E3%80%8D"><span class="nav-text">弹出「计算机意外地重新启动或遇到错误」</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%8D%E5%90%AF%E5%90%8E%E5%87%BA%E7%8E%B0defaultuser0%E7%94%A8%E6%88%B7"><span class="nav-text">重启后出现defaultuser0用户</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac"><span class="nav-text">Mac</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ubuntu"><span class="nav-text">Ubuntu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chrome-OS"><span class="nav-text">Chrome OS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%AF%BC%E8%8F%9C%E5%8D%95%E9%85%8D%E7%BD%AE"><span class="nav-text">引导菜单配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E5%90%AF%E5%8A%A8%E5%BC%95%E5%AF%BC%E9%A1%B9"><span class="nav-text">手动启动引导项</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%95%E5%AF%BC%E5%99%A8"><span class="nav-text">引导器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#grub4dos"><span class="nav-text">grub4dos</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-1"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9"><span class="nav-text">修改</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#WinNT%E5%86%85%E6%A0%B8"><span class="nav-text">WinNT内核</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DOS-x2F-Win9-x%E5%86%85%E6%A0%B8"><span class="nav-text">DOS&#x2F;Win9.x内核</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%95%9C%E5%83%8F"><span class="nav-text">镜像</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BootloaderChooser"><span class="nav-text">BootloaderChooser</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BIOS-GPT"><span class="nav-text">BIOS+GPT</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Clover"><span class="nav-text">Clover</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenCore"><span class="nav-text">OpenCore</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E6%8B%9F%E5%99%A8"><span class="nav-text">模拟器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E9%97%ADBIOS%E5%AE%89%E5%85%A8%E5%90%AF%E5%8A%A8"><span class="nav-text">关闭BIOS安全启动</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A3%85%E7%B3%BB%E7%BB%9F%E4%B8%8D%E6%B1%82%E4%BA%BA%E2%80%94%E2%80%94%E7%A1%AC%E7%9B%98%E7%9A%84%E7%A7%98%E5%AF%86%E6%B7%B1%E5%85%A5"><span class="nav-text">装系统不求人——硬盘的秘密深入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dual-Booting-DOS-and-Windows-95-Follow-up"><span class="nav-text">Dual Booting DOS and Windows 95 : Follow-up</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E8%AE%A9%E8%80%81%E7%94%B5%E8%84%91%E5%AE%9E%E7%8E%B0UEFI%E5%90%AF%E5%8A%A8NVME-SSD%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98%E8%BF%9B%E7%B3%BB%E7%BB%9F%E6%96%B9%E6%B3%95"><span class="nav-text">怎么让老电脑实现UEFI启动NVME SSD固态硬盘进系统方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E9%9C%80U%E7%9B%98%EF%BC%8C%E4%BB%BB%E4%BD%95%E6%9C%BA%E5%99%A8%E5%8F%AF%E4%BB%A5%E7%94%A8%E4%B8%8A32-x2F-64bit%E4%B8%A4%E7%A7%8D%E6%9E%B6%E6%9E%84%E7%9A%84UEFI"><span class="nav-text">无需U盘，任何机器可以用上32&#x2F;64bit两种架构的UEFI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-Boot-Linux-ISO-Images-Directly-From-Your-Hard-Drive"><span class="nav-text">How to Boot Linux ISO Images Directly From Your Hard Drive</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

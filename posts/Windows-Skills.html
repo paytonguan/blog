@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Windows相关技巧。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows使用技巧总结">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/Windows-Skills.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="Windows相关技巧。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/Windows-Skills/topic.jpg">
+<meta property="article:published_time" content="2020-05-04T04:55:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.553Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/Windows-Skills/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/Windows-Skills.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Windows使用技巧总结 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/Windows-Skills.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Windows使用技巧总结
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-04 12:55:29" itemprop="dateCreated datePublished" datetime="2020-05-04T12:55:29+08:00">2020-05-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>15k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>13 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/Windows-Skills/topic.jpg"></p>
+<p>Windows相关技巧。</p>
+<span id="more"></span>
+
+<h1 id="TODOS"><a href="#TODOS" class="headerlink" title="TODOS"></a>TODOS</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Office 365 E5 账号申请及永久续期教程</span><br><span class="line">https://logi.im/script/permanently-keeping-an-office-e5-account.html</span><br><span class="line"></span><br><span class="line">Windows Subsystem for Android</span><br><span class="line">https://gist.github.com/nufeng1999/9ffb42044bc9b239c89180684819cabe</span><br><span class="line">https://mp.weixin.qq.com/s/uxTyovtZH1rASeNmZhqaLw</span><br><span class="line"></span><br><span class="line">Windows Server 2003 (NT 5.2.3790.0) build guide</span><br><span class="line">https://rentry.co/build-win2k3#additional-info</span><br></pre></td></tr></table></figure>
+
+<h1 id="系统技巧"><a href="#系统技巧" class="headerlink" title="系统技巧"></a>系统技巧</h1><h2 id="更换系统版本"><a href="#更换系统版本" class="headerlink" title="更换系统版本"></a>更换系统版本</h2><p>如将家庭版转为专业版。使用<code>版本万能转换工具</code>即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.winwin7.com/soft/xtgj-8432.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="获取超级管理员权限"><a href="#获取超级管理员权限" class="headerlink" title="获取超级管理员权限"></a>获取超级管理员权限</h2><p>将以下内容保存为reg文件后运行，在右键菜单中即出现超级管理员的菜单。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[-HKEY_CLASSES_ROOT\*\shell\runas]</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\runas]</span><br><span class="line">@=&quot;获取超级管理员权限&quot;</span><br><span class="line">&quot;Icon&quot;=&quot;C:\\Windows\\System32\\imageres.dll,-78&quot;</span><br><span class="line">&quot;NoWorkingDirectory&quot;=&quot;&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\runas\command]</span><br><span class="line">@=&quot;cmd.exe /c takeown /f \&quot;%1\&quot; &amp;&amp; icacls \&quot;%1\&quot; /grant administrators:F&quot;</span><br><span class="line">&quot;IsolatedCommand&quot;=&quot;cmd.exe /c takeown /f \&quot;%1\&quot; &amp;&amp; icacls \&quot;%1\&quot; /grant administrators:F&quot;</span><br><span class="line"></span><br><span class="line">[-HKEY_CLASSES_ROOT\Directory\shell\runas]</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\runas]</span><br><span class="line">@=&quot;获取超级管理员权限&quot;</span><br><span class="line">&quot;Icon&quot;=&quot;C:\\Windows\\System32\\imageres.dll,-78&quot;</span><br><span class="line">&quot;NoWorkingDirectory&quot;=&quot;&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\runas\command]</span><br><span class="line">@=&quot;cmd.exe /c takeown /f \&quot;%1\&quot; /r /d y &amp;&amp; icacls \&quot;%1\&quot; /grant administrators:F /t&quot;</span><br><span class="line">&quot;IsolatedCommand&quot;=&quot;cmd.exe /c takeown /f \&quot;%1\&quot; /r /d y &amp;&amp; icacls \&quot;%1\&quot; /grant administrators:F /t&quot;</span><br><span class="line"></span><br><span class="line">[-HKEY_CLASSES_ROOT\dllfile\shell]</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\dllfile\shell\runas]</span><br><span class="line">@=&quot;获取超级管理员权限&quot;</span><br><span class="line">&quot;HasLUAShield&quot;=&quot;&quot;</span><br><span class="line">&quot;NoWorkingDirectory&quot;=&quot;&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\dllfile\shell\runas\command]</span><br><span class="line">@=&quot;cmd.exe /c takeown /f \&quot;%1\&quot; &amp;&amp; icacls \&quot;%1\&quot; /grant administrators:F&quot;</span><br><span class="line">&quot;IsolatedCommand&quot;=&quot;cmd.exe /c takeown /f \&quot;%1\&quot; &amp;&amp; icacls \&quot;%1\&quot; /grant administrators:F&quot;</span><br><span class="line"></span><br><span class="line">[-HKEY_CLASSES_ROOT\Drive\shell\runas]</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Drive\shell\runas]</span><br><span class="line">@=&quot;获取超级管理员权限&quot;</span><br><span class="line">&quot;Icon&quot;=&quot;C:\\Windows\\System32\\imageres.dll,-78&quot;</span><br><span class="line">&quot;NoWorkingDirectory&quot;=&quot;&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Drive\shell\runas\command]</span><br><span class="line">@=&quot;cmd.exe /c takeown /f \&quot;%1\&quot; /r /d y &amp;&amp; icacls \&quot;%1\&quot; /grant administrators:F /t&quot;</span><br><span class="line">&quot;IsolatedCommand&quot;=&quot;cmd.exe /c takeown /f \&quot;%1\&quot; /r /d y &amp;&amp; icacls \&quot;%1\&quot; /grant administrators:F /t&quot;</span><br></pre></td></tr></table></figure>
+
+<p>若要取消该菜单，则用以下reg。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[-HKEY_CLASSES_ROOT\*\shell\runas]</span><br><span class="line"></span><br><span class="line">[-HKEY_CLASSES_ROOT\Directory\shell\runas]</span><br><span class="line"></span><br><span class="line">[-HKEY_CLASSES_ROOT\dllfile\shell]</span><br><span class="line"></span><br><span class="line">[-HKEY_CLASSES_ROOT\Drive\shell\runas]</span><br><span class="line"></span><br><span class="line">[-HKEY_CLASSES_ROOT\exefile\shell\runas]</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\exefile\shell\runas]</span><br><span class="line">&quot;HasLUAShield&quot;=&quot;&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\exefile\shell\runas\command]</span><br><span class="line">@=&quot;\&quot;%1\&quot; %*&quot;</span><br><span class="line">&quot;IsolatedCommand&quot;=&quot;\&quot;%1\&quot; %*&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="虚拟Wi-Fi功能"><a href="#虚拟Wi-Fi功能" class="headerlink" title="虚拟Wi-Fi功能"></a>虚拟Wi-Fi功能</h2><p>适用于Win7及以上系统。以管理员身份运行命令提示符，运行以下命令以启用虚拟无线网卡。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh wlan set hostednetwork mode=allow ssid=”Win7 AP WOW!” key=wifimima</span><br></pre></td></tr></table></figure>
+
+<p>打开网络与共享中心，进入适配器选项。如果在运行上述命令后没有出现虚拟无线网卡，就说明真实网卡不支持该功能。若出现该网卡，可继续以下操作。</p>
+<p>选择已连接到互联网的网络，右键点击属性-共享，勾选<code>允许其他网络用户通过此计算机的Internet连接来连接</code>并选择刚才开启的虚拟网卡，同时勾选<code>允许其他网络用户控制或禁用贡献的Internet连接</code>。</p>
+<p>继续在命令提示符运行以下命令以开启无线网络。开启后连接该无线网络即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh wlan start hostednetwork</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置Hyper-V"><a href="#设置Hyper-V" class="headerlink" title="设置Hyper-V"></a>设置Hyper-V</h2><p>Hyper-V为Windows自带的虚拟机软件。打开控制面板，选择程序和功能-启用或关闭Windows功能，勾选Hyper-V，确定并安装即可。</p>
+<h2 id="设置Linux子系统"><a href="#设置Linux子系统" class="headerlink" title="设置Linux子系统"></a>设置Linux子系统</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>进入系统设置，点击更新和安全-针对开发人员，选择开发人员模式。打开控制面板，选择程序和功能-启用或关闭Windows功能，勾选<code>适用于Linux的Windows子系统</code>，确定并安装。打开Windows应用商店，搜索Linux，安装并打开Ubuntu。注意需要经常在命令行界面敲回车键，以确认其安装情况。</p>
+<p>完成安装后可直接通过打开应用启动Linux，也可打开命令行并输入<code>bash</code>。</p>
+<h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><h4 id="更换软件源"><a href="#更换软件源" class="headerlink" title="更换软件源"></a>更换软件源</h4><p>依次输入以下命令以备份并打开源配置文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /etc/apt/sources.list /etc/apt/sources.list_backup</span><br><span class="line">sudo vim /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+
+<p>在vim中输入以下命令以替换为阿里云的源地址，并保存退出。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:%s#deb http://archive.ubuntu.com/ubuntu/#deb http://mirrors.aliyun.com/ubuntu/#g</span><br><span class="line">:%s#deb http://security.ubuntu.com/ubuntu/#deb http://mirrors.aliyun.com/ubuntu/#g</span><br><span class="line">:wq</span><br></pre></td></tr></table></figure>
+
+<p>输入以下命令以更新配置。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
+
+<h4 id="更新为WSL2"><a href="#更新为WSL2" class="headerlink" title="更新为WSL2"></a>更新为WSL2</h4><p>Windows 10 19041及更高版本可进行此更新。打开以下链接并点击Linux内核更新包，下载并安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-kernel</span><br></pre></td></tr></table></figure>
+
+<p>以管理员身份打开PowerShell，执行以下命令并重启即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</span><br><span class="line">wsl.exe --set-version Ubuntu 2</span><br><span class="line">wsl.exe --set-default-version 2</span><br></pre></td></tr></table></figure>
+
+<h4 id="WSL1图形界面"><a href="#WSL1图形界面" class="headerlink" title="WSL1图形界面"></a>WSL1图形界面</h4><h5 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h5><p>打开终端并输入以下命令以安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install xorg</span><br><span class="line">sudo apt-get install xfce4</span><br><span class="line">sudo apt-get install xrdp</span><br></pre></td></tr></table></figure>
+
+<h5 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h5><p>打开终端并输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo sed -i &#x27;s/port=3389/port=3390/g&#x27; /etc/xrdp/xrdp.ini</span><br><span class="line">sudo echo xfce4-session &gt;~/.xsession</span><br><span class="line">sudo service xrdp restart</span><br></pre></td></tr></table></figure>
+
+<p>在Windows打开<code>远程桌面连接</code>，计算机名称为<code>[本机IP]:3390</code>，登录即可。注意图形界面运行时需保证终端运行，且<code>xrdp</code>服务处于开启状态。</p>
+<h4 id="WSL2图形界面"><a href="#WSL2图形界面" class="headerlink" title="WSL2图形界面"></a>WSL2图形界面</h4><h5 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h5><p>打开终端并输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade -y</span><br><span class="line">sudo apt-get install tasksel -y</span><br><span class="line">sudo tasksel</span><br></pre></td></tr></table></figure>
+
+<p>选择<code>Ubuntu Desktop</code>，然后用Tab键选择OK，回车确定。</p>
+<p>如果突然退出，遇到<code>tasksel: apt-get failed (100)</code>，则需要重新运行上面最后一条命令，并且重新选择<code>Ubuntu Desktop</code>。安装完成会出现<code>xserver-xorg install</code>。</p>
+<p>继续输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y tigervnc-standalone-server</span><br><span class="line">wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb</span><br><span class="line">sudo dpkg -i packages-microsoft-prod.deb</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install -y dotnet-runtime-3.1</span><br><span class="line">sudo apt-get install -y lightdm</span><br><span class="line">sudo dpkg-reconfigure lightdm</span><br></pre></td></tr></table></figure>
+
+<p>选择LightDM并保存。然后输入以下命令，不用设置view-only password。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vncpasswd</span><br><span class="line">sudo vncpasswd</span><br><span class="line">sudo -u lightdm vncpasswd</span><br><span class="line">// 如果窗口管理器选择的是GDM，则输入sudo -u gdm vncpasswd</span><br><span class="line">sudo mv /usr/bin/Xorg /usr/bin/Xorg_old</span><br></pre></td></tr></table></figure>
+
+<p>通过以下命令编辑Xorg文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /usr/bin/Xorg</span><br></pre></td></tr></table></figure>
+
+<p>内容如下，保存并退出。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">for arg do</span><br><span class="line">  shift</span><br><span class="line">  case $arg in</span><br><span class="line">    # Xvnc doesn&#x27;t support vtxx argument. So we convert to ttyxx instead</span><br><span class="line">    vt*)</span><br><span class="line">      set -- &quot;$@&quot; &quot;$&#123;arg//vt/tty&#125;&quot;</span><br><span class="line">      ;;</span><br><span class="line">    # -keeptty is not supported at all by Xvnc</span><br><span class="line">    -keeptty)</span><br><span class="line">      ;;</span><br><span class="line">    # -novtswitch is not supported at all by Xvnc</span><br><span class="line">    -novtswitch)</span><br><span class="line">      ;;</span><br><span class="line">    # other arguments are kept intact</span><br><span class="line">    *)</span><br><span class="line">      set -- &quot;$@&quot; &quot;$arg&quot;</span><br><span class="line">      ;;</span><br><span class="line">  esac</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"># Here you can change or add options to fit your needs</span><br><span class="line">## command=(&quot;/usr/bin/Xvnc&quot; &quot;-geometry&quot; &quot;2736x1824&quot; &quot;-PasswordFile&quot; &quot;$&#123;HOME:-/root&#125;/.vnc/passwd&quot; &quot;$@&quot;) </span><br><span class="line"># Because my host monitor resolution matches 1440x860</span><br><span class="line">command=(&quot;/usr/bin/Xvnc&quot; &quot;-geometry&quot; &quot;1440x860&quot; &quot;-PasswordFile&quot; &quot;$&#123;HOME:-/root&#125;/.vnc/passwd&quot; &quot;$@&quot;) </span><br><span class="line"></span><br><span class="line">systemd-cat -t /usr/bin/Xorg echo &quot;Starting Xvnc:&quot; &quot;$&#123;command[@]&#125;&quot;</span><br><span class="line"></span><br><span class="line">exec &quot;$&#123;command[@]&#125;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>保存并退出后继续输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 0755 /usr/bin/Xorg</span><br><span class="line">curl -s https://packagecloud.io/install/repositories/arkane-systems/wsl-translinux/script.deb.sh | sudo bash</span><br><span class="line">sudo apt-get install -y systemd-genie</span><br><span class="line">sudo mkdir /usr/lib/genie/</span><br></pre></td></tr></table></figure>
+
+<p>通过以下命令编辑deviated-preverts.conf文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /usr/lib/genie/deviated-preverts.conf</span><br></pre></td></tr></table></figure>
+
+<p>将以下内容写入文件，保存并退出。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;daemonize&quot;: &quot;/usr/bin/daemonize&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>继续执行以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">genie -s</span><br></pre></td></tr></table></figure>
+
+<p>通过以下命令编辑lightdm.conf文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/lightdm/lightdm.conf</span><br></pre></td></tr></table></figure>
+
+<p>写入以下内容，保存并退出。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[LightDM]</span><br><span class="line">start-default-seat=false</span><br><span class="line"></span><br><span class="line">[XDMCPServer]</span><br><span class="line">enabled=true</span><br><span class="line">port=177</span><br></pre></td></tr></table></figure>
+
+<p>继续执行以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service lightdm restart</span><br></pre></td></tr></table></figure>
+
+<h5 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h5><p>打开以下链接以下载VcXsrv Windows X Server。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://sourceforge.net/projects/vcxsrv/</span><br></pre></td></tr></table></figure>
+
+<p>连接前在Linux的终端输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">genie -s</span><br><span class="line">hostname -I | awk &#x27;&#123;print $1&#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>记住输出的IP地址。打开VcXsrv，选择One window without titlebar后点击下一步，然后选择Open session via XDMCP后点击下一步。在Connect to host输入框中输入刚才的IP地址后点击下一步。选择Clipboard和Disable access control，取消选择Native opengl，然后点击下一步，完成即可。</p>
+<h2 id="设置打印机"><a href="#设置打印机" class="headerlink" title="设置打印机"></a>设置打印机</h2><h3 id="网络打印机安装"><a href="#网络打印机安装" class="headerlink" title="网络打印机安装"></a>网络打印机安装</h3><p>将打印机插入网口，配置好IP地址。安装打印机驱动后，在电脑上添加网络打印机，选择没有端口的打印机，再选择不共享这台打印机即可。</p>
+<p>如果出现可以Ping通打印机但无法搜索安装打印机的情况，重启打印机即可。</p>
+<h3 id="本地打印机共享"><a href="#本地打印机共享" class="headerlink" title="本地打印机共享"></a>本地打印机共享</h3><p>在连接有打印机的主机上设置打印机为共享，然后进入网络与共享中心，点击更改高级共享设置-启用文件和打印机共享。</p>
+<p>在需要连接共享打印机的电脑上打开控制面板，选择程序和功能-启用或关闭Windows功能，勾选打印与文件服务、SMB 1.0&#x2F;CIFS文件共享支持，确定并安装。</p>
+<p>对于普通打印机，在文件管理器输入连接有打印机的主机的IP地址，注意需要添加双反斜杠，即<code>\\[IP地址]</code>。正常情况下即访问到电脑资源，若需要输入用户名和密码，则输入主机的用户名和密码即可。进入后双击打印机安装即可，若安装失败，则安装打印机驱动后重试。</p>
+<p>对于较老的打印机，打开设备管理器，点击操作-添加过时硬件，选择手动从列表选择，找到打印机并点击下一步。然后选择创建新端口，端口类型为Local Port，端口名称为<code>\\[IP地址]\[打印机名称]</code>。添加后选择<code>从磁盘安装</code>，选择驱动程序中的INF文件后，在列表中点击对应打印机的型号，完成安装。</p>
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><h4 id="无法打开添加打印机"><a href="#无法打开添加打印机" class="headerlink" title="无法打开添加打印机"></a>无法打开添加打印机</h4><p>打开服务选项，找到Print Spooler这个服务的选项，点击启动即可。</p>
+<h4 id="无法安装打印机驱动"><a href="#无法安装打印机驱动" class="headerlink" title="无法安装打印机驱动"></a>无法安装打印机驱动</h4><p>切换到管理员用户即可。</p>
+<h4 id="Ping不通网络打印机"><a href="#Ping不通网络打印机" class="headerlink" title="Ping不通网络打印机"></a>Ping不通网络打印机</h4><p>检查打印机端口线路是否正常，打印机是否接入正确的端口。若无问题，则刷新打印机IP，开启端口。仍无效，则关闭打印机所有正在打印的任务，然后打开运行，输入spool，找到printers文件夹，删除所有文件，再打开命令提示符并输入以下命令以重启打印机服务即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">net stop spooler</span><br><span class="line">net start spooler</span><br></pre></td></tr></table></figure>
+
+<h2 id="开启卓越模式电源计划"><a href="#开启卓越模式电源计划" class="headerlink" title="开启卓越模式电源计划"></a>开启卓越模式电源计划</h2><p>打开Powershell，执行以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除「添加或删除程序」里的无用选项"><a href="#删除「添加或删除程序」里的无用选项" class="headerlink" title="删除「添加或删除程序」里的无用选项"></a>删除「添加或删除程序」里的无用选项</h2><p>Win+R调出运行框，输入regedit，定位到HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall，将要删除的软件对应的键删除即可。</p>
+<h2 id="登录相关"><a href="#登录相关" class="headerlink" title="登录相关"></a>登录相关</h2><h3 id="取消按Ctrl-Alt-Del登录"><a href="#取消按Ctrl-Alt-Del登录" class="headerlink" title="取消按Ctrl+Alt+Del登录"></a>取消按Ctrl+Alt+Del登录</h3><p>进入控制面板，双击管理工具，选择本地安全策略，点击安全设置-本地策略-安全选项，在右侧选择<code>交互式登录：无须按Ctrl+Alt+Del</code>，启用即可。</p>
+<h3 id="开启自动登录"><a href="#开启自动登录" class="headerlink" title="开启自动登录"></a>开启自动登录</h3><p>Win+R打开<code>运行</code>，输入<code>control userpasswords2</code>后回车，取消勾选<code>要使用本机，用户必须输入用户名和密码</code>即可。</p>
+<h2 id="运行库安装"><a href="#运行库安装" class="headerlink" title="运行库安装"></a>运行库安装</h2><p>提示运行库缺失时，可通过AiO Runtimes一键安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// Windows 2000/XP</span><br><span class="line">https://pan-yz.chaoxing.com/external/m/file/337329473334308864</span><br><span class="line"></span><br><span class="line">// Windows Vista及以上</span><br><span class="line">https://pan-yz.chaoxing.com/external/m/file/337350294375264256</span><br></pre></td></tr></table></figure>
+
+<h2 id="停止自动更新"><a href="#停止自动更新" class="headerlink" title="停止自动更新"></a>停止自动更新</h2><h3 id="通过删除文件"><a href="#通过删除文件" class="headerlink" title="通过删除文件"></a>通过删除文件</h3><p>卸载升级相关软件后，打开系统盘并删除以下文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C:\$*</span><br><span class="line">C:\Windows10Update</span><br><span class="line">C:\Windows\UpdateAssistant*</span><br><span class="line">C:\Windows\SoftwareDistribution\Download\*</span><br></pre></td></tr></table></figure>
+
+<p>打开以下链接，下载Control Panel Plus后打开并取消Windows更新即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.lanzoux.com/iUuXtez2fde</span><br></pre></td></tr></table></figure>
+
+<h3 id="通过把网络设为按流量计费的连接"><a href="#通过把网络设为按流量计费的连接" class="headerlink" title="通过把网络设为按流量计费的连接"></a>通过把网络设为按流量计费的连接</h3><p>打开网络和Internet属性，选择更改连接属性，打开<code>设为按流量计费的连接</code>即可。</p>
+<h3 id="通过禁止系统自动下载更新程序"><a href="#通过禁止系统自动下载更新程序" class="headerlink" title="通过禁止系统自动下载更新程序"></a>通过禁止系统自动下载更新程序</h3><p>在此电脑上右键点击属性，选择高级系统设置-硬件-设备安装设置，在<code>是否要自动下载适合你设备的制造商应用和自定义图标</code>选择否即可。</p>
+<h2 id="破解登录密码"><a href="#破解登录密码" class="headerlink" title="破解登录密码"></a>破解登录密码</h2><p>准备Windows 10安装U盘，从U盘启动后点击下一步-修复计算机-疑难解答-命令提示符。用<code>dir</code>命令查看系统盘符（假设为C盘），然后输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C:</span><br><span class="line">cd Windows/System32</span><br><span class="line">ren sethc.exe AAA.exe</span><br><span class="line">ren cmd.exe sethc.exe</span><br></pre></td></tr></table></figure>
+
+<p>重启到登录界面，按五次Shift进入命令行，输入以下命令以启用内置管理员账户并重置密码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">net user Administrator /active:yes </span><br><span class="line">net user Administrator [新密码]</span><br></pre></td></tr></table></figure>
+
+<p>进入系统后将Windows&#x2F;System32下的sethc.exe重命名为cmd.exe，AAA.exe重命名为sethc.exe。</p>
+<h2 id="桌面美化"><a href="#桌面美化" class="headerlink" title="桌面美化"></a>桌面美化</h2><p>可通过以下软件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.apumiao.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="重置网络设置"><a href="#重置网络设置" class="headerlink" title="重置网络设置"></a>重置网络设置</h2><p>打开命令行并输入以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">netsh winsock reset(需要管理员身份，输完之后重启)</span><br><span class="line">ipconfig/release</span><br><span class="line">ipconfig/renew</span><br><span class="line">ipconfig/displaydns</span><br><span class="line">ipconfig/flushdns</span><br></pre></td></tr></table></figure>
+
+<h2 id="降低CPU占用率"><a href="#降低CPU占用率" class="headerlink" title="降低CPU占用率"></a>降低CPU占用率</h2><p>按Win+R打开运行，输入services.msc打开服务，禁用HomeGroup开头、Diagnostics开头与Connected User Experiences and Telemetry服务。</p>
+<p>按Win+R打开运行，输入regedit打开服务注册表编辑器，点击HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TimeBroker，找到Start值，双击打开，设置数值数据为4。</p>
+<p>关闭Windows更新中的更新来自多个位置。</p>
+<p>打开系统设置-个性化-锁屏界面，将Windows聚焦改为其他背景模式。</p>
+<p>关闭Windows提示。</p>
+<h2 id="驱动安装"><a href="#驱动安装" class="headerlink" title="驱动安装"></a>驱动安装</h2><h3 id="显卡"><a href="#显卡" class="headerlink" title="显卡"></a>显卡</h3><h4 id="AMD"><a href="#AMD" class="headerlink" title="AMD"></a>AMD</h4><p>先卸载Windows自动安装的显卡驱动，再安装AMD官方的显卡驱动即可。ATI Mobility Radeon HD 3400 Series显卡驱动下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">链接 / https://pan.baidu.com/s/1slDL7Y1</span><br><span class="line">提取码 / heyd</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装Android子系统"><a href="#安装Android子系统" class="headerlink" title="安装Android子系统"></a>安装Android子系统</h2><h3 id="Windows-11"><a href="#Windows-11" class="headerlink" title="Windows 11"></a>Windows 11</h3><p>Windows 11可使用Windows Subsystem for Android运行安卓APP。</p>
+<p>在安装前需要先通过Windows Update安装所有的更新。在设置-系统-关于下，操作系统版本需要在<code>22000.526</code>及以上，硬盘需要为SSD，Microsoft Store版本需要高于<code>22110.1402.6.0</code>，可在Microsoft Store点击头像，选择应用设置，下拉到底查看。</p>
+<p>需要通过抓取Microsoft Store中的Windows Subsystem for Android安装包。原安装地址如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.microsoft.com/store/productId/9P3395VX91NR</span><br></pre></td></tr></table></figure>
+
+<p>打开以下抓包网址，复制以上商店链接，通道选择Slow。Fast、Slow、RP、Retail分别对应Windows的Dev渠道、Beta渠道、RP渠道和正式版，目前只有Beta渠道有发布。下载最下面名为<code>MicrosoftCorporationII.WindowsSubsystemForAndroid_*.msixbundle</code>的包。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://store.rg-adguard.net/</span><br></pre></td></tr></table></figure>
+
+<p>打开PowerShell并运行以下命令，安装下载下来的包即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add-appxpackage [msixbundle包路径]</span><br></pre></td></tr></table></figure>
+
+<h3 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h3><p>Windows 10可使用以下仓库实现。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/cinit/WSAPatch</span><br></pre></td></tr></table></figure>
+
+<p>教程如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.kdocs.cn/l/ctwrfU5tAOjU</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装APK"><a href="#安装APK" class="headerlink" title="安装APK"></a>安装APK</h3><p>可使用Apk Installer。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://gitee.com/haoyu3/wsainstall-tool</span><br></pre></td></tr></table></figure>
+
+<h2 id="快速打开网站"><a href="#快速打开网站" class="headerlink" title="快速打开网站"></a>快速打开网站</h2><p>进入浏览器快捷方式属性，在目标后空一格并输入网址即可。</p>
+<h2 id="远程控制"><a href="#远程控制" class="headerlink" title="远程控制"></a>远程控制</h2><h3 id="Mac连接到Windows"><a href="#Mac连接到Windows" class="headerlink" title="Mac连接到Windows"></a>Mac连接到Windows</h3><p>在App Store下载Microsoft Remote Deskto‪p，注意需要切换到美区账号。也可通过以下链接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://apps.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12</span><br></pre></td></tr></table></figure>
+
+<p>在Windows下打开系统属性，将远程登录设置允许远程协助，并允许任意版本桌面连接。完成后在Mac的远程登录客户端输入IP或主机名即可完成远程登录。</p>
+<h3 id="Windows连接到Mac"><a href="#Windows连接到Mac" class="headerlink" title="Windows连接到Mac"></a>Windows连接到Mac</h3><p>以VNCViewer为例，下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.realvnc.com/en/connect/download/viewer/</span><br></pre></td></tr></table></figure>
+
+<p>在Mac开启屏幕共享，然后在Windows的VNCViewer输入用户名密码即可。</p>
+<p>也可使用TigerVNC，方式与VNCViewer一致，注意在软件设置中开启<code>Allow loopback connections</code>，即允许本地接入。</p>
+<h2 id="批处理脚本"><a href="#批处理脚本" class="headerlink" title="批处理脚本"></a>批处理脚本</h2><p>复制以下代码到记事本，并另存为bat文件，使用时双击打开即可。</p>
+<h3 id="批量修改后缀名"><a href="#批量修改后缀名" class="headerlink" title="批量修改后缀名"></a>批量修改后缀名</h3><p>注意，本bat文件对文件夹内的所有文件均适用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 修改gif为jpg</span><br><span class="line">ren *.gif *.jpg</span><br><span class="line"></span><br><span class="line"># 修改所有文件为jpg</span><br><span class="line">ren *.* *.jpg</span><br></pre></td></tr></table></figure>
+
+<h3 id="可信任站点设置"><a href="#可信任站点设置" class="headerlink" title="可信任站点设置"></a>可信任站点设置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 可信任站点设置</span><br><span class="line"># 网址及地址，改写成你自己需要设置的网址及地址</span><br><span class="line">reg add &quot;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\baidu.com\www&quot; /v http /t REG_DWORD /d 0x00000002 /f</span><br><span class="line">reg add &quot;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\8.8.4.8&quot; /v http /t REG_DWORD /d 0x00000002 /f</span><br><span class="line">reg add &quot;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\test.com.cn&quot; /v http /t REG_DWORD /d 0x00000002 /f</span><br><span class="line"></span><br><span class="line"># 主页设置</span><br><span class="line">reg add &quot;HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main&quot; /v &quot;Start Page&quot; /t reg_sz /d www.google.com /f</span><br><span class="line">reg add &quot;HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main&quot; /v &quot;Default_Page_URL&quot; /t reg_sz /d www.google.com /f</span><br><span class="line"># 主页死锁！</span><br><span class="line">reg add &quot;HKCU\Software\Policies\Microsoft\Internet Explorer\Control Panel&quot; /v HomePage /d 1 /f &gt;nul</span><br><span class="line"># 异议！该指令用于解除死锁！</span><br><span class="line">reg delete &quot;HKCU\Software\Policies\Microsoft\Internet Explorer\Control Panel&quot; /v HomePage /f</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<h2 id="Python脚本"><a href="#Python脚本" class="headerlink" title="Python脚本"></a>Python脚本</h2><h3 id="批量打印"><a href="#批量打印" class="headerlink" title="批量打印"></a>批量打印</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import win32api</span><br><span class="line">import win32print</span><br><span class="line">import os</span><br><span class="line">def printer_loading(filename):</span><br><span class="line">    win32api.ShellExecute (</span><br><span class="line">    0,</span><br><span class="line">    &quot;print&quot;,</span><br><span class="line">    filename,</span><br><span class="line">    &#x27;/d:&quot;%s&quot;&#x27; % win32print.GetDefaultPrinter (),</span><br><span class="line">    &quot;.&quot;,</span><br><span class="line">    0</span><br><span class="line">    )</span><br><span class="line">path=&#x27;D:/文件夹&#x27;</span><br><span class="line">for filenames in os.listdir(path):</span><br><span class="line">    printer_loading(os.path.join(path,filenames))</span><br></pre></td></tr></table></figure>
+
+<h2 id="给文件添加备注"><a href="#给文件添加备注" class="headerlink" title="给文件添加备注"></a>给文件添加备注</h2><p>可在文件上右键，点击设置-详细信息，部分格式可以在此处添加备注。</p>
+<p>对于没有备注一栏的格式，可通过FileMeta添加。打开软件后选择需要添加的格式，左侧选择Simple后点击<code>Add File Meta Handler</code>即可。</p>
+<p>注意修改后的文件只能使用Windows内置机制复制文件，且均需为NTFS。如果需要添加到压缩包，则在压缩时需要勾选<code>保存文件流数据</code>。如果不满足条件，可对修改过的文件点击右键，选择Metadata-Export to XML以导出备注，导入时则选择文件和XML并点击Metadata-Import from XML即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/Dijji/FileMeta</span><br></pre></td></tr></table></figure>
+
+<p>如果需要给文件夹添加备注，可通过编辑该文件夹下的desktop.ini，添加以下内容即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">InfoTip=[需要添加的备注]</span><br></pre></td></tr></table></figure>
+
+<p>也可使用FolderMeta。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://gitee.com/alwcel/FolderMeta</span><br></pre></td></tr></table></figure>
+
+<h2 id="主题美化"><a href="#主题美化" class="headerlink" title="主题美化"></a>主题美化</h2><h3 id="桌面"><a href="#桌面" class="headerlink" title="桌面"></a>桌面</h3><p>可通过以下软件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://www.huoying666.com/</span><br><span class="line">https://www.rainmeter.net/</span><br></pre></td></tr></table></figure>
+
+<h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><p>指针库如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://www.cursors-4u.com/</span><br><span class="line">https://zhutix.com/tag/cursors/</span><br></pre></td></tr></table></figure>
+
+<h3 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h3><p>图标库如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zhutix.com/tag/tubiao/</span><br></pre></td></tr></table></figure>
+
+<h1 id="常见问题-1"><a href="#常见问题-1" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="分区表错误导致硬盘无法识别"><a href="#分区表错误导致硬盘无法识别" class="headerlink" title="分区表错误导致硬盘无法识别"></a>分区表错误导致硬盘无法识别</h2><p>进入DOS版的Diskgenius并修复分区表即可。注意，WinPE的Diskgenius无效。</p>
+<h2 id="删除文件显示「访问被拒绝」"><a href="#删除文件显示「访问被拒绝」" class="headerlink" title="删除文件显示「访问被拒绝」"></a>删除文件显示「访问被拒绝」</h2><p>对于XP系统，需要先选择菜单栏的工具-文件夹选项-查看，取消勾选<code>使用简单文件共享</code>后确定。在需要操作的文件上右键选择属性-安全-高级-所有者，选择<code>Administrators</code>并勾选<code>替换子容器及对象的所有者</code>，确定即可。</p>
+<p>如果仍然不行，则点击安全-添加-高级-立即查找，然后一路确定即可。</p>
+<h2 id="网站PING不通但能访问"><a href="#网站PING不通但能访问" class="headerlink" title="网站PING不通但能访问"></a>网站PING不通但能访问</h2><p>有可能为该网站禁用了ICMP回应或者开启了ICMP过滤。</p>
+<h2 id="蓝屏"><a href="#蓝屏" class="headerlink" title="蓝屏"></a>蓝屏</h2><p>一般由硬件的驱动与软件程序的不兼容造成程序的冲突而引起，或主机内部系统程序造成硬件执行异常。</p>
+<h3 id="0xc000014c启动视窗界面失败"><a href="#0xc000014c启动视窗界面失败" class="headerlink" title="0xc000014c启动视窗界面失败"></a>0xc000014c启动视窗界面失败</h3><p>计算机确认操作冲突由此造成的数据的不一致，导致系统无法处理异常而崩溃。在PE界面，打开命令提示符，输入如下指令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy C:\windows\system32\config\RegBack\* C:\windows\system32\config</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="Windows环境下的安装gcc-c语言环境"><a href="#Windows环境下的安装gcc-c语言环境" class="headerlink" title="Windows环境下的安装gcc(c语言环境)"></a>Windows环境下的安装gcc(c语言环境)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.cnblogs.com/fps2tao/p/11539712.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装好电驴插件后，怎么用来下ED2K"><a href="#安装好电驴插件后，怎么用来下ED2K" class="headerlink" title="安装好电驴插件后，怎么用来下ED2K"></a>安装好电驴插件后，怎么用来下ED2K</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://tieba.baidu.com/p/5381182810?red_tag=x2303093348&amp;traceid=</span><br></pre></td></tr></table></figure>
+
+<h2 id="Windows-10下忘记密码的解决方案-本地账户，微软账户通杀"><a href="#Windows-10下忘记密码的解决方案-本地账户，微软账户通杀" class="headerlink" title="Windows 10下忘记密码的解决方案(本地账户，微软账户通杀)"></a>Windows 10下忘记密码的解决方案(本地账户，微软账户通杀)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.bugprogrammer.me/2018/05/27/reset-password-for-windows-10.html</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="从Ubuntu-for-WSL-1升级成WSL-2的命令及设WSL-2为默认版本"><a href="#从Ubuntu-for-WSL-1升级成WSL-2的命令及设WSL-2为默认版本" class="headerlink" title="从Ubuntu for WSL 1升级成WSL 2的命令及设WSL 2为默认版本"></a>从Ubuntu for WSL 1升级成WSL 2的命令及设WSL 2为默认版本</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://ywnz.com/linuxjc/7219.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="WSL2下让Ubuntu20-04安装Gnome桌面"><a href="#WSL2下让Ubuntu20-04安装Gnome桌面" class="headerlink" title="WSL2下让Ubuntu20.04安装Gnome桌面"></a>WSL2下让Ubuntu20.04安装Gnome桌面</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://www.chengxuzhilu.com/2395.html</span><br><span class="line">https://www.most-useful.com/ubuntu-20-04-desktop-gui-on-wsl-2-on-surface-pro-4.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="用Win7，电脑就是路由器"><a href="#用Win7，电脑就是路由器" class="headerlink" title="用Win7，电脑就是路由器"></a>用Win7，电脑就是路由器</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://hoochanlon.github.io/fq-book/#/append/win7-wifi</span><br></pre></td></tr></table></figure>
+
+<h2 id="微软PsPing适用于Windows平台的网络测试工具"><a href="#微软PsPing适用于Windows平台的网络测试工具" class="headerlink" title="微软PsPing适用于Windows平台的网络测试工具"></a>微软PsPing适用于Windows平台的网络测试工具</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/15171.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="TCPing-一款检测端口是否开启和TCP延迟的工具"><a href="#TCPing-一款检测端口是否开启和TCP延迟的工具" class="headerlink" title="TCPing 一款检测端口是否开启和TCP延迟的工具"></a>TCPing 一款检测端口是否开启和TCP延迟的工具</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/14528.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="window10怎么降低CPU利用率过高问题"><a href="#window10怎么降低CPU利用率过高问题" class="headerlink" title="window10怎么降低CPU利用率过高问题"></a>window10怎么降低CPU利用率过高问题</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://jingyan.baidu.com/article/d5c4b52b96c251da570dc548.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="win10降低cpu使用率的四种方法"><a href="#win10降低cpu使用率的四种方法" class="headerlink" title="win10降低cpu使用率的四种方法"></a>win10降低cpu使用率的四种方法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.qiuyexitong.com/article/2005.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="windows10下AMD显卡驱动无法安装的解决方法"><a href="#windows10下AMD显卡驱动无法安装的解决方法" class="headerlink" title="windows10下AMD显卡驱动无法安装的解决方法"></a>windows10下AMD显卡驱动无法安装的解决方法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://jingyan.baidu.com/article/7908e85cb3701aaf481ad2d9.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="Python实现批量打印功能"><a href="#Python实现批量打印功能" class="headerlink" title="Python实现批量打印功能"></a>Python实现批量打印功能</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.lanqibing.com/python%E5%AE%9E%E7%8E%B0%E6%89%B9%E9%87%8F%E6%89%93%E5%8D%B0%E5%8A%9F%E8%83%BD/</span><br></pre></td></tr></table></figure>
+
+<h2 id="构建自己的远程接入系统"><a href="#构建自己的远程接入系统" class="headerlink" title="构建自己的远程接入系统"></a>构建自己的远程接入系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/146548321</span><br></pre></td></tr></table></figure>
+
+<h2 id="EditPlus注册码在线生成，附开源算法代码"><a href="#EditPlus注册码在线生成，附开源算法代码" class="headerlink" title="EditPlus注册码在线生成，附开源算法代码"></a>EditPlus注册码在线生成，附开源算法代码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/4780.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装-Windows-Subsystem-for-Android™️-安装-Windows-Subsystem-for-Android™️-·-GitHub"><a href="#安装-Windows-Subsystem-for-Android™️-安装-Windows-Subsystem-for-Android™️-·-GitHub" class="headerlink" title="[安装 Windows Subsystem for Android™️ ] 安装 Windows Subsystem for Android™️ · GitHub"></a>[安装 Windows Subsystem for Android™️ ] 安装 Windows Subsystem for Android™️ · GitHub</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://gist.github.com/nufeng1999/9ffb42044bc9b239c89180684819cabe</span><br></pre></td></tr></table></figure>
+
+<h2 id="为什么有些网站PING不通但又能访问"><a href="#为什么有些网站PING不通但又能访问" class="headerlink" title="为什么有些网站PING不通但又能访问."></a>为什么有些网站PING不通但又能访问.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.cnblogs.com/kunlunmountain/p/5945756.html</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/Instructions-Of-Office.html" rel="prev" title="Office使用指南">
+      <i class="fa fa-chevron-left"></i> Office使用指南
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/Instructions-Of-RSS.html" rel="next" title="RSS使用指南">
+      RSS使用指南 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TODOS"><span class="nav-text">TODOS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E6%8A%80%E5%B7%A7"><span class="nav-text">系统技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC"><span class="nav-text">更换系统版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E8%B6%85%E7%BA%A7%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90"><span class="nav-text">获取超级管理员权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E6%8B%9FWi-Fi%E5%8A%9F%E8%83%BD"><span class="nav-text">虚拟Wi-Fi功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AEHyper-V"><span class="nav-text">设置Hyper-V</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AELinux%E5%AD%90%E7%B3%BB%E7%BB%9F"><span class="nav-text">设置Linux子系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="nav-text">基本配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E8%BD%AF%E4%BB%B6%E6%BA%90"><span class="nav-text">更换软件源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E4%B8%BAWSL2"><span class="nav-text">更新为WSL2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#WSL1%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2"><span class="nav-text">WSL1图形界面</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-1"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#WSL2%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2"><span class="nav-text">WSL2图形界面</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-2"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-1"><span class="nav-text">使用</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E6%89%93%E5%8D%B0%E6%9C%BA"><span class="nav-text">设置打印机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E6%89%93%E5%8D%B0%E6%9C%BA%E5%AE%89%E8%A3%85"><span class="nav-text">网络打印机安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E6%89%93%E5%8D%B0%E6%9C%BA%E5%85%B1%E4%BA%AB"><span class="nav-text">本地打印机共享</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%B7%BB%E5%8A%A0%E6%89%93%E5%8D%B0%E6%9C%BA"><span class="nav-text">无法打开添加打印机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E6%89%93%E5%8D%B0%E6%9C%BA%E9%A9%B1%E5%8A%A8"><span class="nav-text">无法安装打印机驱动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Ping%E4%B8%8D%E9%80%9A%E7%BD%91%E7%BB%9C%E6%89%93%E5%8D%B0%E6%9C%BA"><span class="nav-text">Ping不通网络打印机</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%90%AF%E5%8D%93%E8%B6%8A%E6%A8%A1%E5%BC%8F%E7%94%B5%E6%BA%90%E8%AE%A1%E5%88%92"><span class="nav-text">开启卓越模式电源计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E3%80%8C%E6%B7%BB%E5%8A%A0%E6%88%96%E5%88%A0%E9%99%A4%E7%A8%8B%E5%BA%8F%E3%80%8D%E9%87%8C%E7%9A%84%E6%97%A0%E7%94%A8%E9%80%89%E9%A1%B9"><span class="nav-text">删除「添加或删除程序」里的无用选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E7%9B%B8%E5%85%B3"><span class="nav-text">登录相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%96%E6%B6%88%E6%8C%89Ctrl-Alt-Del%E7%99%BB%E5%BD%95"><span class="nav-text">取消按Ctrl+Alt+Del登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%90%AF%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95"><span class="nav-text">开启自动登录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E5%BA%93%E5%AE%89%E8%A3%85"><span class="nav-text">运行库安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%81%9C%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0"><span class="nav-text">停止自动更新</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6"><span class="nav-text">通过删除文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E6%8A%8A%E7%BD%91%E7%BB%9C%E8%AE%BE%E4%B8%BA%E6%8C%89%E6%B5%81%E9%87%8F%E8%AE%A1%E8%B4%B9%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="nav-text">通过把网络设为按流量计费的连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E7%A6%81%E6%AD%A2%E7%B3%BB%E7%BB%9F%E8%87%AA%E5%8A%A8%E4%B8%8B%E8%BD%BD%E6%9B%B4%E6%96%B0%E7%A8%8B%E5%BA%8F"><span class="nav-text">通过禁止系统自动下载更新程序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%B4%E8%A7%A3%E7%99%BB%E5%BD%95%E5%AF%86%E7%A0%81"><span class="nav-text">破解登录密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96"><span class="nav-text">桌面美化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E7%BD%AE%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE"><span class="nav-text">重置网络设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%8D%E4%BD%8ECPU%E5%8D%A0%E7%94%A8%E7%8E%87"><span class="nav-text">降低CPU占用率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85"><span class="nav-text">驱动安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%98%BE%E5%8D%A1"><span class="nav-text">显卡</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#AMD"><span class="nav-text">AMD</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Android%E5%AD%90%E7%B3%BB%E7%BB%9F"><span class="nav-text">安装Android子系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows-11"><span class="nav-text">Windows 11</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows-10"><span class="nav-text">Windows 10</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85APK"><span class="nav-text">安装APK</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%89%93%E5%BC%80%E7%BD%91%E7%AB%99"><span class="nav-text">快速打开网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="nav-text">远程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mac%E8%BF%9E%E6%8E%A5%E5%88%B0Windows"><span class="nav-text">Mac连接到Windows</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows%E8%BF%9E%E6%8E%A5%E5%88%B0Mac"><span class="nav-text">Windows连接到Mac</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC"><span class="nav-text">批处理脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E5%90%8E%E7%BC%80%E5%90%8D"><span class="nav-text">批量修改后缀名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E4%BF%A1%E4%BB%BB%E7%AB%99%E7%82%B9%E8%AE%BE%E7%BD%AE"><span class="nav-text">可信任站点设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python%E8%84%9A%E6%9C%AC"><span class="nav-text">Python脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%B9%E9%87%8F%E6%89%93%E5%8D%B0"><span class="nav-text">批量打印</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%99%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%A4%87%E6%B3%A8"><span class="nav-text">给文件添加备注</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96"><span class="nav-text">主题美化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A1%8C%E9%9D%A2"><span class="nav-text">桌面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-text">指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E6%A0%87"><span class="nav-text">图标</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-1"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%8C%BA%E8%A1%A8%E9%94%99%E8%AF%AF%E5%AF%BC%E8%87%B4%E7%A1%AC%E7%9B%98%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB"><span class="nav-text">分区表错误导致硬盘无法识别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E6%98%BE%E7%A4%BA%E3%80%8C%E8%AE%BF%E9%97%AE%E8%A2%AB%E6%8B%92%E7%BB%9D%E3%80%8D"><span class="nav-text">删除文件显示「访问被拒绝」</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%AB%99PING%E4%B8%8D%E9%80%9A%E4%BD%86%E8%83%BD%E8%AE%BF%E9%97%AE"><span class="nav-text">网站PING不通但能访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%93%9D%E5%B1%8F"><span class="nav-text">蓝屏</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0xc000014c%E5%90%AF%E5%8A%A8%E8%A7%86%E7%AA%97%E7%95%8C%E9%9D%A2%E5%A4%B1%E8%B4%A5"><span class="nav-text">0xc000014c启动视窗界面失败</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%84%E5%AE%89%E8%A3%85gcc-c%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83"><span class="nav-text">Windows环境下的安装gcc(c语言环境)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%A5%BD%E7%94%B5%E9%A9%B4%E6%8F%92%E4%BB%B6%E5%90%8E%EF%BC%8C%E6%80%8E%E4%B9%88%E7%94%A8%E6%9D%A5%E4%B8%8BED2K"><span class="nav-text">安装好电驴插件后，怎么用来下ED2K</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows-10%E4%B8%8B%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-%E6%9C%AC%E5%9C%B0%E8%B4%A6%E6%88%B7%EF%BC%8C%E5%BE%AE%E8%BD%AF%E8%B4%A6%E6%88%B7%E9%80%9A%E6%9D%80"><span class="nav-text">Windows 10下忘记密码的解决方案(本地账户，微软账户通杀)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8EUbuntu-for-WSL-1%E5%8D%87%E7%BA%A7%E6%88%90WSL-2%E7%9A%84%E5%91%BD%E4%BB%A4%E5%8F%8A%E8%AE%BEWSL-2%E4%B8%BA%E9%BB%98%E8%AE%A4%E7%89%88%E6%9C%AC"><span class="nav-text">从Ubuntu for WSL 1升级成WSL 2的命令及设WSL 2为默认版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WSL2%E4%B8%8B%E8%AE%A9Ubuntu20-04%E5%AE%89%E8%A3%85Gnome%E6%A1%8C%E9%9D%A2"><span class="nav-text">WSL2下让Ubuntu20.04安装Gnome桌面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8Win7%EF%BC%8C%E7%94%B5%E8%84%91%E5%B0%B1%E6%98%AF%E8%B7%AF%E7%94%B1%E5%99%A8"><span class="nav-text">用Win7，电脑就是路由器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E8%BD%AFPsPing%E9%80%82%E7%94%A8%E4%BA%8EWindows%E5%B9%B3%E5%8F%B0%E7%9A%84%E7%BD%91%E7%BB%9C%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7"><span class="nav-text">微软PsPing适用于Windows平台的网络测试工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCPing-%E4%B8%80%E6%AC%BE%E6%A3%80%E6%B5%8B%E7%AB%AF%E5%8F%A3%E6%98%AF%E5%90%A6%E5%BC%80%E5%90%AF%E5%92%8CTCP%E5%BB%B6%E8%BF%9F%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="nav-text">TCPing 一款检测端口是否开启和TCP延迟的工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#window10%E6%80%8E%E4%B9%88%E9%99%8D%E4%BD%8ECPU%E5%88%A9%E7%94%A8%E7%8E%87%E8%BF%87%E9%AB%98%E9%97%AE%E9%A2%98"><span class="nav-text">window10怎么降低CPU利用率过高问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#win10%E9%99%8D%E4%BD%8Ecpu%E4%BD%BF%E7%94%A8%E7%8E%87%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="nav-text">win10降低cpu使用率的四种方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#windows10%E4%B8%8BAMD%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-text">windows10下AMD显卡驱动无法安装的解决方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python%E5%AE%9E%E7%8E%B0%E6%89%B9%E9%87%8F%E6%89%93%E5%8D%B0%E5%8A%9F%E8%83%BD"><span class="nav-text">Python实现批量打印功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%84%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%8E%A5%E5%85%A5%E7%B3%BB%E7%BB%9F"><span class="nav-text">构建自己的远程接入系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EditPlus%E6%B3%A8%E5%86%8C%E7%A0%81%E5%9C%A8%E7%BA%BF%E7%94%9F%E6%88%90%EF%BC%8C%E9%99%84%E5%BC%80%E6%BA%90%E7%AE%97%E6%B3%95%E4%BB%A3%E7%A0%81"><span class="nav-text">EditPlus注册码在线生成，附开源算法代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Windows-Subsystem-for-Android%E2%84%A2%EF%B8%8F-%E5%AE%89%E8%A3%85-Windows-Subsystem-for-Android%E2%84%A2%EF%B8%8F-%C2%B7-GitHub"><span class="nav-text">[安装 Windows Subsystem for Android™️ ] 安装 Windows Subsystem for Android™️ · GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%BA%9B%E7%BD%91%E7%AB%99PING%E4%B8%8D%E9%80%9A%E4%BD%86%E5%8F%88%E8%83%BD%E8%AE%BF%E9%97%AE"><span class="nav-text">为什么有些网站PING不通但又能访问.</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

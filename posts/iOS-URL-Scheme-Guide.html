@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="URL Scheme通过类似网站形式的字符串，在浏览器打开时自动跳转到对应的APP。如在浏览器中输入weixin:&#x2F;&#x2F;则跳转到微信。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS URL Scheme指南">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/iOS-URL-Scheme-Guide.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="URL Scheme通过类似网站形式的字符串，在浏览器打开时自动跳转到对应的APP。如在浏览器中输入weixin:&#x2F;&#x2F;则跳转到微信。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/iOS-URL-Scheme-Guide/topic.jpg">
+<meta property="article:published_time" content="2023-11-15T05:18:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.555Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/iOS-URL-Scheme-Guide/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/iOS-URL-Scheme-Guide.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>iOS URL Scheme指南 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/iOS-URL-Scheme-Guide.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          iOS URL Scheme指南
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-15 13:18:29" itemprop="dateCreated datePublished" datetime="2023-11-15T13:18:29+08:00">2023-11-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/iOS-URL-Scheme-Guide/topic.jpg"></p>
+<p>URL Scheme通过类似网站形式的字符串，在浏览器打开时自动跳转到对应的APP。如在浏览器中输入<code>weixin://</code>则跳转到微信。</p>
+<span id="more"></span>
+
+<h1 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h1><h2 id="通过电脑"><a href="#通过电脑" class="headerlink" title="通过电脑"></a>通过电脑</h2><p>用解压工具打开要查询的IPA，获得Payload文件夹，打开并在里面的app文件上右键，选择显示包内容。用Xcode等工具打开Info.plist，进入URL types下的URL Schemes即可看到。或者用文本编辑器打开Info.plist，搜索CFBundleURLTypes也可得到。</p>
+<h2 id="通过手机"><a href="#通过手机" class="headerlink" title="通过手机"></a>通过手机</h2><p>越狱后通过Filza进入IPA查看即可，路径同上。</p>
+<h2 id="通过捷径"><a href="#通过捷径" class="headerlink" title="通过捷径"></a>通过捷径</h2><p>可通过以下捷径查询。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.icloud.com/shortcuts/7803b1b01e6f443187651b6a57fee0f0</span><br></pre></td></tr></table></figure>
+
+<h1 id="常用URL-Schemes"><a href="#常用URL-Schemes" class="headerlink" title="常用URL Schemes"></a>常用URL Schemes</h1><h2 id="腾讯系"><a href="#腾讯系" class="headerlink" title="腾讯系"></a>腾讯系</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"># QQ</span><br><span class="line">## 主页面</span><br><span class="line">mqq://</span><br><span class="line">## 群</span><br><span class="line">mqqapi://card/show_pslcard?src_type=internal&amp;version=1&amp;card_type=group&amp;uin=[QQ群号]</span><br><span class="line">## 联系人</span><br><span class="line">mqqapi://card/show_pslcard?src_type=internal&amp;version=1&amp;uin=[QQ号码]</span><br><span class="line"></span><br><span class="line"># QQ HD</span><br><span class="line">mqqflyticket://</span><br><span class="line"></span><br><span class="line"># 微信</span><br><span class="line">## 主页面</span><br><span class="line">weixin://</span><br><span class="line">wechat://</span><br><span class="line">## 扫一扫</span><br><span class="line">weixin://scanqrcode</span><br><span class="line"># 微信读书</span><br><span class="line">weread://</span><br><span class="line"></span><br><span class="line"># TIM</span><br><span class="line">## 主页面</span><br><span class="line">tim://</span><br><span class="line">## 商务聊天</span><br><span class="line">timtribe://</span><br><span class="line"></span><br><span class="line"># 滴滴</span><br><span class="line">diditaxi://</span><br><span class="line"></span><br><span class="line"># 腾讯新闻</span><br><span class="line">qqnews://</span><br><span class="line"></span><br><span class="line"># 腾讯微云</span><br><span class="line">weiyun://</span><br><span class="line"></span><br><span class="line"># 腾讯地图</span><br><span class="line">sosomap://</span><br><span class="line"></span><br><span class="line"># QQ音乐</span><br><span class="line">## 主页面</span><br><span class="line">QQmusic://</span><br><span class="line">## 最近播放</span><br><span class="line">qqmusic://today?mid=31&amp;k1=2&amp;k4=0</span><br><span class="line"></span><br><span class="line"># QQ浏览器</span><br><span class="line">mttbrowser://</span><br><span class="line"></span><br><span class="line"># QQ斗地主</span><br><span class="line">tencent382://</span><br><span class="line"></span><br><span class="line"># QQ安全中心</span><br><span class="line">qmtoken://</span><br><span class="line"></span><br><span class="line"># QQ国际版</span><br><span class="line">mqqiapi://</span><br><span class="line"></span><br><span class="line"># QQ邮箱</span><br><span class="line">qqmail://</span><br><span class="line">qqquicklogin://</span><br><span class="line"></span><br><span class="line"># 腾讯企业邮箱</span><br><span class="line">qqbizmailDistribute2://</span><br><span class="line"></span><br><span class="line"># 腾讯手机管家</span><br><span class="line">mqqsecure://</span><br><span class="line"></span><br><span class="line"># 腾讯视频</span><br><span class="line">tenvideo://</span><br><span class="line">wb2162695501://</span><br><span class="line"></span><br><span class="line"># 腾讯微博</span><br><span class="line">TencentWeibo://</span><br><span class="line"></span><br><span class="line"># 全民K歌</span><br><span class="line">qmkege://</span><br><span class="line"></span><br><span class="line"># 王者荣耀</span><br><span class="line">tencentlaunch1104466820://</span><br><span class="line"></span><br><span class="line"># 王者荣耀助手</span><br><span class="line">qw1105200115://</span><br><span class="line"></span><br><span class="line"># 企业微信</span><br><span class="line">wxwork://</span><br><span class="line"></span><br><span class="line"># 腾讯动漫</span><br><span class="line">comicreader://</span><br></pre></td></tr></table></figure>
+
+<h2 id="阿里系"><a href="#阿里系" class="headerlink" title="阿里系"></a>阿里系</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"># 淘宝</span><br><span class="line">taobao://</span><br><span class="line"></span><br><span class="line"># 天猫</span><br><span class="line">tmall://</span><br><span class="line"></span><br><span class="line"># 支付宝</span><br><span class="line">## 主页面</span><br><span class="line">alipay://</span><br><span class="line">## 扫一扫</span><br><span class="line">alipayqr://platformapi/startapp?saId=10000007</span><br><span class="line">## 付款</span><br><span class="line">alipay://platformapi/startapp?appId=20000056</span><br><span class="line">## 记账</span><br><span class="line">alipay://platformapi/startapp?appId=20000168</span><br><span class="line">## 滴滴</span><br><span class="line">alipay://platformapi/startapp?appId=20000778</span><br><span class="line">## 蚂蚁森林</span><br><span class="line">alipay://platformapi/startapp?appId=60000002</span><br><span class="line">## 转账</span><br><span class="line">alipayqr://platformapi/startapp?saId=20000116</span><br><span class="line">alipays://platformapi/startapp?appId=20000221</span><br><span class="line">## 手机充值</span><br><span class="line">alipayqr://platformapi/startapp?saId=10000003</span><br><span class="line">## 口令红包</span><br><span class="line">alipayqr://platformapi/startapp?saId=88886666</span><br><span class="line">## 口令红包（带口令）</span><br><span class="line">alipayqr://platformapi/startapp?saId=88886666&amp;passcode=[code]</span><br><span class="line">## 蚂蚁庄园</span><br><span class="line">alipays://platformapi/startapp?appId=66666674</span><br><span class="line">## 蚂蚁宝卡</span><br><span class="line">alipays://platformapi/startapp?appId=60000057</span><br><span class="line">## 股票</span><br><span class="line">alipays://platformapi/startapp?appId=20000134</span><br><span class="line">## 生活缴费</span><br><span class="line">alipays://platformapi/startapp?appId=20000193</span><br><span class="line">## 彩票</span><br><span class="line">alipays://platformapi/startapp?appId=10000011</span><br><span class="line">## 淘票票</span><br><span class="line">alipays://platformapi/startapp?appId=20000131</span><br><span class="line">## 查快递</span><br><span class="line">alipays://platformapi/startapp?appId=20000754</span><br><span class="line">## AA收款</span><br><span class="line">alipays://platformapi/startapp?appId=20000263</span><br><span class="line">## 收款</span><br><span class="line">alipays://platformapi/startapp?appId=20000123</span><br><span class="line">## 还信用卡</span><br><span class="line">alipays://platformapi/startapp?appId=09999999</span><br><span class="line"></span><br><span class="line"># 旺旺卖家版</span><br><span class="line">wangwangseller://?</span><br><span class="line"></span><br><span class="line"># 旺信</span><br><span class="line">wangxin://?</span><br><span class="line"></span><br><span class="line"># 菜鸟裹裹</span><br><span class="line">cainiao://</span><br><span class="line"></span><br><span class="line"># 钉钉</span><br><span class="line">dingtalk://</span><br></pre></td></tr></table></figure>
+
+<h2 id="百度系"><a href="#百度系" class="headerlink" title="百度系"></a>百度系</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"># 百度云</span><br><span class="line">baiduyun://</span><br><span class="line"></span><br><span class="line"># 百度贴吧</span><br><span class="line">com.baidu.tieba://</span><br><span class="line"></span><br><span class="line"># 百度音乐</span><br><span class="line">baidumusic://</span><br><span class="line"></span><br><span class="line"># 百度地图</span><br><span class="line">baidumap://</span><br><span class="line"></span><br><span class="line"># 百度输入法</span><br><span class="line">BaiduIMShop://</span><br><span class="line"></span><br><span class="line"># 百度阅读</span><br><span class="line">bdbook://</span><br><span class="line"></span><br><span class="line"># 手机百度</span><br><span class="line">bdboxiosqrcode://</span><br><span class="line"></span><br><span class="line"># 百度视频</span><br><span class="line">baiduvideoiphone://</span><br><span class="line">bdviphapp://</span><br><span class="line"></span><br><span class="line"># 百度糯米</span><br><span class="line">bainuo://</span><br><span class="line"></span><br><span class="line"># 百度魔图</span><br><span class="line">photowonder://</span><br><span class="line"></span><br><span class="line"># 百度魔拍</span><br><span class="line">wondercamera://</span><br><span class="line"></span><br><span class="line"># 百度导航</span><br><span class="line">bdNavi://</span><br><span class="line"></span><br><span class="line"># 百度浏览器</span><br><span class="line">bdbrowser://</span><br><span class="line"></span><br><span class="line"># 百度网盘</span><br><span class="line">baiduyun://</span><br></pre></td></tr></table></figure>
+
+<h2 id="网易系"><a href="#网易系" class="headerlink" title="网易系"></a>网易系</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"># 网易云音乐</span><br><span class="line">## 主页面</span><br><span class="line">orpheuswidget://</span><br><span class="line">## 播放已下载的音乐</span><br><span class="line">orpheuswidget://download</span><br><span class="line">## 听歌识曲</span><br><span class="line">orpheuswidget://recognize</span><br><span class="line">## 私人FM</span><br><span class="line">orpheuswidget://radio</span><br><span class="line"></span><br><span class="line"># 网易新闻</span><br><span class="line">newsapp://</span><br><span class="line"></span><br><span class="line"># 网易邮箱</span><br><span class="line">neteasemail://</span><br><span class="line"></span><br><span class="line"># 网易公开课</span><br><span class="line">neteaseVopen://</span><br><span class="line">ntesopen://</span><br><span class="line"></span><br><span class="line"># 网易将军令</span><br><span class="line">netease-mkey://?</span><br><span class="line"></span><br><span class="line"># 有道词典</span><br><span class="line">yddict://</span><br><span class="line">yddictproapp://</span><br><span class="line"></span><br><span class="line"># 有道翻译官</span><br><span class="line">ydtranslator://</span><br><span class="line"></span><br><span class="line"># 网易严选</span><br><span class="line">yanxuan://</span><br><span class="line"></span><br><span class="line"># 网易有钱</span><br><span class="line">moneykeeperwiz://</span><br><span class="line"></span><br><span class="line"># 网易漫画</span><br><span class="line">necomics://</span><br><span class="line"></span><br><span class="line"># 有道翻译官</span><br><span class="line">ydtranslator://</span><br></pre></td></tr></table></figure>
+
+<h2 id="银行"><a href="#银行" class="headerlink" title="银行"></a>银行</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># 建设银行</span><br><span class="line">wx2654d9155d70a468://</span><br><span class="line"></span><br><span class="line"># 浦发银行</span><br><span class="line">wx1cb534bb13ba3dbd://?</span><br><span class="line"></span><br><span class="line"># 招商银行</span><br><span class="line">cmbmobilebank://?</span><br><span class="line"></span><br><span class="line"># 中国银行</span><br><span class="line">BOCMBCIZF://</span><br><span class="line"></span><br><span class="line"># 农业银行</span><br><span class="line">bankabc://</span><br><span class="line"></span><br><span class="line"># 中国工商银行</span><br><span class="line">wb19490884://</span><br><span class="line"></span><br><span class="line"># 邮政银行</span><br><span class="line">wb1424286189://</span><br><span class="line"></span><br><span class="line"># 网商银行</span><br><span class="line">ap2016041301292400://</span><br></pre></td></tr></table></figure>
+
+<h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"># iCabMobile</span><br><span class="line">iCabMobile://</span><br><span class="line"></span><br><span class="line"># UC</span><br><span class="line">ucbrowser://</span><br><span class="line"></span><br><span class="line"># 猎豹</span><br><span class="line">sinaweibosso.422729959://</span><br><span class="line"></span><br><span class="line"># Chrome</span><br><span class="line">## 主页面</span><br><span class="line">googlechrome://</span><br><span class="line">## 进剪切板链接</span><br><span class="line">googlechrome://%@</span><br><span class="line">## 用google搜索剪切板内容</span><br><span class="line">googlechrome://www.google.com/#newwindow=1&amp;q=%@</span><br><span class="line"></span><br><span class="line"># 指尖</span><br><span class="line">zhijian://</span><br><span class="line"></span><br><span class="line"># Opera</span><br><span class="line">oupeng-callback://</span><br><span class="line"></span><br><span class="line"># 夸克</span><br><span class="line">quark://</span><br><span class="line"></span><br><span class="line"># 海豚</span><br><span class="line">dolphin://</span><br><span class="line"></span><br><span class="line"># Aloha</span><br><span class="line">optly7634822906://</span><br><span class="line"></span><br><span class="line"># 萝卜</span><br><span class="line">wb3791188321://</span><br><span class="line"></span><br><span class="line"># 鲨鱼</span><br><span class="line">searchss://</span><br><span class="line"></span><br><span class="line"># Take</span><br><span class="line">TakeBrowser://</span><br><span class="line"></span><br><span class="line"># Vip</span><br><span class="line">wxbdba67b8ae3d296e://</span><br><span class="line"></span><br><span class="line"># Ohajiki</span><br><span class="line">oohttp://</span><br></pre></td></tr></table></figure>
+
+<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"># Youtube</span><br><span class="line">youtube://</span><br><span class="line"></span><br><span class="line"># 哔哩哔哩</span><br><span class="line">bilibili://</span><br><span class="line"></span><br><span class="line"># 布卡漫画</span><br><span class="line">buka://</span><br><span class="line"></span><br><span class="line"># 爱奇艺</span><br><span class="line">iqiyi://</span><br><span class="line">qiyi-iphone://</span><br><span class="line"></span><br><span class="line"># 优酷</span><br><span class="line">youku://</span><br><span class="line"></span><br><span class="line"># 土豆</span><br><span class="line">tudou://</span><br><span class="line"></span><br><span class="line"># PPTV</span><br><span class="line">pptv://</span><br><span class="line"></span><br><span class="line"># PPS</span><br><span class="line">ppstream://</span><br><span class="line"></span><br><span class="line"># 暴风影音</span><br><span class="line">com.baofeng.play://</span><br><span class="line"></span><br><span class="line"># 微视</span><br><span class="line">weishiiosscheme://?</span><br><span class="line"></span><br><span class="line"># ACfun</span><br><span class="line">acfun://</span><br><span class="line"></span><br><span class="line"># 抖音</span><br><span class="line">awemesso://</span><br><span class="line">wb1462309810://</span><br><span class="line"></span><br><span class="line"># 西瓜</span><br><span class="line">snssdk32://</span><br><span class="line"></span><br><span class="line"># 搜狐</span><br><span class="line">sohuvideo-iphone://</span><br><span class="line">sohuvideo://</span><br><span class="line"></span><br><span class="line"># 快手</span><br><span class="line">gifshow://</span><br><span class="line"></span><br><span class="line"># nPlayer</span><br><span class="line">nplayer://</span><br><span class="line"></span><br><span class="line"># AVPlayer</span><br><span class="line">AVPlayer://</span><br><span class="line"></span><br><span class="line"># yy直播</span><br><span class="line">yymobile://</span><br><span class="line"></span><br><span class="line"># 一直播</span><br><span class="line">xktv://</span><br><span class="line"></span><br><span class="line"># 花椒直播</span><br><span class="line">huajiao://</span><br><span class="line"></span><br><span class="line"># 咪咕</span><br><span class="line">miguvideo://</span><br></pre></td></tr></table></figure>
+
+<h2 id="社交"><a href="#社交" class="headerlink" title="社交"></a>社交</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># 微博</span><br><span class="line">weibo://</span><br><span class="line"></span><br><span class="line"># 微博国际版</span><br><span class="line">weibointernational://</span><br><span class="line"></span><br><span class="line"># Twitter</span><br><span class="line">Twitter://?</span><br><span class="line">tweetie://</span><br><span class="line"></span><br><span class="line"># Facebook</span><br><span class="line">fb://</span><br><span class="line"></span><br><span class="line"># Tumblr</span><br><span class="line">tumblr://</span><br><span class="line"></span><br><span class="line"># Telegram</span><br><span class="line">tg://</span><br><span class="line"></span><br><span class="line"># Instagram</span><br><span class="line">instagram://</span><br></pre></td></tr></table></figure>
+
+<h2 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"># 酷狗音乐</span><br><span class="line">kugouURL://</span><br><span class="line"></span><br><span class="line"># 天天动听</span><br><span class="line">ttpod://</span><br><span class="line"></span><br><span class="line"># 酷我音乐</span><br><span class="line">com.kuwo.kwmusic.kwmusicForKwsing://?</span><br><span class="line"></span><br><span class="line"># 虾米音乐</span><br><span class="line">## 主页面</span><br><span class="line">xiami://</span><br><span class="line">## 每日推荐歌单</span><br><span class="line">xiami://dailysong?action=play</span><br><span class="line">## 私人电台</span><br><span class="line">xiami://radio/private</span><br><span class="line">## 虾米猜</span><br><span class="line">xiami://radio/guess</span><br><span class="line">## 每日30首</span><br><span class="line">xiami://playdailysong</span><br><span class="line">## 听歌识曲</span><br><span class="line">xiami://soundhound</span><br><span class="line"></span><br><span class="line"># 喜马拉雅</span><br><span class="line">## 打开专辑</span><br><span class="line">iting://open?msg_type=13&amp;album_id=[专辑ID]</span><br></pre></td></tr></table></figure>
+
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"># 抓图猫</span><br><span class="line">imagecat://</span><br><span class="line"></span><br><span class="line"># Piiic 2</span><br><span class="line">wb1934889315://</span><br><span class="line"></span><br><span class="line"># Picsew</span><br><span class="line">## 主页面</span><br><span class="line">picsew://</span><br><span class="line">## 打开最近长截图</span><br><span class="line">picsew://recent</span><br><span class="line"></span><br><span class="line"># NOMO</span><br><span class="line">nomocamera://</span><br><span class="line"></span><br><span class="line"># Cuto Wallpaper</span><br><span class="line">cuto://</span><br><span class="line"></span><br><span class="line"># Picsew</span><br><span class="line">picsew://</span><br></pre></td></tr></table></figure>
+
+<h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"># 照片</span><br><span class="line">photos-redirect://</span><br><span class="line"></span><br><span class="line"># 短信</span><br><span class="line">sms://</span><br><span class="line"></span><br><span class="line"># 备忘录</span><br><span class="line">save://notes</span><br><span class="line"></span><br><span class="line"># App Store</span><br><span class="line">## 自动搜索剪贴板内容</span><br><span class="line">itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&amp;term=%@</span><br><span class="line"></span><br><span class="line"># 偏好设置</span><br><span class="line">## 无线局域网</span><br><span class="line">App-Prefs:root=WIFI</span><br><span class="line">## 蜂窝移动网络</span><br><span class="line">App-Prefs:root=MOBILE_DATA_SETTINGS_ID</span><br><span class="line"></span><br><span class="line"># Workflow</span><br><span class="line">## 打开动作</span><br><span class="line">workflow://run-workflow?name=[动作名]</span><br><span class="line"></span><br><span class="line"># 电话</span><br><span class="line">tel://[电话号码]</span><br></pre></td></tr></table></figure>
+
+<h2 id="电商"><a href="#电商" class="headerlink" title="电商"></a>电商</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># 虎扑</span><br><span class="line">tencent222049://</span><br><span class="line"></span><br><span class="line"># 闲鱼</span><br><span class="line">laiwange48dbf143://</span><br><span class="line">fleamarket://</span><br><span class="line"></span><br><span class="line"># 拼多多</span><br><span class="line">pinduoduo://</span><br><span class="line"></span><br><span class="line"># 美团</span><br><span class="line">imeituan://</span><br><span class="line"></span><br><span class="line"># 京东</span><br><span class="line">## 主页面</span><br><span class="line">openapp.jdmobile://</span><br><span class="line">## 早起打卡</span><br><span class="line">openapp.jdmobile://virtual?params=&#123;&quot;des&quot;:&quot;jdreactcommon&quot;,&quot;modulename&quot;:&quot;JDReactClockIn&quot;,&quot;category&quot;:&quot;jump&quot;;&#125;</span><br><span class="line"></span><br><span class="line"># 多点</span><br><span class="line">## 会员码</span><br><span class="line">memberNumberDesktop://</span><br><span class="line">## 扫码</span><br><span class="line">scanDesktop://</span><br></pre></td></tr></table></figure>
+
+<h2 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 有道云笔记</span><br><span class="line">youdaonote://</span><br><span class="line"></span><br><span class="line"># 印象笔记</span><br><span class="line">evernote://</span><br><span class="line"></span><br><span class="line"># 我的标记</span><br><span class="line">## 主页面</span><br><span class="line">clover-imark://</span><br><span class="line">## 新建1000*1000空白画布</span><br><span class="line">clover-imark://new/canvas?width=1000&amp;height=1000</span><br><span class="line">## 快速新建画布（网页|底部|手机相册|相机|最新照片）</span><br><span class="line">clover-imark://new/[|web|map|library|camera|latest]</span><br></pre></td></tr></table></figure>
+
+<h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 360</span><br><span class="line">msearchapp://</span><br><span class="line"></span><br><span class="line"># 搜狗</span><br><span class="line">sogousearch://</span><br></pre></td></tr></table></figure>
+
+<h2 id="共享单车"><a href="#共享单车" class="headerlink" title="共享单车"></a>共享单车</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 摩拜</span><br><span class="line">mobike://</span><br><span class="line"></span><br><span class="line"># ofo</span><br><span class="line">ofoapp://</span><br></pre></td></tr></table></figure>
+
+<h2 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 扇贝英语</span><br><span class="line">shanbay://</span><br><span class="line"></span><br><span class="line"># 小猿搜题</span><br><span class="line">solar://</span><br><span class="line"></span><br><span class="line"># 沪江小D词典</span><br><span class="line">hjdict://</span><br><span class="line"></span><br><span class="line"># TED</span><br><span class="line">ted://</span><br><span class="line"></span><br><span class="line"># 一席</span><br><span class="line">wx5bc45646a79e74ab://</span><br></pre></td></tr></table></figure>
+
+<h2 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># 天天爱消除</span><br><span class="line">tencentlaunch100689805://</span><br><span class="line"></span><br><span class="line"># 阴阳师</span><br><span class="line">com.netease.onmyoji://</span><br><span class="line"></span><br><span class="line"># 叨鱼</span><br><span class="line">sdguc://</span><br><span class="line"></span><br><span class="line"># 崩坏三</span><br><span class="line">bh3rd://</span><br><span class="line"></span><br><span class="line"># 永远的七日之都</span><br><span class="line">neteaseqrzd://</span><br><span class="line"></span><br><span class="line"># 芝士超人</span><br><span class="line">trivia://</span><br></pre></td></tr></table></figure>
+
+<h2 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 樊登读书会</span><br><span class="line">tbopen23329854://</span><br><span class="line"></span><br><span class="line"># 多看阅读</span><br><span class="line">duokan-reader://</span><br><span class="line"></span><br><span class="line"># 当当阅读</span><br><span class="line">alipayLogin20150804://</span><br><span class="line"></span><br><span class="line"># 开卷有益</span><br><span class="line">Kingreader://</span><br><span class="line"></span><br><span class="line"># 拿铁阅读</span><br><span class="line">LatteRead://</span><br></pre></td></tr></table></figure>
+
+<h2 id="外卖"><a href="#外卖" class="headerlink" title="外卖"></a>外卖</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 美团外卖</span><br><span class="line">meituanwaimai://</span><br><span class="line"></span><br><span class="line"># 饿了么</span><br><span class="line">eleme://</span><br></pre></td></tr></table></figure>
+
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line"># 迅雷</span><br><span class="line">thunder://?</span><br><span class="line">QQ05FD1622://</span><br><span class="line"></span><br><span class="line"># 115云盘</span><br><span class="line">wb1307639798://</span><br><span class="line"></span><br><span class="line"># 我的标记</span><br><span class="line">clover-imark://</span><br><span class="line"></span><br><span class="line"># 小米运动</span><br><span class="line">fb370547106731052://</span><br><span class="line"></span><br><span class="line"># 中国移动</span><br><span class="line">wxbcb43ea5d2d6384c://</span><br><span class="line"></span><br><span class="line"># 广东移动</span><br><span class="line">wb3299513026://</span><br><span class="line"></span><br><span class="line"># 探探</span><br><span class="line">tantanapp://</span><br><span class="line"></span><br><span class="line"># 相册宝</span><br><span class="line">albumplus://</span><br><span class="line"></span><br><span class="line"># 拍照取字</span><br><span class="line">## 主页面</span><br><span class="line">paizhaoquzi://</span><br><span class="line">## 取最新一张图</span><br><span class="line">paizhaoquzi://first</span><br><span class="line"></span><br><span class="line"># 圈子账本</span><br><span class="line">qzzb://</span><br><span class="line"></span><br><span class="line"># JSBox</span><br><span class="line">## 主页面</span><br><span class="line">JSBox://</span><br><span class="line">## 运行脚本</span><br><span class="line">jsbox://run?name=&#123;编码后的脚本名&#125;</span><br><span class="line"></span><br><span class="line"># 京东金融</span><br><span class="line">## 双签</span><br><span class="line">jdmobile://share?jumpType=7&amp;jumpUrl=1373</span><br><span class="line"></span><br><span class="line"># 冲顶大会</span><br><span class="line">tencent1105277177://</span><br><span class="line"></span><br><span class="line"># 伙伴办公</span><br><span class="line">Open://</span><br><span class="line"></span><br><span class="line"># 下厨房</span><br><span class="line">xcfapp://</span><br><span class="line"></span><br><span class="line"># 有妖气</span><br><span class="line">u17app://</span><br><span class="line"></span><br><span class="line"># 花生地铁WiFi</span><br><span class="line">wxa813eada7109a3cc://</span><br><span class="line"></span><br><span class="line"># 少数派</span><br><span class="line">sspai://</span><br><span class="line">wx1cabf05524b18692://</span><br><span class="line"></span><br><span class="line"># 车到哪儿</span><br><span class="line">wx5207ffc5bbac1da7://</span><br><span class="line"></span><br><span class="line"># 乐网</span><br><span class="line">seven.adclear://</span><br><span class="line"></span><br><span class="line"># 收趣</span><br><span class="line">shouqu.me://</span><br><span class="line"></span><br><span class="line"># 一个番茄</span><br><span class="line">com.pomodorowang://</span><br><span class="line"></span><br><span class="line"># 京东微联</span><br><span class="line">wb1662044625://</span><br><span class="line"></span><br><span class="line"># 户外助手</span><br><span class="line">wb3060101786://</span><br><span class="line"></span><br><span class="line"># 得到</span><br><span class="line">dedaoapp://</span><br><span class="line"></span><br><span class="line"># 掌上公交</span><br><span class="line">wb1955957116://</span><br><span class="line"></span><br><span class="line"># Seed</span><br><span class="line">seedapp://</span><br><span class="line"></span><br><span class="line"># 云墙</span><br><span class="line">netfits://</span><br><span class="line"></span><br><span class="line"># 潮汐</span><br><span class="line">tide://</span><br><span class="line"></span><br><span class="line"># Keep</span><br><span class="line">keep://</span><br><span class="line"></span><br><span class="line"># 今日头条</span><br><span class="line">snssdk141://</span><br><span class="line"></span><br><span class="line"># Gmail</span><br><span class="line">googlegmail://</span><br><span class="line"></span><br><span class="line"># 12306</span><br><span class="line">cn.12306://</span><br><span class="line"></span><br><span class="line"># Browser and File Manager for Documents</span><br><span class="line">eidwl://</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="URL-Scheme分享"><a href="#URL-Scheme分享" class="headerlink" title="URL Scheme分享"></a>URL Scheme分享</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://st3376519.huoban.com/share/1985010/VGi2N5Vf0C1MVnHCVWiBc8L9g15c9VGJbMGcFrb6/172707/list</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/iOS-Network-Proxy-Usage.html" rel="prev" title="iOS网络代理工具的使用">
+      <i class="fa fa-chevron-left"></i> iOS网络代理工具的使用
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/iOS-Shortcuts-Usage.html" rel="next" title="iOS捷径的使用">
+      iOS捷径的使用 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2"><span class="nav-text">查询</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E7%94%B5%E8%84%91"><span class="nav-text">通过电脑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E6%89%8B%E6%9C%BA"><span class="nav-text">通过手机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E6%8D%B7%E5%BE%84"><span class="nav-text">通过捷径</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8URL-Schemes"><span class="nav-text">常用URL Schemes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%85%BE%E8%AE%AF%E7%B3%BB"><span class="nav-text">腾讯系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%BF%E9%87%8C%E7%B3%BB"><span class="nav-text">阿里系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6%E7%B3%BB"><span class="nav-text">百度系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E6%98%93%E7%B3%BB"><span class="nav-text">网易系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%93%B6%E8%A1%8C"><span class="nav-text">银行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="nav-text">浏览器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E9%A2%91"><span class="nav-text">视频</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BE%E4%BA%A4"><span class="nav-text">社交</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9F%B3%E4%B9%90"><span class="nav-text">音乐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%89%87"><span class="nav-text">图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F"><span class="nav-text">系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%95%86"><span class="nav-text">电商</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95"><span class="nav-text">记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2"><span class="nav-text">搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B1%E4%BA%AB%E5%8D%95%E8%BD%A6"><span class="nav-text">共享单车</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0"><span class="nav-text">学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%B8%E6%88%8F"><span class="nav-text">游戏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%85%E8%AF%BB"><span class="nav-text">阅读</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E5%8D%96"><span class="nav-text">外卖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E5%AE%83"><span class="nav-text">其它</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#URL-Scheme%E5%88%86%E4%BA%AB"><span class="nav-text">URL Scheme分享</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

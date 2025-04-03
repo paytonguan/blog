@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="共享应用、破解内购等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS使用技巧总结">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/iOS-Skills.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="共享应用、破解内购等。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/iOS-Skills/topic.jpg">
+<meta property="article:published_time" content="2020-03-20T11:06:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.555Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/iOS-Skills/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/iOS-Skills.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>iOS使用技巧总结 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/iOS-Skills.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          iOS使用技巧总结
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-03-20 19:06:29" itemprop="dateCreated datePublished" datetime="2020-03-20T19:06:29+08:00">2020-03-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>6.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/iOS-Skills/topic.jpg"></p>
+<p>共享应用、破解内购等。</p>
+<span id="more"></span>
+
+<h1 id="TODOS"><a href="#TODOS" class="headerlink" title="TODOS"></a>TODOS</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">iOS 13 超级有用的功能，可方便传输文件</span><br><span class="line">https://mp.weixin.qq.com/s/UyNWytJ4hvoDpcaj6p-x1Q</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">PPL实现</span><br><span class="line">https://paper.seebug.org/1768/</span><br><span class="line"></span><br><span class="line">iOS一些漏洞</span><br><span class="line">https://googleprojectzero.blogspot.com/2020/07/the-core-of-apple-is-ppl-breaking-xnu.html</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">iOS逆向</span><br><span class="line">https://iosre.com/t/ios安全和逆向系列教程/22761</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">越狱</span><br><span class="line">https://ios.cfw.guide/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">重新登录appleID后会安装很多app</span><br><span class="line"></span><br><span class="line">原因应该是之前下他们的时候下到一半就没下，然后重新登录后会自动完成没下完的部分</span><br><span class="line"></span><br><span class="line">解决：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">https://discussionschinese.apple.com/thread/253150810</span><br><span class="line"></span><br><span class="line">让他们下完，在全部删掉</span><br><span class="line"></span><br><span class="line">或者：</span><br><span class="line"></span><br><span class="line">https://discussionschinese.apple.com/thread/253193718</span><br><span class="line"></span><br><span class="line">我以前也是，后来没有了，你试试，你点开app，点击右上角头像，进去再点击账户头像，下拉有一个删除此设备（写了什么自动下载，我忘记了），然后来回切换ID都可以了</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">双引导</span><br><span class="line">https://github.com/dualra1n/dualra1n</span><br><span class="line"></span><br><span class="line">降级</span><br><span class="line">https://github.com/mineek/sunst0rm</span><br><span class="line">https://github.com/edwin170/downr1n</span><br><span class="line"></span><br><span class="line">iOS马甲包</span><br><span class="line">https://github.com/lightank/LTVestbagDemo</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Charles Proxy抓IPA包</span><br><span class="line">https://sspai.com/post/36122</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">JsBox ChatGPT Keyboard</span><br><span class="line">https://neurogram.notion.site/ChatGPT-Keyboard-af8f7c74bc5c47989259393c953b8017</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">一些模拟器</span><br><span class="line">https://mp.weixin.qq.com/s/XIdVlLJ19kZ-Jli_N9Ejvg</span><br><span class="line">https://www.123pan.com/s/vgn0Vv-yTxFv.html</span><br><span class="line">https://mp.weixin.qq.com/s/AO3GzaZSIdAyxusHgIfxOA</span><br><span class="line">https://mp.weixin.qq.com/s/IDPVqhTZQXC0JF-xv1sw_w</span><br><span class="line">https://www.123pan.com/s/vgn0Vv-o04Fv.html</span><br><span class="line">https://mp.weixin.qq.com/s/v9QEjwVaBmrcvUMP2F59Cw</span><br><span class="line">https://mp.weixin.qq.com/s/pTjy6CxJTIsoW285H5W82g</span><br><span class="line">https://mp.weixin.qq.com/s/vmjBR0MoXhUmlAHrJglNOw</span><br><span class="line">https://mp.weixin.qq.com/s/j-MyhIR2mXlBcI-BDzPgBg</span><br><span class="line">https://mp.weixin.qq.com/s/f3okIyI3QrMvpENVaaKKOQ</span><br><span class="line">https://mp.weixin.qq.com/s/wIPMP7VFhD1pVh8DVICZIg</span><br><span class="line">https://mp.weixin.qq.com/s/qFf5d4bjNoUh2gsxcyvQBA</span><br></pre></td></tr></table></figure>
+
+<h1 id="硬件技巧"><a href="#硬件技巧" class="headerlink" title="硬件技巧"></a>硬件技巧</h1><h2 id="Home键失灵"><a href="#Home键失灵" class="headerlink" title="Home键失灵"></a>Home键失灵</h2><p>越狱后可安装CCSettings插件在控制中心添加主屏幕按钮，或安装Activator插件实现手势操作。</p>
+<h2 id="电源键失灵"><a href="#电源键失灵" class="headerlink" title="电源键失灵"></a>电源键失灵</h2><p>可通过爱思助手完成重启。</p>
+<h1 id="系统技巧"><a href="#系统技巧" class="headerlink" title="系统技巧"></a>系统技巧</h1><h2 id="恢复模式"><a href="#恢复模式" class="headerlink" title="恢复模式"></a>恢复模式</h2><h3 id="进入"><a href="#进入" class="headerlink" title="进入"></a>进入</h3><h4 id="正常方法"><a href="#正常方法" class="headerlink" title="正常方法"></a>正常方法</h4><p>彻底关闭设备，并且将设备与PC断开连接。长按Home键的同时将设备连接到计算机，不要松开Home键，直到在设备屏幕上看到<code>连接到iTunes</code>的图片。</p>
+<h4 id="备选方法"><a href="#备选方法" class="headerlink" title="备选方法"></a>备选方法</h4><p>可在按键失灵时使用。用爱思助手即可。</p>
+<h3 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h3><p>按住电源键十秒即可。通过爱思助手进入的需要通过爱思助手退出。</p>
+<h2 id="DFU模式"><a href="#DFU模式" class="headerlink" title="DFU模式"></a>DFU模式</h2><h3 id="进入-1"><a href="#进入-1" class="headerlink" title="进入"></a>进入</h3><h4 id="正常方法-1"><a href="#正常方法-1" class="headerlink" title="正常方法"></a>正常方法</h4><p>把设备连接到PC后关闭设备，同时按住Home键和电源键十秒后松开电源键，继续按住Home键，直到在电脑上看到识别到DFU状态下的USB设备。</p>
+<h4 id="按键失灵方法"><a href="#按键失灵方法" class="headerlink" title="按键失灵方法"></a>按键失灵方法</h4><h5 id="通过脚本"><a href="#通过脚本" class="headerlink" title="通过脚本"></a>通过脚本</h5><p>把设备连接到Windows后下载以下压缩包，解压后双击<code>DFU.bat</code>即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://feng-bbs-att-1255531212.file.myqcloud.com/2011/10/15/2472983_DFU.rar</span><br></pre></td></tr></table></figure>
+
+<h5 id="通过固件"><a href="#通过固件" class="headerlink" title="通过固件"></a>通过固件</h5><p>该方法适合早期的iPhone，主要是iOS7及以下的系统。安装较早版本的iTunes（10或11），并下载当前系统的固件。然后下载Redsn0w，链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.iphonehacks.com/download-redsn0w</span><br></pre></td></tr></table></figure>
+
+<p>下载完成后以管理员身份运行Redsn0w，选择Extras-Even More-DFU IPSW，选取下载好的固件，等待制作完成。然后连接手机并打开iTunes，连接成功后按住Shift并点击恢复，选择制作好的DFU固件，刷机完成后即进入DFU模式。</p>
+<h3 id="退出-1"><a href="#退出-1" class="headerlink" title="退出"></a>退出</h3><p>按住Home键和电源键十秒，设备关机之后重新启动设备即可。</p>
+<h1 id="操作技巧"><a href="#操作技巧" class="headerlink" title="操作技巧"></a>操作技巧</h1><h2 id="添加日历订阅"><a href="#添加日历订阅" class="headerlink" title="添加日历订阅"></a>添加日历订阅</h2><p>点击设置-日历-账户-添加账户-其他-添加已订阅的日历，填入服务器地址即可。推荐订阅如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 中国节假日补班日历订阅</span><br><span class="line"># Github 仓库为 https://github.com/lanceliao/china-holiday-calender</span><br><span class="line">https://www.shuyz.com/githubfiles/china-holiday-calender/master/holidayCal.ics</span><br><span class="line"></span><br><span class="line"># 中国二十四节气日历订阅</span><br><span class="line"># Github 仓库为 https://github.com/KaitoHH/24-jieqi-ics</span><br><span class="line">https://cdn.jsdelivr.net/gh/KaitoHH/24-jieqi-ics@master/23_solar_terms_2015-01-01_2050-12-31.ics</span><br><span class="line"></span><br><span class="line"># 电影、美剧、英剧公共日历</span><br><span class="line">https://calendar.google.com/calendar/ical/291ig4cijjnirlc6krcopq5gj4%2540group.calendar.google.com/public/basic.ics</span><br></pre></td></tr></table></figure>
+
+<p>也可在以下网站寻找订阅。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://icalshare.com/</span><br><span class="line">https://sspai.com/post/43209</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="修改步数"><a href="#修改步数" class="headerlink" title="修改步数"></a>修改步数</h2><p>下载<code>乐心健康</code>，登录并在设置中选择数据共享，开启需要修改步数的APP。打开以下网页，登录并修改步数即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://step.xbmmw.top/</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改定位"><a href="#修改定位" class="headerlink" title="修改定位"></a>修改定位</h2><p>可通过以下网站查询经纬度。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.gpsspg.com/maps.htm</span><br></pre></td></tr></table></figure>
+
+<h3 id="通过爱思助手"><a href="#通过爱思助手" class="headerlink" title="通过爱思助手"></a>通过爱思助手</h3><p>通过爱思助手的虚拟定位功能即可。</p>
+<h3 id="通过抓包"><a href="#通过抓包" class="headerlink" title="通过抓包"></a>通过抓包</h3><p>打开网络调试软件（如Thor）后，打开需要修改定位的App，点击定位相关按钮，查找关于location的数据包，进入经纬度进行修改即可。注意经纬度的小数点精确的位数。</p>
+<h2 id="查看电池循环次数"><a href="#查看电池循环次数" class="headerlink" title="查看电池循环次数"></a>查看电池循环次数</h2><p>打开设置-隐私-分析与改进，保证<code>共享iPhone分析</code>处于打开状态，然后点击<code>分析数据</code>，下拉并在搜索框搜索<code>log-aggregated</code>，找到时间最近的文件，点击右上角并选择<code>存储到文件</code>，保存到手机中。</p>
+<p>添加以下快捷指令，打开后选择刚才保存的文件即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.icloud.com/shortcuts/df02957b73414724b94fa58e0a836461</span><br></pre></td></tr></table></figure>
+
+<h2 id="日历添加法定节假日安排"><a href="#日历添加法定节假日安排" class="headerlink" title="日历添加法定节假日安排"></a>日历添加法定节假日安排</h2><p>打开日历APP，点击日历-添加日历-添加订阅日历，链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.hurbai.com/ical.ics</span><br></pre></td></tr></table></figure>
+
+<h2 id="将iPad作为电脑副屏"><a href="#将iPad作为电脑副屏" class="headerlink" title="将iPad作为电脑副屏"></a>将iPad作为电脑副屏</h2><p>有线连接可使用Duet Display、Twomon、Splashtop Wired XDisplay。无线连接可使用Spacesdesk、Duet Air、Moonlight。将平板作为数位板则可考虑EasyCanvas、Astropad Studio。</p>
+<p>也可使用Splashtop。在iPad安装Splashtop Personal，打开后点击<code>我想在封闭网路中使用Splashtop</code>，按照提示在电脑安装Splashtop Streamer并连接即可。如果希望将iPad作为扩展屏，则可购买HDMI欺骗器并接到电脑上，然后切换投影模式为扩展即可。</p>
+<h2 id="系统清理"><a href="#系统清理" class="headerlink" title="系统清理"></a>系统清理</h2><p>在设置中将系统时间调后一个多月，等待片刻再恢复自动校准时间。</p>
+<h2 id="iOS-13双网变全网通"><a href="#iOS-13双网变全网通" class="headerlink" title="iOS 13双网变全网通"></a>iOS 13双网变全网通</h2><p>iPhone 11以下设备（不含），港版、韩版、英版、美版等仅支持移动和联通，不支持电信。可通过开通电信VoLTE的方式添加支持。</p>
+<h2 id="密码与激活锁"><a href="#密码与激活锁" class="headerlink" title="密码与激活锁"></a>密码与激活锁</h2><p>当iOS打开了查找我的iPhone功能且无有效的激活记录时，将会导致激活锁定，需要输入开启了查找我的iPhone对应的iCloud账号和密码才可解锁。若忘记密码，则需要绕过激活锁。</p>
+<p>若忘记了屏幕密码，则需要绕过屏幕密码锁。</p>
+<p>工具可通过以下链接下载。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://appletech752.com/icloudbypass.html</span><br><span class="line">https://appletech752.com/downloads.html</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">绕过ID锁，具体操作方法</span><br><span class="line"></span><br><span class="line">条件要求：</span><br><span class="line">仅支持A5-A11设备</span><br><span class="line">MAC系统或黑苹果系统</span><br><span class="line">Checkra1n越狱工具（在艾锋降级-在线越狱获取）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">操作步骤：</span><br><span class="line">先将设备进入dfu模式</span><br><span class="line">使用Checkra1n进行越狱</span><br><span class="line">在端口44上使用ssh，同时删除或者重命名 Applications文件夹内的setup.app</span><br><span class="line">执行 killall -9 SpringBoard.Boom，注销后即可跳过iCloud。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">若是国行机，请往下看： </span><br><span class="line"></span><br><span class="line">执行命令有二个方法：</span><br><span class="line">【方法1】</span><br><span class="line">rm /Library/Preferences/com.apple.networkextension.plist </span><br><span class="line">killall CommCenter </span><br><span class="line"></span><br><span class="line">【方法2】</span><br><span class="line">mv /Applications/Setup.app/Setup/Applications/Setup.app/Setup.bak touch /Application/Setup.app/Setup </span><br><span class="line">uicache --all </span><br><span class="line">killall backboardd </span><br><span class="line">killall -9 SpringBoard</span><br></pre></td></tr></table></figure>
+<h2 id="切换AppStore账号后自动下载App的解决"><a href="#切换AppStore账号后自动下载App的解决" class="headerlink" title="切换AppStore账号后自动下载App的解决"></a>切换AppStore账号后自动下载App的解决</h2><p>进入AppStore中的账号详情，点击<code>删除此设备</code>即可。</p>
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="不按任何键即可进入DFU模式"><a href="#不按任何键即可进入DFU模式" class="headerlink" title="不按任何键即可进入DFU模式"></a>不按任何键即可进入DFU模式</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.feng.com/post/3028191</span><br></pre></td></tr></table></figure>
+
+<h2 id="通过软件恢复进入DFU刷机模式教程"><a href="#通过软件恢复进入DFU刷机模式教程" class="headerlink" title="通过软件恢复进入DFU刷机模式教程"></a>通过软件恢复进入DFU刷机模式教程</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://iphone.tgbus.com/tutorial/hacktutorial/201207/20120706173454.shtml</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改步数，免越狱，免root，wx-amp-zfb-amp-qq一键刷步数！！！"><a href="#修改步数，免越狱，免root，wx-amp-zfb-amp-qq一键刷步数！！！" class="headerlink" title="修改步数，免越狱，免root，wx&amp;zfb&amp;qq一键刷步数！！！"></a>修改步数，免越狱，免root，wx&amp;zfb&amp;qq一键刷步数！！！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/S6DhF6P8f68ejPz9xoP5bw</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS逆向工程初体验"><a href="#iOS逆向工程初体验" class="headerlink" title="iOS逆向工程初体验"></a>iOS逆向工程初体验</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://medium.com/zrealm-ios-dev/ios-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E5%88%9D%E9%AB%94%E9%A9%97-7498e1ff93ce</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="learn-regex-x2F-README-cn-md"><a href="#learn-regex-x2F-README-cn-md" class="headerlink" title="learn-regex&#x2F;README-cn.md"></a>learn-regex&#x2F;README-cn.md</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md</span><br></pre></td></tr></table></figure>
+
+<h2 id="无法-OTA-更新系统，解决办法来了"><a href="#无法-OTA-更新系统，解决办法来了" class="headerlink" title="无法 OTA 更新系统，解决办法来了"></a>无法 OTA 更新系统，解决办法来了</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/KzZ5ZX1xw_JBdgyCpTM5eg</span><br></pre></td></tr></table></figure>
+
+<h2 id="小技巧｜查看-iPhone-电池循环次数"><a href="#小技巧｜查看-iPhone-电池循环次数" class="headerlink" title="小技巧｜查看 iPhone 电池循环次数"></a>小技巧｜查看 iPhone 电池循环次数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/hBIanqg5-9jiHWppGCL1yg</span><br></pre></td></tr></table></figure>
+
+<h2 id="神级应用！爱了！冲！"><a href="#神级应用！爱了！冲！" class="headerlink" title="神级应用！爱了！冲！"></a>神级应用！爱了！冲！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/VjkXjLBKPCo1v5p0INDhsg</span><br></pre></td></tr></table></figure>
+
+<h2 id="网页版小组件商店教程"><a href="#网页版小组件商店教程" class="headerlink" title="网页版小组件商店教程"></a>网页版小组件商店教程</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.notion.so/396b02ceeab04bb6b6e16492afbc4d3f?v=97d0676933f6462884643daa02320a2f</span><br></pre></td></tr></table></figure>
+
+<h2 id="没用上这款系统内置神器APP，绝对是你的无谓损失！"><a href="#没用上这款系统内置神器APP，绝对是你的无谓损失！" class="headerlink" title="没用上这款系统内置神器APP，绝对是你的无谓损失！"></a>没用上这款系统内置神器APP，绝对是你的无谓损失！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/dZWGfbTVG-78Qpe4yarKTA</span><br></pre></td></tr></table></figure>
+
+<h2 id="让-iPhone-自带日历-App-显示国家法定节假日安排"><a href="#让-iPhone-自带日历-App-显示国家法定节假日安排" class="headerlink" title="让 iPhone 自带日历 App 显示国家法定节假日安排"></a>让 iPhone 自带日历 App 显示国家法定节假日安排</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/ToZjqtRTgxPxswF02-H_oA</span><br></pre></td></tr></table></figure>
+
+<h2 id="手机平板秒变电脑副屏，折腾一周后最流畅、最方便的方法"><a href="#手机平板秒变电脑副屏，折腾一周后最流畅、最方便的方法" class="headerlink" title="手机平板秒变电脑副屏，折腾一周后最流畅、最方便的方法"></a>手机平板秒变电脑副屏，折腾一周后最流畅、最方便的方法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/ZvLQQt1-FyToTtZA14Vifg</span><br></pre></td></tr></table></figure>
+
+<h2 id="最出名的那些日历APP，结果一点都不够好用…"><a href="#最出名的那些日历APP，结果一点都不够好用…" class="headerlink" title="最出名的那些日历APP，结果一点都不够好用…"></a>最出名的那些日历APP，结果一点都不够好用…</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/LSW7nB-5dLhEgSTqlOvy8g</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-永久签名，支持-iOS-14-0-15-4-1，支持全系设备，官方在线安装，永不过期，完全免费"><a href="#iOS-永久签名，支持-iOS-14-0-15-4-1，支持全系设备，官方在线安装，永不过期，完全免费" class="headerlink" title="iOS 永久签名，支持 iOS 14.0 - 15.4.1，支持全系设备，官方在线安装，永不过期，完全免费"></a>iOS 永久签名，支持 iOS 14.0 - 15.4.1，支持全系设备，官方在线安装，永不过期，完全免费</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/0f2My5VsQMSOoHXhwPo0aA</span><br></pre></td></tr></table></figure>
+
+<h2 id="Tutorial-Save-TONS-of-GB’s-on-smaller-storage-iDevices"><a href="#Tutorial-Save-TONS-of-GB’s-on-smaller-storage-iDevices" class="headerlink" title="[Tutorial] Save TONS of GB’s on smaller storage iDevices!"></a>[Tutorial] Save TONS of GB’s on smaller storage iDevices!</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.reddit.com/r/jailbreak/comments/pmcj2s/tutorial_save_tons_of_gbs_on_smaller_storage/</span><br></pre></td></tr></table></figure>
+
+<h2 id="切换id后会自动下载app"><a href="#切换id后会自动下载app" class="headerlink" title="切换id后会自动下载app"></a>切换id后会自动下载app</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://discussionschinese.apple.com/thread/253193718</span><br></pre></td></tr></table></figure>
+
+<h2 id="美女更新，终于支持了"><a href="#美女更新，终于支持了" class="headerlink" title="美女更新，终于支持了"></a>美女更新，终于支持了</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/kPHfEvNLe85IuMZE3vP59g</span><br></pre></td></tr></table></figure>
+
+<h2 id="大佬宣布离开，全部作品，完全免费"><a href="#大佬宣布离开，全部作品，完全免费" class="headerlink" title="大佬宣布离开，全部作品，完全免费"></a>大佬宣布离开，全部作品，完全免费</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/vgWr-J_Fy5z7ertnZ2ojNw</span><br></pre></td></tr></table></figure>
+
+<h2 id="注意！iOS-15-0-15-1-1-电池容量可改，小心被骗"><a href="#注意！iOS-15-0-15-1-1-电池容量可改，小心被骗" class="headerlink" title="注意！iOS 15.0-15.1.1 电池容量可改，小心被骗"></a>注意！iOS 15.0-15.1.1 电池容量可改，小心被骗</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/1jf8kFYwAq_Iasn8mL-7NQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="iOS-13-双网秒变全网通方法，电信卡终于支持"><a href="#iOS-13-双网秒变全网通方法，电信卡终于支持" class="headerlink" title="iOS 13 双网秒变全网通方法，电信卡终于支持"></a>iOS 13 双网秒变全网通方法，电信卡终于支持</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/FGDCsm5Po8j1MNRa2Aj8EQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="DolphiniOS-模拟器已发布，掉签问题已修复"><a href="#DolphiniOS-模拟器已发布，掉签问题已修复" class="headerlink" title="DolphiniOS 模拟器已发布，掉签问题已修复"></a>DolphiniOS 模拟器已发布，掉签问题已修复</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/Htif1DpuPwTPOxHQYYaMnw</span><br></pre></td></tr></table></figure>
+
+<h2 id="iPhone-上玩真的-PSP-游戏，支持-iOS-13-系统"><a href="#iPhone-上玩真的-PSP-游戏，支持-iOS-13-系统" class="headerlink" title="iPhone 上玩真的 PSP 游戏，支持 iOS 13 系统"></a>iPhone 上玩真的 PSP 游戏，支持 iOS 13 系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/Shwv4N4lWlTVvDxGBrW23g</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/Information-About-Stars.html" rel="prev" title="社会实体相关资料收集">
+      <i class="fa fa-chevron-left"></i> 社会实体相关资料收集
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/iOS-Useful-Software.html" rel="next" title="iOS常用软件">
+      iOS常用软件 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TODOS"><span class="nav-text">TODOS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6%E6%8A%80%E5%B7%A7"><span class="nav-text">硬件技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Home%E9%94%AE%E5%A4%B1%E7%81%B5"><span class="nav-text">Home键失灵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E6%BA%90%E9%94%AE%E5%A4%B1%E7%81%B5"><span class="nav-text">电源键失灵</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E6%8A%80%E5%B7%A7"><span class="nav-text">系统技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%81%A2%E5%A4%8D%E6%A8%A1%E5%BC%8F"><span class="nav-text">恢复模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5"><span class="nav-text">进入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A3%E5%B8%B8%E6%96%B9%E6%B3%95"><span class="nav-text">正常方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%87%E9%80%89%E6%96%B9%E6%B3%95"><span class="nav-text">备选方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%80%E5%87%BA"><span class="nav-text">退出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DFU%E6%A8%A1%E5%BC%8F"><span class="nav-text">DFU模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5-1"><span class="nav-text">进入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A3%E5%B8%B8%E6%96%B9%E6%B3%95-1"><span class="nav-text">正常方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%89%E9%94%AE%E5%A4%B1%E7%81%B5%E6%96%B9%E6%B3%95"><span class="nav-text">按键失灵方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E8%84%9A%E6%9C%AC"><span class="nav-text">通过脚本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E5%9B%BA%E4%BB%B6"><span class="nav-text">通过固件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%80%E5%87%BA-1"><span class="nav-text">退出</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E6%8A%80%E5%B7%A7"><span class="nav-text">操作技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%97%A5%E5%8E%86%E8%AE%A2%E9%98%85"><span class="nav-text">添加日历订阅</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%AD%A5%E6%95%B0"><span class="nav-text">修改步数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E5%AE%9A%E4%BD%8D"><span class="nav-text">修改定位</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E7%88%B1%E6%80%9D%E5%8A%A9%E6%89%8B"><span class="nav-text">通过爱思助手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E6%8A%93%E5%8C%85"><span class="nav-text">通过抓包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E7%94%B5%E6%B1%A0%E5%BE%AA%E7%8E%AF%E6%AC%A1%E6%95%B0"><span class="nav-text">查看电池循环次数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A5%E5%8E%86%E6%B7%BB%E5%8A%A0%E6%B3%95%E5%AE%9A%E8%8A%82%E5%81%87%E6%97%A5%E5%AE%89%E6%8E%92"><span class="nav-text">日历添加法定节假日安排</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86iPad%E4%BD%9C%E4%B8%BA%E7%94%B5%E8%84%91%E5%89%AF%E5%B1%8F"><span class="nav-text">将iPad作为电脑副屏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E6%B8%85%E7%90%86"><span class="nav-text">系统清理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-13%E5%8F%8C%E7%BD%91%E5%8F%98%E5%85%A8%E7%BD%91%E9%80%9A"><span class="nav-text">iOS 13双网变全网通</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%86%E7%A0%81%E4%B8%8E%E6%BF%80%E6%B4%BB%E9%94%81"><span class="nav-text">密码与激活锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%87%E6%8D%A2AppStore%E8%B4%A6%E5%8F%B7%E5%90%8E%E8%87%AA%E5%8A%A8%E4%B8%8B%E8%BD%BDApp%E7%9A%84%E8%A7%A3%E5%86%B3"><span class="nav-text">切换AppStore账号后自动下载App的解决</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E6%8C%89%E4%BB%BB%E4%BD%95%E9%94%AE%E5%8D%B3%E5%8F%AF%E8%BF%9B%E5%85%A5DFU%E6%A8%A1%E5%BC%8F"><span class="nav-text">不按任何键即可进入DFU模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E8%BD%AF%E4%BB%B6%E6%81%A2%E5%A4%8D%E8%BF%9B%E5%85%A5DFU%E5%88%B7%E6%9C%BA%E6%A8%A1%E5%BC%8F%E6%95%99%E7%A8%8B"><span class="nav-text">通过软件恢复进入DFU刷机模式教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%AD%A5%E6%95%B0%EF%BC%8C%E5%85%8D%E8%B6%8A%E7%8B%B1%EF%BC%8C%E5%85%8Droot%EF%BC%8Cwx-amp-zfb-amp-qq%E4%B8%80%E9%94%AE%E5%88%B7%E6%AD%A5%E6%95%B0%EF%BC%81%EF%BC%81%EF%BC%81"><span class="nav-text">修改步数，免越狱，免root，wx&amp;zfb&amp;qq一键刷步数！！！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E5%88%9D%E4%BD%93%E9%AA%8C"><span class="nav-text">iOS逆向工程初体验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#learn-regex-x2F-README-cn-md"><span class="nav-text">learn-regex&#x2F;README-cn.md</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E6%B3%95-OTA-%E6%9B%B4%E6%96%B0%E7%B3%BB%E7%BB%9F%EF%BC%8C%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%E6%9D%A5%E4%BA%86"><span class="nav-text">无法 OTA 更新系统，解决办法来了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BD%9C%E6%9F%A5%E7%9C%8B-iPhone-%E7%94%B5%E6%B1%A0%E5%BE%AA%E7%8E%AF%E6%AC%A1%E6%95%B0"><span class="nav-text">小技巧｜查看 iPhone 电池循环次数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A5%9E%E7%BA%A7%E5%BA%94%E7%94%A8%EF%BC%81%E7%88%B1%E4%BA%86%EF%BC%81%E5%86%B2%EF%BC%81"><span class="nav-text">神级应用！爱了！冲！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E9%A1%B5%E7%89%88%E5%B0%8F%E7%BB%84%E4%BB%B6%E5%95%86%E5%BA%97%E6%95%99%E7%A8%8B"><span class="nav-text">网页版小组件商店教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B2%A1%E7%94%A8%E4%B8%8A%E8%BF%99%E6%AC%BE%E7%B3%BB%E7%BB%9F%E5%86%85%E7%BD%AE%E7%A5%9E%E5%99%A8APP%EF%BC%8C%E7%BB%9D%E5%AF%B9%E6%98%AF%E4%BD%A0%E7%9A%84%E6%97%A0%E8%B0%93%E6%8D%9F%E5%A4%B1%EF%BC%81"><span class="nav-text">没用上这款系统内置神器APP，绝对是你的无谓损失！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A9-iPhone-%E8%87%AA%E5%B8%A6%E6%97%A5%E5%8E%86-App-%E6%98%BE%E7%A4%BA%E5%9B%BD%E5%AE%B6%E6%B3%95%E5%AE%9A%E8%8A%82%E5%81%87%E6%97%A5%E5%AE%89%E6%8E%92"><span class="nav-text">让 iPhone 自带日历 App 显示国家法定节假日安排</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E5%B9%B3%E6%9D%BF%E7%A7%92%E5%8F%98%E7%94%B5%E8%84%91%E5%89%AF%E5%B1%8F%EF%BC%8C%E6%8A%98%E8%85%BE%E4%B8%80%E5%91%A8%E5%90%8E%E6%9C%80%E6%B5%81%E7%95%85%E3%80%81%E6%9C%80%E6%96%B9%E4%BE%BF%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-text">手机平板秒变电脑副屏，折腾一周后最流畅、最方便的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%87%BA%E5%90%8D%E7%9A%84%E9%82%A3%E4%BA%9B%E6%97%A5%E5%8E%86APP%EF%BC%8C%E7%BB%93%E6%9E%9C%E4%B8%80%E7%82%B9%E9%83%BD%E4%B8%8D%E5%A4%9F%E5%A5%BD%E7%94%A8%E2%80%A6"><span class="nav-text">最出名的那些日历APP，结果一点都不够好用…</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E6%B0%B8%E4%B9%85%E7%AD%BE%E5%90%8D%EF%BC%8C%E6%94%AF%E6%8C%81-iOS-14-0-15-4-1%EF%BC%8C%E6%94%AF%E6%8C%81%E5%85%A8%E7%B3%BB%E8%AE%BE%E5%A4%87%EF%BC%8C%E5%AE%98%E6%96%B9%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85%EF%BC%8C%E6%B0%B8%E4%B8%8D%E8%BF%87%E6%9C%9F%EF%BC%8C%E5%AE%8C%E5%85%A8%E5%85%8D%E8%B4%B9"><span class="nav-text">iOS 永久签名，支持 iOS 14.0 - 15.4.1，支持全系设备，官方在线安装，永不过期，完全免费</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tutorial-Save-TONS-of-GB%E2%80%99s-on-smaller-storage-iDevices"><span class="nav-text">[Tutorial] Save TONS of GB’s on smaller storage iDevices!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%87%E6%8D%A2id%E5%90%8E%E4%BC%9A%E8%87%AA%E5%8A%A8%E4%B8%8B%E8%BD%BDapp"><span class="nav-text">切换id后会自动下载app</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BE%8E%E5%A5%B3%E6%9B%B4%E6%96%B0%EF%BC%8C%E7%BB%88%E4%BA%8E%E6%94%AF%E6%8C%81%E4%BA%86"><span class="nav-text">美女更新，终于支持了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E4%BD%AC%E5%AE%A3%E5%B8%83%E7%A6%BB%E5%BC%80%EF%BC%8C%E5%85%A8%E9%83%A8%E4%BD%9C%E5%93%81%EF%BC%8C%E5%AE%8C%E5%85%A8%E5%85%8D%E8%B4%B9"><span class="nav-text">大佬宣布离开，全部作品，完全免费</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%EF%BC%81iOS-15-0-15-1-1-%E7%94%B5%E6%B1%A0%E5%AE%B9%E9%87%8F%E5%8F%AF%E6%94%B9%EF%BC%8C%E5%B0%8F%E5%BF%83%E8%A2%AB%E9%AA%97"><span class="nav-text">注意！iOS 15.0-15.1.1 电池容量可改，小心被骗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-13-%E5%8F%8C%E7%BD%91%E7%A7%92%E5%8F%98%E5%85%A8%E7%BD%91%E9%80%9A%E6%96%B9%E6%B3%95%EF%BC%8C%E7%94%B5%E4%BF%A1%E5%8D%A1%E7%BB%88%E4%BA%8E%E6%94%AF%E6%8C%81"><span class="nav-text">iOS 13 双网秒变全网通方法，电信卡终于支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DolphiniOS-%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%B7%B2%E5%8F%91%E5%B8%83%EF%BC%8C%E6%8E%89%E7%AD%BE%E9%97%AE%E9%A2%98%E5%B7%B2%E4%BF%AE%E5%A4%8D"><span class="nav-text">DolphiniOS 模拟器已发布，掉签问题已修复</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iPhone-%E4%B8%8A%E7%8E%A9%E7%9C%9F%E7%9A%84-PSP-%E6%B8%B8%E6%88%8F%EF%BC%8C%E6%94%AF%E6%8C%81-iOS-13-%E7%B3%BB%E7%BB%9F"><span class="nav-text">iPhone 上玩真的 PSP 游戏，支持 iOS 13 系统</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

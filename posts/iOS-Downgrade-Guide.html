@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="iOS降级指南。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS降级指南">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/iOS-Downgrade-Guide.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="iOS降级指南。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/iOS-Downgrade-Guide/topic.jpg">
+<meta property="article:published_time" content="2023-11-10T06:01:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.567Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/iOS-Downgrade-Guide/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/iOS-Downgrade-Guide.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>iOS降级指南 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/iOS-Downgrade-Guide.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          iOS降级指南
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-10 14:01:29" itemprop="dateCreated datePublished" datetime="2023-11-10T14:01:29+08:00">2023-11-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>6.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/iOS-Downgrade-Guide/topic.jpg"></p>
+<p>iOS降级指南。</p>
+<span id="more"></span>
+
+<h1 id="TODOS"><a href="#TODOS" class="headerlink" title="TODOS"></a>TODOS</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># OTA延迟升级</span><br><span class="line"># 如果手机受监督，可推迟更新，适用于公司设备的情况。可参考以下内容延迟升级到iOS 14.8（方法已经失效）</span><br><span class="line">https://mp.weixin.qq.com/s/x4aeH2gp3J7E0HHX7s1Zng</span><br><span class="line">https://mp.weixin.qq.com/s/49wiD-MKZg8qM2ejbcvEmA</span><br><span class="line">https://supervise.me/</span><br></pre></td></tr></table></figure>
+
+<h1 id="SHSH2备份"><a href="#SHSH2备份" class="headerlink" title="SHSH2备份"></a>SHSH2备份</h1><p>SHSH2是高版本降级必备的文件。SHSH2仅能备份仍然开放验证的系统固件，因此建议每次更新完系统都备份SHSH2。</p>
+<h2 id="越狱设备"><a href="#越狱设备" class="headerlink" title="越狱设备"></a>越狱设备</h2><p>安装System Info插件，然后进入设置-通用-关于本机，在ECID上右滑后点击Save SHSH2即可。</p>
+<p>也可用TSSSaver插件，打开后点击<code>+</code>-Verify&amp;Save即可保存。通过点击Saved Blobs-here可查看保存的SHSH2。注意该插件的使用需要翻墙，作者源如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://repo.nullpixel.uk/</span><br></pre></td></tr></table></figure>
+
+<h2 id="非越狱设备"><a href="#非越狱设备" class="headerlink" title="非越狱设备"></a>非越狱设备</h2><p>通过以下网站即可，设备的ECID可以在iTunes中查看。注意SHSH Host网站备份的SHSH2的G值为0x1111111111111111。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://tsssaver.1conan.com/</span><br><span class="line">https://shsh.host/</span><br></pre></td></tr></table></figure>
+
+<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><h2 id="Futurerestore"><a href="#Futurerestore" class="headerlink" title="Futurerestore"></a>Futurerestore</h2><p>适用于高版本系统，需要有SHSH2备份。可在Mac&#x2F;Windows使用。下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/marijuanARM/futurerestore</span><br><span class="line">https://github.com/tihmstar/futurerestore</span><br></pre></td></tr></table></figure>
+
+<h3 id="固定G值"><a href="#固定G值" class="headerlink" title="固定G值"></a>固定G值</h3><p>即Generator值。G值在每次手机重启时会重置，所以需保持全程手机未关机。</p>
+<p>用记事本打开备份的SHSH2，搜索Generator即可看到文件中的G值。若使用的SHSH2为noapnonce，则G值默认为0x1111111111111111。如果使用的是apnonce，需要将设备G值固定为SHSH2中的值。</p>
+<p>以下方法均需确保手机处于越狱状态。</p>
+<h4 id="通过越狱软件"><a href="#通过越狱软件" class="headerlink" title="通过越狱软件"></a>通过越狱软件</h4><p>若为unc0ver&#x2F;Chimera&#x2F;Electra越狱，可直接在手机上打开越狱软件，点击Set nonce设置G值。</p>
+<h4 id="通过dimentio"><a href="#通过dimentio" class="headerlink" title="通过dimentio"></a>通过dimentio</h4><p>安装Dimentio和NewTerm插件。打开NewTerm，输入以下命令，此处的0x1111111111111111即为G值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">su // 密码为alpine</span><br><span class="line">dimentio 0x1111111111111111</span><br></pre></td></tr></table></figure>
+
+<h4 id="通过Generator-Auto-Setter"><a href="#通过Generator-Auto-Setter" class="headerlink" title="通过Generator Auto Setter"></a>通过Generator Auto Setter</h4><p>该插件可自动将设备G值设为特定值。安装插件后设置即可。</p>
+<h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><p>在电脑端需配置好环境。以Mac端为例，可在终端执行以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">brew install automake autoconf libtool pkg-config</span><br><span class="line">git clone https://github.com/tihmstar/libirecovery &amp;&amp; cd ./libirecovery &amp;&amp; bash autogen.sh &amp;&amp; make install</span><br><span class="line">git clone https://github.com/tihmstar/libcrippy &amp;&amp; cd ./libcrippy &amp;&amp; bash autogen.sh &amp;&amp; make install</span><br><span class="line">git clone https://github.com/tihmstar/libfragmentzip &amp;&amp; cd ./libfragmentzip &amp;&amp; bash autogen.sh &amp;&amp; make install</span><br><span class="line">cd /usr/local &amp;&amp; sudo mkdir ssl &amp;&amp; sudo chmod 777 /usr/local/ssl</span><br><span class="line">cd</span><br><span class="line">git clone https://github.com/openssl/openssl.git &amp;&amp; cd openssl &amp;&amp; ./config &amp;&amp; make &amp;&amp; sudo make install</span><br><span class="line">brew install curl</span><br><span class="line">brew install openssl</span><br><span class="line">ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/</span><br><span class="line">ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/</span><br><span class="line">ln -s /usr/local/Cellar/openssl/1.0.2j/bin/openssl openssl</span><br></pre></td></tr></table></figure>
+
+<h3 id="固件下载"><a href="#固件下载" class="headerlink" title="固件下载"></a>固件下载</h3><p>下载要降级的固件和当前固件，链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">https://www.i4.cn/firmware.html</span><br><span class="line">https://act.feng.com/wetools/index.php?r=iosRom/index</span><br><span class="line">https://www.efreelife.com/ipsw/</span><br><span class="line">https://ipsw.me/</span><br></pre></td></tr></table></figure>
+
+<h3 id="固件降级"><a href="#固件降级" class="headerlink" title="固件降级"></a>固件降级</h3><p>将要降级到的固件重命名为restore.ipsw，对应版本的SHSH2文件重命名为blob.shsh2。打开终端并执行以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 带基带文件</span><br><span class="line">./futurerestore -t shsh.shsh2 --latest-baseband --latest-sep restore.ipsw</span><br><span class="line"></span><br><span class="line"># 不带基带文件</span><br><span class="line">./futurerestore -t shsh.shsh2 --no-baseband --latest-sep restore.ipsw</span><br></pre></td></tr></table></figure>
+
+<p>如果提示找不到SEP Path，则需要手动从当前固件中提取。</p>
+<p>用WinRAR打开当前固件，解压出BuildManifest.plist文件，并改名为build.plist。</p>
+<p>在Firmware文件夹中找到以bbfw为后缀的基带文件。可能有多个文件符合要求，进入iPhone设置，点击通用-关于本机-调制解调器固件-查看版本号，选择版本号接近的即可。解压出该文件，并改名为bbfw.bbfw。</p>
+<p>在all_flash文件夹中找到以sep开头、im4p结尾的SEP文件，将符合手机主板型号的文件解压出，并改名为im4p.im4p，其中主板型号可以在爱思助手中找到，也可通过以下网站的Internal Name找到。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.theiphonewiki.com/wiki/Models#iPhone</span><br></pre></td></tr></table></figure>
+
+<p>SEP主要负责处理Touch ID、Face ID认证与各种密码的核对工作，一般来说，相同大版本系统的SEP很大几率兼容，跨版本系统的SEP不兼容。</p>
+<p>然后使用以下命令即可刷机。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./futurerestore -t blob.shsh2 -b bbfw.bbfw -p build.plist -s im4p.im4p -m build.plist -w restore.ipsw</span><br></pre></td></tr></table></figure>
+
+<p>若为iPad Wifi版或iPod，由于没有基带文件，命令如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./futurerestore -t blob.shsh2 --no-baseband -p build.plist -s im4p.im4p -m build.plist -w restore.ipsw</span><br></pre></td></tr></table></figure>
+
+<details>
+<summary>【进阶】使用图形化界面</summary>
+
+<p>除了用命令行，也可用GUI界面。不需要先下载futurerestore，可直接使用GUI界面下载。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/CoocooFroggy/FutureRestore-GUI/releases</span><br></pre></td></tr></table></figure>
+</details>
+
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><h4 id="ERROR-Unable-to-send-iBEC-to-device-，Failed-with-errorcode-x3D-8"><a href="#ERROR-Unable-to-send-iBEC-to-device-，Failed-with-errorcode-x3D-8" class="headerlink" title="ERROR: Unable to send iBEC to device.，Failed with errorcode&#x3D;-8"></a>ERROR: Unable to send iBEC to device.，Failed with errorcode&#x3D;-8</h4><p>使用最新版Futurerestore工具。</p>
+<h4 id="ERROR-Could-not-open-ZIP-archive-‘-x2F-var-x2F-tmp-x2F-ffffffffffffffffffffffffffffffff00000036FhdfWC’-19，Failed-with-errorcode-x3D-11"><a href="#ERROR-Could-not-open-ZIP-archive-‘-x2F-var-x2F-tmp-x2F-ffffffffffffffffffffffffffffffff00000036FhdfWC’-19，Failed-with-errorcode-x3D-11" class="headerlink" title="ERROR: Could not open ZIP archive ‘&#x2F;var&#x2F;tmp&#x2F;ffffffffffffffffffffffffffffffff00000036FhdfWC’: 19，Failed with errorcode&#x3D;-11"></a>ERROR: Could not open ZIP archive ‘&#x2F;var&#x2F;tmp&#x2F;ffffffffffffffffffffffffffffffff00000036FhdfWC’: 19，Failed with errorcode&#x3D;-11</h4><p>尝试更换工具和电脑。</p>
+<h4 id="Getting-SepNonce-failed-ERROR，Device-is-in-an-invalid-state"><a href="#Getting-SepNonce-failed-ERROR，Device-is-in-an-invalid-state" class="headerlink" title="Getting SepNonce failed ERROR，Device is in an invalid state"></a>Getting SepNonce failed ERROR，Device is in an invalid state</h4><p>使用Mac版Futurerestore工具。</p>
+<h4 id="ERROR-Could-not-open-ZIP-archive-errorcode-x3D-11"><a href="#ERROR-Could-not-open-ZIP-archive-errorcode-x3D-11" class="headerlink" title="ERROR Could not open ZIP archive (errorcode&#x3D;-11)"></a>ERROR Could not open ZIP archive (errorcode&#x3D;-11)</h4><p>尝试更换电脑。</p>
+<h4 id="Unable-to-place-device-into-recovery-mode-from-Normal-mode，Failed-with-errorcode-x3D-2"><a href="#Unable-to-place-device-into-recovery-mode-from-Normal-mode，Failed-with-errorcode-x3D-2" class="headerlink" title="Unable to place device into recovery mode from Normal mode，Failed with errorcode&#x3D;-2"></a>Unable to place device into recovery mode from Normal mode，Failed with errorcode&#x3D;-2</h4><p>设置随机数后重新启动或手动进入恢复模式后再尝试刷机，若问题依旧，则完全卸载iTunes所有组件重装iTunes重试。</p>
+<h4 id="APTicket-can’t-be-used-for-restoring-this-device，Failed-with-errorcode-x3D-45"><a href="#APTicket-can’t-be-used-for-restoring-this-device，Failed-with-errorcode-x3D-45" class="headerlink" title="APTicket can’t be used for restoring this device，Failed with errorcode&#x3D;-45"></a>APTicket can’t be used for restoring this device，Failed with errorcode&#x3D;-45</h4><p>SHSH2无效。</p>
+<h4 id="APTicket-can’t-be-used-for-this-restore，Failed-with-errorcode-x3D-44"><a href="#APTicket-can’t-be-used-for-this-restore，Failed-with-errorcode-x3D-44" class="headerlink" title="APTicket can’t be used for this restore，Failed with errorcode&#x3D;-44"></a>APTicket can’t be used for this restore，Failed with errorcode&#x3D;-44</h4><p>可能是SHSH2文件名错误。若无效，则将后缀名从shsh2改为plist，命令中的对应位置也进行修改。若仍然报错，则SHSH2无效。</p>
+<h4 id="Unable-to-enter-recovery-mode，Failed-with-errorcode-x3D-2"><a href="#Unable-to-enter-recovery-mode，Failed-with-errorcode-x3D-2" class="headerlink" title="Unable to enter recovery mode，Failed with errorcode&#x3D;-2"></a>Unable to enter recovery mode，Failed with errorcode&#x3D;-2</h4><p>iTunes驱动或USB数据线问题。更换数据线，完全卸载iTunes所有组件，重启电脑安装最新版iTunes。</p>
+<h4 id="unsupported-devicemode-please-put-device-in-recovery-mode-or-normal-mode，Failed-with-errorcode-x3D-3"><a href="#unsupported-devicemode-please-put-device-in-recovery-mode-or-normal-mode，Failed-with-errorcode-x3D-3" class="headerlink" title="unsupported devicemode, please put device in recovery mode or normal mode，Failed with errorcode&#x3D;-3"></a>unsupported devicemode, please put device in recovery mode or normal mode，Failed with errorcode&#x3D;-3</h4><p>进入恢复模式重试。</p>
+<h4 id="ERROR-SEP-does-not-match-sepmanifest，Failed-with-errorcode-x3D-67"><a href="#ERROR-SEP-does-not-match-sepmanifest，Failed-with-errorcode-x3D-67" class="headerlink" title="ERROR: SEP does not match sepmanifest，Failed with errorcode&#x3D;-67"></a>ERROR: SEP does not match sepmanifest，Failed with errorcode&#x3D;-67</h4><p>SEP文件错误，更换后重试。</p>
+<h4 id="sep-firmware-isn’t-signed，Failed-with-errorcode-x3D-3"><a href="#sep-firmware-isn’t-signed，Failed-with-errorcode-x3D-3" class="headerlink" title="sep firmware isn’t signed，Failed with errorcode&#x3D;-3"></a>sep firmware isn’t signed，Failed with errorcode&#x3D;-3</h4><p>选择了关闭验证的固件中的SEP。选择iOS12.3或以上固件。</p>
+<h4 id="Unable-to-place-device-into-recovery-mode-from-Normal-mode，Failed-with-errorcode-x3D-2-1"><a href="#Unable-to-place-device-into-recovery-mode-from-Normal-mode，Failed-with-errorcode-x3D-2-1" class="headerlink" title="Unable to place device into recovery mode from Normal mode，Failed with errorcode&#x3D;-2"></a>Unable to place device into recovery mode from Normal mode，Failed with errorcode&#x3D;-2</h4><p>iTunes驱动未启动或未正常工作。完全卸载iTunes后安装最新版iTunes重试。</p>
+<h4 id="can’t-init-no-device-found，Failed-with-errorcode-x3D-3"><a href="#can’t-init-no-device-found，Failed-with-errorcode-x3D-3" class="headerlink" title="can’t init, no device found，Failed with errorcode&#x3D;-3"></a>can’t init, no device found，Failed with errorcode&#x3D;-3</h4><p>重新插拔数据线。</p>
+<h4 id="ERROR-Unable-to-find-any-build-identities-for-SEP，Failed-with-errorcode-x3D-5"><a href="#ERROR-Unable-to-find-any-build-identities-for-SEP，Failed-with-errorcode-x3D-5" class="headerlink" title="ERROR: Unable to find any build identities for SEP，Failed with errorcode&#x3D;-5"></a>ERROR: Unable to find any build identities for SEP，Failed with errorcode&#x3D;-5</h4><p>buildmanifest文件或SEP文件出现问题。</p>
+<h4 id="Unable-to-place-device-into-recovery-mode-from-Normal-mode-errorcode-x3D-8978449"><a href="#Unable-to-place-device-into-recovery-mode-from-Normal-mode-errorcode-x3D-8978449" class="headerlink" title="Unable to place device into recovery mode from Normal mode (errorcode&#x3D;8978449)"></a>Unable to place device into recovery mode from Normal mode (errorcode&#x3D;8978449)</h4><p>设备无法进入正确的恢复模式。手机连接电脑后，电脑端使用爱思助手，手动将设备进入恢复模式，再重新输入指令开始刷机即可。</p>
+<h4 id="SEP-does-not-match-sepmanifest-errorcode-x3D-54394897"><a href="#SEP-does-not-match-sepmanifest-errorcode-x3D-54394897" class="headerlink" title="SEP does not match sepmanifest (errorcode&#x3D;54394897)"></a>SEP does not match sepmanifest (errorcode&#x3D;54394897)</h4><p>SEP不兼容，无法进行刷机。手动提取基带、SEP等文件后重试。</p>
+<h4 id="failed-to-reconnect-to-device-in-recovery-mode-errorcode-x3D-65863697"><a href="#failed-to-reconnect-to-device-in-recovery-mode-errorcode-x3D-65863697" class="headerlink" title="failed to reconnect to device in recovery  mode (errorcode&#x3D;65863697)"></a>failed to reconnect to device in recovery <iBEC> mode (errorcode&#x3D;65863697)</h4><p>无法在恢复模式下重新连接到设备，表示设备与电脑断开连接。使用苹果官方原装数据线，更换USB接口，保证良好连接的情况下，再进行刷机。</p>
+<h4 id="Device-ApNonce-does-not-match-APTicket-nonce"><a href="#Device-ApNonce-does-not-match-APTicket-nonce" class="headerlink" title="Device ApNonce does not match APTicket nonce"></a>Device ApNonce does not match APTicket nonce</h4><p>G值不匹配。设备的G值和备份SHSH2文件中的不一致，重新固定G值即可。</p>
+<h4 id="SEP-firmware-is-Not-being-signed"><a href="#SEP-firmware-is-Not-being-signed" class="headerlink" title="SEP firmware is Not being signed"></a>SEP firmware is Not being signed</h4><p>所选SEP的固件已经关闭验证，尝试重新从开放验证的固件中提取SEP文件。</p>
+<h2 id="restoreM8"><a href="#restoreM8" class="headerlink" title="restoreM8"></a>restoreM8</h2><p>restoreM8是Futurerestore的图形化版本，Futurerestore是用于供iPhone进行刷机操作的命令行软件。下载地址如下，降级方法同上。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/80036nd/RestoreM8</span><br></pre></td></tr></table></figure>
+
+<h2 id="Pluvia"><a href="#Pluvia" class="headerlink" title="Pluvia"></a>Pluvia</h2><p>适用于低版本系统，可在Mac使用。</p>
+<p>以iPhone 4为例说明其使用方法。下载Pluvia仓库并解压，准备好要降级的固件，放入Pluvia文件夹中。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/parrotgeek1/Pluvia</span><br></pre></td></tr></table></figure>
+
+<p>保持翻墙条件，打开终端并切换到Pluvia所在目录，然后输入以下命令制作固件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./make_ipsw.sh [固件名称]</span><br></pre></td></tr></table></figure>
+
+<p>让手机进入DFU模式，连接手机并输入以下命令进行刷机。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./restore.sh [自动生成的固件名称]</span><br></pre></td></tr></table></figure>
+
+<h2 id="ReRa1n"><a href="#ReRa1n" class="headerlink" title="ReRa1n"></a>ReRa1n</h2><p>适用于Linux。在终端输入以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/AidanGamzer/ReRa1n.git</span><br><span class="line">cd ReRa1n</span><br><span class="line">sudo chmod +x install.sh</span><br><span class="line">sudo chmod +x rera1n.sh</span><br><span class="line">./rera1n.sh</span><br></pre></td></tr></table></figure>
+
+<h2 id="Vieux"><a href="#Vieux" class="headerlink" title="Vieux"></a>Vieux</h2><p>仅支持部分设备。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/MatthewPierson/Vieux</span><br></pre></td></tr></table></figure>
+
+<h2 id="turdus-merula"><a href="#turdus-merula" class="headerlink" title="turdus merula"></a>turdus merula</h2><p>支持A9(X)和A10(X)设备。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://sep.lol/</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="利用Futurerestore进行iOS13的升、降级、平刷"><a href="#利用Futurerestore进行iOS13的升、降级、平刷" class="headerlink" title="利用Futurerestore进行iOS13的升、降级、平刷"></a>利用Futurerestore进行iOS13的升、降级、平刷</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://therealketo.github.io/futurerestore-guide/</span><br><span class="line">https://iphoneba.cn/archives/1008.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="Downgrade-iOS-Firmware-using-ReRa1n"><a href="#Downgrade-iOS-Firmware-using-ReRa1n" class="headerlink" title="Downgrade iOS Firmware using ReRa1n"></a>Downgrade iOS Firmware using ReRa1n</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://fulltip.net/downgrade-ios-firmware-using-rera1n.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="iphone4-8G国行完美降级"><a href="#iphone4-8G国行完美降级" class="headerlink" title="iphone4 8G国行完美降级"></a>iphone4 8G国行完美降级</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.feng.com/post/12857525</span><br></pre></td></tr></table></figure>
+
+<h2 id="降级-iOS10-3-3-方法？并不是想象中容易"><a href="#降级-iOS10-3-3-方法？并不是想象中容易" class="headerlink" title="降级 iOS10.3.3 方法？并不是想象中容易"></a>降级 iOS10.3.3 方法？并不是想象中容易</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/VjyE55Vsn5OTISzg4eaeoA</span><br></pre></td></tr></table></figure>
+
+<h2 id="futurerestore-，iOS-系统刷机到指定版本"><a href="#futurerestore-，iOS-系统刷机到指定版本" class="headerlink" title="futurerestore ，iOS 系统刷机到指定版本"></a>futurerestore ，iOS 系统刷机到指定版本</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/L3vNBWcWWDUEPuziO0KdWA</span><br></pre></td></tr></table></figure>
+
+<h2 id="利用Futurerestore进行iOS13的升、降级、平刷-1"><a href="#利用Futurerestore进行iOS13的升、降级、平刷-1" class="headerlink" title="利用Futurerestore进行iOS13的升、降级、平刷"></a>利用Futurerestore进行iOS13的升、降级、平刷</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/h5EqUG9xxo-_nz9K5b9F-w</span><br></pre></td></tr></table></figure>
+
+<h2 id="futurerestore-指南-，iOS-系统刷机到指定版本"><a href="#futurerestore-指南-，iOS-系统刷机到指定版本" class="headerlink" title="futurerestore 指南 ，iOS 系统刷机到指定版本"></a>futurerestore 指南 ，iOS 系统刷机到指定版本</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/_faR7J2tvxUunr1ZijdIig</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="iOS-系统，完美降级工具，终于发布！"><a href="#iOS-系统，完美降级工具，终于发布！" class="headerlink" title="iOS 系统，完美降级工具，终于发布！"></a>iOS 系统，完美降级工具，终于发布！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/1hq7Rlak8SPAUYak4vz1AA</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/iOS-Jailbreak-Method.html" rel="prev" title="iOS越狱方法">
+      <i class="fa fa-chevron-left"></i> iOS越狱方法
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/Android-Advanced-Guide.html" rel="next" title="Android高级使用指南">
+      Android高级使用指南 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TODOS"><span class="nav-text">TODOS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SHSH2%E5%A4%87%E4%BB%BD"><span class="nav-text">SHSH2备份</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B6%8A%E7%8B%B1%E8%AE%BE%E5%A4%87"><span class="nav-text">越狱设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%9E%E8%B6%8A%E7%8B%B1%E8%AE%BE%E5%A4%87"><span class="nav-text">非越狱设备</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7"><span class="nav-text">工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Futurerestore"><span class="nav-text">Futurerestore</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BA%E5%AE%9AG%E5%80%BC"><span class="nav-text">固定G值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E8%B6%8A%E7%8B%B1%E8%BD%AF%E4%BB%B6"><span class="nav-text">通过越狱软件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87dimentio"><span class="nav-text">通过dimentio</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87Generator-Auto-Setter"><span class="nav-text">通过Generator Auto Setter</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="nav-text">配置环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BA%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="nav-text">固件下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BA%E4%BB%B6%E9%99%8D%E7%BA%A7"><span class="nav-text">固件降级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ERROR-Unable-to-send-iBEC-to-device-%EF%BC%8CFailed-with-errorcode-x3D-8"><span class="nav-text">ERROR: Unable to send iBEC to device.，Failed with errorcode&#x3D;-8</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ERROR-Could-not-open-ZIP-archive-%E2%80%98-x2F-var-x2F-tmp-x2F-ffffffffffffffffffffffffffffffff00000036FhdfWC%E2%80%99-19%EF%BC%8CFailed-with-errorcode-x3D-11"><span class="nav-text">ERROR: Could not open ZIP archive ‘&#x2F;var&#x2F;tmp&#x2F;ffffffffffffffffffffffffffffffff00000036FhdfWC’: 19，Failed with errorcode&#x3D;-11</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Getting-SepNonce-failed-ERROR%EF%BC%8CDevice-is-in-an-invalid-state"><span class="nav-text">Getting SepNonce failed ERROR，Device is in an invalid state</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ERROR-Could-not-open-ZIP-archive-errorcode-x3D-11"><span class="nav-text">ERROR Could not open ZIP archive (errorcode&#x3D;-11)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Unable-to-place-device-into-recovery-mode-from-Normal-mode%EF%BC%8CFailed-with-errorcode-x3D-2"><span class="nav-text">Unable to place device into recovery mode from Normal mode，Failed with errorcode&#x3D;-2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#APTicket-can%E2%80%99t-be-used-for-restoring-this-device%EF%BC%8CFailed-with-errorcode-x3D-45"><span class="nav-text">APTicket can’t be used for restoring this device，Failed with errorcode&#x3D;-45</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#APTicket-can%E2%80%99t-be-used-for-this-restore%EF%BC%8CFailed-with-errorcode-x3D-44"><span class="nav-text">APTicket can’t be used for this restore，Failed with errorcode&#x3D;-44</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Unable-to-enter-recovery-mode%EF%BC%8CFailed-with-errorcode-x3D-2"><span class="nav-text">Unable to enter recovery mode，Failed with errorcode&#x3D;-2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#unsupported-devicemode-please-put-device-in-recovery-mode-or-normal-mode%EF%BC%8CFailed-with-errorcode-x3D-3"><span class="nav-text">unsupported devicemode, please put device in recovery mode or normal mode，Failed with errorcode&#x3D;-3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ERROR-SEP-does-not-match-sepmanifest%EF%BC%8CFailed-with-errorcode-x3D-67"><span class="nav-text">ERROR: SEP does not match sepmanifest，Failed with errorcode&#x3D;-67</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sep-firmware-isn%E2%80%99t-signed%EF%BC%8CFailed-with-errorcode-x3D-3"><span class="nav-text">sep firmware isn’t signed，Failed with errorcode&#x3D;-3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Unable-to-place-device-into-recovery-mode-from-Normal-mode%EF%BC%8CFailed-with-errorcode-x3D-2-1"><span class="nav-text">Unable to place device into recovery mode from Normal mode，Failed with errorcode&#x3D;-2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#can%E2%80%99t-init-no-device-found%EF%BC%8CFailed-with-errorcode-x3D-3"><span class="nav-text">can’t init, no device found，Failed with errorcode&#x3D;-3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ERROR-Unable-to-find-any-build-identities-for-SEP%EF%BC%8CFailed-with-errorcode-x3D-5"><span class="nav-text">ERROR: Unable to find any build identities for SEP，Failed with errorcode&#x3D;-5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Unable-to-place-device-into-recovery-mode-from-Normal-mode-errorcode-x3D-8978449"><span class="nav-text">Unable to place device into recovery mode from Normal mode (errorcode&#x3D;8978449)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SEP-does-not-match-sepmanifest-errorcode-x3D-54394897"><span class="nav-text">SEP does not match sepmanifest (errorcode&#x3D;54394897)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#failed-to-reconnect-to-device-in-recovery-mode-errorcode-x3D-65863697"><span class="nav-text">failed to reconnect to device in recovery  mode (errorcode&#x3D;65863697)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Device-ApNonce-does-not-match-APTicket-nonce"><span class="nav-text">Device ApNonce does not match APTicket nonce</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SEP-firmware-is-Not-being-signed"><span class="nav-text">SEP firmware is Not being signed</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#restoreM8"><span class="nav-text">restoreM8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pluvia"><span class="nav-text">Pluvia</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ReRa1n"><span class="nav-text">ReRa1n</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vieux"><span class="nav-text">Vieux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#turdus-merula"><span class="nav-text">turdus merula</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8Futurerestore%E8%BF%9B%E8%A1%8CiOS13%E7%9A%84%E5%8D%87%E3%80%81%E9%99%8D%E7%BA%A7%E3%80%81%E5%B9%B3%E5%88%B7"><span class="nav-text">利用Futurerestore进行iOS13的升、降级、平刷</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Downgrade-iOS-Firmware-using-ReRa1n"><span class="nav-text">Downgrade iOS Firmware using ReRa1n</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iphone4-8G%E5%9B%BD%E8%A1%8C%E5%AE%8C%E7%BE%8E%E9%99%8D%E7%BA%A7"><span class="nav-text">iphone4 8G国行完美降级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%8D%E7%BA%A7-iOS10-3-3-%E6%96%B9%E6%B3%95%EF%BC%9F%E5%B9%B6%E4%B8%8D%E6%98%AF%E6%83%B3%E8%B1%A1%E4%B8%AD%E5%AE%B9%E6%98%93"><span class="nav-text">降级 iOS10.3.3 方法？并不是想象中容易</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#futurerestore-%EF%BC%8CiOS-%E7%B3%BB%E7%BB%9F%E5%88%B7%E6%9C%BA%E5%88%B0%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%AC"><span class="nav-text">futurerestore ，iOS 系统刷机到指定版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8Futurerestore%E8%BF%9B%E8%A1%8CiOS13%E7%9A%84%E5%8D%87%E3%80%81%E9%99%8D%E7%BA%A7%E3%80%81%E5%B9%B3%E5%88%B7-1"><span class="nav-text">利用Futurerestore进行iOS13的升、降级、平刷</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#futurerestore-%E6%8C%87%E5%8D%97-%EF%BC%8CiOS-%E7%B3%BB%E7%BB%9F%E5%88%B7%E6%9C%BA%E5%88%B0%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%AC"><span class="nav-text">futurerestore 指南 ，iOS 系统刷机到指定版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%AE%8C%E7%BE%8E%E9%99%8D%E7%BA%A7%E5%B7%A5%E5%85%B7%EF%BC%8C%E7%BB%88%E4%BA%8E%E5%8F%91%E5%B8%83%EF%BC%81"><span class="nav-text">iOS 系统，完美降级工具，终于发布！</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

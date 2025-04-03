@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="安卓使用技巧。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android使用技巧总结">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/Android-Skills.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="安卓使用技巧。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/Android-Skills/topic.jpg">
+<meta property="article:published_time" content="2020-04-22T14:54:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.522Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/Android-Skills/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/Android-Skills.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Android使用技巧总结 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/Android-Skills.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Android使用技巧总结
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-22 22:54:29" itemprop="dateCreated datePublished" datetime="2020-04-22T22:54:29+08:00">2020-04-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>19k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>17 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/Android-Skills/topic.jpg"></p>
+<p>安卓使用技巧。</p>
+<span id="more"></span>
+
+<h1 id="TODOS"><a href="#TODOS" class="headerlink" title="TODOS"></a>TODOS</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br></pre></td><td class="code"><pre><span class="line">https://android.stackexchange.com/questions/156955/samsungs-equivalent-to-fastboots-temporary-flash</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">https://github.com/HuskyDG/magisk-files</span><br><span class="line"></span><br><span class="line">https://android.stackexchange.com/questions/213167/how-does-magisk-work</span><br><span class="line">https://android.stackexchange.com/questions/218222/how-to-boot-system-as-root-device-always-as-rooted</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">https://blog.csdn.net/u010783226/article/details/115752477</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">https://www.reddit.com/r/LineageOS/comments/zs2ras/how_to_get_started_with_a_unsupported_device/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">https://sspai.com/post/73603</span><br><span class="line">https://sspai.com/post/53772</span><br><span class="line">https://sspai.com/post/53075</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">https://github.com/GameTheory-/jodin3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">APK安装器——SAI</span><br><span class="line">https://github.com/Aefyr/SAI</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">termux</span><br><span class="line">https://github.com/termux/termux-app</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">API Levels</span><br><span class="line">https://apilevels.com/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Shizuku</span><br><span class="line">https://sspai.com/post/73294</span><br><span class="line">https://shizuku.rikka.app/zh-hans/</span><br><span class="line">https://www.xda-developers.com/shizuku/</span><br><span class="line">https://forum.xda-developers.com/t/exploit-shizuku-support-smt-shell-v2-0-get-a-system-shell-uid-1000-within-the-app-itself-and-write-your-own-system-app-with-an-api.4561879/</span><br><span class="line">https://www.reddit.com/r/fossdroid/comments/y8ewgf/a_list_of_apps_that_utilize_shizuku_for_elevated/</span><br><span class="line">https://github.com/BLuFeNiX/SMTShell</span><br><span class="line">https://forum.xda-developers.com/t/exploit-shizuku-support-smt-shell-v2-0-get-a-system-shell-uid-1000-within-the-app-itself-and-write-your-own-system-app-with-an-api.4561879/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Fdroid</span><br><span class="line">https://depau.github.io/fdroid_shizuku_privileged_extension/fdroid/repo/</span><br><span class="line">https://f-droid.org/packages/de.marmaro.krt.ffupdater/</span><br><span class="line">https://gitlab.com/sunilpaulmathew/izzyondroid</span><br><span class="line">https://github.com/redsolver/skydroid</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">双系统</span><br><span class="line">https://www.jianshu.com/p/0045d820f586</span><br><span class="line">https://zhuanlan.zhihu.com/p/48520404</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">解压/打包boot.img</span><br><span class="line">https://www.whitewinterwolf.com/posts/2016/08/11/how-to-unpack-and-edit-android-boot-img/</span><br><span class="line">https://forum.xda-developers.com/t/guide-unpack-repack-boot-recovery-img-without-kitchen.2839670/</span><br><span class="line">https://github.com/cfig/Android_boot_image_editor</span><br><span class="line">https://github.com/GameTheory-/mktool</span><br><span class="line">https://github.com/pbatard/bootimg-tools</span><br><span class="line">https://stackoverflow.com/questions/57485080/stock-boot-img-not-booting-after-re-packing</span><br><span class="line">https://forum.xda-developers.com/t/tool-boot-img-tools-unpack-repack-ramdisk.2319018/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">临时 root？</span><br><span class="line">https://forum.xda-developers.com/t/how-do-i-temporarily-root-a-samsung-device-running-android-9-without-twrp-recovery.4421255/</span><br><span class="line"></span><br><span class="line">Magisk Root</span><br><span class="line">另外一个可能的方法：先刷入twrp</span><br><span class="line">可以用supersu来看是不是真的被root了</span><br><span class="line">Magisk修改的是boot分区</span><br><span class="line">进不了boot分区会卡在android的界面，进不了system分区会卡在开机logo界面</span><br><span class="line"></span><br><span class="line">救砖模块</span><br><span class="line">https://sspai.com/post/57320</span><br><span class="line">https://www.52pojie.cn/thread-1600094-1-1.html</span><br><span class="line">刷了救砖模块手机反而启动不了了。。。</span><br><span class="line">补救：</span><br><span class="line">https://topjohnwu.github.io/Magisk/faq.html</span><br><span class="line">ADB输命令，或者进Safe Mode（其实就是fastboot或者recovery）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">magisk不适用于android 9是一个普遍现象</span><br><span class="line">https://forum.xda-developers.com/t/why-magisk-doesnt-work-with-pie-roms.3848025/page-3</span><br><span class="line">https://forum.xda-developers.com/t/solved-i-do-have-root-access-but-magisk-is-not-installed.3861626/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">root的另外一个可能—kernelSU</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Mac上的odin——heimdall</span><br><span class="line">https://glassechidna.com.au/heimdall/#downloads</span><br><span class="line">https://bitbucket.org/benjamin_dobell/heimdall/downloads/heimdall-suite-1.4.0-mac.dmg</span><br><span class="line">可用homebrew安装，但在mac12上失败，因为它试图安装到系统盘</span><br><span class="line">https://formulae.brew.sh/cask/heimdall-suite</span><br><span class="line"></span><br><span class="line">Jodin基于heimdall，所以也不行</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fastboot命令大全</span><br><span class="line">https://www.jkmeng.cn/219.html</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Heimdall的用法</span><br><span class="line">https://forum.xda-developers.com/t/guide-how-to-install-use-heimdall-and-flash-back-to-stock.1113195/</span><br><span class="line"></span><br><span class="line">两个exe文件，heimhall是命令行，heimhall-frontend是用户界面方式</span><br><span class="line">替换driver的时候，如果没有samsung开头的设备，就选MSM8953（反正选错了驱动也装不上去的）</span><br><span class="line">可能需要用1.42版本修复ERROR: Failed to Send Data! 问题：</span><br><span class="line">https://www.reddit.com/r/LineageOS/comments/aymmy2/heimdall_error_failed_to_send_data/</span><br><span class="line">1.42 版本 windows：</span><br><span class="line">https://github.com/tothphu/heimdall_build</span><br><span class="line"></span><br><span class="line">步骤：</span><br><span class="line">1. 下载1.40和1.42的heimdall</span><br><span class="line">2. 用1.40下面的Drivers/zadig，更换MSM8953的驱动</span><br><span class="line">3. 命令行切换到1.42所在目录，运行以下命令：</span><br><span class="line"></span><br><span class="line">.\heimdall.exe detect</span><br><span class="line">.\heimdall.exe download-pit --output pit.pit --no-reboot</span><br><span class="line">.\heimdall.exe print-pit --no-reboot</span><br><span class="line"></span><br><span class="line">然后就可以将输出的分区表复制出来了，可以搜索一下相关分区</span><br><span class="line">主要分区是BOOT RECOVERY SYSTEM</span><br><span class="line">flash命令示例如下：</span><br><span class="line"></span><br><span class="line">https://forum.xda-developers.com/t/tool-heimdall-1-4-rc1.2071724/</span><br><span class="line"></span><br><span class="line">.\heimdall.exe flash --resume --BOOT boot.img</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">组合固件（新bootloader+旧系统，可以在新bootloader跑旧系统）</span><br><span class="line">https://combinationfirmware.com/downloads/j3300zcu1aqh1/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">TWRP</span><br><span class="line">twrp不能挂载分区，应该是没有解密模块</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Google Play版微信</span><br><span class="line">https://www.coolapk.com/feed/45383246?shareKey=YThmNjhlNzAwMzZiNjQ0MzY5MTg~&amp;shareFrom=com.coolapk.market_12.5.0</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Samsung J3（armv7架构）要用微信8.0.2</span><br><span class="line">可以在这里下载（在官网下的armv7装不了）</span><br><span class="line">https://www.apkmirror.com/apk/wechat-tencent/wechat/wechat-7-0-10-release/wechat-7-0-10-android-apk-download/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Google Camera</span><br><span class="line">https://www.bilibili.com/read/cv8122208</span><br><span class="line">https://tecnoandroid.net/zh-TW/gcam-google-camera-xiaomi-huawei-samsung-oneplus-realme-redmi/</span><br><span class="line">https://forum.xda-developers.com/t/downgrade-android-8-to-7-binary-3.3891802/</span><br><span class="line">armv7可以用的版本（不过会闪退，闪退的话要更换维护版本）</span><br><span class="line">https://www.apkmirror.com/apk/google-inc/camera/camera-4-2-035-141213305-release/google-camera-4-2-035-141213305-2-android-apk-download/download/?key=2997286a3ea65b09c97e3be9755b361bde73e4e8</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">降级bootloader（基本不可能，bootloader禁止从高SW REV刷到低SW REV）</span><br><span class="line">https://forum.xda-developers.com/t/downgrading-bootloader-in-samsung.4382225/</span><br><span class="line">https://www.reddit.com/r/AndroidQuestions/comments/nnlg6f/sw_rev_check_fail_bootloader_device_7_binary_2/</span><br><span class="line">https://forum.gsmhosting.com/vbb/f777/how-downgrade-binaryu8-binary-u1-2963482/</span><br><span class="line">https://forum.xda-developers.com/t/guide-skipping-kg-state-prenormal-on-oneui-android-pie-9-0.3911862/</span><br><span class="line">https://forum.xda-developers.com/t/is-it-possible-to-downgrade-s8-from-pie-to-oreo-sw-rev-error.4135167/</span><br><span class="line">https://forum.xda-developers.com/t/method-for-everyone-who-wants-to-downgrade-galaxy-s8-to-oreo-nougat.3946240/</span><br><span class="line">https://forum.xda-developers.com/t/can-i-downgrade-the-samsung-bootloader-from-sw-rev-3-to-2.3650483/</span><br><span class="line">从这里可以看到SW REV</span><br><span class="line">https://samfw.com/firmware/SM-J3300</span><br><span class="line">BIN/BINARY是什么</span><br><span class="line">https://samfw.com/blog/what-is-bit-binary-value</span><br><span class="line">只能刷BINARY VALUE比当前高或相同的固件，否则会报错</span><br><span class="line">假设value是4，那么可以这样来搜索root文件：j3300 u4 root</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Android看系统启动log需要root权限</span><br><span class="line">https://android.stackexchange.com/questions/26080/does-android-keep-a-log-of-when-it-boots</span><br><span class="line">https://www.xda-developers.com/how-to-take-logs-android/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">LineageOS</span><br><span class="line">需要适配的设备，才能源码编译</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">解压lz4</span><br><span class="line">https://github.com/lz4/lz4</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">J3300 Root</span><br><span class="line"></span><br><span class="line">用最新的magisk 26.1也不行</span><br><span class="line"></span><br><span class="line">这个也不行</span><br><span class="line">操作是先刷原版固件包，再刷它的AP包</span><br><span class="line">https://support.halabtech.com/index.php?a=downloads&amp;b=file&amp;id=318127</span><br><span class="line">https://drive.google.com/file/d/1uZRLjK4I2--h69aKJ51WS40vtqINJJ4k/view</span><br><span class="line"></span><br><span class="line">j3300 android 9 SAR 是 No，要装magisk 23 才能看到</span><br><span class="line">所以应该只传 boot.img 而不是整个 AP 包，但也还是不行，搞不懂</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">尝试安装时保留AVB 2.0/dm-verity 和 保持强制加密</span><br><span class="line">https://zhuanlan.zhihu.com/p/143181151</span><br><span class="line"></span><br><span class="line">用AP包：</span><br><span class="line">都取消勾选：可启动，无Root</span><br><span class="line">都勾选：可启动，无Root</span><br><span class="line">只勾选保留AVB 2.0/dm-verity：可启动，无Root</span><br><span class="line">只勾选保持强制加密：可启动，无Root</span><br><span class="line"></span><br><span class="line">用img：</span><br><span class="line">都取消勾选：可启动，无Root</span><br><span class="line">都勾选：可启动，无Root</span><br><span class="line">只勾选保留AVB 2.0/dm-verity：可启动，无Root</span><br><span class="line">只勾选保持强制加密：可启动，无Root</span><br><span class="line"></span><br><span class="line">看日志可以看到</span><br><span class="line">E opjohnwu.magis: Not starting debugger since process cannot load the jdwp agent</span><br><span class="line"></span><br><span class="line">https://forum.xda-developers.com/t/magisk-general-support-discussion.3432382/page-1565</span><br><span class="line"></span><br><span class="line">I doubt that error has anything to do with it (it&#x27;s got to do with debugging Java), but like I said earlier my log reading skills are limited. I can&#x27;t see anything special in there, but it isn&#x27;t certain that the problem manifests as an error. A full logcat without the heavy filtering might be necessary.</span><br><span class="line"></span><br><span class="line">https://forum.xda-developers.com/t/magisk-general-support-discussion.3432382/page-1566</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">——原因很可能是升级了bootloader的版本，导致magisk的boot修补失效了</span><br><span class="line">——可能可以尝试magisk in recovery</span><br><span class="line"></span><br><span class="line">——更新（2022-10-6）</span><br><span class="line">magisk 25.2+boot.img或recovery.img都不行</span><br><span class="line">安装后用recovery的方式进入也不行</span><br><span class="line"></span><br><span class="line">https://github.com/topjohnwu/Magisk/issues/4495</span><br><span class="line">用这个也不行</span><br><span class="line"></span><br><span class="line">尝试22-25.2的版本均不行</span><br><span class="line"></span><br><span class="line">（如果想用22以下的，注意一进去的时候要马上按安装</span><br><span class="line">不然检测到有更新的话，就按不了了</span><br><span class="line">——但其实就算进去了也不行，会下载失败的）</span><br><span class="line"></span><br><span class="line">尝试以下方法，还是不行：</span><br><span class="line">https://trendyport.com/how-to-extract-boot-img-from-boot-img-iz4-and-root-samsung/?amp</span><br><span class="line"></span><br><span class="line">尝试刷入后取消自动重启，自行进入Recovery并重置系统，还是不行</span><br></pre></td></tr></table></figure>
+
+<h1 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">https://source.android.com/setup/build/building-kernels-deprecated?hl=zh-cn</span><br><span class="line">https://androidfilehost.com/</span><br><span class="line">https://forum.renegade-project.org/t/845-windows/36</span><br><span class="line">https://forum.xda-developers.com/t/halium-9-0-halium-boot-ubports-guide.4093517/</span><br><span class="line">https://docs.halium.org/en/latest/</span><br><span class="line">https://www.jianshu.com/p/9b85dce0dcb7</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="软件与框架"><a href="#软件与框架" class="headerlink" title="软件与框架"></a>软件与框架</h1><h2 id="Xposed"><a href="#Xposed" class="headerlink" title="Xposed"></a>Xposed</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="已ROOT方法"><a href="#已ROOT方法" class="headerlink" title="已ROOT方法"></a>已ROOT方法</h4><p>Xposed Installer下载链接如下。注意资源需要翻墙才能下载。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://forum.xda-developers.com/t/official-xposed-for-lollipop-marshmallow-nougat-oreo-v90-beta3-2018-01-29.3034811/</span><br></pre></td></tr></table></figure>
+
+<p>由于APP资源地址由http更改为https，而Xposed Installer中并未更改，因此安装后会出现<code>could not load available zip files</code>错误，刷新下载页面时会出现<code>下载http://dl.xposed.info/repo.xml.gz时出错</code>的提示。这需要在安装前修改APP包的资源地址解决。</p>
+<p>打开MT文件管理器，选择Xposed Installer的APK安装包，点击查看。选择classes.dex，用Arsc编辑器打开，在字符串页面搜索<code>http</code>，将所有搜索结果的<code>http://</code>都改为<code>https://</code>，保存并退出编辑器。选择刚才修改好的APK，点击自动签名，完成后点击安装即可。</p>
+<p>若仍出现<code>could not load available zip files</code>错误，可提前下载Xposed的SDK包，然后放置到Android&#x2F;data&#x2F;de.robv.android.xposed.installer&#x2F;cache&#x2F;downloads&#x2F;framework下，手机对应的SDK版本可在Xposed Installer主界面看到。下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://dl-xda.xposed.info/framework/</span><br></pre></td></tr></table></figure>
+
+<p>如果仍未出现，需要点击右上角的横杠符号，勾选Show outdated version，才会出现Xposed版本。</p>
+<p>找到下载包后，点击云朵符号，选择Install即可。</p>
+<h4 id="免ROOT方法"><a href="#免ROOT方法" class="headerlink" title="免ROOT方法"></a>免ROOT方法</h4><p>可使用模拟框架。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 太极</span><br><span class="line">https://taichi.cool/zh/download.html</span><br><span class="line"></span><br><span class="line"># Virtual Xposed</span><br><span class="line">https://vxposed.com/</span><br><span class="line"></span><br><span class="line"># 应用转生</span><br><span class="line">https://lanzoui.com/b05xrjlbc</span><br></pre></td></tr></table></figure>
+
+<p>也可使用虚拟机VMOS Pro，打开并安装一个支持Xposed的安卓ROM，然后点击系统-设置，打开Xposed即可。</p>
+<p>也可使用将Xposed模块嵌入APP的方式。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># LSPatch</span><br><span class="line"># 得到的APP已经嵌入模块，直接使用即可</span><br><span class="line">https://github.com/LSPosed/LSPatch</span><br><span class="line"></span><br><span class="line"># Xpatch</span><br><span class="line"># 需要安装得到的APP和Xposed模块</span><br><span class="line">https://github.com/WindySha/Xpatch</span><br></pre></td></tr></table></figure>
+
+<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><p>在下载页面即可下载模块。也可通过以下网站下载。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://repo.xposed.info/module-overview</span><br></pre></td></tr></table></figure>
+
+<p>一些模块如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 去广告</span><br><span class="line">https://repo.xposed.info/module/tw.fatminmin.xposed.minminguard</span><br><span class="line">https://www.coolapk.com/apk/com.dahuo.sunflower.xp.none </span><br><span class="line">https://repo.xposed.info/module/com.gy.xposed.skip</span><br></pre></td></tr></table></figure>
+
+<h2 id="自动化操作"><a href="#自动化操作" class="headerlink" title="自动化操作"></a>自动化操作</h2><h3 id="Hamibot"><a href="#Hamibot" class="headerlink" title="Hamibot"></a>Hamibot</h3><p>Hamibot需要保持在线才能运行，因此需要给Hamibot自启动权限，同时关闭省电策略，防止APP在后台被清理。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://hamibot.com/</span><br></pre></td></tr></table></figure>
+
+<p>对于自身不能自动运行的脚本，可通过创建自动任务的方式实现自动运行。</p>
+<h3 id="一触即发"><a href="#一触即发" class="headerlink" title="一触即发"></a>一触即发</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.coolapk.com/apk/com.yicu.yichujifa</span><br></pre></td></tr></table></figure>
+
+<p>可自行编辑脚本。示例脚本中模拟点击的屏幕坐标在不同手机上可能会不同，因此需要自行修改。保持在脚本的编辑页面，切换要需要点击的APP，将准心移动到需要点击的位置，然后点一下准心，选择相应的动作即可。</p>
+<h3 id="自动精灵"><a href="#自动精灵" class="headerlink" title="自动精灵"></a>自动精灵</h3><p>通过录制创建脚本。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.coolapk.com/apk/com.zdanjian.zdanjian</span><br></pre></td></tr></table></figure>
+
+<h2 id="破解软件库"><a href="#破解软件库" class="headerlink" title="破解软件库"></a>破解软件库</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://590m.com/dir/845023-30099335-9e922b</span><br><span class="line">https://306t.com/dir/14633726-31244416-26771f</span><br><span class="line">https://www.uptodown.com/android</span><br></pre></td></tr></table></figure>
+
+<h2 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h2><h3 id="抢红包插件"><a href="#抢红包插件" class="headerlink" title="抢红包插件"></a>抢红包插件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/geeeeeeeeek/WeChatLuckyMoney</span><br></pre></td></tr></table></figure>
+
+<h3 id="防撤回"><a href="#防撤回" class="headerlink" title="防撤回"></a>防撤回</h3><p>原理是将通知栏的消息保存下来。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 通知增强 for 微信</span><br><span class="line">https://www.downkuai.com/android/115784.html</span><br><span class="line"></span><br><span class="line"># Anti-recall</span><br><span class="line">https://anti-recall.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="WPS-Pro"><a href="#WPS-Pro" class="headerlink" title="WPS Pro"></a>WPS Pro</h2><p>破解版下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://wwc.lanzouy.com/b03j3cbyd（密码 / 0000）</span><br></pre></td></tr></table></figure>
+
+<p>激活码如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">R8R8P-MTT6F-KLRPM-J7CAB-PJM8C</span><br><span class="line">7LR67-WTXPA-KLUHV-GEK2E-QW4CK</span><br><span class="line">EUYTH-3KWKL-PJMX7-XBCPW-9U2DD</span><br><span class="line">THUV2-32HH7-6NMHN-PTX7Y-QQCTH</span><br><span class="line">A4XV7-QP9JN-E7FCB-VQFRD-4NLKC</span><br><span class="line">U2PWU-H7D9H-69T3B-JEYC2-3R2NG</span><br><span class="line">7G2HE-JR8KL-ABB9D-Y7789-GLNFL</span><br></pre></td></tr></table></figure>
+
+<h2 id="Google框架"><a href="#Google框架" class="headerlink" title="Google框架"></a>Google框架</h2><p>部分手机如Sumsung国行版只是将Google Play隐藏了起来，重新安装相关APP即可。Google Play下载地址如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://m.apkpure.com/google-play-store/com.android.vending</span><br></pre></td></tr></table></figure>
+
+<h2 id="游戏库"><a href="#游戏库" class="headerlink" title="游戏库"></a>游戏库</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://wwc.lanzouy.com/b03j3vpgd（密码 / 0000）</span><br></pre></td></tr></table></figure>
+
+<h2 id="游戏模拟器"><a href="#游戏模拟器" class="headerlink" title="游戏模拟器"></a>游戏模拟器</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 爱吾游戏宝盒</span><br><span class="line">https://www.25game.com/</span><br><span class="line"></span><br><span class="line"># 悟饭游戏厅</span><br><span class="line">https://www.5fun.com/</span><br><span class="line"></span><br><span class="line"># 小马模拟器</span><br><span class="line">http://www.ponyemu.com/</span><br><span class="line"></span><br><span class="line"># 约战</span><br><span class="line">https://www.yzkof.com/</span><br><span class="line"></span><br><span class="line"># 游聚</span><br><span class="line">https://www.gotvg.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="应用市场"><a href="#应用市场" class="headerlink" title="应用市场"></a>应用市场</h2><h3 id="国际版APP应用市场"><a href="#国际版APP应用市场" class="headerlink" title="国际版APP应用市场"></a>国际版APP应用市场</h3><p>可用<code>9Apps</code>、<code>V-Appstore</code>、<code>F-Droid</code>。F-Droid可用以下镜像加速。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mirrors.tuna.tsinghua.edu.cn/help/fdroid/</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h2><h3 id="Gboard"><a href="#Gboard" class="headerlink" title="Gboard"></a>Gboard</h3><p>好用的输入法，在Google Play即可下载。</p>
+<p>由于下载简体中文语言包需要一段时间，一开始使用拼音时会出现无法弹出中文选字的情况，挂翻墙并等待下载完成即可。</p>
+<h1 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h1><p>在安卓手机上通过安装相应的APP，可以运行电脑系统。</p>
+<h2 id="Bochs"><a href="#Bochs" class="headerlink" title="Bochs"></a>Bochs</h2><p>通过以下链接下载Bochs安装包和适用于Bochs的XP镜像。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://pan.baidu.com/s/1i4FDLGT</span><br><span class="line">http://pan.baidu.com/s/1gfj4a2Z</span><br></pre></td></tr></table></figure>
+
+<p>将apk格式的Bochs安装包和img格式的Windows系统镜像传送到手机，放置于任何目录下均可。安装Bochs，将<code>ata0-master</code>前面的复选框选中，然后点击<code>select</code>。选择img格式的系统镜像文件Windows.img，其他项无需更改。点击顶部的<code>HARDWARE</code>选项卡，按照以下设置。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>设置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CPU Model</td>
+<td>&#x2F;</td>
+</tr>
+<tr>
+<td>Chipset</td>
+<td>i440fx</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>517MB（可根据手机配置调整）</td>
+</tr>
+<tr>
+<td>VGA Card</td>
+<td>cirrus_5446</td>
+</tr>
+<tr>
+<td>Sound Card</td>
+<td>sb16</td>
+</tr>
+<tr>
+<td>Ethernet Card</td>
+<td>rtl8029</td>
+</tr>
+<tr>
+<td>PCI&#x2F;Slot1</td>
+<td>cirrus</td>
+</tr>
+<tr>
+<td>PCI&#x2F;Slot2</td>
+<td>ne2k</td>
+</tr>
+<tr>
+<td>PCI&#x2F;Slot3</td>
+<td>es1370</td>
+</tr>
+<tr>
+<td>PCI&#x2F;Slot4</td>
+<td>voodoo</td>
+</tr>
+<tr>
+<td>PCI&#x2F;Slot5</td>
+<td>none</td>
+</tr>
+</tbody></table>
+<p>点击顶部的MISC选项卡，将Full screen前面的复选框选中以使Windows可以全屏运行。点击右上角绿色的Start按钮以启动Windows。</p>
+<h2 id="Limbo"><a href="#Limbo" class="headerlink" title="Limbo"></a>Limbo</h2><p>通过以下链接下载Limbo安装包和适用于Limbo的XP镜像。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://pan.baidu.com/s/1pK7ua3D</span><br><span class="line">http://pan.baidu.com/s/1miRtjJU</span><br></pre></td></tr></table></figure>
+
+<p>将apk格式的Limbo安装包和qcow2格式的Windows系统镜像传送到手机，放置于任何目录下均可。</p>
+<p>安装Limbo并打开，加载虚拟机下选择新建，在弹出对话框中输入虚拟机名称，然后按照以下设置。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>设置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>用户界面项</td>
+<td>SDL</td>
+</tr>
+<tr>
+<td>CPU型号项</td>
+<td>athlon</td>
+</tr>
+<tr>
+<td>CPU核心数</td>
+<td>2（可根据手机配置调整）</td>
+</tr>
+<tr>
+<td>运存项</td>
+<td>64（可根据手机配置调整）</td>
+</tr>
+<tr>
+<td>光驱&#x2F;软盘A&#x2F;软盘B</td>
+<td>&#x2F;</td>
+</tr>
+<tr>
+<td>硬盘A</td>
+<td>点击后选择打开，选择qcow2格式的镜像文件</td>
+</tr>
+<tr>
+<td>硬盘B</td>
+<td>&#x2F;</td>
+</tr>
+<tr>
+<td>引导设备</td>
+<td>硬盘</td>
+</tr>
+<tr>
+<td>网络配置</td>
+<td>User</td>
+</tr>
+<tr>
+<td>网卡</td>
+<td>rtl8139</td>
+</tr>
+<tr>
+<td>显卡配置</td>
+<td>cirrus</td>
+</tr>
+<tr>
+<td>声卡配置</td>
+<td>sb16</td>
+</tr>
+<tr>
+<td>高级设置</td>
+<td>&#x2F;</td>
+</tr>
+<tr>
+<td>多线程AIO</td>
+<td>勾选右侧复选框（警告可以无视）</td>
+</tr>
+</tbody></table>
+<p>全部设置完毕后，回到顶部，点击运行以启动Windows。</p>
+<h2 id="APQ"><a href="#APQ" class="headerlink" title="APQ"></a>APQ</h2><p>通过以下链接下载APQ安装包、Zarchiver安装包和适用于APQ的XP镜像。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://www.cr173.com/soft/692055.html</span><br><span class="line">https://dl.pconline.com.cn/download/1815731.html</span><br><span class="line">https://pan.baidu.com/s/1_aoxWWi0mfN1cXyS3V4I6g</span><br></pre></td></tr></table></figure>
+
+<p>获取root权限后打开APQ，点击data分区，等待文件处理完成。</p>
+<p>打开zarchiver，打开APQ&#x2F;kolibri.conf，将以下位置的文件名改为下载好的镜像文件即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#第一块硬盘，硬盘镜像文件为xp.qcow2，应位于SD卡上的APQ主目录下或写绝对路径</span><br><span class="line">-fda kolibri.img</span><br></pre></td></tr></table></figure>
+
+<h2 id="Termux"><a href="#Termux" class="headerlink" title="Termux"></a>Termux</h2><p>无需root，打开即可在Android上运行Linux。</p>
+<h3 id="更换软件源"><a href="#更换软件源" class="headerlink" title="更换软件源"></a>更换软件源</h3><p>输入以下命令以打开配置文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi $PREFIX/etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+
+<p>修改安装源如下，保存并退出。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/termux stable main</span><br></pre></td></tr></table></figure>
+
+<p>运行以下命令完成更新。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pkg update</span><br><span class="line">pkg upgrade</span><br></pre></td></tr></table></figure>
+
+<h3 id="SSH连接"><a href="#SSH连接" class="headerlink" title="SSH连接"></a>SSH连接</h3><p>输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// 安装SSH服务</span><br><span class="line">pkg install openssh</span><br><span class="line"></span><br><span class="line">// 设置密码</span><br><span class="line">passwd</span><br><span class="line"></span><br><span class="line">// 查询手机IP</span><br><span class="line">ifconfig</span><br><span class="line"></span><br><span class="line">// 查询当前用户</span><br><span class="line">whoami</span><br><span class="line"></span><br><span class="line">// 开启SSH</span><br><span class="line">sshd -p 9000</span><br><span class="line"></span><br><span class="line">// 确认SSH服务的监听端口</span><br><span class="line">netstat -ntlp | grep sshd</span><br></pre></td></tr></table></figure>
+
+<p>完成后即可根据信息进行连接。</p>
+<h3 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h3><p>SD卡目录的文件不具有可执行权限，需要拷贝到系统的&#x2F;home文件夹并修改权限才可运行，示例如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cp Demo /home/Demo</span><br><span class="line">cd /home</span><br><span class="line">chmod 777 Demo</span><br><span class="line"></span><br><span class="line">// 运行</span><br><span class="line">./Demo</span><br></pre></td></tr></table></figure>
+
+<h3 id="优化终端"><a href="#优化终端" class="headerlink" title="优化终端"></a>优化终端</h3><p>可用zsh代替bash作为默认shell。通过以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c &quot;$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>可通过修改以下文件更改配色。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ~/termux-ohmyzsh/install.sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="软件库"><a href="#软件库" class="headerlink" title="软件库"></a>软件库</h3><h4 id="waifu2x"><a href="#waifu2x" class="headerlink" title="waifu2x"></a>waifu2x</h4><p>用于图片放大。下载并直接运行即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/tanyiok1234/waifu2x_srmd-ncnn-vulkan-termux-binary</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><h4 id="访问SD卡目录"><a href="#访问SD卡目录" class="headerlink" title="访问SD卡目录"></a>访问SD卡目录</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">termux-setup-storage</span><br></pre></td></tr></table></figure>
+
+<h3 id="完整Linux"><a href="#完整Linux" class="headerlink" title="完整Linux"></a>完整Linux</h3><p>Termux不是完整Linux，但可配合其它APP实现完整Linux的安装。</p>
+<h4 id="通过AnLinux"><a href="#通过AnLinux" class="headerlink" title="通过AnLinux"></a>通过AnLinux</h4><h5 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h5><p>安装AnLinux后打开，选择需要安装的Linux发行版。复制指令并在Termux的终端中运行即可。以Debian为例，完成后在Termux可通过以下指令启动系统。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./start-debian.sh</span><br></pre></td></tr></table></figure>
+
+<p>修改以上脚本，将以下行的注释取消即可访问手机自身的存储文件系统。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command+=&quot; -b /sdcard&quot;</span><br></pre></td></tr></table></figure>
+
+<h5 id="桌面环境配置"><a href="#桌面环境配置" class="headerlink" title="桌面环境配置"></a>桌面环境配置</h5><p>安装前需先启动系统。在AnLinux中按照步骤操作即可。</p>
+<p>完成安装后需要安装VNC Viewer，然后在Termux中运行以下命令以开启VNC。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vncserver-start</span><br><span class="line"></span><br><span class="line">// 若出现错误，需要先输入以下指令停止VNC</span><br><span class="line">vncserver-stop</span><br></pre></td></tr></table></figure>
+
+<p>复制输出的地址到VNC Viewer，此处以<code>localhost:1</code>为例，密码为开启VNC时所设置的密码。完成后连接即可。</p>
+<h4 id="通过atilo"><a href="#通过atilo" class="headerlink" title="通过atilo"></a>通过atilo</h4><h5 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h5><p>输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pkg install proot</span><br><span class="line">termux-chroot</span><br><span class="line">echo &quot;deb [trusted=yes] https://yadominjinta.github.io/files/ termux extras&quot; &gt;&gt; $PREFIX/etc/apt/sources.list</span><br><span class="line">pkg in atilo-cn</span><br></pre></td></tr></table></figure>
+
+<p>通过以下命令查看能够安装的版本。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">atilo list</span><br></pre></td></tr></table></figure>
+
+<p>以安装Debian为例，命令如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 安装</span><br><span class="line">atilo install debian</span><br><span class="line"></span><br><span class="line">// 卸载</span><br><span class="line">atilo remove debian</span><br></pre></td></tr></table></figure>
+
+<p>注意，如果下载失败，需要先通过以下命令在手机的tmp目录中删除安装包，否则该脚本会直接跳过下载。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.atilo</span><br><span class="line">ls</span><br><span class="line">rm -r tmp</span><br></pre></td></tr></table></figure>
+
+<p>完成安装后运行以下命令启动系统。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">termux-chroot</span><br><span class="line">startdebian</span><br></pre></td></tr></table></figure>
+
+<h5 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h5><h6 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt search openjdk</span><br><span class="line">apt install default-jdk</span><br></pre></td></tr></table></figure>
+
+<h6 id="python"><a href="#python" class="headerlink" title="python"></a>python</h6><p>通过以下命令安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install python3 python3-pip</span><br></pre></td></tr></table></figure>
+
+<p>打开~&#x2F;.pip&#x2F;pip.conf，修改为以下内容以更换pip的软件源。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url =http://pypi.douban.com/simple  </span><br><span class="line">[install]</span><br><span class="line">trusted-host=pypi.douban.com</span><br></pre></td></tr></table></figure>
+
+<h3 id="环境配置-1"><a href="#环境配置-1" class="headerlink" title="环境配置"></a>环境配置</h3><h4 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h4><p>若未安装完整Linux，可通过以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pkg install ecj</span><br><span class="line">pkg install dx</span><br></pre></td></tr></table></figure>
+
+<h4 id="Fortran"><a href="#Fortran" class="headerlink" title="Fortran"></a>Fortran</h4><p>需要安装完整Linux。输入以下命令以修改软件源。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim $PREFIX/etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+
+<p>在文件末尾添加以下语句，保存并退出。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deb https://its-pointless.github.io/files/24 termux extras</span><br></pre></td></tr></table></figure>
+
+<p>输入以下命令安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget https://its-pointless.github.io/pointless.gpg</span><br><span class="line">apt-get install gnupg</span><br><span class="line">apt-key add pointless.gpg</span><br><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
+
+<p>通过以下命令检查版本号，选择两者均有的版本。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt search gcc</span><br><span class="line">apt search gfortran</span><br></pre></td></tr></table></figure>
+
+<p>以gcc-8为例，安装及检验命令如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt install gcc-8</span><br><span class="line">gfortran-8 -v</span><br><span class="line">gcc-8 -v</span><br></pre></td></tr></table></figure>
+
+<h4 id="OpenCL"><a href="#OpenCL" class="headerlink" title="OpenCL"></a>OpenCL</h4><p>需要安装完整Linux。运行以下命令以安装编译器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install clang</span><br><span class="line">apt install cmake</span><br></pre></td></tr></table></figure>
+
+<p>从以下链接下载编译所必须的头文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/KhronosGroup/OpenCL-Headers</span><br></pre></td></tr></table></figure>
+
+<p>寻找手机中名称类似<code>libOpenCL.so</code>的文件，复制到主程序目录。主程序目录结构如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">├── CL</span><br><span class="line">│   ├── libOpenCL.so</span><br><span class="line">│   └── [头文件]</span><br><span class="line">├── CMakeLists.txt</span><br><span class="line">├── [cl核文件，以HelloWorld.cl为例]</span><br><span class="line">└── [主程序，以test.cpp为例]</span><br></pre></td></tr></table></figure>
+
+<p>CMakeLists.txt按照以下格式填写，通过cmake和make即可生成相应文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># CMake 最低版本号要求</span><br><span class="line">cmake_minimum_required (VERSION 2.8.11)</span><br><span class="line"> </span><br><span class="line"># 项目信息</span><br><span class="line">project (Test)</span><br><span class="line"> </span><br><span class="line">set(CMAKE_INCLUDE_CURRENT_DIR ON)</span><br><span class="line"> </span><br><span class="line">include_directories (&quot;$&#123;PROJECT_SOURCE_DIR&#125;/CL&quot;) </span><br><span class="line"> </span><br><span class="line"># 查找当前目录下的所有源文件</span><br><span class="line"># 并将名称保存到 DIR_SRCS 变量</span><br><span class="line">aux_source_directory(. DIR_SRCS)</span><br><span class="line"> </span><br><span class="line">#首先申明动态库的位置</span><br><span class="line">LINK_DIRECTORIES(&quot;$&#123;PROJECT_SOURCE_DIR&#125;&quot;)</span><br><span class="line"> </span><br><span class="line">SET(HELLO_SRC libOpenCL.so )</span><br><span class="line"> </span><br><span class="line"># 指定生成目标</span><br><span class="line">add_executable (testopencldemo $&#123;DIR_SRCS&#125;)</span><br><span class="line"> </span><br><span class="line">#制定具体的动态库的名称 </span><br><span class="line">target_link_libraries (testopencldemo $&#123;HELLO_SRC&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="Jupyter"><a href="#Jupyter" class="headerlink" title="Jupyter"></a>Jupyter</h4><p>需要安装完整Linux。通过以下命令安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pip3 install numpy</span><br><span class="line">pip3 install pandas</span><br><span class="line">apt install libzmq</span><br><span class="line">pip3 install jupyter</span><br><span class="line">apt install freetype libpng pkg-config</span><br><span class="line">pip3 install matplotlib</span><br></pre></td></tr></table></figure>
+
+<p>完成安装后通过以下指令启动。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
+
+<p>可通过配置文件，避免输入<code>http://localhost:8888/</code>后面的一串密匙。</p>
+<p>运行以下命令以生成配置文件和密匙。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br><span class="line">ipython</span><br><span class="line">from notebook.auth import passwd</span><br><span class="line">passwd()</span><br></pre></td></tr></table></figure>
+
+<p>完成密码输入后复制所得内容，修改data&#x2F;data&#x2F;com.termux&#x2F;files&#x2F;home&#x2F;.jupyter目录下的jupyter_notebook_config.py，如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c.NotebookApp.password = &#x27;sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed&#x27; # 修改为前面所得的内容</span><br><span class="line">c.NotebookApp.ip = &#x27;*&#x27; # 允许任何ip访问</span><br><span class="line">c.NotebookApp.open_browser = False</span><br><span class="line">c.NotebookApp.port = 8888 # 可自行指定端口，访问时使用</span><br></pre></td></tr></table></figure>
+
+<p>完成后保存，启动后即可直接通过以下网站访问。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:8888/</span><br><span class="line"></span><br><span class="line">// 电脑端利用SSH登录手机后可输入以下网站</span><br><span class="line">[手机IP地址].8888</span><br></pre></td></tr></table></figure>
+
+<p>可运行以下命令以安装python扩展包，使编写python时有提示符。安装完成后在Jupyter notebook中出现Nbextensions，选择Hinterland即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">apt install libxml2</span><br><span class="line">apt install libxslt</span><br><span class="line">pip3 install jupyter-contrib-nbextensions</span><br><span class="line">jupyter contrib nbextension install --user</span><br><span class="line">pip3 install jupyter_nbextensions_configurator</span><br></pre></td></tr></table></figure>
+
+<h4 id="VS-Code"><a href="#VS-Code" class="headerlink" title="VS Code"></a>VS Code</h4><p>需要安装完整Linux。</p>
+<p>输入以下命令安装node、npm和cnpm。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apt install nodejs</span><br><span class="line">apt install npm</span><br><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br><span class="line">cnpm install -g npm</span><br></pre></td></tr></table></figure>
+
+<p>用cnpm安装wcode。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g wcode</span><br></pre></td></tr></table></figure>
+
+<p>使用时通过以下命令启动。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wcode -p 9999 /home</span><br></pre></td></tr></table></figure>
+
+<p>通过浏览器访问即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 手机浏览器</span><br><span class="line">localhost:9999</span><br><span class="line"></span><br><span class="line">// 内网电脑</span><br><span class="line">[手机IP地址]:9999</span><br></pre></td></tr></table></figure>
+
+<p>也可通过code-server。下载arm64版本的安装包，复制到手机并解压。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/cdr/code-server/releases</span><br></pre></td></tr></table></figure>
+
+<p>解压完成后切换到该目录，并运行以下命令开启VS Code。通过浏览器访问即可，同上。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export PASSWORD=123456 </span><br><span class="line">./code-server --auth password --port 9999</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Aid-Learning"><a href="#Aid-Learning" class="headerlink" title="Aid Learning"></a>Aid Learning</h2><p>Termux的国内高仿版。无需安装Termux，直接下载即可使用。Aid Learning已自带VS Code。</p>
+<h3 id="环境配置-2"><a href="#环境配置-2" class="headerlink" title="环境配置"></a>环境配置</h3><h4 id="gfortran"><a href="#gfortran" class="headerlink" title="gfortran"></a>gfortran</h4><p>Aid Learning已自带gcc&#x2F;gfortran。若没有可通过以下命令安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install gcc</span><br><span class="line">apt install gfortran</span><br></pre></td></tr></table></figure>
+
+<h4 id="JAVA-1"><a href="#JAVA-1" class="headerlink" title="JAVA"></a>JAVA</h4><p>以Java 8为例，通过以下命令安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install openjdk-8-jdk</span><br><span class="line">apt install openjdk-8-jre</span><br></pre></td></tr></table></figure>
+
+<p>输入以下命令查看是否正确安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p>若出现错误，则需要修改环境变量。打开&#x2F;etc&#x2F;profile，添加以下内容后保存。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=&quot;/usr/lib/jvm/java-8-openjdk-arm64&quot;</span><br><span class="line">export CLASSPATH=.$JAVA_HOME/lib/</span><br><span class="line">export JRE_HOME=$JAVA_HOME/jre</span><br><span class="line">export PATH=$JAVA_HOME/bin:$PAT</span><br></pre></td></tr></table></figure>
+
+<h4 id="Jupyter-1"><a href="#Jupyter-1" class="headerlink" title="Jupyter"></a>Jupyter</h4><p>Aid Learning已自带Jupyter。</p>
+<h5 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h5><p>可使用Jupyter Lab，通过以下命令安装和启动即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 安装</span><br><span class="line">pip3 install jupyterlab</span><br><span class="line"></span><br><span class="line">// 启动</span><br><span class="line">jupyter lab</span><br></pre></td></tr></table></figure>
+
+<p>也可使用Jupyter Notebook。直接运行以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
+
+<h5 id="Java内核"><a href="#Java内核" class="headerlink" title="Java内核"></a>Java内核</h5><p>注意，Jupyter支持的JDK版本为9.0及以上，而Aid Learning内核支持的JDK为JDK8，因此在安装Java时需要留意版本。</p>
+<p>可安装IJava支持套件。通过以下链接下载，然后复制到手机。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/SpencerPark/IJava/</span><br></pre></td></tr></table></figure>
+
+<p>切换到文件所在位置并运行以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">unzip ijava.zip -d ijava // 文件名为ijava.zip</span><br><span class="line">cd ijava</span><br><span class="line">python3 install.py --sys-prefix</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后查看Jupyter内核，此时应当有Java。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter kernelspec list</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="极致安卓之—Termux安装完整版Linux"><a href="#极致安卓之—Termux安装完整版Linux" class="headerlink" title="极致安卓之—Termux安装完整版Linux"></a>极致安卓之—Termux安装完整版Linux</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/95865982</span><br></pre></td></tr></table></figure>
+
+<h2 id="把安卓手机性能发挥到极致之-Termux"><a href="#把安卓手机性能发挥到极致之-Termux" class="headerlink" title="把安卓手机性能发挥到极致之-Termux"></a>把安卓手机性能发挥到极致之-Termux</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/92664273</span><br></pre></td></tr></table></figure>
+
+<h2 id="把安卓手机性能发挥到极致之-Aid-Learning运行Java及性能测试"><a href="#把安卓手机性能发挥到极致之-Aid-Learning运行Java及性能测试" class="headerlink" title="把安卓手机性能发挥到极致之-Aid Learning运行Java及性能测试"></a>把安卓手机性能发挥到极致之-Aid Learning运行Java及性能测试</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/92489740</span><br></pre></td></tr></table></figure>
+
+<h2 id="把安卓手机性能发挥到极致之-Termux安装Python及Jupyter"><a href="#把安卓手机性能发挥到极致之-Termux安装Python及Jupyter" class="headerlink" title="把安卓手机性能发挥到极致之-Termux安装Python及Jupyter"></a>把安卓手机性能发挥到极致之-Termux安装Python及Jupyter</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/94203587</span><br></pre></td></tr></table></figure>
+
+<h2 id="安卓手机C-x2F-C-开发平台"><a href="#安卓手机C-x2F-C-开发平台" class="headerlink" title="安卓手机C&#x2F;C++开发平台"></a>安卓手机C&#x2F;C++开发平台</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/97882309</span><br></pre></td></tr></table></figure>
+
+<h2 id="把安卓手机性能发挥到极致之-Termux-x2F-Aid-Learning使用Fortran"><a href="#把安卓手机性能发挥到极致之-Termux-x2F-Aid-Learning使用Fortran" class="headerlink" title="把安卓手机性能发挥到极致之-Termux&#x2F;Aid Learning使用Fortran"></a>把安卓手机性能发挥到极致之-Termux&#x2F;Aid Learning使用Fortran</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/92280533</span><br></pre></td></tr></table></figure>
+
+<h2 id="极致安卓之—Aid-Learning基于Jupyter开发Java和Python"><a href="#极致安卓之—Aid-Learning基于Jupyter开发Java和Python" class="headerlink" title="极致安卓之—Aid Learning基于Jupyter开发Java和Python"></a>极致安卓之—Aid Learning基于Jupyter开发Java和Python</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/101147592</span><br></pre></td></tr></table></figure>
+
+<h2 id="把安卓手机性能发挥到极致之-Termux运行Java及性能测试"><a href="#把安卓手机性能发挥到极致之-Termux运行Java及性能测试" class="headerlink" title="把安卓手机性能发挥到极致之-Termux运行Java及性能测试"></a>把安卓手机性能发挥到极致之-Termux运行Java及性能测试</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/92471681</span><br></pre></td></tr></table></figure>
+
+<h2 id="Termux安装Node-JS及网页版文档查看与修改器wcode"><a href="#Termux安装Node-JS及网页版文档查看与修改器wcode" class="headerlink" title="Termux安装Node.JS及网页版文档查看与修改器wcode"></a>Termux安装Node.JS及网页版文档查看与修改器wcode</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/106298311</span><br></pre></td></tr></table></figure>
+
+<h2 id="极致安卓—Termux-x2F-Aid-Learning安装宇宙最强VS-Code"><a href="#极致安卓—Termux-x2F-Aid-Learning安装宇宙最强VS-Code" class="headerlink" title="极致安卓—Termux&#x2F;Aid Learning安装宇宙最强VS Code"></a>极致安卓—Termux&#x2F;Aid Learning安装宇宙最强VS Code</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/106593146</span><br></pre></td></tr></table></figure>
+
+<h2 id="Xposed下载模块89-repo-xml-gz失败的解决方法"><a href="#Xposed下载模块89-repo-xml-gz失败的解决方法" class="headerlink" title="Xposed下载模块89 repo.xml.gz失败的解决方法"></a>Xposed下载模块89 repo.xml.gz失败的解决方法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=1461477</span><br></pre></td></tr></table></figure>
+
+<h2 id="教你如何简单高效的对软件-apk文件-进行修改"><a href="#教你如何简单高效的对软件-apk文件-进行修改" class="headerlink" title="教你如何简单高效的对软件(apk文件)进行修改"></a>教你如何简单高效的对软件(apk文件)进行修改</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.juyifx.cn/article/291723297.html?ivk_sa=1024320u</span><br></pre></td></tr></table></figure>
+
+<h2 id="自动微信好友检测、收能量、签到打卡，不过是这款APP的冰山一角！"><a href="#自动微信好友检测、收能量、签到打卡，不过是这款APP的冰山一角！" class="headerlink" title="自动微信好友检测、收能量、签到打卡，不过是这款APP的冰山一角！"></a>自动微信好友检测、收能量、签到打卡，不过是这款APP的冰山一角！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/nX9oY6abpKLVk1IA_r8G2g</span><br></pre></td></tr></table></figure>
+
+<h2 id="daltonfury42-Github-gist"><a href="#daltonfury42-Github-gist" class="headerlink" title="daltonfury42 - Github gist"></a>daltonfury42 - Github gist</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://gist.githubusercontent.com/daltonfury42/c33fdfa7a44f261018a5d35dea7eb245/raw/5fc372ec0d36117fa3e7698d8de1952c1bac6b6a/platina.xml</span><br></pre></td></tr></table></figure>
+
+<h2 id="抱歉，安卓有了Xposed真的可以为所欲为！"><a href="#抱歉，安卓有了Xposed真的可以为所欲为！" class="headerlink" title="抱歉，安卓有了Xposed真的可以为所欲为！"></a>抱歉，安卓有了Xposed真的可以为所欲为！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/n7Rqn6e8zQyvghvSRJ61XA</span><br></pre></td></tr></table></figure>
+
+<h2 id="Downgrade-Bootloader-check-fail"><a href="#Downgrade-Bootloader-check-fail" class="headerlink" title="Downgrade Bootloader check fail"></a>Downgrade Bootloader check fail</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://forum.xda-developers.com/t/downgrade-bootloader-check-fail.4111575/</span><br></pre></td></tr></table></figure>
+
+<h2 id="一个APP安全实现微信防撤回，iOS也行？这也太强了吧！"><a href="#一个APP安全实现微信防撤回，iOS也行？这也太强了吧！" class="headerlink" title="一个APP安全实现微信防撤回，iOS也行？这也太强了吧！"></a>一个APP安全实现微信防撤回，iOS也行？这也太强了吧！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/w1oxB0BnhQkyhI1tW_2f6g</span><br></pre></td></tr></table></figure>
+
+<h2 id="安卓神器的天花板Xposed，这次真的能让你用上！"><a href="#安卓神器的天花板Xposed，这次真的能让你用上！" class="headerlink" title="安卓神器的天花板Xposed，这次真的能让你用上！"></a>安卓神器的天花板Xposed，这次真的能让你用上！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/V7mK6ahKN8rLOkvHExUpCA</span><br></pre></td></tr></table></figure>
+
+<h2 id="大厂出品却冷门10年，免翻不限速下载国际版APP的绝佳选择！"><a href="#大厂出品却冷门10年，免翻不限速下载国际版APP的绝佳选择！" class="headerlink" title="大厂出品却冷门10年，免翻不限速下载国际版APP的绝佳选择！"></a>大厂出品却冷门10年，免翻不限速下载国际版APP的绝佳选择！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/8xc2uRZP2EboZz3wnR74Zw</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/Instructions-Of-Browser.html" rel="prev" title="浏览器使用指南">
+      <i class="fa fa-chevron-left"></i> 浏览器使用指南
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/OS-Installation.html" rel="next" title="各种系统的安装与配置">
+      各种系统的安装与配置 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TODOS"><span class="nav-text">TODOS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B5%84%E6%96%99"><span class="nav-text">资料</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E4%B8%8E%E6%A1%86%E6%9E%B6"><span class="nav-text">软件与框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Xposed"><span class="nav-text">Xposed</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%B2ROOT%E6%96%B9%E6%B3%95"><span class="nav-text">已ROOT方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%8DROOT%E6%96%B9%E6%B3%95"><span class="nav-text">免ROOT方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97"><span class="nav-text">模块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E6%93%8D%E4%BD%9C"><span class="nav-text">自动化操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hamibot"><span class="nav-text">Hamibot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E8%A7%A6%E5%8D%B3%E5%8F%91"><span class="nav-text">一触即发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E7%B2%BE%E7%81%B5"><span class="nav-text">自动精灵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6%E5%BA%93"><span class="nav-text">破解软件库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1"><span class="nav-text">微信</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%A2%E7%BA%A2%E5%8C%85%E6%8F%92%E4%BB%B6"><span class="nav-text">抢红包插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%B2%E6%92%A4%E5%9B%9E"><span class="nav-text">防撤回</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WPS-Pro"><span class="nav-text">WPS Pro</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google%E6%A1%86%E6%9E%B6"><span class="nav-text">Google框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%B8%E6%88%8F%E5%BA%93"><span class="nav-text">游戏库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%B8%E6%88%8F%E6%A8%A1%E6%8B%9F%E5%99%A8"><span class="nav-text">游戏模拟器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%B8%82%E5%9C%BA"><span class="nav-text">应用市场</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BD%E9%99%85%E7%89%88APP%E5%BA%94%E7%94%A8%E5%B8%82%E5%9C%BA"><span class="nav-text">国际版APP应用市场</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="nav-text">常用工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Gboard"><span class="nav-text">Gboard</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-text">虚拟机</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Bochs"><span class="nav-text">Bochs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Limbo"><span class="nav-text">Limbo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#APQ"><span class="nav-text">APQ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Termux"><span class="nav-text">Termux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E8%BD%AF%E4%BB%B6%E6%BA%90"><span class="nav-text">更换软件源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH%E8%BF%9E%E6%8E%A5"><span class="nav-text">SSH连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F"><span class="nav-text">运行程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E7%BB%88%E7%AB%AF"><span class="nav-text">优化终端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%BA%93"><span class="nav-text">软件库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#waifu2x"><span class="nav-text">waifu2x</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-text">常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BF%E9%97%AESD%E5%8D%A1%E7%9B%AE%E5%BD%95"><span class="nav-text">访问SD卡目录</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4Linux"><span class="nav-text">完整Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87AnLinux"><span class="nav-text">通过AnLinux</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-1"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-text">桌面环境配置</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87atilo"><span class="nav-text">通过atilo</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-2"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-text">环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#JAVA"><span class="nav-text">JAVA</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#python"><span class="nav-text">python</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-1"><span class="nav-text">环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java"><span class="nav-text">Java</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Fortran"><span class="nav-text">Fortran</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#OpenCL"><span class="nav-text">OpenCL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Jupyter"><span class="nav-text">Jupyter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VS-Code"><span class="nav-text">VS Code</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Aid-Learning"><span class="nav-text">Aid Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-2"><span class="nav-text">环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#gfortran"><span class="nav-text">gfortran</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JAVA-1"><span class="nav-text">JAVA</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Jupyter-1"><span class="nav-text">Jupyter</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-text">基本使用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Java%E5%86%85%E6%A0%B8"><span class="nav-text">Java内核</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E8%87%B4%E5%AE%89%E5%8D%93%E4%B9%8B%E2%80%94Termux%E5%AE%89%E8%A3%85%E5%AE%8C%E6%95%B4%E7%89%88Linux"><span class="nav-text">极致安卓之—Termux安装完整版Linux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%8A%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E6%80%A7%E8%83%BD%E5%8F%91%E6%8C%A5%E5%88%B0%E6%9E%81%E8%87%B4%E4%B9%8B-Termux"><span class="nav-text">把安卓手机性能发挥到极致之-Termux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%8A%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E6%80%A7%E8%83%BD%E5%8F%91%E6%8C%A5%E5%88%B0%E6%9E%81%E8%87%B4%E4%B9%8B-Aid-Learning%E8%BF%90%E8%A1%8CJava%E5%8F%8A%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95"><span class="nav-text">把安卓手机性能发挥到极致之-Aid Learning运行Java及性能测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%8A%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E6%80%A7%E8%83%BD%E5%8F%91%E6%8C%A5%E5%88%B0%E6%9E%81%E8%87%B4%E4%B9%8B-Termux%E5%AE%89%E8%A3%85Python%E5%8F%8AJupyter"><span class="nav-text">把安卓手机性能发挥到极致之-Termux安装Python及Jupyter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BAC-x2F-C-%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0"><span class="nav-text">安卓手机C&#x2F;C++开发平台</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%8A%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E6%80%A7%E8%83%BD%E5%8F%91%E6%8C%A5%E5%88%B0%E6%9E%81%E8%87%B4%E4%B9%8B-Termux-x2F-Aid-Learning%E4%BD%BF%E7%94%A8Fortran"><span class="nav-text">把安卓手机性能发挥到极致之-Termux&#x2F;Aid Learning使用Fortran</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E8%87%B4%E5%AE%89%E5%8D%93%E4%B9%8B%E2%80%94Aid-Learning%E5%9F%BA%E4%BA%8EJupyter%E5%BC%80%E5%8F%91Java%E5%92%8CPython"><span class="nav-text">极致安卓之—Aid Learning基于Jupyter开发Java和Python</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%8A%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E6%80%A7%E8%83%BD%E5%8F%91%E6%8C%A5%E5%88%B0%E6%9E%81%E8%87%B4%E4%B9%8B-Termux%E8%BF%90%E8%A1%8CJava%E5%8F%8A%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95"><span class="nav-text">把安卓手机性能发挥到极致之-Termux运行Java及性能测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Termux%E5%AE%89%E8%A3%85Node-JS%E5%8F%8A%E7%BD%91%E9%A1%B5%E7%89%88%E6%96%87%E6%A1%A3%E6%9F%A5%E7%9C%8B%E4%B8%8E%E4%BF%AE%E6%94%B9%E5%99%A8wcode"><span class="nav-text">Termux安装Node.JS及网页版文档查看与修改器wcode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E8%87%B4%E5%AE%89%E5%8D%93%E2%80%94Termux-x2F-Aid-Learning%E5%AE%89%E8%A3%85%E5%AE%87%E5%AE%99%E6%9C%80%E5%BC%BAVS-Code"><span class="nav-text">极致安卓—Termux&#x2F;Aid Learning安装宇宙最强VS Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Xposed%E4%B8%8B%E8%BD%BD%E6%A8%A1%E5%9D%9789-repo-xml-gz%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-text">Xposed下载模块89 repo.xml.gz失败的解决方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E7%AE%80%E5%8D%95%E9%AB%98%E6%95%88%E7%9A%84%E5%AF%B9%E8%BD%AF%E4%BB%B6-apk%E6%96%87%E4%BB%B6-%E8%BF%9B%E8%A1%8C%E4%BF%AE%E6%94%B9"><span class="nav-text">教你如何简单高效的对软件(apk文件)进行修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%BE%AE%E4%BF%A1%E5%A5%BD%E5%8F%8B%E6%A3%80%E6%B5%8B%E3%80%81%E6%94%B6%E8%83%BD%E9%87%8F%E3%80%81%E7%AD%BE%E5%88%B0%E6%89%93%E5%8D%A1%EF%BC%8C%E4%B8%8D%E8%BF%87%E6%98%AF%E8%BF%99%E6%AC%BEAPP%E7%9A%84%E5%86%B0%E5%B1%B1%E4%B8%80%E8%A7%92%EF%BC%81"><span class="nav-text">自动微信好友检测、收能量、签到打卡，不过是这款APP的冰山一角！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#daltonfury42-Github-gist"><span class="nav-text">daltonfury42 - Github gist</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%B1%E6%AD%89%EF%BC%8C%E5%AE%89%E5%8D%93%E6%9C%89%E4%BA%86Xposed%E7%9C%9F%E7%9A%84%E5%8F%AF%E4%BB%A5%E4%B8%BA%E6%89%80%E6%AC%B2%E4%B8%BA%EF%BC%81"><span class="nav-text">抱歉，安卓有了Xposed真的可以为所欲为！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Downgrade-Bootloader-check-fail"><span class="nav-text">Downgrade Bootloader check fail</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AAAPP%E5%AE%89%E5%85%A8%E5%AE%9E%E7%8E%B0%E5%BE%AE%E4%BF%A1%E9%98%B2%E6%92%A4%E5%9B%9E%EF%BC%8CiOS%E4%B9%9F%E8%A1%8C%EF%BC%9F%E8%BF%99%E4%B9%9F%E5%A4%AA%E5%BC%BA%E4%BA%86%E5%90%A7%EF%BC%81"><span class="nav-text">一个APP安全实现微信防撤回，iOS也行？这也太强了吧！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E5%8D%93%E7%A5%9E%E5%99%A8%E7%9A%84%E5%A4%A9%E8%8A%B1%E6%9D%BFXposed%EF%BC%8C%E8%BF%99%E6%AC%A1%E7%9C%9F%E7%9A%84%E8%83%BD%E8%AE%A9%E4%BD%A0%E7%94%A8%E4%B8%8A%EF%BC%81"><span class="nav-text">安卓神器的天花板Xposed，这次真的能让你用上！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E5%8E%82%E5%87%BA%E5%93%81%E5%8D%B4%E5%86%B7%E9%97%A810%E5%B9%B4%EF%BC%8C%E5%85%8D%E7%BF%BB%E4%B8%8D%E9%99%90%E9%80%9F%E4%B8%8B%E8%BD%BD%E5%9B%BD%E9%99%85%E7%89%88APP%E7%9A%84%E7%BB%9D%E4%BD%B3%E9%80%89%E6%8B%A9%EF%BC%81"><span class="nav-text">大厂出品却冷门10年，免翻不限速下载国际版APP的绝佳选择！</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

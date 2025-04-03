@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Sublime 3是一款好用的文本编辑软件。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sublime 3的使用">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/Sublime-Installation.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="Sublime 3是一款好用的文本编辑软件。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/Sublime-Installation/topic.jpg">
+<meta property="article:published_time" content="2019-12-24T00:16:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.551Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/Sublime-Installation/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/Sublime-Installation.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Sublime 3的使用 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/Sublime-Installation.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Sublime 3的使用
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-12-24 08:16:29" itemprop="dateCreated datePublished" datetime="2019-12-24T08:16:29+08:00">2019-12-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Skill/" itemprop="url" rel="index"><span itemprop="name">Skill</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/Sublime-Installation/topic.jpg"></p>
+<p>Sublime 3是一款好用的文本编辑软件。</p>
+<span id="more"></span>
+
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="直接安装破解版本"><a href="#直接安装破解版本" class="headerlink" title="直接安装破解版本"></a>直接安装破解版本</h2><p>Mac版本可从以下链接获得。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://xclient.info/s/sublime-text.html</span><br></pre></td></tr></table></figure>
+
+<p>安装后选择菜单Preferences-&gt;settings，在<code>&#123;&#125;</code>之间添加以下行以阻止自动更新。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;update_check&quot;:false</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装最新版后破解"><a href="#安装最新版后破解" class="headerlink" title="安装最新版后破解"></a>安装最新版后破解</h2><p>本方法针对Windows系统。打开系统hosts文件并添加以下行。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#sublimetext　</span><br><span class="line">127.0.0.1 www.sublimetext.com</span><br><span class="line">127.0.0.1 sublimetext.com</span><br><span class="line">127.0.0.1 sublimehq.com</span><br><span class="line">127.0.0.1 telemetry.sublimehq.com</span><br><span class="line">127.0.0.1 license.sublimehq.com</span><br><span class="line">127.0.0.1 45.55.255.55</span><br><span class="line">127.0.0.1 45.55.41.223</span><br></pre></td></tr></table></figure>
+
+<p>关闭sublime text3，打开安装目录，找到sublime_text.exe，备份一份，然后用二进制编辑器打开exe文件，搜索十六进制，输入97940D，替换为000000。将完成后的文件保存，覆盖原来的sublime_text.exe。</p>
+<p>打开程序，点击菜单Help-Enter Lisence，输入以下注册码。若显示Thanks for Purchase，则成功。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">----- BEGIN LICENSE -----</span><br><span class="line">TwitterInc</span><br><span class="line">200 User License</span><br><span class="line">EA7E-890007</span><br><span class="line">1D77F72E 390CDD93 4DCBA022 FAF60790</span><br><span class="line">61AA12C0 A37081C5 D0316412 4584D136</span><br><span class="line">94D7F7D4 95BC8C1C 527DA828 560BB037</span><br><span class="line">D1EDDD8C AE7B379F 50C9D69D B35179EF</span><br><span class="line">2FE898C4 8E4277A8 555CE714 E1FB0E43</span><br><span class="line">D5D52613 C3D12E98 BC49967F 7652EED2</span><br><span class="line">9D2D2E61 67610860 6D338B72 5CF95C69</span><br><span class="line">E36B85CC 84991F19 7575D828 470A92AB</span><br><span class="line">------ END LICENSE ------</span><br></pre></td></tr></table></figure>
+
+<p>或以下注册码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">----- BEGIN LICENSE -----</span><br><span class="line">riku</span><br><span class="line">Single User License</span><br><span class="line">EA7E-806996</span><br><span class="line">60C55C64D0195F15A118D93ECE0849B3</span><br><span class="line">30C432F529F7BFAAF6568C6BFDDA1868</span><br><span class="line">D6DF14D0464281D64A7E2EBB32558D84</span><br><span class="line">148EF8041694AC00B9FA17D6119A6286</span><br><span class="line">611D11E26BB48DCF19F76CB1CC7B995E</span><br><span class="line">F41F7BFAB3348963FF69F163A70ABBEA</span><br><span class="line">2526B73B523AA28BF66AFEF3ED3D1D21</span><br><span class="line">BC6CB3B5B6D183FF5C755DE7007C6C41</span><br><span class="line">------ END LICENSE ------</span><br></pre></td></tr></table></figure>
+
+<h1 id="Package-Control"><a href="#Package-Control" class="headerlink" title="Package Control"></a>Package Control</h1><p>Package Control用于在Sublime 3平台管理插件，项目地址如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://packagecontrol.io/installation</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><h3 id="最新方法"><a href="#最新方法" class="headerlink" title="最新方法"></a>最新方法</h3><p>新版本在菜单上直接有Install Package Control的选项，点击即可。注意可能要翻墙环境。</p>
+<h3 id="过时方法"><a href="#过时方法" class="headerlink" title="过时方法"></a>过时方法</h3><details>
+<summary></summary>
+
+<p>在Sublime 3主界面用Ctrl+`或者通过View-Show Console菜单打开命令行，粘贴以下代码即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request,os,hashlib; h = &#x27;6f4c264a24d933ce70df5dedcf1dcaee&#x27; + &#x27;ebe013ee18cced0ef93d5f746d80ef60&#x27;; pf = &#x27;Package Control.sublime-package&#x27;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( &#x27;http://packagecontrol.io/&#x27; + pf.replace(&#x27; &#x27;, &#x27;%20&#x27;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&#x27;Error validating download (got %s instead of %s), please try manual install&#x27; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &#x27;wb&#x27; ).write(by)</span><br></pre></td></tr></table></figure>
+
+<p>也可手动安装。点击Preferences-Browse Packages菜单，进入打开的目录的上层目录，然后再进入Installed Packages目录。从以下链接下载Package Control.sublime-package并复制到Installed Packages目录，重启Sublime Text。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://sublime.wbond.net/Package Control.sublime-package</span><br></pre></td></tr></table></figure>
+</details>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在Sublime 3主界面点击Command&#x2F;Ctrl+Shift+P，输入install后选中Install Package，回车即可安装插件。</p>
+<h2 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h2><h3 id="ConvertToUTF8"><a href="#ConvertToUTF8" class="headerlink" title="ConvertToUTF8"></a>ConvertToUTF8</h3><p>在Mac下打开乱码的GBK编码文件，通常由Windows创建。需要先安装Codecs33插件。</p>
+<h3 id="x86-and-x86-64-Assembly"><a href="#x86-and-x86-64-Assembly" class="headerlink" title="x86 and x86_64 Assembly"></a>x86 and x86_64 Assembly</h3><p>80×86汇编.asm文件的语法高亮插件。</p>
+<h3 id="ChineseLocalizations"><a href="#ChineseLocalizations" class="headerlink" title="ChineseLocalizations"></a>ChineseLocalizations</h3><p>Sublime的语言包。</p>
+<h3 id="VBScript"><a href="#VBScript" class="headerlink" title="VBScript"></a>VBScript</h3><p>添加VB语言高亮支持。</p>
+<h3 id="FindKeyConflicts"><a href="#FindKeyConflicts" class="headerlink" title="FindKeyConflicts"></a>FindKeyConflicts</h3><p>查询快捷键的冲突。安装后按<code>Ctrl+Shift+P</code>，输入<code>FindKeyConflicts</code>即可查看相关内容。</p>
+<h3 id="HexViewer"><a href="#HexViewer" class="headerlink" title="HexViewer"></a>HexViewer</h3><p>十六进制显示。安装后需要点击Tools-Packages-Hex Viewer-Toggle Hex View以在本文件启用。</p>
+<h3 id="Markdown相关"><a href="#Markdown相关" class="headerlink" title="Markdown相关"></a>Markdown相关</h3><h4 id="使用优化"><a href="#使用优化" class="headerlink" title="使用优化"></a>使用优化</h4><h5 id="MarkDownEditing"><a href="#MarkDownEditing" class="headerlink" title="MarkDownEditing"></a>MarkDownEditing</h5><p>Markdown语法高亮。</p>
+<details>
+<summary>【过时】</summary>
+
+<p>打开Preferences-Package Settings-Markdown Editing-Markdown GFM Setting——User，添加以下代码以更改颜色样式、设置行号以及去除左侧空白。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;color_scheme&quot;: &quot;Packages/MarkdownEditing/MarkdownEditor.tmTheme&quot;,</span><br><span class="line">    // &quot;color_scheme&quot;: &quot;Packages/MarkdownEditing/MarkdownEditor-Dark.tmTheme&quot;,</span><br><span class="line">    // &quot;color_scheme&quot;: &quot;Packages/MarkdownEditing/MarkdownEditor-Yellow.tmTheme&quot;,</span><br><span class="line">    &quot;draw_centered&quot;: false,</span><br><span class="line">    &quot;extensions&quot;:</span><br><span class="line">    [</span><br><span class="line">        &quot;*.md&quot;,</span><br><span class="line">        &quot;mdown&quot;,</span><br><span class="line">        &quot;txt&quot;,</span><br><span class="line">        &quot;md&quot;</span><br><span class="line">    ],</span><br><span class="line">    &quot;highlight_line&quot;: true,</span><br><span class="line">    &quot;line_numbers&quot;: true,</span><br><span class="line">    &quot;mde.keep_centered&quot;: false,</span><br><span class="line">    &quot;tab_size&quot;: 4,</span><br><span class="line">    &quot;translate_tabs_to_spaces&quot;: true,</span><br><span class="line">    &quot;trim_trailing_white_space_on_save&quot;: false,</span><br><span class="line">    &quot;word_wrap&quot;: true,</span><br><span class="line">    &quot;wrap_width&quot;: &quot;auto&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+
+<h5 id="TableEditor"><a href="#TableEditor" class="headerlink" title="TableEditor"></a>TableEditor</h5><p>Markdown表格。需先按<code>Ctrl+Shift+P</code>，然后打开<code>Table Editor: Enable for current syntax</code>以在md格式中应用该插件，打开<code>Table Editor: Enable for current view</code>和<code>Table Editor: Set table syntax ... for current view</code>以在本文件中应用该插件。注意打开后Tab键将被该插件抢占。</p>
+<h5 id="SmartMarkdown"><a href="#SmartMarkdown" class="headerlink" title="SmartMarkdown"></a>SmartMarkdown</h5><p>该插件可能会与MarkDownEditing冲突，MarkDownEditing已支持标题折叠功能。</p>
+<p>智能标题折叠，在标题上按<code>Tab</code>以折叠&#x2F;展开本层，在任意位置按<code>Shift+Tab</code>以折叠&#x2F;展开全文。</p>
+<p>若Tab无法使用，表示快捷键被占用。进入Sublime的Preferences-Key Bindings，复制以下代码后保存，以后可用<code>Command+Shift+M</code>代替Tab。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; &quot;keys&quot;: [&quot;shift+super+m&quot;], &quot;command&quot;: &quot;smart_folding&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="实时预览"><a href="#实时预览" class="headerlink" title="实时预览"></a>实时预览</h4><h5 id="markmon"><a href="#markmon" class="headerlink" title="markmon"></a>markmon</h5><p>暂时不可用。</p>
+<h5 id="MarkdownLivePreview"><a href="#MarkdownLivePreview" class="headerlink" title="MarkdownLivePreview"></a>MarkdownLivePreview</h5><p>使用时按Ctrl+Shift+P，选择<code>MarkdownLivePreview: Open Preview</code>。</p>
+<h5 id="OmniMarkupPreviewer"><a href="#OmniMarkupPreviewer" class="headerlink" title="OmniMarkupPreviewer"></a>OmniMarkupPreviewer</h5><p>安装后打开Preferences–Package Settings–OmniMarkupPreviewer–Setting——User，添加以下内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;renderer_options-MarkdownRenderer&quot;:</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;extensions&quot;: [&quot;tables&quot;, &quot;fenced_code&quot;, &quot;codehilite&quot;],</span><br><span class="line">        &quot;parser&quot;: &quot;markdown&quot;,</span><br><span class="line">        &quot;enabled_parsers&quot;: [&quot;markdown&quot;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>打开Preferences–Package Settings–OmniMarkupPreviewer–Setting——Default，修改以下内容以支持latex语法。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;mathjax_enabled&quot;: true,</span><br></pre></td></tr></table></figure>
+
+<p>使用时按Ctrl+Alt+O即可。</p>
+<h5 id="Markdown-Preview-LiveReload"><a href="#Markdown-Preview-LiveReload" class="headerlink" title="Markdown Preview+LiveReload"></a>Markdown Preview+LiveReload</h5><p>安装Markdown Preview和LiveReload，然后打开Preferences–Package Settings–Markdown Preview–Setting，在user设置中添加以下内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;enable_autoreload&quot;: true,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>按Ctrl+Shift+P，输入<code>LiveReload: Enable/disable plug-ins</code>，选择<code>Enable: Simple Reload</code>。然后选择Preferences—Key Bindings-User，添加以下内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    &#123; &quot;keys&quot;: [&quot;alt+m&quot;], &quot;command&quot;: &quot;markdown_preview&quot;, &quot;args&quot;: &#123;&quot;target&quot;: &quot;browser&quot;, &quot;parser&quot;:&quot;markdown&quot;&#125; &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>使用时按Alt+M即可。</p>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="无法显示插件目录"><a href="#无法显示插件目录" class="headerlink" title="无法显示插件目录"></a>无法显示插件目录</h3><p>需要翻墙。或者将以下链接的文件下载到本地，然后在Sublime Text中点击Preference-Package Setting-Package Control-User Setting。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://packagecontrol.io/channel_v3.json</span><br></pre></td></tr></table></figure>
+
+<p>修改以下代码即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;channels&quot;: [</span><br><span class="line">    &quot;/Users/...&quot; // 以上文件的路径</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h3 id="下载报错"><a href="#下载报错" class="headerlink" title="下载报错"></a>下载报错</h3><p>Github采用https协议，而sublime使用urllib，故需对Package Control进行配置。点击Preference-Package Setting-Package Control-User Setting，添加以下代码即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&quot;downloader_precedence&quot;:</span><br><span class="line">&#123;</span><br><span class="line">    &quot;linux&quot;:</span><br><span class="line">    [</span><br><span class="line">        &quot;curl&quot;,</span><br><span class="line">        &quot;urllib&quot;,</span><br><span class="line">        &quot;wget&quot;</span><br><span class="line">    ],</span><br><span class="line">    &quot;osx&quot;:</span><br><span class="line">    [</span><br><span class="line">        &quot;curl&quot;,</span><br><span class="line">        &quot;wget&quot;</span><br><span class="line">    ],</span><br><span class="line">    &quot;windows&quot;:</span><br><span class="line">    [</span><br><span class="line">        &quot;wininet&quot;</span><br><span class="line">    ]</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h1 id="编译功能配置"><a href="#编译功能配置" class="headerlink" title="编译功能配置"></a>编译功能配置</h1><p>Sublime自带编译器，能够对C、C++、Java、Python等语言源代码进行编译。在菜单工具-编译系统中可以看到当前选择的编译器，一般程序会根据文件后缀自动做出正确的选择。</p>
+<p>使用<code>Ctrl/Command+Shift+B</code>即跳出编译选项，按照提示进行即可。</p>
+<p>对于Mac，用户自定义的编译系统将存放于<code>~/Library/Application Support/Sublime Text/User</code>。</p>
+<h1 id="语法高亮"><a href="#语法高亮" class="headerlink" title="语法高亮"></a>语法高亮</h1><h2 id="Quantumult-X配置文件"><a href="#Quantumult-X配置文件" class="headerlink" title="Quantumult X配置文件"></a>Quantumult X配置文件</h2><p>在Sublime中点击Preferences-Browse Packages…，进入User文件夹。在该文件夹下新建Quantumult.sublime-syntax文件，复制以下代码并保存即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">%YAML 1.2</span><br><span class="line">---</span><br><span class="line">name: Quantumult Conf</span><br><span class="line">file_extensions: [conf]</span><br><span class="line">scope: source.c</span><br><span class="line"></span><br><span class="line">contexts:</span><br><span class="line">  main:</span><br><span class="line">    - match: &#x27;([\w|-]+(|\s)+(?=([\=][\-]?)))&#x27;</span><br><span class="line">      scope: keyword.other</span><br><span class="line">    - match: &#x27;^\[.+\]&#x27;</span><br><span class="line">      scope: entity.name.section</span><br><span class="line">    - match: &#x27;\\/|\^|\?&#x27;</span><br><span class="line">      scope: entity.name</span><br><span class="line">    - match: &#x27;((https|http)?:\/\/)[^(\s)|(,)]+&#x27;</span><br><span class="line">      scope: constant.character.escape</span><br><span class="line">    - match: &#x27;(\#|;)(.+|$)&#x27;</span><br><span class="line">      scope: comment.number-sign</span><br></pre></td></tr></table></figure>
+
+<h1 id="分屏显示"><a href="#分屏显示" class="headerlink" title="分屏显示"></a>分屏显示</h1><p>点击菜单栏上的视图-布局，即可选择不同的布局模式。</p>
+<p>若希望两边同时显示同一个文档，可选择该文档，点击文件-克隆文件，然后把标签页拉到另一边即可。</p>
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="Sublime-text3-Version-3-2-2-Build-3211破解"><a href="#Sublime-text3-Version-3-2-2-Build-3211破解" class="headerlink" title="Sublime text3 Version 3.2.2, Build 3211破解"></a>Sublime text3 Version 3.2.2, Build 3211破解</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.cnblogs.com/Fluorescence-tjy/p/11910345.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="Sublime-Text3-Markdown-编辑-实时预览"><a href="#Sublime-Text3-Markdown-编辑-实时预览" class="headerlink" title="Sublime Text3 Markdown 编辑+实时预览"></a>Sublime Text3 Markdown 编辑+实时预览</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://juejin.cn/post/6844903741183754253</span><br></pre></td></tr></table></figure>
+
+<h2 id="Why-it-doesn’t-work-·-Issue-44-·-demon386-x2F-SmartMarkdown"><a href="#Why-it-doesn’t-work-·-Issue-44-·-demon386-x2F-SmartMarkdown" class="headerlink" title="Why it doesn’t work? · Issue #44 · demon386&#x2F;SmartMarkdown"></a>Why it doesn’t work? · Issue #44 · demon386&#x2F;SmartMarkdown</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/demon386/SmartMarkdown/issues/44</span><br></pre></td></tr></table></figure>
+
+<h2 id="Sublime-Text新增gbk编码支持"><a href="#Sublime-Text新增gbk编码支持" class="headerlink" title="Sublime Text新增gbk编码支持"></a>Sublime Text新增gbk编码支持</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/a7442358/article/details/84063491</span><br></pre></td></tr></table></figure>
+
+<h2 id="分享一个Sublime-Text的Quantumult-X语法高亮"><a href="#分享一个Sublime-Text的Quantumult-X语法高亮" class="headerlink" title="分享一个Sublime Text的Quantumult X语法高亮"></a>分享一个Sublime Text的Quantumult X语法高亮</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.butanediol.me/2020/05/17/%E5%88%86%E4%BA%AB%E4%B8%80%E4%B8%AA-Sublime-Text-%E7%9A%84-Quantumult-X-%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Sublime-Text3插件-—-HexViewer的使用（16进制显示）"><a href="#Sublime-Text3插件-—-HexViewer的使用（16进制显示）" class="headerlink" title="Sublime Text3插件 — HexViewer的使用（16进制显示）"></a>Sublime Text3插件 — HexViewer的使用（16进制显示）</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/zldz14/article/details/82183530</span><br></pre></td></tr></table></figure>
+
+<h2 id="Sublime-Text-如何一个代码双屏显示代码上下部分？"><a href="#Sublime-Text-如何一个代码双屏显示代码上下部分？" class="headerlink" title="Sublime Text 如何一个代码双屏显示代码上下部分？"></a>Sublime Text 如何一个代码双屏显示代码上下部分？</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.zhihu.com/question/32381975</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置Sublime-Text-3编辑并预览Markdown文件"><a href="#配置Sublime-Text-3编辑并预览Markdown文件" class="headerlink" title="配置Sublime Text 3编辑并预览Markdown文件"></a>配置Sublime Text 3编辑并预览Markdown文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.jianshu.com/p/af944f061521</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/Mac-Terminal-Optimization.html" rel="prev" title="Mac终端优化">
+      <i class="fa fa-chevron-left"></i> Mac终端优化
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/Instructions-Of-Python.html" rel="next" title="Python使用指南">
+      Python使用指南 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E5%AE%89%E8%A3%85%E7%A0%B4%E8%A7%A3%E7%89%88%E6%9C%AC"><span class="nav-text">直接安装破解版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%89%88%E5%90%8E%E7%A0%B4%E8%A7%A3"><span class="nav-text">安装最新版后破解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Package-Control"><span class="nav-text">Package Control</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-1"><span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E6%96%B0%E6%96%B9%E6%B3%95"><span class="nav-text">最新方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%87%E6%97%B6%E6%96%B9%E6%B3%95"><span class="nav-text">过时方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="nav-text">常用插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ConvertToUTF8"><span class="nav-text">ConvertToUTF8</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#x86-and-x86-64-Assembly"><span class="nav-text">x86 and x86_64 Assembly</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ChineseLocalizations"><span class="nav-text">ChineseLocalizations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VBScript"><span class="nav-text">VBScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FindKeyConflicts"><span class="nav-text">FindKeyConflicts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HexViewer"><span class="nav-text">HexViewer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown%E7%9B%B8%E5%85%B3"><span class="nav-text">Markdown相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%BC%98%E5%8C%96"><span class="nav-text">使用优化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#MarkDownEditing"><span class="nav-text">MarkDownEditing</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#TableEditor"><span class="nav-text">TableEditor</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#SmartMarkdown"><span class="nav-text">SmartMarkdown</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E6%97%B6%E9%A2%84%E8%A7%88"><span class="nav-text">实时预览</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#markmon"><span class="nav-text">markmon</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#MarkdownLivePreview"><span class="nav-text">MarkdownLivePreview</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#OmniMarkupPreviewer"><span class="nav-text">OmniMarkupPreviewer</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Markdown-Preview-LiveReload"><span class="nav-text">Markdown Preview+LiveReload</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E6%8F%92%E4%BB%B6%E7%9B%AE%E5%BD%95"><span class="nav-text">无法显示插件目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E6%8A%A5%E9%94%99"><span class="nav-text">下载报错</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E5%8A%9F%E8%83%BD%E9%85%8D%E7%BD%AE"><span class="nav-text">编译功能配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE"><span class="nav-text">语法高亮</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quantumult-X%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-text">Quantumult X配置文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E5%B1%8F%E6%98%BE%E7%A4%BA"><span class="nav-text">分屏显示</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sublime-text3-Version-3-2-2-Build-3211%E7%A0%B4%E8%A7%A3"><span class="nav-text">Sublime text3 Version 3.2.2, Build 3211破解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sublime-Text3-Markdown-%E7%BC%96%E8%BE%91-%E5%AE%9E%E6%97%B6%E9%A2%84%E8%A7%88"><span class="nav-text">Sublime Text3 Markdown 编辑+实时预览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-it-doesn%E2%80%99t-work-%C2%B7-Issue-44-%C2%B7-demon386-x2F-SmartMarkdown"><span class="nav-text">Why it doesn’t work? · Issue #44 · demon386&#x2F;SmartMarkdown</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sublime-Text%E6%96%B0%E5%A2%9Egbk%E7%BC%96%E7%A0%81%E6%94%AF%E6%8C%81"><span class="nav-text">Sublime Text新增gbk编码支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E4%BA%AB%E4%B8%80%E4%B8%AASublime-Text%E7%9A%84Quantumult-X%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE"><span class="nav-text">分享一个Sublime Text的Quantumult X语法高亮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sublime-Text3%E6%8F%92%E4%BB%B6-%E2%80%94-HexViewer%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%8816%E8%BF%9B%E5%88%B6%E6%98%BE%E7%A4%BA%EF%BC%89"><span class="nav-text">Sublime Text3插件 — HexViewer的使用（16进制显示）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sublime-Text-%E5%A6%82%E4%BD%95%E4%B8%80%E4%B8%AA%E4%BB%A3%E7%A0%81%E5%8F%8C%E5%B1%8F%E6%98%BE%E7%A4%BA%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%B8%8B%E9%83%A8%E5%88%86%EF%BC%9F"><span class="nav-text">Sublime Text 如何一个代码双屏显示代码上下部分？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AESublime-Text-3%E7%BC%96%E8%BE%91%E5%B9%B6%E9%A2%84%E8%A7%88Markdown%E6%96%87%E4%BB%B6"><span class="nav-text">配置Sublime Text 3编辑并预览Markdown文件</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

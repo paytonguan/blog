@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Android Root等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android高级使用指南">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/Android-Advanced-Guide.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="Android Root等。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/Android-Advanced-Guide/topic.jpg">
+<meta property="article:published_time" content="2023-11-10T06:46:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.522Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/Android-Advanced-Guide/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/Android-Advanced-Guide.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Android高级使用指南 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/Android-Advanced-Guide.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Android高级使用指南
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-10 14:46:29" itemprop="dateCreated datePublished" datetime="2023-11-10T14:46:29+08:00">2023-11-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>28k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>25 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/Android-Advanced-Guide/topic.jpg"></p>
+<p>Android Root等。</p>
+<span id="more"></span>
+
+<h1 id="TODOS"><a href="#TODOS" class="headerlink" title="TODOS"></a>TODOS</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">使用KernelSU_Action编译自己的KernelSU内核</span><br><span class="line">https://www.bilibili.com/opus/806004201667690498</span><br><span class="line"></span><br><span class="line">自己编译ROM</span><br><span class="line">https://github.com/shantanu-sarkar/CustomROM</span><br><span class="line">https://blog.yiyitec.com/2019/08/02/译如何移植-cyanogenos-lineageos-到您自己的手机/</span><br><span class="line">https://fat-tire.github.io/porting-intro.html</span><br><span class="line">https://medium.com/@daltonfury42/building-lineageos-for-your-device-a7d26ab50549</span><br><span class="line">https://xdaforums.com/t/guide-how-to-building-lineageos-for-an-unsupported-device.4419263/</span><br><span class="line">https://blog.lynnrin.moe/posts/ROM-bringup-guide-prebuilt/</span><br><span class="line">https://blog.lynnrin.moe/posts/oneplus/</span><br><span class="line">https://blog.lynnrin.moe/posts/dior-rom/</span><br><span class="line"></span><br><span class="line">提取vendor tree</span><br><span class="line">https://xdaforums.com/t/guide-extract-vendor-from-stock-firmware.4212587/</span><br><span class="line">https://baalajimaestro.me/posts/extract-vendor/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">三星内核</span><br><span class="line">https://android.googlesource.com/kernel/samsung.git/</span><br><span class="line">https://github.com/goldfish07/android_kernel_samsung_j8y18lte_old/blob/10/build_msm8917.sh</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Magisk</span><br><span class="line">https://blog.lynnrin.moe/posts/magisk</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">TWRP</span><br><span class="line">https://blog.lynnrin.moe/posts/Razer_Phone_TWRP/</span><br></pre></td></tr></table></figure>
+
+<h1 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h1><h2 id="恢复模式"><a href="#恢复模式" class="headerlink" title="恢复模式"></a>恢复模式</h2><p>即Recovery Mode，该模式将会启动recovery分区，可在该模式下执行擦除数据等操作。通过刷入第三方recovery可达到更高级的功能。</p>
+<p>对于三星设备，在关机状态下同时按音量上键+Home键+电源键即可进入Recovery模式。</p>
+<h2 id="下载模式"><a href="#下载模式" class="headerlink" title="下载模式"></a>下载模式</h2><p>即Download Mode，也被称为Bootloader&#x2F;Fastboot Mode，用于刷机。在三星上也被称为Odin Mode。</p>
+<p>对于三星设备，在关机状态下按音量下键+Home键+电源键，同时将手机连接到电脑，即可进入下载模式。或先进入恢复模式，再选择Reboot to bootloader进入到下载模式。</p>
+<h2 id="ADB工具"><a href="#ADB工具" class="headerlink" title="ADB工具"></a>ADB工具</h2><p>Google提供的用电脑命令行对手机进行相关操作的工具，注意需要在手机上打开USB调试模式。注意应当用最新的ADB工具，否则可能会识别不到设备，运行命令行可能会提示device offline。</p>
+<p>下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://developer.android.com/studio/command-line/adb</span><br><span class="line">https://developer.android.google.cn/studio/releases/platform-tools.html</span><br></pre></td></tr></table></figure>
+
+<p>对于Mac，可通过Homebrew安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install android-platform-tools</span><br></pre></td></tr></table></figure>
+
+<p>该工具包包含adb和fastboot两个工具，其中adb用于普通模式，fastboot用于fastboot模式。</p>
+<p>注意，adb和fastboot需要不同的驱动。如果运行命令行时找不到设备，可能是驱动问题，可尝试下载以下驱动。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 通用驱动</span><br><span class="line">https://github.com/xushuan/google_latest_usb_driver_windows</span><br><span class="line">https://adb.clockworkmod.com/</span><br><span class="line"></span><br><span class="line"># Sony</span><br><span class="line"># 下载Flashtool，使用drivers目录中的自动安装程序</span><br><span class="line">http://www.flashtool.net/index.php</span><br></pre></td></tr></table></figure>
+
+<p>若安装后仍不行，可尝试手动安装。Windows下打开设备管理器，将fastboot模式下的手机与电脑连接。检查手机是否被识别为未知设备，若是则右键选择安装驱动程序，驱动程序路径位于SDK包中的sdk&#x2F;extras&#x2F;google&#x2F;usb_driver，SDK包下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://developer.android.com/studio</span><br></pre></td></tr></table></figure>
+
+<p>也可直接使用工具和驱动一键下载脚本，链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://forum.xda-developers.com/t/tool-latest-adb-fastboot-and-usb-driver-installer-tool-for-windows.3999445/</span><br></pre></td></tr></table></figure>
+
+<p>命令行切换到工具目录后即可使用，注意需要以管理员身份运行。adb常用命令如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 查看当前连接的设备</span><br><span class="line">adb devices</span><br><span class="line"></span><br><span class="line"># 让手机进入bootloader</span><br><span class="line">adb reboot bootloader</span><br></pre></td></tr></table></figure>
+
+<p>fastboot常用命令如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># 查看当前连接的设备</span><br><span class="line">fastboot devices</span><br><span class="line"></span><br><span class="line"># 刷入recovery</span><br><span class="line">fastboot flash recovery recovery.img</span><br><span class="line"></span><br><span class="line"># 刷入boot</span><br><span class="line">fastboot flash boot boot.img</span><br><span class="line"></span><br><span class="line"># 刷入cache</span><br><span class="line">fastboot flash cache cache.img</span><br><span class="line"></span><br><span class="line"># 刷入userdata</span><br><span class="line">fastboot flash userdata userdata.img</span><br><span class="line"></span><br><span class="line"># 刷入system</span><br><span class="line">fastboot flash system system.img</span><br><span class="line"></span><br><span class="line"># 临时加载镜像</span><br><span class="line">fastboot boot [镜像路径]</span><br><span class="line"></span><br><span class="line"># 重启</span><br><span class="line">fastboot reboot</span><br><span class="line"></span><br><span class="line"># 解锁OEM</span><br><span class="line"># 适用于所有Google品牌的Nexus设备</span><br><span class="line">fastboot oem unlock</span><br></pre></td></tr></table></figure>
+
+<p>对于Samsung，因为其使用自定义的Odin 3 协议，因此fastboot命令将看不到设备。需要使用Heimdall，仓库如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/Benjamin-Dobell/Heimdall</span><br></pre></td></tr></table></figure>
+
+<h2 id="解锁Bootloader"><a href="#解锁Bootloader" class="headerlink" title="解锁Bootloader"></a>解锁Bootloader</h2><p>即OEM解锁。一般而言，进入下载模式意味着需要更改系统，此时需要先解Bootloader锁，否则无法完成刷入。对于三星，可在下载模式下查看CROM SERVICE一栏，若为Lock则未解锁。</p>
+<p>对于三星设备，可在设置-开发者设置下点击OEM解锁。若没有该选项则可使用官方OEM解锁工具CROM Service，下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.apkmirror.com/apk/samsung-electronics-co-ltd/crom-service/crom-service-1-0-8-release/crom-service-1-0-8-android-apk-download/</span><br></pre></td></tr></table></figure>
+
+<p>对于一加设备，需要通过ADB工具。在手机上进入设置-关于手机，点击7次版本号启用开发者选项。启用开发者选项后，Google服务框架会被自动取消隐藏。然后前往设置-系统-开发者选项，启用OEM解锁和高级重启。</p>
+<p>长按电源键，从电源菜单中选择引导器模式，手机将会自动重启进入Bootloader模式。打开电脑的终端，使用以下命令解锁Bootloader。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fastboot devices # 检查设备是否连接</span><br><span class="line">fastboot oem unlock</span><br></pre></td></tr></table></figure>
+
+<p>手机会提示解锁Bootloader的风险警告信息，需要用音量键操作选择是否解锁，并使用电源键确认。解锁后手机会自动抹掉所有数据并执行重启。</p>
+<h2 id="开发者设置"><a href="#开发者设置" class="headerlink" title="开发者设置"></a>开发者设置</h2><p>在安卓设置中有一项隐藏的开发者设置，在该设置中可开启USB调试。一般进入<code>关于手机</code>，连续点击十次版本号，即可解除隐藏。</p>
+<h1 id="Recovery"><a href="#Recovery" class="headerlink" title="Recovery"></a>Recovery</h1><h2 id="第三方包"><a href="#第三方包" class="headerlink" title="第三方包"></a>第三方包</h2><p>第三方Recovery与原生Recovery相比，可实现更多功能。</p>
+<h3 id="TWRP"><a href="#TWRP" class="headerlink" title="TWRP"></a>TWRP</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://twrp.me/</span><br></pre></td></tr></table></figure>
+
+<p>特定机型的非官方TWRP包如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># LG G3</span><br><span class="line">https://forum.xda-developers.com/t/recovery-3-3-1-unofficial-twrp-for-lg-g3.3813552/</span><br></pre></td></tr></table></figure>
+
+<h3 id="SHRP"><a href="#SHRP" class="headerlink" title="SHRP"></a>SHRP</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://skyhawkrecovery.github.io/</span><br></pre></td></tr></table></figure>
+
+<h3 id="OrangeFox"><a href="#OrangeFox" class="headerlink" title="OrangeFox"></a>OrangeFox</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://orangefox.download/zh-CN</span><br></pre></td></tr></table></figure>
+
+<h3 id="PitchBlack"><a href="#PitchBlack" class="headerlink" title="PitchBlack"></a>PitchBlack</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://pitchblackrecovery.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="CWM"><a href="#CWM" class="headerlink" title="CWM"></a>CWM</h3><p>支持较老的机型。</p>
+<h2 id="刷入"><a href="#刷入" class="headerlink" title="刷入"></a>刷入</h2><p>以TWRP为例，对于官方提供支持的设备，可从Google Play商店中下载TWRP应用完成刷入。对于其它设备，可通过线刷的方式，如三星可将相应的recovery.img打包为tar后，通过Odin的AP包方式刷入。</p>
+<h2 id="机型适配"><a href="#机型适配" class="headerlink" title="机型适配"></a>机型适配</h2><p>对于官方未提供支持机型的第三方包，可自行编译。</p>
+<h3 id="提取设备树"><a href="#提取设备树" class="headerlink" title="提取设备树"></a>提取设备树</h3><p>编译第三方Recovery需要与本设备相关的设备树。</p>
+<p>可尝试在Github搜索<code>device [设备名]</code>、<code>kernel [设备名]</code>以及<code>vendor [设备名]</code>查找设备树。</p>
+<details>
+<summary>【进阶】编译TWRP和Android所需设备树的不同</summary>
+
+<p>Android.mk、AndroidProduct.mk、omni_cheryl.mk一般情况下相同。编译TWRP需要对BoardConfig.mk等文件进行修改。</p>
+</details>
+
+<h4 id="通过twrpdtgen"><a href="#通过twrpdtgen" class="headerlink" title="通过twrpdtgen"></a>通过twrpdtgen</h4><p>twrpdtgen为python下的工具，可从原生Recovery中提取设备树，支持Android 4.4-12。仓库及相关说明如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/SebaUbuntu/TWRP-device-tree-generator</span><br><span class="line">https://forum.xda-developers.com/t/script-twrp-device-tree-generator.4085463/</span><br></pre></td></tr></table></figure>
+
+<p>建议在Linux环境下进行。以三星为例，从ROM中的AP压缩包提取recovery.img，如果是A&#x2F;B分区则用Boot.img。然后打开终端，输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># 进入root模式</span><br><span class="line">sudo -i</span><br><span class="line">cd /home/[用户名]</span><br><span class="line"></span><br><span class="line"># 新建目录并安装依赖</span><br><span class="line">mkdir twrpdtgen</span><br><span class="line">cd twrpdtgen</span><br><span class="line">apt update</span><br><span class="line">apt install software-properties-common</span><br><span class="line">add-apt-repository ppa:deadsnakes/ppa</span><br><span class="line">apt update</span><br><span class="line">apt install python3.9</span><br><span class="line">update-alternatives --install /usr/bin/python python /usr/bin/python3.9 1</span><br><span class="line">update-alternatives --list python</span><br><span class="line">update-alternatives --config python</span><br><span class="line">apt install python3-pip</span><br><span class="line">pip3 install --upgrade pip</span><br><span class="line"></span><br><span class="line"># 安装twrpdtgen</span><br><span class="line">apt install cpio</span><br><span class="line">pip3 install twrpdtgen</span><br></pre></td></tr></table></figure>
+
+<p>把提取的recovery.img复制到twrpdtgen目录下，然后运行以下命令生成设备树。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m twrpdtgen -k --no-git -v recovery.img</span><br></pre></td></tr></table></figure>
+
+<p><code>output/[厂商名]/[设备名]</code>下的内容即为本设备的设备树。</p>
+<h4 id="通过修改模版"><a href="#通过修改模版" class="headerlink" title="通过修改模版"></a>通过修改模版</h4><p>下载以下仓库作为模版，以下根据该模版进行修改。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/shakalaca/android_device_asus_Z01G/tree/sample</span><br></pre></td></tr></table></figure>
+
+<p>编译系统从build&#x2F;make&#x2F;core&#x2F;product_config.mk开始，读取设备参数文件目录device&#x2F;下所有的AndroidProducts.mk，得到设备Makefile的列表。然后在列表中搜索用户指定设备的设备Makefile即<code>omni_&lt;设备名&gt;.mk</code>，若能搜索到则从设备Makefile中读取设备信息，配置好编译环境。</p>
+<h5 id="Android-mk"><a href="#Android-mk" class="headerlink" title="Android.mk"></a>Android.mk</h5><p>主要进入点。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 将Z01G修改为设备名</span><br><span class="line">ifeq ($(TARGET_DEVICE), Z01G)</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h5 id="AndroidProducts-mk"><a href="#AndroidProducts-mk" class="headerlink" title="AndroidProducts.mk"></a>AndroidProducts.mk</h5><p>载入<code>[ROM]_[设备].mk</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># ROM一般为omni，无需改变</span><br><span class="line"># 将Z01G修改为设备名</span><br><span class="line">PRODUCT_MAKEFILES := \</span><br><span class="line">    $(LOCAL_DIR)/omni_Z01G.mk</span><br></pre></td></tr></table></figure>
+
+<h5 id="omni-Z01G-mk"><a href="#omni-Z01G-mk" class="headerlink" title="omni_Z01G.mk"></a>omni_Z01G.mk</h5><p>相当于Makefile，定义设备的基本信息。</p>
+<p>对于OmniROM，文件名为<code>omni_&lt;设备名&gt;.mk</code>。对于CyanogenMod为<code>cm.mk</code>，对于魔趣为<code>mokee.mk</code>（旧版本）或<code>mk_&lt;设备名&gt;.mk</code>（Android 9）。统一命名为<code>omni_&lt;设备名&gt;.mk</code>即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># 使当前配置文件继承其他配置文件</span><br><span class="line"># 将asus修改为厂商名，Z01G修改为设备名</span><br><span class="line">$(call inherit-product, device/asus/Z01G/device.mk)</span><br><span class="line"></span><br><span class="line"># 产品名，通常格式为omni_&lt;PRODUCT_DEVICE&gt;</span><br><span class="line"># 必须填写，用于编译系统配置环境</span><br><span class="line">PRODUCT_NAME := omni_Z01G</span><br><span class="line"></span><br><span class="line"># 设备名</span><br><span class="line"># 必须填写，用于编译系统对设备名的标识</span><br><span class="line">PRODUCT_DEVICE := Z01G</span><br><span class="line"></span><br><span class="line"># 品牌名</span><br><span class="line">PRODUCT_BRAND := asus</span><br><span class="line"></span><br><span class="line"># 设备型号</span><br><span class="line"># 会显示在系统设置的「关于设备」中</span><br><span class="line">PRODUCT_MANUFACTURER := asus</span><br><span class="line"></span><br><span class="line"># 厂商名</span><br><span class="line">PRODUCT_MODEL := ASUS_Z01GD</span><br></pre></td></tr></table></figure>
+
+<h5 id="device-mk"><a href="#device-mk" class="headerlink" title="device.mk"></a>device.mk</h5><p>只对Android UI起作用，对TWRP无效。</p>
+<h5 id="vendorsetup-sh"><a href="#vendorsetup-sh" class="headerlink" title="vendorsetup.sh"></a>vendorsetup.sh</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 将Z01G修改为设备名</span><br><span class="line">add_lunch_combo omni_Z01G-eng</span><br></pre></td></tr></table></figure>
+
+<h5 id="recovery-fstab"><a href="#recovery-fstab" class="headerlink" title="recovery.fstab"></a>recovery.fstab</h5><p>手机分区信息。可在手机打开Termux等终端工具，通过df命令查看。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 从/system到/recovery基本可以共用</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"># 最后为SD卡和OTG</span><br><span class="line"># mmcblk0p1/mmcblk0在大部分设备应为mmcblk1p1/mmcblk1（第二个mmc装置）</span><br><span class="line"># ZenFone 4 Pro用UFS，所以SD卡是第一个mmc装置</span><br><span class="line">/external_sd    auto      /dev/block/mmcblk0p1    /dev/block/mmcblk0         flags=display=&quot;MicroSD&quot;;storage;wipeingui;removable</span><br><span class="line"></span><br><span class="line"># sdg1/sdg在大部分设备应为sda1/sda</span><br><span class="line">/usb-otg        auto      /dev/block/sdg1         /dev/block/sdg             flags=display=&quot;USB OTG&quot;;storage;wipeingui;removable</span><br></pre></td></tr></table></figure>
+
+<h5 id="system-prop"><a href="#system-prop" class="headerlink" title="system.prop"></a>system.prop</h5><p>放置额外property，通常不需要。</p>
+<h5 id="omni-dependencies"><a href="#omni-dependencies" class="headerlink" title="omni.dependencies"></a>omni.dependencies</h5><p>编译时TWRP会通过该文件获取额外的source code编译，一般为SoC相关的设定与核心源码。此处获取Qualcomm共享代码。</p>
+<h5 id="BoardConfig-mk"><a href="#BoardConfig-mk" class="headerlink" title="BoardConfig.mk"></a>BoardConfig.mk</h5><p>编译TWRP需要的所有参数。</p>
+<h6 id="基本参数"><a href="#基本参数" class="headerlink" title="基本参数"></a>基本参数</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 主板型号</span><br><span class="line">TARGET_BOOTLOADER_BOARD_NAME := msm8998</span><br><span class="line">TARGET_BOARD_PLATFORM := msm8998</span><br><span class="line"></span><br><span class="line"># 是否排除默认USB设置</span><br><span class="line"># 一般情况下设为false，且删除recovery/root/init.recovery.usb.rc与recovery/root/init.qcom.usb.sh</span><br><span class="line"># 以直接使用TWRP提供的USB设置</span><br><span class="line"># 对于ZenFone 4 Pro，需要取出boot.img的init.qcom.usb.sh与init.asus.usb.rc（重命名为init.recovery.usb.rc）</span><br><span class="line"># 放在recovery/root，并将TW_EXCLUDE_DEFAULT_USB_INIT设为true，才可进行adb相关设置</span><br><span class="line">TW_EXCLUDE_DEFAULT_USB_INIT := true</span><br></pre></td></tr></table></figure>
+
+<h6 id="内核打包参数"><a href="#内核打包参数" class="headerlink" title="内核打包参数"></a>内核打包参数</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"># 内核的运行参数</span><br><span class="line"># 需要从原生boot.img中提取</span><br><span class="line">BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78af000 androidboot.selinux=permissive</span><br><span class="line">BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 </span><br><span class="line">BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0xc1b0000 androidboot.hardware=qcom </span><br><span class="line">BOARD_KERNEL_CMDLINE += user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 </span><br><span class="line">BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 </span><br><span class="line">BOARD_KERNEL_CMDLINE += service_locator.enable=1 swiotlb=2048 androidboot.configfs=true </span><br><span class="line">BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3</span><br><span class="line">BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive</span><br><span class="line"></span><br><span class="line"># 内核在启动映像中的基址</span><br><span class="line"># 需要从原生boot.img中提取</span><br><span class="line">BOARD_KERNEL_BASE := 0x00000000</span><br><span class="line"></span><br><span class="line"># 内核的页面大小</span><br><span class="line"># 需要从原生boot.img中提取</span><br><span class="line">BOARD_KERNEL_PAGESIZE := 4096</span><br><span class="line"></span><br><span class="line"># 需要传递给mkbootimg工具的额外参数</span><br><span class="line">BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000</span><br><span class="line"></span><br><span class="line"># 启动分区的大小</span><br><span class="line">BOARD_BOOTIMAGE_PARTITION_SIZE := ...</span><br><span class="line"></span><br><span class="line"># Recovery分区的大小</span><br><span class="line">BOARD_RECOVERYIMAGE_PARTITION_SIZE := ...</span><br><span class="line"></span><br><span class="line"># 一些特殊的设备需要用专门的mkbootimg工具来生成启动映像（如瑞芯微）</span><br><span class="line"># 在这里指定该工具的路径</span><br><span class="line"># 不再适用于Android 8.0及以上版本</span><br><span class="line">BOARD_CUSTOM_MKBOOTIMG := ...</span><br><span class="line"></span><br><span class="line"># 对于一些格式特殊的启动镜像，用户可以自己编写Makefile</span><br><span class="line"># 在这里指定自定义的Makefile文件路径</span><br><span class="line"># 不再适用于Android 8.0及以上版本</span><br><span class="line">BOARD_CUSTOM_BOOTIMG_MK := ...</span><br></pre></td></tr></table></figure>
+
+<h6 id="内核编译参数"><a href="#内核编译参数" class="headerlink" title="内核编译参数"></a>内核编译参数</h6><p>如果有可编译的内核源码，则可使用以下参数，然后在omni.dependencies中加入kernel source repository。这种方法编译出来的recovery将可用于各个版本的系统。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 指定编译内核使用的配置文件</span><br><span class="line"># 配置文件位于内核源码arch/&lt;系统平台&gt;/configs中</span><br><span class="line"># TARGET_KERNEL_CONFIG := [kernel名]</span><br><span class="line"># </span><br><span class="line"># 指定内核源码所在的目录</span><br><span class="line"># TARGET_KERNEL_SOURCE := kernel/[厂商]/[设备]</span><br><span class="line"></span><br><span class="line"># 指定内核映像名，Android编译系统根据它来查找内核映像</span><br><span class="line"># 编译而成的内核映像位于内核源码arch/&lt;系统平台&gt;/boot中</span><br><span class="line"># ARM平台为zImage，x86平台为bzImage，采用U-Boot的平台（如NXP、树莓派）为uImage</span><br><span class="line"># BOARD_KERNEL_IMAGE_NAME := ...</span><br><span class="line"># </span><br><span class="line"># TARGET_KERNEL_ARCH := ...</span><br></pre></td></tr></table></figure>
+
+<p>如果使用预编译好的内核，如从能正常运行的boot.img与recovery.img中提取出来的内核，则使用以下参数。因为已编译的内核映像无法修改，因此这种方法编译出来的recovery只能适用于特定版本的系统。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># TARGET_KERNEL_CONFIG := ze520kl-userdebug_defconfig</span><br><span class="line"># 指定预编译内核的路径</span><br><span class="line">TARGET_PREBUILT_KERNEL := device/asus/Z01G/kernel</span><br><span class="line"># 指定用于Recovery的预编译内核路径</span><br><span class="line">TARGET_PREBUILT_RECOVERY_KERNEL := ...</span><br></pre></td></tr></table></figure>
+
+<p>其它可能用到的参数如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 指定用于编译内核的交叉工具链</span><br><span class="line"># 有些设备使用Android源码自带的编译器编译的内核无法启动</span><br><span class="line"># 必须使用专用或旧版本的编译器</span><br><span class="line"># KERNEL_TOOLCHAIN := ...</span><br><span class="line"># </span><br><span class="line"># 与KERNEL_TOOLCHAIN配合使用，指定交叉工具链的前缀</span><br><span class="line"># TARGET_KERNEL_CROSS_COMPILE_PREFIX := ...</span><br></pre></td></tr></table></figure>
+
+<h6 id="Recovery参数"><a href="#Recovery参数" class="headerlink" title="Recovery参数"></a>Recovery参数</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"># 指定Recovery显示的像素格式</span><br><span class="line"># 不同的设备有不同的像素格式，常见的有RGB_8888、RGB_565等</span><br><span class="line"># 设置不当会引起花屏、黑屏等故障</span><br><span class="line">TARGET_RECOVERY_PIXEL_FORMAT := ...</span><br><span class="line"></span><br><span class="line"># 指定Recovery分区表信息文件（fstab）的路径</span><br><span class="line"># 该文件记载了可供挂载的分区信息</span><br><span class="line">TARGET_RECOVERY_FSTAB := ...</span><br><span class="line"></span><br><span class="line"># 启用滑动操作，一般启用</span><br><span class="line"># 在非触屏Recovery中可以允许用户上下滑动屏幕来移动高亮选项</span><br><span class="line">BOARD_RECOVERY_SWIPE := ...</span><br><span class="line"></span><br><span class="line"># 指定设备的分辨率</span><br><span class="line">DEVICE_RESOLUTION := ...</span><br><span class="line"></span><br><span class="line"># Recovery图形显示时使用行距</span><br><span class="line"># 设置不当会导致Recovery花屏</span><br><span class="line">RECOVERY_GRAPHICS_USE_LINELENGTH := ...</span><br><span class="line"></span><br><span class="line"># 设置设备是否有内置SD卡</span><br><span class="line"># 现阶段的新设备均拥有至少8GB的eMMC存储，都将内置存储的/data/media/0划为内置SD卡</span><br><span class="line">BOARD_HAS_SDCARD_INTERNAL := ...</span><br><span class="line"></span><br><span class="line"># 在Recovery中，确定SD卡位于data分区</span><br><span class="line"># 现阶段的新设备都将内置存储的/data/media/0划为内置SD卡</span><br><span class="line"># 与上面的BOARD_HAS_SDCARD_INTERNAL呼应</span><br><span class="line">RECOVERY_SDCARD_ON_DATA := ...</span><br><span class="line"></span><br><span class="line"># 指定init.rc路径</span><br><span class="line"># init.rc是Android初始化程序init最主要的脚本，起到main()函数的作用</span><br><span class="line"># 该选项允许用户编写自己的init.rc，以支持各种设备平台</span><br><span class="line"># 仅适用于AOSP官方Recovery，以及Android 6.0之前的旧版本Recovery（如TWRP 2.x、ClockworkMod）</span><br><span class="line"># 新版本的TWRP（≥3.0）会直接忽略该选项，只使用它提供的init.rc</span><br><span class="line">TARGET_RECOVERY_INITRC := ...</span><br></pre></td></tr></table></figure>
+
+<h6 id="TWRP专用参数"><a href="#TWRP专用参数" class="headerlink" title="TWRP专用参数"></a>TWRP专用参数</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"># 指定TWRP的主题。不同的主题决定TWRP显示的不同样式，包括分辨率、屏幕方向等</span><br><span class="line"># 默认可选的主题有：portrait_hdpi、portrait_mdpi、landscape_hdpi、landscape_mdpi、watch_mdpi</span><br><span class="line"># 必须设置，否则编译过程中TWRP的编译规则会报错</span><br><span class="line">TW_THEME := ...</span><br><span class="line"></span><br><span class="line"># 指定电池路径，TWRP访问它以显示电池电量</span><br><span class="line"># 电池路径为内核系统目录/sys中电池设备所在的路径，</span><br><span class="line"># 如华为P6的路径是/sys/devices/platform/bq_bci_battery.1/power_supply/Battery</span><br><span class="line">TW_CUSTOM_BATTERY_PATH := ...</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 指定亮度路径，TWRP编辑它以更改屏幕亮度</span><br><span class="line"># 亮度路径为内核系统目录/sys中屏幕调节文件所在的路径</span><br><span class="line"># 如华为P6的路径是/sys/devices/platform/k3_fb.1/leds/lcd_backlight0/brightness</span><br><span class="line">TW_BRIGHTNESS_PATH := ...</span><br><span class="line"></span><br><span class="line"># 指定默认亮度</span><br><span class="line"># 取值范围为[0, 255]</span><br><span class="line">TW_DEFAULT_BRIGHTNESS := ...</span><br><span class="line"></span><br><span class="line"># 指定最大亮度</span><br><span class="line"># 取值范围为[0, 255]</span><br><span class="line">TW_MAX_BRIGHTNESS := ...</span><br><span class="line"></span><br><span class="line"># 可能仅适用于2.x版本，在3.2.3-0版本中已经失效</span><br><span class="line">TW_FLASH_FROM_STORAGE := ...</span><br><span class="line"></span><br><span class="line"># 指定外部存储器的挂载路径</span><br><span class="line">TW_EXTERNAL_STORAGE_PATH := ...</span><br><span class="line"></span><br><span class="line"># 指定外部存储器的挂载点</span><br><span class="line">TW_EXTERNAL_STORAGE_MOUNT_POINT := ...</span><br><span class="line"></span><br><span class="line"># 指定是否将默认存储器设为外置存储</span><br><span class="line"># 在3.2.3-0版本中已经失效</span><br><span class="line">TW_DEFAULT_EXTERNAL_STORAGE := ...</span><br><span class="line"></span><br><span class="line"># 指定是否不包含SuperSU</span><br><span class="line"># 包含了SuperSU的TWRP会在每次重启时提示用户Root手机</span><br><span class="line">TW_EXCLUDE_SUPERSU := ...</span><br><span class="line"></span><br><span class="line"># 指定是否包含NTFS-3G模块，以支持NTFS分区</span><br><span class="line">TW_INCLUDE_NTFS_3G := ...</span><br><span class="line"></span><br><span class="line"># 指定是否忽略从Bootloader传递而来的清除data分区的指令</span><br><span class="line"># misc分区存放了Bootloader传递给启动映像（boot或recovery）的指令，可以控制它们启动的行为</span><br><span class="line">TW_IGNORE_MISC_WIPE_DATA := ...</span><br><span class="line"></span><br><span class="line"># 指定是否增加额外的语言，包括中文、日本语等</span><br><span class="line"># 默认情况下TWRP只会包含英语与若干欧洲语言（如德语、法语、俄语、丹麦语等）</span><br><span class="line">TW_EXTRA_LANGUAGES := ...</span><br></pre></td></tr></table></figure>
+
+<h6 id="加密相关参数"><a href="#加密相关参数" class="headerlink" title="加密相关参数"></a>加密相关参数</h6><p>data分区通常会加密，若TWRP没有包含相关解密工具，将无法备份或root该分区，但可以格式化。对于Qualcomm平台，加解密通过qseecomd完成。因此需要另外独立出一个目录，让TWRP编译时可以将内部&#x2F;system&#x2F;bin&#x2F;linker64的链接改为&#x2F;sbin&#x2F;linker64，从而使工具在没有挂载&#x2F;system时也能运行。</p>
+<p>加解密的流程由init.recovery.qcom_decrypt.rc控制，基本上不用修改，会由init.recovery.qcom.rc导入。本例所用的init.recovery.qcom.rc可以只留下第一行import，其余的是载入手机专用exfat kernel module与让TWRP可以刷ASUS原厂ROM的hack。</p>
+<p>会用到的so动态库则放在root&#x2F;vendor&#x2F;lib64目录。root&#x2F;vendor&#x2F;lib64&#x2F;hw目录里有一个keystore.msm8998.so，中间的msm8998即为TARGET_BOARD_PLATFORM，需要按照机型进行修改。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 指定TWRP是否包含加密组件，并启用加密解密功能</span><br><span class="line">TW_INCLUDE_CRYPTO := ...</span><br><span class="line"></span><br><span class="line"># 指定设备是否包含硬件加密功能</span><br><span class="line"># 现阶段启用加密的设备，一般都是硬件加密</span><br><span class="line">TARGET_HW_DISK_ENCRYPTION := ...</span><br><span class="line"></span><br><span class="line"># 对于高通方案，指定在Recovery启动时是否等待高通加密服务程序qseecomd完成解密</span><br><span class="line"># 必须开启，否则TWRP的解密功能形同虚设</span><br><span class="line">TARGET_KEYMASTER_WAIT_FOR_QSEE := ...</span><br></pre></td></tr></table></figure>
+
+<h6 id="调试相关参数"><a href="#调试相关参数" class="headerlink" title="调试相关参数"></a>调试相关参数</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 指定是否在TWRP中包含logcat</span><br><span class="line">TWRP_INCLUDE_LOGCAT := ...</span><br><span class="line"></span><br><span class="line"># 指定是否在TWRP中启用日志服务logd</span><br><span class="line">TARGET_USES_LOGD := ...</span><br></pre></td></tr></table></figure>
+
+<h3 id="编译出包"><a href="#编译出包" class="headerlink" title="编译出包"></a>编译出包</h3><h4 id="通过Github-Actions"><a href="#通过Github-Actions" class="headerlink" title="通过Github Actions"></a>通过Github Actions</h4><p>在Github上新建仓库，将设备树的内容上传，示例如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/guanpeiheng1/TWRP_device_samsung_j3300</span><br></pre></td></tr></table></figure>
+
+<p>Fork以下仓库，然后点击Actions-Make Recovery-Run Workflow。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/azwhikaru/Action-Recovery-builder</span><br></pre></td></tr></table></figure>
+
+<p>LIBRARY_NAME一般无需修改。LIBRARY_URL根据需要编译的包类型修改，列表如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># TWRP</span><br><span class="line">https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git</span><br><span class="line"></span><br><span class="line"># OFRP</span><br><span class="line">https://gitlab.com/OrangeFox/Manifest.git</span><br><span class="line"></span><br><span class="line"># SHRP</span><br><span class="line">https://github.com/SHRP/platform_manifest_twrp_omni.git</span><br></pre></td></tr></table></figure>
+
+<p>LIBRARY_BRANCH需要跟Android版本匹配。如编译TWRP时，若Android版本为7.1，则需要选择的源码分支为twrp-7.1。选择错误的源码分支会导致无法启动到recovery。</p>
+<p>DEVICE_URL和DEVICE_BRANCH为刚才上传的设备树仓库地址及分支，DEVICE_PATH为<code>device/[厂商名]/[设备名]</code>，DEVICE_NAME为设备名。填写完成后运行，运行结束后即可在Release获取编译好的包。</p>
+<h4 id="通过源码"><a href="#通过源码" class="headerlink" title="通过源码"></a>通过源码</h4><p>以下均在Linux环境下进行。</p>
+<h5 id="TWRP-1"><a href="#TWRP-1" class="headerlink" title="TWRP"></a>TWRP</h5><p>打开终端并输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># 安装必要依赖</span><br><span class="line">sudo apt install git-core gnupg flex bison gperf \</span><br><span class="line">zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 \</span><br><span class="line">lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache \</span><br><span class="line">libgl1-mesa-dev libxml2-utils xsltproc unzip</span><br><span class="line"></span><br><span class="line"># 安装OpenJDK</span><br><span class="line">sudo apt install openjdk-8-jdk</span><br><span class="line"></span><br><span class="line"># 安装编译套件build-essential</span><br><span class="line">sudo apt install build-essential</span><br><span class="line"># 若以上命令出错则使用以下命令</span><br><span class="line">sudo apt install gcc g++ make</span><br><span class="line"></span><br><span class="line"># 安装python</span><br><span class="line"># 缺少python会导致repo init失败</span><br><span class="line">sudo apt install python</span><br></pre></td></tr></table></figure>
+
+<p>打开<code>~/.bashrc</code>，在文件尾部加入以下语句以开启ccache，保存后重启终端。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 启用ccache</span><br><span class="line">export USE_CCACHE=1</span><br></pre></td></tr></table></figure>
+
+<p>开始时可先使用minimal-manifest-twrp，该仓库为编译TWRP所需要的最小单位。输入以下命令以拉取代码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 下载repo工具</span><br><span class="line">sudo curl https://storage.googleapis.com/git-repo-downloads/repo &gt; /usr/bin/repo</span><br><span class="line">sudo chmod +x /usr/bin/repo</span><br><span class="line"></span><br><span class="line"># 建立文件夹用来存放代码树</span><br><span class="line">mkdir omni8_minimal</span><br><span class="line">cd omni8_minimal</span><br><span class="line"></span><br><span class="line"># 初始化源码仓库</span><br><span class="line"># 可把8.1改为需要下载的Android版本号，支持4.4-9.0</span><br><span class="line">repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-8.1</span><br><span class="line"></span><br><span class="line"># 开始同步</span><br><span class="line">repo sync -f --force-sync</span><br></pre></td></tr></table></figure>
+
+<p>建议拉取代码前先配置Github的SSH密钥，并输入以下命令配置以免输密码。配置完成后pull一次并输入密码，以后便不需要再输入。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global credential.helper store</span><br></pre></td></tr></table></figure>
+
+<p>注意拉取代码需要设置为全局翻墙，图形工具可使用Clash for Windows。注意需要在<code>~/.bashrc</code>写入以下内容后重启终端，否则可能会出现curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to android.googlesource.com:443错误。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Clash for Windows的默认代理端口为7890</span><br><span class="line"># 按照实际情况修改</span><br><span class="line">ALL_PROXY=127.0.0.1:7890</span><br></pre></td></tr></table></figure>
+
+<p>同时需要在hosts文件添加规则。输入以下命令打开hosts文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit /etc/hosts</span><br></pre></td></tr></table></figure>
+
+<p>添加以下规则。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[IP地址] android.googlesource.com</span><br><span class="line">[IP地址] android.googlesource.com</span><br><span class="line">[IP地址] storage.googleapis.com</span><br></pre></td></tr></table></figure>
+
+<p>IP可在以下网站找到。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://check-host.net/ip-info?host=android.googlesource.com</span><br></pre></td></tr></table></figure>
+
+<p>建议设置Github代理，以排除可能错误。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy &#x27;socks5://127.0.0.1:7890&#x27;</span><br><span class="line">git config --global https.proxy &#x27;socks5://127.0.0.1:7890&#x27;</span><br></pre></td></tr></table></figure>
+
+<details>
+<summary>【进阶】不翻墙的其它方法</summary>
+
+<p>不建议，拉取过程中仍可能出现gnutls_handshake() failed: Error in the pull function错误，此时翻墙是最快捷的方法。</p>
+<p>在终端输入以下命令打开repo工具的配置文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit /usr/bin/repo</span><br></pre></td></tr></table></figure>
+
+<p>然后按照以下内容修改。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># REPO_URL = os.environ.get(&#x27;REPO_URL&#x27;, None)</span><br><span class="line">REPO_URL = &#x27;https://gerrit-googlesource.proxy.ustclug.org/git-repo&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>修改后保存，然后输入以下命令关闭git证书认证。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.sslverify false</span><br></pre></td></tr></table></figure>
+
+<p>还需要修复连接不上Github的问题。输入以下命令打开hosts文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit /etc/hosts</span><br></pre></td></tr></table></figure>
+
+<p>在hosts文件中添加Github网址和IP的对应规则，可直接使用以下文件的内容。添加后保存即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/ineo6/hosts/hosts</span><br></pre></td></tr></table></figure>
+</details>
+
+<p>将刚才设备树的文件复制到对应位置，然后通过以下命令执行编译。编译而成的Recovery位于<code>out/target/product/[设备名]/recovery.img</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">source build/envsetup.sh</span><br><span class="line">lunch</span><br><span class="line">make recoveryimage</span><br></pre></td></tr></table></figure>
+
+<p>编译完成后，建议在OmniROM环境下再次编译，但拉取android-9.0分支代码时提示有库不存在。可参考以下链接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># TWRP</span><br><span class="line">https://forum.xda-developers.com/t/dev-how-to-compile-twrp-touch-recovery.1943625/</span><br><span class="line">https://zhuanlan.zhihu.com/p/292939576</span><br><span class="line">https://www.cnblogs.com/iJessie/p/6522748.html</span><br><span class="line">https://cofface.com/archives/1730.html</span><br><span class="line">https://baolong24.top/2020/12/03/Razer_Phone_TWRP/</span><br><span class="line"></span><br><span class="line"># SHRP</span><br><span class="line">https://forum.xda-developers.com/t/recovery-official-sky-hawk-recovery-project-v3-1-05-04-2021.4258111/</span><br></pre></td></tr></table></figure>
+
+<h3 id="调试查错"><a href="#调试查错" class="headerlink" title="调试查错"></a>调试查错</h3><h4 id="提取日志"><a href="#提取日志" class="headerlink" title="提取日志"></a>提取日志</h4><p>若recovery不能正常启动，可查看内核日志。高通和瑞芯微（如RK3188）的内核日志存储在&#x2F;proc&#x2F;last_kmsg，海思早期芯片（如K3V2）存储在内核参数CONFIG_APANIC_PLABEL所指定的分区中，一般是splash。</p>
+<p>但由于有些故障发生在Android初始化程序init的运行过程中，而在使用调试方式构建的ROM中，若遇到panic则自动重启进入Bootloader，阻碍内核转存日志，因此需要禁用此功能。</p>
+<p>将以下代码保存为system&#x2F;core&#x2F;init&#x2F;no_reboot_into_bootloader.diff。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">diff --git a/init/Android.bp b/init/Android.bp</span><br><span class="line">index 45cf327f8..8a16fb2d2 100644</span><br><span class="line">--- a/init/Android.bp</span><br><span class="line">+++ b/init/Android.bp</span><br><span class="line">@@ -14,6 +14,9 @@</span><br><span class="line"> // limitations under the License.</span><br><span class="line"> //</span><br><span class="line"> </span><br><span class="line">+// AnClark modify: I want to read logs. If handles panic as rebooting into bootloader, I won&#x27;t get any logs!</span><br><span class="line">+// Force setting DREBOOT_BOOTLOADER_ON_PANIC=0 on product_variables. </span><br><span class="line">+</span><br><span class="line"> cc_defaults &#123;</span><br><span class="line">     name: &quot;init_defaults&quot;,</span><br><span class="line">     cpp_std: &quot;experimental&quot;,</span><br><span class="line">@@ -41,7 +44,7 @@ cc_defaults &#123;</span><br><span class="line">                 &quot;-UALLOW_PERMISSIVE_SELINUX&quot;,</span><br><span class="line">                 &quot;-DALLOW_PERMISSIVE_SELINUX=1&quot;,</span><br><span class="line">                 &quot;-UREBOOT_BOOTLOADER_ON_PANIC&quot;,</span><br><span class="line">-                &quot;-DREBOOT_BOOTLOADER_ON_PANIC=1&quot;,</span><br><span class="line">+                &quot;-DREBOOT_BOOTLOADER_ON_PANIC=0&quot;,</span><br><span class="line">                 &quot;-UWORLD_WRITABLE_KMSG&quot;,</span><br><span class="line">                 &quot;-DWORLD_WRITABLE_KMSG=1&quot;,</span><br><span class="line">                 &quot;-UDUMP_ON_UMOUNT_FAILURE&quot;,</span><br><span class="line">diff --git a/init/Android.mk b/init/Android.mk</span><br><span class="line">index f1fe5168b..d28b4e489 100644</span><br><span class="line">--- a/init/Android.mk</span><br><span class="line">+++ b/init/Android.mk</span><br><span class="line">@@ -5,10 +5,12 @@ LOCAL_PATH:= $(call my-dir)</span><br><span class="line"> # --</span><br><span class="line"> </span><br><span class="line"> ifneq (,$(filter userdebug eng,$(TARGET_BUILD_VARIANT)))</span><br><span class="line">+# AnClark modify: I want to read logs. If handles panic as rebooting into bootloader, I won&#x27;t get any logs!</span><br><span class="line">+# Force setting DREBOOT_BOOTLOADER_ON_PANIC=0 on product_variables. </span><br><span class="line"> init_options += \</span><br><span class="line">     -DALLOW_LOCAL_PROP_OVERRIDE=1 \</span><br><span class="line">     -DALLOW_PERMISSIVE_SELINUX=1 \</span><br><span class="line">-    -DREBOOT_BOOTLOADER_ON_PANIC=1 \</span><br><span class="line">+    -DREBOOT_BOOTLOADER_ON_PANIC=0 \</span><br><span class="line">     -DDUMP_ON_UMOUNT_FAILURE=1</span><br><span class="line"> else</span><br><span class="line"> init_options += \</span><br><span class="line">diff --git a/init/util.cpp b/init/util.cpp</span><br><span class="line">index fdcb22d1c..a468082af 100644</span><br><span class="line">--- a/init/util.cpp</span><br><span class="line">+++ b/init/util.cpp</span><br><span class="line">@@ -370,11 +370,19 @@ bool expand_props(const std::string&amp; src, std::string* dst) &#123;</span><br><span class="line">     return true;</span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line">+// AnClark MODIFY: Use abort() instead of rebooting into BL to trigger panic.</span><br><span class="line">+/**</span><br><span class="line"> void panic() &#123;</span><br><span class="line">     LOG(ERROR) &lt;&lt; &quot;panic: rebooting to bootloader&quot;;</span><br><span class="line">     // Do not queue &quot;shutdown&quot; trigger since we want to shutdown immediately</span><br><span class="line">     DoReboot(ANDROID_RB_RESTART2, &quot;reboot&quot;, &quot;bootloader&quot;, false);</span><br><span class="line"> &#125;</span><br><span class="line">+**/</span><br><span class="line">+</span><br><span class="line">+void panic() &#123;</span><br><span class="line">+   LOG(ERROR) &lt;&lt; &quot;android::init::panic() invoked. Abort init to trigger kernel panic!&quot;;</span><br><span class="line">+   abort();</span><br><span class="line">+&#125;</span><br><span class="line"> </span><br><span class="line"> static std::string init_android_dt_dir() &#123;</span><br><span class="line">     // Use the standard procfs-based path by default</span><br></pre></td></tr></table></figure>
+
+<p>打开init所在的目录system&#x2F;core&#x2F;init，运行以下命令以应用补丁即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">patch -p2 &lt; no_reboot_into_bootloader.diff</span><br></pre></td></tr></table></figure>
+
+<h4 id="功能测试"><a href="#功能测试" class="headerlink" title="功能测试"></a>功能测试</h4><p>可检查以下项目是否正常。</p>
+<h5 id="挂载"><a href="#挂载" class="headerlink" title="挂载"></a>挂载</h5><p>进入主菜单的Mount，点击每个分区的选项，检查是否能够正常挂载。</p>
+<h5 id="解密"><a href="#解密" class="headerlink" title="解密"></a>解密</h5><p>对于高通设备，观察解密是否正常的最直接方法，是看日志中是否有解密失败（decryption failed）的提示，以及“Mount”菜单中的data分区是否无法挂载。</p>
+<h5 id="ADB"><a href="#ADB" class="headerlink" title="ADB"></a>ADB</h5><p>连接电脑，运行adb devices，是否能检测到设备处在Recovery状态。</p>
+<p>运行adb shell是否能进入设备上的终端，并拥有Root权限。</p>
+<h5 id="MTP"><a href="#MTP" class="headerlink" title="MTP"></a>MTP</h5><p>连接电脑，检查是否出现MTP设备。如未出现，在Mount中点击Enable MTP。</p>
+<h5 id="OTG"><a href="#OTG" class="headerlink" title="OTG"></a>OTG</h5><p>2014年起的大部分主流机型都支持OTG。插入一根OTG数据线，在TWRP终端中运行lsusb，看是否检测到一个USB设备。</p>
+<p>再插入一个新设备，看lsusb的输出里是否多出了另外一个设备。如果插入的是U盘，还可检查&#x2F;dev&#x2F;block&#x2F;下是否多出了设备sdx（x为任意一个小写英文字母）。</p>
+<h5 id="备份-x2F-恢复系统"><a href="#备份-x2F-恢复系统" class="headerlink" title="备份&#x2F;恢复系统"></a>备份&#x2F;恢复系统</h5><p>测试一下系统是否能正常备份和恢复，检查可选的备份分区是否包含必要的分区（system、data、boot、recovery）。</p>
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><h4 id="出现Recovery-is-not-SEANDROID-enforcing-x2F-set-warrenty-bit-recovery"><a href="#出现Recovery-is-not-SEANDROID-enforcing-x2F-set-warrenty-bit-recovery" class="headerlink" title="出现Recovery is not SEANDROID enforcing&#x2F;set warrenty bit: recovery"></a>出现Recovery is not SEANDROID enforcing&#x2F;set warrenty bit: recovery</h4><p>若出现这几条消息，且设备陷入重启循环，则说明刷入的recovery与本机不匹配，拔电池或等待手机电量完全耗尽后进入下载模式并重刷即可。</p>
+<p>若设备没有重启，由于从5.1.1版本开始的系统写保护&#x2F;安全策略，出现这几条消息是正常的。Recovery is not SEANDROID enforcing来自TWRP，表示selinux处于所需状态。内核必须允许selinux宽容模式（permissive）而非强制模式（enforcing），以便授予TWRP root权限。Set Warranty Bit: recovery来自Bootloader，表示Bootloader已解锁，且设备处于第三方recovery模式。</p>
+<p>若出现这几条消息并卡住，则说明刷入的recovery不匹配，可能是编译第三方recovery时选择的源码树不正确，重新选择与系统版本对应的源码树即可。</p>
+<h1 id="Root"><a href="#Root" class="headerlink" title="Root"></a>Root</h1><p>Root后将无法通过OTA升级的方式升级系统，只能通过线刷的方式。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="Magisk"><a href="#Magisk" class="headerlink" title="Magisk"></a>Magisk</h3><p>从以下链接下载Magisk Manager。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/topjohnwu/Magisk</span><br></pre></td></tr></table></figure>
+
+<p>打开APP，如果一直在更新，则需要先翻墙。</p>
+<p>查看设备相关信息，一般而言Ramdisk为Yes，较低版本的系统上A&#x2F;B为No，SAR为No。这种情况下，可从官方ROM包中提取boot.img，以三星为例，用压缩软件打开AP包即可看到。将提取出来的包复制到手机根目录。然后APP点击安装，选择刚才复制进去的包，APP将完成修补并输出修补好的boot.img。将输出的修补包改名为boot.img，在普通设备上即可通过ADB工具包的fastboot命令刷入，对于有TWRP的也可以在recovery模式下刷入。</p>
+<p>对于三星，需要将boot.img压缩为tar，然后用Odin刷入，注意需要将ROM的所有部分都刷入，仅将AP包替换为Magisk修补过的包。</p>
+<p>刷入后重启即完成，若Magisk Manager消失则重新下载即可。</p>
+<p>若SAR（System-as-root）为Yes，其余一致，这种情况一般出现在三星Android 9.0及以上系统，修补时需要将整个AP包传入而不是只取boot.img，用Odin刷入时需要将ROM的所有部分都刷入，仅将AP包替换为Magisk修补过的包。注意，将修补的AP包复制到电脑时，手机与电脑的连接方式不要使用MTP，因为MTP会损坏大文件。</p>
+<p>若Ramdisk为No，其余一致，Magisk只能劫持recovery分区，此时则需要修补recovery.img，步骤与上面基本一致，注意修补时需要确保Recovery Mode为勾选状态。这种修补下正常开机Magisk将不运行，需要按下进入恢复模式的按键组合，等待设备屏幕亮起后松开按键，此时Magisk将正常运行。若需要进入到真正的恢复模式，需要在屏幕亮起时长按音量上键。这种情况下不能用第三方recovery安装或升级Magisk。</p>
+<h3 id="CF-Auto-Root"><a href="#CF-Auto-Root" class="headerlink" title="CF-Auto-Root"></a>CF-Auto-Root</h3><p>不推荐，在Samsung J3300下实测失败。</p>
+<p>下载CF包，然后通过线刷工具刷入即可。对于三星设备为刷入AP包。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://autoroot.chainfire.eu/</span><br><span class="line">https://desktop.firmware.mobi/</span><br></pre></td></tr></table></figure>
+
+<h3 id="PurpleDrake"><a href="#PurpleDrake" class="headerlink" title="PurpleDrake"></a>PurpleDrake</h3><p>可用于LG G3。</p>
+<p>需要先将手机降级至KitKat。下载以下包，将手机连接到电脑，然后按照平台执行即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://forum.xda-developers.com/t/root-root-your-lg-g3-easily-with-purpledrake-lite-osx-linux-windows.2821000/</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="软件与框架"><a href="#软件与框架" class="headerlink" title="软件与框架"></a>软件与框架</h2><h3 id="Busybox"><a href="#Busybox" class="headerlink" title="Busybox"></a>Busybox</h3><p>提供Android上缺失的Linux命令行实现，如dirname等。Root后通过以下APP安装即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/meefik/busybox</span><br></pre></td></tr></table></figure>
+
+<h3 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h3><p>可用Root Explorer、MT文件管理器。</p>
+<h3 id="系统工具"><a href="#系统工具" class="headerlink" title="系统工具"></a>系统工具</h3><h4 id="Scene"><a href="#Scene" class="headerlink" title="Scene"></a>Scene</h4><p>用于锁CPU频率、超频等。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.coolapk.com/apk/com.omarea.vtools</span><br></pre></td></tr></table></figure>
+
+<h4 id="澜系统工具箱"><a href="#澜系统工具箱" class="headerlink" title="澜系统工具箱"></a>澜系统工具箱</h4><p>实现删温控等功能。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.coolapk.com/apk/xzr.La.systemtoolbox</span><br></pre></td></tr></table></figure>
+
+<h4 id="Devcheck-Pro"><a href="#Devcheck-Pro" class="headerlink" title="Devcheck Pro"></a>Devcheck Pro</h4><p>查看机器硬件配置。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.yxssp.com/23173.html</span><br></pre></td></tr></table></figure>
+
+<h4 id="Termux"><a href="#Termux" class="headerlink" title="Termux"></a>Termux</h4><p>手机上使用终端。可以没有Root权限。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://f-droid.org/zh_Hans/packages/com.termux/</span><br></pre></td></tr></table></figure>
+
+<h3 id="游戏修改"><a href="#游戏修改" class="headerlink" title="游戏修改"></a>游戏修改</h3><h4 id="GameGuardian"><a href="#GameGuardian" class="headerlink" title="GameGuardian"></a>GameGuardian</h4><p>游戏修改器。</p>
+<h1 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h1><h2 id="三星ROM"><a href="#三星ROM" class="headerlink" title="三星ROM"></a>三星ROM</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>可在以下网站下载固件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 可查看和下载固件</span><br><span class="line">https://galaxyfirmware.com/</span><br><span class="line">https://romsamsung.com/</span><br><span class="line"></span><br><span class="line"># 可查看，下载固件需要注册或会员</span><br><span class="line">https://updato.com/</span><br><span class="line">https://www.sammobile.com/firmwares/</span><br><span class="line">https://www.sxrom.com/</span><br><span class="line"></span><br><span class="line"># 下载脚本</span><br><span class="line">https://github.com/nlscc/samloader</span><br><span class="line">https://github.com/jesec/samfirm.js</span><br><span class="line">https://github.com/SlackingVeteran/frija</span><br></pre></td></tr></table></figure>
+
+<p>以下适用于J3300。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 7.1.1版本</span><br><span class="line"># 实测可用，推荐同版本系统下选比较新的包，成功率较高</span><br><span class="line">https://samfw.com/firmware/SM-J3300/CHC/J3300ZCU2ARH1</span><br><span class="line"></span><br><span class="line"># 全版本</span><br><span class="line">https://nerdschalk.com/samsung-galaxy-j3-firmware/</span><br><span class="line">https://samsungfirmware.net/samsung-galaxy-j3-pro-2017-sm-j3300-repair-firmware/</span><br></pre></td></tr></table></figure>
+
+<h3 id="刷入-1"><a href="#刷入-1" class="headerlink" title="刷入"></a>刷入</h3><p>三星需要专用的线刷工具。</p>
+<h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><p>对于Windows，需要使用Odin，下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://odindownload.com/</span><br><span class="line">https://samsungodin.com/download/</span><br><span class="line">https://www.osamsung.com/cn/</span><br></pre></td></tr></table></figure>
+
+<p>让手机进入下载模式，连接到电脑并打开Odin，依次选择ROM包中对应的组件即可。注意CSC应当选择HOME_CSC前缀的包。如果找不到手机，需要安装驱动。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 官方下载</span><br><span class="line">https://developer.samsung.com/android-usb-driver</span><br><span class="line"></span><br><span class="line"># 其它</span><br><span class="line">https://www.onlinedown.net/soft/392434.htm</span><br><span class="line">https://samsungusbdriver.com/</span><br></pre></td></tr></table></figure>
+
+<p>三星ROM各文件的含义如下。</p>
+<table>
+<thead>
+<tr>
+<th>文件前缀</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CP</td>
+<td>Core Processor，调制解调器</td>
+</tr>
+<tr>
+<td>AP</td>
+<td>Application Processor or PDA，包含boot.img、system.img、recovery.img、hboot.nb0、data.img、cache.img、radio.img等</td>
+</tr>
+<tr>
+<td>BL</td>
+<td>Bootloader</td>
+</tr>
+<tr>
+<td>PIT</td>
+<td>分区信息表，一般不需要</td>
+</tr>
+<tr>
+<td>CSC</td>
+<td>消费者软件定制，包含特定于该地区的软件包、运营商品牌和APN设置</td>
+</tr>
+</tbody></table>
+<details>
+<summary>【进阶】三星线刷包说明</summary>
+
+<p>每个包会写特定的部分，且为覆盖写。如果AP包中仅包含recovery.img，则刷入时只会更新Recovery分区。</p>
+<p>在刷第三方recovery时，可刷只包含recovery.img的tar格式的AP包，以仅更新Recovery分区。若Recovery分区损坏，可提取原版AP包的recovery.img，打包为tar后刷入即可，无需全量刷入。</p>
+<p>但刷入boot时建议要把其他部分也选上，防止只刷AP包导致Odin将data分区缩小。将AP包替换为仅包含要刷入的boot.img的tar包即可。</p>
+<p>Odin通过名称识别该包需要刷入的分区，因此tar包中需要刷入到boot分区的必须命名为boot.img，刷入到recovery分区的必须命名为recovery.img，否则刷入将出错。</p>
+</details>
+
+<h4 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h4><p>对于Mac，需使用Heimdall。下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://git.sr.ht/~grimler/Heimdall</span><br><span class="line">https://wiki.lineageos.org/devices/ks01lte/install/#preparing-for-installation</span><br><span class="line">https://blob.lineageos.org/downloads/heimdall/Heimdall-macOS-master-012220.dmg</span><br></pre></td></tr></table></figure>
+
+<p>使用示例如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">heimdall flash --VBMETA vbmeta.img --RECOVERY recovery.img --no-reboot</span><br></pre></td></tr></table></figure>
+
+<h3 id="参见问题"><a href="#参见问题" class="headerlink" title="参见问题"></a>参见问题</h3><h4 id="刷入时提示SW-REV-CHECK-FAIL"><a href="#刷入时提示SW-REV-CHECK-FAIL" class="headerlink" title="刷入时提示SW REV CHECK FAIL"></a>刷入时提示SW REV CHECK FAIL</h4><p>刷入版本低的ROM时会出现该错误。更新ROM时会同时更新Bootloader，更新的Bootloader不允许刷入旧的Bootloader。</p>
+<h2 id="氧OS"><a href="#氧OS" class="headerlink" title="氧OS"></a>氧OS</h2><p>适用于一加手机。</p>
+<h3 id="下载-1"><a href="#下载-1" class="headerlink" title="下载"></a>下载</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># OnePlus 7</span><br><span class="line"># 国行、印度和全球版本的OnePlus 7需要刷GM57AA（美版、印版）的氧OS</span><br><span class="line"># GM57BA（欧版）的由于欧洲运营商频段覆盖不同，基带存在差异</span><br><span class="line">https://forum.xda-developers.com/t/oneplus-7-rom-ota-oxygen-os-repo-of-oxygen-os-builds.3937152/</span><br></pre></td></tr></table></figure>
+
+<h3 id="刷入-2"><a href="#刷入-2" class="headerlink" title="刷入"></a>刷入</h3><p>刷入前需先下载好氧OS，并解锁Bootloader。</p>
+<p>到TWRP官网下载OnePlus 7的TWRP。在手机上进入设置-系统-开发者选项并启用高级重启后，长按电源键并选择Bootloader模式。在电脑终端使用以下指令以临时启动TWRP。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot boot [TWRP的img包路径]</span><br></pre></td></tr></table></figure>
+
+<p>正常情况下，手机会临时进入一次TWRP。在TWRP中刷入氧OS，注意刷完后先不要重启，将TWRP包导入手机存储，并在TWRP中刷入，使TWRP在手机中持久化。安装包会在AB两个分区中都安装一次TWRP，这样无论手机从哪个分区启动都可以进入TWRP。</p>
+<p>若未正常进入TWRP，由于氢氧OS可以无缝互刷但不能从高版本降级到低版本，若当前的氢OS并非最新，可直接将氧OS的固件导入手机存储中，直接在设置-系统-系统升级-右上角齿轮按钮-本地升级中选择氧OS固件以升级。</p>
+<p>若上述方法失败，可使用氢氧互刷工具，如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.oneplusbbs.com/thread-2805359-1.html</span><br></pre></td></tr></table></figure>
+
+<details>
+<summary>【进阶】</summary>
+如果希望下一次通过TWRP刷入ROM时要保留所有TWRP和Magisk，需要在刷入ROM之前尽量关闭所有Magisk 模块，将ROM、TWRP包和magisk安装包全部导入手机存储中，按顺序刷入后重启手机。
+
+<p>如果希望在系统内升级并保留TWRP和Magisk，需要将ROM、TWRP包和magisk安装包全部导入手机存储中，使用系统设置中的系统升级来升级系统后，在Magisk Manager的Modules页面，通过+按钮刷入TWRP包，然后点击Magisk旁边的Install-Install-Direct Install以及Install-Install-Install to Inactive Slot，重启手机。</p>
+</details>
+
+<h2 id="LineageOS"><a href="#LineageOS" class="headerlink" title="LineageOS"></a>LineageOS</h2><p>CyanogenMod的继承者。LineageOS可在旧款Android手机上流畅运行。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.lineageos.org/</span><br></pre></td></tr></table></figure>
+
+<p>LineageOS不带Google框架，需要自行下载，链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://opengapps.org/</span><br></pre></td></tr></table></figure>
+
+<h3 id="机型适配-1"><a href="#机型适配-1" class="headerlink" title="机型适配"></a>机型适配</h3><h4 id="基本知识-1"><a href="#基本知识-1" class="headerlink" title="基本知识"></a>基本知识</h4><p>自行编译ROM必须获得内核源码、设备树和供应商文件。</p>
+<p>其中内核源码kernel source需要厂商开源，如三星可在以下网站查找。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://opensource.samsung.com/main</span><br></pre></td></tr></table></figure>
+
+<p>设备树device tree示例如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://forum.xda-developers.com/t/guide-how-to-make-a-device-tree-for-your-phone.3698419/</span><br></pre></td></tr></table></figure>
+
+<p>供应商文件vendor files示例如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line"></span><br><span class="line">&lt;manifest&gt;</span><br><span class="line"></span><br><span class="line">    &lt;remote name=&quot;vendor&quot;</span><br><span class="line">            fetch=&quot;https://github.com&quot;</span><br><span class="line">            revision=&quot;master&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;remote name=&quot;device&quot;</span><br><span class="line">            fetch=&quot;https://github.com&quot;</span><br><span class="line">            revision=&quot;lineage-16.0&quot;/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;remote name=&quot;kernel&quot;</span><br><span class="line">            fetch=&quot;https://github.com&quot;</span><br><span class="line">            revision=&quot;nitrogen-p-oss&quot;/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!--Device Trees--&gt;</span><br><span class="line">    &lt;project path=&quot;device/xiaomi/platina&quot; name=&quot;nysascape/device_xiaomi_platina&quot; remote=&quot;device&quot; /&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;!--Kernel--&gt;</span><br><span class="line">    &lt;project path=&quot;kernel/xiaomi/platina&quot; name=&quot;MiCode/Xiaomi_Kernel_OpenSource&quot; remote=&quot;kernel&quot; /&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;!-- Vendor folders --&gt;</span><br><span class="line">    &lt;project path=&quot;vendor/xiaomi/platina&quot; name=&quot;nysascape/vendor_xiaomi_platina&quot; remote=&quot;vendor&quot; /&gt;</span><br><span class="line">&lt;/manifest&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h4><p>如果设备有官方维护，则直接运行以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brunch &lt;设备代号&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果设备没有官方维护，但已有非官方源码，可将非官方代码clone到本地，并放置到对应位置，一般为device(kernel, vendor)&#x2F;设备厂商名&#x2F;设备代号，再运行以上命令。</p>
+<p>如果没有官方维护及非官方源码，但有其它自定义ROM的源码，同理将代码clone到对应位置，在此基础上进行修改，再运行以上命令。修改方式可参照以下链接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/GuaiYiHu/android_device_xiaomi_clover-oss/commit/c9426d95559576e61f7544443a24df42786b7aab</span><br></pre></td></tr></table></figure>
+
+<p>参考教程如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">https://www.link-nemo.com/u/10156/post/260119</span><br><span class="line">https://www.jianshu.com/p/19cb9c08ee51</span><br><span class="line">https://android.stackexchange.com/questions/216435/how-to-build-lineageos-for-a-device-without-official-support</span><br><span class="line">https://forum.xda-developers.com/t/guide-build-lineageos-how-to-use-github.3551484/</span><br><span class="line">https://forum.xda-developers.com/t/guide-how-to-build-an-unsupported-rom-using-sources-from-other-roms.3844972/</span><br><span class="line">https://www.cnblogs.com/luoyesiqiu/p/10701419.html</span><br><span class="line">https://acytoo.com/ladder/build-lineageos-for-tab-s/</span><br><span class="line">https://mystery00.github.io/2017/04/23/%E7%BC%96%E8%AF%91LineageOS/</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="其它ROM"><a href="#其它ROM" class="headerlink" title="其它ROM"></a>其它ROM</h2><p>自定义ROM有LineageOS、pixel-experience、MoKee ROM、Havoc OS、Nitrogen-OS、OmniROM等。Samsung J3300均不支持这些自定义ROM。</p>
+<p>使用自定义ROM前一般均需对手机进行Root，解锁Bootloader，刷入TWRP。刷入自定义ROM前一般需要擦除数据，以TWRP为例，进入TWRP recovery后，选择Wipe-Advanced Wipe，勾选Dalvik&#x2F;ART Cache、Cache、Data、Internal Storage、System以完成擦除。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"># PixelExperience</span><br><span class="line">https://download.pixelexperience.org/</span><br><span class="line"></span><br><span class="line"># OmniROM</span><br><span class="line">https://omnirom.org/</span><br><span class="line"></span><br><span class="line"># Nitrogen OS</span><br><span class="line">https://theunlockr.com/rom/nitrogen-os-rom/</span><br><span class="line"></span><br><span class="line"># AOSPEXTENDED ROM</span><br><span class="line">https://www.aospextended.com/</span><br><span class="line"></span><br><span class="line"># dotOS</span><br><span class="line">https://droidontime.com/</span><br><span class="line"></span><br><span class="line"># Resurrection Remix OS</span><br><span class="line">https://resurrectionremix.com/</span><br><span class="line"></span><br><span class="line"># MoKee</span><br><span class="line">https://download.mokeedev.com/</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="ADB出现devices-offline的解决方法"><a href="#ADB出现devices-offline的解决方法" class="headerlink" title="ADB出现devices offline的解决方法"></a>ADB出现devices offline的解决方法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/qq_33924155/article/details/79153000</span><br></pre></td></tr></table></figure>
+
+<h2 id="Difference-between-Bootloader-Download-and-Recovery-mode"><a href="#Difference-between-Bootloader-Download-and-Recovery-mode" class="headerlink" title="Difference between Bootloader, Download and Recovery mode ?"></a>Difference between Bootloader, Download and Recovery mode ?</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://forum.xda-developers.com/t/difference-between-bootloader-download-and-recovery-mode.3661049/</span><br></pre></td></tr></table></figure>
+
+<h2 id="LG-G3-LineageOS-Tutorial"><a href="#LG-G3-LineageOS-Tutorial" class="headerlink" title="LG G3 LineageOS Tutorial"></a>LG G3 LineageOS Tutorial</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://linustechtips.com/topic/1058206-lg-g3-lineageos-tutorial/</span><br></pre></td></tr></table></figure>
+
+<h2 id="一加-OnePlus-7-刷入氧-OS、TWRP、Magisk-Root"><a href="#一加-OnePlus-7-刷入氧-OS、TWRP、Magisk-Root" class="headerlink" title="一加 OnePlus 7 刷入氧 OS、TWRP、Magisk (Root)"></a>一加 OnePlus 7 刷入氧 OS、TWRP、Magisk (Root)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.skk.moe/post/op7-oos-twrp-magisk/</span><br></pre></td></tr></table></figure>
+
+<h2 id="适用于任何机型的自编译-TWRP-Recovery-和生成设备树"><a href="#适用于任何机型的自编译-TWRP-Recovery-和生成设备树" class="headerlink" title="适用于任何机型的自编译 TWRP Recovery 和生成设备树"></a>适用于任何机型的自编译 TWRP Recovery 和生成设备树</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.bilibili.com/video/BV12P4y1t7ZZ/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Doc-fastboot-intro"><a href="#Doc-fastboot-intro" class="headerlink" title="Doc: fastboot intro"></a>Doc: fastboot intro</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://web.archive.org/web/20161224194012/https://wiki.cyanogenmod.org/w/Doc:_fastboot_intro#.3Cwaiting_for_device.3E_errors</span><br></pre></td></tr></table></figure>
+
+<h2 id="Samsung-tablet-root-process"><a href="#Samsung-tablet-root-process" class="headerlink" title="Samsung tablet root process"></a>Samsung tablet root process</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.jianshu.com/p/f4f62fd2c93f</span><br></pre></td></tr></table></figure>
+
+<h2 id="Recovery-is-not-Seandroid-Enforcing-Samsung-A5"><a href="#Recovery-is-not-Seandroid-Enforcing-Samsung-A5" class="headerlink" title="Recovery is not Seandroid Enforcing(Samsung A5)"></a>Recovery is not Seandroid Enforcing(Samsung A5)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://android.stackexchange.com/questions/159436/recovery-is-not-seandroid-enforcingsamsung-a5s</span><br></pre></td></tr></table></figure>
+
+<h2 id="Recovery-is-not-SEAndroid-enforcing"><a href="#Recovery-is-not-SEAndroid-enforcing" class="headerlink" title="Recovery is not SEAndroid enforcing."></a>Recovery is not SEAndroid enforcing.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://forum.xda-developers.com/t/recovery-is-not-seandroid-enforcing.3158482/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Magisk-Documentation-｜-Magisk"><a href="#Magisk-Documentation-｜-Magisk" class="headerlink" title="Magisk Documentation ｜ Magisk"></a>Magisk Documentation ｜ Magisk</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://topjohnwu.github.io/Magisk/</span><br></pre></td></tr></table></figure>
+
+<h2 id="三星手机获取-root-权限：使用-Magisk-Manager-为-Android-8-0-x2F-9-创建-root-文件"><a href="#三星手机获取-root-权限：使用-Magisk-Manager-为-Android-8-0-x2F-9-创建-root-文件" class="headerlink" title="三星手机获取 root 权限：使用 Magisk Manager 为 Android 8.0&#x2F;9 创建 root 文件"></a>三星手机获取 root 权限：使用 Magisk Manager 为 Android 8.0&#x2F;9 创建 root 文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.cnroms.com/samsung-root-with-magisk-manager.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="SELinux-宽容模式-permissive-强制模式-enforcing-关闭-disabled-几种模式之间的转换"><a href="#SELinux-宽容模式-permissive-强制模式-enforcing-关闭-disabled-几种模式之间的转换" class="headerlink" title="SELinux 宽容模式(permissive) 强制模式(enforcing) 关闭(disabled) 几种模式之间的转换"></a>SELinux 宽容模式(permissive) 强制模式(enforcing) 关闭(disabled) 几种模式之间的转换</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/tangsilian/article/details/80144112</span><br></pre></td></tr></table></figure>
+
+<h2 id="How-to-Root-Samsung-Galaxy-J3-2017-SM-J3300-Odin-Tool"><a href="#How-to-Root-Samsung-Galaxy-J3-2017-SM-J3300-Odin-Tool" class="headerlink" title="How to Root Samsung Galaxy J3-2017 SM-J3300 | Odin Tool"></a>How to Root Samsung Galaxy J3-2017 SM-J3300 | Odin Tool</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.rootdroids.com/how-to-root-samsung-galaxy-j3-2017-sm-j3300-odin-tool/</span><br></pre></td></tr></table></figure>
+
+<h2 id="如何讓-TWRP-正式支援你的裝置"><a href="#如何讓-TWRP-正式支援你的裝置" class="headerlink" title="如何讓 TWRP 正式支援你的裝置"></a>如何讓 TWRP 正式支援你的裝置</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://medium.com/@shakalaca/%E5%A6%82%E4%BD%95%E8%AE%93-twrp-%E6%AD%A3%E5%BC%8F%E6%94%AF%E6%8F%B4%E4%BD%A0%E7%9A%84%E8%A3%9D%E7%BD%AE-ba942c72dfa2</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用ROM的各大官网"><a href="#常用ROM的各大官网" class="headerlink" title="常用ROM的各大官网"></a>常用ROM的各大官网</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.jianshu.com/p/88066f6c12b3</span><br></pre></td></tr></table></figure>
+
+<h2 id="TWRP-Recovery-编译适配教程"><a href="#TWRP-Recovery-编译适配教程" class="headerlink" title="TWRP Recovery 编译适配教程"></a>TWRP Recovery 编译适配教程</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://www.twblogs.net/a/5be370f62b717720b51d82d1</span><br><span class="line">https://www.jianshu.com/p/912d61c4a184</span><br></pre></td></tr></table></figure>
+
+<h2 id="Odin-and-Heimdall-Free-Your-Samsung-Android"><a href="#Odin-and-Heimdall-Free-Your-Samsung-Android" class="headerlink" title="Odin and Heimdall: Free Your Samsung Android"></a>Odin and Heimdall: Free Your Samsung Android</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://wrily.foad.me.uk/odin-and-heimdall-free-your-samsung-android</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/iOS-Downgrade-Guide.html" rel="prev" title="iOS降级指南">
+      <i class="fa fa-chevron-left"></i> iOS降级指南
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/iOS-Network-Proxy-Usage.html" rel="next" title="iOS网络代理工具的使用">
+      iOS网络代理工具的使用 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TODOS"><span class="nav-text">TODOS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="nav-text">基本知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%81%A2%E5%A4%8D%E6%A8%A1%E5%BC%8F"><span class="nav-text">恢复模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E6%A8%A1%E5%BC%8F"><span class="nav-text">下载模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ADB%E5%B7%A5%E5%85%B7"><span class="nav-text">ADB工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E9%94%81Bootloader"><span class="nav-text">解锁Bootloader</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E8%80%85%E8%AE%BE%E7%BD%AE"><span class="nav-text">开发者设置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Recovery"><span class="nav-text">Recovery</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E5%8C%85"><span class="nav-text">第三方包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TWRP"><span class="nav-text">TWRP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SHRP"><span class="nav-text">SHRP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OrangeFox"><span class="nav-text">OrangeFox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PitchBlack"><span class="nav-text">PitchBlack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CWM"><span class="nav-text">CWM</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%B7%E5%85%A5"><span class="nav-text">刷入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E5%9E%8B%E9%80%82%E9%85%8D"><span class="nav-text">机型适配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E5%8F%96%E8%AE%BE%E5%A4%87%E6%A0%91"><span class="nav-text">提取设备树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87twrpdtgen"><span class="nav-text">通过twrpdtgen</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E4%BF%AE%E6%94%B9%E6%A8%A1%E7%89%88"><span class="nav-text">通过修改模版</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Android-mk"><span class="nav-text">Android.mk</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#AndroidProducts-mk"><span class="nav-text">AndroidProducts.mk</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#omni-Z01G-mk"><span class="nav-text">omni_Z01G.mk</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#device-mk"><span class="nav-text">device.mk</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#vendorsetup-sh"><span class="nav-text">vendorsetup.sh</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#recovery-fstab"><span class="nav-text">recovery.fstab</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#system-prop"><span class="nav-text">system.prop</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#omni-dependencies"><span class="nav-text">omni.dependencies</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#BoardConfig-mk"><span class="nav-text">BoardConfig.mk</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%8F%82%E6%95%B0"><span class="nav-text">基本参数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%86%85%E6%A0%B8%E6%89%93%E5%8C%85%E5%8F%82%E6%95%B0"><span class="nav-text">内核打包参数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%86%85%E6%A0%B8%E7%BC%96%E8%AF%91%E5%8F%82%E6%95%B0"><span class="nav-text">内核编译参数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Recovery%E5%8F%82%E6%95%B0"><span class="nav-text">Recovery参数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#TWRP%E4%B8%93%E7%94%A8%E5%8F%82%E6%95%B0"><span class="nav-text">TWRP专用参数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E7%9B%B8%E5%85%B3%E5%8F%82%E6%95%B0"><span class="nav-text">加密相关参数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E8%B0%83%E8%AF%95%E7%9B%B8%E5%85%B3%E5%8F%82%E6%95%B0"><span class="nav-text">调试相关参数</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E5%87%BA%E5%8C%85"><span class="nav-text">编译出包</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87Github-Actions"><span class="nav-text">通过Github Actions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E6%BA%90%E7%A0%81"><span class="nav-text">通过源码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#TWRP-1"><span class="nav-text">TWRP</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E8%AF%95%E6%9F%A5%E9%94%99"><span class="nav-text">调试查错</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%90%E5%8F%96%E6%97%A5%E5%BF%97"><span class="nav-text">提取日志</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95"><span class="nav-text">功能测试</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8C%82%E8%BD%BD"><span class="nav-text">挂载</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A7%A3%E5%AF%86"><span class="nav-text">解密</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ADB"><span class="nav-text">ADB</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#MTP"><span class="nav-text">MTP</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#OTG"><span class="nav-text">OTG</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%87%E4%BB%BD-x2F-%E6%81%A2%E5%A4%8D%E7%B3%BB%E7%BB%9F"><span class="nav-text">备份&#x2F;恢复系统</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BA%E7%8E%B0Recovery-is-not-SEANDROID-enforcing-x2F-set-warrenty-bit-recovery"><span class="nav-text">出现Recovery is not SEANDROID enforcing&#x2F;set warrenty bit: recovery</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Root"><span class="nav-text">Root</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Magisk"><span class="nav-text">Magisk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF-Auto-Root"><span class="nav-text">CF-Auto-Root</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PurpleDrake"><span class="nav-text">PurpleDrake</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E4%B8%8E%E6%A1%86%E6%9E%B6"><span class="nav-text">软件与框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Busybox"><span class="nav-text">Busybox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="nav-text">文件管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7"><span class="nav-text">系统工具</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Scene"><span class="nav-text">Scene</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%BE%9C%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="nav-text">澜系统工具箱</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Devcheck-Pro"><span class="nav-text">Devcheck Pro</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Termux"><span class="nav-text">Termux</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%B8%E6%88%8F%E4%BF%AE%E6%94%B9"><span class="nav-text">游戏修改</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GameGuardian"><span class="nav-text">GameGuardian</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F"><span class="nav-text">系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E6%98%9FROM"><span class="nav-text">三星ROM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B7%E5%85%A5-1"><span class="nav-text">刷入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows"><span class="nav-text">Windows</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mac"><span class="nav-text">Mac</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">参见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%B7%E5%85%A5%E6%97%B6%E6%8F%90%E7%A4%BASW-REV-CHECK-FAIL"><span class="nav-text">刷入时提示SW REV CHECK FAIL</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B0%A7OS"><span class="nav-text">氧OS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-1"><span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B7%E5%85%A5-2"><span class="nav-text">刷入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LineageOS"><span class="nav-text">LineageOS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%BA%E5%9E%8B%E9%80%82%E9%85%8D-1"><span class="nav-text">机型适配</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86-1"><span class="nav-text">基本知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E8%AF%91"><span class="nav-text">编译</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E5%AE%83ROM"><span class="nav-text">其它ROM</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ADB%E5%87%BA%E7%8E%B0devices-offline%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-text">ADB出现devices offline的解决方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Difference-between-Bootloader-Download-and-Recovery-mode"><span class="nav-text">Difference between Bootloader, Download and Recovery mode ?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LG-G3-LineageOS-Tutorial"><span class="nav-text">LG G3 LineageOS Tutorial</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E5%8A%A0-OnePlus-7-%E5%88%B7%E5%85%A5%E6%B0%A7-OS%E3%80%81TWRP%E3%80%81Magisk-Root"><span class="nav-text">一加 OnePlus 7 刷入氧 OS、TWRP、Magisk (Root)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E4%BA%8E%E4%BB%BB%E4%BD%95%E6%9C%BA%E5%9E%8B%E7%9A%84%E8%87%AA%E7%BC%96%E8%AF%91-TWRP-Recovery-%E5%92%8C%E7%94%9F%E6%88%90%E8%AE%BE%E5%A4%87%E6%A0%91"><span class="nav-text">适用于任何机型的自编译 TWRP Recovery 和生成设备树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Doc-fastboot-intro"><span class="nav-text">Doc: fastboot intro</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Samsung-tablet-root-process"><span class="nav-text">Samsung tablet root process</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Recovery-is-not-Seandroid-Enforcing-Samsung-A5"><span class="nav-text">Recovery is not Seandroid Enforcing(Samsung A5)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Recovery-is-not-SEAndroid-enforcing"><span class="nav-text">Recovery is not SEAndroid enforcing.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Magisk-Documentation-%EF%BD%9C-Magisk"><span class="nav-text">Magisk Documentation ｜ Magisk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E6%98%9F%E6%89%8B%E6%9C%BA%E8%8E%B7%E5%8F%96-root-%E6%9D%83%E9%99%90%EF%BC%9A%E4%BD%BF%E7%94%A8-Magisk-Manager-%E4%B8%BA-Android-8-0-x2F-9-%E5%88%9B%E5%BB%BA-root-%E6%96%87%E4%BB%B6"><span class="nav-text">三星手机获取 root 权限：使用 Magisk Manager 为 Android 8.0&#x2F;9 创建 root 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SELinux-%E5%AE%BD%E5%AE%B9%E6%A8%A1%E5%BC%8F-permissive-%E5%BC%BA%E5%88%B6%E6%A8%A1%E5%BC%8F-enforcing-%E5%85%B3%E9%97%AD-disabled-%E5%87%A0%E7%A7%8D%E6%A8%A1%E5%BC%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="nav-text">SELinux 宽容模式(permissive) 强制模式(enforcing) 关闭(disabled) 几种模式之间的转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-Root-Samsung-Galaxy-J3-2017-SM-J3300-Odin-Tool"><span class="nav-text">How to Root Samsung Galaxy J3-2017 SM-J3300 | Odin Tool</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AE%93-TWRP-%E6%AD%A3%E5%BC%8F%E6%94%AF%E6%8F%B4%E4%BD%A0%E7%9A%84%E8%A3%9D%E7%BD%AE"><span class="nav-text">如何讓 TWRP 正式支援你的裝置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8ROM%E7%9A%84%E5%90%84%E5%A4%A7%E5%AE%98%E7%BD%91"><span class="nav-text">常用ROM的各大官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TWRP-Recovery-%E7%BC%96%E8%AF%91%E9%80%82%E9%85%8D%E6%95%99%E7%A8%8B"><span class="nav-text">TWRP Recovery 编译适配教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Odin-and-Heimdall-Free-Your-Samsung-Android"><span class="nav-text">Odin and Heimdall: Free Your Samsung Android</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

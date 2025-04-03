@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="有关操作系统类型、操作系统位数、操作系统引导、硬盘修复等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="系统和硬件的相关知识及维护">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/Knowledge-About-OS-And-Hardware.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="有关操作系统类型、操作系统位数、操作系统引导、硬盘修复等。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/Knowledge-About-OS-And-Hardware/topic.jpg">
+<meta property="article:published_time" content="2019-06-04T01:50:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.586Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/Knowledge-About-OS-And-Hardware/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/Knowledge-About-OS-And-Hardware.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>系统和硬件的相关知识及维护 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/Knowledge-About-OS-And-Hardware.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          系统和硬件的相关知识及维护
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-06-04 09:50:29" itemprop="dateCreated datePublished" datetime="2019-06-04T09:50:29+08:00">2019-06-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/Knowledge-About-OS-And-Hardware/topic.jpg"></p>
+<p>有关操作系统类型、操作系统位数、操作系统引导、硬盘修复等。</p>
+<span id="more"></span>
+
+<h1 id="操作系统类型"><a href="#操作系统类型" class="headerlink" title="操作系统类型"></a>操作系统类型</h1><h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><p>Windows的版本迭代如下。</p>
+<table>
+<thead>
+<tr>
+<th>年份</th>
+<th>操作系统</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1985</td>
+<td>Windows 1.X</td>
+</tr>
+<tr>
+<td>1987</td>
+<td>Windows 2.X</td>
+</tr>
+<tr>
+<td>1990</td>
+<td>Windows 3.X</td>
+</tr>
+<tr>
+<td>1993</td>
+<td>Windows NT 3.1</td>
+</tr>
+<tr>
+<td>1994</td>
+<td>Windows NT 3.5</td>
+</tr>
+<tr>
+<td>1995</td>
+<td>Windows NT 3.51</td>
+</tr>
+<tr>
+<td>1995</td>
+<td>Windows 95</td>
+</tr>
+<tr>
+<td>1996</td>
+<td>Windows Nashville</td>
+</tr>
+<tr>
+<td>1996</td>
+<td>Windows NT 4.0</td>
+</tr>
+<tr>
+<td>1998</td>
+<td>Windows 98</td>
+</tr>
+<tr>
+<td>1999</td>
+<td>Windows Nepture</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>Windows ME</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>Windows 2000</td>
+</tr>
+<tr>
+<td>2001</td>
+<td>Windows Whister</td>
+</tr>
+<tr>
+<td>2001</td>
+<td>Windows XP</td>
+</tr>
+<tr>
+<td>2003</td>
+<td>Windows Server 2003</td>
+</tr>
+<tr>
+<td>2003</td>
+<td>Windows Whister Server</td>
+</tr>
+<tr>
+<td>2005</td>
+<td>Windows Server 2003 R2</td>
+</tr>
+<tr>
+<td>2005</td>
+<td>Windows Longhorn</td>
+</tr>
+<tr>
+<td>2005</td>
+<td>Windows Vista</td>
+</tr>
+<tr>
+<td>2007</td>
+<td>Windows Home Server</td>
+</tr>
+<tr>
+<td>2008</td>
+<td>Windows Server 2008</td>
+</tr>
+<tr>
+<td>2009</td>
+<td>Windows Server 2008 R2</td>
+</tr>
+<tr>
+<td>2009</td>
+<td>Windows 7</td>
+</tr>
+<tr>
+<td>2011</td>
+<td>Windows Thin PC</td>
+</tr>
+<tr>
+<td>2012</td>
+<td>Windows 8</td>
+</tr>
+<tr>
+<td>2012</td>
+<td>Windows Phone 8</td>
+</tr>
+<tr>
+<td>2012</td>
+<td>Windows Server 2012</td>
+</tr>
+<tr>
+<td>2013</td>
+<td>Windows Server 2012 R2</td>
+</tr>
+<tr>
+<td>2013</td>
+<td>Windows 8.1</td>
+</tr>
+<tr>
+<td>2014</td>
+<td>Windows Phone 8.1</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>Windows 10</td>
+</tr>
+</tbody></table>
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><p>Linux有很多的发行版本，其中最常用的就是<code>Ubuntu</code>，服务器则常用<code>CentOS</code>、<code>Debian</code>等。</p>
+<h2 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h2><p>macOS是苹果电脑的专用系统，基于Linux内核。由于苹果生态的封闭性，需要通过特殊方法才能在普通电脑上安装。</p>
+<h1 id="32位与64位"><a href="#32位与64位" class="headerlink" title="32位与64位"></a>32位与64位</h1><h2 id="存储单位"><a href="#存储单位" class="headerlink" title="存储单位"></a>存储单位</h2><p><code>位</code>或称为<code>比特（bit）</code>是计算机的最小数据储存单位，而<code>字节（Byte）</code>是储存容量的基本单位。打开一个记事本并直接保存，右键查看刚才新建的文本文档的属性，其大小是0字节。在文本文档中输入一个英文字母再保存，文件的大小变成1字节。</p>
+<p>ASCII码用于表示字符。一个字符用8位的二进制数表示，共可表示2<sup>8</sup>&#x3D;256个字符。二进制数的每一位就是bit，而一个Byte相当于一个字符。字节过后接着就是Kibibyte（KiB）、Mebibyte（MiB）、Gibibyte（GiB）、Tebibyte（TiB）等，它们之间的换算是2<sup>10</sup>&#x3D;1024。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1Byte=8bit</span><br><span class="line">1KiB=1024Byte</span><br><span class="line">1MiB=1024KiB</span><br><span class="line">1GiB=1024MiB</span><br><span class="line">1TiB=1024GiB</span><br></pre></td></tr></table></figure>
+
+<p>由于操作系统的不严谨，在Windows中1KB就是1KiB。因此Windows里显示的KB&#x2F;MB&#x2F;GB&#x2F;TB即为KiB&#x2F;MiB&#x2F;GiB&#x2F;TiB。但实际上KB（千字节）和KiB（千位二进制字节）是不同的单位，Kilobyte（KB）、Megabyte（MB）、Gigabyte（GB）、Terabyte（TB）等之间的换算是10<sup>3</sup>&#x3D;1000。一个64G的U盘指的是64GB，Windows会将其转换为GiB，但显示成GB，体现出来就是U盘容量变小了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1KB=1000Byte</span><br><span class="line">1MB=1000KB</span><br><span class="line">1GB=1000MB</span><br><span class="line">1TB=1000GB</span><br></pre></td></tr></table></figure>
+
+<p><code>B</code>代表的是字节，<code>b</code>代表的是位，因此KiB指的是2<sup>10</sup>Byte，而Kib表示的是2<sup>10</sup>bit，有如下换算关系。运营商声称的宽带50兆实际上指的是50Mbps，即50M bit per second。下载时的速度以MiB&#x2F;s来定义，所以50兆宽带最高的下载速度是50÷8&#x3D;6.25MiB&#x2F;s。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1KiB=8Kib</span><br><span class="line">1MiB=8Mib</span><br><span class="line">1MiB/s=8Mbps</span><br></pre></td></tr></table></figure>
+
+<h2 id="处理器位数"><a href="#处理器位数" class="headerlink" title="处理器位数"></a>处理器位数</h2><p>处理器（CPU）有32位和64位之分，指CPU一次可以处理32&#x2F;64位数据（4&#x2F;8个字节）。这里的32&#x2F;64位被称为CPU位宽，全称为数据总线位宽。易知64位CPU的处理速度比32位快一倍。</p>
+<p>CPU处理的数据是放在内存里的，为了读取这些数据，CPU需要知道这些数据在内存的地址。字节是内存的基本单位。</p>
+<p>CPU在找地址的时候，并不需要把整个Byte都看一遍，只要看这个Byte的第一个bit。计算机需要把第一个bit的地址用二进制表示，而这个二进制数的位数决定了CPU能够识别的内存大小，被称为地址总线位宽。</p>
+<p>地址总线位宽和数据总线位宽并不相同，32位CPU的数据总线位宽是32位，但地址总线位宽要视CPU的设计而定。假设它的地址总线位宽为36位，则它能找到2<sup>36</sup>个地址，每个地址对应1Byte内存空间，故一共能识别2<sup>36</sup>Byte&#x3D;64GiB的内存。</p>
+<h2 id="操作系统位数"><a href="#操作系统位数" class="headerlink" title="操作系统位数"></a>操作系统位数</h2><p>操作系统的位数可以理解为CPU的地址总线位宽。32位的系统最多能够识别2<sup>32</sup>Byte&#x3D;4GiB的内存，64位的系统理论上最多能够识别2<sup>64</sup>Byte&#x3D;17179869184GiB的内存，实际上目前最大能够支持128GiB内存。所谓32位不支持4GiB以上内存的说法针对的是操作系统，而不是CPU。</p>
+<h1 id="存储器"><a href="#存储器" class="headerlink" title="存储器"></a>存储器</h1><h2 id="硬盘"><a href="#硬盘" class="headerlink" title="硬盘"></a>硬盘</h2><h3 id="SSD和HDD"><a href="#SSD和HDD" class="headerlink" title="SSD和HDD"></a>SSD和HDD</h3><p>SSD是固态硬盘，采用闪存颗粒进行储存。SDD运行速度快，随着时间流逝，SSD中的数据会逐渐消失。数据一般能够存留5-10年。</p>
+<p>HDD是机械硬盘，用盘片进行储存。HDD运行速度慢，但数据基本能够一直存留。</p>
+<h3 id="损坏修复"><a href="#损坏修复" class="headerlink" title="损坏修复"></a>损坏修复</h3><h4 id="锁盘"><a href="#锁盘" class="headerlink" title="锁盘"></a>锁盘</h4><p>主要表现为无法修改分区表，即无法删除、添加、格式化分区等。</p>
+<h5 id="HDD"><a href="#HDD" class="headerlink" title="HDD"></a>HDD</h5><p>可尝试低级格式化，工具如下。注意低级格式化对SSD无效。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.onlinedown.net/soft/265727.htm</span><br></pre></td></tr></table></figure>
+
+<h5 id="SSD"><a href="#SSD" class="headerlink" title="SSD"></a>SSD</h5><p>需要重新开卡，即重新刷入固件。</p>
+<p>首先需要确定主控和闪存颗粒的型号，可通过直接拆下硬盘外壳，也可以通过SSD-Z等软件查看。本硬盘主控为SM2258XT，闪存为Hydix（海利士）的H27Q2T8QEA9R。</p>
+<p>根据主控可以查找到相应的开卡工具。对于SM2258XT而言，其开卡工具为MPTool。由于MPTool有非常多版本，需要根据闪存寻找。</p>
+<p>对于本闪存，可通过网络或以下的开卡便携工具确定其为HY3D-V4，即Hydix的3D颗粒的第四代。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://club.liangchanba.com/thread-896-1-1.html</span><br></pre></td></tr></table></figure>
+
+<p>确认闪存的类别后，可通过以下链接下载MPTool。注意，版本并不是越新越好，因此需要将每一个版本都下载下来。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.usbdev.ru/files/smi/sm2258xtmptool/</span><br></pre></td></tr></table></figure>
+
+<p>开卡前需到BIOS更改系统启动方式为IDE，否则开卡工具无法扫描到硬盘。用硬盘盒以USB方式将要开卡的硬盘连接到电脑，若硬盘无法被识别，可将主板上两个ROM触点短接以进入工程模式（ROM模式），电脑将识别为一个1023MB的硬盘。</p>
+<p>打开MPTool，点击Scan Drive并确认程序能够找到硬盘。点击Config，选择Edit config，密码为两个空格。然后点击Flash一栏的Auto自动识别闪存，若识别失败，则需要更换另一版本的程序。识别成功后点击Save Config保存，然后回到硬盘页并点击Start开始开卡。若卡在某一步（如Dump System Block），则需要更换版本。</p>
+<p>开卡成功后用DiskGenius等删除原有分区并重新划分即可。对于Hydix的闪存H27Q2T8QEA9R，可用版本为SM2258XT_HY3D-V4_PKGS0402A_FWS0330B0。</p>
+<h2 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h2><h3 id="内存槽数与通道数"><a href="#内存槽数与通道数" class="headerlink" title="内存槽数与通道数"></a>内存槽数与通道数</h3><p>双通道表示有两个内存控制器，这两个控制器可以独立工作。主板可以为四内存槽双通道，一个通道管理两个内存槽。</p>
+<p>可通过CPU-Z的内存选项卡下的Channel查看，Single表示单通道，Dual双通道，Triple三通道，Quad四通道。通过AIDA64测试内存的读写速度会更为准确，一般来说DDR3内存1600MHz下单通道读写应该在13000MB&#x2F;s左右，DDR4 2400MHz下应该能达到15000MB&#x2F;s以上，双通道基本翻倍。</p>
+<h3 id="内存与硬盘"><a href="#内存与硬盘" class="headerlink" title="内存与硬盘"></a>内存与硬盘</h3><p>CPU从内存读取数据，内存从硬盘获取数据。内存的速度比硬盘快，但每次断电后内存的数据都会清空。每次系统启动时，内存从硬盘加载数据，CPU对内存的数据进行处理，这样就完成了一次开机。内存处理完数据后往硬盘写入数据，保证断电后数据不会丢失。</p>
+<h1 id="EDID"><a href="#EDID" class="headerlink" title="EDID"></a>EDID</h1><p>EDID用于描述显示屏的属性。以下面的EDID为例说明。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">        0   1   2   3   4   5   6   7   8   9   </span><br><span class="line">000  |  00  FF  FF  FF  FF  FF  FF  00  06  AF</span><br><span class="line">010  |  7C  9C  00  00  00  00  00  16  01  04</span><br><span class="line">020  |  95  1F  11  78  02  9F  E5  96  58  53</span><br><span class="line">030  |  8A  26  24  50  54  00  00  00  01  01</span><br><span class="line">040  |  01  01  01  01  01  01  01  01  01  01</span><br><span class="line">050  |  01  01  01  01  B0  36  80  B4  70  38</span><br><span class="line">060  |  1E  40  30  20  31  00  35  AD  10  00</span><br><span class="line">070  |  00  18  00  00  00  FC  00  43  6F  6C</span><br><span class="line">080  |  6F  72  20  4C  43  44  0A  20  20  20</span><br><span class="line">090  |  00  00  00  10  00  00  00  00  00  00</span><br><span class="line">100  |  00  00  00  00  00  00  00  00  00  00</span><br><span class="line">110  |  00  10  00  00  00  00  00  00  00  00</span><br><span class="line">120  |  00  00  00  00  00  00  00  6F</span><br></pre></td></tr></table></figure>
+
+<h2 id="表头信息（0x00-0x13）"><a href="#表头信息（0x00-0x13）" class="headerlink" title="表头信息（0x00-0x13）"></a>表头信息（0x00-0x13）</h2><table>
+<thead>
+<tr>
+<th>偏移值（十六进制）</th>
+<th>偏移值（十进制）</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0x00-0x07</td>
+<td>1-7</td>
+<td>表头信息</td>
+</tr>
+<tr>
+<td>0x08-0x09</td>
+<td>8-9</td>
+<td>制造商ID（00001&#x3D;A，00002&#x3D;B，以此类推，假设制造商ID为CEA，即00011 00101 00001，则从高位往低位取）</td>
+</tr>
+<tr>
+<td>0x0A-0x0B</td>
+<td>10-11</td>
+<td>产品ID</td>
+</tr>
+<tr>
+<td>0x0C-0x0F</td>
+<td>12-15</td>
+<td>显示器序列号</td>
+</tr>
+<tr>
+<td>0x10</td>
+<td>16</td>
+<td>生产周数</td>
+</tr>
+<tr>
+<td>0x11</td>
+<td>17</td>
+<td>生产年份（加上1990才是确实的年份）</td>
+</tr>
+<tr>
+<td>0x12</td>
+<td>18</td>
+<td>EDID版本号</td>
+</tr>
+<tr>
+<td>0x13</td>
+<td>19</td>
+<td>EDID修订版本号</td>
+</tr>
+</tbody></table>
+<h2 id="基本显示参数（0x14-0x18）"><a href="#基本显示参数（0x14-0x18）" class="headerlink" title="基本显示参数（0x14-0x18）"></a>基本显示参数（0x14-0x18）</h2><table>
+<thead>
+<tr>
+<th>偏移值（十六进制）</th>
+<th>偏移值（十进制）</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0x14</td>
+<td>20</td>
+<td>画面输入定义</td>
+</tr>
+<tr>
+<td>0x15</td>
+<td>21</td>
+<td>最大水平图形尺寸（厘米）</td>
+</tr>
+<tr>
+<td>0x16</td>
+<td>22</td>
+<td>最大垂直图形尺寸（厘米）</td>
+</tr>
+<tr>
+<td>0x17</td>
+<td>23</td>
+<td>显示伽码（除以100再加1才是真正的值）</td>
+</tr>
+<tr>
+<td>0x18</td>
+<td>24</td>
+<td>电源管理与支持</td>
+</tr>
+</tbody></table>
+<h2 id="色度调节（0x19-0x22）"><a href="#色度调节（0x19-0x22）" class="headerlink" title="色度调节（0x19-0x22）"></a>色度调节（0x19-0x22）</h2><table>
+<thead>
+<tr>
+<th>偏移值（十六进制）</th>
+<th>偏移值（十进制）</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0x19</td>
+<td>25</td>
+<td></td>
+</tr>
+<tr>
+<td>0x1A</td>
+<td>26</td>
+<td></td>
+</tr>
+<tr>
+<td>0x1B-0x22</td>
+<td>27-34</td>
+<td></td>
+</tr>
+<tr>
+<td>0x23</td>
+<td>35</td>
+<td>建立时脉I</td>
+</tr>
+<tr>
+<td>0x24</td>
+<td>36</td>
+<td>建立时脉II</td>
+</tr>
+<tr>
+<td>0x25</td>
+<td>37</td>
+<td>制造商保留的时脉</td>
+</tr>
+<tr>
+<td>0x24–0x35</td>
+<td>36-53</td>
+<td>标准时脉识别</td>
+</tr>
+</tbody></table>
+<h2 id="详细时脉描述（0x36–0x47）"><a href="#详细时脉描述（0x36–0x47）" class="headerlink" title="详细时脉描述（0x36–0x47）"></a>详细时脉描述（0x36–0x47）</h2><table>
+<thead>
+<tr>
+<th>偏移值（十六进制）</th>
+<th>偏移值（十进制）</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0x36–0x37</td>
+<td>54-55</td>
+<td>像素时脉（单位为10kHz）或0（55MSB&#x2F;54LSB）</td>
+</tr>
+</tbody></table>
+<h3 id="像素时脉有效时"><a href="#像素时脉有效时" class="headerlink" title="像素时脉有效时"></a>像素时脉有效时</h3><table>
+<thead>
+<tr>
+<th>偏移值（十六进制）</th>
+<th>偏移值（十进制）</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0x38</td>
+<td>56</td>
+<td>水平活跃（单位为像素）</td>
+</tr>
+<tr>
+<td>0x39</td>
+<td>57</td>
+<td>水平空白（单位为像素）</td>
+</tr>
+<tr>
+<td>0x3A</td>
+<td>58</td>
+<td>水平活跃高（4高位元）<br/>水平空白高（4低位元）</td>
+</tr>
+<tr>
+<td>0x3B</td>
+<td>59</td>
+<td>垂直活跃（单位为线）</td>
+</tr>
+<tr>
+<td>0x3C</td>
+<td>60</td>
+<td>垂直空白（单位为线）</td>
+</tr>
+<tr>
+<td>0x3D</td>
+<td>61</td>
+<td>垂直活跃在高有效位（4高位元）<br/>垂直空白在高有效位（4低位元）</td>
+</tr>
+<tr>
+<td>0x3E</td>
+<td>62</td>
+<td>水平同步偏移量（单位为像素）</td>
+</tr>
+<tr>
+<td>0x3F</td>
+<td>63</td>
+<td>水平同步脉冲宽度（单位为像素）</td>
+</tr>
+<tr>
+<td>0x40</td>
+<td>64</td>
+<td>垂直同步偏移量（单位为线）（4高位元）<br/>垂直同步脉冲宽度（单位为线）（4低位元）</td>
+</tr>
+<tr>
+<td>0x41</td>
+<td>65</td>
+<td>高有效位关于水平同步偏移量（位元7-6）<br/>高有效位关于水平同步脉冲宽度（位元5-4）<br/>高有效位关于垂直同步偏移量（位元3-2）<br/>高有效位关于垂直同步脉冲宽度（位元1-0）</td>
+</tr>
+<tr>
+<td>0x42</td>
+<td>66</td>
+<td>水平图像尺寸（单位为公厘）</td>
+</tr>
+<tr>
+<td>0x43</td>
+<td>67</td>
+<td>垂直图像尺寸（单位为公厘）</td>
+</tr>
+<tr>
+<td>0x44</td>
+<td>68</td>
+<td>高有效位关于水平图像尺寸（4高位元）<br/>高有效位关于垂直图像尺寸（4低位元）</td>
+</tr>
+<tr>
+<td>0x45</td>
+<td>69</td>
+<td>水平边界线（单位为像素且只表示一边）</td>
+</tr>
+<tr>
+<td>0x46</td>
+<td>70</td>
+<td>垂直边界线（单位为线且只表示一边）</td>
+</tr>
+<tr>
+<td>0x47</td>
+<td>71</td>
+<td>交错与否（位元7）<br/>立体与否（位元6-5，00表示否）<br/>分离同步与否（位元4-3）<br/>垂直同步正与否（位元2）<br/>水平同步正与否（位元1）<br/>立体模式（位元0，若6-5是00则未使用）</td>
+</tr>
+</tbody></table>
+<h3 id="像素时脉无效时"><a href="#像素时脉无效时" class="headerlink" title="像素时脉无效时"></a>像素时脉无效时</h3><table>
+<thead>
+<tr>
+<th>偏移值（十六进制）</th>
+<th>偏移值（十进制）</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0x38</td>
+<td>56</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0x39</td>
+<td>57</td>
+<td>区块型态（FFh&#x3D;监视器序号，FEh&#x3D;ASCII字串，FDh&#x3D;监视器变动限制，FCh&#x3D;监视器名称，FBh&#x3D;色彩点资料，Fah，标准时脉资料，F9h&#x3D;现在未定义，0Fh&#x3D;由制造商定义）</td>
+</tr>
+<tr>
+<td>0x3A</td>
+<td>58</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<h1 id="硬件MAC地址"><a href="#硬件MAC地址" class="headerlink" title="硬件MAC地址"></a>硬件MAC地址</h1><h2 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h2><p>制作DOS启动盘。下载以下附件并复制到启动盘中。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.insanelymac.com/forum/topic/285920-os-x-compatible-motherboard-quo/page/56/?tab=comments#comment-2029530</span><br></pre></td></tr></table></figure>
+
+<p>重启并以Legacy模式进入USB盘中的DOS系统，然后执行以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 写入新的LAN eeprom，但不更改MAC地址</span><br><span class="line">eeupdate /nic=1 /d lan.eep</span><br><span class="line"></span><br><span class="line"># 写入新的LAN eeprom，且更改MAC地址</span><br><span class="line"># eeupdate /nic=1 /d lan.eep /MAC=XXXXXXXXXXXX</span><br><span class="line"></span><br><span class="line"># 以上代码二选一，然后执行以下命令</span><br><span class="line">celo</span><br></pre></td></tr></table></figure>
+
+<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="主机开机显示屏无显示"><a href="#主机开机显示屏无显示" class="headerlink" title="主机开机显示屏无显示"></a>主机开机显示屏无显示</h2><p>内存条老化，取出内存条用橡皮擦拭再接回去。若开机无显，风扇也不转，更换正常电源也无效，风扇也不转，有可能为CPU故障。</p>
+<h2 id="主机不时花屏重启死机"><a href="#主机不时花屏重启死机" class="headerlink" title="主机不时花屏重启死机"></a>主机不时花屏重启死机</h2><p>电压不稳或者电源插座接触不良产生的电脑自动重启故障，更换电源即可。</p>
+<h2 id="无法进入BIOS"><a href="#无法进入BIOS" class="headerlink" title="无法进入BIOS"></a>无法进入BIOS</h2><p>取出主板电池解除CPU死锁BIOS。</p>
+<h2 id="电脑开机断电或突然卡机"><a href="#电脑开机断电或突然卡机" class="headerlink" title="电脑开机断电或突然卡机"></a>电脑开机断电或突然卡机</h2><p>直接拔出USB外设，关机释放静电再重启。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><h2 id="内存槽数与通道数的区别"><a href="#内存槽数与通道数的区别" class="headerlink" title="内存槽数与通道数的区别"></a>内存槽数与通道数的区别</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://tieba.baidu.com/p/6079302964</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/How-To-Access-Google.html" rel="prev" title="Google正确食用指南">
+      <i class="fa fa-chevron-left"></i> Google正确食用指南
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/How-To-Build-A-Blog.html" rel="next" title="个人博客的搭建">
+      个人博客的搭建 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B1%BB%E5%9E%8B"><span class="nav-text">操作系统类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows"><span class="nav-text">Windows</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux"><span class="nav-text">Linux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#macOS"><span class="nav-text">macOS</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#32%E4%BD%8D%E4%B8%8E64%E4%BD%8D"><span class="nav-text">32位与64位</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%8D%95%E4%BD%8D"><span class="nav-text">存储单位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%8D%E6%95%B0"><span class="nav-text">处理器位数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BD%8D%E6%95%B0"><span class="nav-text">操作系统位数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8"><span class="nav-text">存储器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AC%E7%9B%98"><span class="nav-text">硬盘</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SSD%E5%92%8CHDD"><span class="nav-text">SSD和HDD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8D%9F%E5%9D%8F%E4%BF%AE%E5%A4%8D"><span class="nav-text">损坏修复</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%94%81%E7%9B%98"><span class="nav-text">锁盘</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#HDD"><span class="nav-text">HDD</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#SSD"><span class="nav-text">SSD</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98"><span class="nav-text">内存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E6%A7%BD%E6%95%B0%E4%B8%8E%E9%80%9A%E9%81%93%E6%95%B0"><span class="nav-text">内存槽数与通道数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E4%B8%8E%E7%A1%AC%E7%9B%98"><span class="nav-text">内存与硬盘</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#EDID"><span class="nav-text">EDID</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E5%A4%B4%E4%BF%A1%E6%81%AF%EF%BC%880x00-0x13%EF%BC%89"><span class="nav-text">表头信息（0x00-0x13）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%98%BE%E7%A4%BA%E5%8F%82%E6%95%B0%EF%BC%880x14-0x18%EF%BC%89"><span class="nav-text">基本显示参数（0x14-0x18）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%89%B2%E5%BA%A6%E8%B0%83%E8%8A%82%EF%BC%880x19-0x22%EF%BC%89"><span class="nav-text">色度调节（0x19-0x22）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%A6%E7%BB%86%E6%97%B6%E8%84%89%E6%8F%8F%E8%BF%B0%EF%BC%880x36%E2%80%930x47%EF%BC%89"><span class="nav-text">详细时脉描述（0x36–0x47）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%83%8F%E7%B4%A0%E6%97%B6%E8%84%89%E6%9C%89%E6%95%88%E6%97%B6"><span class="nav-text">像素时脉有效时</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%83%8F%E7%B4%A0%E6%97%B6%E8%84%89%E6%97%A0%E6%95%88%E6%97%B6"><span class="nav-text">像素时脉无效时</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6MAC%E5%9C%B0%E5%9D%80"><span class="nav-text">硬件MAC地址</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E5%86%99"><span class="nav-text">重写</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E6%9C%BA%E5%BC%80%E6%9C%BA%E6%98%BE%E7%A4%BA%E5%B1%8F%E6%97%A0%E6%98%BE%E7%A4%BA"><span class="nav-text">主机开机显示屏无显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E6%9C%BA%E4%B8%8D%E6%97%B6%E8%8A%B1%E5%B1%8F%E9%87%8D%E5%90%AF%E6%AD%BB%E6%9C%BA"><span class="nav-text">主机不时花屏重启死机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E6%B3%95%E8%BF%9B%E5%85%A5BIOS"><span class="nav-text">无法进入BIOS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E8%84%91%E5%BC%80%E6%9C%BA%E6%96%AD%E7%94%B5%E6%88%96%E7%AA%81%E7%84%B6%E5%8D%A1%E6%9C%BA"><span class="nav-text">电脑开机断电或突然卡机</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-text">参考资料</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E6%A7%BD%E6%95%B0%E4%B8%8E%E9%80%9A%E9%81%93%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">内存槽数与通道数的区别</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

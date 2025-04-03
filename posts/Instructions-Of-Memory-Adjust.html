@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="内存调整指南。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="内存调整指南">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/Instructions-Of-Memory-Adjust.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="内存调整指南。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/Instructions-Of-Memory-Adjust/topic.jpg">
+<meta property="article:published_time" content="2024-12-18T04:54:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.575Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/Instructions-Of-Memory-Adjust/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/Instructions-Of-Memory-Adjust.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>内存调整指南 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/Instructions-Of-Memory-Adjust.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          内存调整指南
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-12-18 12:54:29" itemprop="dateCreated datePublished" datetime="2024-12-18T12:54:29+08:00">2024-12-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/Instructions-Of-Memory-Adjust/topic.jpg"></p>
+<p>内存调整指南。</p>
+<span id="more"></span>
+
+<h1 id="超频"><a href="#超频" class="headerlink" title="超频"></a>超频</h1><h2 id="通过BIOS"><a href="#通过BIOS" class="headerlink" title="通过BIOS"></a>通过BIOS</h2><p>若主板支持XMP，在BIOS中打开即可。选项名称一般为Ai Overclock Tuner。</p>
+<p>也可手动调整配置文件。在BIOS中找到可以调整内存配置文件的部分，选择频率、时序和内存电压的各种组合。需要注意的是，要稳定在更高的频率，需要增大（放松）时序，也可能需要增加电压；要在当前频率稳定的情况下提升性能，应减小（缩紧）时序。将1.5V视为电压最大值，并尽可能将其降低。</p>
+<p>如果系统在应用新设置后无法启动，可尝试下调频率、更改时序或稍微增大内存电压和IMC电压以允许更高的频率。</p>
+<h2 id="通过软件"><a href="#通过软件" class="headerlink" title="通过软件"></a>通过软件</h2><h3 id="MemSet"><a href="#MemSet" class="headerlink" title="MemSet"></a>MemSet</h3><p>可用于调节内存参数，下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.xz7.com/downinfo/39311.html</span><br></pre></td></tr></table></figure>
+
+<p>在打开软件时需先手动安装Drivers文件夹中的Setup.inf。选项含义如下。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>中文名</th>
+<th>注释</th>
+<th>调整方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Clock&#x2F;Chipset Modulation</td>
+<td>CAS#延迟</td>
+<td>大多数新芯片不开启，开启后ThrottleStop中的功能有的不起作用</td>
+<td>调至最低</td>
+</tr>
+<tr>
+<td>Precharge Delay</td>
+<td>预充电延迟</td>
+<td></td>
+<td>5-11之间</td>
+</tr>
+<tr>
+<td>RAS# Precharge</td>
+<td>tRP行预充电时间</td>
+<td>越低表示在不同行切换的速度越快</td>
+<td></td>
+</tr>
+<tr>
+<td>Refresh Mode Select</td>
+<td>内存更新模式选择</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Refresh Cycle Time</td>
+<td>更新周期</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Performance Mode</td>
+<td>增强模式</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Write Recovery Time</td>
+<td>写到读的延迟</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Read-Write Turnaround clocks</td>
+<td>读到写的转变时钟</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="DRAM-Calculator-for-Ryzen"><a href="#DRAM-Calculator-for-Ryzen" class="headerlink" title="DRAM Calculator for Ryzen"></a>DRAM Calculator for Ryzen</h3><p>用于AMD Ryzen Zen架构的第一代和第二代处理器，下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.techpowerup.com/download/ryzen-dram-calculator/</span><br></pre></td></tr></table></figure>
+
+<p>首先打开Thaiphoon，并提取内存信息文件。然后打开DRAM Calculator for Ryzen，左上角选择相关参数，解释如下。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Processor</td>
+<td>处理器类型</td>
+</tr>
+<tr>
+<td>Memory Type</td>
+<td>可在Thaiphoon的part number后几位字母看到</td>
+</tr>
+<tr>
+<td>Profile version</td>
+<td>建议选择Manual，不支持XMP的普通内存条选择V1（较好体质的颗粒）或V2（较差体质的颗粒）</td>
+</tr>
+<tr>
+<td>Memory bank</td>
+<td>内存单面&#x2F;双面</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>要超到的频率</td>
+</tr>
+<tr>
+<td>DIMM Modules</td>
+<td>内存根数</td>
+</tr>
+<tr>
+<td>Motherboard</td>
+<td>芯片组类型</td>
+</tr>
+</tbody></table>
+<p>点击Import XMP，导入配置文件，点击Calculate SAFE或Calculate FAST生成超频所需要的全部时序参数，截图保存进BIOS照抄即可。一般首选SAFE档成功率较高，FAST次之。</p>
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="内存时序是什么？对性能影响有多大？终于懂了"><a href="#内存时序是什么？对性能影响有多大？终于懂了" class="headerlink" title="内存时序是什么？对性能影响有多大？终于懂了"></a>内存时序是什么？对性能影响有多大？终于懂了</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.sohu.com/a/406711779_100082659</span><br></pre></td></tr></table></figure>
+
+<h2 id="如何超频-RAM-英特尔®️-官网"><a href="#如何超频-RAM-英特尔®️-官网" class="headerlink" title="如何超频 RAM -英特尔®️ 官网"></a>如何超频 RAM -英特尔®️ 官网</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.intel.cn/content/www/cn/zh/gaming/resources/overclock-ram.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="AMD锐龙内存超频计算器使用教程——DRAM-Calculator-for-Ryzen及台风下载"><a href="#AMD锐龙内存超频计算器使用教程——DRAM-Calculator-for-Ryzen及台风下载" class="headerlink" title="AMD锐龙内存超频计算器使用教程——DRAM Calculator for Ryzen及台风下载"></a>AMD锐龙内存超频计算器使用教程——DRAM Calculator for Ryzen及台风下载</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.troyqi.com/archives/836/amd%E9%94%90%E9%BE%99%E5%86%85%E5%AD%98%E8%B6%85%E9%A2%91%E8%AE%A1%E7%AE%97%E5%99%A8%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-dram-calculator-for-ryzen%E4%B8%8B%E8%BD%BD/</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/Instructions-Of-GPU-Adjust.html" rel="prev" title="GPU调整指南">
+      <i class="fa fa-chevron-left"></i> GPU调整指南
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/Knowledge-About-CS.html" rel="next" title="计算机技术相关知识">
+      计算机技术相关知识 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B6%85%E9%A2%91"><span class="nav-text">超频</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87BIOS"><span class="nav-text">通过BIOS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E8%BD%AF%E4%BB%B6"><span class="nav-text">通过软件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MemSet"><span class="nav-text">MemSet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DRAM-Calculator-for-Ryzen"><span class="nav-text">DRAM Calculator for Ryzen</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E6%97%B6%E5%BA%8F%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E5%AF%B9%E6%80%A7%E8%83%BD%E5%BD%B1%E5%93%8D%E6%9C%89%E5%A4%9A%E5%A4%A7%EF%BC%9F%E7%BB%88%E4%BA%8E%E6%87%82%E4%BA%86"><span class="nav-text">内存时序是什么？对性能影响有多大？终于懂了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%B6%85%E9%A2%91-RAM-%E8%8B%B1%E7%89%B9%E5%B0%94%C2%AE%EF%B8%8F-%E5%AE%98%E7%BD%91"><span class="nav-text">如何超频 RAM -英特尔®️ 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AMD%E9%94%90%E9%BE%99%E5%86%85%E5%AD%98%E8%B6%85%E9%A2%91%E8%AE%A1%E7%AE%97%E5%99%A8%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%E2%80%94%E2%80%94DRAM-Calculator-for-Ryzen%E5%8F%8A%E5%8F%B0%E9%A3%8E%E4%B8%8B%E8%BD%BD"><span class="nav-text">AMD锐龙内存超频计算器使用教程——DRAM Calculator for Ryzen及台风下载</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

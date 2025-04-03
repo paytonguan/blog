@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="总结了一些MacOS的使用技巧，不断更新。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac使用技巧总结">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/Mac-Skills.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="总结了一些MacOS的使用技巧，不断更新。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/Mac-Skills/topic.jpg">
+<meta property="article:published_time" content="2019-11-25T06:12:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.543Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/Mac-Skills/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/Mac-Skills.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Mac使用技巧总结 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/Mac-Skills.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Mac使用技巧总结
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-11-25 14:12:29" itemprop="dateCreated datePublished" datetime="2019-11-25T14:12:29+08:00">2019-11-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/Mac-Skills/topic.jpg"></p>
+<p>总结了一些MacOS的使用技巧，不断更新。</p>
+<span id="more"></span>
+
+<h1 id="查看系统版本"><a href="#查看系统版本" class="headerlink" title="查看系统版本"></a>查看系统版本</h1><p>点击菜单栏中的关于本机即可。或在磁盘工具中也能看到磁盘对应的系统版本。</p>
+<h1 id="系统网络在线重装"><a href="#系统网络在线重装" class="headerlink" title="系统网络在线重装"></a>系统网络在线重装</h1><p>在开机时按住以下快捷键之一即可。</p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Command+R</td>
+<td>重新安装当前系统版本</td>
+</tr>
+<tr>
+<td>Option+Command+R</td>
+<td>升级到最新版macOS</td>
+</tr>
+<tr>
+<td>Shift+Option+Command+R</td>
+<td>安装出厂时的macOS或与其最接近的官方仍在提供的版本</td>
+</tr>
+</tbody></table>
+<h1 id="访问Mac共享"><a href="#访问Mac共享" class="headerlink" title="访问Mac共享"></a>访问Mac共享</h1><p>在Mac打开设置，选择共享-文件共享，点击<code>选项</code>，勾选两个复选框，并勾选用于共享的用户。回到设置页面，打开<code>网络偏好设置</code>，选择活跃的连接，点击高级-WINS，输入Windows的工作组名称，一般为WORKGROUP。</p>
+<p>在Windows端打开运行，输入<code>\\[Mac的IP地址]</code>即可访问。</p>
+<h1 id="旧款Mac安装Catalina"><a href="#旧款Mac安装Catalina" class="headerlink" title="旧款Mac安装Catalina"></a>旧款Mac安装Catalina</h1><p>使用macOS Catalina Patcher即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://dosdude1.com/catalina/</span><br></pre></td></tr></table></figure>
+
+<h1 id="直接下载Boot-Camp驱动程序"><a href="#直接下载Boot-Camp驱动程序" class="headerlink" title="直接下载Boot Camp驱动程序"></a>直接下载Boot Camp驱动程序</h1><p>使用Brigadier即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/timsutton/brigadier/releases</span><br></pre></td></tr></table></figure>
+
+<h1 id="安全模式下读取EFI分区"><a href="#安全模式下读取EFI分区" class="headerlink" title="安全模式下读取EFI分区"></a>安全模式下读取EFI分区</h1><p>注意，此法不能读取内置Windows分区和外接驱动器（非APFS&#x2F;HFS）分区。</p>
+<p>在正常模式的系统下执行以下命令以获取msdosfs.kext，默认在根目录的kexts文件夹下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /kexts</span><br><span class="line">sudo cp -RX /System/Library/Extensions/msdosfs.kext /kexts</span><br><span class="line">sudo /usr/libexec/PlistBuddy -c &quot;Add :OSBundleRequired string&quot; /kexts/msdosfs.kext/Contents/Info.plist</span><br><span class="line">sudo /usr/libexec/PlistBuddy -c &quot;Set :OSBundleRequired \&quot;Safe Boot\&quot;&quot; /kexts/msdosfs.kext/Contents/Info.plist</span><br><span class="line">sudo chmod -Rf 755 /kexts/msdosfs.kext</span><br><span class="line">sudo chown -Rf 0:0 /kexts/msdosfs.kext</span><br></pre></td></tr></table></figure>
+
+<p>在安全模式下通过以下命令加载此kext，再挂载EFI分区即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo kextload /kexts/msdosfs.kext</span><br></pre></td></tr></table></figure>
+
+<h1 id="连接ZJU有线网络"><a href="#连接ZJU有线网络" class="headerlink" title="连接ZJU有线网络"></a>连接ZJU有线网络</h1><p>打开系统偏好设置-网络，点击+，接口选择vpn，类型选L2TP&#x2F;IPSec，完成后填写下列信息。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">服务器地址 / 10.5.1.7</span><br><span class="line">账户名称 / 学号@a10（20/50元包月则为@a20/@a50）</span><br></pre></td></tr></table></figure>
+
+<p>点击鉴定设置-密码并输入，保存后点击<code>高级</code>。会话选项下三个选项均勾选，保存。打开终端输入以下代码。 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/ppp/options</span><br></pre></td></tr></table></figure>
+
+<p>按<code>i</code>键后输入下列语句。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plugin L2TP.ppp</span><br><span class="line">l2tpnoipsec // 第一个字母为小写L</span><br></pre></td></tr></table></figure>
+
+<p>按Esc后输入<code>:wq</code>并回车，回到网络设置界面。连接上述设置好的VPN，正常情况下连接成功。</p>
+<h1 id="重置蓝牙配置"><a href="#重置蓝牙配置" class="headerlink" title="重置蓝牙配置"></a>重置蓝牙配置</h1><p>进入系统盘的&#x2F;Library&#x2F;Preference，删除<code>com.apple.Bluetooth.plist</code>文件后重启即可。</p>
+<h1 id="备份EFI分区脚本"><a href="#备份EFI分区脚本" class="headerlink" title="备份EFI分区脚本"></a>备份EFI分区脚本</h1><p>脚本地址如下，运行EFI Backup-Restore.command即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/corpnewt/EFI-Backup-Restore</span><br></pre></td></tr></table></figure>
+
+<h1 id="系统精简"><a href="#系统精简" class="headerlink" title="系统精简"></a>系统精简</h1><p>打开终端并输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">// 获取Su权限</span><br><span class="line">sudo su</span><br><span class="line">passwd root</span><br><span class="line">su root</span><br><span class="line"></span><br><span class="line">// 解除系统应用</span><br><span class="line">cd /</span><br><span class="line">mkdir RemovedFiles</span><br><span class="line">cd RemovedFiles</span><br><span class="line">mkdir System-Library-LaunchAgents</span><br><span class="line">FLA=/RemovedFiles/System-Library-LaunchAgents/</span><br><span class="line">cd /System/Library/LaunchAgents/</span><br><span class="line">mv com.apple.AddressBook*                      $FLA # 通讯录</span><br><span class="line">mv com.apple.CalendarAgent.plist               $FLA # 日历</span><br><span class="line">mv com.apple.iCloudUserNotifications.plist     $FLA # iCloud</span><br><span class="line">mv com.apple.icbaccountsd.plist                $FLA # iCloud</span><br><span class="line">mv com.apple.icloud.fmfd.plist                 $FLA # iCloud</span><br><span class="line">mv com.apple.cloud*                            $FLA # iCloud</span><br><span class="line">mv com.apple.imagent.plist                     $FLA # FaceTime</span><br><span class="line">mv com.apple.IMLoggingAgent.plist              $FLA # FaceTime</span><br><span class="line">mv com.apple.AirPlayUIAgent.plist              $FLA # Airplay</span><br><span class="line">mv com.apple.AirPortBaseStationAgent.plist     $FLA</span><br><span class="line">mv com.apple.bird.plist                        $FLA # iCloud 缓存</span><br><span class="line">mv com.apple.findmymacmessenger.plist          $FLA</span><br><span class="line">mv com.apple.gamed.plist                       $FLA # macOS 游戏中心</span><br><span class="line">mv com.apple.parentalcontrols.check.plist      $FLA # 家长控制</span><br><span class="line">mv com.apple.Maps.pushdaemon.plist             $FLA</span><br><span class="line">mv com.apple.ScreenReaderUIServer.plist        $FLA</span><br><span class="line">mv com.apple.speech.*                          $FLA</span><br><span class="line"></span><br><span class="line">cd /System/Library/LaunchDaemons/</span><br><span class="line">launchctl unload -wF com.apple.AirPlayXPCHelper.plist # AirPlay</span><br><span class="line">launchctl unload -wF com.apple.apsd.plist # Apple push notification</span><br><span class="line"></span><br><span class="line"># 应先在系统偏好设置中禁用位置服务，再执行该语句</span><br><span class="line">launchctl unload -wF com.apple.locationd.plist</span><br><span class="line"></span><br><span class="line">launchctl unload -wF com.apple.findmymac.plist</span><br><span class="line">launchctl unload -wF com.apple.findmymacmessenger.plist</span><br><span class="line"></span><br><span class="line">launchctl unload -wF com.apple.icloud.findmydeviced.plist</span><br><span class="line">launchctl unload -wF com.apple.cloudfamilyrestrictionsd-mac.plist </span><br><span class="line">launchctl unload -wF com.apple.mbicloudsetupd.plist</span><br><span class="line"></span><br><span class="line">launchctl unload -wF com.apple.dvdplayback.setregion.plist </span><br><span class="line"></span><br><span class="line">launchctl unload -wF com.apple.SubmitDiagInfo.plist </span><br><span class="line">launchctl unload -wF com.apple.CrashReporterSupportHelper.plist </span><br><span class="line">launchctl unload -wF com.apple.ReportCrash.Root.plist </span><br><span class="line">launchctl unload -wF com.apple.GameController.gamecontrollerd.plist</span><br><span class="line"></span><br><span class="line">launchctl unload -wF com.apple.spindump.plist</span><br><span class="line">launchctl unload -wF com.apple.metadata.mds.spindump.plist</span><br><span class="line"></span><br><span class="line"># Disable cups (common unix printing service)</span><br><span class="line">#launchctl unload -wF org.cups.cupsd.plist</span><br><span class="line">#launchctl unload -wF org.cups.cups-lpd.plist</span><br></pre></td></tr></table></figure>
+
+<h1 id="更换字体"><a href="#更换字体" class="headerlink" title="更换字体"></a>更换字体</h1><p>打开&#x2F;System&#x2F;Library&#x2F;Frameworks&#x2F;ApplicationServices.framework&#x2F;Frameworks&#x2F;CoreText.framework&#x2F;Resources&#x2F;DefaultFontFallbacks.plist，将STHeitiSC-Light进行修改即可，如冬青黑体简体中文W3为HiraginoSansGB-W3。</p>
+<h1 id="远程控制"><a href="#远程控制" class="headerlink" title="远程控制"></a>远程控制</h1><p>可通过iMessage，打开后选择或新建对方的信息会话，点击右上角后选择共享即可。</p>
+<h1 id="删除Launchpad的废图标"><a href="#删除Launchpad的废图标" class="headerlink" title="删除Launchpad的废图标"></a>删除Launchpad的废图标</h1><p>打开访达，选择前往-前往文件夹，输入<code>/private/var/folders</code>并回车。在本路径下搜索<code>com.apple.dock.launchpad</code>，双击进去可看到db。</p>
+<p>打开终端并输入以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 替换为刚才找到的db路径</span><br><span class="line">cd /private/var/folders/[...]/db</span><br><span class="line"></span><br><span class="line">sqlite3 db &quot;delete from apps where title=&#x27;[需要删除的应用名称]&#x27;;&quot;&amp;&amp;killall Dock</span><br></pre></td></tr></table></figure>
+
+<h1 id="Menu-Bar操作"><a href="#Menu-Bar操作" class="headerlink" title="Menu Bar操作"></a>Menu Bar操作</h1><p>按住Command键并拖动菜单栏图标可调整其顺序，拖出菜单栏则清除此图标。</p>
+<p>若菜单栏上没有图标，则转至<code>/System/Library/CoreServices/Menu Extras</code>，直接用鼠标将Eject.menu拖放至菜单栏即可。</p>
+<h1 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h1><p>Mac键盘与普通键盘键位对应如下表。 </p>
+<table>
+<thead>
+<tr>
+<th>Mac</th>
+<th>Windows</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Command</td>
+<td>Windows徽标键</td>
+</tr>
+<tr>
+<td>Option</td>
+<td>Alt键</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>空格（Backspace）键</td>
+</tr>
+<tr>
+<td>Return</td>
+<td>回车（Enter）键</td>
+</tr>
+</tbody></table>
+<p>替换Command和Control键后，常用快捷键对应如下（Space键即空格键，Win键即Windows徽标键）。</p>
+<table>
+<thead>
+<tr>
+<th>Mac</th>
+<th>Windows</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>常用</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Option</td>
+<td></td>
+<td>显示菜单隐藏项</td>
+</tr>
+<tr>
+<td>Command+C</td>
+<td>Ctrl+C</td>
+<td>复制</td>
+</tr>
+<tr>
+<td>Command+V‍</td>
+<td>Ctrl+V</td>
+<td>粘贴</td>
+</tr>
+<tr>
+<td>Command+Option+V</td>
+<td>Ctrl+Alt+V</td>
+<td>（Ctrl+C后）剪切</td>
+</tr>
+<tr>
+<td>Command+Delete</td>
+<td>Ctrl+Backspace</td>
+<td>删除</td>
+</tr>
+<tr>
+<td>Command+Z</td>
+<td>Ctrl+Z</td>
+<td>撤销</td>
+</tr>
+<tr>
+<td>Command+A</td>
+<td>Ctrl+A</td>
+<td>全选</td>
+</tr>
+<tr>
+<td>Command+F</td>
+<td>Ctrl+F</td>
+<td>全选</td>
+</tr>
+<tr>
+<td>Command+S</td>
+<td>Ctrl+S</td>
+<td>保存</td>
+</tr>
+<tr>
+<td><strong>截屏</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Option</td>
+<td></td>
+<td>维持比例</td>
+</tr>
+<tr>
+<td>Control</td>
+<td></td>
+<td>保存截图到剪切板</td>
+</tr>
+<tr>
+<td>Command+Shift+3</td>
+<td>Ctrl+Shift+3</td>
+<td>截取全部屏幕到文件</td>
+</tr>
+<tr>
+<td>Command+Shift+Control+3</td>
+<td>Ctrl+Shift+Win+3</td>
+<td>截取全部屏幕到剪切板</td>
+</tr>
+<tr>
+<td>Command+Shift+4</td>
+<td>Ctrl+Shift+4</td>
+<td>截取所选屏幕区域到一个文件</td>
+</tr>
+<tr>
+<td>Command+Shift+Control+4</td>
+<td>Ctrl+Shift+Win+4</td>
+<td>截取所选屏幕区域到剪贴板</td>
+</tr>
+<tr>
+<td>Command+Shift+Control+Space+4</td>
+<td>Ctrl+Shift+Win+Space+4</td>
+<td>仅捕捉一个窗到剪贴板</td>
+</tr>
+<tr>
+<td><strong>文件</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Control+Command+I</td>
+<td></td>
+<td>查看多个文件简介</td>
+</tr>
+<tr>
+<td>Command+I</td>
+<td></td>
+<td>查看单个文件简介</td>
+</tr>
+<tr>
+<td>Command+Shift+N</td>
+<td>Ctrl+Shift+N</td>
+<td>新建文件夹</td>
+</tr>
+<tr>
+<td>Command+Shift+G</td>
+<td>Ctrl+Shift+G</td>
+<td>输入文件路径</td>
+</tr>
+<tr>
+<td>Command+Up</td>
+<td>Ctrl+Up</td>
+<td>回到上级目录</td>
+</tr>
+<tr>
+<td>Command+Down</td>
+<td>Ctrl+Down</td>
+<td>进入下级目录（打开文件）</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Space</td>
+<td>预览</td>
+</tr>
+<tr>
+<td>Command+O</td>
+<td>Ctrl+O</td>
+<td>打开所选文件</td>
+</tr>
+<tr>
+<td>Command+Shift+Delete</td>
+<td>Ctrl+Shift+Backspace</td>
+<td>清倒废纸篓</td>
+</tr>
+</tbody></table>
+<h1 id="临时禁止通知中心弹出通知"><a href="#临时禁止通知中心弹出通知" class="headerlink" title="临时禁止通知中心弹出通知"></a>临时禁止通知中心弹出通知</h1><p>按住<code>Option</code>后点击右上角通知中心图标即可。</p>
+<h1 id="把PNG转成JPG"><a href="#把PNG转成JPG" class="headerlink" title="把PNG转成JPG"></a>把PNG转成JPG</h1><p>直接修改后缀名即可。</p>
+<h1 id="触控板设置三指拖移"><a href="#触控板设置三指拖移" class="headerlink" title="触控板设置三指拖移"></a>触控板设置三指拖移</h1><p>进入系统偏好设置-辅助功能-鼠标与触控板-触控板选项…，勾选启用拖移并选择三指拖移即可。</p>
+<h1 id="归类文件"><a href="#归类文件" class="headerlink" title="归类文件"></a>归类文件</h1><p>选中多个文件，右键选择<code>使用多个文件新建文件夹</code>。</p>
+<h1 id="显示隐藏文件"><a href="#显示隐藏文件" class="headerlink" title="显示隐藏文件"></a>显示隐藏文件</h1><p>利用<code>command（⌘）+shift+.</code>即可。</p>
+<p>也可打开终端，输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 显示隐藏文件</span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles -bool true</span><br><span class="line">// 或defaults write com.apple.finder AppleShowAllFiles YES</span><br><span class="line"></span><br><span class="line">// 隐藏隐藏文件</span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles -bool false</span><br><span class="line">// 或defaults write com.apple.finder AppleShowAllFiles NO</span><br></pre></td></tr></table></figure>
+
+<h1 id="删除所有短信"><a href="#删除所有短信" class="headerlink" title="删除所有短信"></a>删除所有短信</h1><p>设置短信为保留30天，然后设置日期，拨动往后的几个月份直至短信被删除即可。</p>
+<h1 id="QQ功能扩展"><a href="#QQ功能扩展" class="headerlink" title="QQ功能扩展"></a>QQ功能扩展</h1><p>下载以下仓库，解压后在终端运行Other文件夹中的<code>install.sh</code>即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/TKkk-iOSer/QQPlugin-macOS/tree/master</span><br></pre></td></tr></table></figure>
+
+<h1 id="微信功能扩展"><a href="#微信功能扩展" class="headerlink" title="微信功能扩展"></a>微信功能扩展</h1><p>该插件已造成封号，不推荐使用。</p>
+<p>在终端输入以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- -L https://raw.githubusercontent.com/lmk123/oh-my-wechat/master/install.sh | bash -s</span><br></pre></td></tr></table></figure>
+
+<p>项目地址如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/MustangYM/WeChatExtension-ForMac</span><br></pre></td></tr></table></figure>
+
+<p>安装扩展后可以多开微信，在命令行输入以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open -n /Applications/WeChat.app</span><br></pre></td></tr></table></figure>
+
+<h1 id="Quick-Look插件"><a href="#Quick-Look插件" class="headerlink" title="Quick Look插件"></a>Quick Look插件</h1><p>通过安装Quick Look插件，可以在点击空格预览的时候有更多功能，仓库如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/sindresorhus/quick-look-plugins</span><br></pre></td></tr></table></figure>
+
+<p>在终端通过以下命令进行安装，常用插件有qlcolorcode、qlstephen、qlmarkdown、quicklook-json、qlimagesize、suspicious-package等。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install [插件名]</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Xcode-SDK文件"><a href="#Xcode-SDK文件" class="headerlink" title="Xcode SDK文件"></a>Xcode SDK文件</h1><p>用于为Xcode提供旧版SDK文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/phracker/MacOSX-SDKs</span><br></pre></td></tr></table></figure>
+
+<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="构建Xcode时提示「xcode-select-error-tool-‘xcodebuild’-requires-Xcode-but-active-developer-directory」"><a href="#构建Xcode时提示「xcode-select-error-tool-‘xcodebuild’-requires-Xcode-but-active-developer-directory」" class="headerlink" title="构建Xcode时提示「xcode-select: error: tool ‘xcodebuild’ requires Xcode, but active developer directory」"></a>构建Xcode时提示「xcode-select: error: tool ‘xcodebuild’ requires Xcode, but active developer directory」</h2><p>在终端输入以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer/ </span><br><span class="line">xcode-select --print-path</span><br><span class="line">// 输出/Applications/Xcode.app/Contents/Developer</span><br></pre></td></tr></table></figure>
+
+<h2 id="App在Catalina下提示已损坏"><a href="#App在Catalina下提示已损坏" class="headerlink" title="App在Catalina下提示已损坏"></a>App在Catalina下提示已损坏</h2><p>在终端输入以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// /Applications/xxxx.app换为所需App路径，推荐直接将app文件拖入终端</span><br><span class="line">sudo xattr -d com.apple.quarantine /Applications/xxxx.app</span><br></pre></td></tr></table></figure>
+
+<h2 id="因AppleGFXHDADriver重启"><a href="#因AppleGFXHDADriver重启" class="headerlink" title="因AppleGFXHDADriver重启"></a>因AppleGFXHDADriver重启</h2><p>将SLE下的AppleGFXHDA.kext删除或更改后缀即可。</p>
+<h2 id="旧Mac电脑无法开启高分辨率"><a href="#旧Mac电脑无法开启高分辨率" class="headerlink" title="旧Mac电脑无法开启高分辨率"></a>旧Mac电脑无法开启高分辨率</h2><p>可使用mac-pixel-clock-patch-V2补丁，仓库如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/Floris497/mac-pixel-clock-patch-V2</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="为什么创建点下划线-文件，如何避免使用它们？"><a href="#为什么创建点下划线-文件，如何避免使用它们？" class="headerlink" title="为什么创建点下划线._文件，如何避免使用它们？"></a><code>为什么创建点下划线._文件，如何避免使用它们？</code></h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://qastack.cn/apple/14980/why-are-dot-underscore-_-files-created-and-how-can-i-avoid-them</span><br></pre></td></tr></table></figure>
+
+<h2 id="ItChat-系列-0-初识-ItChat"><a href="#ItChat-系列-0-初识-ItChat" class="headerlink" title="ItChat 系列 0 - 初识 ItChat"></a>ItChat 系列 0 - 初识 ItChat</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.playpi.org/2019020701.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="在Mac系统中如何显示和隐藏文件"><a href="#在Mac系统中如何显示和隐藏文件" class="headerlink" title="在Mac系统中如何显示和隐藏文件"></a>在Mac系统中如何显示和隐藏文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.jianshu.com/p/a1c2495b02aa</span><br></pre></td></tr></table></figure>
+
+<h2 id="如何删除GIT中的-DS-Store"><a href="#如何删除GIT中的-DS-Store" class="headerlink" title="如何删除GIT中的.DS_Store"></a>如何删除GIT中的.DS_Store</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.jianshu.com/p/fdaa8be7f6c3</span><br></pre></td></tr></table></figure>
+
+<h2 id="Mac-重装系统教程-二-：网络在线重装"><a href="#Mac-重装系统教程-二-：网络在线重装" class="headerlink" title="Mac 重装系统教程(二)：网络在线重装"></a>Mac 重装系统教程(二)：网络在线重装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://m.sohu.com/a/325579861_654244</span><br></pre></td></tr></table></figure>
+
+<h2 id="OS-X-默认字体的讨论与修改方法"><a href="#OS-X-默认字体的讨论与修改方法" class="headerlink" title="OS X 默认字体的讨论与修改方法"></a>OS X 默认字体的讨论与修改方法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.royli.dev/2018/os-x-mo-ren-zi-ti-de-tao-lun-yu-xiu-gai-fang-fa-2d38abb1</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除启动台（LaunchPad）残留的图标"><a href="#删除启动台（LaunchPad）残留的图标" class="headerlink" title="删除启动台（LaunchPad）残留的图标"></a>删除启动台（LaunchPad）残留的图标</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/55866195</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/How-To-Build-A-Blog.html" rel="prev" title="个人博客的搭建">
+      <i class="fa fa-chevron-left"></i> 个人博客的搭建
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/Git-Installation.html" rel="next" title="Git和Github的安装与使用">
+      Git和Github的安装与使用 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC"><span class="nav-text">查看系统版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E7%BD%91%E7%BB%9C%E5%9C%A8%E7%BA%BF%E9%87%8D%E8%A3%85"><span class="nav-text">系统网络在线重装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BF%E9%97%AEMac%E5%85%B1%E4%BA%AB"><span class="nav-text">访问Mac共享</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%A7%E6%AC%BEMac%E5%AE%89%E8%A3%85Catalina"><span class="nav-text">旧款Mac安装Catalina</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BDBoot-Camp%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F"><span class="nav-text">直接下载Boot Camp驱动程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E5%85%A8%E6%A8%A1%E5%BC%8F%E4%B8%8B%E8%AF%BB%E5%8F%96EFI%E5%88%86%E5%8C%BA"><span class="nav-text">安全模式下读取EFI分区</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5ZJU%E6%9C%89%E7%BA%BF%E7%BD%91%E7%BB%9C"><span class="nav-text">连接ZJU有线网络</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%87%8D%E7%BD%AE%E8%93%9D%E7%89%99%E9%85%8D%E7%BD%AE"><span class="nav-text">重置蓝牙配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%87%E4%BB%BDEFI%E5%88%86%E5%8C%BA%E8%84%9A%E6%9C%AC"><span class="nav-text">备份EFI分区脚本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E7%B2%BE%E7%AE%80"><span class="nav-text">系统精简</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E5%AD%97%E4%BD%93"><span class="nav-text">更换字体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="nav-text">远程控制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%A0%E9%99%A4Launchpad%E7%9A%84%E5%BA%9F%E5%9B%BE%E6%A0%87"><span class="nav-text">删除Launchpad的废图标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Menu-Bar%E6%93%8D%E4%BD%9C"><span class="nav-text">Menu Bar操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-text">常用快捷键</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%B4%E6%97%B6%E7%A6%81%E6%AD%A2%E9%80%9A%E7%9F%A5%E4%B8%AD%E5%BF%83%E5%BC%B9%E5%87%BA%E9%80%9A%E7%9F%A5"><span class="nav-text">临时禁止通知中心弹出通知</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%8APNG%E8%BD%AC%E6%88%90JPG"><span class="nav-text">把PNG转成JPG</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A6%E6%8E%A7%E6%9D%BF%E8%AE%BE%E7%BD%AE%E4%B8%89%E6%8C%87%E6%8B%96%E7%A7%BB"><span class="nav-text">触控板设置三指拖移</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BD%92%E7%B1%BB%E6%96%87%E4%BB%B6"><span class="nav-text">归类文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6"><span class="nav-text">显示隐藏文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89%E7%9F%AD%E4%BF%A1"><span class="nav-text">删除所有短信</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QQ%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95"><span class="nav-text">QQ功能扩展</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95"><span class="nav-text">微信功能扩展</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Quick-Look%E6%8F%92%E4%BB%B6"><span class="nav-text">Quick Look插件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Xcode-SDK%E6%96%87%E4%BB%B6"><span class="nav-text">Xcode SDK文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%84%E5%BB%BAXcode%E6%97%B6%E6%8F%90%E7%A4%BA%E3%80%8Cxcode-select-error-tool-%E2%80%98xcodebuild%E2%80%99-requires-Xcode-but-active-developer-directory%E3%80%8D"><span class="nav-text">构建Xcode时提示「xcode-select: error: tool ‘xcodebuild’ requires Xcode, but active developer directory」</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#App%E5%9C%A8Catalina%E4%B8%8B%E6%8F%90%E7%A4%BA%E5%B7%B2%E6%8D%9F%E5%9D%8F"><span class="nav-text">App在Catalina下提示已损坏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%A0AppleGFXHDADriver%E9%87%8D%E5%90%AF"><span class="nav-text">因AppleGFXHDADriver重启</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A7Mac%E7%94%B5%E8%84%91%E6%97%A0%E6%B3%95%E5%BC%80%E5%90%AF%E9%AB%98%E5%88%86%E8%BE%A8%E7%8E%87"><span class="nav-text">旧Mac电脑无法开启高分辨率</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%88%9B%E5%BB%BA%E7%82%B9%E4%B8%8B%E5%88%92%E7%BA%BF-%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E4%BD%BF%E7%94%A8%E5%AE%83%E4%BB%AC%EF%BC%9F"><span class="nav-text">为什么创建点下划线._文件，如何避免使用它们？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ItChat-%E7%B3%BB%E5%88%97-0-%E5%88%9D%E8%AF%86-ItChat"><span class="nav-text">ItChat 系列 0 - 初识 ItChat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8Mac%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%A6%82%E4%BD%95%E6%98%BE%E7%A4%BA%E5%92%8C%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6"><span class="nav-text">在Mac系统中如何显示和隐藏文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4GIT%E4%B8%AD%E7%9A%84-DS-Store"><span class="nav-text">如何删除GIT中的.DS_Store</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac-%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E6%95%99%E7%A8%8B-%E4%BA%8C-%EF%BC%9A%E7%BD%91%E7%BB%9C%E5%9C%A8%E7%BA%BF%E9%87%8D%E8%A3%85"><span class="nav-text">Mac 重装系统教程(二)：网络在线重装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OS-X-%E9%BB%98%E8%AE%A4%E5%AD%97%E4%BD%93%E7%9A%84%E8%AE%A8%E8%AE%BA%E4%B8%8E%E4%BF%AE%E6%94%B9%E6%96%B9%E6%B3%95"><span class="nav-text">OS X 默认字体的讨论与修改方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E5%90%AF%E5%8A%A8%E5%8F%B0%EF%BC%88LaunchPad%EF%BC%89%E6%AE%8B%E7%95%99%E7%9A%84%E5%9B%BE%E6%A0%87"><span class="nav-text">删除启动台（LaunchPad）残留的图标</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

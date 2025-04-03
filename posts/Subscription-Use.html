@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="微信号与公众号开发可以为其提供新的功能。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信号与公众号使用指南">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/Subscription-Use.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="微信号与公众号开发可以为其提供新的功能。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/Subscription-Use/topic.jpg">
+<meta property="article:published_time" content="2020-10-30T18:20:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.577Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/Subscription-Use/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/Subscription-Use.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>微信号与公众号使用指南 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/Subscription-Use.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          微信号与公众号使用指南
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-10-31 02:20:29" itemprop="dateCreated datePublished" datetime="2020-10-31T02:20:29+08:00">2020-10-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Skill/" itemprop="url" rel="index"><span itemprop="name">Skill</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/Subscription-Use/topic.jpg"></p>
+<p>微信号与公众号开发可以为其提供新的功能。</p>
+<span id="more"></span>
+
+<h1 id="微信号"><a href="#微信号" class="headerlink" title="微信号"></a>微信号</h1><h2 id="微信机器人"><a href="#微信机器人" class="headerlink" title="微信机器人"></a>微信机器人</h2><h3 id="Wechaty"><a href="#Wechaty" class="headerlink" title="Wechaty"></a>Wechaty</h3><p>支持多种登录方式，目前可以正常使用。</p>
+<h4 id="nodejs版"><a href="#nodejs版" class="headerlink" title="nodejs版"></a>nodejs版</h4><h5 id="新手配置"><a href="#新手配置" class="headerlink" title="新手配置"></a>新手配置</h5><p>可直接使用配置好的Google Cloud Shell或Gitpod环境，如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Google Cloud Shell</span><br><span class="line">https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fwechaty%2Fwechaty-getting-started&amp;cloudshell_open_in_editor=examples/ding-dong-bot.ts&amp;cloudshell_workspace=.&amp;cloudshell_tutorial=examples/tutorials/google-cloud-shell-tutorial.md</span><br><span class="line"></span><br><span class="line"># Gitpod</span><br><span class="line">https://gitpod.io/#https://github.com/wechaty/wechaty-getting-started</span><br></pre></td></tr></table></figure>
+
+<h5 id="配置到服务器"><a href="#配置到服务器" class="headerlink" title="配置到服务器"></a>配置到服务器</h5><p>建议在Linux环境下运行，需要提前安装node和npm。</p>
+<p>在终端输入以下命令以克隆新手仓库。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/wechaty/wechaty-getting-started</span><br><span class="line">cd wechaty-getting-started</span><br></pre></td></tr></table></figure>
+
+<p>输入以下命令以安装缺少的依赖。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget</span><br></pre></td></tr></table></figure>
+
+<p>输入以下命令即可启动。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export WECHATY_PUPPET=wechaty-puppet-wechat</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
+
+<h4 id="python版"><a href="#python版" class="headerlink" title="python版"></a>python版</h4><p>在终端输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 克隆仓库</span><br><span class="line">git clone https://github.com/wechaty/python-wechaty-getting-started</span><br><span class="line">cd python-wechaty-getting-started</span><br><span class="line"></span><br><span class="line"># 安装依赖</span><br><span class="line">pip install -r requirements.txt</span><br><span class="line"># 或直接pip install wechaty</span><br><span class="line"></span><br><span class="line"># 运行</span><br><span class="line">export WECHATY_PUPPET_SERVICE_TOKEN=python-wechaty-uos-token</span><br><span class="line">export WECHATY_PUPPET=wechaty-puppet-wechat</span><br><span class="line">python examples/ding-dong-bot.py</span><br></pre></td></tr></table></figure>
+
+<h4 id="编程"><a href="#编程" class="headerlink" title="编程"></a>编程</h4><h5 id="API"><a href="#API" class="headerlink" title="API"></a>API</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://wechaty.github.io/wechaty/</span><br></pre></td></tr></table></figure>
+
+<h3 id="ItChat"><a href="#ItChat" class="headerlink" title="ItChat"></a>ItChat</h3><p>用于与微信连接。</p>
+<p>注意，该库使用微信网页版作为接口。若登录时提示<code>為了你的帳號安全，此 WeChat ID 不能登入 WeChat 網頁版</code>，则无法使用此库。</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>可通过以下命令安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install itchat</span><br></pre></td></tr></table></figure>
+
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><h5 id="自动回复"><a href="#自动回复" class="headerlink" title="自动回复"></a>自动回复</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">#-*-coding:utf-8 -*-</span><br><span class="line">import itchat, re</span><br><span class="line">from itchat.content import *</span><br><span class="line">from time import sleep</span><br><span class="line">import random</span><br><span class="line"></span><br><span class="line"># 注册消息类型为文本（即只监控文本消息，不监控语音/图片/表情包/文件等）</span><br><span class="line"># isGroupChat=True开启群聊模式，即只监控群聊内容 (不开启则只监控个人聊天)</span><br><span class="line">@itchat.msg_register ([TEXT], isGroupChat=True)</span><br><span class="line"># @itchat.msg_register ([TEXT])</span><br><span class="line">def text_reply(msg):</span><br><span class="line">    # msg是消息体，msg[&#x27;Text&#x27;]用来获取消息内容 </span><br><span class="line">    # 第一个单引号中的内容是关键词，使用正则匹配，可以自行更改，使用.*表示任意内容</span><br><span class="line">    # 若使用中文，2.x版本的Python会报错，需要u前缀表示unicode编码 </span><br><span class="line">    message = msg [&#x27;Text&#x27;]</span><br><span class="line">    print (message)</span><br><span class="line">    match = re.search (&#x27;.*&#x27;, message)</span><br><span class="line">    # match = re.search (u&#x27;年 | 春 | 快乐&#x27;, message)</span><br><span class="line">    # 随机等待一定秒数再回复</span><br><span class="line">    second = random.randint (1,10)</span><br><span class="line">    sleep (second)</span><br><span class="line">    if match:</span><br><span class="line">      # msg[&#x27;FromUserName&#x27;]用来获取用户名，发送消息给对方 </span><br><span class="line">      from_user_name = msg [&#x27;FromUserName&#x27;]</span><br><span class="line">      print (from_user_name)</span><br><span class="line">      itchat.send ((&#x27;====test message&#x27;), from_user_name)</span><br><span class="line">      # 第一个单引号中的内容是回复的内容，可以自行更改 </span><br><span class="line"># 热启动，退出一定时间内重新登录不需要扫码 (把二维码图片存下来，下次接着使用)</span><br><span class="line">itchat.auto_login (hotReload=True)</span><br><span class="line"># 开启命令行的二维码 </span><br><span class="line">itchat.auto_login (enableCmdQR=True)</span><br><span class="line"># 部分系统可能字幅宽度有出入，可以通过将enableCmdQR赋值为特定的倍数进行调整</span><br><span class="line"># 如部分的linux系统，块字符的宽度为一个字符（正常应为两字符），故赋值为 2</span><br><span class="line"># itchat.auto_login (enableCmdQR=2)</span><br><span class="line"># 默认控制台背景色为黑色，若背景色为白色，可以将enableCmdQR赋值为负值 </span><br><span class="line">itchat.auto_login (enableCmdQR=-1)</span><br><span class="line"># 用于Mac</span><br><span class="line">itchat.auto_login (enableCmdQR=-2)</span><br><span class="line"># 运行 </span><br><span class="line">itchat.run ()</span><br></pre></td></tr></table></figure>
+
+<h5 id="接入机器人"><a href="#接入机器人" class="headerlink" title="接入机器人"></a>接入机器人</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">#-*-coding:utf-8 -*-</span><br><span class="line">import itchat, requests</span><br><span class="line">from itchat.content import *</span><br><span class="line">from time import sleep</span><br><span class="line">import random</span><br><span class="line"># 机器人的 apikey</span><br><span class="line">APIKEY = &#x27;376cb2ca51d542c6b2e660f3c9ea3754&#x27;</span><br><span class="line"></span><br><span class="line"># 封装一个根据内容调用机器人接口，返回回复的方法 </span><br><span class="line">def get_response(msg):</span><br><span class="line">    # 构造了要发送给服务器的数据 </span><br><span class="line">    apiUrl = &#x27;http://www.tuling123.com/openapi/api&#x27;</span><br><span class="line">    data = &#123;</span><br><span class="line">        &#x27;key&#x27;    : APIKEY,</span><br><span class="line">        &#x27;info&#x27;   : msg,</span><br><span class="line">        &#x27;userid&#x27; : &#x27;wechat-robot&#x27;,</span><br><span class="line">    &#125;</span><br><span class="line">    try:</span><br><span class="line">        r = requests.post (apiUrl, data=data).json ()</span><br><span class="line">        # 字典的get方法在字典没有&#x27;text&#x27;值的时候会返回None而不会抛出异常 </span><br><span class="line">        return r.get (&#x27;text&#x27;)</span><br><span class="line">    # 为了防止服务器没有正常响应导致程序异常退出，用try-except捕获异常 </span><br><span class="line">    # 如果服务器没能正常交互（返回json或无法连接），进入下面的return</span><br><span class="line">    except Exception,err:</span><br><span class="line">        # 打印一下错误信息 </span><br><span class="line">        print (err)</span><br><span class="line">        # 将会返回一个None</span><br><span class="line">        return</span><br><span class="line"></span><br><span class="line"># @itchat.msg_register ([TEXT], isGroupChat=True)</span><br><span class="line">@itchat.msg_register ([TEXT])</span><br><span class="line">def tuling_reply(msg):</span><br><span class="line">    message = msg [&#x27;Text&#x27;]</span><br><span class="line">    print (message</span><br><span class="line">    second = random.randint (1,10)</span><br><span class="line">    sleep (second)</span><br><span class="line">    # 为了保证在图灵apikey出现问题的时候仍旧可以回复，设置一个默认回复 </span><br><span class="line">    defaultReply = &#x27;I received:&#x27; + message</span><br><span class="line">    # 如果图灵apikey出现问题，那么reply将会是None</span><br><span class="line">    reply = get_response (message)</span><br><span class="line">    # a or b指如果a有内容则返回a，否则返回b</span><br><span class="line">    return reply or defaultReply</span><br><span class="line"></span><br><span class="line">itchat.auto_login (hotReload=True)</span><br><span class="line">itchat.auto_login (enableCmdQR=True)</span><br><span class="line">itchat.run ()</span><br></pre></td></tr></table></figure>
+
+<h1 id="公众号"><a href="#公众号" class="headerlink" title="公众号"></a>公众号</h1><h2 id="图文排版"><a href="#图文排版" class="headerlink" title="图文排版"></a>图文排版</h2><h3 id="编辑器自动保存"><a href="#编辑器自动保存" class="headerlink" title="编辑器自动保存"></a>编辑器自动保存</h3><p>点击Chrome浏览器的TamperMonkey扩展程序，选择<code>添加新脚本</code>，复制以下内容并保存即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// ==UserScript==</span><br><span class="line">// @name         微信推文编辑器自动保存</span><br><span class="line">// @version      0.1</span><br><span class="line">// @description  微信推文编辑器自动保存</span><br><span class="line">// @author       内咸禾方皇</span><br><span class="line">// @match        https://mp.weixin.qq.com/*</span><br><span class="line">// @grant        none</span><br><span class="line">// @run-at       document-end</span><br><span class="line">// ==/UserScript==</span><br><span class="line">(function() &#123;</span><br><span class="line">    &#x27;use strict&#x27;;</span><br><span class="line">    var time = window.setInterval(function()&#123;document.querySelector(&quot;#js_submit&quot;).click()&#125;,60000);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<h3 id="Markdown-to-公众号一键转换器"><a href="#Markdown-to-公众号一键转换器" class="headerlink" title="Markdown to 公众号一键转换器"></a>Markdown to 公众号一键转换器</h3><p>可用Markdown语法进行公众号排版。打开以下链接，完成编写后点击转换，然后将预览区中的内容复制到微信图文编辑器即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://knb.im/mp/</span><br></pre></td></tr></table></figure>
+
+<h2 id="公众号开发"><a href="#公众号开发" class="headerlink" title="公众号开发"></a>公众号开发</h2><h3 id="服务器绑定"><a href="#服务器绑定" class="headerlink" title="服务器绑定"></a>服务器绑定</h3><p>服务器用于处理发送到公众号的消息请求，并完成消息发送。</p>
+<p>准备好VPS后通过SSH连接，以CentOS为例，进入root用户后执行以下命令以安装必要依赖。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">yum install vim</span><br><span class="line">yum install libxml2</span><br><span class="line">yum install libxslt</span><br><span class="line">yum install python</span><br><span class="line">pip install --upgrade pip</span><br><span class="line"></span><br><span class="line"># 对于python2</span><br><span class="line">pip install web.py==0.51</span><br><span class="line"># 对于python3</span><br><span class="line">pip install web.py</span><br><span class="line"></span><br><span class="line">pip install lxml</span><br></pre></td></tr></table></figure>
+
+<p>完成后输入以下命令新建py文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim main.py</span><br></pre></td></tr></table></figure>
+
+<p>内容如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># filename: main.py</span><br><span class="line">import web</span><br><span class="line">from handle import Handle</span><br><span class="line"></span><br><span class="line">urls = (</span><br><span class="line">    &#x27;/wx&#x27;, &#x27;Handle&#x27;,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    app = web.application(urls, globals())</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure>
+
+<p>保存后继续新建文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim handle.py</span><br></pre></td></tr></table></figure>
+
+<p>内容如下，其中token可任意填写。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># filename: handle.py</span><br><span class="line"></span><br><span class="line">import hashlib</span><br><span class="line">import web</span><br><span class="line"></span><br><span class="line">class Handle(object):</span><br><span class="line">    def GET(self):</span><br><span class="line">        try:</span><br><span class="line">            data = web.input()</span><br><span class="line">            if len(data) == 0:</span><br><span class="line">                return &quot;hello, this is handle view&quot;</span><br><span class="line">            signature = data.signature</span><br><span class="line">            timestamp = data.timestamp</span><br><span class="line">            nonce = data.nonce</span><br><span class="line">            echostr = data.echostr</span><br><span class="line">            token = &quot;xxxx&quot; #可任意</span><br><span class="line"></span><br><span class="line">            list = [token, timestamp, nonce]</span><br><span class="line">            list.sort()</span><br><span class="line">            sha1 = hashlib.sha1()</span><br><span class="line">            map(sha1.update, list)</span><br><span class="line">            hashcode = sha1.hexdigest()</span><br><span class="line">            print &quot;handle/GET func: hashcode, signature: &quot;, hashcode, signature</span><br><span class="line">            if hashcode == signature:</span><br><span class="line">                return echostr</span><br><span class="line">            else:</span><br><span class="line">                return &quot;&quot;</span><br><span class="line">        except Exception, Argument:</span><br><span class="line">            return Argument</span><br></pre></td></tr></table></figure>
+
+<p>保存后运行以下命令执行脚本。如果提示socket错误，则需要开启80端口。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python main.py 80</span><br></pre></td></tr></table></figure>
+
+<p>在浏览器输入以下链接以访问刚才运行脚本所搭建的网页，若显示<code>hello, this is handle view</code>，则成功。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://[外网IP]/wx</span><br></pre></td></tr></table></figure>
+
+<p>进入公众号后台并选择开发-基本配置-修改配置，内容如下，然后提交即可。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>URL</td>
+<td>http:&#x2F;&#x2F;[外网IP]&#x2F;wx</td>
+</tr>
+<tr>
+<td>Token</td>
+<td>刚才填写的内容</td>
+</tr>
+<tr>
+<td>消息加解密方式</td>
+<td>明文模式</td>
+</tr>
+</tbody></table>
+<h1 id="小游戏"><a href="#小游戏" class="headerlink" title="小游戏"></a>小游戏</h1><h2 id="跳一跳脚本"><a href="#跳一跳脚本" class="headerlink" title="跳一跳脚本"></a>跳一跳脚本</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/wangshub/wechat_jump_game</span><br><span class="line">https://www.jianshu.com/p/ff973a5910ae</span><br></pre></td></tr></table></figure>
+
+<h3 id="WebDriverAgent"><a href="#WebDriverAgent" class="headerlink" title="WebDriverAgent"></a>WebDriverAgent</h3><h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><p>在终端输入以下命令以下载仓库并切换路径。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/appium/WebDriverAgent</span><br><span class="line">cd WebDriverAgent</span><br></pre></td></tr></table></figure>
+
+<details>
+<summary>【过时】旧版的附加步骤</summary>
+
+<p>在终端输入以下命令，以安装Carthage并运行初始化脚本。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install carthage</span><br><span class="line">./Scripts/bootstrap.sh</span><br></pre></td></tr></table></figure>
+</details>
+
+<p>双击打开WebDriverAgent.xcodeproj，切换到WebDriverAgentRunner，选择真机并运行。若跳出签名问题，则添加签名并更改App的BundleID。</p>
+<h4 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h4><h5 id="Building-for-iOS-Simulator-but-the-linked-and-embedded-framework-‘My-framework’-was-built-for-iOS-iOS-Simulator"><a href="#Building-for-iOS-Simulator-but-the-linked-and-embedded-framework-‘My-framework’-was-built-for-iOS-iOS-Simulator" class="headerlink" title="Building for iOS Simulator, but the linked and embedded framework ‘My. framework’ was built for iOS + iOS Simulator."></a>Building for iOS Simulator, but the linked and embedded framework ‘My. framework’ was built for iOS + iOS Simulator.</h5><p>点击工程文件，选择TARGETS下的App项目，在Build Settings下将Validate Workspace设置为Yes。</p>
+<h5 id="‘assign’-property-of-object-type-may-become-a-dangling-reference-consider-using-‘unsafe-unretained’"><a href="#‘assign’-property-of-object-type-may-become-a-dangling-reference-consider-using-‘unsafe-unretained’" class="headerlink" title="‘assign’ property of object type may become a dangling reference; consider using ‘unsafe_unretained’"></a>‘assign’ property of object type may become a dangling reference; consider using ‘unsafe_unretained’</h5><p>将assign改为strong即可。</p>
+<h1 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h1><h2 id="提取表情包"><a href="#提取表情包" class="headerlink" title="提取表情包"></a>提取表情包</h2><p>给公众号发表情包，在公众号后台即可下载。也可发送到企业微信，在企业微信客户端可下载。</p>
+<h2 id="下载小程序视频"><a href="#下载小程序视频" class="headerlink" title="下载小程序视频"></a>下载小程序视频</h2><p>在电脑下载并启动Fiddler，然后打开电脑版微信，播放小程序中的视频。打开Fiddler并搜索mp4&#x2F;flv&#x2F;avi即可。若无法找到，则可能是视频被分段，并根据m3u8播放列表依次播放，因此只需找到m3u8链接并下载即可。</p>
+<h2 id="微信人工客服"><a href="#微信人工客服" class="headerlink" title="微信人工客服"></a>微信人工客服</h2><p>拨打<code>4006700700</code>，按<code>2</code>。</p>
+<h2 id="微信找回删除了的好友的微信号"><a href="#微信找回删除了的好友的微信号" class="headerlink" title="微信找回删除了的好友的微信号"></a>微信找回删除了的好友的微信号</h2><p>有转账记录即可。点击我-支付-钱包-账单，找到对应好友的转账记录，点击进去后选择申请转账电子凭证，在电子凭证里即可看到微信号。</p>
+<h2 id="批量删除好友"><a href="#批量删除好友" class="headerlink" title="批量删除好友"></a>批量删除好友</h2><p>点击通讯录-标签-新增，将需要删除的好友添加进来，然后在搜索框搜索标签的名称，点击更多联系人-管理，即可批量选择好友删除。</p>
+<p>也可用电脑端，直接在通讯录点击通讯录管理即可。</p>
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="公众号开发指南"><a href="#公众号开发指南" class="headerlink" title="公众号开发指南"></a>公众号开发指南</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Getting_Started_Guide.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="ATX-文档-iOS-真机如何安装-WebDriverAgent"><a href="#ATX-文档-iOS-真机如何安装-WebDriverAgent" class="headerlink" title="ATX 文档 - iOS 真机如何安装 WebDriverAgent"></a>ATX 文档 - iOS 真机如何安装 WebDriverAgent</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://testerhome.com/topics/7220</span><br></pre></td></tr></table></figure>
+
+<h2 id="Building-for-iOS-Simulator-but-the-linked-framework-‘-framework’-was-built-for-iOS"><a href="#Building-for-iOS-Simulator-but-the-linked-framework-‘-framework’-was-built-for-iOS" class="headerlink" title="Building for iOS Simulator, but the linked framework ‘**.framework’ was built for iOS"></a>Building for iOS Simulator, but the linked framework ‘**.framework’ was built for iOS</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://stackoverflow.com/questions/63267897/building-for-ios-simulator-but-the-linked-framework-framework-was-built</span><br></pre></td></tr></table></figure>
+
+<h2 id="WebDriverAgent常见错误"><a href="#WebDriverAgent常见错误" class="headerlink" title="WebDriverAgent常见错误"></a>WebDriverAgent常见错误</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.jianshu.com/p/d4609fbb6a87</span><br></pre></td></tr></table></figure>
+
+<h2 id="ubuntu下运行Puppeteer"><a href="#ubuntu下运行Puppeteer" class="headerlink" title="ubuntu下运行Puppeteer"></a>ubuntu下运行Puppeteer</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.cnblogs.com/mokliu/p/12401265.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="python-wechaty-免费微信机器人"><a href="#python-wechaty-免费微信机器人" class="headerlink" title="python-wechaty: 免费微信机器人"></a>python-wechaty: 免费微信机器人</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/365629085</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/How-To-Use-Kindle.html" rel="prev" title="Kindle的使用">
+      <i class="fa fa-chevron-left"></i> Kindle的使用
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/Useful-Tools-For-Programmers.html" rel="next" title="程序员工具集合及使用">
+      程序员工具集合及使用 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1%E5%8F%B7"><span class="nav-text">微信号</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1%E6%9C%BA%E5%99%A8%E4%BA%BA"><span class="nav-text">微信机器人</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Wechaty"><span class="nav-text">Wechaty</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nodejs%E7%89%88"><span class="nav-text">nodejs版</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%96%B0%E6%89%8B%E9%85%8D%E7%BD%AE"><span class="nav-text">新手配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-text">配置到服务器</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#python%E7%89%88"><span class="nav-text">python版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E7%A8%8B"><span class="nav-text">编程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#API"><span class="nav-text">API</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ItChat"><span class="nav-text">ItChat</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-text">代码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%9B%9E%E5%A4%8D"><span class="nav-text">自动回复</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8E%A5%E5%85%A5%E6%9C%BA%E5%99%A8%E4%BA%BA"><span class="nav-text">接入机器人</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="nav-text">公众号</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E6%96%87%E6%8E%92%E7%89%88"><span class="nav-text">图文排版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8%E8%87%AA%E5%8A%A8%E4%BF%9D%E5%AD%98"><span class="nav-text">编辑器自动保存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown-to-%E5%85%AC%E4%BC%97%E5%8F%B7%E4%B8%80%E9%94%AE%E8%BD%AC%E6%8D%A2%E5%99%A8"><span class="nav-text">Markdown to 公众号一键转换器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91"><span class="nav-text">公众号开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BB%91%E5%AE%9A"><span class="nav-text">服务器绑定</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E6%B8%B8%E6%88%8F"><span class="nav-text">小游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%B3%E4%B8%80%E8%B7%B3%E8%84%9A%E6%9C%AC"><span class="nav-text">跳一跳脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#WebDriverAgent"><span class="nav-text">WebDriverAgent</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-1"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Building-for-iOS-Simulator-but-the-linked-and-embedded-framework-%E2%80%98My-framework%E2%80%99-was-built-for-iOS-iOS-Simulator"><span class="nav-text">Building for iOS Simulator, but the linked and embedded framework ‘My. framework’ was built for iOS + iOS Simulator.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E2%80%98assign%E2%80%99-property-of-object-type-may-become-a-dangling-reference-consider-using-%E2%80%98unsafe-unretained%E2%80%99"><span class="nav-text">‘assign’ property of object type may become a dangling reference; consider using ‘unsafe_unretained’</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1"><span class="nav-text">微信</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E5%8F%96%E8%A1%A8%E6%83%85%E5%8C%85"><span class="nav-text">提取表情包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%86%E9%A2%91"><span class="nav-text">下载小程序视频</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1%E4%BA%BA%E5%B7%A5%E5%AE%A2%E6%9C%8D"><span class="nav-text">微信人工客服</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1%E6%89%BE%E5%9B%9E%E5%88%A0%E9%99%A4%E4%BA%86%E7%9A%84%E5%A5%BD%E5%8F%8B%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%8F%B7"><span class="nav-text">微信找回删除了的好友的微信号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E5%A5%BD%E5%8F%8B"><span class="nav-text">批量删除好友</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97"><span class="nav-text">公众号开发指南</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ATX-%E6%96%87%E6%A1%A3-iOS-%E7%9C%9F%E6%9C%BA%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85-WebDriverAgent"><span class="nav-text">ATX 文档 - iOS 真机如何安装 WebDriverAgent</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Building-for-iOS-Simulator-but-the-linked-framework-%E2%80%98-framework%E2%80%99-was-built-for-iOS"><span class="nav-text">Building for iOS Simulator, but the linked framework ‘**.framework’ was built for iOS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WebDriverAgent%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF"><span class="nav-text">WebDriverAgent常见错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ubuntu%E4%B8%8B%E8%BF%90%E8%A1%8CPuppeteer"><span class="nav-text">ubuntu下运行Puppeteer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#python-wechaty-%E5%85%8D%E8%B4%B9%E5%BE%AE%E4%BF%A1%E6%9C%BA%E5%99%A8%E4%BA%BA"><span class="nav-text">python-wechaty: 免费微信机器人</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Node是一个JavaScript运行环境，很多模块都需要依赖node。npm是随同node安装的包管理工具，node安装完成后，npm也安装完成。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node环境的搭建与使用">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/Node-Installation.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="Node是一个JavaScript运行环境，很多模块都需要依赖node。npm是随同node安装的包管理工具，node安装完成后，npm也安装完成。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/posts/Node-Installation/topic.jpg">
+<meta property="article:published_time" content="2019-11-25T13:10:29.000Z">
+<meta property="article:modified_time" content="2025-04-03T18:55:58.546Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/posts/Node-Installation/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/Node-Installation.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Node环境的搭建与使用 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/Node-Installation.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Node环境的搭建与使用
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-11-25 21:10:29" itemprop="dateCreated datePublished" datetime="2019-11-25T21:10:29+08:00">2019-11-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-04 02:55:58" itemprop="dateModified" datetime="2025-04-04T02:55:58+08:00">2025-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Skill/" itemprop="url" rel="index"><span itemprop="name">Skill</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/posts/Node-Installation/topic.jpg"></p>
+<p>Node是一个JavaScript运行环境，很多模块都需要依赖node。npm是随同node安装的包管理工具，node安装完成后，npm也安装完成。</p>
+<span id="more"></span>
+
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="通过包管理器"><a href="#通过包管理器" class="headerlink" title="通过包管理器"></a>通过包管理器</h2><p>适用于Linux。由于系统默认包含的nodejs版本较低，因此可通过以下命令更新为较新的版本。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 设置为安装14.x版本的nodejs</span><br><span class="line"># 更改14为其它数字（如12）即可安装其它版本的nodejs</span><br><span class="line">curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -</span><br><span class="line"></span><br><span class="line"># 安装nodejs</span><br><span class="line">sudo apt install nodejs</span><br></pre></td></tr></table></figure>
+
+<h2 id="通过nvm"><a href="#通过nvm" class="headerlink" title="通过nvm"></a>通过nvm</h2><p>仓库如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// Mac</span><br><span class="line">https://github.com/nvm-sh/nvm</span><br><span class="line"></span><br><span class="line">// Windows</span><br><span class="line">https://github.com/coreybutler/nvm-windows</span><br></pre></td></tr></table></figure>
+
+<p>以Mac为例，在终端输入以下命令安装<code>nvm</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// bash用户</span><br><span class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash</span><br><span class="line"></span><br><span class="line">// zsh用户</span><br><span class="line">curl -o- [https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh](https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh) | bash [[ -s $HOME/.nvm/nvm.sh ]] &amp;&amp; . $HOME/.nvm/nvm.sh</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后在终端输入下列命令以安装<code>node</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 安装长期支持版本（建议）</span><br><span class="line">nvm install --lts</span><br><span class="line"></span><br><span class="line">// 安装最新版本</span><br><span class="line">nvm install node</span><br></pre></td></tr></table></figure>
+
+<h2 id="通过官方安装包"><a href="#通过官方安装包" class="headerlink" title="通过官方安装包"></a>通过官方安装包</h2><p>打开下面官方网站，下载安装包进行安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://nodejs.org/en/</span><br></pre></td></tr></table></figure>
+
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h2 id="更换下载源"><a href="#更换下载源" class="headerlink" title="更换下载源"></a>更换下载源</h2><h3 id="直接更换为淘宝源"><a href="#直接更换为淘宝源" class="headerlink" title="直接更换为淘宝源"></a>直接更换为淘宝源</h3><p>在终端执行以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set -g registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<h3 id="用nrm切换下载源"><a href="#用nrm切换下载源" class="headerlink" title="用nrm切换下载源"></a>用nrm切换下载源</h3><p>在终端执行以下命令安装<code>nrm</code>，并查看下载镜像源。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g nrm</span><br><span class="line">nrm ls</span><br></pre></td></tr></table></figure>
+
+<p>用以下命令切换淘宝源。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm use taobao</span><br></pre></td></tr></table></figure>
+
+<h2 id="更新主程序"><a href="#更新主程序" class="headerlink" title="更新主程序"></a>更新主程序</h2><h3 id="对于nvm安装"><a href="#对于nvm安装" class="headerlink" title="对于nvm安装"></a>对于nvm安装</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install --lts --latest-npm --reinstall-packages-from=node</span><br></pre></td></tr></table></figure>
+
+<h3 id="对于独立程序"><a href="#对于独立程序" class="headerlink" title="对于独立程序"></a>对于独立程序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g npm</span><br><span class="line">npm install -g node</span><br></pre></td></tr></table></figure>
+
+<h2 id="更新下载包"><a href="#更新下载包" class="headerlink" title="更新下载包"></a>更新下载包</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">npm install -g npm-check     # 安装npm-check</span><br><span class="line">npm-check                    # 查看系统插件是否需要升级</span><br><span class="line">npm install -g npm-upgrade   # 安装npm-upgrade</span><br><span class="line">npm-upgrade        # 更新package.json</span><br><span class="line"># 在执行npm-upgrade命令后会要求输入yes或者no，直接输入Yes或Y即可</span><br><span class="line">npm update -g      # 更新全局插件</span><br><span class="line">npm update --save  # 更新系统插件</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看安装过的模块"><a href="#查看安装过的模块" class="headerlink" title="查看安装过的模块"></a>查看安装过的模块</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 查看当前项目的依赖模块</span><br><span class="line">npm ls --depth 0</span><br><span class="line"></span><br><span class="line">// 查看全局依赖模块命令</span><br><span class="line">npm ls -g --depth 0</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除项目缓存"><a href="#删除项目缓存" class="headerlink" title="删除项目缓存"></a>删除项目缓存</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm cache verify</span><br><span class="line">// 或npm cache clean --force</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除项目所有依赖"><a href="#删除项目所有依赖" class="headerlink" title="删除项目所有依赖"></a>删除项目所有依赖</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall *</span><br></pre></td></tr></table></figure>
+
+<h2 id="代码基础"><a href="#代码基础" class="headerlink" title="代码基础"></a>代码基础</h2><h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>&#x3D;&#x3D;和!&#x3D;仅判断外在的值，而不判断类型。&#x3D;&#x3D;&#x3D;和!&#x3D;&#x3D;会判断外在的值和类型。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a = 1, b = &quot;1&quot;;</span><br><span class="line">console.log(a == b);    // 输出true</span><br><span class="line">console.log(a === b);   // 输出false</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用包"><a href="#常用包" class="headerlink" title="常用包"></a>常用包</h2><h3 id="nodejieba"><a href="#nodejieba" class="headerlink" title="nodejieba"></a>nodejieba</h3><p>jieba中文分词库的Nodejs版本。</p>
+<h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install nodejieba</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h4><h5 id="基本分词"><a href="#基本分词" class="headerlink" title="基本分词"></a>基本分词</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var nodejieba = require(&quot;nodejieba&quot;);</span><br><span class="line">var result = nodejieba.cut(&quot;南京市长江大桥&quot;);</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+
+<h5 id="自定义词典"><a href="#自定义词典" class="headerlink" title="自定义词典"></a>自定义词典</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nodejieba.load(&#123;</span><br><span class="line">  dict: nodejieba.DEFAULT_DICT,</span><br><span class="line">  hmmDict: nodejieba.DEFAULT_HMM_DICT,</span><br><span class="line">  userDict: &#x27;./test/testdata/userdict.utf8&#x27;,</span><br><span class="line">  idfDict: nodejieba.DEFAULT_IDF_DICT,</span><br><span class="line">  stopWordDict: nodejieba.DEFAULT_STOP_WORD_DICT,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="词性标注"><a href="#词性标注" class="headerlink" title="词性标注"></a>词性标注</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var nodejieba = require(&quot;nodejieba&quot;);</span><br><span class="line">console.log(nodejieba.tag(&quot;红掌拨清波&quot;));</span><br></pre></td></tr></table></figure>
+
+<p>词性表如下。</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>词性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ag</td>
+<td>形容词语素</td>
+</tr>
+<tr>
+<td>a</td>
+<td>形容词</td>
+</tr>
+<tr>
+<td>ad</td>
+<td>副形词</td>
+</tr>
+<tr>
+<td>an</td>
+<td>形名词</td>
+</tr>
+<tr>
+<td>b</td>
+<td>区别词</td>
+</tr>
+<tr>
+<td>c</td>
+<td>连词</td>
+</tr>
+<tr>
+<td>dg</td>
+<td>副词语素</td>
+</tr>
+<tr>
+<td>d</td>
+<td>副词</td>
+</tr>
+<tr>
+<td>e</td>
+<td>叹词</td>
+</tr>
+<tr>
+<td>f</td>
+<td>方位词</td>
+</tr>
+<tr>
+<td>g</td>
+<td>语素</td>
+</tr>
+<tr>
+<td>h</td>
+<td>前接成分</td>
+</tr>
+<tr>
+<td>i</td>
+<td>成语</td>
+</tr>
+<tr>
+<td>j</td>
+<td>简称略语</td>
+</tr>
+<tr>
+<td>k</td>
+<td>后接成分</td>
+</tr>
+<tr>
+<td>l</td>
+<td>习用语</td>
+</tr>
+<tr>
+<td>m</td>
+<td>数词</td>
+</tr>
+<tr>
+<td>Ng</td>
+<td>名词语素</td>
+</tr>
+<tr>
+<td>n</td>
+<td>名词</td>
+</tr>
+<tr>
+<td>nr</td>
+<td>人名</td>
+</tr>
+<tr>
+<td>ns</td>
+<td>地名</td>
+</tr>
+<tr>
+<td>nt</td>
+<td>机构团体</td>
+</tr>
+<tr>
+<td>nz</td>
+<td>其它专有名词</td>
+</tr>
+<tr>
+<td>o</td>
+<td>拟声词</td>
+</tr>
+<tr>
+<td>p</td>
+<td>介词</td>
+</tr>
+<tr>
+<td>q</td>
+<td>量词</td>
+</tr>
+<tr>
+<td>r</td>
+<td>代词</td>
+</tr>
+<tr>
+<td>s</td>
+<td>处所词</td>
+</tr>
+<tr>
+<td>tg</td>
+<td>时间语素</td>
+</tr>
+<tr>
+<td>t</td>
+<td>时间词</td>
+</tr>
+<tr>
+<td>u</td>
+<td>助词</td>
+</tr>
+<tr>
+<td>vg</td>
+<td>动词语素</td>
+</tr>
+<tr>
+<td>v</td>
+<td>动词</td>
+</tr>
+<tr>
+<td>vd</td>
+<td>副动词</td>
+</tr>
+<tr>
+<td>vn</td>
+<td>名动词</td>
+</tr>
+<tr>
+<td>w</td>
+<td>标点符号</td>
+</tr>
+<tr>
+<td>x</td>
+<td>非语素字</td>
+</tr>
+<tr>
+<td>y</td>
+<td>语气词</td>
+</tr>
+<tr>
+<td>z</td>
+<td>状态词</td>
+</tr>
+<tr>
+<td>un</td>
+<td>未知词</td>
+</tr>
+</tbody></table>
+<h5 id="关键词抽取"><a href="#关键词抽取" class="headerlink" title="关键词抽取"></a>关键词抽取</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var nodejieba = require(&quot;nodejieba&quot;);</span><br><span class="line">var topN = 4;</span><br><span class="line">console.log(nodejieba.extract(&quot;升职加薪，当上CEO，走上人生巅峰。&quot;, topN));</span><br></pre></td></tr></table></figure>
+
+<h1 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h1><h2 id="卸载nvm"><a href="#卸载nvm" class="headerlink" title="卸载nvm"></a>卸载nvm</h2><p>在终端输入以下命令，移除nvm。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line">rm -rf .nvm</span><br></pre></td></tr></table></figure>
+
+<p>移除掉<code>~/.profile</code>，<code>~/.bash_profile</code>， <code>~/.zshrc</code>，<code>~/.bashrc</code>文件中关于nvm的配置后输入以下命令，让配置文件生效。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source ~/.zshrc</span><br><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure>
+
+<h2 id="卸载node和npm"><a href="#卸载node和npm" class="headerlink" title="卸载node和npm"></a>卸载node和npm</h2><h3 id="对于nvm安装-1"><a href="#对于nvm安装-1" class="headerlink" title="对于nvm安装"></a>对于nvm安装</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nvm uninstall [版本号]</span><br><span class="line"></span><br><span class="line"># 版本通过以下命令查看</span><br><span class="line">nvm list</span><br></pre></td></tr></table></figure>
+
+<h3 id="对于独立程序-1"><a href="#对于独立程序-1" class="headerlink" title="对于独立程序"></a>对于独立程序</h3><p>在终端执行以下命令以卸载。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo npm uninstall npm -g</span><br><span class="line">sudo rm -rf /usr/local/lib/node /usr/local/lib/node_modules /var/db/receipts/org.nodejs.*</span><br><span class="line">sudo rm -rf /usr/local/include/node /Users/$USER/.npm</span><br><span class="line">sudo rm /usr/local/bin/node</span><br><span class="line">sudo rm /usr/local/share/man/man1/node.1</span><br><span class="line">sudo rm /usr/local/lib/dtrace/node.d</span><br></pre></td></tr></table></figure>
+
+<p>输入以下命令以确认卸载是否已完成。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node</span><br><span class="line">npm</span><br></pre></td></tr></table></figure>
+
+<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="提示package-json不存在"><a href="#提示package-json不存在" class="headerlink" title="提示package.json不存在"></a>提示package.json不存在</h2><p>package.json不存在时，可运行以下命令自动创建。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
+
+<p>package.json存在时，运行以下命令以将package.json的模块安装到node-modules文件夹下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br><span class="line">// 或 npm install –save-dev</span><br></pre></td></tr></table></figure>
+
+<p>打开package.json，在最后大括号前添加以下语句，保存并退出。该语句可修复<code>warning no description / no repository field</code>的错误。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;private&quot;: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="提示找不到-lt-CoreFoundation-x2F-CoreFoundation-h-gt-或其它库文件"><a href="#提示找不到-lt-CoreFoundation-x2F-CoreFoundation-h-gt-或其它库文件" class="headerlink" title="提示找不到&lt;CoreFoundation&#x2F;CoreFoundation.h&gt;或其它库文件"></a>提示找不到&lt;CoreFoundation&#x2F;CoreFoundation.h&gt;或其它库文件</h2><p>对于Mac，在终端输入以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">csrutil disable</span><br><span class="line">sudo mount -uw /</span><br><span class="line">sudo ln -s &quot;$(xcrun --show-sdk-path)/usr/include&quot; /usr/include</span><br><span class="line">export SDKROOT=&quot;$(xcrun --show-sdk-path)&quot;</span><br><span class="line">echo &quot;export SDKROOT=\&quot;\$(xcrun --show-sdk-path)\&quot;&quot; &gt;&gt; ~/.bash_profile</span><br><span class="line">sudo DevToolsSecurity -enable</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="How-to-Install-Node-js-and-npm-on-CentOS-7"><a href="#How-to-Install-Node-js-and-npm-on-CentOS-7" class="headerlink" title="How to Install Node.js and npm on CentOS 7"></a>How to Install Node.js and npm on CentOS 7</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://linuxize.com/post/how-to-install-node-js-on-centos-7/</span><br></pre></td></tr></table></figure>
+
+<h2 id="如何在-Ubuntu-20-04-上安装-Node-js-和-npm"><a href="#如何在-Ubuntu-20-04-上安装-Node-js-和-npm" class="headerlink" title="如何在 Ubuntu 20.04 上安装 Node.js 和 npm"></a>如何在 Ubuntu 20.04 上安装 Node.js 和 npm</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://developer.aliyun.com/article/760687</span><br></pre></td></tr></table></figure>
+
+<h2 id="yanyiwu-x2F-nodejieba"><a href="#yanyiwu-x2F-nodejieba" class="headerlink" title="yanyiwu&#x2F;nodejieba"></a>yanyiwu&#x2F;nodejieba</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/yanyiwu/nodejieba</span><br></pre></td></tr></table></figure>
+
+<h2 id="nodejs中的-x3D-x3D-、-x3D-x3D-x3D-、-x3D-、-x3D-x3D-的区别"><a href="#nodejs中的-x3D-x3D-、-x3D-x3D-x3D-、-x3D-、-x3D-x3D-的区别" class="headerlink" title="nodejs中的&#x3D;&#x3D;、&#x3D;&#x3D;&#x3D;、!&#x3D;、!&#x3D;&#x3D;的区别"></a>nodejs中的&#x3D;&#x3D;、&#x3D;&#x3D;&#x3D;、!&#x3D;、!&#x3D;&#x3D;的区别</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/gisredevelopment/article/details/12979479</span><br></pre></td></tr></table></figure>
+
+<h2 id="jiaba-分词词性标注含义"><a href="#jiaba-分词词性标注含义" class="headerlink" title="jiaba 分词词性标注含义"></a>jiaba 分词词性标注含义</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/weixin_30521649/article/details/95919189</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/Git-Installation.html" rel="prev" title="Git和Github的安装与使用">
+      <i class="fa fa-chevron-left"></i> Git和Github的安装与使用
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/Chromium-OS-Installation.html" rel="next" title="Chromium OS的安装与配置">
+      Chromium OS的安装与配置 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8"><span class="nav-text">通过包管理器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87nvm"><span class="nav-text">通过nvm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E5%AE%98%E6%96%B9%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-text">通过官方安装包</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E4%B8%8B%E8%BD%BD%E6%BA%90"><span class="nav-text">更换下载源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E6%9B%B4%E6%8D%A2%E4%B8%BA%E6%B7%98%E5%AE%9D%E6%BA%90"><span class="nav-text">直接更换为淘宝源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8nrm%E5%88%87%E6%8D%A2%E4%B8%8B%E8%BD%BD%E6%BA%90"><span class="nav-text">用nrm切换下载源</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E4%B8%BB%E7%A8%8B%E5%BA%8F"><span class="nav-text">更新主程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8Envm%E5%AE%89%E8%A3%85"><span class="nav-text">对于nvm安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E%E7%8B%AC%E7%AB%8B%E7%A8%8B%E5%BA%8F"><span class="nav-text">对于独立程序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E4%B8%8B%E8%BD%BD%E5%8C%85"><span class="nav-text">更新下载包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%AE%89%E8%A3%85%E8%BF%87%E7%9A%84%E6%A8%A1%E5%9D%97"><span class="nav-text">查看安装过的模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E9%A1%B9%E7%9B%AE%E7%BC%93%E5%AD%98"><span class="nav-text">删除项目缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E9%A1%B9%E7%9B%AE%E6%89%80%E6%9C%89%E4%BE%9D%E8%B5%96"><span class="nav-text">删除项目所有依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%9F%BA%E7%A1%80"><span class="nav-text">代码基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text">逻辑运算符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%8C%85"><span class="nav-text">常用包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#nodejieba"><span class="nav-text">nodejieba</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-1"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-1"><span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%88%86%E8%AF%8D"><span class="nav-text">基本分词</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%8D%E5%85%B8"><span class="nav-text">自定义词典</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%AF%8D%E6%80%A7%E6%A0%87%E6%B3%A8"><span class="nav-text">词性标注</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D%E6%8A%BD%E5%8F%96"><span class="nav-text">关键词抽取</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%B8%E8%BD%BD"><span class="nav-text">卸载</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%B8%E8%BD%BDnvm"><span class="nav-text">卸载nvm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%B8%E8%BD%BDnode%E5%92%8Cnpm"><span class="nav-text">卸载node和npm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8Envm%E5%AE%89%E8%A3%85-1"><span class="nav-text">对于nvm安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E%E7%8B%AC%E7%AB%8B%E7%A8%8B%E5%BA%8F-1"><span class="nav-text">对于独立程序</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E7%A4%BApackage-json%E4%B8%8D%E5%AD%98%E5%9C%A8"><span class="nav-text">提示package.json不存在</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0-lt-CoreFoundation-x2F-CoreFoundation-h-gt-%E6%88%96%E5%85%B6%E5%AE%83%E5%BA%93%E6%96%87%E4%BB%B6"><span class="nav-text">提示找不到&lt;CoreFoundation&#x2F;CoreFoundation.h&gt;或其它库文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-Install-Node-js-and-npm-on-CentOS-7"><span class="nav-text">How to Install Node.js and npm on CentOS 7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8-Ubuntu-20-04-%E4%B8%8A%E5%AE%89%E8%A3%85-Node-js-%E5%92%8C-npm"><span class="nav-text">如何在 Ubuntu 20.04 上安装 Node.js 和 npm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#yanyiwu-x2F-nodejieba"><span class="nav-text">yanyiwu&#x2F;nodejieba</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nodejs%E4%B8%AD%E7%9A%84-x3D-x3D-%E3%80%81-x3D-x3D-x3D-%E3%80%81-x3D-%E3%80%81-x3D-x3D-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">nodejs中的&#x3D;&#x3D;、&#x3D;&#x3D;&#x3D;、!&#x3D;、!&#x3D;&#x3D;的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jiaba-%E5%88%86%E8%AF%8D%E8%AF%8D%E6%80%A7%E6%A0%87%E6%B3%A8%E5%90%AB%E4%B9%89"><span class="nav-text">jiaba 分词词性标注含义</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:27</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
