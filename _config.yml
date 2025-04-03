@@ -136,7 +136,7 @@ backup:
   type: git     
   message: backup for hexo blog
   repository:  
-    github: git@github.com:paytonguan/blog.git,source
+    github: https://github.com/paytonguan/blog.git,source
 
 search:
   path: search.xml
