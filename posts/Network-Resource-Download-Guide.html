@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="网络资源下载指南。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络资源下载指南">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/Network-Resource-Download-Guide.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="网络资源下载指南。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/topic.jpg">
+<meta property="article:published_time" content="2021-10-11T07:03:57.000Z">
+<meta property="article:modified_time" content="2026-06-06T16:18:23.411Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/Network-Resource-Download-Guide.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>网络资源下载指南 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/Network-Resource-Download-Guide.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="Somewhere leisure.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          网络资源下载指南
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-11 15:03:57" itemprop="dateCreated datePublished" datetime="2021-10-11T15:03:57+08:00">2021-10-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2026-06-07 00:18:23" itemprop="dateModified" datetime="2026-06-07T00:18:23+08:00">2026-06-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Other/" itemprop="url" rel="index"><span itemprop="name">Other</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/topic.jpg"></p>
+<p>网络资源下载指南。</p>
+<span id="more"></span>
+
+<h1 id="共享文件"><a href="#共享文件" class="headerlink" title="共享文件"></a>共享文件</h1><h2 id="通过局域网"><a href="#通过局域网" class="headerlink" title="通过局域网"></a>通过局域网</h2><p>手机或平板与电脑需要连接同一个Wi-Fi，但不能连接同一个公共Wi-Fi，如校园网，也不能一方开热点，另一方连接该热点。</p>
+<h3 id="共享端配置"><a href="#共享端配置" class="headerlink" title="共享端配置"></a>共享端配置</h3><p>对于Windows，找到想要共享的文件夹，右键点击属性，切换到共享标签栏下，点击共享。点击下拉图标，在下拉选项中选择Everyone，一路点击返回。进入网络和共享中心，开启<code>启用网络发现</code>并勾选启用网络连接设备的自动设置，然后选择<code>关闭密码保护共享</code>。然后进入程序与功能，点击启用或关闭Windows功能，开启<code>SMB 1.0/CIFS文件共享支持</code>。若需要取消共享，则在文件夹的共享页点击高级共享，并取消勾选<code>共享此文件夹</code>即可。</p>
+<p>对于Mac，打开系统偏好设置，点击共享—勾选文件共享，添加要共享的文件夹，点击选项，开启共享。</p>
+<h3 id="访问端配置"><a href="#访问端配置" class="headerlink" title="访问端配置"></a>访问端配置</h3><p>对于视频可用nPlayer、OPlayer、VLC等。进入视频APP并选择扫描互联网&#x2F;本地网络等选项，进入共享的电脑即可。</p>
+<p>也可通过Documents、Shu等文档APP连接共享的电脑。进入文档APP并添加SMB服务器即可。</p>
+<h2 id="通过软件"><a href="#通过软件" class="headerlink" title="通过软件"></a>通过软件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># LANDrop</span><br><span class="line">https://landrop.app/</span><br><span class="line"></span><br><span class="line"># 手机端</span><br><span class="line">http://es.vivo.com.cn/</span><br><span class="line">https://airmore.cn/</span><br><span class="line">https://www.airdroid.com/zh-cn/</span><br><span class="line"></span><br><span class="line"># 电脑端</span><br><span class="line">https://wormholesoft.cn/index_cn.html</span><br><span class="line">https://www.resilio.com/</span><br><span class="line">http://www.verysync.com/</span><br></pre></td></tr></table></figure>
+
+<h1 id="共享备忘录"><a href="#共享备忘录" class="headerlink" title="共享备忘录"></a>共享备忘录</h1><p>可使用OneNote、微软桌面、锤子便签、WPS便签、Evermemo、flomo、印象轻记、SilentNotes。</p>
+<p>若为Android，可用多多便签、易码、蜜蜂便签。</p>
+<h1 id="去广告"><a href="#去广告" class="headerlink" title="去广告"></a>去广告</h1><h2 id="电脑端"><a href="#电脑端" class="headerlink" title="电脑端"></a>电脑端</h2><p>Adsafe v5.3下载链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://axu.lanzous.com/icbob6j</span><br></pre></td></tr></table></figure>
+
+<p>也可使用以下应用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://www.admflt.com/</span><br><span class="line">http://www.admon.cn/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Android端"><a href="#Android端" class="headerlink" title="Android端"></a>Android端</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Adguard</span><br><span class="line">https://adguard.com/zh_cn/adguard-android/faq.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="现成规则"><a href="#现成规则" class="headerlink" title="现成规则"></a>现成规则</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># CJX</span><br><span class="line">https://github.com/cjx82630/cjxlist</span><br><span class="line"></span><br><span class="line"># 乘风</span><br><span class="line">https://github.com/xinggsf/Adblock-Plus-Rule</span><br><span class="line"></span><br><span class="line"># 半生（合并CJX和乘风）</span><br><span class="line">https://gitee.com/halflife/list/issues/I1CV06</span><br><span class="line"></span><br><span class="line"># 针对手机端优化</span><br><span class="line">https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjxlist.txt</span><br><span class="line">https://raw.githubusercontent.com/banbendalao/ADgk/master/ADgk.txt</span><br><span class="line">https://anti-ad.net/adguard.txt</span><br><span class="line">https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt</span><br><span class="line"></span><br><span class="line"># 其它</span><br><span class="line">https://easylist-downloads.adblockplus.org/easyprivacy.txt</span><br><span class="line">https://easylist-downloads.adblockplus.org/easylistchina.txt</span><br></pre></td></tr></table></figure>
+
+<h2 id="手动编写规则"><a href="#手动编写规则" class="headerlink" title="手动编写规则"></a>手动编写规则</h2><p>电脑端打开需要屏蔽广告的网站，然后F12打开开发者模式。如果网站禁止F12调试，可先打开其它网站，F12打开开发者模式后，再访问要屏蔽广告的网站。</p>
+<p>若广告为手机版特供，则在左上角切换为对应的设备。开发者模式页面点击Network-Img，然后在下面的列表中找到广告对应的图片。点击图片上的Initiator标签，复制相应的请求地址，然后刷新网页并重复上述操作，得到多个不同的地址。</p>
+<p>以以下链接为例。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://1632035303311.mjg0310.com:4040/wap_1415_1322_1632035303311</span><br><span class="line">https://1632035889068.mjg0310.com:4039/wap_1415_1322_1632035889068</span><br></pre></td></tr></table></figure>
+
+<p>可得如下规则。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># ||相当于匹配http(s)://</span><br><span class="line"># $third-party为禁止第三方请求的固定语法</span><br><span class="line"></span><br><span class="line">||*.mjg0310.com:*/wap_1415_1322_*$third-party</span><br></pre></td></tr></table></figure>
+
+<h1 id="下载被屏蔽的资源"><a href="#下载被屏蔽的资源" class="headerlink" title="下载被屏蔽的资源"></a>下载被屏蔽的资源</h1><h2 id="通过迅雷"><a href="#通过迅雷" class="headerlink" title="通过迅雷"></a>通过迅雷</h2><p>使用迅雷5即可。</p>
+<p>迅雷会员通过hosts屏蔽，也可下载被屏蔽的资源。在hosts文件添加以下内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 hub5btmain.sandai.net</span><br><span class="line">127.0.0.1 hub5emu.sandai.net</span><br><span class="line">127.0.0.1 upgrade.xl9.xunlei.com</span><br></pre></td></tr></table></figure>
+
+<p>完成后打开命令行并运行以下命令即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
+
+<h2 id="通过BT下载器"><a href="#通过BT下载器" class="headerlink" title="通过BT下载器"></a>通过BT下载器</h2><p>可用黑科云、qBittorrent、uTorrent、比特彗星等。</p>
+<h2 id="通过离线下载"><a href="#通过离线下载" class="headerlink" title="通过离线下载"></a>通过离线下载</h2><p>国内网盘可使用百度云、微云等。国外离线下载可使用以下网站。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">https://www.seedr.cc/</span><br><span class="line">https://offcloud.com/</span><br><span class="line">https://filestream.me/</span><br><span class="line">https://www.furk.net/</span><br><span class="line">http://megabox.me/</span><br><span class="line">https://zbigz.com/</span><br><span class="line">http://www.lixianhezi.com/</span><br><span class="line">https://www.sonicbit.net/</span><br><span class="line">https://bitport.io/welcome</span><br><span class="line">https://transfercloud.io/</span><br><span class="line">https://www.loadbt.com/zh</span><br><span class="line">https://bytebx.com/</span><br><span class="line">https://www.direct-torrents.com/</span><br><span class="line">https://www.torrentsafe.com/cn/</span><br></pre></td></tr></table></figure>
+
+<p>若有服务器，可使用离线下载功能先下载到服务器，再从服务器下载。</p>
+<p>可使用CloudTorrent，在服务器运行以下命令安装即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/cloudt.sh &amp;&amp; chmod +x cloudt.sh &amp;&amp; bash cloudt.sh</span><br></pre></td></tr></table></figure>
+
+<p>仓库地址如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/jpillora/cloud-torrent</span><br></pre></td></tr></table></figure>
+
+<p>也可使用Peerflix Server，在服务器运行以下命令安装即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/pserver.sh &amp;&amp; chmod +x pserver.sh &amp;&amp; bash pserver.sh</span><br></pre></td></tr></table></figure>
+
+<p>仓库地址如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/asapach/peerflix-server</span><br></pre></td></tr></table></figure>
+
+<h1 id="Wi-Fi二维码制作"><a href="#Wi-Fi二维码制作" class="headerlink" title="Wi-Fi二维码制作"></a>Wi-Fi二维码制作</h1><p>根据以下内容制作二维码即可。注意WPA需要换为Wi-Fi的加密方式。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WIFI:T:WPA;S:[wifi名称];P:[wifi密码];;</span><br></pre></td></tr></table></figure>
+
+<h1 id="购买会员"><a href="#购买会员" class="headerlink" title="购买会员"></a>购买会员</h1><p>在联想软件商店、360软件管家购买百度云、芒果TV、爱奇艺、腾讯视频、WPS、IDM、Office365、AdGuard会员会有优惠。</p>
+<h1 id="孔夫子旧书网低价购书"><a href="#孔夫子旧书网低价购书" class="headerlink" title="孔夫子旧书网低价购书"></a>孔夫子旧书网低价购书</h1><p>搜索书名时更改部分字。如需购买<code>雷特海乌短篇小说选</code>，可尝试使用<code>雷特海鸟短篇小说选</code>，<code>雷特海岛短篇小说选</code>等。</p>
+<h1 id="考研复试线"><a href="#考研复试线" class="headerlink" title="考研复试线"></a>考研复试线</h1><p>学校的考研复试线不准确，到学校官网查拟录取名单才准确。</p>
+<h1 id="网购抢东西"><a href="#网购抢东西" class="headerlink" title="网购抢东西"></a>网购抢东西</h1><p>只选1-2项，但数量可以放大十倍。每一个条目都占一个字段，但改变数量不会增加字段。</p>
+<h1 id="淘宝刷票服务"><a href="#淘宝刷票服务" class="headerlink" title="淘宝刷票服务"></a>淘宝刷票服务</h1><p>搜索<code>赞</code>即可。搜索<code>投票</code>或<code>刷票</code>不会有结果。</p>
+<h1 id="尝试解封互联网账号"><a href="#尝试解封互联网账号" class="headerlink" title="尝试解封互联网账号"></a>尝试解封互联网账号</h1><p>可尝试到互联网投诉平台进行投诉。理由描述为误封即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://ts.isc.org.cn/</span><br></pre></td></tr></table></figure>
+
+<h1 id="解锁网易云"><a href="#解锁网易云" class="headerlink" title="解锁网易云"></a>解锁网易云</h1><p>解锁网易云后可以听到已经下架的音乐。</p>
+<h2 id="现成工具"><a href="#现成工具" class="headerlink" title="现成工具"></a>现成工具</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/FrzMtrsprt/QtUnblockNeteaseMusic</span><br></pre></td></tr></table></figure>
+
+<h2 id="自行搭建服务器"><a href="#自行搭建服务器" class="headerlink" title="自行搭建服务器"></a>自行搭建服务器</h2><p>需要有一台服务器。</p>
+<p>以CentOS为例，连接到服务器后输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo su root</span><br><span class="line">curl -sL https://rpm.nodesource.com/setup_10.x | bash -</span><br><span class="line">yum install nodejs git -y</span><br><span class="line">git clone https://github.com/nondanee/UnblockNeteaseMusic.git</span><br><span class="line">yum install screen</span><br><span class="line">screen -S xxx（可以自己改）cd UnblockNeteaseMusic</span><br><span class="line">node app.js -p 1234:2345 -e http://music.163.com(1234:2345)</span><br></pre></td></tr></table></figure>
+
+<p>端口可以自己随意更改，设置后需要在服务器放行端口。搭建完成后在客户端连接到该服务器即可。</p>
+<h1 id="图片去水印"><a href="#图片去水印" class="headerlink" title="图片去水印"></a>图片去水印</h1><p>手机端可用TouchRetouch、Snaspeed等。</p>
+<p>电脑端可用美图秀秀、Teorex Inpaint。</p>
+<p>也可用Photoshop。先用选区工具选中水印，再右键选择<code>填充</code>，选择<code>内容识别</code>，点击确定即可。也可使用修复画笔或修复工具。</p>
+<p>对于选择一处完整的复杂水印，可用选区工具选择一处干净的水印，复制一层后反相，图层混合选项改为<code>颜色减淡</code>。移动处理过的水印，和其他水印相互抵消即可。</p>
+<p>对于单色半透明水印，首先需要确定水印的颜色与不透明度，可通过新建一层后画出猜想颜色并调整参数的方式，然后用吸管工具确定。双击原图的小锁以解锁图层，称为图层0，选择魔棒工具，选中原图的水印，视情况调整容差。接着新建一个图层，并填充为白色，称为图层1，移动到原图图层下面，并将原图的混合模式改为差值。选择图层1，Ctrl+L调整色阶，数值为255x50%≈127，其中255是白色的RGB值，50%是第一步得出的透明度。选中两个图层后，Ctrl+Alt+Shift+E盖印图层，得到新图层，称为图层2，然后取消图层0和图层1的可见。按住Ctrl点击图层1，获取图层1的选区，然后点击图层2，Ctrl+L调整<code>输入</code>色阶，数值为255减去刚刚填写的输出色阶数值，此处为255-127&#x3D;128。然后Ctrl+D取消选区，并用污点修复画笔工具、修复画笔工具、修补工具等进行细节处理即可。</p>
+<h1 id="免费杂志"><a href="#免费杂志" class="headerlink" title="免费杂志"></a>免费杂志</h1><h2 id="博看书苑"><a href="#博看书苑" class="headerlink" title="博看书苑"></a>博看书苑</h2><p>适用于手机端。可尝试以下授权码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">中国医科大学图书馆 / cpuedu</span><br><span class="line">浙江图书馆 / zjlib</span><br><span class="line">上海图书馆 / shlib</span><br><span class="line">山东图书馆 / sdlib</span><br><span class="line">山西图书馆 / sxlib</span><br><span class="line">四川图书馆 / sclib</span><br><span class="line">甘肃图书馆 / gzlib</span><br><span class="line">广西壮族自治区图书馆 / gxlib</span><br><span class="line">新疆图书馆 / xjlib</span><br><span class="line">武汉图书馆 / whlib</span><br><span class="line">随州市图书馆 / szlib</span><br><span class="line">镇江市图书馆 / zjst</span><br><span class="line">梧州市图书馆 / wzlib</span><br><span class="line">海南热带海洋学院 / qzulib</span><br><span class="line">华中科技大学图书馆 / lib</span><br><span class="line">武汉大学图书馆 / whu</span><br><span class="line">吉林大学图书馆 / jlulib</span><br><span class="line">四川大学图书馆 / scu</span><br><span class="line">河南大学图书馆 / hndx</span><br><span class="line">衢州学院图书馆 / qzxylib</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><h2 id="如何安全且不限速的下载百度网盘资源"><a href="#如何安全且不限速的下载百度网盘资源" class="headerlink" title="如何安全且不限速的下载百度网盘资源"></a>如何安全且不限速的下载百度网盘资源</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://51.ruyo.net/2590.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="支持BT种子和磁力链-离线、在线下载的网盘大全"><a href="#支持BT种子和磁力链-离线、在线下载的网盘大全" class="headerlink" title="支持BT种子和磁力链 离线、在线下载的网盘大全"></a>支持BT种子和磁力链 离线、在线下载的网盘大全</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.138vps.com/freeot/1299.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="BT-代抓離線下載服務網站-安全速度快省掛機電費"><a href="#BT-代抓離線下載服務網站-安全速度快省掛機電費" class="headerlink" title="BT 代抓離線下載服務網站@安全速度快省掛機電費"></a>BT 代抓離線下載服務網站@安全速度快省掛機電費</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://sofun.tw/bt-download-service/</span><br></pre></td></tr></table></figure>
+
+<h2 id="图片去水印，从简单到复杂，包教包会"><a href="#图片去水印，从简单到复杂，包教包会" class="headerlink" title="图片去水印，从简单到复杂，包教包会"></a>图片去水印，从简单到复杂，包教包会</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/sJSUm68TTbCosUAWoSDWyQ</span><br></pre></td></tr></table></figure>
+
+<h2 id="2022年，没想到还有能白嫖的无视限制离线下载神器！"><a href="#2022年，没想到还有能白嫖的无视限制离线下载神器！" class="headerlink" title="2022年，没想到还有能白嫖的无视限制离线下载神器！"></a>2022年，没想到还有能白嫖的无视限制离线下载神器！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/CWcc9Vm0bxhEuoG5oTGX_g</span><br></pre></td></tr></table></figure>
+
+<h2 id="一个软件搞定！凭空多80亿GB硬盘，网盘资源瞬间转本地！"><a href="#一个软件搞定！凭空多80亿GB硬盘，网盘资源瞬间转本地！" class="headerlink" title="一个软件搞定！凭空多80亿GB硬盘，网盘资源瞬间转本地！"></a>一个软件搞定！凭空多80亿GB硬盘，网盘资源瞬间转本地！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/oP-_BgRqTg29Fzz-zo0hxg</span><br></pre></td></tr></table></figure>
+
+<h2 id="50MB-s-，度盘不限速！起飞！！！"><a href="#50MB-s-，度盘不限速！起飞！！！" class="headerlink" title="50MB&#x2F;s++，度盘不限速！起飞！！！"></a>50MB&#x2F;s++，度盘不限速！起飞！！！</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mp.weixin.qq.com/s/ck1FjcGB0rXKD78ZwZU60w</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/Video-Watching-Parsing-Tools.html" rel="prev" title="视频观看与解析工具">
+      <i class="fa fa-chevron-left"></i> 视频观看与解析工具
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/PDF-Processing-Tips.html" rel="next" title="PDF处理技巧">
+      PDF处理技巧 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6"><span class="nav-text">共享文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E5%B1%80%E5%9F%9F%E7%BD%91"><span class="nav-text">通过局域网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B1%E4%BA%AB%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="nav-text">共享端配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="nav-text">访问端配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E8%BD%AF%E4%BB%B6"><span class="nav-text">通过软件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B1%E4%BA%AB%E5%A4%87%E5%BF%98%E5%BD%95"><span class="nav-text">共享备忘录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%BB%E5%B9%BF%E5%91%8A"><span class="nav-text">去广告</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E8%84%91%E7%AB%AF"><span class="nav-text">电脑端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android%E7%AB%AF"><span class="nav-text">Android端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%B0%E6%88%90%E8%A7%84%E5%88%99"><span class="nav-text">现成规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E7%BC%96%E5%86%99%E8%A7%84%E5%88%99"><span class="nav-text">手动编写规则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E8%A2%AB%E5%B1%8F%E8%94%BD%E7%9A%84%E8%B5%84%E6%BA%90"><span class="nav-text">下载被屏蔽的资源</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E8%BF%85%E9%9B%B7"><span class="nav-text">通过迅雷</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87BT%E4%B8%8B%E8%BD%BD%E5%99%A8"><span class="nav-text">通过BT下载器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD"><span class="nav-text">通过离线下载</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Wi-Fi%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%88%B6%E4%BD%9C"><span class="nav-text">Wi-Fi二维码制作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B4%AD%E4%B9%B0%E4%BC%9A%E5%91%98"><span class="nav-text">购买会员</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%94%E5%A4%AB%E5%AD%90%E6%97%A7%E4%B9%A6%E7%BD%91%E4%BD%8E%E4%BB%B7%E8%B4%AD%E4%B9%A6"><span class="nav-text">孔夫子旧书网低价购书</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95%E7%BA%BF"><span class="nav-text">考研复试线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E8%B4%AD%E6%8A%A2%E4%B8%9C%E8%A5%BF"><span class="nav-text">网购抢东西</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B7%98%E5%AE%9D%E5%88%B7%E7%A5%A8%E6%9C%8D%E5%8A%A1"><span class="nav-text">淘宝刷票服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%B0%81%E4%BA%92%E8%81%94%E7%BD%91%E8%B4%A6%E5%8F%B7"><span class="nav-text">尝试解封互联网账号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E9%94%81%E7%BD%91%E6%98%93%E4%BA%91"><span class="nav-text">解锁网易云</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%B0%E6%88%90%E5%B7%A5%E5%85%B7"><span class="nav-text">现成工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E8%A1%8C%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-text">自行搭建服务器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E5%8E%BB%E6%B0%B4%E5%8D%B0"><span class="nav-text">图片去水印</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%8D%E8%B4%B9%E6%9D%82%E5%BF%97"><span class="nav-text">免费杂志</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E7%9C%8B%E4%B9%A6%E8%8B%91"><span class="nav-text">博看书苑</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%AE%89%E5%85%A8%E4%B8%94%E4%B8%8D%E9%99%90%E9%80%9F%E7%9A%84%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E8%B5%84%E6%BA%90"><span class="nav-text">如何安全且不限速的下载百度网盘资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%AF%E6%8C%81BT%E7%A7%8D%E5%AD%90%E5%92%8C%E7%A3%81%E5%8A%9B%E9%93%BE-%E7%A6%BB%E7%BA%BF%E3%80%81%E5%9C%A8%E7%BA%BF%E4%B8%8B%E8%BD%BD%E7%9A%84%E7%BD%91%E7%9B%98%E5%A4%A7%E5%85%A8"><span class="nav-text">支持BT种子和磁力链 离线、在线下载的网盘大全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BT-%E4%BB%A3%E6%8A%93%E9%9B%A2%E7%B7%9A%E4%B8%8B%E8%BC%89%E6%9C%8D%E5%8B%99%E7%B6%B2%E7%AB%99-%E5%AE%89%E5%85%A8%E9%80%9F%E5%BA%A6%E5%BF%AB%E7%9C%81%E6%8E%9B%E6%A9%9F%E9%9B%BB%E8%B2%BB"><span class="nav-text">BT 代抓離線下載服務網站@安全速度快省掛機電費</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E5%8E%BB%E6%B0%B4%E5%8D%B0%EF%BC%8C%E4%BB%8E%E7%AE%80%E5%8D%95%E5%88%B0%E5%A4%8D%E6%9D%82%EF%BC%8C%E5%8C%85%E6%95%99%E5%8C%85%E4%BC%9A"><span class="nav-text">图片去水印，从简单到复杂，包教包会</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2022%E5%B9%B4%EF%BC%8C%E6%B2%A1%E6%83%B3%E5%88%B0%E8%BF%98%E6%9C%89%E8%83%BD%E7%99%BD%E5%AB%96%E7%9A%84%E6%97%A0%E8%A7%86%E9%99%90%E5%88%B6%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8%EF%BC%81"><span class="nav-text">2022年，没想到还有能白嫖的无视限制离线下载神器！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E8%BD%AF%E4%BB%B6%E6%90%9E%E5%AE%9A%EF%BC%81%E5%87%AD%E7%A9%BA%E5%A4%9A80%E4%BA%BFGB%E7%A1%AC%E7%9B%98%EF%BC%8C%E7%BD%91%E7%9B%98%E8%B5%84%E6%BA%90%E7%9E%AC%E9%97%B4%E8%BD%AC%E6%9C%AC%E5%9C%B0%EF%BC%81"><span class="nav-text">一个软件搞定！凭空多80亿GB硬盘，网盘资源瞬间转本地！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#50MB-s-%EF%BC%8C%E5%BA%A6%E7%9B%98%E4%B8%8D%E9%99%90%E9%80%9F%EF%BC%81%E8%B5%B7%E9%A3%9E%EF%BC%81%EF%BC%81%EF%BC%81"><span class="nav-text">50MB&#x2F;s++，度盘不限速！起飞！！！</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description">Somewhere leisure.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">76</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:04</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

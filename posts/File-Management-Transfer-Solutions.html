@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="文件管理与传输解决方案。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文件管理与传输解决方案">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/File-Management-Transfer-Solutions.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="文件管理与传输解决方案。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/topic.jpg">
+<meta property="article:published_time" content="2020-04-09T05:59:29.000Z">
+<meta property="article:modified_time" content="2026-06-06T16:03:02.666Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/File-Management-Transfer-Solutions.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>文件管理与传输解决方案 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/File-Management-Transfer-Solutions.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="Somewhere leisure.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          文件管理与传输解决方案
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-09 13:59:29" itemprop="dateCreated datePublished" datetime="2020-04-09T13:59:29+08:00">2020-04-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2026-06-07 00:03:02" itemprop="dateModified" datetime="2026-06-07T00:03:02+08:00">2026-06-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>6.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/topic.jpg"></p>
+<p>文件管理与传输解决方案。</p>
+<span id="more"></span>
+
+<h1 id="文件传输"><a href="#文件传输" class="headerlink" title="文件传输"></a>文件传输</h1><h2 id="Dukto"><a href="#Dukto" class="headerlink" title="Dukto"></a>Dukto</h2><p>可使同一局域网下的电脑传输文件，传输双方的系统类型可以不同。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.52pojie.cn/thread-1086314-1-1.html</span><br></pre></td></tr></table></figure>
+
+<h1 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h1><h2 id="nexusfile"><a href="#nexusfile" class="headerlink" title="nexusfile"></a>nexusfile</h2><p>适用于Windows的快速强大的文件管理器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.xiles.net/</span><br></pre></td></tr></table></figure>
+
+<h2 id="润普"><a href="#润普" class="headerlink" title="润普"></a>润普</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.everydo.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="IPFS"><a href="#IPFS" class="headerlink" title="IPFS"></a>IPFS</h2><p>持久且分布式存储和共享文件的网络传输协议。</p>
+<p>打开以下链接并安装IPFS CLI。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://ipfs.io/</span><br></pre></td></tr></table></figure>
+
+<p>在命令提示符切换到解压后的安装目录，输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 初始化</span><br><span class="line">ipfs.exe init</span><br><span class="line"></span><br><span class="line"># 开启守护进程</span><br><span class="line">ipfs.exe daemon</span><br></pre></td></tr></table></figure>
+
+<p>在浏览器输入<code>http://localhost:5001/webui</code>进入主界面即可使用。在Files上传文件后右键点击Copy hash，使用以下命令即可查看该文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">htttps://ipfs.io/[hash值]</span><br></pre></td></tr></table></figure>
+
+<p>也可通过以下命令上传本地文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 上传</span><br><span class="line"># 上传完后用localhost:8080/ipfs/[hash值]访问</span><br><span class="line">ipfs add -r [文件（夹）路径]</span><br><span class="line"></span><br><span class="line"># 发布到网络</span><br><span class="line"># 发布后可用ipfs.io/[hash值]访问</span><br><span class="line">ipfs name publish [hash值]</span><br></pre></td></tr></table></figure>
+
+<p>其余命令如下。</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ifps id</td>
+<td>查看节点ID</td>
+</tr>
+<tr>
+<td>ipfs name resolve [节点ID]</td>
+<td>查询节点hash值</td>
+</tr>
+</tbody></table>
+<h2 id="tagLyst-Next-3"><a href="#tagLyst-Next-3" class="headerlink" title="tagLyst Next 3"></a>tagLyst Next 3</h2><p>标签式文件资料管理。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.taglyst.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="SparkleShare"><a href="#SparkleShare" class="headerlink" title="SparkleShare"></a>SparkleShare</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.sparkleshare.org/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Syncthing"><a href="#Syncthing" class="headerlink" title="Syncthing"></a>Syncthing</h2><p>文件同步程序。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://syncthing.net/</span><br></pre></td></tr></table></figure>
+
+<h2 id="ZOHO"><a href="#ZOHO" class="headerlink" title="ZOHO"></a>ZOHO</h2><p>适用于团队和个人的在线文件管理。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.zoho.com.cn/docs/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Cloudreve"><a href="#Cloudreve" class="headerlink" title="Cloudreve"></a>Cloudreve</h2><p>通过以下链接下载安装包，然后上传到服务器根目录。打开<code>http://[域名]/CloudreveInstaller</code>即可进入安装界面。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/cloudreve/Cloudreve</span><br></pre></td></tr></table></figure>
+
+<p>若无权限，则需要在服务器使用以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 [源码安装目录]</span><br></pre></td></tr></table></figure>
+
+<p>若安装失败，则可先安装宝塔镜像，并切换PHP版本。</p>
+<p>安装成功后打开<code>http://[域名]/Admin</code>，使用提供的初始用户名和密码登录即可。一般需要在基础设置中添加跨域访问规则，来源为<code>*</code>，允许Methods全选，允许Headers为<code>*</code>，暴露Headers不填，缓存时间为<code>0</code>。</p>
+<h2 id="MOVER-IO"><a href="#MOVER-IO" class="headerlink" title="MOVER.IO"></a>MOVER.IO</h2><p>文件迁移服务。支持OneDrive&#x2F;GoogleDrive&#x2F;Dropbox等。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mover.io/</span><br></pre></td></tr></table></figure>
+
+<h2 id="GDIndex"><a href="#GDIndex" class="headerlink" title="GDIndex"></a>GDIndex</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://gdindex-code-builder.glitch.me/</span><br></pre></td></tr></table></figure>
+
+<h2 id="OLAINDEX"><a href="#OLAINDEX" class="headerlink" title="OLAINDEX"></a>OLAINDEX</h2><p>OneDrive文件管理。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/WangNingkai/OLAINDEX</span><br></pre></td></tr></table></figure>
+
+<h2 id="OneList"><a href="#OneList" class="headerlink" title="OneList"></a>OneList</h2><p>OneDrive文件管理。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/malaohu/OneList--</span><br></pre></td></tr></table></figure>
+
+<h2 id="Directory-Lister"><a href="#Directory-Lister" class="headerlink" title="Directory Lister"></a>Directory Lister</h2><p>公开任何可通过Web访问的文件夹的内容以进行浏览和共享。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.directorylister.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Tiny-File-Manager"><a href="#Tiny-File-Manager" class="headerlink" title="Tiny File Manager"></a>Tiny File Manager</h2><p>基于Web的文件管理器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/prasathmani/tinyfilemanager</span><br></pre></td></tr></table></figure>
+
+<h2 id="Z-File"><a href="#Z-File" class="headerlink" title="Z-File"></a>Z-File</h2><p>在线文件目录。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/zhaojun1998/zfile</span><br></pre></td></tr></table></figure>
+
+<h2 id="SeaweedFS"><a href="#SeaweedFS" class="headerlink" title="SeaweedFS"></a>SeaweedFS</h2><p>简单且高度可扩展的分布式文件系统。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/chrislusf/seaweedfs</span><br></pre></td></tr></table></figure>
+
+<h2 id="Syncthing-1"><a href="#Syncthing-1" class="headerlink" title="Syncthing"></a>Syncthing</h2><p>文件同步程序。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/syncthing/syncthing</span><br></pre></td></tr></table></figure>
+
+<h2 id="h5ai"><a href="#h5ai" class="headerlink" title="h5ai"></a>h5ai</h2><p>HTTP Web服务器的现代文件索引器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://larsjung.de/h5ai/</span><br></pre></td></tr></table></figure>
+
+<h2 id="ocDownloader"><a href="#ocDownloader" class="headerlink" title="ocDownloader"></a>ocDownloader</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/e-alfred/ocdownloader</span><br></pre></td></tr></table></figure>
+
+<h2 id="Nextcloud"><a href="#Nextcloud" class="headerlink" title="Nextcloud"></a>Nextcloud</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://docs.nextcloud.com/server/17/user_manual/</span><br><span class="line">https://github.com/nextcloud/docker</span><br></pre></td></tr></table></figure>
+
+<h2 id="filebrowser"><a href="#filebrowser" class="headerlink" title="filebrowser"></a>filebrowser</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/filebrowser/filebrowser</span><br></pre></td></tr></table></figure>
+
+<h2 id="微力同步"><a href="#微力同步" class="headerlink" title="微力同步"></a>微力同步</h2><p>高效的数据传输工具。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.verysync.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="FileRun"><a href="#FileRun" class="headerlink" title="FileRun"></a>FileRun</h2><p>自托管文件同步和共享。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://filerun.com/</span><br></pre></td></tr></table></figure>
+
+<p>使用CentOS6 X64系统部署，命令如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget ftp://192.99.11.204/FileRun_2017_03_18_PHP7.zip </span><br><span class="line">unzip FileRun_2017_03_18_PHP7.zip</span><br><span class="line">chmod 777 -R system/data</span><br></pre></td></tr></table></figure>
+
+<p>访问网址即可进入向导。</p>
+<p>FFmpeg插件可通过以下命令安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">yum install yasm -y</span><br><span class="line">wget http://ffmpeg.org/releases/ffmpeg-3.1.3.tar.bz2</span><br><span class="line">tar jxvf ffmpeg-3.1.3.tar.bz2</span><br><span class="line">cd ffmpeg-3.1.3</span><br><span class="line">./configure</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<h2 id="Furk-net"><a href="#Furk-net" class="headerlink" title="Furk.net"></a>Furk.net</h2><p>获取媒体文件并立即流式传输。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.furk.net/</span><br></pre></td></tr></table></figure>
+
+<h2 id="KodExplorer"><a href="#KodExplorer" class="headerlink" title="KodExplorer"></a>KodExplorer</h2><p>网络文件管理器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/kalcaddle/KODExplorer</span><br><span class="line">https://kodcloud.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="MultCloud"><a href="#MultCloud" class="headerlink" title="MultCloud"></a>MultCloud</h2><p>跨网盘传输文件在线服务。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.multcloud.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Air-Explorer"><a href="#Air-Explorer" class="headerlink" title="Air Explorer"></a>Air Explorer</h2><p>全球各大网盘服务之间文件同步工具。免费版每个云服务器只能登陆1个账号，不支持计划任务，不支持限速。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.airexplorer.net/en/</span><br></pre></td></tr></table></figure>
+
+<h2 id="filestack"><a href="#filestack" class="headerlink" title="filestack"></a>filestack</h2><p>上载，转换任何文件并将其传送到应用中。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.filestack.com/</span><br></pre></td></tr></table></figure>
+
+<h1 id="剪贴板共享"><a href="#剪贴板共享" class="headerlink" title="剪贴板共享"></a>剪贴板共享</h1><h2 id="Clipboard-online"><a href="#Clipboard-online" class="headerlink" title="Clipboard-online"></a>Clipboard-online</h2><p>用于iOS和Windows之间共享剪贴板，通过将本机剪贴板暴露于HTTP端口、iOS发送HTTP请求来获取&#x2F;发送剪贴板的方式实现，仓库链接如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/YanxinTang/clipboard-online</span><br></pre></td></tr></table></figure>
+
+<p>Windows安装以上仓库的安装包，iOS使用以下两个捷径。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 获取Wndows剪贴板</span><br><span class="line">https://www.icloud.com/shortcuts/a10cc2d0f1f94249b36489db102c367d</span><br><span class="line"></span><br><span class="line"># 发送到Windows剪贴板</span><br><span class="line">https://www.icloud.com/shortcuts/d9466ea3eff54e91bf1f0801cc7ce32c</span><br></pre></td></tr></table></figure>
+
+<p>运行捷径前需要配置。在Windows下查看本机IP，可通过cmd下输入ipconfig查看。然后在iOS下打开捷径的配置，按照提示添加键和值，其中键是Wi-Fi名称，值是刚才获取的IP，其它保持默认即可。</p>
+<h2 id="FnSync"><a href="#FnSync" class="headerlink" title="FnSync"></a>FnSync</h2><p>用于Android和Windows之间共享剪贴板，仅支持Windows 10。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://gitee.com/holmium/fnsync</span><br></pre></td></tr></table></figure>
+
+<p>Windows安装以上仓库的安装包，Android安装以下APP。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.coolapk.com/apk/269031</span><br></pre></td></tr></table></figure>
+
+<p>完成配置后，对于Android 10以下版本即可使用。对于Android 10及以上版本，由于Android 10对系统权限做了限制，不允许应用后台获取剪贴板，因此需要手动下拉通知栏，并点击发送剪切板文本。</p>
+<h2 id="快贴"><a href="#快贴" class="headerlink" title="快贴"></a>快贴</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://clipber.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Pushbullet"><a href="#Pushbullet" class="headerlink" title="Pushbullet"></a>Pushbullet</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.pushbullet.com/</span><br></pre></td></tr></table></figure>
+
+<p>iOS客户端已下架，可通过捷径实现类似效果。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://meta.appinn.net/t/topic/18629/2</span><br></pre></td></tr></table></figure>
+
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">https://chigusa-web.com/clibor-zh-cn/</span><br><span class="line">http://clipdiary.com/index_simplifiedchinese.php</span><br><span class="line">https://github.com/sabrogden/Ditto</span><br><span class="line">https://github.com/huiyadanli/PasteEx</span><br></pre></td></tr></table></figure>
+
+<h1 id="格式转换"><a href="#格式转换" class="headerlink" title="格式转换"></a>格式转换</h1><h2 id="普通格式转换"><a href="#普通格式转换" class="headerlink" title="普通格式转换"></a>普通格式转换</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">https://cn.office-converter.com/</span><br><span class="line">https://www.online-convert.com/</span><br><span class="line">https://convertio.co/zh/</span><br><span class="line">https://cloudconvert.com/</span><br><span class="line">https://www.cleverbrush.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="视频格式转换"><a href="#视频格式转换" class="headerlink" title="视频格式转换"></a>视频格式转换</h2><h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><h4 id="M3U8视频辅助工具"><a href="#M3U8视频辅助工具" class="headerlink" title="M3U8视频辅助工具"></a>M3U8视频辅助工具</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.52pojie.cn/thread-878944-1-1.html</span><br></pre></td></tr></table></figure>
+
+<h4 id="QQ影音转码"><a href="#QQ影音转码" class="headerlink" title="QQ影音转码"></a>QQ影音转码</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://pan-yz.chaoxing.com/external/m/file/322880726122655744?appId=1000&amp;name=QQ%E5%BD%B1%E9%9F%B3%E8%BD%AC%E7%A0%81%E5%B7%A5%E5%85%B7.rar</span><br><span class="line">http://pan-yz.chaoxing.com/external/m/file/322852715956563968?appId=1000&amp;name=QQ%E5%BD%B1%E9%9F%B3%E8%BD%AC%E7%A0%81%E5%B7%A5%E5%85%B7.exe</span><br></pre></td></tr></table></figure>
+
+<h4 id="迅捷视频转换"><a href="#迅捷视频转换" class="headerlink" title="迅捷视频转换"></a>迅捷视频转换</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://pan-yz.chaoxing.com/external/m/file/312568666797150208</span><br><span class="line">https://pan-yz.chaoxing.com/external/m/file/322851553912061952</span><br></pre></td></tr></table></figure>
+
+<h4 id="万兴全能格式转换器"><a href="#万兴全能格式转换器" class="headerlink" title="万兴全能格式转换器"></a>万兴全能格式转换器</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://pan-yz.chaoxing.com/external/m/file/322853804621729792</span><br><span class="line">https://pan-yz.chaoxing.com/external/m/file/322879210716426240</span><br></pre></td></tr></table></figure>
+
+<h3 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h3><h4 id="万兴全能格式转换器-1"><a href="#万兴全能格式转换器-1" class="headerlink" title="万兴全能格式转换器"></a>万兴全能格式转换器</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://pan-yz.chaoxing.com/external/m/file/322879349300432896</span><br></pre></td></tr></table></figure>
+
+<h2 id="APE转换"><a href="#APE转换" class="headerlink" title="APE转换"></a>APE转换</h2><p>把cue文件拖入千千静听中，选中你需要转换的歌曲，右键选择<code>转换格式</code>即可。</p>
+<h2 id="NCM-QMC转换"><a href="#NCM-QMC转换" class="headerlink" title="NCM&#x2F;QMC转换"></a>NCM&#x2F;QMC转换</h2><h3 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://tool.moresound.tk/</span><br><span class="line">https://ix64.github.io/unlock-music/</span><br></pre></td></tr></table></figure>
+
+<h3 id="电脑端应用"><a href="#电脑端应用" class="headerlink" title="电脑端应用"></a>电脑端应用</h3><h4 id="全平台"><a href="#全平台" class="headerlink" title="全平台"></a>全平台</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/Presburger/qmc-decoder/releases</span><br></pre></td></tr></table></figure>
+
+<h4 id="Windows-1"><a href="#Windows-1" class="headerlink" title="Windows"></a>Windows</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://lanzoux.com/i8fAuez0yjc</span><br></pre></td></tr></table></figure>
+
+<h4 id="Mac-1"><a href="#Mac-1" class="headerlink" title="Mac"></a>Mac</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://lanzoux.com/iQyFQez0zgf</span><br><span class="line">https://lanzoux.com/iydObez0zpe</span><br></pre></td></tr></table></figure>
+
+<h3 id="手机端应用"><a href="#手机端应用" class="headerlink" title="手机端应用"></a>手机端应用</h3><h4 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://lanzoux.com/ivcrPez10fa</span><br></pre></td></tr></table></figure>
+
+<h2 id="TS转MP4"><a href="#TS转MP4" class="headerlink" title="TS转MP4"></a>TS转MP4</h2><h3 id="Medlexo"><a href="#Medlexo" class="headerlink" title="Medlexo"></a>Medlexo</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://www.lanzoux.com/b06a213gj</span><br><span class="line">https://www.lanzoux.com/b06a274lg</span><br></pre></td></tr></table></figure>
+
+<h3 id="M3U8视频辅助工具-1"><a href="#M3U8视频辅助工具-1" class="headerlink" title="M3U8视频辅助工具"></a>M3U8视频辅助工具</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.lanzoux.com/b06a213ra</span><br></pre></td></tr></table></figure>
+
+<h1 id="PDF压缩"><a href="#PDF压缩" class="headerlink" title="PDF压缩"></a>PDF压缩</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Windows</span><br><span class="line">http://freepdfcompressor.com/</span><br><span class="line">http://reducepdfsize.com/</span><br><span class="line">https://www.4dots-software.com/free-pdf-compress/zh/</span><br><span class="line"></span><br><span class="line"># Mac</span><br><span class="line">https://lightweightpdf.com/</span><br><span class="line">https://www.imymac.tw/free-imymac-pdf-compressor/</span><br></pre></td></tr></table></figure>
+
+<h1 id="PDF处理"><a href="#PDF处理" class="headerlink" title="PDF处理"></a>PDF处理</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># 需要edu邮箱</span><br><span class="line">https://online.foxitsoftware.cn/</span><br><span class="line"></span><br><span class="line"># 其它</span><br><span class="line">https://docsmall.com/</span><br><span class="line">https://www.foxitcloud.cn/</span><br><span class="line">https://lightpdf.cn/pdf-edit</span><br><span class="line">https://www.pdfpai.com/</span><br><span class="line">https://www.ilovepdf.com/zh-cn</span><br><span class="line">https://lightpdf.com/zh/</span><br><span class="line">http://www.pdfdo.com/</span><br><span class="line">https://smallpdf.com/</span><br><span class="line">https://www.hipdf.com/</span><br><span class="line">http://www.html22.com/zh/</span><br><span class="line">https://issuu.com/</span><br><span class="line">https://tools.pdf24.org/zh/</span><br><span class="line">https://www.sejda.com/</span><br><span class="line">https://pdfcandy.com/cn/</span><br><span class="line">https://www.tracker-software.com/product/pdf-xchange-editor</span><br><span class="line">https://zh-cn.libreoffice.org/</span><br><span class="line">https://www.cnblogs.com/pdfpatcher/archive/2011/02/25/Index.html</span><br></pre></td></tr></table></figure>
+
+<h1 id="PDF转换"><a href="#PDF转换" class="headerlink" title="PDF转换"></a>PDF转换</h1><p>手机端可使用Microsoft Office、Adobe Scan（国区没有此APP）。电脑端可使用以下软件。</p>
+<h2 id="迅捷PDF转换器"><a href="#迅捷PDF转换器" class="headerlink" title="迅捷PDF转换器"></a>迅捷PDF转换器</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://pan-yz.chaoxing.com/external/m/file/312608395106230272</span><br></pre></td></tr></table></figure>
+
+<h2 id="Solid-Converter-PDF"><a href="#Solid-Converter-PDF" class="headerlink" title="Solid Converter PDF"></a>Solid Converter PDF</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://pan-yz.chaoxing.com/external/m/file/312609211821096960</span><br></pre></td></tr></table></figure>
+
+<h2 id="Acrobat"><a href="#Acrobat" class="headerlink" title="Acrobat"></a>Acrobat</h2><p>打开后选择扫描和OCR，输出选择<code>可搜索的图像（精确）</code>即可。</p>
+<h2 id="Office2PDF"><a href="#Office2PDF" class="headerlink" title="Office2PDF"></a>Office2PDF</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/evgo2017/Office2PDF</span><br></pre></td></tr></table></figure>
+
+<h1 id="文档对比"><a href="#文档对比" class="headerlink" title="文档对比"></a>文档对比</h1><p>可用Word&#x2F;WPS的审阅功能。也可用ExamDiff Pro、Beyond Compare。</p>
+<p>在Windows上可通过在命令行输入以下命令，无限续期Beyond Compare。若无效，则需要删除安装目录下的BCUnrar.dll文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg delete &quot;HKEY_CURRENT_USER\Software\Scooter Software\Beyond Compare 4&quot; /v CacheID /f</span><br></pre></td></tr></table></figure>
+
+<h1 id="数据恢复"><a href="#数据恢复" class="headerlink" title="数据恢复"></a>数据恢复</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Windows</span><br><span class="line">https://www.lanzoux.com/b06aavj5c</span><br><span class="line"></span><br><span class="line"># Mac</span><br><span class="line">https://www.lanzoux.com/b06aavi2d</span><br><span class="line"></span><br><span class="line"># Android</span><br><span class="line">https://www.lanzoux.com/b06aavi0b</span><br><span class="line">https://www.lanzoux.com/b06aavhvg</span><br></pre></td></tr></table></figure>
+
+<h1 id="清理重复文件"><a href="#清理重复文件" class="headerlink" title="清理重复文件"></a>清理重复文件</h1><p>可用Duplicate Cleaner。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/System-Optimization-Maintenance-Tools.html" rel="prev" title="系统优化与维护工具集">
+      <i class="fa fa-chevron-left"></i> 系统优化与维护工具集
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/Download-Tools-Collection.html" rel="next" title="下载工具大全">
+      下载工具大全 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93"><span class="nav-text">文件传输</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dukto"><span class="nav-text">Dukto</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="nav-text">文件管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#nexusfile"><span class="nav-text">nexusfile</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B6%A6%E6%99%AE"><span class="nav-text">润普</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IPFS"><span class="nav-text">IPFS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tagLyst-Next-3"><span class="nav-text">tagLyst Next 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SparkleShare"><span class="nav-text">SparkleShare</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Syncthing"><span class="nav-text">Syncthing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ZOHO"><span class="nav-text">ZOHO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cloudreve"><span class="nav-text">Cloudreve</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MOVER-IO"><span class="nav-text">MOVER.IO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GDIndex"><span class="nav-text">GDIndex</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OLAINDEX"><span class="nav-text">OLAINDEX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OneList"><span class="nav-text">OneList</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Directory-Lister"><span class="nav-text">Directory Lister</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tiny-File-Manager"><span class="nav-text">Tiny File Manager</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Z-File"><span class="nav-text">Z-File</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SeaweedFS"><span class="nav-text">SeaweedFS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Syncthing-1"><span class="nav-text">Syncthing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#h5ai"><span class="nav-text">h5ai</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ocDownloader"><span class="nav-text">ocDownloader</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nextcloud"><span class="nav-text">Nextcloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#filebrowser"><span class="nav-text">filebrowser</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E5%8A%9B%E5%90%8C%E6%AD%A5"><span class="nav-text">微力同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FileRun"><span class="nav-text">FileRun</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Furk-net"><span class="nav-text">Furk.net</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KodExplorer"><span class="nav-text">KodExplorer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MultCloud"><span class="nav-text">MultCloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Air-Explorer"><span class="nav-text">Air Explorer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#filestack"><span class="nav-text">filestack</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%AA%E8%B4%B4%E6%9D%BF%E5%85%B1%E4%BA%AB"><span class="nav-text">剪贴板共享</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Clipboard-online"><span class="nav-text">Clipboard-online</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FnSync"><span class="nav-text">FnSync</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E8%B4%B4"><span class="nav-text">快贴</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pushbullet"><span class="nav-text">Pushbullet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E5%AE%83"><span class="nav-text">其它</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="nav-text">格式转换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="nav-text">普通格式转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="nav-text">视频格式转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows"><span class="nav-text">Windows</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#M3U8%E8%A7%86%E9%A2%91%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7"><span class="nav-text">M3U8视频辅助工具</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#QQ%E5%BD%B1%E9%9F%B3%E8%BD%AC%E7%A0%81"><span class="nav-text">QQ影音转码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%85%E6%8D%B7%E8%A7%86%E9%A2%91%E8%BD%AC%E6%8D%A2"><span class="nav-text">迅捷视频转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%87%E5%85%B4%E5%85%A8%E8%83%BD%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%99%A8"><span class="nav-text">万兴全能格式转换器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mac"><span class="nav-text">Mac</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%87%E5%85%B4%E5%85%A8%E8%83%BD%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%99%A8-1"><span class="nav-text">万兴全能格式转换器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#APE%E8%BD%AC%E6%8D%A2"><span class="nav-text">APE转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NCM-QMC%E8%BD%AC%E6%8D%A2"><span class="nav-text">NCM&#x2F;QMC转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%AB%99"><span class="nav-text">网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E8%84%91%E7%AB%AF%E5%BA%94%E7%94%A8"><span class="nav-text">电脑端应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%A8%E5%B9%B3%E5%8F%B0"><span class="nav-text">全平台</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows-1"><span class="nav-text">Windows</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mac-1"><span class="nav-text">Mac</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E7%AB%AF%E5%BA%94%E7%94%A8"><span class="nav-text">手机端应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Android"><span class="nav-text">Android</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TS%E8%BD%ACMP4"><span class="nav-text">TS转MP4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Medlexo"><span class="nav-text">Medlexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#M3U8%E8%A7%86%E9%A2%91%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7-1"><span class="nav-text">M3U8视频辅助工具</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PDF%E5%8E%8B%E7%BC%A9"><span class="nav-text">PDF压缩</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PDF%E5%A4%84%E7%90%86"><span class="nav-text">PDF处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PDF%E8%BD%AC%E6%8D%A2"><span class="nav-text">PDF转换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%85%E6%8D%B7PDF%E8%BD%AC%E6%8D%A2%E5%99%A8"><span class="nav-text">迅捷PDF转换器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solid-Converter-PDF"><span class="nav-text">Solid Converter PDF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Acrobat"><span class="nav-text">Acrobat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Office2PDF"><span class="nav-text">Office2PDF</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E6%A1%A3%E5%AF%B9%E6%AF%94"><span class="nav-text">文档对比</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D"><span class="nav-text">数据恢复</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B8%85%E7%90%86%E9%87%8D%E5%A4%8D%E6%96%87%E4%BB%B6"><span class="nav-text">清理重复文件</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description">Somewhere leisure.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">76</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:04</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

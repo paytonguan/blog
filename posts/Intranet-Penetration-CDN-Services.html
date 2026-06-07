@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#000">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#000">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"paytonguan.github.io","root":"/blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="内网穿透与CDN服务。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="内网穿透与CDN服务">
+<meta property="og:url" content="https://paytonguan.github.io/blog/posts/Intranet-Penetration-CDN-Services.html">
+<meta property="og:site_name" content="Payton&#39;s blog">
+<meta property="og:description" content="内网穿透与CDN服务。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://paytonguan.github.io/blog/topic.jpg">
+<meta property="article:published_time" content="2024-12-23T05:59:29.000Z">
+<meta property="article:modified_time" content="2026-06-06T15:56:42.918Z">
+<meta property="article:author" content="Payton">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://paytonguan.github.io/blog/topic.jpg">
+
+<link rel="canonical" href="https://paytonguan.github.io/blog/posts/Intranet-Penetration-CDN-Services.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>内网穿透与CDN服务 | Payton's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Payton's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Somewhere leisure.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://paytonguan.github.io/blog/posts/Intranet-Penetration-CDN-Services.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Payton">
+      <meta itemprop="description" content="Somewhere leisure.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Payton's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          内网穿透与CDN服务
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-12-23 13:59:29" itemprop="dateCreated datePublished" datetime="2024-12-23T13:59:29+08:00">2024-12-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2026-06-06 23:56:42" itemprop="dateModified" datetime="2026-06-06T23:56:42+08:00">2026-06-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/blog/topic.jpg"></p>
+<p>内网穿透与CDN服务。</p>
+<span id="more"></span>
+
+<h1 id="内网穿透-FRP-流量转发"><a href="#内网穿透-FRP-流量转发" class="headerlink" title="内网穿透&#x2F;FRP&#x2F;流量转发"></a>内网穿透&#x2F;FRP&#x2F;流量转发</h1><h3 id="CoNET"><a href="#CoNET" class="headerlink" title="CoNET"></a>CoNET</h3><p>通过连接第三方公众邮件服务器接入CoNET的匿名虚拟网络，以访问被屏蔽的网址。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/CoNETProject/CoNET</span><br></pre></td></tr></table></figure>
+
+<h3 id="Reqrypt"><a href="#Reqrypt" class="headerlink" title="Reqrypt"></a>Reqrypt</h3><p>隧道和加密Web浏览器请求的工具，可搭配DNSCrypt用于翻墙。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/basil00/reqrypt</span><br></pre></td></tr></table></figure>
+
+<h3 id="Dragonite"><a href="#Dragonite" class="headerlink" title="Dragonite"></a>Dragonite</h3><p>把TCP转为UDP。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/dragonite-network/dragonite-java</span><br></pre></td></tr></table></figure>
+
+<h3 id="KCP"><a href="#KCP" class="headerlink" title="KCP"></a>KCP</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/skywind3000/kcp</span><br></pre></td></tr></table></figure>
+
+<h3 id="kcptun"><a href="#kcptun" class="headerlink" title="kcptun"></a>kcptun</h3><p>把TCP转为UDP。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/xtaci/kcptun</span><br></pre></td></tr></table></figure>
+
+<h3 id="ZeroNet"><a href="#ZeroNet" class="headerlink" title="ZeroNet"></a>ZeroNet</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/HelloZeroNet/ZeroNet</span><br></pre></td></tr></table></figure>
+
+<h3 id="Dog-Tunnel"><a href="#Dog-Tunnel" class="headerlink" title="Dog Tunnel"></a>Dog Tunnel</h3><p>基于kcp的p2p端口映射工具，支持Socks5代理。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/vzex/dog-tunnel</span><br></pre></td></tr></table></figure>
+
+<h3 id="GO-Simple-Tunnel"><a href="#GO-Simple-Tunnel" class="headerlink" title="GO Simple Tunnel"></a>GO Simple Tunnel</h3><p>gost-GO简单隧道。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/ginuerzh/gost</span><br></pre></td></tr></table></figure>
+
+<h3 id="网云穿"><a href="#网云穿" class="headerlink" title="网云穿"></a>网云穿</h3><p>送免费体验隧道。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://xiaomy.net/</span><br></pre></td></tr></table></figure>
+
+<h3 id="魔法隧道"><a href="#魔法隧道" class="headerlink" title="魔法隧道"></a>魔法隧道</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.mofasuidao.cn/</span><br></pre></td></tr></table></figure>
+
+<h3 id="量子互联"><a href="#量子互联" class="headerlink" title="量子互联"></a>量子互联</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.nsloop.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="路由侠"><a href="#路由侠" class="headerlink" title="路由侠"></a>路由侠</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.luyouxia.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="花生壳"><a href="#花生壳" class="headerlink" title="花生壳"></a>花生壳</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://hsk.oray.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="inlets"><a href="#inlets" class="headerlink" title="inlets"></a>inlets</h3><p>将本地服务暴露到公网。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/inlets/inlets/blob/master/README_CN.md</span><br></pre></td></tr></table></figure>
+
+<h3 id="Wisdom"><a href="#Wisdom" class="headerlink" title="Wisdom"></a>Wisdom</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://wdom.net/</span><br></pre></td></tr></table></figure>
+
+<h3 id="NATAPP"><a href="#NATAPP" class="headerlink" title="NATAPP"></a>NATAPP</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://natapp.cn/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Ngrok"><a href="#Ngrok" class="headerlink" title="Ngrok"></a>Ngrok</h3><p>美国免费服务器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.ngrok.cc/</span><br></pre></td></tr></table></figure>
+
+<h3 id="神卓"><a href="#神卓" class="headerlink" title="神卓"></a>神卓</h3><p>免费三天。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.shenzhuohl.com/price/index.html</span><br></pre></td></tr></table></figure>
+
+<h3 id="Napvy"><a href="#Napvy" class="headerlink" title="Napvy"></a>Napvy</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://napyy.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="lu8"><a href="#lu8" class="headerlink" title="lu8"></a>lu8</h3><p>免费内网穿透服务及搭建免费内网穿透服务器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.lu8.win/</span><br></pre></td></tr></table></figure>
+
+<h3 id="铂金frp"><a href="#铂金frp" class="headerlink" title="铂金frp"></a>铂金frp</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://bob.kim/frp</span><br></pre></td></tr></table></figure>
+
+<h3 id="SAKURA-FRP"><a href="#SAKURA-FRP" class="headerlink" title="SAKURA FRP"></a>SAKURA FRP</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.natfrp.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="QYDEV"><a href="#QYDEV" class="headerlink" title="QYDEV"></a>QYDEV</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://qydev.com/index.html</span><br></pre></td></tr></table></figure>
+
+<h3 id="ngrok"><a href="#ngrok" class="headerlink" title="ngrok"></a>ngrok</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://ngrok.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="TunnelNat"><a href="#TunnelNat" class="headerlink" title="TunnelNat"></a>TunnelNat</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.tunnelnat.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="lanproxy"><a href="#lanproxy" class="headerlink" title="lanproxy"></a>lanproxy</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/ffay/lanproxy</span><br></pre></td></tr></table></figure>
+
+<h3 id="网络通"><a href="#网络通" class="headerlink" title="网络通"></a>网络通</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.youtusoft.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Notr"><a href="#Notr" class="headerlink" title="Notr"></a>Notr</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.notr.tech/</span><br></pre></td></tr></table></figure>
+
+<h1 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h1><h2 id="国内免费"><a href="#国内免费" class="headerlink" title="国内免费"></a>国内免费</h2><h3 id="360网站卫士CDN前端公共库"><a href="#360网站卫士CDN前端公共库" class="headerlink" title="360网站卫士CDN前端公共库"></a>360网站卫士CDN前端公共库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://libs.useso.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="七牛静态资源CDN服务"><a href="#七牛静态资源CDN服务" class="headerlink" title="七牛静态资源CDN服务"></a>七牛静态资源CDN服务</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.staticfile.org/</span><br></pre></td></tr></table></figure>
+
+<h3 id="又拍云常用JS库CDN服务"><a href="#又拍云常用JS库CDN服务" class="headerlink" title="又拍云常用JS库CDN服务"></a>又拍云常用JS库CDN服务</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://jscdn.upai.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="极客族公共加速服务"><a href="#极客族公共加速服务" class="headerlink" title="极客族公共加速服务"></a>极客族公共加速服务</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.geekzu.org/cached.html</span><br></pre></td></tr></table></figure>
+
+<h3 id="奇虎360前端静态资源库"><a href="#奇虎360前端静态资源库" class="headerlink" title="奇虎360前端静态资源库"></a>奇虎360前端静态资源库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.baomitu.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="百度静态资源公共库"><a href="#百度静态资源公共库" class="headerlink" title="百度静态资源公共库"></a>百度静态资源公共库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://cdn.code.baidu.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="新浪云计算公共库"><a href="#新浪云计算公共库" class="headerlink" title="新浪云计算公共库"></a>新浪云计算公共库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://lib.sinaapp.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="CDNBee"><a href="#CDNBee" class="headerlink" title="CDNBee"></a>CDNBee</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdnbee.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="BootCDN"><a href="#BootCDN" class="headerlink" title="BootCDN"></a>BootCDN</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.bootcdn.cn/</span><br></pre></td></tr></table></figure>
+
+<h3 id="七牛云"><a href="#七牛云" class="headerlink" title="七牛云"></a>七牛云</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://developer.qiniu.com/af/kb/1574/free-credit-information</span><br></pre></td></tr></table></figure>
+
+<h3 id="Fikker"><a href="#Fikker" class="headerlink" title="Fikker"></a>Fikker</h3><p>自建CDN。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.fikker.com/</span><br></pre></td></tr></table></figure>
+
+<p>关闭系统IIS服务和防火墙，以避免与Fikker的80、443、6780端口冲突。下载Fikker并打开，分别点击<code>注册服务</code>和<code>运行服务</code>，然后在浏览器输入以下地址以登录管理后台，初始密码为123456。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://your-fikker-ip:6780/</span><br></pre></td></tr></table></figure>
+
+<h3 id="FreeCDN"><a href="#FreeCDN" class="headerlink" title="FreeCDN"></a>FreeCDN</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://su.zhiduopc.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="加速乐"><a href="#加速乐" class="headerlink" title="加速乐"></a>加速乐</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://defense.yunaq.com/jsl/</span><br></pre></td></tr></table></figure>
+
+<h3 id="YUNDUN"><a href="#YUNDUN" class="headerlink" title="YUNDUN"></a>YUNDUN</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.yundun.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="字节跳动静态资源公共库"><a href="#字节跳动静态资源公共库" class="headerlink" title="字节跳动静态资源公共库"></a>字节跳动静态资源公共库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://cdn.bytedance.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="JSHub"><a href="#JSHub" class="headerlink" title="JSHub"></a>JSHub</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://jshub.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="腾讯网静态资源公共库"><a href="#腾讯网静态资源公共库" class="headerlink" title="腾讯网静态资源公共库"></a>腾讯网静态资源公共库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://libs.qq.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="BootCDN-1"><a href="#BootCDN-1" class="headerlink" title="BootCDN"></a>BootCDN</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.bootcdn.cn/</span><br></pre></td></tr></table></figure>
+
+<h3 id="JSHub-1"><a href="#JSHub-1" class="headerlink" title="JSHub"></a>JSHub</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://jshub.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="又拍云JS库"><a href="#又拍云JS库" class="headerlink" title="又拍云JS库"></a>又拍云JS库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://jscdn.upai.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Staticfile-CDN"><a href="#Staticfile-CDN" class="headerlink" title="Staticfile CDN"></a>Staticfile CDN</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://staticfile.org/</span><br></pre></td></tr></table></figure>
+
+<h3 id="loli"><a href="#loli" class="headerlink" title="loli"></a>loli</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdnjs.loli.net/</span><br></pre></td></tr></table></figure>
+
+<h3 id="UCLOUD-GlobalSSH"><a href="#UCLOUD-GlobalSSH" class="headerlink" title="UCLOUD GlobalSSH"></a>UCLOUD GlobalSSH</h3><p>需要实名。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://docs.ucloud.cn/pathx/globalssh</span><br></pre></td></tr></table></figure>
+
+<h3 id="unpkg-CDN"><a href="#unpkg-CDN" class="headerlink" title="unpkg CDN"></a>unpkg CDN</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.v2ex.com/t/521411</span><br></pre></td></tr></table></figure>
+
+<h3 id="百度云加速"><a href="#百度云加速" class="headerlink" title="百度云加速"></a>百度云加速</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://su.baidu.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="知道创宇云安全"><a href="#知道创宇云安全" class="headerlink" title="知道创宇云安全"></a>知道创宇云安全</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://defense.yunaq.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="CDNFINE"><a href="#CDNFINE" class="headerlink" title="CDNFINE"></a>CDNFINE</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.cdnfine.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="美尔联"><a href="#美尔联" class="headerlink" title="美尔联"></a>美尔联</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://cdn.meierlian.net/</span><br></pre></td></tr></table></figure>
+
+<h3 id="又拍云"><a href="#又拍云" class="headerlink" title="又拍云"></a>又拍云</h3><p>常用JavaScript库CDN服务。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://jscdn.upai.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="前端静态资源库CDN"><a href="#前端静态资源库CDN" class="headerlink" title="前端静态资源库CDN"></a>前端静态资源库CDN</h3><p>首个支持HTTP&#x2F;2的CDN服务。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.baomitu.com/</span><br></pre></td></tr></table></figure>
+
+<h2 id="国外免费"><a href="#国外免费" class="headerlink" title="国外免费"></a>国外免费</h2><h3 id="Microsoft-ASP-net-CDN"><a href="#Microsoft-ASP-net-CDN" class="headerlink" title="Microsoft ASP.net CDN"></a>Microsoft ASP.net CDN</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.asp.net/ajaxlibrary/cdn.ashx</span><br></pre></td></tr></table></figure>
+
+<h3 id="j-Query"><a href="#j-Query" class="headerlink" title="j-Query"></a>j-Query</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://jquery.com/</span><br><span class="line">http://code.jquery.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Google-Hosted-Libraries"><a href="#Google-Hosted-Libraries" class="headerlink" title="Google Hosted Libraries"></a>Google Hosted Libraries</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://developers.google.com/speed/libraries/#d3.js</span><br></pre></td></tr></table></figure>
+
+<h3 id="Fast-io"><a href="#Fast-io" class="headerlink" title="Fast.io"></a>Fast.io</h3><p>用于图像，视频和文档的CDN。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://fast.io/</span><br></pre></td></tr></table></figure>
+
+<h3 id="jare"><a href="#jare" class="headerlink" title="jare"></a>jare</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.jare.io/</span><br></pre></td></tr></table></figure>
+
+<h3 id="FreeDNS"><a href="#FreeDNS" class="headerlink" title="FreeDNS"></a>FreeDNS</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.1984.is/product/freedns/</span><br></pre></td></tr></table></figure>
+
+<h3 id="cdnjs"><a href="#cdnjs" class="headerlink" title="cdnjs"></a>cdnjs</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://cdnjs.com/</span><br><span class="line">http://cdnjs.net/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Microsoft-Ajax内容分发网络"><a href="#Microsoft-Ajax内容分发网络" class="headerlink" title="Microsoft Ajax内容分发网络"></a>Microsoft Ajax内容分发网络</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://docs.microsoft.com/zh-cn/aspnet/ajax/cdn/overview</span><br></pre></td></tr></table></figure>
+
+<h3 id="Google-Hosted-Libraries-1"><a href="#Google-Hosted-Libraries-1" class="headerlink" title="Google Hosted Libraries"></a>Google Hosted Libraries</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://developers.google.com/speed/libraries/</span><br></pre></td></tr></table></figure>
+
+<h3 id="bootstrapCDN"><a href="#bootstrapCDN" class="headerlink" title="bootstrapCDN"></a>bootstrapCDN</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.bootstrapcdn.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="embed-ly"><a href="#embed-ly" class="headerlink" title="embed.ly"></a>embed.ly</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://embed.ly/</span><br></pre></td></tr></table></figure>
+
+<h3 id="image-4-io"><a href="#image-4-io" class="headerlink" title="image 4 io"></a>image 4 io</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://image4.io/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sirv"><a href="#Sirv" class="headerlink" title="Sirv"></a>Sirv</h3><p>图像CDN。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://sirv.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Travis-CI"><a href="#Travis-CI" class="headerlink" title="Travis CI"></a>Travis CI</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://travis-ci.org/</span><br></pre></td></tr></table></figure>
+
+<h3 id="tiiny-host"><a href="#tiiny-host" class="headerlink" title="tiiny.host"></a>tiiny.host</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://tiiny.host/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Z-A-R-V-I-S"><a href="#Z-A-R-V-I-S" class="headerlink" title="Z.A.R.V.I.S."></a>Z.A.R.V.I.S.</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zarvis.ai/</span><br></pre></td></tr></table></figure>
+
+<h3 id="CODING"><a href="#CODING" class="headerlink" title="CODING"></a>CODING</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://coding.net/</span><br></pre></td></tr></table></figure>
+
+<h3 id="gitee"><a href="#gitee" class="headerlink" title="gitee"></a>gitee</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://gitee.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="NotABug"><a href="#NotABug" class="headerlink" title="NotABug"></a>NotABug</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://notabug.org/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Perforce"><a href="#Perforce" class="headerlink" title="Perforce"></a>Perforce</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.perforce.com/products/helix-teamhub</span><br></pre></td></tr></table></figure>
+
+<h3 id="OpenJS-Foundation"><a href="#OpenJS-Foundation" class="headerlink" title="OpenJS Foundation"></a>OpenJS Foundation</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://openjsf.org/</span><br></pre></td></tr></table></figure>
+
+<h3 id="deployhq"><a href="#deployhq" class="headerlink" title="deployhq"></a>deployhq</h3><p>直接从存储库构建和部署代码，管理网站的持续部署。免费试用10天。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.deployhq.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="HOUND"><a href="#HOUND" class="headerlink" title="HOUND"></a>HOUND</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://houndci.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="COVERALLS"><a href="#COVERALLS" class="headerlink" title="COVERALLS"></a>COVERALLS</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://coveralls.io/</span><br></pre></td></tr></table></figure>
+
+<h3 id="CodeFactor"><a href="#CodeFactor" class="headerlink" title="CodeFactor"></a>CodeFactor</h3><p>Git的自动代码审查。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.codefactor.io/</span><br></pre></td></tr></table></figure>
+
+<h3 id="codecov"><a href="#codecov" class="headerlink" title="codecov"></a>codecov</h3><p>改善代码审查工作流程和质量。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://codecov.io/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Deepcode"><a href="#Deepcode" class="headerlink" title="Deepcode"></a>Deepcode</h3><p>实时语义代码分析。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.deepcode.ai/</span><br></pre></td></tr></table></figure>
+
+<h3 id="CodeScene"><a href="#CodeScene" class="headerlink" title="CodeScene"></a>CodeScene</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://codescene.io/</span><br></pre></td></tr></table></figure>
+
+<h3 id="CODE-CLIMATE"><a href="#CODE-CLIMATE" class="headerlink" title="CODE CLIMATE"></a>CODE CLIMATE</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://codeclimate.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="codeac"><a href="#codeac" class="headerlink" title="codeac"></a>codeac</h3><p>将基础架构分析为代码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.codeac.io/infrastructure-as-code.html?ref=free-for-dev</span><br></pre></td></tr></table></figure>
+
+<h3 id="codacy"><a href="#codacy" class="headerlink" title="codacy"></a>codacy</h3><p>自动检查提交和拉取请求的代码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.codacy.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="cacher"><a href="#cacher" class="headerlink" title="cacher"></a>cacher</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.cacher.io/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Dependabot"><a href="#Dependabot" class="headerlink" title="Dependabot"></a>Dependabot</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://dependabot.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="CodeNotary"><a href="#CodeNotary" class="headerlink" title="CodeNotary"></a>CodeNotary</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://codenotary.io/</span><br></pre></td></tr></table></figure>
+
+<h3 id="FoxPass"><a href="#FoxPass" class="headerlink" title="FoxPass"></a>FoxPass</h3><p>实现服务器和网络访问的自动化。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.foxpass.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="百度效率云"><a href="#百度效率云" class="headerlink" title="百度效率云"></a>百度效率云</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://xiaolvyun.baidu.com/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Opendev"><a href="#Opendev" class="headerlink" title="Opendev"></a>Opendev</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://opendev.org/</span><br></pre></td></tr></table></figure>
+
+<h3 id="para"><a href="#para" class="headerlink" title="para"></a>para</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://paraio.com/</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/posts/Website-Development-Deployment.html" rel="prev" title="网站开发与部署实践">
+      <i class="fa fa-chevron-left"></i> 网站开发与部署实践
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/posts/SSL-Certificate-Guide.html" rel="next" title="SSL证书配置指南">
+      SSL证书配置指南 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-FRP-%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91"><span class="nav-text">内网穿透&#x2F;FRP&#x2F;流量转发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CoNET"><span class="nav-text">CoNET</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reqrypt"><span class="nav-text">Reqrypt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dragonite"><span class="nav-text">Dragonite</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#KCP"><span class="nav-text">KCP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kcptun"><span class="nav-text">kcptun</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ZeroNet"><span class="nav-text">ZeroNet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dog-Tunnel"><span class="nav-text">Dog Tunnel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GO-Simple-Tunnel"><span class="nav-text">GO Simple Tunnel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E4%BA%91%E7%A9%BF"><span class="nav-text">网云穿</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AD%94%E6%B3%95%E9%9A%A7%E9%81%93"><span class="nav-text">魔法隧道</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8F%E5%AD%90%E4%BA%92%E8%81%94"><span class="nav-text">量子互联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E4%BE%A0"><span class="nav-text">路由侠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8A%B1%E7%94%9F%E5%A3%B3"><span class="nav-text">花生壳</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inlets"><span class="nav-text">inlets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Wisdom"><span class="nav-text">Wisdom</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NATAPP"><span class="nav-text">NATAPP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ngrok"><span class="nav-text">Ngrok</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A5%9E%E5%8D%93"><span class="nav-text">神卓</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Napvy"><span class="nav-text">Napvy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lu8"><span class="nav-text">lu8</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%82%E9%87%91frp"><span class="nav-text">铂金frp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SAKURA-FRP"><span class="nav-text">SAKURA FRP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QYDEV"><span class="nav-text">QYDEV</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ngrok"><span class="nav-text">ngrok</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TunnelNat"><span class="nav-text">TunnelNat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lanproxy"><span class="nav-text">lanproxy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E9%80%9A"><span class="nav-text">网络通</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notr"><span class="nav-text">Notr</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CDN"><span class="nav-text">CDN</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BD%E5%86%85%E5%85%8D%E8%B4%B9"><span class="nav-text">国内免费</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#360%E7%BD%91%E7%AB%99%E5%8D%AB%E5%A3%ABCDN%E5%89%8D%E7%AB%AF%E5%85%AC%E5%85%B1%E5%BA%93"><span class="nav-text">360网站卫士CDN前端公共库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%83%E7%89%9B%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90CDN%E6%9C%8D%E5%8A%A1"><span class="nav-text">七牛静态资源CDN服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%88%E6%8B%8D%E4%BA%91%E5%B8%B8%E7%94%A8JS%E5%BA%93CDN%E6%9C%8D%E5%8A%A1"><span class="nav-text">又拍云常用JS库CDN服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%81%E5%AE%A2%E6%97%8F%E5%85%AC%E5%85%B1%E5%8A%A0%E9%80%9F%E6%9C%8D%E5%8A%A1"><span class="nav-text">极客族公共加速服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A5%87%E8%99%8E360%E5%89%8D%E7%AB%AF%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%BA%93"><span class="nav-text">奇虎360前端静态资源库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%85%AC%E5%85%B1%E5%BA%93"><span class="nav-text">百度静态资源公共库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E6%B5%AA%E4%BA%91%E8%AE%A1%E7%AE%97%E5%85%AC%E5%85%B1%E5%BA%93"><span class="nav-text">新浪云计算公共库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CDNBee"><span class="nav-text">CDNBee</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BootCDN"><span class="nav-text">BootCDN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%83%E7%89%9B%E4%BA%91"><span class="nav-text">七牛云</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fikker"><span class="nav-text">Fikker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FreeCDN"><span class="nav-text">FreeCDN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E9%80%9F%E4%B9%90"><span class="nav-text">加速乐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#YUNDUN"><span class="nav-text">YUNDUN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%85%AC%E5%85%B1%E5%BA%93"><span class="nav-text">字节跳动静态资源公共库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSHub"><span class="nav-text">JSHub</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%85%BE%E8%AE%AF%E7%BD%91%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%85%AC%E5%85%B1%E5%BA%93"><span class="nav-text">腾讯网静态资源公共库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BootCDN-1"><span class="nav-text">BootCDN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSHub-1"><span class="nav-text">JSHub</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%88%E6%8B%8D%E4%BA%91JS%E5%BA%93"><span class="nav-text">又拍云JS库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Staticfile-CDN"><span class="nav-text">Staticfile CDN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loli"><span class="nav-text">loli</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UCLOUD-GlobalSSH"><span class="nav-text">UCLOUD GlobalSSH</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unpkg-CDN"><span class="nav-text">unpkg CDN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6%E4%BA%91%E5%8A%A0%E9%80%9F"><span class="nav-text">百度云加速</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A5%E9%81%93%E5%88%9B%E5%AE%87%E4%BA%91%E5%AE%89%E5%85%A8"><span class="nav-text">知道创宇云安全</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CDNFINE"><span class="nav-text">CDNFINE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BE%8E%E5%B0%94%E8%81%94"><span class="nav-text">美尔联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%88%E6%8B%8D%E4%BA%91"><span class="nav-text">又拍云</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E7%AB%AF%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%BA%93CDN"><span class="nav-text">前端静态资源库CDN</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BD%E5%A4%96%E5%85%8D%E8%B4%B9"><span class="nav-text">国外免费</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Microsoft-ASP-net-CDN"><span class="nav-text">Microsoft ASP.net CDN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#j-Query"><span class="nav-text">j-Query</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Google-Hosted-Libraries"><span class="nav-text">Google Hosted Libraries</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fast-io"><span class="nav-text">Fast.io</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jare"><span class="nav-text">jare</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FreeDNS"><span class="nav-text">FreeDNS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cdnjs"><span class="nav-text">cdnjs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Microsoft-Ajax%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C"><span class="nav-text">Microsoft Ajax内容分发网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Google-Hosted-Libraries-1"><span class="nav-text">Google Hosted Libraries</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bootstrapCDN"><span class="nav-text">bootstrapCDN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#embed-ly"><span class="nav-text">embed.ly</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#image-4-io"><span class="nav-text">image 4 io</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sirv"><span class="nav-text">Sirv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Travis-CI"><span class="nav-text">Travis CI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tiiny-host"><span class="nav-text">tiiny.host</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Z-A-R-V-I-S"><span class="nav-text">Z.A.R.V.I.S.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CODING"><span class="nav-text">CODING</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitee"><span class="nav-text">gitee</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NotABug"><span class="nav-text">NotABug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Perforce"><span class="nav-text">Perforce</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenJS-Foundation"><span class="nav-text">OpenJS Foundation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#deployhq"><span class="nav-text">deployhq</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HOUND"><span class="nav-text">HOUND</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#COVERALLS"><span class="nav-text">COVERALLS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CodeFactor"><span class="nav-text">CodeFactor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#codecov"><span class="nav-text">codecov</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deepcode"><span class="nav-text">Deepcode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CodeScene"><span class="nav-text">CodeScene</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CODE-CLIMATE"><span class="nav-text">CODE CLIMATE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#codeac"><span class="nav-text">codeac</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#codacy"><span class="nav-text">codacy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cacher"><span class="nav-text">cacher</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dependabot"><span class="nav-text">Dependabot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CodeNotary"><span class="nav-text">CodeNotary</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FoxPass"><span class="nav-text">FoxPass</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6%E6%95%88%E7%8E%87%E4%BA%91"><span class="nav-text">百度效率云</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Opendev"><span class="nav-text">Opendev</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#para"><span class="nav-text">para</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Payton"
+      src="/blog/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Payton</p>
+  <div class="site-description" itemprop="description">Somewhere leisure.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">76</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-comments"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Payton</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">30:04</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
