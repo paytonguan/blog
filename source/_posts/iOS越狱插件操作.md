@@ -291,6 +291,7 @@ https://havoc.app/
 | Sanjeh                   | 花式电池弹出窗口                                 |
 | SquidExtender            | 键盘扩展                                         |
 | CalculatorHistory        | 计算器显示计算历史记录                           |
+| CalculatorConverter      | 计算器添加转换功能                               |
 
 ## Limneos源
 
@@ -2033,6 +2034,9 @@ https://github.com/NightwindDev/PowerSettings
 # SettingsWiFiPassword，查看已连接过的WiFi密码
 https://github.com/NightwindDev/SettingsWiFiPassword
 
+# ShimaStyle，通知上岛
+https://github.com/34306/ShimaStyle
+
 # Deb备份
 https://pan.baidu.com/s/18Kr9bvLt6_7X2zkjJgXVxg?pwd=i2r9
 https://pan.baidu.com/s/1AHqn6osPVHSxtSuPQaabSA?pwd=6rsu
@@ -3202,4 +3206,16 @@ https://mp.weixin.qq.com/s/pve2_k_1UJuH3ix__jWEPw
 
 ```
 https://mp.weixin.qq.com/s/yoRmPFgNC2wk2xohGf4jvA
+```
+
+## 通知上岛，免费！
+
+```
+https://mp.weixin.qq.com/s/H7wNa5_8LsfcW4GR0w3AmQ
+```
+
+## CalculatorConverter，无需 iOS 18！
+
+```
+https://mp.weixin.qq.com/s/602YcRcUdcksicSEcVhQqA
 ```

@@ -47,14 +47,6 @@ https://github.com/Dreamy-TZK/AppStorePrice
 
 暂时不可用。
 
-<details>
-<summary></summary>
-
-```
-http://app.666wlgzs.com/list/appstore/
-```
-</details>
-
 # 签名
 
 安装App Store的软件时，会对下载下来的IPA进行签名。安装非App Store的软件，需要手动对IPA进行签名。签名需要用到证书，分类如下。
@@ -184,14 +176,6 @@ TestFilght是苹果提供开发者应用测试的平台。
 ## 应用库
 
 暂时失效。
-
-<details>
-<summary></summary>
-
-```
-https://testflight.center/
-```
-</details>
 
 # IPA安装
 
@@ -752,4 +736,3 @@ https://www.52pojie.cn/thread-741535-1-4.html
 ```
 https://mp.weixin.qq.com/s/POKnLnXEcaV_WeFRlkTSJg
 ```
-

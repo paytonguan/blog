@@ -949,6 +949,9 @@ https://github.com/DevelopCubeLab/ClearFilzaResidue
 https://github.com/mineek/MuffinStore
 https://github.com/mineek/MuffinStoreJailed-Public
 
+# PancakeStore，应用降级工具
+https://github.com/jailbreakdotparty/PancakeStore
+
 # TimeBomb 2，按需触发自旋锁恐慌
 https://github.com/opa334/TimeBomb2
 
@@ -1008,6 +1011,9 @@ https://github.com/BreakOnCrash/TrollAppDuplicator
 
 # LiveContainer，不安装App即可运行它
 https://github.com/khanhduytran0/LiveContainer
+
+# 全局高刷，解锁120Hz高刷
+https://pan.quark.cn/s/dc4366648d7d#/list/share/93c03891abdc4d9a8653ec27bf4168aa
 ```
 
 ## KFD专用
@@ -1340,4 +1346,16 @@ https://mp.weixin.qq.com/s/4ZmRmn9M9fVpPMCS2PI69g
 
 ```
 https://mp.weixin.qq.com/s/iNRzYjSzFCJkAKDRV3hdOg
+```
+
+## 解锁全局 120Hz 高刷！
+
+```
+https://mp.weixin.qq.com/s/-ANCo3I-tyl4y4rz2xWn-g
+```
+
+## 煎饼商店！
+
+```
+https://mp.weixin.qq.com/s/ASxPUVQxEeeCTog0YePDug
 ```
