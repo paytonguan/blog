@@ -28,7 +28,7 @@ https://blog.lynnrin.moe/posts/ROM-bringup-guide-prebuilt/
 https://blog.lynnrin.moe/posts/oneplus/
 https://blog.lynnrin.moe/posts/dior-rom/
 
-提取vendor tree
+提取vendor驱动
 https://xdaforums.com/t/guide-extract-vendor-from-stock-firmware.4212587/
 https://baalajimaestro.me/posts/extract-vendor/
 
@@ -36,6 +36,7 @@ https://baalajimaestro.me/posts/extract-vendor/
 三星内核
 https://android.googlesource.com/kernel/samsung.git/
 https://github.com/goldfish07/android_kernel_samsung_j8y18lte_old/blob/10/build_msm8917.sh
+https://github.com/lifehacker-101/android_kernel_samsung_msm8937
 
 
 

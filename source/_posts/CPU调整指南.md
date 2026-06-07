@@ -3,6 +3,7 @@ title: CPU调整指南
 categories: Computer
 abbrlink: Instructions-Of-CPU-Adjust
 date: 2024-12-18 11:54:29
+mathjax: true
 tags:
 ---
 

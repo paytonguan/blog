@@ -16,6 +16,13 @@ Trollstore等。
 # TODOS
 
 ```
+# Storm-Sniffer
+https://github.com/89996462/Storm-Sniffer
+https://github.com/coolhaiku/storm-sniffer-rules
+
+# IPA Sources
+https://rentry.org/ipa-sources
+
 # schemeshare
 https://mp.weixin.qq.com/s/xe25A0horQpOzNykY494Rw
 
@@ -791,6 +798,36 @@ https://pan.qxnav.com/
 https://www.123pan.com/s/vgn0Vv-Qo3Fv
 https://pan.baidu.com/s/1f7qiHzFutQ3zN1-SQkFXSg?pwd=791g（提取码 / 791g）
 
+# iOScleanerpro，系统垃圾清理
+https://pan.quark.cn/s/001deacae183#/list/share
+
+# 巨魔真后台，保证App在后台运行
+https://pan.quark.cn/s/f364d8308e90#/list/share
+
+# ImmortalizerTS，保证App在后台运行
+https://github.com/sergealagon/ImmortalizerTS
+
+# 巨魔分屏，App分屏
+https://pan.quark.cn/s/2511a1a37a70#/list/share
+
+# mdc0，系统修改
+https://github.com/34306/mdc0
+
+# dirtyZero，系统修改
+https://github.com/jailbreakdotparty/dirtyZero
+
+# 26BatteryStatus，电池信息
+https://pan.quark.cn/s/aa12d0ffb49e#/list/share
+
+# TrollWatcher Lite，App快速启动器
+https://pan.quark.cn/s/84b44750e7a6#/list/share
+
+# TrollOpen，App快速启动器
+https://drive.google.com/drive/folders/1tSmmnfG42XiKMGV5fxu4JwkRfvRdV_Oe?pli=1
+
+# TheBall，App快速启动器
+https://drive.google.com/file/d/1K3FJXec15pb5O8IxwSQqOy7-H6jFHEK0/view?pli=1
+
 # TrollSpeed，网速悬浮窗工具
 https://github.com/Lessica/TrollSpeed
 
@@ -1286,6 +1323,7 @@ https://mp.weixin.qq.com/s/wU_Tesa3OCZUMKWvK5WbRA
 ```
 https://mp.weixin.qq.com/s/UFucgW1usFSvQX7BRJ0rZQ
 ```
+
 ## opa334 发布新工具：时间炸弹 ！
 
 ```
