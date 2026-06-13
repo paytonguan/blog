@@ -67,12 +67,13 @@ https://jailrepo.initnil.com/
 http://apt.htv123.com/
 ```
 
-|          插件         |           作用           |
-|-----------------------|--------------------------|
-| xybp888               | 电话助手                 |
-| 魔术师                | 一键锁屏                 |
-| 灵动通知              | 使用灵动岛展示系统通知   |
-| No Apple MobileRepair | 禁止设置页面显示维修记录 |
+|          插件         |            作用           |
+|-----------------------|---------------------------|
+| xybp888               | 电话助手                  |
+| 魔术师                | 一键锁屏                  |
+| 灵动通知              | 使用灵动岛展示系统通知    |
+| No Apple MobileRepair | 禁止设置页面显示维修记录· |
+| 禁用底部切换 App 手势 | 禁用底部切换 App 手势     |
 
 ## opa334作者源
 
@@ -125,9 +126,10 @@ https://repo.chariz.com/
 https://repo.ginsu.dev/
 ```
 
-| 插件 |     作用     |
-|------|--------------|
-| Dodo | 锁屏美化插件 |
+|  插件  |         作用         |
+|--------|----------------------|
+| Dodo   | 锁屏美化插件         |
+| Analog | 锁屏添加一个模拟时钟 |
 
 ## PoomSmart源
 
@@ -292,6 +294,11 @@ https://havoc.app/
 | SquidExtender            | 键盘扩展                                         |
 | CalculatorHistory        | 计算器显示计算历史记录                           |
 | CalculatorConverter      | 计算器添加转换功能                               |
+| Floaty                   | 通知气泡                                         |
+| KonbanXV                 | 替换负一屏                                       |
+| Oh My Insets             | 控制中心五列                                     |
+| Picarize                 | 为设备添加人像模式                               |
+| Aperturize               | 为人像照片编辑时添加调整景深控制功能             |
 
 ## Limneos源
 
@@ -555,11 +562,12 @@ https://zerui18.github.io/zx02/
 https://zx02.yourepo.com/
 ```
 
-|    插件    |         作用         |
-|------------|----------------------|
-| Frame      | 视频壁纸             |
-| CCDND      | 控制中心勿扰模式     |
-| CCDNDTimer | 控制中心勿扰模式增强 |
+|       插件       |           作用          |
+|------------------|-------------------------|
+| Frame            | 视频壁纸                |
+| CCDND            | 控制中心勿扰模式        |
+| CCDNDTimer       | 控制中心勿扰模式增强    |
+| ByeLowPowerAlert | 去除低于20%电量警告弹窗 |
 
 ## ETHN源
 
@@ -609,13 +617,15 @@ https://cydia.ichitaso.com/
 https://apt.thebigboss.org/repofiles/cydia/
 ```
 
-|         插件         |           作用           |
-|----------------------|--------------------------|
-| App Library Disabler | 去除App资源库            |
-| CCVibration          | 控制中心添加振动模块     |
-| WiFiQR               | 将WiFi网络生成二维码     |
-| HotspotQR            | 将个人热点网络生成二维码 |
-| CustomLPM            | 自动开启低电量模式       |
+|         插件         |               作用               |
+|----------------------|----------------------------------|
+| App Library Disabler | 去除App资源库                    |
+| CCVibration          | 控制中心添加振动模块             |
+| WiFiQR               | 将WiFi网络生成二维码             |
+| HotspotQR            | 将个人热点网络生成二维码         |
+| CustomLPM            | 自动开启低电量模式               |
+| AppCountSwitcher     | 应用切换界面显示已打开卡片的数量 |
+| WhiteCCBorders       | 自定义控制中心的边框和圆角       |
 
 ## 刀刀源
 
@@ -721,14 +731,16 @@ https://cydia.nixuge.me/
 https://lclrc.github.io/repo/
 ```
 
-|      插件      |                 作用                 |
-|----------------|--------------------------------------|
-| LowPowersleep  | 锁屏自动低电量                       |
-| DockX          | 在键盘底部添加快捷按钮               |
-| VPNIndicator   | 适合全面屏使用的VPN指示器            |
-| StatusBarSpeed | 状态栏网速                           |
-| RecordAnywhere | 锁屏录屏                             |
-| CCCalc         | 控制中心长按计算器模块变成真正计算器 |
+|             插件            |                 作用                 |
+|-----------------------------|--------------------------------------|
+| LowPowersleep               | 锁屏自动低电量                       |
+| DockX                       | 在键盘底部添加快捷按钮               |
+| VPNIndicator                | 适合全面屏使用的VPN指示器            |
+| StatusBarSpeed              | 状态栏网速                           |
+| RecordAnywhere              | 锁屏录屏                             |
+| CCCalc                      | 控制中心长按计算器模块变成真正计算器 |
+| 禁用面包屑                  | 禁用左上角返回                       |
+| NoLowPowerMode30SecAutoLock | 禁用开启低电量模式自动锁定30秒       |
 
 ## Brend0n源
 
@@ -748,9 +760,10 @@ http://brendonjkding.github.io/
 https://repo.p0358.net/
 ```
 
-|    插件   |            作用            |
-|-----------|----------------------------|
-| PrideBars | 自定义状态栏WiFi和信号颜色 |
+|        插件       |            作用            |
+|-------------------|----------------------------|
+| PrideBars         | 自定义状态栏WiFi和信号颜色 |
+| SilentScreenshots | 禁用截图声音               |
 
 ## Skitty源
 
@@ -778,6 +791,7 @@ https://repo.mtac.app/
 |-------------|-------------------------|
 | Hydra       | 三维触控添加App快捷菜单 |
 | CCPowerMenu | 控制中心电源增强        |
+| Vitreux     | iOS 26液态玻璃风格      |
 
 ## khanhduytran0源
 
@@ -874,9 +888,11 @@ https://0xkuj.github.io/kujman/
 https://nathan4s.lol/repo/
 ```
 
-|           插件          |             作用             |
-|-------------------------|------------------------------|
-| InternalStorageSettings | 查看iPhone储存空间中系统数据 |
+|           插件          |                   作用                   |
+|-------------------------|------------------------------------------|
+| InternalStorageSettings | 查看iPhone储存空间中系统数据             |
+| gridswitcher            | 让iPhone使用iPad设备网格样式的应用切换器 |
+| Eneko                   | 动态视频壁纸                             |
 
 ## 34306源
 
@@ -1025,6 +1041,7 @@ http://tateu.net/repo/
 |-------------|--------------------------------------|
 | NextAlarm14 | 显示下一个闹钟信息                   |
 | Moveable9   | 自定义状态栏各个符号的位置或直接隐藏 |
+| MooreBarX15 | 状态栏自定义                         |
 
 ## Litten Love源
 
@@ -1599,6 +1616,35 @@ https://apt.abcydia.com/
 | CrackTool3    | 破解收费插件                   |
 | WeChatCallKit | 使微信有系统电话的接听显示界面 |
 
+## 汉堡源
+
+```
+https://orig.shtm.best/
+```
+
+|   插件  |       作用      |
+|---------|-----------------|
+| Fake5GA | 状态栏5G变成5GA |
+
+## Phuc Do源
+
+```
+https://dobabaophuc1706.github.io/repo/
+```
+
+|       插件      |   作用   |
+|-----------------|----------|
+| Badge Breathing | 呼吸角标 |
+
+## CoreUX源
+
+```
+https://therealhoodboy.github.io/coreux/
+```
+
+| 插件 |           作用           |
+|------|--------------------------|
+| CC26 | 控制中心变成液态玻璃风格 |
 
 ## pulandres源
 
@@ -1663,7 +1709,6 @@ http://miro92.com/repo
 
 ```
 https://apt.bingner.com/
-http://apt.thebigboss.org/repofiles/cydia/
 http://apt.modmyi.com/
 http://cydia.zodttd.com/repo/cydia/
 http://mrmadtw.github.io/repo/
@@ -1732,7 +1777,6 @@ https://repo.xarold.com/
 http://julio.xarold.com/
 http://getdelta.co/
 http://beta.sparkservers.co.uk/
-http://apt.thebigboss.org/repofiles/cydia
 ```
 
 # 其它插件
@@ -2036,6 +2080,15 @@ https://github.com/NightwindDev/SettingsWiFiPassword
 
 # ShimaStyle，通知上岛
 https://github.com/34306/ShimaStyle
+
+# LSNoSwipe，禁用锁屏滑动方式打开相机
+https://github.com/dayanch96/LSNoSwipe
+
+# Looky，锁屏通知免提，全屏显示通知
+https://pan.quark.cn/s/74a419bdd036
+
+# Jikan，锁屏显示预估充满电剩余时间
+https://github.com/waruhachi/Jikan
 
 # Deb备份
 https://pan.baidu.com/s/18Kr9bvLt6_7X2zkjJgXVxg?pwd=i2r9
@@ -3218,4 +3271,292 @@ https://mp.weixin.qq.com/s/H7wNa5_8LsfcW4GR0w3AmQ
 
 ```
 https://mp.weixin.qq.com/s/602YcRcUdcksicSEcVhQqA
+```
+
+## Analog！
+
+```
+https://mp.weixin.qq.com/s/_omk4SkJBRrRcjoi16gB1w
+```
+
+## Floaty！
+
+```
+https://mp.weixin.qq.com/s/x2jsrWI6GQx7z_jX0tqNjQ
+```
+
+## Vitreux  更新 1.2 版本！
+
+```
+https://mp.weixin.qq.com/s/7hIEdSu_zF7LDQCNPpipAg
+```
+
+## AppCountSwitcher！
+
+```
+https://mp.weixin.qq.com/s/olDDIriidEISdyKJ0Qboyg
+```
+
+## iPhone 一键变成5GA！
+
+```
+https://mp.weixin.qq.com/s/i6UxgS8KaNT5cS25bkatVA
+```
+
+## 继续，清爽！
+
+```
+https://mp.weixin.qq.com/s/3wH5VuPJwNPG6qeausYwsA
+```
+
+## Looky！
+
+```
+https://mp.weixin.qq.com/s/9Xraken8VRPxoVHnD7djRg
+```
+
+## 今晚！
+
+```
+https://mp.weixin.qq.com/s/HfH_HjiiO30Byb5iNFRM4w
+```
+
+## 新玩具，Jikan！
+
+```
+https://mp.weixin.qq.com/s/bI6XMtxOXE7psFmkYYUTVQ
+```
+
+## 让 iPhone 使用 iPad 切换器！
+
+```
+https://mp.weixin.qq.com/s/Sy-Yofkh51TlPhJv3Nl_oQ
+```
+
+## WhiteCCBorders！
+
+```
+https://mp.weixin.qq.com/s/sOqSzffRJjRe7YIxdvz6yg
+```
+
+## Oh My Insets！
+
+```
+https://mp.weixin.qq.com/s/sR8tomUmeWEzMxkKrkhTtA
+```
+
+## 呼吸角标！
+
+```
+https://mp.weixin.qq.com/s/Oyj9_oFRnR9Y6V_RwczS-w
+```
+
+## 现已免费，但有点迟！
+
+```
+https://mp.weixin.qq.com/s/wGqKMNF4QZpOmr8jnyQoIw
+```
+
+## CC26！
+
+```
+https://mp.weixin.qq.com/s/pSzZ8N9kxU2s0CBPMZWpUw
+```
+
+## Eneko！
+
+```
+https://mp.weixin.qq.com/s/WXhhr1MfRdSFPMACslJ3Ng
+```
+
+## MBX！
+
+```
+https://mp.weixin.qq.com/s/fGq-8R3_fivNHtsGkR9DSQ
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
 ```
