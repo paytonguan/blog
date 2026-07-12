@@ -780,6 +780,9 @@ https://github.com/Avangelista/CarTube
 
 # Aemulo，读取、写入和模拟NFC
 https://github.com/Aemulo/Release
+
+# DLiPA，应用降级工具
+https://github.com/AhmedBafkir/DLiPA
 ```
 
 ## Trollstore专用
@@ -1013,7 +1016,22 @@ https://github.com/BreakOnCrash/TrollAppDuplicator
 https://github.com/khanhduytran0/LiveContainer
 
 # 全局高刷，解锁120Hz高刷
-https://pan.quark.cn/s/dc4366648d7d#/list/share/93c03891abdc4d9a8653ec27bf4168aa
+https://pan.quark.cn/s/dc4366648d7d#
+
+# SpeedGG-Z，状态栏显示实时网速
+https://pan.quark.cn/s/80afff8bcd4f
+
+# AppRetro，App 降级/升级工具
+https://pan.quark.cn/s/bfa801ec0421
+
+# 活字印刷术，音乐可视化
+https://github.com/OwnGoalStudio/Letterpress
+
+# Unseen，抵御普通应用程序对截图和录屏干扰
+https://github.com/Lessica/Unseen
+
+# TheBall-z，应用启动器
+https://pan.quark.cn/s/126c83e6249a
 ```
 
 ## KFD专用
@@ -1358,4 +1376,136 @@ https://mp.weixin.qq.com/s/-ANCo3I-tyl4y4rz2xWn-g
 
 ```
 https://mp.weixin.qq.com/s/ASxPUVQxEeeCTog0YePDug
+```
+
+## 巨魔 SpeedGG-Z！
+
+```
+https://mp.weixin.qq.com/s/aCFYnp8Gl_V5qE-7ik-ggg
+```
+
+## 来了，全新降级工具！
+
+```
+https://mp.weixin.qq.com/s/us99h1l7BR246na7lAilWg
+```
+
+## 终于更新，可以使用了！
+
+```
+https://mp.weixin.qq.com/s/p1jcJ5S-_zD73Jrwp-Eftw
+```
+
+## 巨魔活字，现已免费！
+
+```
+https://mp.weixin.qq.com/s/5d5tpXHxw1CSNsBgmmxMWQ
+```
+
+## 突破锁屏限制！
+
+```
+https://mp.weixin.qq.com/s/hYdsfeeZup8aqz_kXFP_uA
+```
+
+## 来啦，巨魔 GGBall！
+
+```
+https://mp.weixin.qq.com/s/7ArnnlJDw0C0-HNqZhSIfg
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
+```
+
+##
+
+```
+
 ```

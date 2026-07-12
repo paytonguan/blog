@@ -1622,9 +1622,10 @@ https://apt.abcydia.com/
 https://orig.shtm.best/
 ```
 
-|   插件  |       作用      |
-|---------|-----------------|
-| Fake5GA | 状态栏5G变成5GA |
+|        插件        |         作用         |
+|--------------------|----------------------|
+| Fake5GA            | 状态栏5G变成5GA      |
+| FlexibleExpression | 给灵动岛添加炫酷动画 |
 
 ## Phuc Do源
 
@@ -1645,6 +1646,16 @@ https://therealhoodboy.github.io/coreux/
 | 插件 |           作用           |
 |------|--------------------------|
 | CC26 | 控制中心变成液态玻璃风格 |
+
+## iosdump源
+
+```
+https://iosdumpzzz.github.io/iosdump.repo/
+```
+
+|    插件    |        作用        |
+|------------|--------------------|
+| CustomCCBg | 自定义控制中心背景ß |
 
 ## pulandres源
 
@@ -2089,6 +2100,9 @@ https://pan.quark.cn/s/74a419bdd036
 
 # Jikan，锁屏显示预估充满电剩余时间
 https://github.com/waruhachi/Jikan
+
+# timelefted，锁屏显示充满电剩余时间
+https://github.com/34306/timelefted
 
 # Deb备份
 https://pan.baidu.com/s/18Kr9bvLt6_7X2zkjJgXVxg?pwd=i2r9
@@ -3375,16 +3389,22 @@ https://mp.weixin.qq.com/s/WXhhr1MfRdSFPMACslJ3Ng
 https://mp.weixin.qq.com/s/fGq-8R3_fivNHtsGkR9DSQ
 ```
 
-##
+## 控制给力！
 
 ```
-
+https://mp.weixin.qq.com/s/mXCU9oVpSaXSdYH6gz8x3Q
 ```
 
-##
+## 无需更新 iOS 19，体验新功能！
 
 ```
+https://mp.weixin.qq.com/s/OOlAczUyGnePjKbAmjLyYQ
+```
 
+## 锁屏动画！
+
+```
+https://mp.weixin.qq.com/s/D8iJ_EZLq-olwaSQy1DG7A
 ```
 
 ##
