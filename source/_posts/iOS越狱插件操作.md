@@ -214,6 +214,7 @@ https://repo.packix.com/
 | CCUptime            | 控制中心查看设备运行时间                   |
 | SemiRestore11       | 平刷插件，支持IOS11.3~11.4B3               |
 | Aperturize          | 双摄设备实现人像模式景深控制               |
+| MyScrollingBars     | 自定义滚动条                               |
 
 ## Havoc源
 
@@ -261,7 +262,7 @@ https://havoc.app/
 | Speedster                | 自定义动画速度                                   |
 | ShowMyTouches            | 触摸轨迹                                         |
 | Touch-Viz                | 触摸显示                                         |
-| Verxina                  | Dock 栏扩展                                      |
+| Verxina                  | Dock栏扩展                                      |
 | CopyVault                | 剪贴板                                           |
 | CloseAll                 | 一键清除后台                                     |
 | QuitAll                  | 一键清除后台                                     |
@@ -299,6 +300,7 @@ https://havoc.app/
 | Oh My Insets             | 控制中心五列                                     |
 | Picarize                 | 为设备添加人像模式                               |
 | Aperturize               | 为人像照片编辑时添加调整景深控制功能             |
+| Aerial                   | 分屏                                             |
 
 ## Limneos源
 
@@ -610,6 +612,7 @@ https://cydia.ichitaso.com/
 | KillBackground         | 一键清理后台                               |
 | OTADisabler            | 屏蔽系统更新                               |
 | SettingsRevamp         | 设置自定义                                 |
+| NoUpdateMark           | 去除设置更新红点                           |
 
 ## BigBoss源
 
@@ -626,6 +629,17 @@ https://apt.thebigboss.org/repofiles/cydia/
 | CustomLPM            | 自动开启低电量模式               |
 | AppCountSwitcher     | 应用切换界面显示已打开卡片的数量 |
 | WhiteCCBorders       | 自定义控制中心的边框和圆角       |
+| ByeHomeBottomBarX    | 自定义小横条                     |
+
+## cosmiccode源
+
+```
+https://cosmiccode.cc/repo/
+```
+
+|       插件      |     作用     |
+|-----------------|--------------|
+| NoSettingsBadge | 去除设置红点 |
 
 ## 刀刀源
 
@@ -691,6 +705,7 @@ https://www.yourepo.com/
 | ByeByeAppLibrary | 禁用App资源库        |
 | LSTimeSeconds    | 锁屏显示秒数         |
 | LockMoji15+      | 使用表情符号代替锁头 |
+| NoDockGround     | Dock栏背景透明       |
 
 ## 0xkuj源
 
@@ -698,9 +713,11 @@ https://www.yourepo.com/
 https://0xkuj.yourepo.com/
 ```
 
-|         插件        |      作用     |
-|---------------------|---------------|
-| 3DAppVersionSpoofer | 自定义App版本 |
+|         插件        |          作用          |
+|---------------------|------------------------|
+| 3DAppVersionSpoofer | 自定义App版本          |
+| NoCCGrabber         | 去除锁屏右上角CC抓手   |
+| NoPasteAlerts16     | 去除iOS 16系统粘贴弹窗 |
 
 ## ugly-soul源
 
@@ -741,6 +758,7 @@ https://lclrc.github.io/repo/
 | CCCalc                      | 控制中心长按计算器模块变成真正计算器 |
 | 禁用面包屑                  | 禁用左上角返回                       |
 | NoLowPowerMode30SecAutoLock | 禁用开启低电量模式自动锁定30秒       |
+| HidelconLabels              | 隐藏桌面App名称                      |
 
 ## Brend0n源
 
@@ -1655,7 +1673,18 @@ https://iosdumpzzz.github.io/iosdump.repo/
 
 |    插件    |        作用        |
 |------------|--------------------|
-| CustomCCBg | 自定义控制中心背景ß |
+| CustomCCBg | 自定义控制中心背景 |
+
+
+## 乌龙工作室源
+
+```
+https://apt.82flex.com
+```
+
+|      插件      |         作用         |
+|----------------|----------------------|
+| DayNightSwitch | 让开关变成日和月样式 |
 
 ## pulandres源
 
@@ -2103,6 +2132,12 @@ https://github.com/waruhachi/Jikan
 
 # timelefted，锁屏显示充满电剩余时间
 https://github.com/34306/timelefted
+
+# Planetes，应用启动器
+https://pan.quark.cn/s/a93356272d02
+
+# AniTime，动漫锁屏时钟
+https://pan.quark.cn/s/0f223f211d3a
 
 # Deb备份
 https://pan.baidu.com/s/18Kr9bvLt6_7X2zkjJgXVxg?pwd=i2r9
@@ -3407,34 +3442,34 @@ https://mp.weixin.qq.com/s/OOlAczUyGnePjKbAmjLyYQ
 https://mp.weixin.qq.com/s/D8iJ_EZLq-olwaSQy1DG7A
 ```
 
-##
+## 去除，清爽！
 
 ```
-
+https://mp.weixin.qq.com/s/Dl0n9ua_kgbVzPh8J1rvgQ
 ```
 
-##
+## 日月开关！
 
 ```
-
+https://mp.weixin.qq.com/s/2OcuCOwLBwfB6l3ZSpRXFg
 ```
 
-##
+## 新增功能！
 
 ```
-
+https://mp.weixin.qq.com/s/LwWO6XEKnv_AS6kcK85Y6Q
 ```
 
-##
+## 分屏新手势！
 
 ```
-
+https://mp.weixin.qq.com/s/yTnqjN3C_XH1istE-u6WMg
 ```
 
-##
+## AniTime ！
 
 ```
-
+https://mp.weixin.qq.com/s/QU98X7tCQrPwAgWr7vxCug
 ```
 
 ##
