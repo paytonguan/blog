@@ -262,7 +262,7 @@ https://havoc.app/
 | Speedster                | 自定义动画速度                                   |
 | ShowMyTouches            | 触摸轨迹                                         |
 | Touch-Viz                | 触摸显示                                         |
-| Verxina                  | Dock栏扩展                                      |
+| Verxina                  | Dock栏扩展                                       |
 | CopyVault                | 剪贴板                                           |
 | CloseAll                 | 一键清除后台                                     |
 | QuitAll                  | 一键清除后台                                     |
@@ -301,6 +301,7 @@ https://havoc.app/
 | Picarize                 | 为设备添加人像模式                               |
 | Aperturize               | 为人像照片编辑时添加调整景深控制功能             |
 | Aerial                   | 分屏                                             |
+| Speedster                | 动画加速                                         |
 
 ## Limneos源
 
@@ -771,6 +772,7 @@ http://brendonjkding.github.io/
 | NoPassAfterRespring（Safe） | 注销后无需锁屏密码直接进入桌面 |
 | FPSIndicator                | 游戏帧数显示                   |
 | DesktopLyrics               | 桌面歌词                       |
+| VolumeMixer                 | 为每个App单独调节音量          |
 
 ## p0358源
 
@@ -933,6 +935,7 @@ https://pkgfiles.github.io/
 | MobileMeadow Reborn | 添加草地效果                 |
 | CanvasSync          | 将正在播放的音乐封面作为壁纸 |
 | Pokébox Reborn      | 神奇宝贝风格的通知           |
+| HarlemShake Reborn  | 摇晃手机会播放哈莱姆摇摆音乐 |
 
 ## c1d3r源
 
@@ -1313,6 +1316,17 @@ https://beta.cpdigitaldarkroom.com/
 |---------|-------------------------|
 | Barmoji | 为键盘底部添加常用Emoji |
 
+## dylv源
+
+```
+https://winaviation.github.io/repo/
+```
+
+|      插件      |          作用          |
+|----------------|------------------------|
+| Liquid (Gl)ass | iOS 26系统液态玻璃风格 |
+
+
 ## shepgoba源
 
 ```
@@ -1674,6 +1688,7 @@ https://iosdumpzzz.github.io/iosdump.repo/
 |    插件    |        作用        |
 |------------|--------------------|
 | CustomCCBg | 自定义控制中心背景 |
+| Zone       | 动态壁纸           |
 
 
 ## 乌龙工作室源
@@ -1682,9 +1697,10 @@ https://iosdumpzzz.github.io/iosdump.repo/
 https://apt.82flex.com
 ```
 
-|      插件      |         作用         |
-|----------------|----------------------|
-| DayNightSwitch | 让开关变成日和月样式 |
+|      插件      |          作用          |
+|----------------|------------------------|
+| DayNightSwitch | 让开关变成日和月样式   |
+| ArtworkSpinner | 让锁屏音乐封面旋转起来 |
 
 ## pulandres源
 
@@ -2138,6 +2154,30 @@ https://pan.quark.cn/s/a93356272d02
 
 # AniTime，动漫锁屏时钟
 https://pan.quark.cn/s/0f223f211d3a
+
+# Looky，通知免提
+https://pan.quark.cn/s/74a419bdd036
+
+# Floaty，通知气泡
+https://pan.quark.cn/s/1d53c1c2cab9
+
+# Rose，触感反馈
+https://github.com/Lessica/Rose
+
+# Doodle，使用涂鸦解锁iPhone
+https://pan.quark.cn/s/4ec615e1919b
+
+# N95，给音乐封面添加遮罩
+https://pan.quark.cn/s/c2a1e79eaf13
+
+# SmartBattery，按需开启低电量模式
+https://pan.quark.cn/s/c9f28fe8bd30
+
+# 通话背景，自定义来电通话背景
+https://pan.quark.cn/s/6a7c319cf5a4
+
+# TrollDecryptJB，允许低系统安装要求高系统应用的砸壳工具
+https://github.com/34306/TrollDecryptJB
 
 # Deb备份
 https://pan.baidu.com/s/18Kr9bvLt6_7X2zkjJgXVxg?pwd=i2r9
@@ -3472,82 +3512,76 @@ https://mp.weixin.qq.com/s/yTnqjN3C_XH1istE-u6WMg
 https://mp.weixin.qq.com/s/QU98X7tCQrPwAgWr7vxCug
 ```
 
-##
+## 更新+2！
 
 ```
-
+https://mp.weixin.qq.com/s/jid9bUnaV8WDe2x99Bj8SQ
 ```
 
-##
+## 玫瑰，复活！
 
 ```
-
+https://mp.weixin.qq.com/s/2bz5Tl0qH2uqXeGlOMAHbg
 ```
 
-##
+## 哈莱姆摇摆，重生！
 
 ```
-
+https://mp.weixin.qq.com/s/DMXvTcW-szOwpF7PVKMc2Q
 ```
 
-##
+## 让 iPhone 再战三年！
 
 ```
-
+https://mp.weixin.qq.com/s/bFp4UtX8SNJ98pBScBbS2Q
 ```
 
-##
+## 解锁 iPhone！
 
 ```
-
+https://mp.weixin.qq.com/s/NF0bbpUPeRdB2rOzl7u_7Q
 ```
 
-##
+## 大佬更新，最终版本！
 
 ```
-
+https://mp.weixin.qq.com/s/jP5KSvE1dnoCNsVKPyDHtg
 ```
 
-##
+## N95+旋转的艺术！
 
 ```
-
+https://mp.weixin.qq.com/s/ZAK7XVYizVmVUvgJvcgC-Q
 ```
 
-##
+## 智能电池！
 
 ```
-
+https://mp.weixin.qq.com/s/5P0E_uP0xwbRwp5fN1lF7Q
 ```
 
-##
+## 单独控制 App 音量！
 
 ```
-
+https://mp.weixin.qq.com/s/pp-4LFYYvbaHz8sRYPkI1w
 ```
 
-##
+## 通话来电给力！
 
 ```
-
+https://mp.weixin.qq.com/s/OGu4tN1lvm4iBoOn8IFhmA
 ```
 
-##
+## 插件之巅，独孤求败！
 
 ```
-
+https://mp.weixin.qq.com/s/yDhNjghIETDPS-Dbg0GqBw
 ```
 
-##
+## 大佬正式发布！
 
 ```
-
-```
-
-##
-
-```
-
+https://mp.weixin.qq.com/s/rJKZmwdbhWfUYAgiRP9pkA
 ```
 
 ##

@@ -45,6 +45,7 @@ iOS越狱方法。
 | kok3shi9                    |            | 64位设备 | 9.2-9.3.5                                    |               |
 | 叉叉助手                    |            | 64位设备 | 9.2-9.3.3                                    |               |
 | Jailbrea me                 |            | 32位设备 | 9.1-9.3.4                                    |               |
+| Carbon                      |            | 32位设备 | 8.0-9.3.6                                    |               |
 | wtfis                       |            | 64位设备 | 8.0-8.4.1                                    |               |
 | EverPwnage                  |            | 32位设备 | 8.0-9.0.2                                    |               |
 | EtasonJB                    |            | 32位设备 | 8.0-8.4.1                                    |               |
@@ -520,6 +521,12 @@ https://kok3shidoll.web.app/kok3shi9.html
 https://github.com/LukeZGD/EverPwnage
 ```
 
+# Carbon
+
+```
+http://carbon.sep.lol/
+```
+
 # wtfis
 
 ```
@@ -845,4 +852,10 @@ https://mp.weixin.qq.com/s/dGvP2l4JwwkAMj-kevzoNw
 
 ```
 https://mp.weixin.qq.com/s/eH9j5pFAFpsgtX4WTUngLA
+```
+
+## Carbon 发布！
+
+```
+https://mp.weixin.qq.com/s/iqgfUCPeuDBh_P5JFMf5IQ
 ```

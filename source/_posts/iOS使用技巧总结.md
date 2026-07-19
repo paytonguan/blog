@@ -112,6 +112,18 @@ https://mp.weixin.qq.com/s/qFf5d4bjNoUh2gsxcyvQBA
 
 # 系统技巧
 
+## 
+
+## 解锁Safari浏览器120Hz高刷
+
+设置→App→Safari 浏览器→高级→功能开关，关闭Prefer Page Rendering Updates near 60tps。
+
+可通过以下网站验证。
+
+```
+https://testufo.com/
+```
+
 ## 恢复模式
 
 ### 进入
@@ -185,7 +197,6 @@ https://calendar.google.com/calendar/ical/291ig4cijjnirlc6krcopq5gj4%2540group.c
 http://icalshare.com/
 https://sspai.com/post/43209
 ```
-
 
 ## 修改步数
 
@@ -288,6 +299,7 @@ uicache --all
 killall backboardd 
 killall -9 SpringBoard
 ```
+
 ## 切换AppStore账号后自动下载App的解决
 
 进入AppStore中的账号详情，点击`删除此设备`即可。
@@ -425,5 +437,11 @@ https://mp.weixin.qq.com/s/Htif1DpuPwTPOxHQYYaMnw
 
 ```
 https://mp.weixin.qq.com/s/Shwv4N4lWlTVvDxGBrW23g
+```
+
+## 解锁 120Hz 高刷！
+
+```
+https://mp.weixin.qq.com/s/6oKva6bh2a7dMu5INpkXig
 ```
 

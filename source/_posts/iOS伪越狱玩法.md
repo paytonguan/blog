@@ -157,8 +157,12 @@ https://esign.yyyue.xyz/
 
 ```
 # 插件库
-https://www.123pan.com/s/vgn0Vv-ZTaFv.html
+https://www.123pan.com/s/vgn0Vv-ZTaFv
 https://pan.quark.cn/s/4d23a616c1b2
+
+# 抖音插件集合
+https://www.123865.com/s/vgn0Vv-EyBFv
+https://pan.quark.cn/s/98c8206ef0da
 
 # Lucky Speeder，游戏或广告加速
 https://github.com/kekeimiku/LuckySpeeder
@@ -168,6 +172,31 @@ https://github.com/DevelopCubeLab/DisableAccelerometer
 
 # ShakeShield，屏蔽加速度计
 https://github.com/huami1314/ShakeShield
+
+# FontTweak，给App更换字体
+https://pan.quark.cn/s/666a64251063
+
+# 应用锁
+https://www.123pan.com/s/vgn0Vv-RKaFv
+https://pan.quark.cn/s/43f90698e7b1
+
+# 伪装计算器
+https://www.123pan.com/s/vgn0Vv-nuaFv
+https://pan.quark.cn/s/17c51855ec53
+
+# 隐秘语音备忘录
+https://www.123865.com/s/vgn0Vv-SLaFv
+https://pan.quark.cn/s/1730200016be
+
+# 禁止摇一摇
+https://www.123865.com/s/vgn0Vv-jqwFv
+https://pan.quark.cn/s/d9827e204faa
+
+# Lucky Speeder，游戏和广告加速
+https://github.com/kekeimiku/LuckySpeeder
+
+# banned，永久禁止使用某个App
+https://github.com/34306/banned
 ```
 
 ### 半越狱
@@ -178,6 +207,10 @@ https://github.com/roothide/Bootstrap
 
 # Serotonin
 https://github.com/SerotoninApp/Serotonin
+
+# NathanLR
+https://nathan4s.lol/nathanlr/nathanlr.tipa
+https://ios.cfw.guide/installing-nathanlr/
 ```
 
 ## MacDirtyCow
@@ -783,6 +816,33 @@ https://github.com/Aemulo/Release
 
 # DLiPA，应用降级工具
 https://github.com/AhmedBafkir/DLiPA
+
+# LiveContainer，不安装App即可运行它
+https://github.com/khanhduytran0/LiveContainer
+
+# iOS Clone，对iOS及其内置应用程序的高度精确再现
+https://github.com/PallavAg/iOS-Clone-SwiftUI
+
+# PancakeStore，应用降级工具
+https://github.com/jailbreakdotparty/PancakeStore
+
+# Bridge，查看、打开和提取iOS内部应用
+https://github.com/jailbreakdotparty/Bridge
+
+# Debs，添加越狱源下载deb安装包和提取dylib文件
+https://pan.quark.cn/s/dd0c23c5fceb
+
+# IconLib，下载App图标
+https://pan.quark.cn/s/5344e9ccc916
+
+# Pocket Poster，手机端自定义动态壁纸
+https://github.com/leminlimez/Pocket-Poster
+
+# MuteOTA，屏蔽系统更新
+https://pan.quark.cn/s/8da2bd207793
+
+# EnsWilde，禁用通话录音提示音，支持iOS 18.1-26.1和iOS 26.2 Beta1
+https://github.com/YangJiiii/EnsWilde
 ```
 
 ## Trollstore专用
@@ -801,29 +861,23 @@ https://pan.qxnav.com/
 https://www.123pan.com/s/vgn0Vv-Qo3Fv
 https://pan.baidu.com/s/1f7qiHzFutQ3zN1-SQkFXSg?pwd=791g（提取码 / 791g）
 
-# iOScleanerpro，系统垃圾清理
-https://pan.quark.cn/s/001deacae183#/list/share
+# iOSCleanerPro，系统垃圾清理
+https://pan.quark.cn/s/001deacae183
 
 # 巨魔真后台，保证App在后台运行
-https://pan.quark.cn/s/f364d8308e90#/list/share
+https://pan.quark.cn/s/f364d8308e90
 
 # ImmortalizerTS，保证App在后台运行
 https://github.com/sergealagon/ImmortalizerTS
 
 # 巨魔分屏，App分屏
-https://pan.quark.cn/s/2511a1a37a70#/list/share
-
-# mdc0，系统修改
-https://github.com/34306/mdc0
-
-# dirtyZero，系统修改
-https://github.com/jailbreakdotparty/dirtyZero
+https://pan.quark.cn/s/2511a1a37a70
 
 # 26BatteryStatus，电池信息
-https://pan.quark.cn/s/aa12d0ffb49e#/list/share
+https://pan.quark.cn/s/aa12d0ffb49e
 
 # TrollWatcher Lite，App快速启动器
-https://pan.quark.cn/s/84b44750e7a6#/list/share
+https://pan.quark.cn/s/84b44750e7a6
 
 # TrollOpen，App快速启动器
 https://drive.google.com/drive/folders/1tSmmnfG42XiKMGV5fxu4JwkRfvRdV_Oe?pli=1
@@ -909,8 +963,7 @@ https://github.com/powenn/ModMyIPA
 # 电话助手
 https://www.htv123.com/down/CallAssist_TrollStore.ipa
 
-# TrollTools
-# 多功能工具箱
+# TrollTools，多功能工具箱
 https://github.com/sourcelocation/TrollTools
 
 # WallpaperSetter，自定义浅色模式深色模式的墙纸
@@ -952,9 +1005,6 @@ https://github.com/DevelopCubeLab/ClearFilzaResidue
 https://github.com/mineek/MuffinStore
 https://github.com/mineek/MuffinStoreJailed-Public
 
-# PancakeStore，应用降级工具
-https://github.com/jailbreakdotparty/PancakeStore
-
 # TimeBomb 2，按需触发自旋锁恐慌
 https://github.com/opa334/TimeBomb2
 
@@ -985,6 +1035,9 @@ https://github.com/PoomSmart/TrollLEDs
 # TrollDecryptor，应用砸壳
 https://github.com/wh1te4ever/TrollDecryptor
 
+# TrollDecrypt，解密砸壳
+https://github.com/donato-fiore/TrollDecrypt
+
 # Geranium，守护进程管理器、清理器、监控器
 https://github.com/c22dev/Geranium
 
@@ -1012,16 +1065,13 @@ https://github.com/huami1314/SuperIcons
 # TrollAppDuplicator，应用复制
 https://github.com/BreakOnCrash/TrollAppDuplicator
 
-# LiveContainer，不安装App即可运行它
-https://github.com/khanhduytran0/LiveContainer
-
 # 全局高刷，解锁120Hz高刷
 https://pan.quark.cn/s/dc4366648d7d#
 
 # SpeedGG-Z，状态栏显示实时网速
 https://pan.quark.cn/s/80afff8bcd4f
 
-# AppRetro，App 降级/升级工具
+# AppRetro，App降级/升级工具
 https://pan.quark.cn/s/bfa801ec0421
 
 # 活字印刷术，音乐可视化
@@ -1032,6 +1082,94 @@ https://github.com/Lessica/Unseen
 
 # TheBall-z，应用启动器
 https://pan.quark.cn/s/126c83e6249a
+
+# TrollCM，触摸轨迹工具
+https://pan.quark.cn/s/1f2c40d38fe3
+
+# TrollStore增强版
+https://www.123865.com/s/vgn0Vv-zRDFv
+
+# Residue，解决TrollStore安装的应用删除不干净问题
+https://pan.quark.cn/s/279ea6050da8
+
+# Battman，专业电源管理工具
+https://github.com/Torrekie/Battman
+
+# TrollSIMSwitcher，蜂窝切换器，快速切换双卡流量和4G、5G
+https://github.com/DevelopCubeLab/TrollSIMSwitcher
+
+# Wi-Fi开关，打开或关闭WiFi
+https://github.com/DevelopCubeLab/WiFiSwitcher
+
+# 定位开关，一键开启或关闭定位
+https://github.com/DevelopCubeLab/LocationServicesSwitcher
+
+# 自动亮度开关，一键打开或关闭自动亮度调节
+https://github.com/DevelopCubeLab/AutoBrightnessSwitcher
+
+# TrollVNC，远程操作iPhone
+https://pan.quark.cn/s/590cc7f77dd3
+
+# IPCCInstaller，手机端刷IPCC
+https://pan.quark.cn/s/baa061cf7343
+
+# RootHide修改版，一键清理，解决某些 App 显示“存在风险”无法使用的问题
+https://pan.quark.cn/s/35cf8db5eabd
+```
+
+## CVE-2025-24203专用
+
+支持iOS 15-18.3.2系统。不支持iOS 17.7.6及以上的iOS 17系统。
+
+```
+# mdc0，系统修改
+https://github.com/34306/mdc0
+https://pan.quark.cn/s/58e732c7ae6a
+```
+
+## Coruna专用
+
+支持iOS 13.0-17.2.1。
+
+打开 Coruna 网站，点击 jelbreak me。成功会弹窗界面 Welcome，点击 Let`s go！
+
+弹出菜单，点击 Load.dylib tweak。就会打开文件 App，选择需要使用的插件，即可注入。
+
+```
+http://34306.lol/group.html
+```
+
+插件列表如下。
+
+```
+# Coruna插件项目
+https://github.com/zeroxjf/Coruna-Tweaks-Collection
+
+# SpringBoardTweak，桌面美化，集合大量功能
+https://github.com/AldazActivator/TweaksLoader
+
+# AppData Coruna，移植越狱插件AppData的功能
+https://pan.quark.cn/s/09053c5a0e9b
+```
+
+## DarkSword专用
+
+支持iOS 16.0-18.7.1，支持 iOS 26.0-26.0.1系统。
+
+```
+# Cyanide，全能工具箱
+https://github.com/zeroxjf/cyanide-ios
+# 二改版
+https://pan.quark.cn/s/1dd9d6e9eb1d
+
+# dirtyZero，多功能工具
+https://github.com/jailbreakdotparty/dirtyZero
+
+# lara，全能工具箱
+https://github.com/rooootdev/lara
+
+# LightSaber，在 Safari 网站就可以一键使用，多个功能，仅支持iOS 18.4-18.6.2
+https://zeroxjf.github.io/lightsaber/
 ```
 
 ## KFD专用
@@ -1414,97 +1552,199 @@ https://mp.weixin.qq.com/s/hYdsfeeZup8aqz_kXFP_uA
 https://mp.weixin.qq.com/s/7ArnnlJDw0C0-HNqZhSIfg
 ```
 
-##
+## 巨魔轨迹！
+
+```
+https://mp.weixin.qq.com/s/lzOueNAW_KWw8PIuZMoj8g
+```
+
+## 来了，巨魔增强！
+
+```
+https://mp.weixin.qq.com/s/6p78APAmBL9CTt4IdtSBbw
+```
+
+## 大佬更新，现已支持高系统！
+
+```
+https://mp.weixin.qq.com/s/gLUfjQKYC3fiDgegWOHvIA
+```
+
+## 低系统，终于等来了！
+
+```
+https://mp.weixin.qq.com/s/V_HG9OLm5HHwnsMyWfy8Uw
+```
+
+## 大佬发布，支持高系统了！
+
+```
+https://mp.weixin.qq.com/s/jZrMWsWzHwca8qZ79VS9Rw
+```
+
+## 太猛了，高系统终于支持！
+
+```
+https://mp.weixin.qq.com/s/ptXH41mxPyr8qyC0wmtzkQ
+```
+
+## 巨魔一键清除残留！
+
+```
+https://mp.weixin.qq.com/s/QW2BfAc-hegOC6nLckTH9g
+```
+
+## 解除温控！
+
+```
+https://mp.weixin.qq.com/s/jwW70bRRVqu2aj65WJFK3g
+```
+
+## 巨魔 Troll SIM Switcher！
+
+```
+https://mp.weixin.qq.com/s/Oae5dUEpH7PWOaBv27quYg
+```
+
+## 克隆 iOS！
+
+```
+https://mp.weixin.qq.com/s/DoMo-uZiH5pkwF2UJ5PO9w
+```
+
+## 巨魔解密！
+
+```
+https://mp.weixin.qq.com/s/Gt-8bcKNcgepf4ED_dr51g
+```
+
+## Wi-Fi 开关！
+
+```
+http://mp.weixin.qq.com/s/SpAOSOlZMXRFhAHnMeioYg
+```
+
+## 小工具，Bridge！
+
+```
+https://mp.weixin.qq.com/s/NN_Q7yd-5PQMTN1PWiIvkg
+```
+
+## 一键定位！
+
+```
+https://mp.weixin.qq.com/s/ZNMTSi8BTDJ8bLXXbIzFeQ
+```
+
+## 自动亮度开关！
+
+```
+https://mp.weixin.qq.com/s/v9KIBeQ0oEjlboO-o4rKIw
+```
+
+## 新玩法！
+
+```
+https://mp.weixin.qq.com/s/HZSflmsAlDJY2zSWJIeSFg
+```
+
+## 来了，iOS 17.0 半越狱已发布！
+
+```
+https://mp.weixin.qq.com/s/EozRivCw3qjl545vDzfUuA
+```
+
+## 现已支持 iOS 15！
+
+```
+https://mp.weixin.qq.com/s/JSiZsUGtegYkflZJl1jkhQ
+```
+
+## TrollVNC！
+
+```
+https://mp.weixin.qq.com/s/998F14qNDftYuqKHHr62WQ
+```
+
+## 新工具，IconLib！
+
+```
+https://mp.weixin.qq.com/s/rga5kXqdScyslsi3oYRT9A
+```
+
+## iPhone 手机端一键刷 IPCC！
+
+```
+https://mp.weixin.qq.com/s/PnBjDTFtApclhO3cR3n4Mw
+```
+
+## 注意，请谨慎使用！
+
+```
+https://mp.weixin.qq.com/s/S_76hIh-3ugdbltqpZqn5A
+```
+
+## 动态壁纸删除方法！
+
+```
+https://mp.weixin.qq.com/s/8QGEnpommkWPO1amZgqyeg
+```
+
+## 一键屏蔽，清除红点！
+
+```
+https://mp.weixin.qq.com/s/oADcO2WiPDROERYRCpYaHg
+```
+
+## iPhone 一键注入，无需越狱！
+
+```
+https://mp.weixin.qq.com/s/6i-04hhd0Bjy8pZx31dpIw
+```
+
+## 光剑，LightSaber！
+
+```
+https://mp.weixin.qq.com/s/7OdmIA6tDE0gY1nzwRhSLw
+```
+
+## 支持实时容器！
+
+```
+https://mp.weixin.qq.com/s/Hj6yCqBLq8fO8CC-X6sjGw
+```
+
+## 新版来袭，内置文件管理器！
+
+```
+https://mp.weixin.qq.com/s/49LXbsk64-2FU3SGvv8_CQ
+```
+
+## 好消息，Coruna 插件已发布！
+
+```
+https://mp.weixin.qq.com/s/YczwgRQhztuiXlmLj0OgQQ
+```
+
+## 
 
 ```
 
 ```
 
-##
+## 
 
 ```
 
 ```
 
-##
+## 
 
 ```
 
 ```
 
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
+## 
 
 ```
 

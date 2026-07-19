@@ -549,6 +549,12 @@ AppStore下载的应用进行了数字版权加密处理，加密后的App无法
 
 砸壳后的App在越狱手机上可直接用Filza安装。
 
+## 通过网站
+
+```
+https://decrypt.34306.lol/
+```
+
 ## 通过frida-ios-dump
 
 该方法适用于Mac，需要APP能够正常打开。
@@ -735,4 +741,10 @@ https://www.52pojie.cn/thread-741535-1-4.html
 
 ```
 https://mp.weixin.qq.com/s/POKnLnXEcaV_WeFRlkTSJg
+```
+
+## 大佬发布，无需越魔！
+
+```
+https://mp.weixin.qq.com/s/BwsuxcZKgsUK9pRo7FTTAQ
 ```
