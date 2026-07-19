@@ -16,6 +16,21 @@ Trollstore等。
 # TODOS
 
 ```
+# 惊现！iOS 17.0 改系统字体方法，全局字体都生效
+https://mp.weixin.qq.com/s/uRUH75BvuHlMC-A2X77W2g
+
+# 双系统启动和降级iOS 15
+https://mp.weixin.qq.com/s/T6aKH6Uia9Qc0JTI8H6-8Q
+
+# iOS 26.1 禁录音声
+https://mp.weixin.qq.com/s/AEYXBPwQARFtBR3k44VcoQ
+
+# 屏蔽iOS系统更新
+https://mp.weixin.qq.com/s/K-esbd8sXWMQdSVa6l6VHQ
+
+# ios15.5-ios16.1.2不越狱改全面屏手势
+https://www.bilibili.com/opus/757033199249391655
+
 # Storm-Sniffer
 https://github.com/89996462/Storm-Sniffer
 https://github.com/coolhaiku/storm-sniffer-rules
@@ -95,6 +110,20 @@ PlankFilza修改关于本机信息
 这个就是可以修改关于本机型号及版本号等，直接找路径：
 /var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist
 然后看看，你想修改什么内容，右上角保存，然后重启手机即可修改成功。
+```
+
+```
+(实时更新)巨魔2安装流程
+
+内置了安装工具Misake和Picasso
+
+https://wwbm.lanzouj.com/b00rxhdlc
+密码:zdf
+
+一些有趣的ipa（实时更新中）
+
+https://wwn.lanzouy.com/b00q85ctg
+密码zdf
 ```
 
 # 安装与使用
@@ -241,6 +270,7 @@ https://github.com/zhuowei/MacDirtyCowDemo
 ```
 # Misaka
 https://github.com/straight-tamago/misaka
+https://github.com/straight-tamago/misaka26
 
 # SimpleKFD
 https://github.com/Lrdsnow/SimpleKFD
@@ -843,6 +873,14 @@ https://pan.quark.cn/s/8da2bd207793
 
 # EnsWilde，禁用通话录音提示音，支持iOS 18.1-26.1和iOS 26.2 Beta1
 https://github.com/YangJiiii/EnsWilde
+
+# FilzaJailedDS，文件管理器
+# 支持 iOS 17.0-18.7.1，26.0-26.0.1
+https://github.com/34306/FilzaJailedDS
+
+# SparseBox，在手机端就可以进行MobileGestalt相关操作
+# 支持iOS 26.1及以下系统，最高支持到iOS 26.2 Beta1
+https://github.com/khanhduytran0/SparseBox
 ```
 
 ## Trollstore专用
@@ -1115,16 +1153,9 @@ https://pan.quark.cn/s/baa061cf7343
 
 # RootHide修改版，一键清理，解决某些 App 显示“存在风险”无法使用的问题
 https://pan.quark.cn/s/35cf8db5eabd
-```
 
-## CVE-2025-24203专用
-
-支持iOS 15-18.3.2系统。不支持iOS 17.7.6及以上的iOS 17系统。
-
-```
-# mdc0，系统修改
-https://github.com/34306/mdc0
-https://pan.quark.cn/s/58e732c7ae6a
+# CellularInfo，蜂窝网络诊断与分析工具
+https://github.com/DevelopCubeLab/CellularInfo
 ```
 
 ## Coruna专用
@@ -1144,6 +1175,10 @@ http://34306.lol/group.html
 ```
 # Coruna插件项目
 https://github.com/zeroxjf/Coruna-Tweaks-Collection
+
+# 插件库
+https://1688623.share.123pan.cn/123pan/ifH9-sNQy3?notoken=1
+https://wwbow.lanzouu.com/b0kov272h
 
 # SpringBoardTweak，桌面美化，集合大量功能
 https://github.com/AldazActivator/TweaksLoader
@@ -1170,6 +1205,40 @@ https://github.com/rooootdev/lara
 
 # LightSaber，在 Safari 网站就可以一键使用，多个功能，仅支持iOS 18.4-18.6.2
 https://zeroxjf.github.io/lightsaber/
+
+# MultiWin，分屏工具
+https://wwbow.lanzouu.com/b0kp19vah
+
+# Fontfix，修改系统字体
+https://wwbow.lanzouu.com/b0kozv6da
+
+# Tonedit，全能工具箱
+https://wwbow.lanzouu.com/b0kozrqpi
+
+# 一键修改
+https://1688623.share.123pan.cn/123pan/ifH9-U2Hy3?notoken=1
+
+# CarWall，CarPlay更换壁纸
+https://wwbow.lanzouu.com/b0kp09isb
+
+# DeskTweak，后台清理
+https://wwbow.lanzouu.com/b0kp3ptra
+
+# PerfScan，电池助手
+https://wwbow.lanzouu.com/b0kp1j2le
+
+# FilzaJailed，文件管理器
+https://wwbow.lanzouu.com/b0kowlokh
+```
+
+## CVE-2025-24203专用
+
+支持iOS 15-18.3.2系统。不支持iOS 17.7.6及以上的iOS 17系统。
+
+```
+# mdc0，系统修改
+https://github.com/34306/mdc0
+https://pan.quark.cn/s/58e732c7ae6a
 ```
 
 ## KFD专用
@@ -1726,26 +1795,74 @@ https://mp.weixin.qq.com/s/49LXbsk64-2FU3SGvv8_CQ
 https://mp.weixin.qq.com/s/YczwgRQhztuiXlmLj0OgQQ
 ```
 
-## 
+## 巨魔新方法！
 
 ```
-
+https://mp.weixin.qq.com/s/VN_FaqYU64-yaYQYif9oIg
 ```
 
-## 
+## 新工具，低系统可刷！
 
 ```
-
+https://mp.weixin.qq.com/s/y6cyM9AsxHdAxW0KoDLO4A
 ```
 
-## 
+## 大佬终于领赏金了！
 
 ```
-
+https://mp.weixin.qq.com/s/CbFjoTzCDjhwvhJzvBBcwg
 ```
 
-## 
+## 劲爆！iOS 26.0.1 MultiWin 分屏发布，不用越狱
 
 ```
+https://mp.weixin.qq.com/s/tJ2b7tsOKuS3V_sCt4H0ZA
+```
 
+## 超劲爆！iOS 17.2.1 Airoot 插件来袭，能应用分屏
+
+```
+https://mp.weixin.qq.com/s/lZ615eoy3AkmDT2n0CPiNQ
+```
+
+## 新发现！iOS 26.0.1 Fontfix 1.6 发布，可以改字体
+
+```
+https://mp.weixin.qq.com/s/uKjN-MzmWy9JY4QdwVBYDA
+```
+
+## 真爽！iOS 26.0.1 Tonedit 添加铃声，仅几秒搞定
+
+```
+https://mp.weixin.qq.com/s/9PrdtjFt5XpGWbKkFA8Zcw
+```
+
+## 超劲爆！iOS 18.3.2 新隐藏方法，实现自定义隐藏
+
+```
+https://mp.weixin.qq.com/s/0qg7UlwFHia709uejrYQjA
+```
+
+## 好东西！iOS 26.0.1 CarWall 更换壁纸，测试有效
+
+```
+https://mp.weixin.qq.com/s/3hT3xQxPm8tit_-4agia2w
+```
+
+## 惊现！iOS 26.0.1 DeskTweak 免越狱，能清理后台
+
+```
+https://mp.weixin.qq.com/s/Qsf3U-wxbXK4PqcmJEbjDA
+```
+
+## 好消息！iOS 26.0.1 PerfScan 电池助手已发布
+
+```
+https://mp.weixin.qq.com/s/OkU2FmPElsvcHm2HZQ_iKw
+```
+
+## 来啦！iOS 26.0.1 Filza 2.1 管理器，终于可改应用
+
+```
+https://mp.weixin.qq.com/s/fIPers-Z5_P5N8RM4xtT4A
 ```

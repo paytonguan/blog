@@ -16,11 +16,18 @@ Kindle的使用技巧总结。
 # TODOS
 
 ```
-Kindle刷入安卓
+# Kindle刷入安卓
+https://www.beizigen.com/post/kindle-migu-install-weread-tutorial/
+https://www.beizigen.com/post/kindle-migu-flashing-android-system/
 https://www.bilibili.com/video/BV1mV4y1H7aQ/
+https://www.bilibili.com/video/BV1J2421N7QH/
 https://post.smzdm.com/p/aoow0lkm/
 https://xdaforums.com/t/guide-installing-android-on-your-aging-kindle-e-reader.4450117/
 https://community.wvbtech.com/d/3027
+https://zyyme.com/kindle8.html
+https://zyyme.com/usr/uploads/2024/01/hlwm1e0cgx.pdf
+https://www.zhihu.com/question/526933239/answer/3094012922
+https://github.com/Angels-Ray/Kindle_X_Migu
 ```
 
 # 电子书获取

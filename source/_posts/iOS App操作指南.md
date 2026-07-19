@@ -16,6 +16,14 @@ iOS App使用指南。
 
 从App Store下载的IPA包含了账号信息。因此，安装别人的Apple ID下载的IPA，打开时会提示需要输入账号信息。这种APP可以通过重签名的方式，将账号信息替换为自己，从而进行安装。
 
+# TODOS
+
+```
+# 下载已下架或旧版IPA
+https://gist.github.com/minif/473310d7c556caadf4f2ed2d97389574
+https://gist.github.com/qnblackcat/4f7b77f685ccda2ff4ef916a27d66107
+```
+
 # 限免
 
 ## 价格监测

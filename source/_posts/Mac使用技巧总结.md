@@ -12,6 +12,13 @@ tags:
 
 <!-- more -->
 
+# TODOS
+
+```
+# 开启Apple AI
+https://github.com/kanshurichard/enableAppleAI
+```
+
 # 查看系统版本
 
 点击菜单栏中的关于本机即可。或在磁盘工具中也能看到磁盘对应的系统版本。
