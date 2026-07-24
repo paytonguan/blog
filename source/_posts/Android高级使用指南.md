@@ -15,6 +15,12 @@ Android Root等。
 # TODOS
 
 ```
+adb shell /data/app/moe.shizuku.privileged.api-sv0BTIYUfeErR2r_bFlP7g==/lib/arm/libshizuku.so
+
+
+
+
+
 使用KernelSU_Action编译自己的KernelSU内核
 https://www.bilibili.com/opus/806004201667690498
 

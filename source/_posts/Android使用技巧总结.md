@@ -15,6 +15,32 @@ tags:
 # TODOS
 
 ```
+连点器的使用
+
+导入规则
+7687
+0499
+2650
+
+要把手机的屏幕防护关掉，否则无法识别文字
+
+然后点一下加载，会出来很多按钮
+以盲盒到店取为例，01是按送到家，02是按到店取，03是识别确定并点击，04是确认信息并支付，05是确认无误，06是跳转回03
+要把每个按钮的位置移动对，对于识别文字的按钮（03/04），需要长按跳出设置，并点击识别区域下的选择区域，重新选择文字按钮
+然后改完之后点规则，保存一下规则
+
+01和02之间刷新频率为100-200ms随机，不会被检测为点击太快
+02和03要稍微慢一些，不然按钮加载不出来，用300ms左右差不多
+
+然后在刚才的规则上点多开，就出来按钮了
+直接用就行
+
+
+
+
+
+
+
 https://android.stackexchange.com/questions/156955/samsungs-equivalent-to-fastboots-temporary-flash
 
 
@@ -310,6 +336,45 @@ https://github.com/topjohnwu/Magisk/issues/4495
 https://trendyport.com/how-to-extract-boot-img-from-boot-img-iz4-and-root-samsung/?amp
 
 尝试刷入后取消自动重启，自行进入Recovery并重置系统，还是不行
+
+
+
+
+
+
+
+
+Samsung J3300无法root的原因
+因为固件已经是ver4，比ver1/2更严格
+通过解包boot.img和system.img，可以发现在system.img中的vendor\etc\fstab.qcom，有如下内容
+
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+#TODO: Add 'check' as fs_mgr_flags with data partition.
+# Currently we dont have e2fsck compiled. So fs check would failed.
+
+#<src>                                      <mnt_point>      <type>  <mnt_flags and options>                     <fs_mgr_flags>
+#/dev/block/platform/soc/7824900.sdhci/system        /                ext4    ro,barrier=1,discard                        wait,verify
+/dev/block/platform/soc/7824900.sdhci/by-name/userdata      /data            ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc,discard  wait,check,forceencrypt=footer,quota
+#/dev/block/bootdevice/by-name/efs           /efs          ext4    nosuid,nodev,noatime,noauto_da_alloc,discard,journal_async_commit,data=ordered,errors=panic  wait,check
+/dev/block/bootdevice/by-name/misc          /misc        emmc    defaults                                    defaults
+
+# VOLD PATH : /android/device/qcom/msm8953_64/fstab_non_AB_variant.qti
+/devices/soc/7864900.sdhci/mmc_host*                         auto            vfat    defaults         voldmanaged=sdcard:auto
+/devices/soc/78db000.usb/msm_hsusb_host*                     auto            auto    defaults         voldmanaged=usb:auto
+/dev/block/bootdevice/by-name/hidden        /preload         ext4            defaults                 voldmanaged=preload:auto
+
+
+其中 /dev/block/platform/soc/7824900.sdhci/by-name/userdata /data ext4 noatime,nosuid,nodev,barrier=1,noauto_da_alloc,discard wait,check,**forceencrypt=footer**,quota 表示系统启动时，必须检查 Data 分区是否加密，如果没有，就强制加密。
+
+而Magisk只会改动boot.img，不改动system.img，所以解密就没解开了。
+
+所以现在唯一的方法
+1）解包system.img，改掉fstab的forceencrypt和verify后重新打包
+2）boot.img送给Magisk进行修复
+3）把boot和system打包为新的tar，作为AP刷入
 ```
 
 # 资料

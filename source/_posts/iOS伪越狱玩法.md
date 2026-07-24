@@ -110,6 +110,34 @@ PlankFilza修改关于本机信息
 这个就是可以修改关于本机型号及版本号等，直接找路径：
 /var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist
 然后看看，你想修改什么内容，右上角保存，然后重启手机即可修改成功。
+
+
+
+
+
+开启AI
+用misaka26，按照这个视频的来
+https://www.bilibili.com/video/BV1YhCvBcE9c?spm_id_from=333.788.recommend_more_video.1&trackid=web_related_0.router-related-2206419-tqkgg.1766254583817.959&vd_source=5f8482534742bb8567b1e9807f633b90
+要同时改CH->LL，以及型号改成A2696
+
+
+注意如果重置了机子的话会被改回去
+
+
+
+
+
+Apple Intelligence 启用条件
+Apple Store ID、系统语言、系统地区、Siri 语言都在美国（iCloud 可以用国区）
+挂一会，挂到gpt出来登录成功就行，然后墙可以关了
+
+然后如果将系统语言、系统地区、Siri 语言都改为台湾，也可以用（Apple Store ID可以仍然是美区的）
+同理也可以改到香港去
+
+然后语言里面可以加简体中文作为备选，建议
+繁体中文-简体中文-English
+
+如果要用GPT必须长时间挂着墙
 ```
 
 ```
