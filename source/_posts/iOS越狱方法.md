@@ -23,6 +23,7 @@ iOS越狱方法。
 
 |             应用            |    基板    | 设备要求 |                   系统范围                   | 有根/无根越狱 |
 |-----------------------------|------------|----------|----------------------------------------------|---------------|
+| Relaxin                     |            |          | 17.0–17.3.1                                  | 无根          |
 | Dopamine                    |            | A12-A15  | 15.0-15.4.1                                  | 无根          |
 | XinaA15                     |            | A12-A15  | 15.0-15.1.1                                  | 无根          |
 | SaiGon                      |            | A9-A11   | 15.0-15.8.2                                  | 无根          |
@@ -66,6 +67,12 @@ https://cydia-app.com/
 
 ```
 https://apporanges.lanzoui.com/b0cfcmzwj
+```
+
+# Relaxin
+
+```
+https://owngoal.dev/relaxin
 ```
 
 # Dopamine
@@ -858,4 +865,10 @@ https://mp.weixin.qq.com/s/eH9j5pFAFpsgtX4WTUngLA
 
 ```
 https://mp.weixin.qq.com/s/iqgfUCPeuDBh_P5JFMf5IQ
+```
+
+## Relaxin 更新了！
+
+```
+https://mp.weixin.qq.com/s/FdBfZW86fzSa6apwx8dfQg
 ```

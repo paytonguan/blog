@@ -38,7 +38,6 @@ https://repo.acreson.cn/
 |------------------|--------------|
 | ElleKit          | 基板         |
 | PreferenceLoader | 显示插件设置 |
-| Ampere           | 电池         |
 
 ## Netskao源
 
@@ -75,7 +74,7 @@ http://apt.htv123.com/
 | No Apple MobileRepair | 禁止设置页面显示维修记录· |
 | 禁用底部切换 App 手势 | 禁用底部切换 App 手势     |
 
-## opa334作者源
+## opa334源
 
 ```
 https://opa334.github.io/
@@ -115,21 +114,9 @@ https://repo.chariz.com/
 | Atria           | 自定义桌面布局             |
 | Orion           | 系统调节插件               |
 | QuitAll         | 一键清理后台               |
-| CarBridge       | 让第三方APP运行于CarPlay   |
 | EmoZoom         | 调整表情符号大小           |
 | Cask 3          | 菜单翻动炫酷动画           |
 | Reboot Helper   | 定时执行注销、重启等操作   |
-
-## Ginsu作者源
-
-```
-https://repo.ginsu.dev/
-```
-
-|  插件  |         作用         |
-|--------|----------------------|
-| Dodo   | 锁屏美化插件         |
-| Analog | 锁屏添加一个模拟时钟 |
 
 ## PoomSmart源
 
@@ -148,9 +135,9 @@ https://poomsmart.github.io/repo/
 | Live Text Enabler      | 在不支持的设备上开启实况文本功能 |
 | EmojiPort              | 更新系统的Emoji                  |
 | DismissProgress        | 在插件安装界面增加关闭按钮       |
-|                        |                                  |
+| CAHighFPS              | 让应用使用最高刷新率             |
 
-## Spark源
+## SparkDev源
 
 ```
 https://sparkdev.me/
@@ -178,7 +165,7 @@ https://tigisoftware.com/cydia/
 |     插件     |    作用    |
 |--------------|------------|
 | Filza        | 文件管理器 |
-| Apps Manager |            |
+| Apps Manager | App管理器  |
 
 ## P2KDev源
 
@@ -228,9 +215,8 @@ https://havoc.app/
 | CCCounters               | 控制中心显示倒计时                               |
 | Macaron                  | 给Dock栏添加图片                                 |
 | UnderDock                | 键盘底部添加快捷按钮                             |
-| Lynx 2                   |                                                  |
+| Lynx 2                   | 超强山猫，终极定制                               |
 | Picarize                 | 一键抠图                                         |
-| UnderDock                | 键盘增强                                         |
 | Stella                   | 模拟雪花飘落                                     |
 | Anouk                    | 给隐藏照片加锁                                   |
 | FloatingDockXVI          | 自定义Dock栏                                     |
@@ -295,13 +281,13 @@ https://havoc.app/
 | SquidExtender            | 键盘扩展                                         |
 | CalculatorHistory        | 计算器显示计算历史记录                           |
 | CalculatorConverter      | 计算器添加转换功能                               |
-| Floaty                   | 通知气泡                                         |
 | KonbanXV                 | 替换负一屏                                       |
 | Oh My Insets             | 控制中心五列                                     |
 | Picarize                 | 为设备添加人像模式                               |
 | Aperturize               | 为人像照片编辑时添加调整景深控制功能             |
-| Aerial                   | 分屏                                             |
-| Speedster                | 动画加速                                         |
+| LSLyrics                 | 锁屏卡拉OK                                       |
+| Rune                     | 屏幕底部呼出快捷面板                             |
+| Zeppelin Reborn          | 自定义运营商                                     |
 
 ## Limneos源
 
@@ -342,13 +328,12 @@ https://alias20.gitlab.io/apt/
 | FakeSignalBar      | 自定义运营商                                    |
 | BlurryAlerts       | 使用tvOS风格的弹窗                              |
 | CoolCC Reborn      | 控制中心移除模块背景和添加边框                  |
-| Axon               | 锁屏通知归纳                                    |
 
-
-## level3tjg
+## level3tjg源
 
 ```
 https://level3tjg.xyz/repo/
+https://level3tjg.me/repo/
 ```
 
 |        插件        |               作用              |
@@ -394,6 +379,7 @@ https://repo.anthopak.dev/
 | AddToFolder | 桌面App快速移动到指定文件夹 |
 | VideoSwipes | 给默认视频播放器添加手势    |
 | PanCake     | 快速返回上一页              |
+| QuickPrefs  | 设置快速跳转                |
 
 
 ## Dcsyhi源
@@ -463,7 +449,7 @@ https://skypain.github.io/repo/
 | CCScreenShot     | 控制中心截图         |
 | CCAutoBrightness | 控制中心亮度自动调节 |
 
-## akusio源
+## Akusio源
 
 ```
 https://akusio.github.io/
@@ -502,7 +488,7 @@ https://b4db1r3.github.io/d3vr3p0/
 | Tako       | 锁屏通知聚合                       |
 | CozyBadges | 角标个性化颜色                     |
 
-## maxiwee源
+## Maxiwee源
 
 ```
 https://maxiwee.de/
@@ -527,16 +513,32 @@ https://junesiphone.com/supersecret/
 | LockPlus Pro | 锁屏增强   |
 | Xeninfo      |            |
 
+## RossDarker源
+
+```
+https://rossdarker.github.io/repo/
+```
+
+|        插件        |         作用         |
+|--------------------|----------------------|
+| Night Shift Module | 控制中心增加夜览按钮 |
+
+
 ## Ginsu源
 
 ```
 https://ginsu.dev/repo/
+https://repo.ginsu.dev/
+https://ginsudev.github.io/repo/
 ```
 
-|     插件    |       作用       |
-|-------------|------------------|
-| Dodo        | 锁屏插件         |
-| DualClock 2 | 为锁屏显示双时钟 |
+|     插件    |               作用              |
+|-------------|---------------------------------|
+| Dodo        | 锁屏插件                        |
+| DualClock 2 | 为锁屏显示双时钟                |
+| Analog      | 锁屏添加一个模拟时钟            |
+| DrainCheck  | 记录DND/LPM时间内的电量消耗情况 |
+
 
 ## Fouad Raheb源
 
@@ -554,9 +556,9 @@ https://apt.fouadraheb.com/
 https://uz-ra.github.io/
 ```
 
-|  插件  |             作用             |
-|--------|------------------------------|
-| medusa | 在iPhone上启用iPad多任务功能 |
+|   插件  |             作用             |
+|---------|------------------------------|
+| medousa | 在iPhone上启用iPad多任务功能 |
 
 ## ZX02源
 
@@ -594,7 +596,7 @@ https://repo.co.kr/
 | A-Font    | 字体管理插件 |
 | A-Shields | 程序锁       |
 
-## ichitaso源
+## iChitaso源
 
 ```
 https://cydia.ichitaso.com/
@@ -632,7 +634,7 @@ https://apt.thebigboss.org/repofiles/cydia/
 | WhiteCCBorders       | 自定义控制中心的边框和圆角       |
 | ByeHomeBottomBarX    | 自定义小横条                     |
 
-## cosmiccode源
+## wrp1002源
 
 ```
 https://cosmiccode.cc/repo/
@@ -659,10 +661,11 @@ https://xiangfeidexiaohuo.github.io/
 https://apt.25mao.com/
 ```
 
-|   插件   | 作用 |
-|----------|------|
-| 密友助手 |      |
-| 斗图助手 |      |
+|   插件   |             作用             |
+|----------|------------------------------|
+| 密友助手 |                              |
+| 斗图助手 |                              |
+| 左滑返回 | 向左滑动就可以快速返回上一页 |
 
 ## 赵楠源
 
@@ -707,6 +710,8 @@ https://www.yourepo.com/
 | LSTimeSeconds    | 锁屏显示秒数         |
 | LockMoji15+      | 使用表情符号代替锁头 |
 | NoDockGround     | Dock栏背景透明       |
+| Live Activities  | 适合iOS 15的实时活动 |
+| 自动真后台       |                      |
 
 ## 0xkuj源
 
@@ -719,6 +724,7 @@ https://0xkuj.yourepo.com/
 | 3DAppVersionSpoofer | 自定义App版本          |
 | NoCCGrabber         | 去除锁屏右上角CC抓手   |
 | NoPasteAlerts16     | 去除iOS 16系统粘贴弹窗 |
+| Store Switcher 2    | App Store快速切换账号  |
 
 ## ugly-soul源
 
@@ -857,6 +863,7 @@ https://sugiuta.github.io/
 | FrendaCC        | 控制中心图标美化    |
 | PlampyCC        | 控制中心图标美化    |
 | LPMNotification | 移除低于20%电量弹窗 |
+| Fallen          | iPhone下雪          |
 
 ## udevs源
 
@@ -869,7 +876,7 @@ https://udevsharold.github.io/repo
 | DockX      | 在键盘底部增加更多实用按钮 |
 | DebHoarder | 自动备份deb安装包          |
 
-## kingpuffdaddi源
+## KingPuffdaddi源
 
 ```
 https://kingpuffdaddi.github.io/
@@ -914,7 +921,7 @@ https://nathan4s.lol/repo/
 | gridswitcher            | 让iPhone使用iPad设备网格样式的应用切换器 |
 | Eneko                   | 动态视频壁纸                             |
 
-## 34306源
+## Little 34306源
 
 ```
 https://34306.github.io/
@@ -1084,7 +1091,7 @@ https://johnzaro.github.io/cydia/
 |-------------------------|------------|
 | PerfectNetworkSpeedInfo | 网速悬浮窗 |
 
-## MiRO源
+## MiRO92源
 
 ```
 https://miro92.com/repo/
@@ -1337,7 +1344,7 @@ https://shepgobarepo.github.io/
 |-----------------|----------------------|
 | SettingsWidgets | 在设置页面显示小组件 |
 
-## Ivano源
+## Ivano Bilenchi源
 
 ```
 https://ib-soft.net/repo
@@ -1594,9 +1601,11 @@ https://julio.hackyouriphone.org/
 https://rootless.zq666.eu.org/
 ```
 
-|     插件    |       作用       |
-|-------------|------------------|
-| Hello Speed | 调节系统动画速度 |
+|      插件      |            作用           |
+|----------------|---------------------------|
+| Hello Speed    | 调节系统动画速度          |
+| BlockAppUpdate | 屏蔽app更新               |
+| 120Hz Fix      | 解锁动态刷新率80Hz到120Hz |
 
 
 ## Deno源
@@ -1608,17 +1617,6 @@ https://6gr8.github.io/deno.io/
 |    插件    |             作用             |
 |------------|------------------------------|
 | LockTouchX | 为应用添加指纹、面容身份验证 |
-
-## Ginsu源
-
-```
-https://ginsudev.github.io/repo/
-```
-
-|    插件    |               作用              |
-|------------|---------------------------------|
-| DrainCheck | 记录DND/LPM时间内的电量消耗情况 |
-
 
 ## CokePokes源
 
@@ -1654,12 +1652,14 @@ https://apt.abcydia.com/
 https://orig.shtm.best/
 ```
 
-|        插件        |         作用         |
-|--------------------|----------------------|
-| Fake5GA            | 状态栏5G变成5GA      |
-| FlexibleExpression | 给灵动岛添加炫酷动画 |
+|        插件        |              作用             |
+|--------------------|-------------------------------|
+| Fake5GA            | 状态栏5G变成5GA               |
+| FlexibleExpression | 给灵动岛添加炫酷动画          |
+| NeoWave16          | iOS 18+苹果智能风格的Siri动画 |
+| 灵动空间           | 给灵动岛加上炫酷的动画        |
 
-## Phuc Do源
+## PhucDo源
 
 ```
 https://dobabaophuc1706.github.io/repo/
@@ -1685,10 +1685,12 @@ https://therealhoodboy.github.io/coreux/
 https://iosdumpzzz.github.io/iosdump.repo/
 ```
 
-|    插件    |        作用        |
-|------------|--------------------|
-| CustomCCBg | 自定义控制中心背景 |
-| Zone       | 动态壁纸           |
+|     插件     |        作用        |
+|--------------|--------------------|
+| CustomCCBg   | 自定义控制中心背景 |
+| Zone         | 动态壁纸           |
+| CustomCallBg | 自定义通话背景     |
+| TrollCM      | 触摸轨迹           |
 
 
 ## 乌龙工作室源
@@ -1697,17 +1699,87 @@ https://iosdumpzzz.github.io/iosdump.repo/
 https://apt.82flex.com
 ```
 
-|      插件      |          作用          |
-|----------------|------------------------|
-| DayNightSwitch | 让开关变成日和月样式   |
-| ArtworkSpinner | 让锁屏音乐封面旋转起来 |
+|       插件       |                      作用                     |
+|------------------|-----------------------------------------------|
+| DayNightSwitch   | 让开关变成日和月样式                          |
+| ArtworkSpinner   | 让锁屏音乐封面旋转起来                        |
+| TrollRecorder JB | 巨魔录音机越狱版                              |
+| TrollSpeed JB    | 悬浮网速越狱版                                |
+| Write Now        | 写作助手                                      |
+| 禁字决           | 禁止App摇一摇跳转                             |
+| Unseen           | 降低App对截图、录屏和隐藏图层标记的感知与干扰 |
+
+## DXCOOL223源
+
+```
+https://dxcool223-repo.github.io/repo/
+```
+
+|  插件 |    作用    |
+|-------|------------|
+| Flex3 | 程序修改器 |
+
+## Cachexiaa源
+
+```
+https://cachexiaa.github.io/
+```
+
+|     插件    |             作用            |
+|-------------|-----------------------------|
+| UI Switches | 配合SnowBoard使用的开关按钮 |
+
+## Tinyapps源
+
+```
+https://apt.tinyapps.cn/
+```
+
+|   插件   |              作用              |
+|----------|--------------------------------|
+| 连个锤子 | 修复越狱后国行设备无法联网问题 |
+
+## Sparcave源
+
+```
+https://spartacusdev.github.io/
+```
+
+## zSaaiq源
+
+```
+https://zsaaiq.github.io/jailbreakrepo/
+```
+
+## huami源
+
+```
+https://huami1314.github.io/devrepo/
+```
+
+## aReo源
+
+```
+https://flex2areo.github.io/
+```
+
+## 小猫源
+
+```
+https://ketty0725.github.io/repo/
+```
+
+## Alo源
+
+```
+https://alo.works/
+```
 
 ## pulandres源
 
 ```
 https://pulandres.me/repo/
 ```
-
 ## Hi客源
 
 ```
@@ -1749,10 +1821,64 @@ https://repo.anamy.gay
 https://cydia.rob311.com/repo/
 ```
 
-## alexia源
+## Luna源
 
 ```
 https://repo.alexia.lol/
+```
+
+## NiceiOS源
+
+```
+https://repo.niceios.com/
+```
+
+## NoW源
+
+```
+https://nowisdev.github.io/
+```
+
+## Randy420源
+
+```
+https://randy-420.github.io/
+```
+
+## nicho1asdev源
+
+```
+https://repo.nicho1as.dev
+```
+
+## IArrays源
+
+```
+http://apt.iarrays.com/
+```
+
+## Luki源
+
+```
+https://luki120.github.io/
+```
+
+## fiore源
+
+```
+https://donato-fiore.github.io/repo/
+```
+
+## sourcelocation源
+
+```
+https://sourcelocation.github.io/repo/
+```
+
+## DTCalabro源
+
+```
+https://dtcalabro.github.io/repo/
 ```
 
 ## MirO92源
@@ -1771,14 +1897,11 @@ http://mrmadtw.github.io/repo/
 https://repo.initnil.com/
 https://apt.initnil.com/
 https://ibreak.yourepo.com/
-https://skitty.xyz/repo/
 https://apt.iphoneba.cn/
 https://repo.cydiabc.top/
 http://apt.coolstar.xyz/
 http://ibreak.yourepo.com/
-https://repo.icrazeios.com/
 https://kanam.me/repo/
-https://apt.25mao.com/
 https://soda-ldz.yourepo.com/
 https://sileo.top/
 https://cydia.kiiimo.org/
@@ -1790,12 +1913,9 @@ https://apt.wxhbts.com/
 https://apt.cydiami.com/
 https://apt.Fcydia.com/
 http://zlxdike.github.io/repo/
-https://apt.fouadraheb.com/
 https://henrikssonbrothers.com/cydia/repo/
-http://apt.iarrays.com/
 https://kanam.me/repo/
 https://repo.openpack.io/
-https://repo.niceios.com/
 https://repo.menushka.ca/
 https://creaturesurvive.github.io/
 https://repo.anthopak.dev/
@@ -2149,14 +2269,14 @@ https://github.com/waruhachi/Jikan
 # timelefted，锁屏显示充满电剩余时间
 https://github.com/34306/timelefted
 
+# Aerial，分屏
+https://pan.quark.cn/s/b0e2c2faab73
+
 # Planetes，应用启动器
 https://pan.quark.cn/s/a93356272d02
 
 # AniTime，动漫锁屏时钟
 https://pan.quark.cn/s/0f223f211d3a
-
-# Looky，通知免提
-https://pan.quark.cn/s/74a419bdd036
 
 # Floaty，通知气泡
 https://pan.quark.cn/s/1d53c1c2cab9
@@ -2184,6 +2304,9 @@ https://pan.baidu.com/s/18Kr9bvLt6_7X2zkjJgXVxg?pwd=i2r9
 https://pan.baidu.com/s/1AHqn6osPVHSxtSuPQaabSA?pwd=6rsu
 https://www.123pan.com/s/vgn0Vv-ZThFv.html
 https://www.123pan.com/s/vgn0Vv-XchFv.html
+
+# MilkyWayReborn，分屏插件
+https://github.com/34306/MilkyWayReborn
 ```
 
 # 插件操作
@@ -3584,68 +3707,14 @@ https://mp.weixin.qq.com/s/yDhNjghIETDPS-Dbg0GqBw
 https://mp.weixin.qq.com/s/rJKZmwdbhWfUYAgiRP9pkA
 ```
 
-##
+## iPhone 分屏，免费！
 
 ```
-
+https://mp.weixin.qq.com/s/ITTktNCelTpuZ4hNAxoStw
 ```
 
-##
+## 官方源，作者源，第一期
 
 ```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
-```
-
-##
-
-```
-
+https://mp.weixin.qq.com/s/4ZP5V6J_4ZC6vR89adbLsg
 ```

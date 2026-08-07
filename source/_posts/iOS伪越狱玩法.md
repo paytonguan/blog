@@ -909,6 +909,10 @@ https://github.com/34306/FilzaJailedDS
 # SparseBox，在手机端就可以进行MobileGestalt相关操作
 # 支持iOS 26.1及以下系统，最高支持到iOS 26.2 Beta1
 https://github.com/khanhduytran0/SparseBox
+
+# AppRetro，App降级/升级工具
+# 支持iOS 17.0-18.7.1，26.0-26.0.1
+https://pan.quark.cn/s/91f5b0e5c0d6
 ```
 
 ## Trollstore专用
@@ -1894,3 +1898,80 @@ https://mp.weixin.qq.com/s/OkU2FmPElsvcHm2HZQ_iKw
 ```
 https://mp.weixin.qq.com/s/fIPers-Z5_P5N8RM4xtT4A
 ```
+
+## 降级来了，支持 26！
+
+```
+https://mp.weixin.qq.com/s/_IEhjwYxu28zVrW2YmNAUg
+```
+
+##
+
+```
+
+```
+
+
+##
+
+```
+
+```
+
+
+##
+
+```
+
+```
+
+
+##
+
+```
+
+```
+
+
+##
+
+```
+
+```
+
+
+##
+
+```
+
+```
+
+
+##
+
+```
+
+```
+
+
+##
+
+```
+
+```
+
+
+##
+
+```
+
+```
+
+
+##
+
+```
+
+```
+
+
