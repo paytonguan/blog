@@ -1565,137 +1565,34 @@ https://download.mokeedev.com/
 
 # 资料
 
-## Android内核编译
-
-```
-https://source.android.com/setup/build/building-kernels-deprecated?hl=zh-cn
-```
-
-## Android固件资源站
-
-```
-https://androidfilehost.com/
-```
-
-## Halium（GNU/Linux运行于Android硬件）
-
-```
-https://forum.renegade-project.org/t/845-windows/36
-https://forum.xda-developers.com/t/halium-9-0-halium-boot-ubports-guide.4093517/
-https://docs.halium.org/en/latest/
-https://www.jianshu.com/p/9b85dce0dcb7
-```
-
-## 其它
-
-```
-https://sspai.com/post/73603
-https://sspai.com/post/53772
-https://sspai.com/post/53075
-```
+> [Android内核编译](https://source.android.com/setup/build/building-kernels-deprecated?hl=zh-cn)  
+> [Android固件资源站](https://androidfilehost.com/)  
+> [Halium（GNU/Linux运行于Android硬件）](https://forum.renegade-project.org/t/845-windows/36)  
+> [Halium 9.0 - Ubports指南](https://forum.xda-developers.com/t/halium-9-0-halium-boot-ubports-guide.4093517/)  
+> [Halium文档](https://docs.halium.org/en/latest/)  
+> [Halium - 简书](https://www.jianshu.com/p/9b85dce0dcb7)  
+> [sspai - 73603](https://sspai.com/post/73603)  
+> [sspai - 53772](https://sspai.com/post/53772)  
+> [sspai - 53075](https://sspai.com/post/53075)  
 
 
 # 参考教程
 
-## ADB出现devices offline的解决方法
-
-```
-https://blog.csdn.net/qq_33924155/article/details/79153000
-```
-
-## Difference between Bootloader, Download and Recovery mode ?
-
-```
-https://forum.xda-developers.com/t/difference-between-bootloader-download-and-recovery-mode.3661049/
-```
-
-## LG G3 LineageOS Tutorial
-
-```
-https://linustechtips.com/topic/1058206-lg-g3-lineageos-tutorial/
-```
-
-## 一加 OnePlus 7 刷入氧 OS、TWRP、Magisk (Root)
-
-```
-https://blog.skk.moe/post/op7-oos-twrp-magisk/
-```
-
-## 适用于任何机型的自编译 TWRP Recovery 和生成设备树
-
-```
-https://www.bilibili.com/video/BV12P4y1t7ZZ/
-```
-
-## Doc: fastboot intro
-
-```
-https://web.archive.org/web/20161224194012/https://wiki.cyanogenmod.org/w/Doc:_fastboot_intro#.3Cwaiting_for_device.3E_errors
-```
-
-## Samsung tablet root process
-
-```
-https://www.jianshu.com/p/f4f62fd2c93f
-```
-
-## Recovery is not Seandroid Enforcing(Samsung A5)
-
-```
-https://android.stackexchange.com/questions/159436/recovery-is-not-seandroid-enforcingsamsung-a5s
-```
-
-## Recovery is not SEAndroid enforcing.
-
-```
-https://forum.xda-developers.com/t/recovery-is-not-seandroid-enforcing.3158482/
-```
-
-## Magisk Documentation ｜ Magisk
-
-```
-https://topjohnwu.github.io/Magisk/
-```
-
-## 三星手机获取 root 权限：使用 Magisk Manager 为 Android 8.0/9 创建 root 文件
-
-```
-https://www.cnroms.com/samsung-root-with-magisk-manager.html
-```
-
-## SELinux 宽容模式(permissive) 强制模式(enforcing) 关闭(disabled) 几种模式之间的转换
-
-```
-https://blog.csdn.net/tangsilian/article/details/80144112
-```
-
-## How to Root Samsung Galaxy J3-2017 SM-J3300 | Odin Tool
-
-```
-https://www.rootdroids.com/how-to-root-samsung-galaxy-j3-2017-sm-j3300-odin-tool/
-```
-
-## 如何讓 TWRP 正式支援你的裝置
-
-```
-https://medium.com/@shakalaca/%E5%A6%82%E4%BD%95%E8%AE%93-twrp-%E6%AD%A3%E5%BC%8F%E6%94%AF%E6%8F%B4%E4%BD%A0%E7%9A%84%E8%A3%9D%E7%BD%AE-ba942c72dfa2
-```
-
-## 常用ROM的各大官网
-
-```
-https://www.jianshu.com/p/88066f6c12b3
-```
-
-## TWRP Recovery 编译适配教程
-
-```
-https://www.twblogs.net/a/5be370f62b717720b51d82d1
-https://www.jianshu.com/p/912d61c4a184
-```
-
-## Odin and Heimdall: Free Your Samsung Android
-
-```
-https://wrily.foad.me.uk/odin-and-heimdall-free-your-samsung-android
-```
+> [ADB出现devices offline的解决方法](https://blog.csdn.net/qq_33924155/article/details/79153000)  
+> [Difference between Bootloader, Download and Recovery mode ?](https://forum.xda-developers.com/t/difference-between-bootloader-download-and-recovery-mode.3661049/)  
+> [LG G3 LineageOS Tutorial](https://linustechtips.com/topic/1058206-lg-g3-lineageos-tutorial/)  
+> [一加 OnePlus 7 刷入氧 OS、TWRP、Magisk (Root)](https://blog.skk.moe/post/op7-oos-twrp-magisk/)  
+> [适用于任何机型的自编译 TWRP Recovery 和生成设备树](https://www.bilibili.com/video/BV12P4y1t7ZZ/)  
+> [Doc: fastboot intro](https://web.archive.org/web/20161224194012/https://wiki.cyanogenmod.org/w/Doc:_fastboot_intro#.3Cwaiting_for_device.3E_errors)  
+> [Samsung tablet root process](https://www.jianshu.com/p/f4f62fd2c93f)  
+> [Recovery is not Seandroid Enforcing(Samsung A5)](https://android.stackexchange.com/questions/159436/recovery-is-not-seandroid-enforcingsamsung-a5s)  
+> [Recovery is not SEAndroid enforcing.](https://forum.xda-developers.com/t/recovery-is-not-seandroid-enforcing.3158482/)  
+> [Magisk Documentation ｜ Magisk](https://topjohnwu.github.io/Magisk/)  
+> [三星手机获取 root 权限：使用 Magisk Manager 为 Android 8.0/9 创建 root 文件](https://www.cnroms.com/samsung-root-with-magisk-manager.html)  
+> [SELinux 宽容模式(permissive) 强制模式(enforcing) 关闭(disabled) 几种模式之间的转换](https://blog.csdn.net/tangsilian/article/details/80144112)  
+> [How to Root Samsung Galaxy J3-2017 SM-J3300 | Odin Tool](https://www.rootdroids.com/how-to-root-samsung-galaxy-j3-2017-sm-j3300-odin-tool/)  
+> [如何讓 TWRP 正式支援你的裝置](https://medium.com/@shakalaca/%E5%A6%82%E4%BD%95%E8%AE%93-twrp-%E6%AD%A3%E5%BC%8F%E6%94%AF%E6%8F%B4%E4%BD%A0%E7%9A%84%E8%A3%9D%E7%BD%AE-ba942c72dfa2)  
+> [常用ROM的各大官网](https://www.jianshu.com/p/88066f6c12b3)  
+> [TWRP Recovery 编译适配教程（twblogs）](https://www.twblogs.net/a/5be370f62b717720b51d82d1)  
+> [TWRP Recovery 编译适配教程（简书）](https://www.jianshu.com/p/912d61c4a184)  
+> [Odin and Heimdall: Free Your Samsung Android](https://wrily.foad.me.uk/odin-and-heimdall-free-your-samsung-android)  

@@ -84,32 +84,8 @@ https://repo.xposed.info/module/com.gy.xposed.skip
 
 # 参考教程
 
-## Xposed下载模块89 repo.xml.gz失败的解决方法
-
-```
-https://www.52pojie.cn/forum.php?mod=viewthread&tid=1461477
-```
-
-## 教你如何简单高效的对软件(apk文件)进行修改
-
-```
-https://www.juyifx.cn/article/291723297.html?ivk_sa=1024320u
-```
-
-## daltonfury42 - Github gist
-
-```
-https://gist.githubusercontent.com/daltonfury42/c33fdfa7a44f261018a5d35dea7eb245/raw/5fc372ec0d36117fa3e7698d8de1952c1bac6b6a/platina.xml
-```
-
-## 抱歉，安卓有了Xposed真的可以为所欲为！
-
-```
-https://mp.weixin.qq.com/s/n7Rqn6e8zQyvghvSRJ61XA
-```
-
-## 安卓神器的天花板Xposed，这次真的能让你用上！
-
-```
-https://mp.weixin.qq.com/s/V7mK6ahKN8rLOkvHExUpCA
-```
+> [Xposed下载模块89 repo.xml.gz失败的解决方法](https://www.52pojie.cn/forum.php?mod=viewthread&tid=1461477)  
+> [教你如何简单高效的对软件(apk文件)进行修改](https://www.juyifx.cn/article/291723297.html?ivk_sa=1024320u)  
+> [daltonfury42 - Github gist](https://gist.githubusercontent.com/daltonfury42/c33fdfa7a44f261018a5d35dea7eb245/raw/5fc372ec0d36117fa3e7698d8de1952c1bac6b6a/platina.xml)  
+> [抱歉，安卓有了Xposed真的可以为所欲为！](https://mp.weixin.qq.com/s/n7Rqn6e8zQyvghvSRJ61XA)  
+> [安卓神器的天花板Xposed，这次真的能让你用上！](https://mp.weixin.qq.com/s/V7mK6ahKN8rLOkvHExUpCA)  

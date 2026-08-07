@@ -191,7 +191,9 @@ termux-chroot
 startdebian
 ```
 
-#### 环境配置
+#### Debian环境配置
+
+以下是 atilo 安装的 Debian 系统内的环境配置。
 
 ##### JAVA
 
@@ -219,18 +221,24 @@ trusted-host=pypi.douban.com
 
 ## 环境配置
 
-### Java
+### Termux本机
 
-若未安装完整Linux，可通过以下命令。
+以下为 Termux 本机（无需安装完整Linux）的环境配置。
+
+#### Java
 
 ```
 pkg install ecj
 pkg install dx
 ```
 
-### Fortran
+### 完整Linux内
 
-需要安装完整Linux。输入以下命令以修改软件源。
+以下环境配置需要在完整Linux中完成。
+
+#### Fortran
+
+输入以下命令以修改软件源。
 
 ```
 vim $PREFIX/etc/apt/sources.list
@@ -266,9 +274,9 @@ gfortran-8 -v
 gcc-8 -v
 ```
 
-### OpenCL
+#### OpenCL
 
-需要安装完整Linux。运行以下命令以安装编译器。
+运行以下命令以安装编译器。
 
 ```
 apt install clang
@@ -321,9 +329,9 @@ add_executable (testopencldemo ${DIR_SRCS})
 target_link_libraries (testopencldemo ${HELLO_SRC})
 ```
 
-### Jupyter
+#### Jupyter
 
-需要安装完整Linux。通过以下命令安装。
+通过以下命令安装。
 
 ```
 pip3 install numpy
@@ -379,9 +387,7 @@ jupyter contrib nbextension install --user
 pip3 install jupyter_nbextensions_configurator
 ```
 
-### VS Code
-
-需要安装完整Linux。
+#### VS Code
 
 输入以下命令安装node、npm和cnpm。
 
@@ -514,62 +520,13 @@ jupyter kernelspec list
 
 # 参考教程
 
-## 极致安卓之—Termux安装完整版Linux
-
-```
-https://zhuanlan.zhihu.com/p/95865982
-```
-
-## 把安卓手机性能发挥到极致之-Termux
-
-```
-https://zhuanlan.zhihu.com/p/92664273
-```
-
-## 把安卓手机性能发挥到极致之-Aid Learning运行Java及性能测试
-
-```
-https://zhuanlan.zhihu.com/p/92489740
-```
-
-## 把安卓手机性能发挥到极致之-Termux安装Python及Jupyter
-
-```
-https://zhuanlan.zhihu.com/p/94203587
-```
-
-## 安卓手机C/C++开发平台
-
-```
-https://zhuanlan.zhihu.com/p/97882309
-```
-
-## 把安卓手机性能发挥到极致之-Termux/Aid Learning使用Fortran
-
-```
-https://zhuanlan.zhihu.com/p/92280533
-```
-
-## 极致安卓之—Aid Learning基于Jupyter开发Java和Python
-
-```
-https://zhuanlan.zhihu.com/p/101147592
-```
-
-## 把安卓手机性能发挥到极致之-Termux运行Java及性能测试
-
-```
-https://zhuanlan.zhihu.com/p/92471681
-```
-
-## Termux安装Node.JS及网页版文档查看与修改器wcode
-
-```
-https://zhuanlan.zhihu.com/p/106298311
-```
-
-## 极致安卓—Termux/Aid Learning安装宇宙最强VS Code
-
-```
-https://zhuanlan.zhihu.com/p/106593146
-```
+> [极致安卓之—Termux安装完整版Linux](https://zhuanlan.zhihu.com/p/95865982)  
+> [把安卓手机性能发挥到极致之-Termux](https://zhuanlan.zhihu.com/p/92664273)  
+> [把安卓手机性能发挥到极致之-Aid Learning运行Java及性能测试](https://zhuanlan.zhihu.com/p/92489740)  
+> [把安卓手机性能发挥到极致之-Termux安装Python及Jupyter](https://zhuanlan.zhihu.com/p/94203587)  
+> [安卓手机C/C++开发平台](https://zhuanlan.zhihu.com/p/97882309)  
+> [把安卓手机性能发挥到极致之-Termux/Aid Learning使用Fortran](https://zhuanlan.zhihu.com/p/92280533)  
+> [极致安卓之—Aid Learning基于Jupyter开发Java和Python](https://zhuanlan.zhihu.com/p/101147592)  
+> [把安卓手机性能发挥到极致之-Termux运行Java及性能测试](https://zhuanlan.zhihu.com/p/92471681)  
+> [Termux安装Node.JS及网页版文档查看与修改器wcode](https://zhuanlan.zhihu.com/p/106298311)  
+> [极致安卓—Termux/Aid Learning安装宇宙最强VS Code](https://zhuanlan.zhihu.com/p/106593146)  

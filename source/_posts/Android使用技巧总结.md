@@ -229,20 +229,6 @@ https://www.apkmirror.com/apk/google-inc/camera/camera-4-2-035-141213305-release
 
 # 参考教程
 
-## 自动微信好友检测、收能量、签到打卡，不过是这款APP的冰山一角！
-
-```
-https://mp.weixin.qq.com/s/nX9oY6abpKLVk1IA_r8G2g
-```
-
-## 一个APP安全实现微信防撤回，iOS也行？这也太强了吧！
-
-```
-https://mp.weixin.qq.com/s/w1oxB0BnhQkyhI1tW_2f6g
-```
-
-## 大厂出品却冷门10年，免翻不限速下载国际版APP的绝佳选择！
-
-```
-https://mp.weixin.qq.com/s/8xc2uRZP2EboZz3wnR74Zw
-```
+> [自动微信好友检测、收能量、签到打卡，不过是这款APP的冰山一角！](https://mp.weixin.qq.com/s/nX9oY6abpKLVk1IA_r8G2g)  
+> [一个APP安全实现微信防撤回，iOS也行？这也太强了吧！](https://mp.weixin.qq.com/s/w1oxB0BnhQkyhI1tW_2f6g)  
+> [大厂出品却冷门10年，免翻不限速下载国际版APP的绝佳选择！](https://mp.weixin.qq.com/s/8xc2uRZP2EboZz3wnR74Zw)  
