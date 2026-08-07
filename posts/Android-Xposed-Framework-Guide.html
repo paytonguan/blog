@@ -22,14 +22,14 @@
 
   <meta name="description" content="Xposed 框架的安装与模块使用。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android Xposed框架指南">
+<meta property="og:title" content="Android Xposed 框架指南">
 <meta property="og:url" content="https://paytonguan.github.io/blog/posts/Android-Xposed-Framework-Guide.html">
 <meta property="og:site_name" content="Payton&#39;s blog">
 <meta property="og:description" content="Xposed 框架的安装与模块使用。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://paytonguan.github.io/blog/topic.jpg">
-<meta property="article:published_time" content="2020-04-22T14:54:29.000Z">
-<meta property="article:modified_time" content="2026-08-07T15:49:28.643Z">
+<meta property="article:published_time" content="2020-06-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-08-07T16:55:35.665Z">
 <meta property="article:author" content="Payton">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://paytonguan.github.io/blog/topic.jpg">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>Android Xposed框架指南 | Payton's blog</title>
+  <title>Android Xposed 框架指南 | Payton's blog</title>
   
 
 
@@ -195,7 +195,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Android Xposed框架指南
+          Android Xposed 框架指南
         </h1>
 
         <div class="post-meta">
@@ -205,14 +205,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-04-22 22:54:29" itemprop="dateCreated datePublished" datetime="2020-04-22T22:54:29+08:00">2020-04-22</time>
+              <time title="创建时间：2020-06-02 00:00:00" itemprop="dateCreated datePublished" datetime="2020-06-02T00:00:00+08:00">2020-06-02</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2026-08-07 23:49:28" itemprop="dateModified" datetime="2026-08-07T23:49:28+08:00">2026-08-07</time>
+                <time title="修改时间：2026-08-08 00:55:35" itemprop="dateModified" datetime="2026-08-08T00:55:35+08:00">2026-08-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -253,28 +253,28 @@
 <p>Xposed 框架的安装与模块使用。</p>
 <span id="more"></span>
 
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="已ROOT方法"><a href="#已ROOT方法" class="headerlink" title="已ROOT方法"></a>已ROOT方法</h2><p>Xposed Installer下载链接如下。注意资源需要翻墙才能下载。</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="已-ROOT-方法"><a href="#已-ROOT-方法" class="headerlink" title="已 ROOT 方法"></a>已 ROOT 方法</h2><p>Xposed Installer 下载链接如下。注意资源需要翻墙才能下载。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://forum.xda-developers.com/t/official-xposed-for-lollipop-marshmallow-nougat-oreo-v90-beta3-2018-01-29.3034811/</span><br></pre></td></tr></table></figure>
 
-<p>由于APP资源地址由http更改为https，而Xposed Installer中并未更改，因此安装后会出现<code>could not load available zip files</code>错误，刷新下载页面时会出现<code>下载http://dl.xposed.info/repo.xml.gz时出错</code>的提示。这需要在安装前修改APP包的资源地址解决。</p>
-<p>打开MT文件管理器，选择Xposed Installer的APK安装包，点击查看。选择classes.dex，用Arsc编辑器打开，在字符串页面搜索<code>http</code>，将所有搜索结果的<code>http://</code>都改为<code>https://</code>，保存并退出编辑器。选择刚才修改好的APK，点击自动签名，完成后点击安装即可。</p>
-<p>若仍出现<code>could not load available zip files</code>错误，可提前下载Xposed的SDK包，然后放置到Android&#x2F;data&#x2F;de.robv.android.xposed.installer&#x2F;cache&#x2F;downloads&#x2F;framework下，手机对应的SDK版本可在Xposed Installer主界面看到。下载链接如下。</p>
+<p>由于 APP 资源地址由 http 更改为 https，而 Xposed Installer 中并未更改，因此安装后会出现<code>could not load available zip files</code>错误，刷新下载页面时会出现<code>下载http://dl.xposed.info/repo.xml.gz时出错</code>的提示。这需要在安装前修改 APP 包的资源地址解决。</p>
+<p>打开 MT 文件管理器，选择 Xposed Installer 的 APK 安装包，点击查看。选择 classes.dex，用 Arsc 编辑器打开，在字符串页面搜索<code>http</code>，将所有搜索结果的<code>http://</code>都改为<code>https://</code>，保存并退出编辑器。选择刚才修改好的 APK，点击自动签名，完成后点击安装即可。</p>
+<p>若仍出现<code>could not load available zip files</code>错误，可提前下载 Xposed 的 SDK 包，然后放置到 Android&#x2F;data&#x2F;de.robv.android.xposed.installer&#x2F;cache&#x2F;downloads&#x2F;framework 下，手机对应的 SDK 版本可在 Xposed Installer 主界面看到。下载链接如下。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://dl-xda.xposed.info/framework/</span><br></pre></td></tr></table></figure>
 
-<p>如果仍未出现，需要点击右上角的横杠符号，勾选Show outdated version，才会出现Xposed版本。</p>
-<p>找到下载包后，点击云朵符号，选择Install即可。</p>
-<h2 id="免ROOT方法"><a href="#免ROOT方法" class="headerlink" title="免ROOT方法"></a>免ROOT方法</h2><p>可使用模拟框架。</p>
+<p>如果仍未出现，需要点击右上角的横杠符号，勾选 Show outdated version，才会出现 Xposed 版本。</p>
+<p>找到下载包后，点击云朵符号，选择 Install 即可。</p>
+<h2 id="免-ROOT-方法"><a href="#免-ROOT-方法" class="headerlink" title="免 ROOT 方法"></a>免 ROOT 方法</h2><p>可使用模拟框架。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 太极</span><br><span class="line">https://taichi.cool/zh/download.html</span><br><span class="line"></span><br><span class="line"># Virtual Xposed</span><br><span class="line">https://vxposed.com/</span><br><span class="line"></span><br><span class="line"># 应用转生</span><br><span class="line">https://lanzoui.com/b05xrjlbc</span><br></pre></td></tr></table></figure>
 
-<p>也可使用虚拟机VMOS Pro，打开并安装一个支持Xposed的安卓ROM，然后点击系统-设置，打开Xposed即可。</p>
-<p>也可使用将Xposed模块嵌入APP的方式。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># LSPatch</span><br><span class="line"># 得到的APP已经嵌入模块，直接使用即可</span><br><span class="line">https://github.com/LSPosed/LSPatch</span><br><span class="line"></span><br><span class="line"># Xpatch</span><br><span class="line"># 需要安装得到的APP和Xposed模块</span><br><span class="line">https://github.com/WindySha/Xpatch</span><br></pre></td></tr></table></figure>
+<p>也可使用虚拟机 VMOS Pro，打开并安装一个支持 Xposed 的安卓 ROM，然后点击系统-设置，打开 Xposed 即可。</p>
+<p>也可使用将 Xposed 模块嵌入 APP 的方式。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># LSPatch</span><br><span class="line"># 得到的 APP 已经嵌入模块，直接使用即可</span><br><span class="line">https://github.com/LSPosed/LSPatch</span><br><span class="line"></span><br><span class="line"># Xpatch</span><br><span class="line"># 需要安装得到的 APP 和 Xposed 模块</span><br><span class="line">https://github.com/WindySha/Xpatch</span><br></pre></td></tr></table></figure>
 
 <h1 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h1><p>在下载页面即可下载模块。也可通过以下网站下载。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://repo.xposed.info/module-overview</span><br></pre></td></tr></table></figure>
 
 <p>一些模块如下。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 去广告</span><br><span class="line">https://repo.xposed.info/module/tw.fatminmin.xposed.minminguard</span><br><span class="line">https://www.coolapk.com/apk/com.dahuo.sunflower.xp.none </span><br><span class="line">https://repo.xposed.info/module/com.gy.xposed.skip</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 去广告</span><br><span class="line">https://repo.xposed.info/module/tw.fatminmin.xposed.minminguard</span><br><span class="line">https://www.coolapk.com/apk/com.dahuo.sunflower.xp.none</span><br><span class="line">https://repo.xposed.info/module/com.gy.xposed.skip</span><br></pre></td></tr></table></figure>
 
 <h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><blockquote>
 <p><a target="_blank" rel="noopener" href="https://www.52pojie.cn/forum.php?mod=viewthread&tid=1461477">Xposed下载模块89 repo.xml.gz失败的解决方法</a><br><a target="_blank" rel="noopener" href="https://www.juyifx.cn/article/291723297.html?ivk_sa=1024320u">教你如何简单高效的对软件(apk文件)进行修改</a><br><a target="_blank" rel="noopener" href="https://gist.githubusercontent.com/daltonfury42/c33fdfa7a44f261018a5d35dea7eb245/raw/5fc372ec0d36117fa3e7698d8de1952c1bac6b6a/platina.xml">daltonfury42 - Github gist</a><br><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/n7Rqn6e8zQyvghvSRJ61XA">抱歉，安卓有了Xposed真的可以为所欲为！</a><br><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/V7mK6ahKN8rLOkvHExUpCA">安卓神器的天花板Xposed，这次真的能让你用上！</a>  </p>
@@ -294,12 +294,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/posts/Android-Terminal-Guide.html" rel="prev" title="Android终端使用指南">
-      <i class="fa fa-chevron-left"></i> Android终端使用指南
+    <a href="/blog/posts/Android-VM-Guide.html" rel="prev" title="Android 虚拟机运行指南">
+      <i class="fa fa-chevron-left"></i> Android 虚拟机运行指南
     </a></div>
       <div class="post-nav-item">
-    <a href="/blog/posts/Android-Skills.html" rel="next" title="Android使用技巧总结">
-      Android使用技巧总结 <i class="fa fa-chevron-right"></i>
+    <a href="/blog/posts/Android-Terminal-Guide.html" rel="next" title="Android 终端使用指南">
+      Android 终端使用指南 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -359,7 +359,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%B2ROOT%E6%96%B9%E6%B3%95"><span class="nav-text">已ROOT方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%8DROOT%E6%96%B9%E6%B3%95"><span class="nav-text">免ROOT方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97"><span class="nav-text">模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%B2-ROOT-%E6%96%B9%E6%B3%95"><span class="nav-text">已 ROOT 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%8D-ROOT-%E6%96%B9%E6%B3%95"><span class="nav-text">免 ROOT 方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97"><span class="nav-text">模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

@@ -22,14 +22,14 @@
 
   <meta name="description" content="在 Android 上使用 Termux 及 Aid Learning 终端工具。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android终端使用指南">
+<meta property="og:title" content="Android 终端使用指南">
 <meta property="og:url" content="https://paytonguan.github.io/blog/posts/Android-Terminal-Guide.html">
 <meta property="og:site_name" content="Payton&#39;s blog">
 <meta property="og:description" content="在 Android 上使用 Termux 及 Aid Learning 终端工具。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://paytonguan.github.io/blog/topic.jpg">
-<meta property="article:published_time" content="2020-04-22T14:54:29.000Z">
-<meta property="article:modified_time" content="2026-08-07T15:48:07.026Z">
+<meta property="article:published_time" content="2020-06-02T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-08-07T16:55:32.044Z">
 <meta property="article:author" content="Payton">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://paytonguan.github.io/blog/topic.jpg">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>Android终端使用指南 | Payton's blog</title>
+  <title>Android 终端使用指南 | Payton's blog</title>
   
 
 
@@ -195,7 +195,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Android终端使用指南
+          Android 终端使用指南
         </h1>
 
         <div class="post-meta">
@@ -205,14 +205,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-04-22 22:54:29" itemprop="dateCreated datePublished" datetime="2020-04-22T22:54:29+08:00">2020-04-22</time>
+              <time title="创建时间：2020-06-03 00:00:00" itemprop="dateCreated datePublished" datetime="2020-06-03T00:00:00+08:00">2020-06-03</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2026-08-07 23:48:07" itemprop="dateModified" datetime="2026-08-07T23:48:07+08:00">2026-08-07</time>
+                <time title="修改时间：2026-08-08 00:55:32" itemprop="dateModified" datetime="2026-08-08T00:55:32+08:00">2026-08-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -230,7 +230,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>5.8k</span>
+              <span>5.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -253,7 +253,7 @@
 <p>在 Android 上使用 Termux 及 Aid Learning 终端工具。</p>
 <span id="more"></span>
 
-<h1 id="Termux"><a href="#Termux" class="headerlink" title="Termux"></a>Termux</h1><p>无需 root，打开即可在 Android 上运行 Linux。</p>
+<h1 id="Termux"><a href="#Termux" class="headerlink" title="Termux"></a>Termux</h1><p>无需 Root 权限，打开即可在 Android 上运行 Linux。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/termux/termux-app</span><br></pre></td></tr></table></figure>
 
 <h2 id="更换软件源"><a href="#更换软件源" class="headerlink" title="更换软件源"></a>更换软件源</h2><p>输入以下命令以打开配置文件。</p>
@@ -265,14 +265,14 @@
 <p>运行以下命令完成更新。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pkg update</span><br><span class="line">pkg upgrade</span><br></pre></td></tr></table></figure>
 
-<h2 id="SSH连接"><a href="#SSH连接" class="headerlink" title="SSH连接"></a>SSH连接</h2><p>输入以下命令。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// 安装SSH服务</span><br><span class="line">pkg install openssh</span><br><span class="line"></span><br><span class="line">// 设置密码</span><br><span class="line">passwd</span><br><span class="line"></span><br><span class="line">// 查询手机IP</span><br><span class="line">ifconfig</span><br><span class="line"></span><br><span class="line">// 查询当前用户</span><br><span class="line">whoami</span><br><span class="line"></span><br><span class="line">// 开启SSH</span><br><span class="line">sshd -p 9000</span><br><span class="line"></span><br><span class="line">// 确认SSH服务的监听端口</span><br><span class="line">netstat -ntlp | grep sshd</span><br></pre></td></tr></table></figure>
+<h2 id="SSH-连接"><a href="#SSH-连接" class="headerlink" title="SSH 连接"></a>SSH 连接</h2><p>输入以下命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># 安装 SSH 服务</span><br><span class="line">pkg install openssh</span><br><span class="line"></span><br><span class="line"># 设置密码</span><br><span class="line">passwd</span><br><span class="line"></span><br><span class="line"># 查询手机 IP</span><br><span class="line">ifconfig</span><br><span class="line"></span><br><span class="line"># 查询当前用户</span><br><span class="line">whoami</span><br><span class="line"></span><br><span class="line"># 开启 SSH</span><br><span class="line">sshd -p 9000</span><br><span class="line"></span><br><span class="line"># 确认 SSH 服务的监听端口</span><br><span class="line">netstat -ntlp | grep sshd</span><br></pre></td></tr></table></figure>
 
 <p>完成后即可根据信息进行连接。</p>
-<h2 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h2><p>SD卡目录的文件不具有可执行权限，需要拷贝到系统的&#x2F;home文件夹并修改权限才可运行，示例如下。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cp Demo /home/Demo</span><br><span class="line">cd /home</span><br><span class="line">chmod 777 Demo</span><br><span class="line"></span><br><span class="line">// 运行</span><br><span class="line">./Demo</span><br></pre></td></tr></table></figure>
+<h2 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h2><p>SD 卡目录的文件不具有可执行权限，需要拷贝到系统的 &#x2F;home 文件夹并修改权限才可运行，示例如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cp Demo /home/Demo</span><br><span class="line">cd /home</span><br><span class="line">chmod 777 Demo</span><br><span class="line"></span><br><span class="line"># 运行</span><br><span class="line">./Demo</span><br></pre></td></tr></table></figure>
 
-<h2 id="优化终端"><a href="#优化终端" class="headerlink" title="优化终端"></a>优化终端</h2><p>可用zsh代替bash作为默认shell。通过以下命令即可。</p>
+<h2 id="优化终端"><a href="#优化终端" class="headerlink" title="优化终端"></a>优化终端</h2><p>可用 zsh 代替 bash 作为默认 shell。通过以下命令即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c &quot;$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)&quot;</span><br></pre></td></tr></table></figure>
 
 <p>可通过修改以下文件更改配色。</p>
@@ -281,48 +281,49 @@
 <h2 id="软件库"><a href="#软件库" class="headerlink" title="软件库"></a>软件库</h2><h3 id="waifu2x"><a href="#waifu2x" class="headerlink" title="waifu2x"></a>waifu2x</h3><p>用于图片放大。下载并直接运行即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/tanyiok1234/waifu2x_srmd-ncnn-vulkan-termux-binary</span><br></pre></td></tr></table></figure>
 
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="访问SD卡目录"><a href="#访问SD卡目录" class="headerlink" title="访问SD卡目录"></a>访问SD卡目录</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">termux-setup-storage</span><br></pre></td></tr></table></figure>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="访问-SD-卡目录"><a href="#访问-SD-卡目录" class="headerlink" title="访问 SD 卡目录"></a>访问 SD 卡目录</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">termux-setup-storage</span><br></pre></td></tr></table></figure>
 
-<h2 id="完整Linux"><a href="#完整Linux" class="headerlink" title="完整Linux"></a>完整Linux</h2><p>Termux不是完整Linux，但可配合其它APP实现完整Linux的安装。</p>
-<h3 id="通过AnLinux"><a href="#通过AnLinux" class="headerlink" title="通过AnLinux"></a>通过AnLinux</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>安装AnLinux后打开，选择需要安装的Linux发行版。复制指令并在Termux的终端中运行即可。以Debian为例，完成后在Termux可通过以下指令启动系统。</p>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>以下为 Termux 本机（无需安装完整 Linux）的环境配置。</p>
+<h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pkg install ecj</span><br><span class="line">pkg install dx</span><br></pre></td></tr></table></figure>
+
+<h2 id="完整-Linux"><a href="#完整-Linux" class="headerlink" title="完整 Linux"></a>完整 Linux</h2><p>Termux 不是完整 Linux，但可配合其它 App 实现完整 Linux 的安装。</p>
+<h3 id="通过-AnLinux"><a href="#通过-AnLinux" class="headerlink" title="通过 AnLinux"></a>通过 AnLinux</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>安装 AnLinux 后打开，选择需要安装的 Linux 发行版。复制指令并在 Termux 的终端中运行即可。以 Debian 为例，完成后在 Termux 可通过以下指令启动系统。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./start-debian.sh</span><br></pre></td></tr></table></figure>
 
 <p>修改以上脚本，将以下行的注释取消即可访问手机自身的存储文件系统。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command+=&quot; -b /sdcard&quot;</span><br></pre></td></tr></table></figure>
 
-<h4 id="桌面环境配置"><a href="#桌面环境配置" class="headerlink" title="桌面环境配置"></a>桌面环境配置</h4><p>安装前需先启动系统。在AnLinux中按照步骤操作即可。</p>
-<p>完成安装后需要安装VNC Viewer，然后在Termux中运行以下命令以开启VNC。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vncserver-start</span><br><span class="line"></span><br><span class="line">// 若出现错误，需要先输入以下指令停止VNC</span><br><span class="line">vncserver-stop</span><br></pre></td></tr></table></figure>
+<h4 id="桌面环境配置"><a href="#桌面环境配置" class="headerlink" title="桌面环境配置"></a>桌面环境配置</h4><p>安装前需先启动系统。在 AnLinux 中按照步骤操作即可。</p>
+<p>完成安装后需要安装 VNC Viewer，然后在 Termux 中运行以下命令以开启 VNC。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vncserver-start</span><br><span class="line"></span><br><span class="line"># 若出现错误，需要先输入以下指令停止 VNC</span><br><span class="line">vncserver-stop</span><br></pre></td></tr></table></figure>
 
-<p>复制输出的地址到VNC Viewer，此处以<code>localhost:1</code>为例，密码为开启VNC时所设置的密码。完成后连接即可。</p>
-<h3 id="通过atilo"><a href="#通过atilo" class="headerlink" title="通过atilo"></a>通过atilo</h3><h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><p>输入以下命令。</p>
+<p>复制输出的地址到 VNC Viewer，此处以<code>localhost:1</code>为例，密码为开启 VNC 时所设置的密码。完成后连接即可。</p>
+<h3 id="通过-atilo"><a href="#通过-atilo" class="headerlink" title="通过 atilo"></a>通过 atilo</h3><h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><p>输入以下命令。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pkg install proot</span><br><span class="line">termux-chroot</span><br><span class="line">echo &quot;deb [trusted=yes] https://yadominjinta.github.io/files/ termux extras&quot; &gt;&gt; $PREFIX/etc/apt/sources.list</span><br><span class="line">pkg in atilo-cn</span><br></pre></td></tr></table></figure>
 
 <p>通过以下命令查看能够安装的版本。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">atilo list</span><br></pre></td></tr></table></figure>
 
-<p>以安装Debian为例，命令如下。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 安装</span><br><span class="line">atilo install debian</span><br><span class="line"></span><br><span class="line">// 卸载</span><br><span class="line">atilo remove debian</span><br></pre></td></tr></table></figure>
+<p>以安装 Debian 为例，命令如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">atilo install debian</span><br><span class="line"></span><br><span class="line"># 卸载</span><br><span class="line">atilo remove debian</span><br></pre></td></tr></table></figure>
 
-<p>注意，如果下载失败，需要先通过以下命令在手机的tmp目录中删除安装包，否则该脚本会直接跳过下载。</p>
+<p>注意，如果下载失败，需要先通过以下命令在手机的 tmp 目录中删除安装包，否则该脚本会直接跳过下载。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.atilo</span><br><span class="line">ls</span><br><span class="line">rm -r tmp</span><br></pre></td></tr></table></figure>
 
 <p>完成安装后运行以下命令启动系统。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">termux-chroot</span><br><span class="line">startdebian</span><br></pre></td></tr></table></figure>
 
-<h4 id="Debian环境配置"><a href="#Debian环境配置" class="headerlink" title="Debian环境配置"></a>Debian环境配置</h4><p>以下是 atilo 安装的 Debian 系统内的环境配置。</p>
-<h5 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt search openjdk</span><br><span class="line">apt install default-jdk</span><br></pre></td></tr></table></figure>
+<h4 id="Debian-环境配置"><a href="#Debian-环境配置" class="headerlink" title="Debian 环境配置"></a>Debian 环境配置</h4><p>以下是 atilo 安装的 Debian 系统内的环境配置。</p>
+<p>安装 Java：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt search openjdk</span><br><span class="line">apt install default-jdk</span><br></pre></td></tr></table></figure>
 
-<h5 id="python"><a href="#python" class="headerlink" title="python"></a>python</h5><p>通过以下命令安装。</p>
+<p>安装 Python：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install python3 python3-pip</span><br></pre></td></tr></table></figure>
 
-<p>打开~&#x2F;.pip&#x2F;pip.conf，修改为以下内容以更换pip的软件源。</p>
+<p>更换 pip 软件源：打开 ~&#x2F;.pip&#x2F;pip.conf，修改为以下内容。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url =http://pypi.douban.com/simple  </span><br><span class="line">[install]</span><br><span class="line">trusted-host=pypi.douban.com</span><br></pre></td></tr></table></figure>
 
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="Termux本机"><a href="#Termux本机" class="headerlink" title="Termux本机"></a>Termux本机</h3><p>以下为 Termux 本机（无需安装完整Linux）的环境配置。</p>
-<h4 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pkg install ecj</span><br><span class="line">pkg install dx</span><br></pre></td></tr></table></figure>
-
-<h3 id="完整Linux内"><a href="#完整Linux内" class="headerlink" title="完整Linux内"></a>完整Linux内</h3><p>以下环境配置需要在完整Linux中完成。</p>
+<h3 id="完整-Linux-内环境配置"><a href="#完整-Linux-内环境配置" class="headerlink" title="完整 Linux 内环境配置"></a>完整 Linux 内环境配置</h3><p>以下环境配置需要在完整 Linux 中完成。</p>
 <h4 id="Fortran"><a href="#Fortran" class="headerlink" title="Fortran"></a>Fortran</h4><p>输入以下命令以修改软件源。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim $PREFIX/etc/apt/sources.list</span><br></pre></td></tr></table></figure>
 
@@ -335,7 +336,7 @@
 <p>通过以下命令检查版本号，选择两者均有的版本。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt search gcc</span><br><span class="line">apt search gfortran</span><br></pre></td></tr></table></figure>
 
-<p>以gcc-8为例，安装及检验命令如下。</p>
+<p>以 gcc-8 为例，安装及检验命令如下。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt install gcc-8</span><br><span class="line">gfortran-8 -v</span><br><span class="line">gcc-8 -v</span><br></pre></td></tr></table></figure>
 
 <h4 id="OpenCL"><a href="#OpenCL" class="headerlink" title="OpenCL"></a>OpenCL</h4><p>运行以下命令以安装编译器。</p>
@@ -347,8 +348,8 @@
 <p>寻找手机中名称类似<code>libOpenCL.so</code>的文件，复制到主程序目录。主程序目录结构如下。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">├── CL</span><br><span class="line">│   ├── libOpenCL.so</span><br><span class="line">│   └── [头文件]</span><br><span class="line">├── CMakeLists.txt</span><br><span class="line">├── [cl核文件，以HelloWorld.cl为例]</span><br><span class="line">└── [主程序，以test.cpp为例]</span><br></pre></td></tr></table></figure>
 
-<p>CMakeLists.txt按照以下格式填写，通过cmake和make即可生成相应文件。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># CMake 最低版本号要求</span><br><span class="line">cmake_minimum_required (VERSION 2.8.11)</span><br><span class="line"> </span><br><span class="line"># 项目信息</span><br><span class="line">project (Test)</span><br><span class="line"> </span><br><span class="line">set(CMAKE_INCLUDE_CURRENT_DIR ON)</span><br><span class="line"> </span><br><span class="line">include_directories (&quot;$&#123;PROJECT_SOURCE_DIR&#125;/CL&quot;) </span><br><span class="line"> </span><br><span class="line"># 查找当前目录下的所有源文件</span><br><span class="line"># 并将名称保存到 DIR_SRCS 变量</span><br><span class="line">aux_source_directory(. DIR_SRCS)</span><br><span class="line"> </span><br><span class="line">#首先申明动态库的位置</span><br><span class="line">LINK_DIRECTORIES(&quot;$&#123;PROJECT_SOURCE_DIR&#125;&quot;)</span><br><span class="line"> </span><br><span class="line">SET(HELLO_SRC libOpenCL.so )</span><br><span class="line"> </span><br><span class="line"># 指定生成目标</span><br><span class="line">add_executable (testopencldemo $&#123;DIR_SRCS&#125;)</span><br><span class="line"> </span><br><span class="line">#制定具体的动态库的名称 </span><br><span class="line">target_link_libraries (testopencldemo $&#123;HELLO_SRC&#125;)</span><br></pre></td></tr></table></figure>
+<p>CMakeLists.txt 按照以下格式填写，通过 cmake 和 make 即可生成相应文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># CMake 最低版本号要求</span><br><span class="line">cmake_minimum_required (VERSION 2.8.11)</span><br><span class="line"></span><br><span class="line"># 项目信息</span><br><span class="line">project (Test)</span><br><span class="line"></span><br><span class="line">set(CMAKE_INCLUDE_CURRENT_DIR ON)</span><br><span class="line"></span><br><span class="line">include_directories (&quot;$&#123;PROJECT_SOURCE_DIR&#125;/CL&quot;)</span><br><span class="line"></span><br><span class="line"># 查找当前目录下的所有源文件</span><br><span class="line"># 并将名称保存到 DIR_SRCS 变量</span><br><span class="line">aux_source_directory(. DIR_SRCS)</span><br><span class="line"></span><br><span class="line"># 首先声明动态库的位置</span><br><span class="line">LINK_DIRECTORIES(&quot;$&#123;PROJECT_SOURCE_DIR&#125;&quot;)</span><br><span class="line"></span><br><span class="line">SET(HELLO_SRC libOpenCL.so )</span><br><span class="line"></span><br><span class="line"># 指定生成目标</span><br><span class="line">add_executable (testopencldemo $&#123;DIR_SRCS&#125;)</span><br><span class="line"></span><br><span class="line"># 指定具体的动态库的名称</span><br><span class="line">target_link_libraries (testopencldemo $&#123;HELLO_SRC&#125;)</span><br></pre></td></tr></table></figure>
 
 <h4 id="Jupyter"><a href="#Jupyter" class="headerlink" title="Jupyter"></a>Jupyter</h4><p>通过以下命令安装。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pip3 install numpy</span><br><span class="line">pip3 install pandas</span><br><span class="line">apt install libzmq</span><br><span class="line">pip3 install jupyter</span><br><span class="line">apt install freetype libpng pkg-config</span><br><span class="line">pip3 install matplotlib</span><br></pre></td></tr></table></figure>
@@ -356,65 +357,65 @@
 <p>完成安装后通过以下指令启动。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
 
-<p>可通过配置文件，避免输入<code>http://localhost:8888/</code>后面的一串密匙。</p>
-<p>运行以下命令以生成配置文件和密匙。</p>
+<p>可通过配置文件，避免输入<code>http://localhost:8888/</code>后面的一串密钥。</p>
+<p>运行以下命令以生成配置文件和密钥。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br><span class="line">ipython</span><br><span class="line">from notebook.auth import passwd</span><br><span class="line">passwd()</span><br></pre></td></tr></table></figure>
 
-<p>完成密码输入后复制所得内容，修改data&#x2F;data&#x2F;com.termux&#x2F;files&#x2F;home&#x2F;.jupyter目录下的jupyter_notebook_config.py，如下。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c.NotebookApp.password = &#x27;sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed&#x27; # 修改为前面所得的内容</span><br><span class="line">c.NotebookApp.ip = &#x27;*&#x27; # 允许任何ip访问</span><br><span class="line">c.NotebookApp.open_browser = False</span><br><span class="line">c.NotebookApp.port = 8888 # 可自行指定端口，访问时使用</span><br></pre></td></tr></table></figure>
+<p>完成密码输入后复制所得内容，修改 data&#x2F;data&#x2F;com.termux&#x2F;files&#x2F;home&#x2F;.jupyter 目录下的 jupyter_notebook_config.py，如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c.NotebookApp.password = &#x27;sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed&#x27; # 修改为前面所得的内容</span><br><span class="line">c.NotebookApp.ip = &#x27;*&#x27; # 允许任何 IP 访问</span><br><span class="line">c.NotebookApp.open_browser = False</span><br><span class="line">c.NotebookApp.port = 8888 # 可自行指定端口，访问时使用</span><br></pre></td></tr></table></figure>
 
 <p>完成后保存，启动后即可直接通过以下网站访问。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:8888/</span><br><span class="line"></span><br><span class="line">// 电脑端利用SSH登录手机后可输入以下网站</span><br><span class="line">[手机IP地址].8888</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:8888/</span><br><span class="line"></span><br><span class="line"># 电脑端利用 SSH 登录手机后可输入以下网站</span><br><span class="line">[手机IP地址]:8888</span><br></pre></td></tr></table></figure>
 
-<p>可运行以下命令以安装python扩展包，使编写python时有提示符。安装完成后在Jupyter notebook中出现Nbextensions，选择Hinterland即可。</p>
+<p>可运行以下命令以安装 python 扩展包，使编写 python 时有提示符。安装完成后在 Jupyter notebook 中出现 Nbextensions，选择 Hinterland 即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">apt install libxml2</span><br><span class="line">apt install libxslt</span><br><span class="line">pip3 install jupyter-contrib-nbextensions</span><br><span class="line">jupyter contrib nbextension install --user</span><br><span class="line">pip3 install jupyter_nbextensions_configurator</span><br></pre></td></tr></table></figure>
 
-<h4 id="VS-Code"><a href="#VS-Code" class="headerlink" title="VS Code"></a>VS Code</h4><p>输入以下命令安装node、npm和cnpm。</p>
+<h4 id="VS-Code"><a href="#VS-Code" class="headerlink" title="VS Code"></a>VS Code</h4><p>输入以下命令安装 node、npm 和 cnpm。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apt install nodejs</span><br><span class="line">apt install npm</span><br><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br><span class="line">cnpm install -g npm</span><br></pre></td></tr></table></figure>
 
-<p>用cnpm安装wcode。</p>
+<p>用 cnpm 安装 wcode。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g wcode</span><br></pre></td></tr></table></figure>
 
 <p>使用时通过以下命令启动。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wcode -p 9999 /home</span><br></pre></td></tr></table></figure>
 
 <p>通过浏览器访问即可。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 手机浏览器</span><br><span class="line">localhost:9999</span><br><span class="line"></span><br><span class="line">// 内网电脑</span><br><span class="line">[手机IP地址]:9999</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 手机浏览器</span><br><span class="line">localhost:9999</span><br><span class="line"></span><br><span class="line"># 内网电脑</span><br><span class="line">[手机IP地址]:9999</span><br></pre></td></tr></table></figure>
 
-<p>也可通过code-server。下载arm64版本的安装包，复制到手机并解压。</p>
+<p>也可通过 code-server。下载 arm64 版本的安装包，复制到手机并解压。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/cdr/code-server/releases</span><br></pre></td></tr></table></figure>
 
-<p>解压完成后切换到该目录，并运行以下命令开启VS Code。通过浏览器访问即可，同上。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export PASSWORD=123456 </span><br><span class="line">./code-server --auth password --port 9999</span><br></pre></td></tr></table></figure>
+<p>解压完成后切换到该目录，并运行以下命令开启 VS Code。通过浏览器访问即可，同上。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export PASSWORD=123456</span><br><span class="line">./code-server --auth password --port 9999</span><br></pre></td></tr></table></figure>
 
-<h1 id="Aid-Learning"><a href="#Aid-Learning" class="headerlink" title="Aid Learning"></a>Aid Learning</h1><p>Termux的国内高仿版。无需安装Termux，直接下载即可使用。Aid Learning已自带VS Code。</p>
-<h2 id="环境配置-1"><a href="#环境配置-1" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="gfortran"><a href="#gfortran" class="headerlink" title="gfortran"></a>gfortran</h3><p>Aid Learning已自带gcc&#x2F;gfortran。若没有可通过以下命令安装。</p>
+<h1 id="Aid-Learning"><a href="#Aid-Learning" class="headerlink" title="Aid Learning"></a>Aid Learning</h1><p>Termux 的国内高仿版。无需安装 Termux，直接下载即可使用。Aid Learning 已自带 VS Code。</p>
+<h2 id="环境配置-1"><a href="#环境配置-1" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="gfortran"><a href="#gfortran" class="headerlink" title="gfortran"></a>gfortran</h3><p>Aid Learning 已自带 gcc&#x2F;gfortran。若没有可通过以下命令安装。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install gcc</span><br><span class="line">apt install gfortran</span><br></pre></td></tr></table></figure>
 
-<h3 id="JAVA-1"><a href="#JAVA-1" class="headerlink" title="JAVA"></a>JAVA</h3><p>以Java 8为例，通过以下命令安装。</p>
+<h3 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h3><p>以 Java 8 为例，通过以下命令安装。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install openjdk-8-jdk</span><br><span class="line">apt install openjdk-8-jre</span><br></pre></td></tr></table></figure>
 
 <p>输入以下命令查看是否正确安装。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
 
-<p>若出现错误，则需要修改环境变量。打开&#x2F;etc&#x2F;profile，添加以下内容后保存。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=&quot;/usr/lib/jvm/java-8-openjdk-arm64&quot;</span><br><span class="line">export CLASSPATH=.$JAVA_HOME/lib/</span><br><span class="line">export JRE_HOME=$JAVA_HOME/jre</span><br><span class="line">export PATH=$JAVA_HOME/bin:$PAT</span><br></pre></td></tr></table></figure>
+<p>若出现错误，则需要修改环境变量。打开 &#x2F;etc&#x2F;profile，添加以下内容后保存。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=&quot;/usr/lib/jvm/java-8-openjdk-arm64&quot;</span><br><span class="line">export CLASSPATH=.$JAVA_HOME/lib/</span><br><span class="line">export JRE_HOME=$JAVA_HOME/jre</span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH</span><br></pre></td></tr></table></figure>
 
-<h3 id="Jupyter-1"><a href="#Jupyter-1" class="headerlink" title="Jupyter"></a>Jupyter</h3><p>Aid Learning已自带Jupyter。</p>
-<h4 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h4><p>可使用Jupyter Lab，通过以下命令安装和启动即可。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 安装</span><br><span class="line">pip3 install jupyterlab</span><br><span class="line"></span><br><span class="line">// 启动</span><br><span class="line">jupyter lab</span><br></pre></td></tr></table></figure>
+<h3 id="Jupyter-1"><a href="#Jupyter-1" class="headerlink" title="Jupyter"></a>Jupyter</h3><p>Aid Learning 已自带 Jupyter。</p>
+<h4 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h4><p>可使用 Jupyter Lab，通过以下命令安装和启动即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">pip3 install jupyterlab</span><br><span class="line"></span><br><span class="line"># 启动</span><br><span class="line">jupyter lab</span><br></pre></td></tr></table></figure>
 
-<p>也可使用Jupyter Notebook。直接运行以下命令即可。</p>
+<p>也可使用 Jupyter Notebook。直接运行以下命令即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
 
-<h4 id="Java内核"><a href="#Java内核" class="headerlink" title="Java内核"></a>Java内核</h4><p>注意，Jupyter支持的JDK版本为9.0及以上，而Aid Learning内核支持的JDK为JDK8，因此在安装Java时需要留意版本。</p>
-<p>可安装IJava支持套件。通过以下链接下载，然后复制到手机。</p>
+<h4 id="Java-内核"><a href="#Java-内核" class="headerlink" title="Java 内核"></a>Java 内核</h4><p>注意，Jupyter 支持的 JDK 版本为 9.0 及以上，而 Aid Learning 内核支持的 JDK 为 JDK8，因此在安装 Java 时需要留意版本。</p>
+<p>可安装 IJava 支持套件。通过以下链接下载，然后复制到手机。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/SpencerPark/IJava/</span><br></pre></td></tr></table></figure>
 
 <p>切换到文件所在位置并运行以下命令。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">unzip ijava.zip -d ijava // 文件名为ijava.zip</span><br><span class="line">cd ijava</span><br><span class="line">python3 install.py --sys-prefix</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">unzip ijava.zip -d ijava # 文件名为 ijava.zip</span><br><span class="line">cd ijava</span><br><span class="line">python3 install.py --sys-prefix</span><br></pre></td></tr></table></figure>
 
-<p>安装完成后查看Jupyter内核，此时应当有Java。</p>
+<p>安装完成后查看 Jupyter 内核，此时应当有 Java。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter kernelspec list</span><br></pre></td></tr></table></figure>
 
 <h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><blockquote>
@@ -435,12 +436,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/posts/Android-VM-Guide.html" rel="prev" title="Android虚拟机运行指南">
-      <i class="fa fa-chevron-left"></i> Android虚拟机运行指南
+    <a href="/blog/posts/Android-Xposed-Framework-Guide.html" rel="prev" title="Android Xposed 框架指南">
+      <i class="fa fa-chevron-left"></i> Android Xposed 框架指南
     </a></div>
       <div class="post-nav-item">
-    <a href="/blog/posts/Android-Xposed-Framework-Guide.html" rel="next" title="Android Xposed框架指南">
-      Android Xposed框架指南 <i class="fa fa-chevron-right"></i>
+    <a href="/blog/posts/Android-Skills.html" rel="next" title="Android 使用技巧总结">
+      Android 使用技巧总结 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -500,7 +501,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Termux"><span class="nav-text">Termux</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E8%BD%AF%E4%BB%B6%E6%BA%90"><span class="nav-text">更换软件源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH%E8%BF%9E%E6%8E%A5"><span class="nav-text">SSH连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F"><span class="nav-text">运行程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E7%BB%88%E7%AB%AF"><span class="nav-text">优化终端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%BA%93"><span class="nav-text">软件库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#waifu2x"><span class="nav-text">waifu2x</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-text">常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BF%E9%97%AESD%E5%8D%A1%E7%9B%AE%E5%BD%95"><span class="nav-text">访问SD卡目录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4Linux"><span class="nav-text">完整Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87AnLinux"><span class="nav-text">通过AnLinux</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-text">桌面环境配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87atilo"><span class="nav-text">通过atilo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-1"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Debian%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-text">Debian环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#JAVA"><span class="nav-text">JAVA</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#python"><span class="nav-text">python</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-text">环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Termux%E6%9C%AC%E6%9C%BA"><span class="nav-text">Termux本机</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java"><span class="nav-text">Java</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4Linux%E5%86%85"><span class="nav-text">完整Linux内</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Fortran"><span class="nav-text">Fortran</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#OpenCL"><span class="nav-text">OpenCL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Jupyter"><span class="nav-text">Jupyter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VS-Code"><span class="nav-text">VS Code</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Aid-Learning"><span class="nav-text">Aid Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-1"><span class="nav-text">环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#gfortran"><span class="nav-text">gfortran</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JAVA-1"><span class="nav-text">JAVA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jupyter-1"><span class="nav-text">Jupyter</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-text">基本使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java%E5%86%85%E6%A0%B8"><span class="nav-text">Java内核</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Termux"><span class="nav-text">Termux</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E8%BD%AF%E4%BB%B6%E6%BA%90"><span class="nav-text">更换软件源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH-%E8%BF%9E%E6%8E%A5"><span class="nav-text">SSH 连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F"><span class="nav-text">运行程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E7%BB%88%E7%AB%AF"><span class="nav-text">优化终端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%BA%93"><span class="nav-text">软件库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#waifu2x"><span class="nav-text">waifu2x</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-text">常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE-SD-%E5%8D%A1%E7%9B%AE%E5%BD%95"><span class="nav-text">访问 SD 卡目录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-text">环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java"><span class="nav-text">Java</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4-Linux"><span class="nav-text">完整 Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87-AnLinux"><span class="nav-text">通过 AnLinux</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-text">桌面环境配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87-atilo"><span class="nav-text">通过 atilo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-1"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Debian-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-text">Debian 环境配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4-Linux-%E5%86%85%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-text">完整 Linux 内环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Fortran"><span class="nav-text">Fortran</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#OpenCL"><span class="nav-text">OpenCL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Jupyter"><span class="nav-text">Jupyter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VS-Code"><span class="nav-text">VS Code</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Aid-Learning"><span class="nav-text">Aid Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-1"><span class="nav-text">环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#gfortran"><span class="nav-text">gfortran</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JAVA"><span class="nav-text">JAVA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jupyter-1"><span class="nav-text">Jupyter</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-text">基本使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-%E5%86%85%E6%A0%B8"><span class="nav-text">Java 内核</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-text">参考教程</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
