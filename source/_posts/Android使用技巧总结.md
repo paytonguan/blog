@@ -1,8 +1,8 @@
 ---
-title: Android使用技巧总结
+title: Android 使用技巧总结
 categories: Android
 abbrlink: Android-Skills
-date: 2020-04-22 22:54:29
+date: 2020-06-04 00:00:00
 tags:
 ---
 
@@ -16,7 +16,7 @@ tags:
 
 ## Hamibot
 
-Hamibot需要保持在线才能运行，因此需要给Hamibot自启动权限，同时关闭省电策略，防止APP在后台被清理。
+Hamibot 需要保持在线才能运行，因此需要给 Hamibot 自启动权限，同时关闭省电策略，防止 APP 在后台被清理。
 
 ```
 https://hamibot.com/
@@ -30,7 +30,7 @@ https://hamibot.com/
 https://www.coolapk.com/apk/com.yicu.yichujifa
 ```
 
-可自行编辑脚本。示例脚本中模拟点击的屏幕坐标在不同手机上可能会不同，因此需要自行修改。保持在脚本的编辑页面，切换要需要点击的APP，将准心移动到需要点击的位置，然后点一下准心，选择相应的动作即可。
+可自行编辑脚本。示例脚本中模拟点击的屏幕坐标在不同手机上可能会不同，因此需要自行修改。保持在脚本的编辑页面，切换需要点击的 APP，将准心移动到需要点击的位置，然后点一下准心，选择相应的动作即可。
 
 ## 自动精灵
 
@@ -92,7 +92,7 @@ U2PWU-H7D9H-69T3B-JEYC2-3R2NG
 
 ## Google框架
 
-部分手机如Sumsung国行版只是将Google Play隐藏了起来，重新安装相关APP即可。Google Play下载地址如下。
+部分手机如 Samsung 国行版只是将 Google Play 隐藏了起来，重新安装相关 APP 即可。Google Play 下载地址如下。
 
 ```
 https://m.apkpure.com/google-play-store/com.android.vending
@@ -125,9 +125,9 @@ https://www.gotvg.com/
 
 ## 应用市场
 
-### 国际版APP应用市场
+### 国际版 APP 应用市场
 
-可用`9Apps`、`V-Appstore`、`F-Droid`。F-Droid可用以下镜像加速。
+可用`9Apps`、`V-Appstore`、`F-Droid`。F-Droid 可用以下镜像加速。
 
 ```
 https://mirrors.tuna.tsinghua.edu.cn/help/fdroid/
@@ -137,7 +137,7 @@ https://mirrors.tuna.tsinghua.edu.cn/help/fdroid/
 
 ### Gboard
 
-好用的输入法，在Google Play即可下载。
+好用的输入法，在 Google Play 即可下载。
 
 由于下载简体中文语言包需要一段时间，一开始使用拼音时会出现无法弹出中文选字的情况，挂翻墙并等待下载完成即可。
 
@@ -207,7 +207,7 @@ https://github.com/redsolver/skydroid
 https://www.coolapk.com/feed/45383246?shareKey=YThmNjhlNzAwMzZiNjQ0MzY5MTg~&shareFrom=com.coolapk.market_12.5.0
 ```
 
-Samsung J3（armv7架构）要用微信8.0.2。可以在这里下载（在官网下的armv7装不了）：
+Samsung J3（armv7 架构）要用微信 8.0.2。可以在这里下载（在官网下的 armv7 装不了）：
 
 ```
 https://www.apkmirror.com/apk/wechat-tencent/wechat/wechat-7-0-10-release/wechat-7-0-10-android-apk-download/
@@ -221,7 +221,7 @@ https://tecnoandroid.net/zh-TW/gcam-google-camera-xiaomi-huawei-samsung-oneplus-
 https://forum.xda-developers.com/t/downgrade-android-8-to-7-binary-3.3891802/
 ```
 
-armv7可以用的版本（不过会闪退，闪退的话要更换维护版本）：
+armv7 可以用的版本（不过会闪退，闪退的话要更换维护版本）：
 
 ```
 https://www.apkmirror.com/apk/google-inc/camera/camera-4-2-035-141213305-release/google-camera-4-2-035-141213305-2-android-apk-download/download/?key=2997286a3ea65b09c97e3be9755b361bde73e4e8

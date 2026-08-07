@@ -1,77 +1,35 @@
 ---
-title: Android高级使用指南
+title: Android 高级使用指南
 categories: Android
 abbrlink: Android-Advanced-Guide
-date: 2023-11-10 14:46:29
+date: 2020-06-05 00:00:00
 tags:
 ---
 
 ![](topic.jpg)
 
-Android Root等。
+Android 刷机、Root 与 ROM 相关的高级使用指南。
 
 <!-- more -->
 
-# TODOS
-
-```
-adb shell /data/app/moe.shizuku.privileged.api-sv0BTIYUfeErR2r_bFlP7g==/lib/arm/libshizuku.so
-
-
-
-
-
-使用KernelSU_Action编译自己的KernelSU内核
-https://www.bilibili.com/opus/806004201667690498
-
-自己编译ROM
-https://github.com/shantanu-sarkar/CustomROM
-https://blog.yiyitec.com/2019/08/02/译如何移植-cyanogenos-lineageos-到您自己的手机/
-https://fat-tire.github.io/porting-intro.html
-https://medium.com/@daltonfury42/building-lineageos-for-your-device-a7d26ab50549
-https://xdaforums.com/t/guide-how-to-building-lineageos-for-an-unsupported-device.4419263/
-https://blog.lynnrin.moe/posts/ROM-bringup-guide-prebuilt/
-https://blog.lynnrin.moe/posts/oneplus/
-https://blog.lynnrin.moe/posts/dior-rom/
-
-提取vendor驱动
-https://xdaforums.com/t/guide-extract-vendor-from-stock-firmware.4212587/
-https://baalajimaestro.me/posts/extract-vendor/
-
-
-三星内核
-https://android.googlesource.com/kernel/samsung.git/
-https://github.com/goldfish07/android_kernel_samsung_j8y18lte_old/blob/10/build_msm8917.sh
-https://github.com/lifehacker-101/android_kernel_samsung_msm8937
-
-
-
-Magisk
-https://blog.lynnrin.moe/posts/magisk
-
-
-
-TWRP
-https://blog.lynnrin.moe/posts/Razer_Phone_TWRP/
-```
 
 # 基本知识
 
 ## 恢复模式
 
-即Recovery Mode，该模式将会启动recovery分区，可在该模式下执行擦除数据等操作。通过刷入第三方recovery可达到更高级的功能。
+即 Recovery Mode，该模式将会启动 recovery 分区，可在该模式下执行擦除数据等操作。通过刷入第三方 recovery 可达到更高级的功能。
 
-对于三星设备，在关机状态下同时按音量上键+Home键+电源键即可进入Recovery模式。
+对于三星设备，在关机状态下同时按音量上键+Home 键+电源键即可进入 Recovery 模式。
 
 ## 下载模式
 
 即Download Mode，也被称为Bootloader/Fastboot Mode，用于刷机。在三星上也被称为Odin Mode。
 
-对于三星设备，在关机状态下按音量下键+Home键+电源键，同时将手机连接到电脑，即可进入下载模式。或先进入恢复模式，再选择Reboot to bootloader进入到下载模式。
+对于三星设备，在关机状态下按音量下键+Home 键+电源键，同时将手机连接到电脑，即可进入下载模式。或先进入恢复模式，再选择 Reboot to bootloader 进入到下载模式。
 
 ## ADB工具
 
-Google提供的用电脑命令行对手机进行相关操作的工具，注意需要在手机上打开USB调试模式。注意应当用最新的ADB工具，否则可能会识别不到设备，运行命令行可能会提示device offline。
+Google 提供的用电脑命令行对手机进行相关操作的工具，注意需要在手机上打开 USB 调试模式。注意应当用最新的 ADB 工具，否则可能会识别不到设备，运行命令行可能会提示 device offline。
 
 下载链接如下。
 
@@ -80,15 +38,15 @@ https://developer.android.com/studio/command-line/adb
 https://developer.android.google.cn/studio/releases/platform-tools.html
 ```
 
-对于Mac，可通过Homebrew安装。
+对于 Mac，可通过 Homebrew 安装。
 
 ```
 brew cask install android-platform-tools
 ```
 
-该工具包包含adb和fastboot两个工具，其中adb用于普通模式，fastboot用于fastboot模式。
+该工具包包含 adb 和 fastboot 两个工具，其中 adb 用于普通模式，fastboot 用于 fastboot 模式。
 
-注意，adb和fastboot需要不同的驱动。如果运行命令行时找不到设备，可能是驱动问题，可尝试下载以下驱动。
+注意，adb 和 fastboot 需要不同的驱动。如果运行命令行时找不到设备，可能是驱动问题，可尝试下载以下驱动。
 
 ```
 # 通用驱动
@@ -112,7 +70,7 @@ https://developer.android.com/studio
 https://forum.xda-developers.com/t/tool-latest-adb-fastboot-and-usb-driver-installer-tool-for-windows.3999445/
 ```
 
-命令行切换到工具目录后即可使用，注意需要以管理员身份运行。adb常用命令如下。
+命令行切换到工具目录后即可使用，注意需要以管理员身份运行。adb 常用命令如下。
 
 ```
 # 查看当前连接的设备
@@ -122,7 +80,7 @@ adb devices
 adb reboot bootloader
 ```
 
-fastboot常用命令如下。
+fastboot 常用命令如下。
 
 ```
 # 查看当前连接的设备
@@ -154,7 +112,7 @@ fastboot reboot
 fastboot oem unlock
 ```
 
-对于Samsung，因为其使用自定义的Odin 3 协议，因此fastboot命令将看不到设备。需要使用Heimdall，仓库如下。
+对于 Samsung，因为其使用自定义的 Odin 3 协议，因此 fastboot 命令将看不到设备。需要使用 Heimdall，仓库如下。
 
 ```
 https://github.com/Benjamin-Dobell/Heimdall
@@ -162,34 +120,34 @@ https://github.com/Benjamin-Dobell/Heimdall
 
 ## 解锁Bootloader
 
-即OEM解锁。一般而言，进入下载模式意味着需要更改系统，此时需要先解Bootloader锁，否则无法完成刷入。对于三星，可在下载模式下查看CROM SERVICE一栏，若为Lock则未解锁。
+即 OEM 解锁。一般而言，进入下载模式意味着需要更改系统，此时需要先解 Bootloader 锁，否则无法完成刷入。对于三星，可在下载模式下查看 CROM SERVICE 一栏，若为 Lock 则未解锁。
 
-对于三星设备，可在设置-开发者设置下点击OEM解锁。若没有该选项则可使用官方OEM解锁工具CROM Service，下载链接如下。
+对于三星设备，可在设置-开发者设置下点击 OEM 解锁。若没有该选项则可使用官方 OEM 解锁工具 CROM Service，下载链接如下。
 
 ```
 https://www.apkmirror.com/apk/samsung-electronics-co-ltd/crom-service/crom-service-1-0-8-release/crom-service-1-0-8-android-apk-download/
 ```
 
-对于一加设备，需要通过ADB工具。在手机上进入设置-关于手机，点击7次版本号启用开发者选项。启用开发者选项后，Google服务框架会被自动取消隐藏。然后前往设置-系统-开发者选项，启用OEM解锁和高级重启。
+对于一加设备，需要通过 ADB 工具。在手机上进入设置-关于手机，点击 7 次版本号启用开发者选项。启用开发者选项后，Google 服务框架会被自动取消隐藏。然后前往设置-系统-开发者选项，启用 OEM 解锁和高级重启。
 
-长按电源键，从电源菜单中选择引导器模式，手机将会自动重启进入Bootloader模式。打开电脑的终端，使用以下命令解锁Bootloader。
+长按电源键，从电源菜单中选择引导器模式，手机将会自动重启进入 Bootloader 模式。打开电脑的终端，使用以下命令解锁 Bootloader。
 
 ```
 fastboot devices # 检查设备是否连接
 fastboot oem unlock
 ```
 
-手机会提示解锁Bootloader的风险警告信息，需要用音量键操作选择是否解锁，并使用电源键确认。解锁后手机会自动抹掉所有数据并执行重启。
+手机会提示解锁 Bootloader 的风险警告信息，需要用音量键操作选择是否解锁，并使用电源键确认。解锁后手机会自动抹掉所有数据并执行重启。
 
 ## 开发者设置
 
-在安卓设置中有一项隐藏的开发者设置，在该设置中可开启USB调试。一般进入`关于手机`，连续点击十次版本号，即可解除隐藏。
+在安卓设置中有一项隐藏的开发者设置，在该设置中可开启 USB 调试。一般进入`关于手机`，连续点击十次版本号，即可解除隐藏。
 
 # Recovery
 
 ## 第三方包
 
-第三方Recovery与原生Recovery相比，可实现更多功能。
+第三方 Recovery 与原生 Recovery 相比，可实现更多功能。
 
 ### TWRP
 
@@ -197,11 +155,14 @@ fastboot oem unlock
 https://twrp.me/
 ```
 
-特定机型的非官方TWRP包如下。
+特定机型的非官方 TWRP 包如下。
 
 ```
 # LG G3
 https://forum.xda-developers.com/t/recovery-3-3-1-unofficial-twrp-for-lg-g3.3813552/
+
+# Razer Phone
+https://blog.lynnrin.moe/posts/Razer_Phone_TWRP/
 ```
 
 ### SHRP
@@ -228,7 +189,7 @@ https://pitchblackrecovery.com/
 
 ## 刷入
 
-以TWRP为例，对于官方提供支持的设备，可从Google Play商店中下载TWRP应用完成刷入。对于其它设备，可通过线刷的方式，如三星可将相应的recovery.img打包为tar后，通过Odin的AP包方式刷入。
+以 TWRP 为例，对于官方提供支持的设备，可从 Google Play 商店中下载 TWRP 应用完成刷入。对于其它设备，可通过线刷的方式，如三星可将相应的 recovery.img 打包为 tar 后，通过 Odin 的 AP 包方式刷入。
 
 ## 机型适配
 
@@ -236,19 +197,19 @@ https://pitchblackrecovery.com/
 
 ### 提取设备树
 
-编译第三方Recovery需要与本设备相关的设备树。
+编译第三方 Recovery 需要与本设备相关的设备树。
 
-可尝试在Github搜索`device [设备名]`、`kernel [设备名]`以及`vendor [设备名]`查找设备树。
+可尝试在 Github 搜索`device [设备名]`、`kernel [设备名]`以及`vendor [设备名]`查找设备树。
 
 <details>
 <summary>【进阶】编译TWRP和Android所需设备树的不同</summary>
 
-Android.mk、AndroidProduct.mk、omni_cheryl.mk一般情况下相同。编译TWRP需要对BoardConfig.mk等文件进行修改。
+Android.mk、AndroidProduct.mk、omni_cheryl.mk 一般情况下相同。编译 TWRP 需要对 BoardConfig.mk 等文件进行修改。
 </details>
 
 #### 通过twrpdtgen
 
-twrpdtgen为python下的工具，可从原生Recovery中提取设备树，支持Android 4.4-12。仓库及相关说明如下。
+twrpdtgen 为 python 下的工具，可从原生 Recovery 中提取设备树，支持 Android 4.4-12。仓库及相关说明如下。
 
 ```
 https://github.com/SebaUbuntu/TWRP-device-tree-generator
@@ -281,7 +242,7 @@ apt install cpio
 pip3 install twrpdtgen
 ```
 
-把提取的recovery.img复制到twrpdtgen目录下，然后运行以下命令生成设备树。
+把提取的 recovery.img 复制到 twrpdtgen 目录下，然后运行以下命令生成设备树。
 
 ```
 python3 -m twrpdtgen -k --no-git -v recovery.img
@@ -322,9 +283,9 @@ PRODUCT_MAKEFILES := \
 
 ##### omni_Z01G.mk
 
-相当于Makefile，定义设备的基本信息。
+相当于 Makefile，定义设备的基本信息。
 
-对于OmniROM，文件名为`omni_<设备名>.mk`。对于CyanogenMod为`cm.mk`，对于魔趣为`mokee.mk`（旧版本）或`mk_<设备名>.mk`（Android 9）。统一命名为`omni_<设备名>.mk`即可。
+对于 OmniROM，文件名为`omni_<设备名>.mk`。对于 CyanogenMod 为`cm.mk`，对于魔趣为`mokee.mk`（旧版本）或`mk_<设备名>.mk`（Android 9）。统一命名为`omni_<设备名>.mk`即可。
 
 ```
 # 使当前配置文件继承其他配置文件
@@ -352,7 +313,7 @@ PRODUCT_MODEL := ASUS_Z01GD
 
 ##### device.mk
 
-只对Android UI起作用，对TWRP无效。
+只对 Android UI 起作用，对 TWRP 无效。
 
 ##### vendorsetup.sh
 
@@ -363,7 +324,7 @@ add_lunch_combo omni_Z01G-eng
 
 ##### recovery.fstab
 
-手机分区信息。可在手机打开Termux等终端工具，通过df命令查看。
+手机分区信息。可在手机打开 Termux 等终端工具，通过 df 命令查看。
 
 ```
 # 从/system到/recovery基本可以共用
@@ -381,15 +342,15 @@ add_lunch_combo omni_Z01G-eng
 
 ##### system.prop
 
-放置额外property，通常不需要。
+放置额外 property，通常不需要。
 
 ##### omni.dependencies
 
-编译时TWRP会通过该文件获取额外的source code编译，一般为SoC相关的设定与核心源码。此处获取Qualcomm共享代码。
+编译时 TWRP 会通过该文件获取额外的 source code 编译，一般为 SoC 相关的设定与核心源码。此处获取 Qualcomm 共享代码。
 
 ##### BoardConfig.mk
 
-编译TWRP需要的所有参数。
+编译 TWRP 需要的所有参数。
 
 ###### 基本参数
 
@@ -450,7 +411,7 @@ BOARD_CUSTOM_BOOTIMG_MK := ...
 
 ###### 内核编译参数
 
-如果有可编译的内核源码，则可使用以下参数，然后在omni.dependencies中加入kernel source repository。这种方法编译出来的recovery将可用于各个版本的系统。
+如果有可编译的内核源码，则可使用以下参数，然后在 omni.dependencies 中加入 kernel source repository。这种方法编译出来的 recovery 将可用于各个版本的系统。
 
 ```
 # 指定编译内核使用的配置文件
@@ -468,7 +429,7 @@ BOARD_CUSTOM_BOOTIMG_MK := ...
 # TARGET_KERNEL_ARCH := ...
 ```
 
-如果使用预编译好的内核，如从能正常运行的boot.img与recovery.img中提取出来的内核，则使用以下参数。因为已编译的内核映像无法修改，因此这种方法编译出来的recovery只能适用于特定版本的系统。
+如果使用预编译好的内核，如从能正常运行的 boot.img 与 recovery.img 中提取出来的内核，则使用以下参数。因为已编译的内核映像无法修改，因此这种方法编译出来的 recovery 只能适用于特定版本的系统。
 
 ```
 # TARGET_KERNEL_CONFIG := ze520kl-userdebug_defconfig
@@ -590,7 +551,7 @@ TW_EXTRA_LANGUAGES := ...
 
 data分区通常会加密，若TWRP没有包含相关解密工具，将无法备份或root该分区，但可以格式化。对于Qualcomm平台，加解密通过qseecomd完成。因此需要另外独立出一个目录，让TWRP编译时可以将内部/system/bin/linker64的链接改为/sbin/linker64，从而使工具在没有挂载/system时也能运行。
 
-加解密的流程由init.recovery.qcom_decrypt.rc控制，基本上不用修改，会由init.recovery.qcom.rc导入。本例所用的init.recovery.qcom.rc可以只留下第一行import，其余的是载入手机专用exfat kernel module与让TWRP可以刷ASUS原厂ROM的hack。
+加解密的流程由 init.recovery.qcom_decrypt.rc 控制，基本上不用修改，会由 init.recovery.qcom.rc 导入。本例所用的 init.recovery.qcom.rc 可以只留下第一行 import，其余的是载入手机专用 exfat kernel module 与让 TWRP 可以刷 ASUS 原厂 ROM 的 hack。
 
 会用到的so动态库则放在root/vendor/lib64目录。root/vendor/lib64/hw目录里有一个keystore.msm8998.so，中间的msm8998即为TARGET_BOARD_PLATFORM，需要按照机型进行修改。
 
@@ -621,19 +582,19 @@ TARGET_USES_LOGD := ...
 
 #### 通过Github Actions
 
-在Github上新建仓库，将设备树的内容上传，示例如下。
+在 Github 上新建仓库，将设备树的内容上传，示例如下。
 
 ```
 https://github.com/guanpeiheng1/TWRP_device_samsung_j3300
 ```
 
-Fork以下仓库，然后点击Actions-Make Recovery-Run Workflow。
+Fork 以下仓库，然后点击 Actions-Make Recovery-Run Workflow。
 
 ```
 https://github.com/azwhikaru/Action-Recovery-builder
 ```
 
-LIBRARY_NAME一般无需修改。LIBRARY_URL根据需要编译的包类型修改，列表如下。
+LIBRARY_NAME 一般无需修改。LIBRARY_URL 根据需要编译的包类型修改，列表如下。
 
 ```
 # TWRP
@@ -646,13 +607,13 @@ https://gitlab.com/OrangeFox/Manifest.git
 https://github.com/SHRP/platform_manifest_twrp_omni.git
 ```
 
-LIBRARY_BRANCH需要跟Android版本匹配。如编译TWRP时，若Android版本为7.1，则需要选择的源码分支为twrp-7.1。选择错误的源码分支会导致无法启动到recovery。
+LIBRARY_BRANCH 需要跟 Android 版本匹配。如编译 TWRP 时，若 Android 版本为 7.1，则需要选择的源码分支为 twrp-7.1。选择错误的源码分支会导致无法启动到 recovery。
 
 DEVICE_URL和DEVICE_BRANCH为刚才上传的设备树仓库地址及分支，DEVICE_PATH为`device/[厂商名]/[设备名]`，DEVICE_NAME为设备名。填写完成后运行，运行结束后即可在Release获取编译好的包。
 
 #### 通过源码
 
-以下均在Linux环境下进行。
+以下均在 Linux 环境下进行。
 
 ##### TWRP
 
@@ -685,7 +646,7 @@ sudo apt install python
 export USE_CCACHE=1
 ```
 
-开始时可先使用minimal-manifest-twrp，该仓库为编译TWRP所需要的最小单位。输入以下命令以拉取代码。
+开始时可先使用 minimal-manifest-twrp，该仓库为编译 TWRP 所需要的最小单位。输入以下命令以拉取代码。
 
 ```
 # 下载repo工具
@@ -704,7 +665,7 @@ repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.
 repo sync -f --force-sync
 ```
 
-建议拉取代码前先配置Github的SSH密钥，并输入以下命令配置以免输密码。配置完成后pull一次并输入密码，以后便不需要再输入。
+建议拉取代码前先配置 Github 的 SSH 密钥，并输入以下命令配置以免输密码。配置完成后 pull 一次并输入密码，以后便不需要再输入。
 
 ```
 git config --global credential.helper store
@@ -718,7 +679,7 @@ git config --global credential.helper store
 ALL_PROXY=127.0.0.1:7890
 ```
 
-同时需要在hosts文件添加规则。输入以下命令打开hosts文件。
+同时需要在 hosts 文件添加规则。输入以下命令打开 hosts 文件。
 
 ```
 sudo gedit /etc/hosts
@@ -732,13 +693,13 @@ sudo gedit /etc/hosts
 [IP地址] storage.googleapis.com
 ```
 
-IP可在以下网站找到。
+IP 可在以下网站找到。
 
 ```
 https://check-host.net/ip-info?host=android.googlesource.com
 ```
 
-建议设置Github代理，以排除可能错误。
+建议设置 Github 代理，以排除可能错误。
 
 ```
 git config --global http.proxy 'socks5://127.0.0.1:7890'
@@ -748,9 +709,9 @@ git config --global https.proxy 'socks5://127.0.0.1:7890'
 <details>
 <summary>【进阶】不翻墙的其它方法</summary>
 
-不建议，拉取过程中仍可能出现gnutls_handshake() failed: Error in the pull function错误，此时翻墙是最快捷的方法。
+不建议，拉取过程中仍可能出现 gnutls_handshake() failed: Error in the pull function 错误，此时翻墙是最快捷的方法。
 
-在终端输入以下命令打开repo工具的配置文件。
+在终端输入以下命令打开 repo 工具的配置文件。
 
 ```
 sudo gedit /usr/bin/repo
@@ -763,19 +724,19 @@ sudo gedit /usr/bin/repo
 REPO_URL = 'https://gerrit-googlesource.proxy.ustclug.org/git-repo'
 ```
 
-修改后保存，然后输入以下命令关闭git证书认证。
+修改后保存，然后输入以下命令关闭 git 证书认证。
 
 ```
 git config --global http.sslverify false
 ```
 
-还需要修复连接不上Github的问题。输入以下命令打开hosts文件。
+还需要修复连接不上 Github 的问题。输入以下命令打开 hosts 文件。
 
 ```
 sudo gedit /etc/hosts
 ```
 
-在hosts文件中添加Github网址和IP的对应规则，可直接使用以下文件的内容。添加后保存即可。
+在 hosts 文件中添加 Github 网址和 IP 的对应规则，可直接使用以下文件的内容。添加后保存即可。
 
 ```
 https://cdn.jsdelivr.net/gh/ineo6/hosts/hosts
@@ -790,7 +751,7 @@ lunch
 make recoveryimage
 ```
 
-编译完成后，建议在OmniROM环境下再次编译，但拉取android-9.0分支代码时提示有库不存在。可参考以下链接。
+编译完成后，建议在 OmniROM 环境下再次编译，但拉取 android-9.0 分支代码时提示有库不存在。可参考以下链接。
 
 ```
 # TWRP
@@ -810,7 +771,7 @@ https://forum.xda-developers.com/t/recovery-official-sky-hawk-recovery-project-v
 
 若recovery不能正常启动，可查看内核日志。高通和瑞芯微（如RK3188）的内核日志存储在/proc/last_kmsg，海思早期芯片（如K3V2）存储在内核参数CONFIG_APANIC_PLABEL所指定的分区中，一般是splash。
 
-但由于有些故障发生在Android初始化程序init的运行过程中，而在使用调试方式构建的ROM中，若遇到panic则自动重启进入Bootloader，阻碍内核转存日志，因此需要禁用此功能。
+但由于有些故障发生在 Android 初始化程序 init 的运行过程中，而在使用调试方式构建的 ROM 中，若遇到 panic 则自动重启进入 Bootloader，阻碍内核转存日志，因此需要禁用此功能。
 
 将以下代码保存为system/core/init/no_reboot_into_bootloader.diff。
 
@@ -894,25 +855,25 @@ patch -p2 < no_reboot_into_bootloader.diff
 
 ##### 挂载
 
-进入主菜单的Mount，点击每个分区的选项，检查是否能够正常挂载。
+进入主菜单的 Mount，点击每个分区的选项，检查是否能够正常挂载。
 
 ##### 解密
 
-对于高通设备，观察解密是否正常的最直接方法，是看日志中是否有解密失败（decryption failed）的提示，以及“Mount”菜单中的data分区是否无法挂载。
+对于高通设备，观察解密是否正常的最直接方法，是看日志中是否有解密失败（decryption failed）的提示，以及“Mount”菜单中的 data 分区是否无法挂载。
 
 ##### ADB
 
-连接电脑，运行adb devices，是否能检测到设备处在Recovery状态。
+连接电脑，运行 adb devices，是否能检测到设备处在 Recovery 状态。
 
-运行adb shell是否能进入设备上的终端，并拥有Root权限。
+运行 adb shell 是否能进入设备上的终端，并拥有 Root 权限。
 
 ##### MTP
 
-连接电脑，检查是否出现MTP设备。如未出现，在Mount中点击Enable MTP。
+连接电脑，检查是否出现 MTP 设备。如未出现，在 Mount 中点击 Enable MTP。
 
 ##### OTG
 
-2014年起的大部分主流机型都支持OTG。插入一根OTG数据线，在TWRP终端中运行lsusb，看是否检测到一个USB设备。
+2014 年起的大部分主流机型都支持 OTG。插入一根 OTG 数据线，在 TWRP 终端中运行 lsusb，看是否检测到一个 USB 设备。
 
 再插入一个新设备，看lsusb的输出里是否多出了另外一个设备。如果插入的是U盘，还可检查/dev/block/下是否多出了设备sdx（x为任意一个小写英文字母）。
 
@@ -924,43 +885,44 @@ patch -p2 < no_reboot_into_bootloader.diff
 
 #### 出现Recovery is not SEANDROID enforcing/set warrenty bit: recovery
 
-若出现这几条消息，且设备陷入重启循环，则说明刷入的recovery与本机不匹配，拔电池或等待手机电量完全耗尽后进入下载模式并重刷即可。
+若出现这几条消息，且设备陷入重启循环，则说明刷入的 recovery 与本机不匹配，拔电池或等待手机电量完全耗尽后进入下载模式并重刷即可。
 
 若设备没有重启，由于从5.1.1版本开始的系统写保护/安全策略，出现这几条消息是正常的。Recovery is not SEANDROID enforcing来自TWRP，表示selinux处于所需状态。内核必须允许selinux宽容模式（permissive）而非强制模式（enforcing），以便授予TWRP root权限。Set Warranty Bit: recovery来自Bootloader，表示Bootloader已解锁，且设备处于第三方recovery模式。
 
-若出现这几条消息并卡住，则说明刷入的recovery不匹配，可能是编译第三方recovery时选择的源码树不正确，重新选择与系统版本对应的源码树即可。
+若出现这几条消息并卡住，则说明刷入的 recovery 不匹配，可能是编译第三方 recovery 时选择的源码树不正确，重新选择与系统版本对应的源码树即可。
 
 # Root
 
-Root后将无法通过OTA升级的方式升级系统，只能通过线刷的方式。
+Root 后将无法通过 OTA 升级的方式升级系统，只能通过线刷的方式。
 
 ## 安装
 
 ### Magisk
 
-从以下链接下载Magisk Manager。
+从以下链接下载 Magisk Manager。
 
 ```
 https://github.com/topjohnwu/Magisk
+https://blog.lynnrin.moe/posts/magisk
 ```
 
-打开APP，如果一直在更新，则需要先翻墙。
+打开 APP，如果一直在更新，则需要先翻墙。
 
 查看设备相关信息，一般而言Ramdisk为Yes，较低版本的系统上A/B为No，SAR为No。这种情况下，可从官方ROM包中提取boot.img，以三星为例，用压缩软件打开AP包即可看到。将提取出来的包复制到手机根目录。然后APP点击安装，选择刚才复制进去的包，APP将完成修补并输出修补好的boot.img。将输出的修补包改名为boot.img，在普通设备上即可通过ADB工具包的fastboot命令刷入，对于有TWRP的也可以在recovery模式下刷入。
 
-对于三星，需要将boot.img压缩为tar，然后用Odin刷入，注意需要将ROM的所有部分都刷入，仅将AP包替换为Magisk修补过的包。
+对于三星，需要将 boot.img 压缩为 tar，然后用 Odin 刷入，注意需要将 ROM 的所有部分都刷入，仅将 AP 包替换为 Magisk 修补过的包。
 
-刷入后重启即完成，若Magisk Manager消失则重新下载即可。
+刷入后重启即完成，若 Magisk Manager 消失则重新下载即可。
 
-若SAR（System-as-root）为Yes，其余一致，这种情况一般出现在三星Android 9.0及以上系统，修补时需要将整个AP包传入而不是只取boot.img，用Odin刷入时需要将ROM的所有部分都刷入，仅将AP包替换为Magisk修补过的包。注意，将修补的AP包复制到电脑时，手机与电脑的连接方式不要使用MTP，因为MTP会损坏大文件。
+若 SAR（System-as-root）为 Yes，其余一致，这种情况一般出现在三星 Android 9.0 及以上系统，修补时需要将整个 AP 包传入而不是只取 boot.img，用 Odin 刷入时需要将 ROM 的所有部分都刷入，仅将 AP 包替换为 Magisk 修补过的包。注意，将修补的 AP 包复制到电脑时，手机与电脑的连接方式不要使用 MTP，因为 MTP 会损坏大文件。
 
-若Ramdisk为No，其余一致，Magisk只能劫持recovery分区，此时则需要修补recovery.img，步骤与上面基本一致，注意修补时需要确保Recovery Mode为勾选状态。这种修补下正常开机Magisk将不运行，需要按下进入恢复模式的按键组合，等待设备屏幕亮起后松开按键，此时Magisk将正常运行。若需要进入到真正的恢复模式，需要在屏幕亮起时长按音量上键。这种情况下不能用第三方recovery安装或升级Magisk。
+若 Ramdisk 为 No，其余一致，Magisk 只能劫持 recovery 分区，此时则需要修补 recovery.img，步骤与上面基本一致，注意修补时需要确保 Recovery Mode 为勾选状态。这种修补下正常开机 Magisk 将不运行，需要按下进入恢复模式的按键组合，等待设备屏幕亮起后松开按键，此时 Magisk 将正常运行。若需要进入到真正的恢复模式，需要在屏幕亮起时长按音量上键。这种情况下不能用第三方 recovery 安装或升级 Magisk。
 
 ### CF-Auto-Root
 
-不推荐，在Samsung J3300下实测失败。
+不推荐，在 Samsung J3300 下实测失败。
 
-下载CF包，然后通过线刷工具刷入即可。对于三星设备为刷入AP包。
+下载 CF 包，然后通过线刷工具刷入即可。对于三星设备为刷入 AP 包。
 
 ```
 https://autoroot.chainfire.eu/
@@ -969,12 +931,20 @@ https://desktop.firmware.mobi/
 
 ### PurpleDrake
 
-可用于LG G3。
+可用于 LG G3。
 
-需要先将手机降级至KitKat。下载以下包，将手机连接到电脑，然后按照平台执行即可。
+需要先将手机降级至 KitKat。下载以下包，将手机连接到电脑，然后按照平台执行即可。
 
 ```
 https://forum.xda-developers.com/t/root-root-your-lg-g3-easily-with-purpledrake-lite-osx-linux-windows.2821000/
+```
+
+### KernelSU
+
+一种基于内核的 Root 方案。可通过编译内核实现。
+
+```
+https://www.bilibili.com/opus/806004201667690498
 ```
 
 
@@ -982,7 +952,7 @@ https://forum.xda-developers.com/t/root-root-your-lg-g3-easily-with-purpledrake-
 
 ### Busybox
 
-提供Android上缺失的Linux命令行实现，如dirname等。Root后通过以下APP安装即可。
+提供 Android 上缺失的 Linux 命令行实现，如 dirname 等。Root 后通过以下 APP 安装即可。
 
 ```
 https://github.com/meefik/busybox
@@ -990,13 +960,13 @@ https://github.com/meefik/busybox
 
 ### 文件管理
 
-可用Root Explorer、MT文件管理器。
+可用 Root Explorer、MT 文件管理器。
 
 ### 系统工具
 
 #### Scene
 
-用于锁CPU频率、超频等。
+用于锁 CPU 频率、超频等。
 
 ```
 https://www.coolapk.com/apk/com.omarea.vtools
@@ -1018,280 +988,11 @@ https://www.coolapk.com/apk/xzr.La.systemtoolbox
 https://www.yxssp.com/23173.html
 ```
 
-#### Termux
-
-手机上使用终端。可以没有Root权限。
-
-```
-https://f-droid.org/zh_Hans/packages/com.termux/
-```
-
 ### 游戏修改
 
 #### GameGuardian
 
 游戏修改器。
-
-# 附录：刷机调试记录
-
-以下为刷机与Root过程中的调试记录，含部分个人经验，仅供参考。
-
-## Magisk Root
-
-另外一个可能的方法：先刷入twrp。可以用supersu来看是不是真的被root了。
-
-Magisk修改的是boot分区。进不了boot分区会卡在android的界面，进不了system分区会卡在开机logo界面。
-
-### 相关资源
-
-```
-# Samsung fastboot临时刷入
-https://android.stackexchange.com/questions/156955/samsungs-equivalent-to-fastboots-temporary-flash
-
-# magisk文件
-https://github.com/HuskyDG/magisk-files
-
-# Magisk工作原理
-https://android.stackexchange.com/questions/213167/how-does-magisk-work
-https://android.stackexchange.com/questions/218222/how-to-boot-system-as-root-device-always-as-rooted
-```
-
-### 救砖模块
-
-刷了救砖模块手机反而启动不了了。补救方式：ADB输命令，或者进Safe Mode（其实就是fastboot或者recovery）。
-
-```
-https://sspai.com/post/57320
-https://www.52pojie.cn/thread-1600094-1-1.html
-https://topjohnwu.github.io/Magisk/faq.html
-```
-
-### root的另外一个可能—kernelSU
-
-```
-https://blog.csdn.net/u010783226/article/details/115752477
-```
-
-### 临时 root
-
-```
-https://forum.xda-developers.com/t/how-do-i-temporarily-root-a-samsung-device-running-android-9-without-twrp-recovery.4421255/
-```
-
-### magisk不适用于android 9
-
-```
-https://forum.xda-developers.com/t/why-magisk-doesnt-work-with-pie-roms.3848025/page-3
-https://forum.xda-developers.com/t/solved-i-do-have-root-access-but-magisk-is-not-installed.3861626/
-```
-
-### Samsung J3300 Root
-
-用最新的magisk 26.1也不行。
-
-这个也不行（操作是先刷原版固件包，再刷它的AP包）：
-
-```
-https://support.halabtech.com/index.php?a=downloads&b=file&id=318127
-https://drive.google.com/file/d/1uZRLjK4I2--h69aKJ51WS40vtqINJJ4k/view
-```
-
-j3300 android 9 SAR 是 No，要装magisk 23 才能看到。所以应该只传 boot.img 而不是整个 AP 包，但也还是不行。
-
-尝试安装时保留AVB 2.0/dm-verity 和 保持强制加密：
-
-```
-https://zhuanlan.zhihu.com/p/143181151
-```
-
-用AP包和用img分别测试了"都取消勾选""都勾选""只勾选保留AVB 2.0/dm-verity""只勾选保持强制加密"等组合，结果都是"可启动，无Root"。
-
-看日志可以看到：
-
-```
-E opjohnwu.magis: Not starting debugger since process cannot load the jdwp agent
-```
-
-```
-https://forum.xda-developers.com/t/magisk-general-support-discussion.3432382/page-1565
-https://forum.xda-developers.com/t/magisk-general-support-discussion.3432382/page-1566
-```
-
-原因很可能是升级了bootloader的版本，导致magisk的boot修补失效了。可能可以尝试magisk in recovery。
-
-更新（2022-10-6）：magisk 25.2+boot.img或recovery.img都不行，安装后用recovery的方式进入也不行。
-
-```
-https://github.com/topjohnwu/Magisk/issues/4495
-```
-
-尝试22-25.2的版本均不行。如果想用22以下的，注意一进去的时候要马上按安装，不然检测到有更新的话，就按不了了。但其实就算进去了也不行，会下载失败的。
-
-尝试以下方法，还是不行：
-
-```
-https://trendyport.com/how-to-extract-boot-img-from-boot-img-iz4-and-root-samsung/?amp
-```
-
-尝试刷入后取消自动重启，自行进入Recovery并重置系统，还是不行。
-
-#### Samsung J3300无法root的原因
-
-因为固件已经是ver4，比ver1/2更严格。通过解包boot.img和system.img，可以发现在system.img中的vendor\etc\fstab.qcom，有如下内容：
-
-```
-# Android fstab file.
-# The filesystem that contains the filesystem checker binary (typically /system) cannot
-# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
-
-#TODO: Add 'check' as fs_mgr_flags with data partition.
-# Currently we dont have e2fsck compiled. So fs check would failed.
-
-#<src>                                  <mnt_point>      <type>  <mnt_flags and options>                    <fs_mgr_flags>
-/dev/block/platform/soc/7824900.sdhci/by-name/userdata      /data            ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc,discard  wait,check,forceencrypt=footer,quota
-/devices/soc/7864900.sdhci/mmc_host*                        auto            vfat    defaults        voldmanaged=sdcard:auto
-/devices/soc/78db000.usb/msm_hsusb_host*                   auto            auto    defaults        voldmanaged=usb:auto
-/dev/block/bootdevice/by-name/hidden        /preload        ext4            defaults                voldmanaged=preload:auto
-```
-
-其中 `/dev/block/platform/soc/7824900.sdhci/by-name/userdata /data ext4 ... wait,check,forceencrypt=footer,quota` 表示系统启动时，必须检查 Data 分区是否加密，如果没有，就强制加密。
-
-而Magisk只会改动boot.img，不改动system.img，所以解密就没解开了。
-
-所以现在唯一的方法：
-1. 解包system.img，改掉fstab的forceencrypt和verify后重新打包
-2. boot.img送给Magisk进行修复
-3. 把boot和system打包为新的tar，作为AP刷入
-
-## Heimdall用法
-
-使用教程如下。
-
-```
-https://forum.xda-developers.com/t/guide-how-to-install-use-heimdall-and-flash-back-to-stock.1113195/
-```
-
-两个exe文件，heimdall是命令行，heimdall-frontend是用户界面方式。替换driver的时候，如果没有samsung开头的设备，就选MSM8953（反正选错了驱动也装不上去的）。
-
-可能需要用1.42版本修复ERROR: Failed to Send Data! 问题：
-
-```
-https://www.reddit.com/r/LineageOS/comments/aymmy2/heimdall_error_failed_to_send_data/
-https://github.com/tothphu/heimdall_build
-```
-
-步骤：
-1. 下载1.40和1.42的heimdall
-2. 用1.40下面的Drivers/zadig，更换MSM8953的驱动
-3. 命令行切换到1.42所在目录，运行以下命令：
-
-```
-.\heimdall.exe detect
-.\heimdall.exe download-pit --output pit.pit --no-reboot
-.\heimdall.exe print-pit --no-reboot
-```
-
-然后就可以将输出的分区表复制出来了，可以搜索一下相关分区。主要分区是BOOT RECOVERY SYSTEM。flash命令示例如下：
-
-```
-https://forum.xda-developers.com/t/tool-heimdall-1-4-rc1.2071724/
-.\heimdall.exe flash --resume --BOOT boot.img
-```
-
-### Mac上的odin——heimdall
-
-```
-https://glassechidna.com.au/heimdall/#downloads
-https://bitbucket.org/benjamin_dobell/heimdall/downloads/heimdall-suite-1.4.0-mac.dmg
-https://formulae.brew.sh/cask/heimdall-suite
-```
-
-可用homebrew安装，但在mac12上失败，因为它试图安装到系统盘。Jodin基于heimdall，所以也不行。
-
-```
-https://github.com/GameTheory-/jodin3
-```
-
-## 降级bootloader
-
-基本不可能，bootloader禁止从高SW REV刷到低SW REV。
-
-```
-https://forum.xda-developers.com/t/downgrade-bootloader-check-fail.4111575/
-https://forum.xda-developers.com/t/downgrading-bootloader-in-samsung.4382225/
-https://www.reddit.com/r/AndroidQuestions/comments/nnlg6f/sw_rev_check_fail_bootloader_device_7_binary_2/
-https://forum.gsmhosting.com/vbb/f777/how-downgrade-binaryu8-binary-u1-2963482/
-https://forum.xda-developers.com/t/guide-skipping-kg-state-prenormal-on-oneui-android-pie-9-0.3911862/
-https://forum.xda-developers.com/t/is-it-possible-to-downgrade-s8-from-pie-to-oreo-sw-rev-error.4135167/
-https://forum.xda-developers.com/t/method-for-everyone-who-wants-to-downgrade-galaxy-s8-to-oreo-nougat.3946240/
-https://forum.xda-developers.com/t/can-i-downgrade-the-samsung-bootloader-from-sw-rev-3-to-2.3650483/
-```
-
-从这里可以看到SW REV：`https://samfw.com/firmware/SM-J3300`
-
-BIN/BINARY是什么：`https://samfw.com/blog/what-is-bit-binary-value`
-
-只能刷BINARY VALUE比当前高或相同的固件，否则会报错。假设value是4，那么可以这样来搜索root文件：`j3300 u4 root`。
-
-## 组合固件
-
-新bootloader+旧系统，可以在新bootloader跑旧系统。
-
-```
-https://combinationfirmware.com/downloads/j3300zcu1aqh1/
-```
-
-## 解压/打包boot.img
-
-```
-https://www.whitewinterwolf.com/posts/2016/08/11/how-to-unpack-and-edit-android-boot-img/
-https://forum.xda-developers.com/t/guide-unpack-repack-boot-recovery-img-without-kitchen.2839670/
-https://github.com/cfig/Android_boot_image_editor
-https://github.com/GameTheory-/mktool
-https://github.com/pbatard/bootimg-tools
-https://stackoverflow.com/questions/57485080/stock-boot-img-not-booting-after-re-packing
-https://forum.xda-developers.com/t/tool-boot-img-tools-unpack-repack-ramdisk.2319018/
-```
-
-## 解压lz4
-
-```
-https://github.com/lz4/lz4
-```
-
-## Android看系统启动log
-
-需要root权限。
-
-```
-https://android.stackexchange.com/questions/26080/does-android-keep-a-log-of-when-it-boots
-https://www.xda-developers.com/how-to-take-logs-android/
-```
-
-## TWRP
-
-twrp不能挂载分区，应该是没有解密模块。
-
-## fastboot命令大全
-
-```
-https://www.jkmeng.cn/219.html
-```
-
-## 双系统
-
-```
-https://www.jianshu.com/p/0045d820f586
-https://zhuanlan.zhihu.com/p/48520404
-```
-
-## LineageOS
-
-需要适配的设备，才能源码编译。
-
-```
-https://www.reddit.com/r/LineageOS/comments/zs2ras/how_to_get_started_with_a_unsupported_device/
-```
 
 # 系统
 
@@ -1317,7 +1018,7 @@ https://github.com/jesec/samfirm.js
 https://github.com/SlackingVeteran/frija
 ```
 
-以下适用于J3300。
+以下适用于 J3300。
 
 ```
 # 7.1.1版本
@@ -1335,7 +1036,7 @@ https://samsungfirmware.net/samsung-galaxy-j3-pro-2017-sm-j3300-repair-firmware/
 
 #### Windows
 
-对于Windows，需要使用Odin，下载链接如下。
+对于 Windows，需要使用 Odin，下载链接如下。
 
 ```
 https://odindownload.com/
@@ -1343,7 +1044,7 @@ https://samsungodin.com/download/
 https://www.osamsung.com/cn/
 ```
 
-让手机进入下载模式，连接到电脑并打开Odin，依次选择ROM包中对应的组件即可。注意CSC应当选择HOME_CSC前缀的包。如果找不到手机，需要安装驱动。
+让手机进入下载模式，连接到电脑并打开 Odin，依次选择 ROM 包中对应的组件即可。注意 CSC 应当选择 HOME_CSC 前缀的包。如果找不到手机，需要安装驱动。
 
 ```
 # 官方下载
@@ -1354,31 +1055,31 @@ https://www.onlinedown.net/soft/392434.htm
 https://samsungusbdriver.com/
 ```
 
-三星ROM各文件的含义如下。
+三星 ROM 各文件的含义如下。
 
 | 文件前缀 |                                                        说明                                                       |
 |----------|-------------------------------------------------------------------------------------------------------------------|
 | CP       | Core Processor，调制解调器                                                                                        |
-| AP       | Application Processor or PDA，包含boot.img、system.img、recovery.img、hboot.nb0、data.img、cache.img、radio.img等 |
+| AP       | Application Processor or PDA，包含 boot.img、system.img、recovery.img、hboot.nb0、data.img、cache.img、radio.img 等 |
 | BL       | Bootloader                                                                                                        |
 | PIT      | 分区信息表，一般不需要                                                                                            |
-| CSC      | 消费者软件定制，包含特定于该地区的软件包、运营商品牌和APN设置                                                     |
+| CSC      | 消费者软件定制，包含特定于该地区的软件包、运营商品牌和 APN 设置                                                     |
 
 <details>
 <summary>【进阶】三星线刷包说明</summary>
 
-每个包会写特定的部分，且为覆盖写。如果AP包中仅包含recovery.img，则刷入时只会更新Recovery分区。
+每个包会写特定的部分，且为覆盖写。如果 AP 包中仅包含 recovery.img，则刷入时只会更新 Recovery 分区。
 
-在刷第三方recovery时，可刷只包含recovery.img的tar格式的AP包，以仅更新Recovery分区。若Recovery分区损坏，可提取原版AP包的recovery.img，打包为tar后刷入即可，无需全量刷入。
+在刷第三方 recovery 时，可刷只包含 recovery.img 的 tar 格式的 AP 包，以仅更新 Recovery 分区。若 Recovery 分区损坏，可提取原版 AP 包的 recovery.img，打包为 tar 后刷入即可，无需全量刷入。
 
-但刷入boot时建议要把其他部分也选上，防止只刷AP包导致Odin将data分区缩小。将AP包替换为仅包含要刷入的boot.img的tar包即可。
+但刷入 boot 时建议要把其他部分也选上，防止只刷 AP 包导致 Odin 将 data 分区缩小。将 AP 包替换为仅包含要刷入的 boot.img 的 tar 包即可。
 
-Odin通过名称识别该包需要刷入的分区，因此tar包中需要刷入到boot分区的必须命名为boot.img，刷入到recovery分区的必须命名为recovery.img，否则刷入将出错。
+Odin 通过名称识别该包需要刷入的分区，因此 tar 包中需要刷入到 boot 分区的必须命名为 boot.img，刷入到 recovery 分区的必须命名为 recovery.img，否则刷入将出错。
 </details>
 
 #### Mac
 
-对于Mac，需使用Heimdall。下载链接如下。
+对于 Mac，需使用 Heimdall。下载链接如下。
 
 ```
 https://git.sr.ht/~grimler/Heimdall
@@ -1396,7 +1097,7 @@ heimdall flash --VBMETA vbmeta.img --RECOVERY recovery.img --no-reboot
 
 #### 刷入时提示SW REV CHECK FAIL
 
-刷入版本低的ROM时会出现该错误。更新ROM时会同时更新Bootloader，更新的Bootloader不允许刷入旧的Bootloader。
+刷入版本低的 ROM 时会出现该错误。更新 ROM 时会同时更新 Bootloader，更新的 Bootloader 不允许刷入旧的 Bootloader。
 
 ## 氧OS
 
@@ -1413,17 +1114,17 @@ https://forum.xda-developers.com/t/oneplus-7-rom-ota-oxygen-os-repo-of-oxygen-os
 
 ### 刷入
 
-刷入前需先下载好氧OS，并解锁Bootloader。
+刷入前需先下载好氧 OS，并解锁 Bootloader。
 
-到TWRP官网下载OnePlus 7的TWRP。在手机上进入设置-系统-开发者选项并启用高级重启后，长按电源键并选择Bootloader模式。在电脑终端使用以下指令以临时启动TWRP。
+到 TWRP 官网下载 OnePlus 7 的 TWRP。在手机上进入设置-系统-开发者选项并启用高级重启后，长按电源键并选择 Bootloader 模式。在电脑终端使用以下指令以临时启动 TWRP。
 
 ```
 fastboot boot [TWRP的img包路径]
 ```
 
-正常情况下，手机会临时进入一次TWRP。在TWRP中刷入氧OS，注意刷完后先不要重启，将TWRP包导入手机存储，并在TWRP中刷入，使TWRP在手机中持久化。安装包会在AB两个分区中都安装一次TWRP，这样无论手机从哪个分区启动都可以进入TWRP。
+正常情况下，手机会临时进入一次 TWRP。在 TWRP 中刷入氧 OS，注意刷完后先不要重启，将 TWRP 包导入手机存储，并在 TWRP 中刷入，使 TWRP 在手机中持久化。安装包会在 AB 两个分区中都安装一次 TWRP，这样无论手机从哪个分区启动都可以进入 TWRP。
 
-若未正常进入TWRP，由于氢氧OS可以无缝互刷但不能从高版本降级到低版本，若当前的氢OS并非最新，可直接将氧OS的固件导入手机存储中，直接在设置-系统-系统升级-右上角齿轮按钮-本地升级中选择氧OS固件以升级。
+若未正常进入 TWRP，由于氢氧 OS 可以无缝互刷但不能从高版本降级到低版本，若当前的氢 OS 并非最新，可直接将氧 OS 的固件导入手机存储中，直接在设置-系统-系统升级-右上角齿轮按钮-本地升级中选择氧 OS 固件以升级。
 
 若上述方法失败，可使用氢氧互刷工具，如下。
 
@@ -1433,20 +1134,20 @@ http://www.oneplusbbs.com/thread-2805359-1.html
 
 <details>
 <summary>【进阶】</summary>
-如果希望下一次通过TWRP刷入ROM时要保留所有TWRP和Magisk，需要在刷入ROM之前尽量关闭所有Magisk 模块，将ROM、TWRP包和magisk安装包全部导入手机存储中，按顺序刷入后重启手机。
+如果希望下一次通过 TWRP 刷入 ROM 时要保留所有 TWRP 和 Magisk，需要在刷入 ROM 之前尽量关闭所有 Magisk 模块，将 ROM、TWRP 包和 magisk 安装包全部导入手机存储中，按顺序刷入后重启手机。
 
-如果希望在系统内升级并保留TWRP和Magisk，需要将ROM、TWRP包和magisk安装包全部导入手机存储中，使用系统设置中的系统升级来升级系统后，在Magisk Manager的Modules页面，通过+按钮刷入TWRP包，然后点击Magisk旁边的Install-Install-Direct Install以及Install-Install-Install to Inactive Slot，重启手机。
+如果希望在系统内升级并保留 TWRP 和 Magisk，需要将 ROM、TWRP 包和 magisk 安装包全部导入手机存储中，使用系统设置中的系统升级来升级系统后，在 Magisk Manager 的 Modules 页面，通过+按钮刷入 TWRP 包，然后点击 Magisk 旁边的 Install-Install-Direct Install 以及 Install-Install-Install to Inactive Slot，重启手机。
 </details>
 
 ## LineageOS
 
-CyanogenMod的继承者。LineageOS可在旧款Android手机上流畅运行。
+CyanogenMod 的继承者。LineageOS 可在旧款 Android 手机上流畅运行。
 
 ```
 https://www.lineageos.org/
 ```
 
-LineageOS不带Google框架，需要自行下载，链接如下。
+LineageOS 不带 Google 框架，需要自行下载，链接如下。
 
 ```
 https://opengapps.org/
@@ -1456,21 +1157,24 @@ https://opengapps.org/
 
 #### 基本知识
 
-自行编译ROM必须获得内核源码、设备树和供应商文件。
+自行编译 ROM 必须获得内核源码、设备树和供应商文件。
 
-其中内核源码kernel source需要厂商开源，如三星可在以下网站查找。
+其中内核源码 kernel source 需要厂商开源，如三星可在以下网站查找。
 
 ```
 https://opensource.samsung.com/main
+https://android.googlesource.com/kernel/samsung.git/
+https://github.com/goldfish07/android_kernel_samsung_j8y18lte_old/blob/10/build_msm8917.sh
+https://github.com/lifehacker-101/android_kernel_samsung_msm8937
 ```
 
-设备树device tree示例如下。
+设备树 device tree 示例如下。
 
 ```
 https://forum.xda-developers.com/t/guide-how-to-make-a-device-tree-for-your-phone.3698419/
 ```
 
-供应商文件vendor files示例如下。
+供应商文件 vendor files 示例如下。
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -1503,6 +1207,13 @@ https://forum.xda-developers.com/t/guide-how-to-make-a-device-tree-for-your-phon
 </manifest>
 ```
 
+供应商文件 vendor files 也可从官方固件中提取，方法如下。
+
+```
+https://xdaforums.com/t/guide-extract-vendor-from-stock-firmware.4212587/
+https://baalajimaestro.me/posts/extract-vendor/
+```
+
 #### 编译
 
 如果设备有官方维护，则直接运行以下命令即可。
@@ -1514,7 +1225,7 @@ brunch <设备代号>
 如果设备没有官方维护，但已有非官方源码，可将非官方代码clone到本地，并放置到对应位置，一般为device(kernel, vendor)/设备厂商名/设备代号，再运行以上命令。
 
 
-如果没有官方维护及非官方源码，但有其它自定义ROM的源码，同理将代码clone到对应位置，在此基础上进行修改，再运行以上命令。修改方式可参照以下链接。
+如果没有官方维护及非官方源码，但有其它自定义 ROM 的源码，同理将代码 clone 到对应位置，在此基础上进行修改，再运行以上命令。修改方式可参照以下链接。
 
 ```
 https://github.com/GuaiYiHu/android_device_xiaomi_clover-oss/commit/c9426d95559576e61f7544443a24df42786b7aab
@@ -1531,12 +1242,20 @@ https://forum.xda-developers.com/t/guide-how-to-build-an-unsupported-rom-using-s
 https://www.cnblogs.com/luoyesiqiu/p/10701419.html
 https://acytoo.com/ladder/build-lineageos-for-tab-s/
 https://mystery00.github.io/2017/04/23/%E7%BC%96%E8%AF%91LineageOS/
+https://github.com/shantanu-sarkar/CustomROM
+https://blog.yiyitec.com/2019/08/02/译如何移植-cyanogenos-lineageos-到您自己的手机/
+https://fat-tire.github.io/porting-intro.html
+https://medium.com/@daltonfury42/building-lineageos-for-your-device-a7d26ab50549
+https://xdaforums.com/t/guide-how-to-building-lineageos-for-an-unsupported-device.4419263/
+https://blog.lynnrin.moe/posts/ROM-bringup-guide-prebuilt/
+https://blog.lynnrin.moe/posts/oneplus/
+https://blog.lynnrin.moe/posts/dior-rom/
 ```
 
 
 ## 其它ROM
 
-自定义ROM有LineageOS、pixel-experience、MoKee ROM、Havoc OS、Nitrogen-OS、OmniROM等。Samsung J3300均不支持这些自定义ROM。
+自定义 ROM 有 LineageOS、pixel-experience、MoKee ROM、Havoc OS、Nitrogen-OS、OmniROM 等。Samsung J3300 均不支持这些自定义 ROM。
 
 使用自定义ROM前一般均需对手机进行Root，解锁Bootloader，刷入TWRP。刷入自定义ROM前一般需要擦除数据，以TWRP为例，进入TWRP recovery后，选择Wipe-Advanced Wipe，勾选Dalvik/ART Cache、Cache、Data、Internal Storage、System以完成擦除。
 
@@ -1561,6 +1280,267 @@ https://resurrectionremix.com/
 
 # MoKee
 https://download.mokeedev.com/
+```
+
+# 附录：刷机调试记录
+
+以下为刷机与 Root 过程中的调试记录，含部分个人经验，仅供参考。
+
+## Magisk Root
+
+另外一个可能的方法：先刷入 twrp。可以用 supersu 来看是不是真的被 root 了。
+
+Magisk 修改的是 boot 分区。进不了 boot 分区会卡在 android 的界面，进不了 system 分区会卡在开机 logo 界面。
+
+### 相关资源
+
+```
+# Samsung fastboot临时刷入
+https://android.stackexchange.com/questions/156955/samsungs-equivalent-to-fastboots-temporary-flash
+
+# magisk文件
+https://github.com/HuskyDG/magisk-files
+
+# Magisk工作原理
+https://android.stackexchange.com/questions/213167/how-does-magisk-work
+https://android.stackexchange.com/questions/218222/how-to-boot-system-as-root-device-always-as-rooted
+```
+
+### 救砖模块
+
+刷了救砖模块手机反而启动不了了。补救方式：ADB 输命令，或者进 Safe Mode（其实就是 fastboot 或者 recovery）。
+
+```
+https://sspai.com/post/57320
+https://www.52pojie.cn/thread-1600094-1-1.html
+https://topjohnwu.github.io/Magisk/faq.html
+```
+
+### root的另外一个可能—kernelSU
+
+```
+https://blog.csdn.net/u010783226/article/details/115752477
+```
+
+### 临时 root
+
+```
+https://forum.xda-developers.com/t/how-do-i-temporarily-root-a-samsung-device-running-android-9-without-twrp-recovery.4421255/
+```
+
+### magisk不适用于android 9
+
+```
+https://forum.xda-developers.com/t/why-magisk-doesnt-work-with-pie-roms.3848025/page-3
+https://forum.xda-developers.com/t/solved-i-do-have-root-access-but-magisk-is-not-installed.3861626/
+```
+
+### Samsung J3300 Root
+
+用最新的 magisk 26.1 也不行。
+
+这个也不行（操作是先刷原版固件包，再刷它的 AP 包）：
+
+```
+https://support.halabtech.com/index.php?a=downloads&b=file&id=318127
+https://drive.google.com/file/d/1uZRLjK4I2--h69aKJ51WS40vtqINJJ4k/view
+```
+
+j3300 android 9 SAR 是 No，要装 magisk 23 才能看到。所以应该只传 boot.img 而不是整个 AP 包，但也还是不行。
+
+尝试安装时保留AVB 2.0/dm-verity 和 保持强制加密：
+
+```
+https://zhuanlan.zhihu.com/p/143181151
+```
+
+用AP包和用img分别测试了"都取消勾选""都勾选""只勾选保留AVB 2.0/dm-verity""只勾选保持强制加密"等组合，结果都是"可启动，无Root"。
+
+看日志可以看到：
+
+```
+E opjohnwu.magis: Not starting debugger since process cannot load the jdwp agent
+```
+
+```
+https://forum.xda-developers.com/t/magisk-general-support-discussion.3432382/page-1565
+https://forum.xda-developers.com/t/magisk-general-support-discussion.3432382/page-1566
+```
+
+原因很可能是升级了 bootloader 的版本，导致 magisk 的 boot 修补失效了。可能可以尝试 magisk in recovery。
+
+更新（2022-10-6）：magisk 25.2+boot.img 或 recovery.img 都不行，安装后用 recovery 的方式进入也不行。
+
+```
+https://github.com/topjohnwu/Magisk/issues/4495
+```
+
+尝试 22-25.2 的版本均不行。如果想用 22 以下的，注意一进去的时候要马上按安装，不然检测到有更新的话，就按不了了。但其实就算进去了也不行，会下载失败的。
+
+尝试以下方法，还是不行：
+
+```
+https://trendyport.com/how-to-extract-boot-img-from-boot-img-iz4-and-root-samsung/?amp
+```
+
+尝试刷入后取消自动重启，自行进入 Recovery 并重置系统，还是不行。
+
+#### Samsung J3300无法root的原因
+
+因为固件已经是ver4，比ver1/2更严格。通过解包boot.img和system.img，可以发现在system.img中的vendor\etc\fstab.qcom，有如下内容：
+
+```
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+#TODO: Add 'check' as fs_mgr_flags with data partition.
+# Currently we dont have e2fsck compiled. So fs check would failed.
+
+#<src>                                  <mnt_point>      <type>  <mnt_flags and options>                    <fs_mgr_flags>
+/dev/block/platform/soc/7824900.sdhci/by-name/userdata      /data            ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc,discard  wait,check,forceencrypt=footer,quota
+/devices/soc/7864900.sdhci/mmc_host*                        auto            vfat    defaults        voldmanaged=sdcard:auto
+/devices/soc/78db000.usb/msm_hsusb_host*                   auto            auto    defaults        voldmanaged=usb:auto
+/dev/block/bootdevice/by-name/hidden        /preload        ext4            defaults                voldmanaged=preload:auto
+```
+
+其中 `/dev/block/platform/soc/7824900.sdhci/by-name/userdata /data ext4 ... wait,check,forceencrypt=footer,quota` 表示系统启动时，必须检查 Data 分区是否加密，如果没有，就强制加密。
+
+而 Magisk 只会改动 boot.img，不改动 system.img，所以解密就没解开了。
+
+所以现在唯一的方法：
+1. 解包 system.img，改掉 fstab 的 forceencrypt 和 verify 后重新打包
+2. boot.img 送给 Magisk 进行修复
+3. 把 boot 和 system 打包为新的 tar，作为 AP 刷入
+
+## Heimdall用法
+
+使用教程如下。
+
+```
+https://forum.xda-developers.com/t/guide-how-to-install-use-heimdall-and-flash-back-to-stock.1113195/
+```
+
+两个 exe 文件，heimdall 是命令行，heimdall-frontend 是用户界面方式。替换 driver 的时候，如果没有 samsung 开头的设备，就选 MSM8953（反正选错了驱动也装不上去的）。
+
+可能需要用 1.42 版本修复 ERROR: Failed to Send Data! 问题：
+
+```
+https://www.reddit.com/r/LineageOS/comments/aymmy2/heimdall_error_failed_to_send_data/
+https://github.com/tothphu/heimdall_build
+```
+
+步骤：
+1. 下载 1.40 和 1.42 的 heimdall
+2. 用1.40下面的Drivers/zadig，更换MSM8953的驱动
+3. 命令行切换到 1.42 所在目录，运行以下命令：
+
+```
+.\heimdall.exe detect
+.\heimdall.exe download-pit --output pit.pit --no-reboot
+.\heimdall.exe print-pit --no-reboot
+```
+
+然后就可以将输出的分区表复制出来了，可以搜索一下相关分区。主要分区是 BOOT RECOVERY SYSTEM。flash 命令示例如下：
+
+```
+https://forum.xda-developers.com/t/tool-heimdall-1-4-rc1.2071724/
+.\heimdall.exe flash --resume --BOOT boot.img
+```
+
+### Mac上的odin——heimdall
+
+```
+https://glassechidna.com.au/heimdall/#downloads
+https://bitbucket.org/benjamin_dobell/heimdall/downloads/heimdall-suite-1.4.0-mac.dmg
+https://formulae.brew.sh/cask/heimdall-suite
+```
+
+可用 homebrew 安装，但在 mac12 上失败，因为它试图安装到系统盘。Jodin 基于 heimdall，所以也不行。
+
+```
+https://github.com/GameTheory-/jodin3
+```
+
+## 降级bootloader
+
+基本不可能，bootloader 禁止从高 SW REV 刷到低 SW REV。
+
+```
+https://forum.xda-developers.com/t/downgrade-bootloader-check-fail.4111575/
+https://forum.xda-developers.com/t/downgrading-bootloader-in-samsung.4382225/
+https://www.reddit.com/r/AndroidQuestions/comments/nnlg6f/sw_rev_check_fail_bootloader_device_7_binary_2/
+https://forum.gsmhosting.com/vbb/f777/how-downgrade-binaryu8-binary-u1-2963482/
+https://forum.xda-developers.com/t/guide-skipping-kg-state-prenormal-on-oneui-android-pie-9-0.3911862/
+https://forum.xda-developers.com/t/is-it-possible-to-downgrade-s8-from-pie-to-oreo-sw-rev-error.4135167/
+https://forum.xda-developers.com/t/method-for-everyone-who-wants-to-downgrade-galaxy-s8-to-oreo-nougat.3946240/
+https://forum.xda-developers.com/t/can-i-downgrade-the-samsung-bootloader-from-sw-rev-3-to-2.3650483/
+```
+
+从这里可以看到SW REV：`https://samfw.com/firmware/SM-J3300`
+
+BIN/BINARY是什么：`https://samfw.com/blog/what-is-bit-binary-value`
+
+只能刷 BINARY VALUE 比当前高或相同的固件，否则会报错。假设 value 是 4，那么可以这样来搜索 root 文件：`j3300 u4 root`。
+
+## 组合固件
+
+新 bootloader+旧系统，可以在新 bootloader 跑旧系统。
+
+```
+https://combinationfirmware.com/downloads/j3300zcu1aqh1/
+```
+
+## 解压/打包boot.img
+
+```
+https://www.whitewinterwolf.com/posts/2016/08/11/how-to-unpack-and-edit-android-boot-img/
+https://forum.xda-developers.com/t/guide-unpack-repack-boot-recovery-img-without-kitchen.2839670/
+https://github.com/cfig/Android_boot_image_editor
+https://github.com/GameTheory-/mktool
+https://github.com/pbatard/bootimg-tools
+https://stackoverflow.com/questions/57485080/stock-boot-img-not-booting-after-re-packing
+https://forum.xda-developers.com/t/tool-boot-img-tools-unpack-repack-ramdisk.2319018/
+```
+
+## 解压lz4
+
+```
+https://github.com/lz4/lz4
+```
+
+## Android看系统启动log
+
+需要 root 权限。
+
+```
+https://android.stackexchange.com/questions/26080/does-android-keep-a-log-of-when-it-boots
+https://www.xda-developers.com/how-to-take-logs-android/
+```
+
+## TWRP
+
+twrp 不能挂载分区，应该是没有解密模块。
+
+## fastboot命令大全
+
+```
+https://www.jkmeng.cn/219.html
+```
+
+## 双系统
+
+```
+https://www.jianshu.com/p/0045d820f586
+https://zhuanlan.zhihu.com/p/48520404
+```
+
+## LineageOS
+
+需要适配的设备，才能源码编译。
+
+```
+https://www.reddit.com/r/LineageOS/comments/zs2ras/how_to_get_started_with_a_unsupported_device/
 ```
 
 # 资料

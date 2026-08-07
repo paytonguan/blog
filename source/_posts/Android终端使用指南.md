@@ -1,8 +1,8 @@
 ---
-title: Android终端使用指南
+title: Android 终端使用指南
 categories: Android
 abbrlink: Android-Terminal-Guide
-date: 2020-04-22 22:54:29
+date: 2020-06-03 00:00:00
 tags:
 ---
 
@@ -14,7 +14,7 @@ tags:
 
 # Termux
 
-无需 root，打开即可在 Android 上运行 Linux。
+无需 Root 权限，打开即可在 Android 上运行 Linux。
 
 ```
 https://github.com/termux/termux-app
@@ -41,27 +41,27 @@ pkg update
 pkg upgrade
 ```
 
-## SSH连接
+## SSH 连接
 
 输入以下命令。
 
 ```
-// 安装SSH服务
+# 安装 SSH 服务
 pkg install openssh
 
-// 设置密码
+# 设置密码
 passwd
 
-// 查询手机IP
+# 查询手机 IP
 ifconfig
 
-// 查询当前用户
+# 查询当前用户
 whoami
 
-// 开启SSH
+# 开启 SSH
 sshd -p 9000
 
-// 确认SSH服务的监听端口
+# 确认 SSH 服务的监听端口
 netstat -ntlp | grep sshd
 ```
 
@@ -69,20 +69,20 @@ netstat -ntlp | grep sshd
 
 ## 运行程序
 
-SD卡目录的文件不具有可执行权限，需要拷贝到系统的/home文件夹并修改权限才可运行，示例如下。
+SD 卡目录的文件不具有可执行权限，需要拷贝到系统的 /home 文件夹并修改权限才可运行，示例如下。
 
 ```
 cp Demo /home/Demo
 cd /home
 chmod 777 Demo
 
-// 运行
+# 运行
 ./Demo
 ```
 
 ## 优化终端
 
-可用zsh代替bash作为默认shell。通过以下命令即可。
+可用 zsh 代替 bash 作为默认 shell。通过以下命令即可。
 
 ```
 sh -c "$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)"
@@ -106,21 +106,32 @@ https://github.com/tanyiok1234/waifu2x_srmd-ncnn-vulkan-termux-binary
 
 ## 常用命令
 
-### 访问SD卡目录
+### 访问 SD 卡目录
 
 ```
 termux-setup-storage
 ```
 
-## 完整Linux
+## 环境配置
 
-Termux不是完整Linux，但可配合其它APP实现完整Linux的安装。
+以下为 Termux 本机（无需安装完整 Linux）的环境配置。
 
-### 通过AnLinux
+### Java
+
+```
+pkg install ecj
+pkg install dx
+```
+
+## 完整 Linux
+
+Termux 不是完整 Linux，但可配合其它 App 实现完整 Linux 的安装。
+
+### 通过 AnLinux
 
 #### 安装
 
-安装AnLinux后打开，选择需要安装的Linux发行版。复制指令并在Termux的终端中运行即可。以Debian为例，完成后在Termux可通过以下指令启动系统。
+安装 AnLinux 后打开，选择需要安装的 Linux 发行版。复制指令并在 Termux 的终端中运行即可。以 Debian 为例，完成后在 Termux 可通过以下指令启动系统。
 
 ```
 ./start-debian.sh
@@ -134,20 +145,20 @@ command+=" -b /sdcard"
 
 #### 桌面环境配置
 
-安装前需先启动系统。在AnLinux中按照步骤操作即可。
+安装前需先启动系统。在 AnLinux 中按照步骤操作即可。
 
-完成安装后需要安装VNC Viewer，然后在Termux中运行以下命令以开启VNC。
+完成安装后需要安装 VNC Viewer，然后在 Termux 中运行以下命令以开启 VNC。
 
 ```
 vncserver-start
 
-// 若出现错误，需要先输入以下指令停止VNC
+# 若出现错误，需要先输入以下指令停止 VNC
 vncserver-stop
 ```
 
-复制输出的地址到VNC Viewer，此处以`localhost:1`为例，密码为开启VNC时所设置的密码。完成后连接即可。
+复制输出的地址到 VNC Viewer，此处以`localhost:1`为例，密码为开启 VNC 时所设置的密码。完成后连接即可。
 
-### 通过atilo
+### 通过 atilo
 
 #### 安装
 
@@ -166,17 +177,17 @@ pkg in atilo-cn
 atilo list
 ```
 
-以安装Debian为例，命令如下。
+以安装 Debian 为例，命令如下。
 
 ```
-// 安装
+# 安装
 atilo install debian
 
-// 卸载
+# 卸载
 atilo remove debian
 ```
 
-注意，如果下载失败，需要先通过以下命令在手机的tmp目录中删除安装包，否则该脚本会直接跳过下载。
+注意，如果下载失败，需要先通过以下命令在手机的 tmp 目录中删除安装包，否则该脚本会直接跳过下载。
 
 ```
 cd ~/.atilo
@@ -191,26 +202,24 @@ termux-chroot
 startdebian
 ```
 
-#### Debian环境配置
+#### Debian 环境配置
 
 以下是 atilo 安装的 Debian 系统内的环境配置。
 
-##### JAVA
+安装 Java：
 
 ```
 apt search openjdk
 apt install default-jdk
 ```
 
-##### python
-
-通过以下命令安装。
+安装 Python：
 
 ```
 apt install python3 python3-pip
 ```
 
-打开~/.pip/pip.conf，修改为以下内容以更换pip的软件源。
+更换 pip 软件源：打开 ~/.pip/pip.conf，修改为以下内容。
 
 ```
 [global]
@@ -219,22 +228,9 @@ index-url =http://pypi.douban.com/simple
 trusted-host=pypi.douban.com
 ```
 
-## 环境配置
+### 完整 Linux 内环境配置
 
-### Termux本机
-
-以下为 Termux 本机（无需安装完整Linux）的环境配置。
-
-#### Java
-
-```
-pkg install ecj
-pkg install dx
-```
-
-### 完整Linux内
-
-以下环境配置需要在完整Linux中完成。
+以下环境配置需要在完整 Linux 中完成。
 
 #### Fortran
 
@@ -266,7 +262,7 @@ apt search gcc
 apt search gfortran
 ```
 
-以gcc-8为例，安装及检验命令如下。
+以 gcc-8 为例，安装及检验命令如下。
 
 ```
 apt install gcc-8
@@ -300,32 +296,32 @@ https://github.com/KhronosGroup/OpenCL-Headers
 └── [主程序，以test.cpp为例]
 ```
 
-CMakeLists.txt按照以下格式填写，通过cmake和make即可生成相应文件。
+CMakeLists.txt 按照以下格式填写，通过 cmake 和 make 即可生成相应文件。
 
 ```
 # CMake 最低版本号要求
 cmake_minimum_required (VERSION 2.8.11)
- 
+
 # 项目信息
 project (Test)
- 
+
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
- 
-include_directories ("${PROJECT_SOURCE_DIR}/CL") 
- 
+
+include_directories ("${PROJECT_SOURCE_DIR}/CL")
+
 # 查找当前目录下的所有源文件
 # 并将名称保存到 DIR_SRCS 变量
 aux_source_directory(. DIR_SRCS)
- 
-#首先申明动态库的位置
+
+# 首先声明动态库的位置
 LINK_DIRECTORIES("${PROJECT_SOURCE_DIR}")
- 
+
 SET(HELLO_SRC libOpenCL.so )
- 
+
 # 指定生成目标
 add_executable (testopencldemo ${DIR_SRCS})
- 
-#制定具体的动态库的名称 
+
+# 指定具体的动态库的名称
 target_link_libraries (testopencldemo ${HELLO_SRC})
 ```
 
@@ -348,9 +344,9 @@ pip3 install matplotlib
 jupyter notebook
 ```
 
-可通过配置文件，避免输入`http://localhost:8888/`后面的一串密匙。
+可通过配置文件，避免输入`http://localhost:8888/`后面的一串密钥。
 
-运行以下命令以生成配置文件和密匙。
+运行以下命令以生成配置文件和密钥。
 
 ```
 jupyter notebook --generate-config
@@ -359,11 +355,11 @@ from notebook.auth import passwd
 passwd()
 ```
 
-完成密码输入后复制所得内容，修改data/data/com.termux/files/home/.jupyter目录下的jupyter_notebook_config.py，如下。
+完成密码输入后复制所得内容，修改 data/data/com.termux/files/home/.jupyter 目录下的 jupyter_notebook_config.py，如下。
 
 ```
 c.NotebookApp.password = 'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed' # 修改为前面所得的内容
-c.NotebookApp.ip = '*' # 允许任何ip访问
+c.NotebookApp.ip = '*' # 允许任何 IP 访问
 c.NotebookApp.open_browser = False
 c.NotebookApp.port = 8888 # 可自行指定端口，访问时使用
 ```
@@ -373,11 +369,11 @@ c.NotebookApp.port = 8888 # 可自行指定端口，访问时使用
 ```
 http://localhost:8888/
 
-// 电脑端利用SSH登录手机后可输入以下网站
-[手机IP地址].8888
+# 电脑端利用 SSH 登录手机后可输入以下网站
+[手机IP地址]:8888
 ```
 
-可运行以下命令以安装python扩展包，使编写python时有提示符。安装完成后在Jupyter notebook中出现Nbextensions，选择Hinterland即可。
+可运行以下命令以安装 python 扩展包，使编写 python 时有提示符。安装完成后在 Jupyter notebook 中出现 Nbextensions，选择 Hinterland 即可。
 
 ```
 apt install libxml2
@@ -389,7 +385,7 @@ pip3 install jupyter_nbextensions_configurator
 
 #### VS Code
 
-输入以下命令安装node、npm和cnpm。
+输入以下命令安装 node、npm 和 cnpm。
 
 ```
 apt install nodejs
@@ -398,7 +394,7 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 cnpm install -g npm
 ```
 
-用cnpm安装wcode。
+用 cnpm 安装 wcode。
 
 ```
 cnpm install -g wcode
@@ -413,35 +409,35 @@ wcode -p 9999 /home
 通过浏览器访问即可。
 
 ```
-// 手机浏览器
+# 手机浏览器
 localhost:9999
 
-// 内网电脑
+# 内网电脑
 [手机IP地址]:9999
 ```
 
-也可通过code-server。下载arm64版本的安装包，复制到手机并解压。
+也可通过 code-server。下载 arm64 版本的安装包，复制到手机并解压。
 
 ```
 https://github.com/cdr/code-server/releases
 ```
 
-解压完成后切换到该目录，并运行以下命令开启VS Code。通过浏览器访问即可，同上。
+解压完成后切换到该目录，并运行以下命令开启 VS Code。通过浏览器访问即可，同上。
 
 ```
-export PASSWORD=123456 
+export PASSWORD=123456
 ./code-server --auth password --port 9999
 ```
 
 # Aid Learning
 
-Termux的国内高仿版。无需安装Termux，直接下载即可使用。Aid Learning已自带VS Code。
+Termux 的国内高仿版。无需安装 Termux，直接下载即可使用。Aid Learning 已自带 VS Code。
 
 ## 环境配置
 
 ### gfortran
 
-Aid Learning已自带gcc/gfortran。若没有可通过以下命令安装。
+Aid Learning 已自带 gcc/gfortran。若没有可通过以下命令安装。
 
 ```
 apt install gcc
@@ -450,7 +446,7 @@ apt install gfortran
 
 ### JAVA
 
-以Java 8为例，通过以下命令安装。
+以 Java 8 为例，通过以下命令安装。
 
 ```
 apt install openjdk-8-jdk
@@ -463,42 +459,42 @@ apt install openjdk-8-jre
 java -version
 ```
 
-若出现错误，则需要修改环境变量。打开/etc/profile，添加以下内容后保存。
+若出现错误，则需要修改环境变量。打开 /etc/profile，添加以下内容后保存。
 
 ```
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-arm64"
 export CLASSPATH=.$JAVA_HOME/lib/
 export JRE_HOME=$JAVA_HOME/jre
-export PATH=$JAVA_HOME/bin:$PAT
+export PATH=$JAVA_HOME/bin:$PATH
 ```
 
 ### Jupyter
 
-Aid Learning已自带Jupyter。
+Aid Learning 已自带 Jupyter。
 
 #### 基本使用
 
-可使用Jupyter Lab，通过以下命令安装和启动即可。
+可使用 Jupyter Lab，通过以下命令安装和启动即可。
 
 ```
-// 安装
+# 安装
 pip3 install jupyterlab
 
-// 启动
+# 启动
 jupyter lab
 ```
 
-也可使用Jupyter Notebook。直接运行以下命令即可。
+也可使用 Jupyter Notebook。直接运行以下命令即可。
 
 ```
 jupyter notebook
 ```
 
-#### Java内核
+#### Java 内核
 
-注意，Jupyter支持的JDK版本为9.0及以上，而Aid Learning内核支持的JDK为JDK8，因此在安装Java时需要留意版本。
+注意，Jupyter 支持的 JDK 版本为 9.0 及以上，而 Aid Learning 内核支持的 JDK 为 JDK8，因此在安装 Java 时需要留意版本。
 
-可安装IJava支持套件。通过以下链接下载，然后复制到手机。
+可安装 IJava 支持套件。通过以下链接下载，然后复制到手机。
 
 ```
 https://github.com/SpencerPark/IJava/
@@ -507,12 +503,12 @@ https://github.com/SpencerPark/IJava/
 切换到文件所在位置并运行以下命令。
 
 ```
-unzip ijava.zip -d ijava // 文件名为ijava.zip
+unzip ijava.zip -d ijava # 文件名为 ijava.zip
 cd ijava
 python3 install.py --sys-prefix
 ```
 
-安装完成后查看Jupyter内核，此时应当有Java。
+安装完成后查看 Jupyter 内核，此时应当有 Java。
 
 ```
 jupyter kernelspec list
