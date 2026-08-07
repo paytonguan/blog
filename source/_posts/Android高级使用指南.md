@@ -1032,6 +1032,267 @@ https://f-droid.org/zh_Hans/packages/com.termux/
 
 游戏修改器。
 
+# 附录：刷机调试记录
+
+以下为刷机与Root过程中的调试记录，含部分个人经验，仅供参考。
+
+## Magisk Root
+
+另外一个可能的方法：先刷入twrp。可以用supersu来看是不是真的被root了。
+
+Magisk修改的是boot分区。进不了boot分区会卡在android的界面，进不了system分区会卡在开机logo界面。
+
+### 相关资源
+
+```
+# Samsung fastboot临时刷入
+https://android.stackexchange.com/questions/156955/samsungs-equivalent-to-fastboots-temporary-flash
+
+# magisk文件
+https://github.com/HuskyDG/magisk-files
+
+# Magisk工作原理
+https://android.stackexchange.com/questions/213167/how-does-magisk-work
+https://android.stackexchange.com/questions/218222/how-to-boot-system-as-root-device-always-as-rooted
+```
+
+### 救砖模块
+
+刷了救砖模块手机反而启动不了了。补救方式：ADB输命令，或者进Safe Mode（其实就是fastboot或者recovery）。
+
+```
+https://sspai.com/post/57320
+https://www.52pojie.cn/thread-1600094-1-1.html
+https://topjohnwu.github.io/Magisk/faq.html
+```
+
+### root的另外一个可能—kernelSU
+
+```
+https://blog.csdn.net/u010783226/article/details/115752477
+```
+
+### 临时 root
+
+```
+https://forum.xda-developers.com/t/how-do-i-temporarily-root-a-samsung-device-running-android-9-without-twrp-recovery.4421255/
+```
+
+### magisk不适用于android 9
+
+```
+https://forum.xda-developers.com/t/why-magisk-doesnt-work-with-pie-roms.3848025/page-3
+https://forum.xda-developers.com/t/solved-i-do-have-root-access-but-magisk-is-not-installed.3861626/
+```
+
+### Samsung J3300 Root
+
+用最新的magisk 26.1也不行。
+
+这个也不行（操作是先刷原版固件包，再刷它的AP包）：
+
+```
+https://support.halabtech.com/index.php?a=downloads&b=file&id=318127
+https://drive.google.com/file/d/1uZRLjK4I2--h69aKJ51WS40vtqINJJ4k/view
+```
+
+j3300 android 9 SAR 是 No，要装magisk 23 才能看到。所以应该只传 boot.img 而不是整个 AP 包，但也还是不行。
+
+尝试安装时保留AVB 2.0/dm-verity 和 保持强制加密：
+
+```
+https://zhuanlan.zhihu.com/p/143181151
+```
+
+用AP包和用img分别测试了"都取消勾选""都勾选""只勾选保留AVB 2.0/dm-verity""只勾选保持强制加密"等组合，结果都是"可启动，无Root"。
+
+看日志可以看到：
+
+```
+E opjohnwu.magis: Not starting debugger since process cannot load the jdwp agent
+```
+
+```
+https://forum.xda-developers.com/t/magisk-general-support-discussion.3432382/page-1565
+https://forum.xda-developers.com/t/magisk-general-support-discussion.3432382/page-1566
+```
+
+原因很可能是升级了bootloader的版本，导致magisk的boot修补失效了。可能可以尝试magisk in recovery。
+
+更新（2022-10-6）：magisk 25.2+boot.img或recovery.img都不行，安装后用recovery的方式进入也不行。
+
+```
+https://github.com/topjohnwu/Magisk/issues/4495
+```
+
+尝试22-25.2的版本均不行。如果想用22以下的，注意一进去的时候要马上按安装，不然检测到有更新的话，就按不了了。但其实就算进去了也不行，会下载失败的。
+
+尝试以下方法，还是不行：
+
+```
+https://trendyport.com/how-to-extract-boot-img-from-boot-img-iz4-and-root-samsung/?amp
+```
+
+尝试刷入后取消自动重启，自行进入Recovery并重置系统，还是不行。
+
+#### Samsung J3300无法root的原因
+
+因为固件已经是ver4，比ver1/2更严格。通过解包boot.img和system.img，可以发现在system.img中的vendor\etc\fstab.qcom，有如下内容：
+
+```
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+#TODO: Add 'check' as fs_mgr_flags with data partition.
+# Currently we dont have e2fsck compiled. So fs check would failed.
+
+#<src>                                  <mnt_point>      <type>  <mnt_flags and options>                    <fs_mgr_flags>
+/dev/block/platform/soc/7824900.sdhci/by-name/userdata      /data            ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc,discard  wait,check,forceencrypt=footer,quota
+/devices/soc/7864900.sdhci/mmc_host*                        auto            vfat    defaults        voldmanaged=sdcard:auto
+/devices/soc/78db000.usb/msm_hsusb_host*                   auto            auto    defaults        voldmanaged=usb:auto
+/dev/block/bootdevice/by-name/hidden        /preload        ext4            defaults                voldmanaged=preload:auto
+```
+
+其中 `/dev/block/platform/soc/7824900.sdhci/by-name/userdata /data ext4 ... wait,check,forceencrypt=footer,quota` 表示系统启动时，必须检查 Data 分区是否加密，如果没有，就强制加密。
+
+而Magisk只会改动boot.img，不改动system.img，所以解密就没解开了。
+
+所以现在唯一的方法：
+1. 解包system.img，改掉fstab的forceencrypt和verify后重新打包
+2. boot.img送给Magisk进行修复
+3. 把boot和system打包为新的tar，作为AP刷入
+
+## Heimdall用法
+
+使用教程如下。
+
+```
+https://forum.xda-developers.com/t/guide-how-to-install-use-heimdall-and-flash-back-to-stock.1113195/
+```
+
+两个exe文件，heimdall是命令行，heimdall-frontend是用户界面方式。替换driver的时候，如果没有samsung开头的设备，就选MSM8953（反正选错了驱动也装不上去的）。
+
+可能需要用1.42版本修复ERROR: Failed to Send Data! 问题：
+
+```
+https://www.reddit.com/r/LineageOS/comments/aymmy2/heimdall_error_failed_to_send_data/
+https://github.com/tothphu/heimdall_build
+```
+
+步骤：
+1. 下载1.40和1.42的heimdall
+2. 用1.40下面的Drivers/zadig，更换MSM8953的驱动
+3. 命令行切换到1.42所在目录，运行以下命令：
+
+```
+.\heimdall.exe detect
+.\heimdall.exe download-pit --output pit.pit --no-reboot
+.\heimdall.exe print-pit --no-reboot
+```
+
+然后就可以将输出的分区表复制出来了，可以搜索一下相关分区。主要分区是BOOT RECOVERY SYSTEM。flash命令示例如下：
+
+```
+https://forum.xda-developers.com/t/tool-heimdall-1-4-rc1.2071724/
+.\heimdall.exe flash --resume --BOOT boot.img
+```
+
+### Mac上的odin——heimdall
+
+```
+https://glassechidna.com.au/heimdall/#downloads
+https://bitbucket.org/benjamin_dobell/heimdall/downloads/heimdall-suite-1.4.0-mac.dmg
+https://formulae.brew.sh/cask/heimdall-suite
+```
+
+可用homebrew安装，但在mac12上失败，因为它试图安装到系统盘。Jodin基于heimdall，所以也不行。
+
+```
+https://github.com/GameTheory-/jodin3
+```
+
+## 降级bootloader
+
+基本不可能，bootloader禁止从高SW REV刷到低SW REV。
+
+```
+https://forum.xda-developers.com/t/downgrade-bootloader-check-fail.4111575/
+https://forum.xda-developers.com/t/downgrading-bootloader-in-samsung.4382225/
+https://www.reddit.com/r/AndroidQuestions/comments/nnlg6f/sw_rev_check_fail_bootloader_device_7_binary_2/
+https://forum.gsmhosting.com/vbb/f777/how-downgrade-binaryu8-binary-u1-2963482/
+https://forum.xda-developers.com/t/guide-skipping-kg-state-prenormal-on-oneui-android-pie-9-0.3911862/
+https://forum.xda-developers.com/t/is-it-possible-to-downgrade-s8-from-pie-to-oreo-sw-rev-error.4135167/
+https://forum.xda-developers.com/t/method-for-everyone-who-wants-to-downgrade-galaxy-s8-to-oreo-nougat.3946240/
+https://forum.xda-developers.com/t/can-i-downgrade-the-samsung-bootloader-from-sw-rev-3-to-2.3650483/
+```
+
+从这里可以看到SW REV：`https://samfw.com/firmware/SM-J3300`
+
+BIN/BINARY是什么：`https://samfw.com/blog/what-is-bit-binary-value`
+
+只能刷BINARY VALUE比当前高或相同的固件，否则会报错。假设value是4，那么可以这样来搜索root文件：`j3300 u4 root`。
+
+## 组合固件
+
+新bootloader+旧系统，可以在新bootloader跑旧系统。
+
+```
+https://combinationfirmware.com/downloads/j3300zcu1aqh1/
+```
+
+## 解压/打包boot.img
+
+```
+https://www.whitewinterwolf.com/posts/2016/08/11/how-to-unpack-and-edit-android-boot-img/
+https://forum.xda-developers.com/t/guide-unpack-repack-boot-recovery-img-without-kitchen.2839670/
+https://github.com/cfig/Android_boot_image_editor
+https://github.com/GameTheory-/mktool
+https://github.com/pbatard/bootimg-tools
+https://stackoverflow.com/questions/57485080/stock-boot-img-not-booting-after-re-packing
+https://forum.xda-developers.com/t/tool-boot-img-tools-unpack-repack-ramdisk.2319018/
+```
+
+## 解压lz4
+
+```
+https://github.com/lz4/lz4
+```
+
+## Android看系统启动log
+
+需要root权限。
+
+```
+https://android.stackexchange.com/questions/26080/does-android-keep-a-log-of-when-it-boots
+https://www.xda-developers.com/how-to-take-logs-android/
+```
+
+## TWRP
+
+twrp不能挂载分区，应该是没有解密模块。
+
+## fastboot命令大全
+
+```
+https://www.jkmeng.cn/219.html
+```
+
+## 双系统
+
+```
+https://www.jianshu.com/p/0045d820f586
+https://zhuanlan.zhihu.com/p/48520404
+```
+
+## LineageOS
+
+需要适配的设备，才能源码编译。
+
+```
+https://www.reddit.com/r/LineageOS/comments/zs2ras/how_to_get_started_with_a_unsupported_device/
+```
+
 # 系统
 
 ## 三星ROM
@@ -1301,6 +1562,38 @@ https://resurrectionremix.com/
 # MoKee
 https://download.mokeedev.com/
 ```
+
+# 资料
+
+## Android内核编译
+
+```
+https://source.android.com/setup/build/building-kernels-deprecated?hl=zh-cn
+```
+
+## Android固件资源站
+
+```
+https://androidfilehost.com/
+```
+
+## Halium（GNU/Linux运行于Android硬件）
+
+```
+https://forum.renegade-project.org/t/845-windows/36
+https://forum.xda-developers.com/t/halium-9-0-halium-boot-ubports-guide.4093517/
+https://docs.halium.org/en/latest/
+https://www.jianshu.com/p/9b85dce0dcb7
+```
+
+## 其它
+
+```
+https://sspai.com/post/73603
+https://sspai.com/post/53772
+https://sspai.com/post/53075
+```
+
 
 # 参考教程
 
