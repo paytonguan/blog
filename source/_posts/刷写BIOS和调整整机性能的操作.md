@@ -1,14 +1,14 @@
 ---
-title: 刷写BIOS和调整整机性能的操作
+title: 刷写 BIOS 和调整整机性能的操作
 categories: Computer
 abbrlink: BIOS-Editing-And-Flashing
-date: 2019-11-26 10:33:29
+date: 2020-04-16 00:00:00
 tags:
 ---
 
 ![](topic.jpg)
 
-对BIOS进行修改和刷写，可以解锁BIOS的其它功能。
+对 BIOS 进行修改和刷写，可以解锁 BIOS 的其它功能。
 
 <!-- more -->
 
@@ -32,7 +32,7 @@ https://www.win-raid.com/t154f16-Tool-Guide-News-quot-UEFI-BIOS-Updater-quot-UBU
 
 ## BIOS Backup TooKit
 
-BIOS备份。
+BIOS 备份。
 
 ```
 https://www.jb51.net/softs/193820.html
@@ -40,7 +40,7 @@ https://www.jb51.net/softs/193820.html
 
 ## DMIScope
 
-查看BIOS信息。
+查看 BIOS 信息。
 
 ```
 http://www.xz7.com/downinfo/495965.html
@@ -48,13 +48,13 @@ http://www.xz7.com/downinfo/495965.html
 
 ## RW
 
-查看BIOS信息。
+查看 BIOS 信息。
 
 ```
 http://www.uzzf.com/soft/86050.html
 ```
 
-## BIOS工具包
+## BIOS 工具包
 
 ```
 https://www.bios-mods.com/downloads/
@@ -73,13 +73,13 @@ https://www.bios-mods.com/downloads/
 http://www.softnology.biz/files.html
 ```
 
-打开软件并点击Read获取SPD信息，选择内存后点击Report，然后直接页面拉到最下面，点击Show delays in nanoseconds。点击Export，选择Complete HTML Report，即可生成包含内存信息的配置文件。
+打开软件并点击 Read 获取 SPD 信息，选择内存后点击 Report，然后直接页面拉到最下面，点击 Show delays in nanoseconds。点击 Export，选择 Complete HTML Report，即可生成包含内存信息的配置文件。
 
-# BIOS降级
+# BIOS 降级
 
 ## 华硕
 
-华硕主板在Windows下可用WinFlash进行BIOS刷写操作，但只能升级而不能降级。WinFlash下载链接如下。
+华硕主板在 Windows 下可用 WinFlash 进行 BIOS 刷写操作，但只能升级而不能降级。WinFlash 下载链接如下。
 
 ```
 https://www.pcsoft.com.cn/soft/166235.html
@@ -89,11 +89,11 @@ https://www.pcsoft.com.cn/soft/166235.html
 
 # UEFI BIOS
 
-以本机华硕笔记本为例，类型为AMI BIOS。
+以本机华硕笔记本为例，类型为 AMI BIOS。
 
-## 制作EFI Shell与grub引导盘
+## 制作 EFI Shell 与 grub 引导盘
 
-准备一个U盘，格式化为FAT32格式。打开以下链接，将整个项目Download下来后解压，将所有内容复制到U盘内。
+准备一个 U 盘，格式化为 FAT32 格式。打开以下链接，将整个项目 Download 下来后解压，将所有内容复制到 U 盘内。
 
 ```
 https://github.com/holoto/efi_shell_flash_bios
@@ -110,36 +110,36 @@ http://brains.by/posts/bootx64.7z
 
 打开EFI/BOOT，把`efi shell for flash bios`目录里的文件复制到此目录即可启动EFI Shell，把 `grub efi shell for setup_var`目录里的文件复制到此目录即可启动grub。
 
-重启电脑，在BIOS里选择U盘启动即可。
+重启电脑，在 BIOS 里选择 U 盘启动即可。
 
 ## 修改隐藏设置
 
-需要先从官网获得BIOS固件。
+需要先从官网获得 BIOS 固件。
 
 ### 提取条目
 
-下载UEFITool，链接如下。
+下载 UEFITool，链接如下。
 
 ```
 https://github.com/LongSoft/UEFITool
 ```
 
-用UEFITool打开原BIOS，通过搜索功能搜索BIOS Lock或DVMT，注意搜索框需切换到`Text`选项卡。在搜索结果所指向的PE32模块点击右键（一般并非整个GUID），选择Extract body，保存为bin文件，完成提取。
+用 UEFITool 打开原 BIOS，通过搜索功能搜索 BIOS Lock 或 DVMT，注意搜索框需切换到`Text`选项卡。在搜索结果所指向的 PE32 模块点击右键（一般并非整个 GUID），选择 Extract body，保存为 bin 文件，完成提取。
 
-下载IFR Extractor，链接如下。
+下载 IFR Extractor，链接如下。
 
 ```
 https://www.appgao.com/files/288.html
 https://github.com/LongSoft/Universal-IFR-Extractor
 ```
 
-用IFR Extractor打开所提取的文件，保存为txt。打开txt后可以看到BIOS所有可调整的条目及选项，现以BIOS Lock条目说明如下。
+用 IFR Extractor 打开所提取的文件，保存为 txt。打开 txt 后可以看到 BIOS 所有可调整的条目及选项，现以 BIOS Lock 条目说明如下。
 
 ```
-// One Of表示条目名称，VarStoreInfo表示对应地址，VarStore表示值
+# One Of表示条目名称，VarStoreInfo表示对应地址，VarStore表示值
 One of: BIOS Lock, VarStoreInfo (VarOffset/VarName): 0x8A6, VarStore: 0x1, QuestionID: 0x931, size: 1, Min: 0x0, Max 0x1, Step: 0x0 {05 91 1C 08 1D 08 31 09 01 00 A6 08 10 10 00 01 00}
 
-// 可选项及对应值
+# 可选项及对应值
     Default: DefaultId: 0x0, value (8 bit): 0x1 {5B 06 00 00 00 01}
     One Of Option: Disabled, value (8 bit): 0x0 {09 07 04 00 00 00 00}
     One Of Option: Enabled, value (8 bit): 0x1 {09 07 03 00 00 00 01}
@@ -147,9 +147,9 @@ One of: BIOS Lock, VarStoreInfo (VarOffset/VarName): 0x8A6, VarStore: 0x1, Quest
 End One Of {29 02}
 ```
 
-搜索并记录所需要修改的条目。如需修改BIOS Lock，则记下其地址`0x8A6`和要修改成的值`0x0[Disabled]`。
+搜索并记录所需要修改的条目。如需修改 BIOS Lock，则记下其地址`0x8A6`和要修改成的值`0x0[Disabled]`。
 
-注意如果是如下的`Numeric`形式，则表明此条目为填写数字的内容，该地址的值在Min和Max之间即可。
+注意如果是如下的`Numeric`形式，则表明此条目为填写数字的内容，该地址的值在 Min 和 Max 之间即可。
 
 ```
 Numeric: Wake up hour, VarStoreInfo (VarOffset/VarName): 0xF, VarStore: 0x1, QuestionId: 0x30, Size: 1, Min: 0x0, Max 0x17, Step: 0x1 {07 91 DC 00 DD 00 30 00 01 00 0F 00 10 10 00 17 01}
@@ -157,11 +157,11 @@ Numeric: Wake up hour, VarStoreInfo (VarOffset/VarName): 0xF, VarStore: 0x1, Que
              End {29 02}
 ```
 
-对于该txt的内容，Suppress If语句用于禁用子菜单，True和False分别被编码为46 02和47 02。
+对于该 txt 的内容，Suppress If 语句用于禁用子菜单，True 和 False 分别被编码为 46 02 和 47 02。
 
 ### 修改条目
 
-从U盘进入grub，输入以下命令以修改。下面以BIOS Lock为例。
+从 U 盘进入 grub，输入以下命令以修改。下面以 BIOS Lock 为例。
 
 ```
 setup_var_3 0x8A6 // 查找BIOS Lock地址
@@ -182,41 +182,41 @@ https://habr.com/en/post/190354/
 
 #### 显示隐藏菜单
 
-##### 通过AFUWIN
+##### 通过 AFUWIN
 
-下载AFUWIN，链接如下。打开AFUWIN，点击Save提取BIOS。
+下载 AFUWIN，链接如下。打开 AFUWIN，点击 Save 提取 BIOS。
 
 ```
 http://www.winwin7.com/soft/xtgj-8140.html
 ```
 
-下载AMIBCP，链接如下。
+下载 AMIBCP，链接如下。
 
 ```
 https://www.onlinedown.net/soft/1114140.htm
 ```
 
-用AMIBCP打开所提取的rom文件，左侧目录栏切换到Setup。在Setup内部为BIOS的具体条目，将需要显示的条目由Default改为Supervisor或USER，修改完成后保存为新的rom文件。对于本机而言，有两个Setup菜单，其中第二个才是华硕的UEFI BIOS菜单，且需要修改为Supervisor才能使显示生效。
+用 AMIBCP 打开所提取的 rom 文件，左侧目录栏切换到 Setup。在 Setup 内部为 BIOS 的具体条目，将需要显示的条目由 Default 改为 Supervisor 或 USER，修改完成后保存为新的 rom 文件。对于本机而言，有两个 Setup 菜单，其中第二个才是华硕的 UEFI BIOS 菜单，且需要修改为 Supervisor 才能使显示生效。
 
-##### 通过UEFITool
+##### 通过 UEFITool
 
-用UEFITool打开从官网下载的BIOS固件，搜索Setup，找到固件的Setup DXE。在其上点击右键，选择`Extract body...`并保存为setup.bin。
+用 UEFITool 打开从官网下载的 BIOS 固件，搜索 Setup，找到固件的 Setup DXE。在其上点击右键，选择`Extract body...`并保存为 setup.bin。
 
-以二进制文件方式打开setup.bin，搜索`01 01 00 01 01 01`。若存在，则证明有菜单被隐藏，将00改为01即可。
+以二进制文件方式打开 setup.bin，搜索`01 01 00 01 01 01`。若存在，则证明有菜单被隐藏，将 00 改为 01 即可。
 
-找到需要修改的条目，True为46 02，False为47 02，修改为对应选项。完成后保存，回到UEFITool，右键选择`Replace body...`，选择刚才修改好的文件，另存为新的BIOS固件即可。
+找到需要修改的条目，True 为 46 02，False 为 47 02，修改为对应选项。完成后保存，回到 UEFITool，右键选择`Replace body...`，选择刚才修改好的文件，另存为新的 BIOS 固件即可。
 
-#### 删除WLAN/WWAN白名单
+#### 删除 WLAN/WWAN 白名单
 
-用UEFITool NE打开BIOS，搜索Text，内容为`Unauthorized Wireless network card is plugged in`。然后用旧版UEFITool打开BIOS，切换到相同的位置，右键单击`PE32 image section`并选择`extract the body`。
+用 UEFITool NE 打开 BIOS，搜索 Text，内容为`Unauthorized Wireless network card is plugged in`。然后用旧版 UEFITool 打开 BIOS，切换到相同的位置，右键单击`PE32 image section`并选择`extract the body`。
 
-用IDA Pro打开提取出来的文件，搜索以下内容，即上面的字符串。
+用 IDA Pro 打开提取出来的文件，搜索以下内容，即上面的字符串。
 
 ```
 55 00 6E 00 61 00 75 00 74 00 68 00 6F 00 72 00 69 00 7A 00 65 00 64 00 20 00 57 00 69 00 72 00 65 00 6C 00 65 00 73 00 73 00 20 00 6E 00 65 00 74 00 77 00 6F 00 72 00 6B 00 20 00 63 00 61 00 72 00 64 00 20 00 69 00 73 00 20 00 70 00 6C 00 75 00 67 00 67 00 65 00 64 00 20 00 69 00 6E
 ```
 
-双击找到的结果，单击其自动生成的名称并按X转到外部参照，然后打开弹出的函数。从流程图中可看出，一旦检测到未经授权的卡，BIOS将进入无限的while循环，示例如下。
+双击找到的结果，单击其自动生成的名称并按 X 转到外部参照，然后打开弹出的函数。从流程图中可看出，一旦检测到未经授权的卡，BIOS 将进入无限的 while 循环，示例如下。
 
 ```
 │
@@ -257,13 +257,13 @@ https://www.onlinedown.net/soft/1114140.htm
     └───────────────────────────
 ```
 
-为防止进入循环，点击loc_18000039A的jz语句，选择Edit-Patch program-Assemble…，将语句从jz更改为jmp，如下。
+为防止进入循环，点击 loc_18000039A 的 jz 语句，选择 Edit-Patch program-Assemble…，将语句从 jz 更改为 jmp，如下。
 
 ```
 jmp   short loc_1800003AE
 ```
 
-也可通过其它修改方式。查看代码，可发现当以下变量为true时，白名单检测才会生效。
+也可通过其它修改方式。查看代码，可发现当以下变量为 true 时，白名单检测才会生效。
 
 ```
 void sub_180000324(){
@@ -278,7 +278,7 @@ void sub_180000324(){
 }
 ```
 
-通过Xrefs寻找这两个变量被定义的位置。回到_ModuleEntryPoint，可发现这两个变量的值来自另外两个全局变量。
+通过 Xrefs 寻找这两个变量被定义的位置。回到_ModuleEntryPoint，可发现这两个变量的值来自另外两个全局变量。
 
 ```
 EFI_STATUS __cdecl ModuleEntryPoint(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *SystemTable)
@@ -290,7 +290,7 @@ EFI_STATUS __cdecl ModuleEntryPoint(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *Sy
 }
 ```
 
-通过查看，可发现如下内容。即这两个变量为全局配置，用于配置是否启用WLAN和WWAN白名单。
+通过查看，可发现如下内容。即这两个变量为全局配置，用于配置是否启用 WLAN 和 WWAN 白名单。
 
 ```
 ...
@@ -300,13 +300,13 @@ EFI_STATUS __cdecl ModuleEntryPoint(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *Sy
 ...
 ```
 
-点击对应字节，即可跳转到十六进制视图并查看内容。将对应内容从01修改为00即可。修改完成后点击Edit-Patch program-Apply patches to input file…保存更改。
+点击对应字节，即可跳转到十六进制视图并查看内容。将对应内容从 01 修改为 00 即可。修改完成后点击 Edit-Patch program-Apply patches to input file…保存更改。
 
-在旧版UEFITool刚才的位置上右键，点击Replace body...，选择刚才修改过的文件。然后点击Save image file…保存。
+在旧版 UEFITool 刚才的位置上右键，点击 Replace body...，选择刚才修改过的文件。然后点击 Save image file…保存。
 
 ### 刷入文件
 
-将修改好的BIOS修改为bios.rom并放入U盘根目录。从U盘进入EFI Shell，输入以下命令以备份并刷写BIOS。
+将修改好的 BIOS 修改为 bios.rom 并放入 U 盘根目录。从 U 盘进入 EFI Shell，输入以下命令以备份并刷写 BIOS。
 
 ```
 map // 列出所有硬盘设备
@@ -316,11 +316,11 @@ Fpt.efi -d backup.rom -bios // 备份BIOS到backup.rom
 Fpt.efi -f bios.rom -bios // 刷写bios.rom
 ```
 
-若提示Error 368错误，则需先按照上面grub修改BIOS设置的流程，将BIOS Lock设为Disabled。注意，本机刷入修改版的BIOS后并无作用。
+若提示 Error 368 错误，则需先按照上面 grub 修改 BIOS 设置的流程，将 BIOS Lock 设为 Disabled。注意，本机刷入修改版的 BIOS 后并无作用。
 
 ## 手动删减引导条目
 
-进入EFI Shell并输入以下命令，记录硬盘信息和引导条目信息。
+进入 EFI Shell 并输入以下命令，记录硬盘信息和引导条目信息。
 
 ```
 map // 列出所有硬盘设备
@@ -329,7 +329,7 @@ bcfg boot dump // 列出所有引导条目
 
 ### 删除条目
 
-一般而言保留DevPath为HD开头的设备，而删除PciRoot开头的设备。记录选项编号并输入以下命令删除。
+一般而言保留 DevPath 为 HD 开头的设备，而删除 PciRoot 开头的设备。记录选项编号并输入以下命令删除。
 
 ```
 bcfg boot rm XX // XX是选项编号
@@ -338,7 +338,7 @@ bcfg boot rm XX // XX是选项编号
 ### 增加条目
 
 ```
-// XX为要添加的选项编号，FSX:\为Clover所在的EFI分区名称，CloverBoot为条目名称
+# XX为要添加的选项编号，FSX:\为Clover所在的EFI分区名称，CloverBoot为条目名称
 bcfg boot add XX FSX:\EFI\CLOVER\CLOVERX64.EFI "CloverBoot"
 ```
 
@@ -348,32 +348,32 @@ bcfg boot add XX FSX:\EFI\CLOVER\CLOVERX64.EFI "CloverBoot"
 
 ### 检查长度
 
-下载Phoenix BIOS Editor以及要修改的原版Phoenix BIOS文件。Phoenix BIOS Editor下载链接如下。
+下载 Phoenix BIOS Editor 以及要修改的原版 Phoenix BIOS 文件。Phoenix BIOS Editor 下载链接如下。
 
 ```
 https://dl.pconline.com.cn/download/821568-1.html
 ```
 
-用Phoenix BIOS Editor打开BIOS文件，若提示Invaild rom length，则用十六进制编辑器打开BIOS文件，把00100010h至结尾的内容清除后保存即可，这一部分是BIOS文件的附加信息。
+用 Phoenix BIOS Editor 打开 BIOS 文件，若提示 Invaild rom length，则用十六进制编辑器打开 BIOS 文件，把 00100010h 至结尾的内容清除后保存即可，这一部分是 BIOS 文件的附加信息。
 
 ### 提取模块
 
-打开BIOS文件后进入C:\Program Files (x86)\Phoenix Technologies Ltd\BIOS Editor\TEMP目录，复制OLD1.RLS、STRINGS0.ROM（或STRINGS00.ROM）、TEMPLAT0.ROM（或TEMPLAT00.ROM）到任意位置。
+打开 BIOS 文件后进入 C:\Program Files (x86)\Phoenix Technologies Ltd\BIOS Editor\TEMP 目录，复制 OLD1.RLS、STRINGS0.ROM（或 STRINGS00.ROM）、TEMPLAT0.ROM（或 TEMPLAT00.ROM）到任意位置。
 
-用十六进制编辑器打开以上复制出来的文件，复制OLD1.RLS的头两个字节（如D6 70）并在STRING0.ROM中查找这两个HEX值，取搜索结果较前的一个。在STRING0.ROM中，这两个字节之前（不含）的被称为header，长度应该为0x1C。删掉header并保存为STRING.ROM。
+用十六进制编辑器打开以上复制出来的文件，复制 OLD1.RLS 的头两个字节（如 D6 70）并在 STRING0.ROM 中查找这两个 HEX 值，取搜索结果较前的一个。在 STRING0.ROM 中，这两个字节之前（不含）的被称为 header，长度应该为 0x1C。删掉 header 并保存为 STRING.ROM。
 
 ### 查找菜单位置
 
-在Phoenix BIOS Editor的STRING窗口中搜索要解锁的菜单名称。此处以Intel VT菜单为例，可搜索Virtualization、VT Feature等关键词，可确定菜单名称为Intel(R) Virtualization Technology。在STRING.ROM中搜索前面所找到的名称，记下字符串开头对应的地址值，此处以0x00002CFD为例。忽略高四位，将地址按小端规则重新排列，并作为HEX值在STRING.ROM中搜索，此处为FD 2C。记下这两个字节所对应的地址值，此处为0x0000030A。
+在 Phoenix BIOS Editor 的 STRING 窗口中搜索要解锁的菜单名称。此处以 Intel VT 菜单为例，可搜索 Virtualization、VT Feature 等关键词，可确定菜单名称为 Intel(R) Virtualization Technology。在 STRING.ROM 中搜索前面所找到的名称，记下字符串开头对应的地址值，此处以 0x00002CFD 为例。忽略高四位，将地址按小端规则重新排列，并作为 HEX 值在 STRING.ROM 中搜索，此处为 FD 2C。记下这两个字节所对应的地址值，此处为 0x0000030A。
 
-忽略高四位，将地址按小端规则重新排列，并作为HEX值在TEMPLAT0.ROM中搜索，此处为0A 03。从0A 03的前两个字节开始，摘录二十个字节如下。
+忽略高四位，将地址按小端规则重新排列，并作为 HEX 值在 TEMPLAT0.ROM 中搜索，此处为 0A 03。从 0A 03 的前两个字节开始，摘录二十个字节如下。
 
 | 地址       | HEX值                                           |
 | ---------- | ----------------------------------------------- |
 | 0x000012D5 | 00 14 0A 03 0C 03 F5 46 EA 46 D4 46 DF 46 81 03 |
 | 0x000012E5 | CA 05 CC 05                                     |
 
-前两个字节为00 14，称为menu header，其中00代表类型，14代表长度。不同代号所表示的类型如下表所示。
+前两个字节为 00 14，称为 menu header，其中 00 代表类型，14 代表长度。不同代号所表示的类型如下表所示。
 
 | 代号    | 类型               |
 | ------- | ------------------ |
@@ -384,55 +384,55 @@ https://dl.pconline.com.cn/download/821568-1.html
 | 22      | 日期               |
 | 23      | /                  |
 
-0A 03和0C 03可以作为菜单的标志。如果这是一个菜单，则0A和0C之间应当相差2，同理结尾的CA 05和CC 05也满足CA+2=CC。
+0A 03 和 0C 03 可以作为菜单的标志。如果这是一个菜单，则 0A 和 0C 之间应当相差 2，同理结尾的 CA 05 和 CC 05 也满足 CA+2=CC。
 
-将81 03按小端规则处理后可知Token ID为0381，是BIOS中开关此功能的寄存器，可用于在不刷入修改版BIOS的情况下直接修改条目的值。
+将 81 03 按小端规则处理后可知 Token ID 为 0381，是 BIOS 中开关此功能的寄存器，可用于在不刷入修改版 BIOS 的情况下直接修改条目的值。
 
-包含menu header后字符串的地址为0x000012D5，至此已找到所需菜单的位置，记录此地址。
+包含 menu header 后字符串的地址为 0x000012D5，至此已找到所需菜单的位置，记录此地址。
 
 ### 放置菜单
 
-在Phoenix BIOS Editor的Setup Table窗口中点击Emulate，显示模拟BIOS。有些菜单尽管在模拟器中可见，刷入后却不可见，对于这些菜单，最好的方法是将其移至其它有空位的标签页中。
+在 Phoenix BIOS Editor 的 Setup Table 窗口中点击 Emulate，显示模拟 BIOS。有些菜单尽管在模拟器中可见，刷入后却不可见，对于这些菜单，最好的方法是将其移至其它有空位的标签页中。
 
-记录原标签页的排序，经查看后可知在Main标签页中有空位，则在STRINGS.ROM中搜索Main，注意需要全匹配。记录字符串的地址，忽略高四位，将地址按小端规则重新排列，并作为HEX值在STRINGS.ROM中搜索，取结果的地址值。
+记录原标签页的排序，经查看后可知在 Main 标签页中有空位，则在 STRINGS.ROM 中搜索 Main，注意需要全匹配。记录字符串的地址，忽略高四位，将地址按小端规则重新排列，并作为 HEX 值在 STRINGS.ROM 中搜索，取结果的地址值。
 
-忽略高四位，将地址按小端规则重新排列，并作为HEX值在TEMPLAT0.ROM中搜索，摘录它们的前两个字节，即为menu header，理论上种类为10（Generic Text）。包含menu header后取字符串地址，这里为0x00000AA1。
+忽略高四位，将地址按小端规则重新排列，并作为 HEX 值在 TEMPLAT0.ROM 中搜索，摘录它们的前两个字节，即为 menu header，理论上种类为 10（Generic Text）。包含 menu header 后取字符串地址，这里为 0x00000AA1。
 
 
-忽略高四位，将地址按小端规则重新排列，并作为HEX值在TEMPLAT0.ROM中搜索，此处为A1 0A。查看前面所记录的标签页的顺序，此处为Main-Advanced-Security-Boot-Exit，Main为第一个标签页，其HEX值为A1 0A，故Advanced及以后的标签页的HEX值为从Main开始往后取。每个标签页占两个字节，且每个标签页之间相距两个字节。取Main的前两个字节、Main本身以及Main后的20个字节，如下所示。
+忽略高四位，将地址按小端规则重新排列，并作为 HEX 值在 TEMPLAT0.ROM 中搜索，此处为 A1 0A。查看前面所记录的标签页的顺序，此处为 Main-Advanced-Security-Boot-Exit，Main 为第一个标签页，其 HEX 值为 A1 0A，故 Advanced 及以后的标签页的 HEX 值为从 Main 开始往后取。每个标签页占两个字节，且每个标签页之间相距两个字节。取 Main 的前两个字节、Main 本身以及 Main 后的 20 个字节，如下所示。
 
 | 地址       | HEX值                                           |
 | ---------- | ----------------------------------------------- |
 | 0x0000015A | 00 00 A1 0A 74 01 A5 09 B8 01 D3 0A 04 02 3F 0B |
 | 0x0000016A | 5E 04 17 0A 6E 02 00 00                         |
 
-Main的HEX值为A1 0A，其余分别为Advanced（A5 09），Security（D3 0A），Boot（3F 0B），Exit（17 0A）。每个菜单HEX值后的两个字节表示这一菜单对应的地址，对于Main而言为74 01。跳到地址0x00000174，此处即为Main选项卡中包含的所有菜单。
+Main 的 HEX 值为 A1 0A，其余分别为 Advanced（A5 09），Security（D3 0A），Boot（3F 0B），Exit（17 0A）。每个菜单 HEX 值后的两个字节表示这一菜单对应的地址，对于 Main 而言为 74 01。跳到地址 0x00000174，此处即为 Main 选项卡中包含的所有菜单。
 
-留意到Advanced选项卡的地址为0x000001B8，则Main选项卡的菜单不能超出该位置。在选项卡内部，每条菜单用两个字节表示，这两个字节为该菜单的地址，每条菜单之间用00 00分隔。如果两条菜单之间用00 00 00 00分隔（不小于四组00），则00 00 00 00后的菜单将不可见。因此，直接向00 00 00 00处填充菜单即可解锁新菜单。注意，每组选项卡之间有00 00 00 00作为分隔。
+留意到 Advanced 选项卡的地址为 0x000001B8，则 Main 选项卡的菜单不能超出该位置。在选项卡内部，每条菜单用两个字节表示，这两个字节为该菜单的地址，每条菜单之间用 00 00 分隔。如果两条菜单之间用 00 00 00 00 分隔（不小于四组 00），则 00 00 00 00 后的菜单将不可见。因此，直接向 00 00 00 00 处填充菜单即可解锁新菜单。注意，每组选项卡之间有 00 00 00 00 作为分隔。
 
-为验证所找到的位置是否正确，可以看到该选项卡的首两个字节为E9 0A，对应的菜单应该是System Time。跳到地址0x00000AE9，可以看到首两个字节为21 0A，为菜单的menu header，其中21表示时间，故所找到的位置是正确的。
+为验证所找到的位置是否正确，可以看到该选项卡的首两个字节为 E9 0A，对应的菜单应该是 System Time。跳到地址 0x00000AE9，可以看到首两个字节为 21 0A，为菜单的 menu header，其中 21 表示时间，故所找到的位置是正确的。
 
-在标签页内寻找可以插入的位置，一般为00 00 00 00，替换前面的00 00即可。前面需要解锁的菜单地址为0x000012D5，忽略高四位，将地址按小端规则重新排列并填入，变为D5 12 00 00即可。注意，修改时不能改变文件大小，即只能替换而不能删除文件中的任何一个字节。如果没有空位，可以替换部分平时少用的菜单。
+在标签页内寻找可以插入的位置，一般为 00 00 00 00，替换前面的 00 00 即可。前面需要解锁的菜单地址为 0x000012D5，忽略高四位，将地址按小端规则重新排列并填入，变为 D5 12 00 00 即可。注意，修改时不能改变文件大小，即只能替换而不能删除文件中的任何一个字节。如果没有空位，可以替换部分平时少用的菜单。
 
 ### 打包固件
 
-将需要解锁的菜单都写入后，保存TEMPLAT0.ROM文件，并复制到C:\Program Files (x86)\Phoenix Technologies Ltd\BIOS Editor\TEMP覆盖。回到Phoenix BIOS Editor，由于没有在其界面中操作，此时并不能保存文件。故在Setup Table中点击Main选项卡，任意双击一个`*`号，此时已经可以保存，点击保存即可。
+将需要解锁的菜单都写入后，保存 TEMPLAT0.ROM 文件，并复制到 C:\Program Files (x86)\Phoenix Technologies Ltd\BIOS Editor\TEMP 覆盖。回到 Phoenix BIOS Editor，由于没有在其界面中操作，此时并不能保存文件。故在 Setup Table 中点击 Main 选项卡，任意双击一个`*`号，此时已经可以保存，点击保存即可。
 
-注意，每个BIOS只能在原版的基础上修改一次，在已经修改过的BIOS文件中不能二次修改，否则Phoenix BIOS Editor会报错。
+注意，每个 BIOS 只能在原版的基础上修改一次，在已经修改过的 BIOS 文件中不能二次修改，否则 Phoenix BIOS Editor 会报错。
 
 ## 刷入修改固件
 
-注意，理论上Phoenix BIOS的后缀名可以改为任意名称，因此可以直接把BIOS.rom改为BIOS.wph。所需软件的下载链接如下。
+注意，理论上 Phoenix BIOS 的后缀名可以改为任意名称，因此可以直接把 BIOS.rom 改为 BIOS.wph。所需软件的下载链接如下。
 
 ```
 https://www.wimsbios.com/phoenixflasher.jsp
 ```
 
-### 通过Phoenix Secure WinFlash
+### 通过 Phoenix Secure WinFlash
 
 直接按照软件操作即可。
 
-### 通过phlash16
+### 通过 phlash16
 
 phlash16为DOS下的Phoenix BIOS刷写工具，进入DOS环境后通过以下命令刷写即可，其中bios.rom为要刷写的BIOS。由于E2ROM寄存器才可被刷写，因此提示Invaild flashint.bin说明该BIOS无法被刷入。关于phlash16的具体参数，可通过输入`phlash16 /?`查询。
 
@@ -442,19 +442,19 @@ phlash16 bios.rom /x /s /c /mfg /mode=3
 
 ## 修改隐藏条目
 
-从以下网站下载symcmos。将BIOS设置重置为出厂默认值。
+从以下网站下载 symcmos。将 BIOS 设置重置为出厂默认值。
 
 ```
 http://xdel.ru/downloads/bios-mods.com-tools/SYMCMOS/
 ```
 
-重启进入DOS环境，切换到symcmos所在目录，执行以下命令。
+重启进入 DOS 环境，切换到 symcmos 所在目录，执行以下命令。
 
 ```
 symcmos -v2 -lDefault.txt
 ```
 
-使用文本编辑器，打开并修改条目，其中条目地址在修改Phoenix BIOS时可以得出。完成后引导至DOS，输入以下命令以刷写，其中NameOfModifiedFile为修改后的文本文档名称，注意与`-u`之间没有空格。
+使用文本编辑器，打开并修改条目，其中条目地址在修改 Phoenix BIOS 时可以得出。完成后引导至 DOS，输入以下命令以刷写，其中 NameOfModifiedFile 为修改后的文本文档名称，注意与`-u`之间没有空格。
 
 ```
 symcmos -v2 -uNameOfModifiedFile
@@ -464,13 +464,13 @@ symcmos -v2 -uNameOfModifiedFile
 
 # 附录
 
-## Intel官方文档全集
+## Intel 官方文档全集
 
 ```
 https://software.intel.com/en-us/articles/intel-sdm?wapkw=software+developer
 ```
 
-## 本机Phoenix BIOS菜单地址
+## 本机 Phoenix BIOS 菜单地址
 
 | 选项                               | 地址       |
 | ---------------------------------- | ---------- |
@@ -478,9 +478,9 @@ https://software.intel.com/en-us/articles/intel-sdm?wapkw=software+developer
 | Frequency Radio                    | 0x000008B5 |
 | Intel(R) Virtualization Technology | 0x0000088D |
 
-## 本机UEFI BIOS推荐设置
+## 本机 UEFI BIOS 推荐设置
 
-Override指手动设置。
+Override 指手动设置。
 
 |                                      选项                                     | 本机BIOS地址 | 设定值 |          设置         |                                                                                                                                                             说明                                                                                                                                                            |
 |-------------------------------------------------------------------------------|--------------|--------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -1497,473 +1497,159 @@ Override指手动设置。
 
 # 参考教程
 
-## BIOS用户指南
+> [BIOS用户指南](http://www.h3c.com/cn/d_201801/1055806_30005_0.htm#_Toc502671328)  
 
-```
-http://www.h3c.com/cn/d_201801/1055806_30005_0.htm#_Toc502671328
-```
+> [Unlock Hidden menu in Phoenix BIOS Setup Menu Tutorial](http://forum.notebookreview.com/attachments/unlock-hidden-menu-in-phoenix-bios-setup-menu-tutorial-zip.62866/)  
 
-## Unlock Hidden menu in Phoenix BIOS Setup Menu Tutorial
+> [How to Enable Intel VT and AHCI on a Napa/Santa Rosa platform Phoenix BIOS Vaio laptop](http://forum.notebookreview.com/sony/189228-how-enable-intel-vt-ahci-napa-santa- rosa-platform-phoenix-bios-vaio-laptop.html#post2678924)  
 
-```
-http://forum.notebookreview.com/attachments/unlock-hidden-menu-in-phoenix-bios-setup-menu-tutorial-zip.62866/
-```
+> [Acer Laptop with Phoenix BIOS: Enable Virtualization \(Test Machine: Acer Aspire 9420\)](http://forum.notebookreview.com/acer/465936-acer-laptop-phoenix-bios-enable- virtualization-test-machine-acer-aspire-9420-a.html#post5991508)  
 
-## How to Enable Intel VT and AHCI on a Napa/Santa Rosa platform Phoenix BIOS Vaio laptop
+> [Kontron KTQM87-mITX User Manual](https://www.manualsdir.com/manuals/637903/kontron-ktqm87-mitx-ktqm87.html)  
 
-```
-http://forum.notebookreview.com/sony/189228-how-enable-intel-vt-ahci-napa-santa- rosa-platform-phoenix-bios-vaio-laptop.html#post2678924
-```
+> [Kontron KTHM76-mITX User Manual](https://www.manualsdir.com/manuals/637900/kontron-kthm76-mitx-kthm76-ktqm77-mitx-ktqm77.html)  
 
-## Acer Laptop with Phoenix BIOS: Enable Virtualization (Test Machine: Acer Aspire 9420)
+> [RUNNING AVERAGE POWER LIMIT – RAPL](https://01.org/blogs/2014/running-average-power-limit-%E2%80%93-rapl)  
 
-```
-http://forum.notebookreview.com/acer/465936-acer-laptop-phoenix-bios-enable- virtualization-test-machine-acer-aspire-9420-a.html#post5991508
-```
+> [英特尔® 至尊调试实用程序 \(XTU\)-英特尔®️ 官网](https://www.intel.cn/content/www/cn/zh/gaming/resources/overclocking-xtu-guide.html)  
 
-## Kontron KTQM87-mITX User Manual
+> [roncapat/W230SD-Unlocked-AMI-BIOS](https://github.com/roncapat/W230SD-Unlocked-AMI-BIOS)  
 
-```
-https://www.manualsdir.com/manuals/637903/kontron-ktqm87-mitx-ktqm87.html
-```
+> [Fujitsu-Platform-Settings-V1.0.2-CFL-RevB.2019-11-01.xml](http://www.spec.org/cpu2017/flags/Fujitsu-Platform-Settings-V1.0.2-CFL-RevB.2019-11-01.xml)  
 
-## Kontron KTHM76-mITX User Manual
+> [Achieving Persistent DRAM on PowerQUICC III and QorIQ Processors](https://www.nxp.com/docs/en/application-note/AN4531.pdf)  
 
-```
-https://www.manualsdir.com/manuals/637900/kontron-kthm76-mitx-kthm76-ktqm77-mitx-ktqm77.html
-```
+> [Intelligent Platform & Services Business Unit Embedded Computing \(3.5” CPU Board\) EBC 357 User Manual](http://files.nexcom.com/Driver/EBC357/User_Manual_EBC357_191031.pdf)  
 
-## RUNNING AVERAGE POWER LIMIT – RAPL
+> [DK37 User manual](http://www.giadatech.com/upload/20200715/f403582d5ef80bd156bdbcf75b867b03.pdf)  
 
-```
-https://01.org/blogs/2014/running-average-power-limit-%E2%80%93-rapl
-```
+> [IoT Automation Solutions Business Group Embedded Computing \(3.5” CPU Board\) EBC 357X User Manual](https://www.spectra.de/files/produkte/KA007500/web/Manual-EBC357X-170308.pdf)  
 
-## 英特尔® 至尊调试实用程序 (XTU)-英特尔®️ 官网
+> [Kontron mITX-SKL-S-C236 User Manual](https://www.manualslib.com/manual/1323297/Kontron-Mitx-Skl-S-C236.html#page=44-manual)  
 
-```
-https://www.intel.cn/content/www/cn/zh/gaming/resources/overclocking-xtu-guide.html
-```
+> [ASUS P10S WS User Guide](https://manualsbrain.com/en/manuals/1556610/)  
 
-## roncapat/W230SD-Unlocked-AMI-BIOS
+> [Configuring the Z87 FTW BIOS](https://www.evga.com/support/manuals/files/BIOS/141-HW-E877_BIOS_Guide.pdf)  
 
-```
-https://github.com/roncapat/W230SD-Unlocked-AMI-BIOS
-```
+> [Kontron KTHM76-mITX User Manual](https://www.manualsdir.com/manuals/637900/kontron-kthm76-mitx-kthm76-ktqm77-mitx-ktqm77.html)  
 
-## Fujitsu-Platform-Settings-V1.0.2-CFL-RevB.2019-11-01.xml
+> [英特尔® Ready Mode 技术-英特尔® 官网](https://www.intel.cn/content/www/cn/zh/architecture-and-technology/intel-ready-mode-technology.html)  
 
-```
-http://www.spec.org/cpu2017/flags/Fujitsu-Platform-Settings-V1.0.2-CFL-RevB.2019-11-01.xml
-```
+> [ASUS P10S-M WS 用户指南](https://manualsbrain.com/zh/manuals/1556486/)  
 
-## Achieving Persistent DRAM on PowerQUICC III and QorIQ Processors
+> [超能课堂\(210\) 笔记本中常常听说的PL1、PL2到底如何影响CPU性能](https://www.bilibili.com/read/cv4099352/)  
 
-```
-https://www.nxp.com/docs/en/application-note/AN4531.pdf
-```
+> [8750H no more limits/throttle](https://www.techpowerup.com/forums/threads/8750h-no-more-limits-throttle.278278/)  
 
-## Intelligent Platform & Services Business Unit Embedded Computing (3.5” CPU Board) EBC 357 User Manual
+> [R161-R12 High Efficiency Liquid Cooling System User Manual](https://download.gigabyte.com/FileList/Manual/server_manual_r161-r12_e_10.pdf)  
 
-```
-http://files.nexcom.com/Driver/EBC357/User_Manual_EBC357_191031.pdf
-```
+> [Supermicro C9Z490-PG User Manual](https://www.manualslib.com/manual/1920265/Supermicro-C9z490-Pg.html)  
 
-## DK37 User manual
+> [TQMx80UC User's Manual](https://www.tq-group.com/filedownloads/files/products/embedded/manuals/x86/embedded-modul/COM-Express-Compact/TQMx80UC/TQMx80UC.UM.0102.pdf)  
 
-```
-http://www.giadatech.com/upload/20200715/f403582d5ef80bd156bdbcf75b867b03.pdf
-```
+> [【经验之谈】当PL1成为“摆设”——“黑匣子”DPTF](https://zhuanlan.zhihu.com/p/62254032)  
 
-## IoT Automation Solutions Business Group Embedded Computing (3.5” CPU Board) EBC 357X User Manual
+> [BIOS User Guide H410MH / H410MHP](https://www.biostar-europe.com/upload/Manual/IH41A-MHS%20&%20IH41B-MHS_BIOS_200429.pdf)  
 
-```
-https://www.spectra.de/files/produkte/KA007500/web/Manual-EBC357X-170308.pdf
-```
+> [higher trefi vs lower CAS latency which would you choose?](https://www.reddit.com/r/overclocking/comments/cdib4y/higher_trefi_vs_lower_cas_latency_which_would_you/)  
 
-## Kontron mITX-SKL-S-C236 User Manual
+> [ECS H110I-C4P User Manual Page](https://mans.io/files/viewer/539002/58)  
 
-```
-https://www.manualslib.com/manual/1323297/Kontron-Mitx-Skl-S-C236.html#page=44-manual
-```
+> [Platform Hierarchy](https://ebrary.net/24759/computer_science/platform_hierarchy)  
 
-## ASUS P10S WS User Guide
+> [Supermicro C7Z270-CG User Manual](https://www.manualslib.com/manual/1320957/Supermicro-C7z270-Cg.html)  
 
-```
-https://manualsbrain.com/en/manuals/1556610/
-```
+> [Supero C7Z270-CG-L User Manual](https://www.manualslib.com/manual/1263032/Supero-C7z270-Cg-L.html)  
 
-## Configuring the Z87 FTW BIOS
+> [Karbon 700 BIOS Manual](https://static.onlogic.com/resources/manuals/K700-SE-BIOS-Manual-V2.0.pdf)  
 
-```
-https://www.evga.com/support/manuals/files/BIOS/141-HW-E877_BIOS_Guide.pdf
-```
+> [X11SCA/X11SCA-W/X11SCA-F USER MANUAL](https://cdn.competec.ch/documents2/6/8/2/51826286/51826286.pdf)  
 
-## Kontron KTHM76-mITX User Manual
+> [MIO-5373 User Manual](https://www.mouser.com/catalog/additional/Advantech_MIO_5373_User_Manual_Ed1_FINAL.pdf)  
 
-```
-https://www.manualsdir.com/manuals/637900/kontron-kthm76-mitx-kthm76-ktqm77-mitx-ktqm77.html
-```
+> [Intel® 7th Gen. Core™ U-series ® SoC User Manual](https://www.rjconnect.co.za/images/PDF/RJ_QPI_Series_User_Manual_V12.pdf)  
 
-## 英特尔® Ready Mode 技术-英特尔® 官网
+> [用户手册 Lenovo - ThinkPad W530, ThinkPad T530, ThinkPad T530i](http://www.pdfshouce.com/manuals/15037/lenovo-thinkpad-w530-thinkpad-t530-thinkpad-t530i.html)  
 
-```
-https://www.intel.cn/content/www/cn/zh/architecture-and-technology/intel-ready-mode-technology.html
-```
+> [IGN400 BIOS Manual](http://static.onlogic.com/resources/manuals/IGN400-BIOS-Manual-V1.pdf)  
 
-## ASUS P10S-M WS 用户指南
+> [Karbon 300 BIOS Manual](https://static.onlogic.com/resources/manuals/Karbon-300-BIOS-Manual-OnLogic.pdf)  
 
-```
-https://manualsbrain.com/zh/manuals/1556486/
-```
+> [Avalue EPI-QM67 User Manual](https://www.manualsdir.com/manuals/734186/avalue-epi-qm67.html)  
 
-## 超能课堂(210) 笔记本中常常听说的PL1、PL2到底如何影响CPU性能
+> [Ampro COM 830 Reference Manual](https://www.manualslib.com/manual/447916/Ampro-Com-830.html)  
 
-```
-https://www.bilibili.com/read/cv4099352/
-```
+> [SBC35-427 Supplemental BIOS Manual](https://resources.winsystems.com/product-manuals/SBC35-427-BIOS-v1.0.pdf)  
 
-## 8750H no more limits/throttle
+> [NP3020M4-BIOS设置](http://www.4008600011.com/archives/8236)  
 
-```
-https://www.techpowerup.com/forums/threads/8750h-no-more-limits-throttle.278278/
-```
+> [ASUS Z10PE-D16 WS USER GUIDE](https://manualsbrain.com/en/manuals/1562289/)  
 
-## R161-R12 High Efficiency Liquid Cooling System User Manual
+> [EMBC-1000 USER Manual](https://v1.cecdn.yun300.cn/100001_2004035551/EMBC-1000UserManual.pdf)  
 
-```
-https://download.gigabyte.com/FileList/Manual/server_manual_r161-r12_e_10.pdf
-```
+> [C7H270-CG-ML USER’S MANUAL](https://www.supermicro.org.cn/wdl/ISO_Extracted/CDR-C7_V1.31_for_Intel_C7_platform/MANUALS/C7H270-CG-ML.pdf)  
 
-## Supermicro C9Z490-PG User Manual
+> [IVH-9000 USER Manual](http://www.vecow.com/dispUploadBox/PJ-VECOW/Files/2379.pdf)  
 
-```
-https://www.manualslib.com/manual/1920265/Supermicro-C9z490-Pg.html
-```
+> [Blackbird \(VL-EPU-4562\) BIOS Reference Manual](https://www.versalogic.com/wp-content/themes/vsl-new/assets/pdf/manuals/MEPU_4462_4562_BRM.pdf)  
 
-## TQMx80UC User's Manual
+> [ECM-SKLH User’s Manual](http://www.bcmcom.com/admin/Manual/ECM-SKLH_Manual_E2047392801R.pdf)  
 
-```
-https://www.tq-group.com/filedownloads/files/products/embedded/manuals/x86/embedded-modul/COM-Express-Compact/TQMx80UC/TQMx80UC.UM.0102.pdf
-```
+> [MINI-ITX 带 VGA/LVDS/HDMI/2LAN/6COM](http://www.evoc.cn/uploadfiles/2018/06/EC7-1820-%E4%B8%AD%E8%8B%B1%E6%96%87%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf)  
 
-## 【经验之谈】当PL1成为“摆设”——“黑匣子”DPTF
+> [C7Z170-OCE USER'S MANUAL](https://www.manualslib.com/manual/1257502/Supermicro-C7z170-Oce.html)  
 
-```
-https://zhuanlan.zhihu.com/p/62254032
-```
+> [ROG MAXIMUS XI HERO \(WI-FI\) BIOS Manual](https://images-eu.ssl-images-amazon.com/images/I/C1spIFYcHzS.pdf)  
 
-## BIOS User Guide H410MH / H410MHP
+> [如何理解Power rails, voltage rails?](https://www.eda365.com/thread-166559-1-1.html)  
 
-```
-https://www.biostar-europe.com/upload/Manual/IH41A-MHS%20&%20IH41B-MHS_BIOS_200429.pdf
-```
+> [PCIe SSD支持的ASPM是什么?](http://www.ssdfans.com/?p=4022)  
 
-## higher trefi vs lower CAS latency which would you choose?
+> [NVME中的OBFF是什么东西？](https://www.zhihu.com/question/52959132)  
 
-```
-https://www.reddit.com/r/overclocking/comments/cdib4y/higher_trefi_vs_lower_cas_latency_which_would_you/
-```
+> [IK70 Motherboard User Manual](https://dc.winmate.com.tw/_downloadCenter/2017/Lcd/9171111I103R_IK70_SBC_User_Manual_(Kaby_Lake)_V1.3.pdf)  
 
-## ECS H110I-C4P User Manual Page
+> [РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ ДЛЯ ASUS P10S-M WS](https://manualsbrain.com/ru/manuals/1556486/)  
 
-```
-https://mans.io/files/viewer/539002/58
-```
+> [服务手册 Dell - XPS One 2710](http://www.pdfshouce.com/manuals/14522/dell-xps-one-2710.html)  
 
-## Platform Hierarchy
+> [American Megatrends MI980 User Manual](https://www.manualslib.com/manual/672846/American-Megatrends-Mi980.html)  
 
-```
-https://ebrary.net/24759/computer_science/platform_hierarchy
-```
+> [NC7L Series User’s Manual](http://www.jetwayipc.com/Manual/G03-NC7L-F.pdf)  
 
-## Supermicro C7Z270-CG User Manual
+> [TS300-E9-PS4服务器用户手册](https://dlsvr04.asus.com/pub/ASUS/server/TS300-E9-PS4/Manual/C11404_TS300-E9-PS4_UM_WEB.pdf)  
 
-```
-https://www.manualslib.com/manual/1320957/Supermicro-C7z270-Cg.html
-```
+> [Port 8xh Decode - 004 - ID:631119 | Intel® 500 Series Chipset Family On-Package Platform Controller Hub Datasheet Volume 1](https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/tiger-lake-mobile-y/intel-500-series-chipset-family-on-package-platform-controller-hub-datasheet-v/004/port-8xh-decode/)  
 
-## Supero C7Z270-CG-L User Manual
+> [C785S_C582S_C381S-IM-AA_UM_WEB](https://dlsvr04.asus.com.cn/pub/ASUS/mb/Embedded_IPC/C582S-IM-AA/E15424_C785S_C582S_C381S-IM-AA_UM_WEB.pdf)  
 
-```
-https://www.manualslib.com/manual/1263032/Supero-C7z270-Cg-L.html
-```
+> [On my X58 when enabling AHCI in BIOS I get the options "Mechanical presence switch" and "Cold Presence switch" what are these options?](https://www.evga.com/support/faq/FAQdetails.aspx?faqid=58653)  
 
-## Karbon 700 BIOS Manual
+> [AHCI 1.3.1 Device Sleep Technical Proposal](https://www.intel.com/content/dam/www/public/us/en/documents/technical-specifications/serial-ata-ahci-tech-proposal-rev1_3_1.pdf)  
 
-```
-https://static.onlogic.com/resources/manuals/K700-SE-BIOS-Manual-V2.0.pdf
-```
+> [各種虛擬化技術支援AES-NI 狀況](https://lab.howie.tw/2014/01/intel-aes-ni-support-on-each-hypervisor-platform.html)  
 
-## X11SCA/X11SCA-W/X11SCA-F USER MANUAL
+> [Rowhammer mitigation: RH activation probability](https://coreboot.coreboot.narkive.com/HCYWSk2m/rowhammer-mitigation-rh-activation-probability)  
 
-```
-https://cdn.competec.ch/documents2/6/8/2/51826286/51826286.pdf
-```
+> [Chipset 菜单](https://product-help.schneider-electric.com/Machine%20Expert/V1.1/zh/RackiPC/RackiPC/iPC_-_Configuration_of_the_BIOS/iPC_-_Configuration_of_the_BIOS-5.htm)  
 
-## MIO-5373 User Manual
+> [H3C UniServer T1100 G3服务器Greenlow平台BIOS用户指南-5W102](http://www.h3c.com/cn/d_201801/1055806_30005_0.htm)  
 
-```
-https://www.mouser.com/catalog/additional/Advantech_MIO_5373_User_Manual_Ed1_FINAL.pdf
-```
+> [Supero C7Z270-PG User Manual](https://www.manualslib.com/manual/1261568/Supero-C7z270-Pg.html)  
 
-## Intel® 7th Gen. Core™ U-series ® SoC User Manual
+> [18--A55M-S41 BIOS设置讲解 <2013-4-21>](https://forum-sc.msi.com/index.php?topic=81.0)  
 
-```
-https://www.rjconnect.co.za/images/PDF/RJ_QPI_Series_User_Manual_V12.pdf
-```
+> [Lenovo ThinkSystem Documentation](https://thinksystem.lenovofiles.com/help/index.jsp?topic=%2Fuefi_amd_1p_rome%2Ftrusted_computing.html)  
 
-## 用户手册 Lenovo - ThinkPad W530, ThinkPad T530, ThinkPad T530i
+> [mITX-SKL-S-C236 USER GUIDE](https://webcache.googleusercontent.com/search?q=cache:9UiwU_ONcWgJ:https://www.kontron.com/downloads/manuals/m/mitx-skl-s_c236_user-guide_rev1.6_2020-11-04.pdf%3Fproduct%3D145236+&cd=2&hl=zh-CN&ct=clnk&gl=hk)  
 
-```
-http://www.pdfshouce.com/manuals/15037/lenovo-thinkpad-w530-thinkpad-t530-thinkpad-t530i.html
-```
+> [AMD Ryzen Master超频工具食用建议](https://zhuanlan.zhihu.com/p/31246328)  
 
-## IGN400 BIOS Manual
+> [你不一定都知道，微星AfterBurner软件全接触](https://www.expreview.com/17454-all.html)  
 
-```
-http://static.onlogic.com/resources/manuals/IGN400-BIOS-Manual-V1.pdf
-```
+> [EVGA PrecisionX 16 的正确使用方法](https://www.chiphell.com/thread-1270827-1-1.html)  
 
-## Karbon 300 BIOS Manual
+> [CoffeeLake Intel\(R\) Firmware Support Package \(FSP\) Integration Guide: FSP_M_CONFIG Struct Reference](https://documentation.help/CoffeeLake-Intel-Firmware/struct_f_s_p___m___c_o_n_f_i_g.html)  
 
-```
-https://static.onlogic.com/resources/manuals/Karbon-300-BIOS-Manual-OnLogic.pdf
-```
-
-## Avalue EPI-QM67 User Manual
-
-```
-https://www.manualsdir.com/manuals/734186/avalue-epi-qm67.html
-```
-
-## Ampro COM 830 Reference Manual
-
-```
-https://www.manualslib.com/manual/447916/Ampro-Com-830.html
-```
-
-## SBC35-427 Supplemental BIOS Manual
-
-```
-https://resources.winsystems.com/product-manuals/SBC35-427-BIOS-v1.0.pdf
-```
-
-## NP3020M4-BIOS设置
-
-```
-http://www.4008600011.com/archives/8236
-```
-
-## ASUS Z10PE-D16 WS USER GUIDE
-
-```
-https://manualsbrain.com/en/manuals/1562289/
-```
-
-## EMBC-1000 USER Manual
-
-```
-https://v1.cecdn.yun300.cn/100001_2004035551/EMBC-1000UserManual.pdf
-```
-
-## C7H270-CG-ML USER’S MANUAL
-
-```
-https://www.supermicro.org.cn/wdl/ISO_Extracted/CDR-C7_V1.31_for_Intel_C7_platform/MANUALS/C7H270-CG-ML.pdf
-```
-
-## IVH-9000 USER Manual
-
-```
-http://www.vecow.com/dispUploadBox/PJ-VECOW/Files/2379.pdf
-```
-
-## Blackbird (VL-EPU-4562) BIOS Reference Manual
-
-```
-https://www.versalogic.com/wp-content/themes/vsl-new/assets/pdf/manuals/MEPU_4462_4562_BRM.pdf
-```
-
-## ECM-SKLH User’s Manual
-
-```
-http://www.bcmcom.com/admin/Manual/ECM-SKLH_Manual_E2047392801R.pdf
-```
-
-## MINI-ITX 带 VGA/LVDS/HDMI/2LAN/6COM
-
-```
-http://www.evoc.cn/uploadfiles/2018/06/EC7-1820-%E4%B8%AD%E8%8B%B1%E6%96%87%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf
-```
-
-## C7Z170-OCE USER'S MANUAL
-
-```
-https://www.manualslib.com/manual/1257502/Supermicro-C7z170-Oce.html
-```
-
-## ROG MAXIMUS XI HERO (WI-FI) BIOS Manual
-
-```
-https://images-eu.ssl-images-amazon.com/images/I/C1spIFYcHzS.pdf
-```
-
-## 如何理解Power rails, voltage rails?
-
-```
-https://www.eda365.com/thread-166559-1-1.html
-```
-
-## PCIe SSD支持的ASPM是什么?
-
-```
-http://www.ssdfans.com/?p=4022
-```
-
-## NVME中的OBFF是什么东西？
-
-```
-https://www.zhihu.com/question/52959132
-```
-
-## IK70 Motherboard User Manual
-
-```
-https://dc.winmate.com.tw/_downloadCenter/2017/Lcd/9171111I103R_IK70_SBC_User_Manual_(Kaby_Lake)_V1.3.pdf
-```
-
-## РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ ДЛЯ ASUS P10S-M WS
-
-```
-https://manualsbrain.com/ru/manuals/1556486/
-```
-
-## 服务手册 Dell - XPS One 2710
-
-```
-http://www.pdfshouce.com/manuals/14522/dell-xps-one-2710.html
-```
-
-## American Megatrends MI980 User Manual
-
-```
-https://www.manualslib.com/manual/672846/American-Megatrends-Mi980.html
-```
-
-## NC7L Series User’s Manual
-
-```
-http://www.jetwayipc.com/Manual/G03-NC7L-F.pdf
-```
-
-## TS300-E9-PS4服务器用户手册
-
-```
-https://dlsvr04.asus.com/pub/ASUS/server/TS300-E9-PS4/Manual/C11404_TS300-E9-PS4_UM_WEB.pdf
-```
-
-## Port 8xh Decode - 004 - ID:631119 | Intel® 500 Series Chipset Family On-Package Platform Controller Hub Datasheet Volume 1
-
-```
-https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/tiger-lake-mobile-y/intel-500-series-chipset-family-on-package-platform-controller-hub-datasheet-v/004/port-8xh-decode/
-```
-
-## C785S_C582S_C381S-IM-AA_UM_WEB
-
-```
-https://dlsvr04.asus.com.cn/pub/ASUS/mb/Embedded_IPC/C582S-IM-AA/E15424_C785S_C582S_C381S-IM-AA_UM_WEB.pdf
-```
-
-## On my X58 when enabling AHCI in BIOS I get the options "Mechanical presence switch" and "Cold Presence switch" what are these options?
-
-```
-https://www.evga.com/support/faq/FAQdetails.aspx?faqid=58653
-```
-
-## AHCI 1.3.1 Device Sleep Technical Proposal
-
-```
-https://www.intel.com/content/dam/www/public/us/en/documents/technical-specifications/serial-ata-ahci-tech-proposal-rev1_3_1.pdf
-```
-
-## 各種虛擬化技術支援AES-NI 狀況
-
-```
-https://lab.howie.tw/2014/01/intel-aes-ni-support-on-each-hypervisor-platform.html
-```
-
-## Rowhammer mitigation: RH activation probability
-
-```
-https://coreboot.coreboot.narkive.com/HCYWSk2m/rowhammer-mitigation-rh-activation-probability
-```
-
-## Chipset 菜单
-
-```
-https://product-help.schneider-electric.com/Machine%20Expert/V1.1/zh/RackiPC/RackiPC/iPC_-_Configuration_of_the_BIOS/iPC_-_Configuration_of_the_BIOS-5.htm
-```
-
-## H3C UniServer T1100 G3服务器Greenlow平台BIOS用户指南-5W102
-
-```
-http://www.h3c.com/cn/d_201801/1055806_30005_0.htm
-```
-
-## Supero C7Z270-PG User Manual
-
-```
-https://www.manualslib.com/manual/1261568/Supero-C7z270-Pg.html
-```
-
-## 18--A55M-S41 BIOS设置讲解 <2013-4-21>
-
-```
-https://forum-sc.msi.com/index.php?topic=81.0
-```
-
-## Lenovo ThinkSystem Documentation
-
-```
-https://thinksystem.lenovofiles.com/help/index.jsp?topic=%2Fuefi_amd_1p_rome%2Ftrusted_computing.html
-```
-
-## mITX-SKL-S-C236 USER GUIDE
-
-```
-https://webcache.googleusercontent.com/search?q=cache:9UiwU_ONcWgJ:https://www.kontron.com/downloads/manuals/m/mitx-skl-s_c236_user-guide_rev1.6_2020-11-04.pdf%3Fproduct%3D145236+&cd=2&hl=zh-CN&ct=clnk&gl=hk
-```
-
-## AMD Ryzen Master超频工具食用建议
-
-```
-https://zhuanlan.zhihu.com/p/31246328
-```
-
-## 你不一定都知道，微星AfterBurner软件全接触
-
-```
-https://www.expreview.com/17454-all.html
-```
-
-## EVGA PrecisionX 16 的正确使用方法
-
-```
-https://www.chiphell.com/thread-1270827-1-1.html
-```
-
-## CoffeeLake Intel(R) Firmware Support Package (FSP) Integration Guide: FSP_M_CONFIG Struct Reference
-
-```
-https://documentation.help/CoffeeLake-Intel-Firmware/struct_f_s_p___m___c_o_n_f_i_g.html
-```
-
-## Removing WLAN/WWAN BIOS whitelist on a Lenovo laptop to use a custom Wi-Fi card
-
-```
-https://medium.com/@p0358/removing-wlan-wwan-bios-whitelist-on-a-lenovo-laptop-to-use-a-custom-wi-fi-card-f6033a5a5e5a
-```
-
-
+> [Removing WLAN/WWAN BIOS whitelist on a Lenovo laptop to use a custom Wi-Fi card](https://medium.com/@p0358/removing-wlan-wwan-bios-whitelist-on-a-lenovo-laptop-to-use-a-custom-wi-fi-card-f6033a5a5e5a)  
 

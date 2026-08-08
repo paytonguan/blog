@@ -1,5 +1,5 @@
 ---
-title: Linux的安装与配置
+title: Linux 的安装与配置
 categories: Linux
 abbrlink: Linux-Installation
 date: 2019-11-26 09:50:29
@@ -8,7 +8,7 @@ tags:
 
 ![](topic.jpg)
 
-安装Linux系统，可以完成许多在Windows下无法完成的操作。
+安装 Linux 系统，可以完成许多在 Windows 下无法完成的操作。
 
 <!-- more -->
 
@@ -56,7 +56,7 @@ tags:
 
 ## 安装
 
-用rufus将ubuntu镜像拷录到U盘。备份硬盘的EFI，用Diskgenius为ubuntu安装分配空间，并格式化为NTFS。
+用 rufus 将 ubuntu 镜像拷录到 U 盘。备份硬盘的 EFI，用 Diskgenius 为 ubuntu 安装分配空间，并格式化为 NTFS。
 
 重启电脑并从U盘启动，进入安装程序。在安装选项中选其他选项，进入分区界面。选择刚才的分区并点击`分区`，格式选择`Ex4`，挂载点选择`/`，在`安装启动引导器的设备`下拉菜单，选择刚才格式化好的分区，点击安装。
 
@@ -64,7 +64,7 @@ tags:
 
 ## 引导器配置
 
-在grub2引导器下（若无引导菜单则在开机时按Shift），按`C`进入控制台模式并输入以下命令，以得到grub所支持的显示器的分辨率。记下后按`Esc`退出控制台模式并进入Ubuntu。
+在 grub2 引导器下（若无引导菜单则在开机时按 Shift），按`C`进入控制台模式并输入以下命令，以得到 grub 所支持的显示器的分辨率。记下后按`Esc`退出控制台模式并进入 Ubuntu。
 
 ```
 videoinfo
@@ -83,13 +83,13 @@ sudo nautilus
 + GRUB_GFXMODE=1920x1080,1366x768,1280x1024,1024x768,800x600,640x480
 ```
 
-打开以下链接，下载Grub-theme-vimix主题。
+打开以下链接，下载 Grub-theme-vimix 主题。
 
 ```
 https://www.gnome-look.org/p/1009236/
 ```
 
-解压后终端切换到解压目录并输入以下命令，完成grub主题安装并更新grub引导器。
+解压后终端切换到解压目录并输入以下命令，完成 grub 主题安装并更新 grub 引导器。
 
 ```
 ./Install
@@ -98,16 +98,16 @@ sudo update-grub
 
 # 配置
 
-## 安装Deepin容器
+## 安装 Deepin 容器
 
-Deepin容器可用于安装Windows软件。打开终端并输入以下命令，安装git并下载deepin-wine容器到工作目录。
+Deepin 容器可用于安装 Windows 软件。打开终端并输入以下命令，安装 git 并下载 deepin-wine 容器到工作目录。
 
 ```
 sudo apt-get install git
 git clone https://gitee.com/wszqkzqk/deepin-wine-for-ubuntu.git
 ```
 
-到工作目录下解压压缩包后，将终端切换到解压目录下并输入以下命令，完成deepin-wine容器安装。
+到工作目录下解压压缩包后，将终端切换到解压目录下并输入以下命令，完成 deepin-wine 容器安装。
 
 ```
 ./install.sh
@@ -130,7 +130,7 @@ sudo apt-get install gnome-shell-extensions
 
 重启电脑后，在应用程序菜单打开`优化`，此时`外观`选项卡下，`Shell`处于禁用状态。
 
-打开以下网站，网站提示需要安装扩展。进入Chrome扩展程序商店，搜索`GNOME Shell integration`并完成安装。
+打开以下网站，网站提示需要安装扩展。进入 Chrome 扩展程序商店，搜索`GNOME Shell integration`并完成安装。
 
 ```
 https://extensions.gnome.org/extension/19/user-themes/
@@ -142,7 +142,7 @@ https://extensions.gnome.org/extension/19/user-themes/
 sudo apt install chrome-gnome-shell
 ```
 
-完成安装后再次打开网站，正常情况下不再弹出错误信息。安装该网站上的扩展`User Themes`，再次打开`优化`，发现Shell主题已经可用。
+完成安装后再次打开网站，正常情况下不再弹出错误信息。安装该网站上的扩展`User Themes`，再次打开`优化`，发现 Shell 主题已经可用。
 
 到以下网站安装`dash-to-panel`插件，使桌面呈现任务栏风格。
 
@@ -150,25 +150,25 @@ sudo apt install chrome-gnome-shell
 https://extensions.gnome.org/extension/1160/dash-to-panel/
 ```
 
-到以下网站下载最新版Vimix主题的zip包。
+到以下网站下载最新版 Vimix 主题的 zip 包。
 
 ```
 https://github.com/vinceliuice/vimix-gtk-themes/releases
 ```
 
-解压后在终端打开解压目录位置，并输入以下命令完成Vimix主题的安装。
+解压后在终端打开解压目录位置，并输入以下命令完成 Vimix 主题的安装。
 
 ```
 ./Install
 ```
 
-到以下网站下载最新版Vimix图标的zip包。
+到以下网站下载最新版 Vimix 图标的 zip 包。
 
 ```
 https://github.com/vinceliuice/vimix-icon-theme/releases
 ```
 
-解压后在终端打开解压目录位置，并输入以下命令完成Vimix图标的安装。
+解压后在终端打开解压目录位置，并输入以下命令完成 Vimix 图标的安装。
 
 ```
 ./Install.sh
@@ -185,7 +185,7 @@ https://github.com/vinceliuice/vimix-icon-theme/releases
 
 在`桌面`选项卡中打开`回收站`，在`扩展`选项卡中打开`Dash to panel`并点击设置图标，进行个性化设置。
 
-## Dashboard自动分类
+## Dashboard 自动分类
 
 打开以下命令，下载压缩包后解压。
 
@@ -202,7 +202,7 @@ chmod +x interactive.py
 
 ## 网卡驱动安装
 
-若Linux下无网卡驱动，可通过ndiswrapper在Linux下安装Windows网卡驱动。
+若 Linux 下无网卡驱动，可通过 ndiswrapper 在 Linux 下安装 Windows 网卡驱动。
 
 打开终端并输入以下命令。
 
@@ -229,13 +229,13 @@ vi /etc/sudoers
 chmod 440 /etc/sudoers
 ```
 
-输入以下命令以查看系统内核，ndiswrapper要求最低为2.6.6或2.4.26。
+输入以下命令以查看系统内核，ndiswrapper 要求最低为 2.6.6 或 2.4.26。
 
 ```
 ls /boot
 ```
 
-下载ndiswrapper，链接如下。
+下载 ndiswrapper，链接如下。
 
 ```
 http://sourceforge.net/projects/ndiswrapper/
@@ -258,7 +258,7 @@ lspci
 lspci -n
 ```
 
-根据配置下载网卡驱动，此处为AL5410-G_WinXP_DR.zip。继续输入以下命令。
+根据配置下载网卡驱动，此处为 AL5410-G_WinXP_DR.zip。继续输入以下命令。
 
 ```
 # 文件名根据实际情况更改
@@ -340,30 +340,30 @@ sleep 2
 
 ### 终端设置
 
-#### 设置默认Shell
+#### 设置默认 Shell
 
-使用`zsh`为默认shell，可应用插件和主题，实现默认的bash所不能实现的功能。
+使用`zsh`为默认 shell，可应用插件和主题，实现默认的 bash 所不能实现的功能。
 
-可在终端输入以下命令查看当前使用的shell和已安装的shell。
+可在终端输入以下命令查看当前使用的 shell 和已安装的 shell。
 
 ```
 echo $SHELL
 cat /etc/shells
 ```
 
-若未安装zsh，可通过以下命令安装。
+若未安装 zsh，可通过以下命令安装。
 
 ```
 sudo apt-get install zsh
 ```
 
-在终端输入以下命令，更换默认shell为zsh，重启终端生效。
+在终端输入以下命令，更换默认 shell 为 zsh，重启终端生效。
 
 ```
 chsh -s /bin/zsh
 ```
 
-#### 安装agnoster主题字体
+#### 安装 agnoster 主题字体
 
 在终端输入下列命令以安装`powerline fonts`项目。
 
@@ -382,7 +382,7 @@ git clone https://github.com/powerline/fonts
 
 #### oh-my-zsh
 
-oh-my-zsh可用于加强zsh终端。
+oh-my-zsh 可用于加强 zsh 终端。
 
 ##### 安装
 
@@ -398,7 +398,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 sudo vim ~/.zshrc
 ```
 
-按i键以修改文件。修改`ZSH_THEME`，即可修改oh-my-zsh的主题。oh-my-zsh的GitHub Wiki页面提供了主题列表。
+按 i 键以修改文件。修改`ZSH_THEME`，即可修改 oh-my-zsh 的主题。oh-my-zsh 的 GitHub Wiki 页面提供了主题列表。
 
 ```
 https://github.com/robbyrussell/oh-my-zsh/wiki/themes
@@ -416,7 +416,7 @@ ZSH_THEME="agnoster"
 DEFAULT_USER=$USER
 ```
 
-修改完成后，需运行以下命令以更新zsh配置。
+修改完成后，需运行以下命令以更新 zsh 配置。
 
 ```
 source ~/.zshrc
@@ -483,7 +483,7 @@ source $ZSH/custom/plugins/incr/incr*.zsh
 
 #### proxychains-ng
 
-proxychains-ng可用于终端翻墙。通过以下链接下载仓库压缩包并解压。
+proxychains-ng 可用于终端翻墙。通过以下链接下载仓库压缩包并解压。
 
 ```
 https://github.com/rofl0r/proxychains-ng
@@ -525,7 +525,7 @@ proxychains curl http://www.google.com
 
 ### 常用命令
 
-#### 检查json文件
+#### 检查 json 文件
 
 ```
 jq . config.json
@@ -549,7 +549,7 @@ jq . config.json
 /home/[用户名]/.local/share/icons/Vimix-Paper/scalable/devices/computer.png
 ```
 
-## 安装rpm包
+## 安装 rpm 包
 
 在终端输入以下命令即可。
 
@@ -592,7 +592,7 @@ deb-src 源地址/ubuntu/ 版本代号-proposed main restricted universe multive
 deb-src 源地址/ubuntu/ 版本代号-backports main restricted universe multiverse
 ```
 
-以中科大的源为例，对于Ubuntu 14.10，内容如下。
+以中科大的源为例，对于 Ubuntu 14.10，内容如下。
 
 ```
 deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ utopic main restricted universe multiverse
@@ -607,7 +607,7 @@ deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ utopic-proposed m
 deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ utopic-backports main restricted universe multiverse
 ```
 
-如果是长期更新源，即带有LTS后缀的版本，以Ububtu 12.04(LTS)为例，内容如下。
+如果是长期更新源，即带有 LTS 后缀的版本，以 Ububtu 12.04(LTS)为例，内容如下。
 
 ```
 deb http://debian.ustc.edu.cn/ubuntu/ precise main restricted universe multiverse
@@ -622,7 +622,7 @@ deb-src http://debian.ustc.edu.cn/ubuntu/ precise-security main restricted unive
 deb-src http://debian.ustc.edu.cn/ubuntu/ precise-updates main restricted universe multiverse
 ```
 
-其它版本只需将utopic或precise更换为对应的Codename，可通过以下命令查看。
+其它版本只需将 utopic 或 precise 更换为对应的 Codename，可通过以下命令查看。
 
 ```
 lsb_release -a
@@ -637,9 +637,9 @@ sudo apt-get upgrade
 
 # 进阶使用
 
-## UEFI添加启动条目
+## UEFI 添加启动条目
 
-不是在grub中添加。该操作可使OpenCore中出现Linux启动项。
+不是在 grub 中添加。该操作可使 OpenCore 中出现 Linux 启动项。
 
 打开终端并输入以下命令即可。
 
@@ -662,7 +662,7 @@ efibootmgr -c -L "Linux" -l "\EFI\pathto\filex64.efi" -d "/dev/sda" -p 1
 https://github.com/luong-komorebi/Awesome-Linux-Software
 ```
 
-## Deepin-wine仓库
+## Deepin-wine 仓库
 
 ```
 https://mirrors.aliyun.com/deepin/pool/non-free/d
@@ -725,7 +725,7 @@ https://adv.musixmatch.com/r/wwwmxm
 
 # 常见问题
 
-## WPS for Linux显示系统缺失字体
+## WPS for Linux 显示系统缺失字体
 
 打开以下链接下载字体库。
 
@@ -734,13 +734,13 @@ https://adv.musixmatch.com/r/wwwmxm
 密码 / jqnu
 ```
 
-在终端输入以下命令，重启WPS即可。
+在终端输入以下命令，重启 WPS 即可。
 
 ```
 sudo unzip wps_symbol_fonts.zip -d /usr/share/fonts/wps-office
 ```
 
-## Shift打不出特殊符号
+## Shift 打不出特殊符号
 
 将键盘布局设置成英语（美国）即可。
 
@@ -763,23 +763,23 @@ auth requied pam_succeed_if.so user != root quiet success
 
 ## 引导器
 
-### grub/grub2引导器
+### grub/grub2 引导器
 
 Ubuntu通过grub/grub2引导器引导系统，主要文件（夹）有三个。
 
 #### /etc/grub.d
 
-配置grub启动项，其中40_custom和41_custom供手动添加启动项。
+配置 grub 启动项，其中 40_custom 和 41_custom 供手动添加启动项。
 
 #### /etc/default/grub
 
-配置grub2引导器的各种选项，包括分辨率等。
+配置 grub2 引导器的各种选项，包括分辨率等。
 
 #### /boot/grub/grub.cfg
 
-根据前两个文件（夹）通过命令sudo update-grub生成，每次update会生成不同的grub.cfg，启动时根据grub.cfg生成引导菜单
+根据前两个文件（夹）通过命令 sudo update-grub 生成，每次 update 会生成不同的 grub.cfg，启动时根据 grub.cfg 生成引导菜单
 
-### 安装Grub-Customizer管理引导项
+### 安装 Grub-Customizer 管理引导项
 
 在终端输入以下命令即可。
 
@@ -816,14 +816,6 @@ sudo apt-get install grub-customizer
 
 # 参考教程
 
-## 国内老版本ubuntu更新源地址以及sources.list的配置方法
+> [国内老版本ubuntu更新源地址以及sources.list的配置方法](https://blog.csdn.net/snaking616/article/details/52966634)  
 
-```
-https://blog.csdn.net/snaking616/article/details/52966634
-```
-
-## [分享]用ndiswrapper给Linux安装无线网卡
-
-```
-http://www.360doc.com/content/13/0106/23/7534118_258672109.shtml
-```
+> [\[分享\]用ndiswrapper给Linux安装无线网卡](http://www.360doc.com/content/13/0106/23/7534118_258672109.shtml)  
