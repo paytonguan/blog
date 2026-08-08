@@ -1,8 +1,8 @@
 ---
-title: 黑苹果AMD平台安装指南
+title: 黑苹果 AMD 平台安装指南
 categories: Mac
 abbrlink: Hackintosh-AMD-Guide
-date: 2019-12-01 09:55:29
+date: 2019-12-06 00:00:00
 tags:
 ---
 
@@ -14,11 +14,11 @@ AMD 平台安装黑苹果的指南。
 
 # 内核处理
 
-需要对系统内核进行处理后，才可在AMD CPU上正常运行。
+需要对系统内核进行处理后，才可在 AMD CPU 上正常运行。
 
 ## 内核修补补丁
 
-适用的CPU如下，可用于10.13及以上系统。
+适用的 CPU 如下，可用于 10.13 及以上系统。
 
 |   家族   |    代号   |                         示例                         |
 |----------|-----------|------------------------------------------------------|
@@ -26,7 +26,7 @@ AMD 平台安装黑苹果的指南。
 | 16h      | Jaguar    | A Series（包括AM4 A-Series）                         |
 | 17h和19h | Zen       | Ryzen, 1st, 2nd + 3rd Gen Threadripper, Athlon 2xxGE |
 
-在OpenCore配置文件中合并以下补丁即可。
+在 OpenCore 配置文件中合并以下补丁即可。
 
 ```
 # 15h/16h
@@ -38,7 +38,7 @@ https://github.com/AMD-OSX/AMD_Vanilla/blob/opencore/17h_19h/patches.plist
 
 ## 内核替换
 
-对于32位系统，需要进行内核替换，下载链接如下。注意替换内核后将失去iMessage支持。
+对于 32 位系统，需要进行内核替换，下载链接如下。注意替换内核后将失去 iMessage 支持。
 
 ```
 https://wiki.osx86project.org/wiki/index.php/Patched_Kernels
@@ -46,7 +46,7 @@ https://wiki.osx86project.org/wiki/index.php/Patched_Kernels
 
 ## 驱动修补
 
-对于10.13，可能需要以下kext。
+对于 10.13，可能需要以下 kext。
 
 ```
 https://github.com/amd-osx-kb/HighSierraLegacy/tree/master/files
@@ -64,7 +64,7 @@ IONetworkingFamily.kext（在10.13.3+上应使用10.13.3版）
 IOUSBFamily.kext
 ```
 
-kexts作用如下。
+kexts 作用如下。
 
 |            名称            |       作用      |
 |----------------------------|-----------------|
@@ -76,7 +76,7 @@ kexts作用如下。
 
 ### FX
 
-需要使用DummyUSBEHCIPCI和DummyUSBXHCIPCI，下载链接如下。
+需要使用 DummyUSBEHCIPCI 和 DummyUSBXHCIPCI，下载链接如下。
 
 ```
 https://github.com/amd-osx-kb/HighSierraLegacy/blob/master/files/DummyUSB.zip
@@ -84,16 +84,16 @@ https://github.com/amd-osx-kb/HighSierraLegacy/blob/master/files/DummyUSB.zip
 
 ### Ryzen
 
-仅适用于10.13。打开DSDT并添加以下源。
+仅适用于 10.13。打开 DSDT 并添加以下源。
 
 ```
 # Ryzen USB
 https://raw.githubusercontent.com/AlGreyy/Ryzen-USB-fix-/master
 ```
 
-点击Patch，使用USB Ryzen补丁。保存后将DSDT.aml放到Clover的ACPI部分，然后需要在配置文件中添加以下kext补丁。
+点击 Patch，使用 USB Ryzen 补丁。保存后将 DSDT.aml 放到 Clover 的 ACPI 部分，然后需要在配置文件中添加以下 kext 补丁。
 
-对于10.13.1-10.13.3，内容如下。
+对于 10.13.1-10.13.3，内容如下。
 
 ```
 Name: AppleUSBXHCI
@@ -112,7 +112,7 @@ Replace: 83BD7CFF FFFF1F
 Comment: ydeng USB patch
 ```
 
-对于10.13.4-10.13.6，内容如下。
+对于 10.13.4-10.13.6，内容如下。
 
 ```
 Name: AppleUSBXHCI
@@ -121,9 +121,9 @@ Replace: C8000000 83FB11
 Comment: algrey USB patch for ryzen
 ```
 
-# SSE4.2仿真
+# SSE4.2 仿真
 
-对于AMD CPU，可用MouSSE.kext在SSE4.1 CPU下运行要求为SSE 4.2的系统，下载链接如下。
+对于 AMD CPU，可用 MouSSE.kext 在 SSE4.1 CPU 下运行要求为 SSE 4.2 的系统，下载链接如下。
 
 ```
 https://forums.macrumors.com/threads/mp3-1-others-sse-4-2-emulation-to-enable-amd-metal-driver.2206682/
@@ -133,23 +133,23 @@ https://forums.macrumors.com/threads/mp3-1-others-sse-4-2-emulation-to-enable-am
 
 ## USB
 
-原生USB受到支持。
+原生 USB 受到支持。
 
 ## 音频与麦克风
 
 原生音频受到支持。
 
-G系列APU上音频问题无法修复，必须使用外部DAC。
+G 系列 APU 上音频问题无法修复，必须使用外部 DAC。
 
-麦克风支持仅限于Ryzen上的VoodooHDA，不支持15/16H CPU的麦克风。
+麦克风支持仅限于 Ryzen 上的 VoodooHDA，不支持 15/16H CPU 的麦克风。
 
 ## IOMMU
 
-IOMMU不工作。
+IOMMU 不工作。
 
 ## 三码
 
-iCloud、iMessage、FaceTime、Siri可用。
+iCloud、iMessage、FaceTime、Siri 可用。
 
 ## 显卡
 
@@ -157,9 +157,9 @@ iCloud、iMessage、FaceTime、Siri可用。
 
 ## Adobe
 
-Adobe从2019年开始大部分应用都高度依赖基于Intel的特殊数学函数库Intel Math Kernel Library（Intel-mkl），以及其它一些Intel特殊指令集用于硬件加速，涉及到的有MXMCore、FastCore、CameraRAW等。因此在AMD处理器上安装黑苹果，使用Photoshop的某些功能会导致闪退甚至Kernel Panic。
+Adobe 从 2019 年开始大部分应用都高度依赖基于 Intel 的特殊数学函数库 Intel Math Kernel Library（Intel-mkl），以及其它一些 Intel 特殊指令集用于硬件加速，涉及到的有 MXMCore、FastCore、CameraRAW 等。因此在 AMD 处理器上安装黑苹果，使用 Photoshop 的某些功能会导致闪退甚至 Kernel Panic。
 
-可通过禁用诸如RAW支持之类的功能以避免崩溃。打开终端并输入以下代码。
+可通过禁用诸如 RAW 支持之类的功能以避免崩溃。打开终端并输入以下代码。
 
 ```
 for file in MMXCore FastCore TextModel libiomp5.dylib; do
@@ -233,56 +233,56 @@ fi
 
 ## Matlab
 
-AMD黑苹果无法运行MatLab。即使能够运行，运算速度也非常缓慢，原因是缺乏Intel-mkl。
+AMD 黑苹果无法运行 MatLab。即使能够运行，运算速度也非常缓慢，原因是缺乏 Intel-mkl。
 
 ## 音频软件
 
-Cubase、REAPER、Waves插件等在启动时崩溃。使用Clang构建的REAPER可以工作。
+Cubase、REAPER、Waves 插件等在启动时崩溃。使用 Clang 构建的 REAPER 可以工作。
 
-## 32/64位
+## 32/64 位
 
-不支持32位指令。
+不支持 32 位指令。
 
-## CPU电源管理
+## CPU 电源管理
 
-不可设置CPU电源管理。
+不可设置 CPU 电源管理。
 
 ## 虚拟机
 
-由于使用AMD CPU需要注释XNU内核对Intel特有指令集的调用，因此VMX不受支持，AppleHV框架不可用，VMWare、Parallels、Docker、Android Studios等虚拟机软件均无法使用，只能使用VirtualBox，或某些虚拟机的特定版本，如VMware 10、Parallels 13.1.0。
+由于使用 AMD CPU 需要注释 XNU 内核对 Intel 特有指令集的调用，因此 VMX 不受支持，AppleHV 框架不可用，VMWare、Parallels、Docker、Android Studios 等虚拟机软件均无法使用，只能使用 VirtualBox，或某些虚拟机的特定版本，如 VMware 10、Parallels 13.1.0。
 
 ## XCode
 
-XCode的Apple Watch在Catalina中损坏，在Mojave中正常。
+XCode 的 Apple Watch 在 Catalina 中损坏，在 Mojave 中正常。
 
 # 常见问题
 
 ## 啰嗦模式
 
-### 出现AppleIntelMCEReporter报错
+### 出现 AppleIntelMCEReporter 报错
 
-双插槽支持被打破，受影响的SMBIOS包括MacPro6,1、MacPro7,1、iMacPro1,1。在引导器放置AppleMCEReporterDisabler.kext即可，需要10.15及更高版本。
+双插槽支持被打破，受影响的 SMBIOS 包括 MacPro6,1、MacPro7,1、iMacPro1,1。在引导器放置 AppleMCEReporterDisabler.kext 即可，需要 10.15 及更高版本。
 
 ```
 https://github.com/acidanthera/bugtracker/files/3703498/AppleMCEReporterDisabler.kext.zip
 https://github.com/AMD-OSX/AMD_Vanilla/blob/opencore/Extra/AppleMCEReporterDisabler.kext.zip
 ```
 
-### 出现Still Waiting for Root Device
+### 出现 Still Waiting for Root Device
 
-先按照普通情况处理，若无效则可能需要添加XLNCUSBFix.kext，以修复AMD FX系统的USB控制器。需要10.13及更高版本，下载链接如下。
+先按照普通情况处理，若无效则可能需要添加 XLNCUSBFix.kext，以修复 AMD FX 系统的 USB 控制器。需要 10.13 及更高版本，下载链接如下。
 
 ```
 https://cdn.discordapp.com/attachments/566705665616117760/566728101292408877/XLNCUSBFix.kext.zip
 ```
 
-若无效，则尝试AMD StopSign-fixv5。
+若无效，则尝试 AMD StopSign-fixv5。
 
 ## 系统启动
 
-### 在Data&Privacy页重启
+### 在 Data&Privacy 页重启
 
-进入单用户模式并输入以下命令。以上命令将跳过设置屏幕，并新建一个用户名为Temp User，密码为password的账户。
+进入单用户模式并输入以下命令。以上命令将跳过设置屏幕，并新建一个用户名为 Temp User，密码为 password 的账户。
 
 ```
 /sbin/fsck -fy
@@ -304,13 +304,13 @@ dseditgroup -o edit -a temp -t user admin
 shutdown -r +0
 ```
 
-### Safari一直重新加载YouTube等网站
+### Safari 一直重新加载 YouTube 等网站
 
 打开系统偏好设置-通用，将高亮显示颜色设置为最后一个颜色。
 
 # 附录
 
-## AMD内核补丁
+## AMD 内核补丁
 
 ### 15h/16h
 
@@ -3179,45 +3179,18 @@ shutdown -r +0
 
 # 参考教程
 
-## naveenkrdy/AdobeAMDFix.md
+> [naveenkrdy/AdobeAMDFix.md](https://gist.github.com/naveenkrdy/26760ac5135deed6d0bb8902f6ceb6bd)  
 
-```
-https://gist.github.com/naveenkrdy/26760ac5135deed6d0bb8902f6ceb6bd
-```
+> [AMD Mojave Kernel Development and Testing](https://www.insanelymac.com/forum/topic/335877-amd-mojave-kernel-development-and-testing/page/7/?tab=comments#comment-2658085)  
+> https://www.insanelymac.com/forum/topic/335877-amd-mojave-kernel-development-and-testing/page/9/?tab=comments#comment-2661857  
 
-## AMD Mojave Kernel Development and Testing
+> [Vanilla AMD Hackintosh](https://kb.amd-osx.com/guides/HS/)  
+> https://kb.amd-osx.com/guides/MJ/  
 
-```
-https://www.insanelymac.com/forum/topic/335877-amd-mojave-kernel-development-and-testing/page/7/?tab=comments#comment-2658085
-https://www.insanelymac.com/forum/topic/335877-amd-mojave-kernel-development-and-testing/page/9/?tab=comments#comment-2661857
-```
+> [SNOWLEOPARDAMD INSTALL AND POSTINSTALL](https://web.archive.org/web/20201129192905/https://amd-osx.com/forum/viewtopic.php?t=4482#p39746)  
 
-## Vanilla AMD Hackintosh
+> [Installation Guides/Kalway AMD 10 5 2](https://wiki.osx86project.org/wiki/index.php/Installation_Guides/Kalway_AMD_10_5_2)  
 
-```
-https://kb.amd-osx.com/guides/HS/
-https://kb.amd-osx.com/guides/MJ/
-```
+> [MP3,1 \(& others?\) SSE 4.2 emulation \(to enable AMD Metal driver\)](https://forums.macrumors.com/threads/mp3-1-others-sse-4-2-emulation-to-enable-amd-metal-driver.2206682/)  
 
-## SNOWLEOPARDAMD INSTALL AND POSTINSTALL
-
-```
-https://web.archive.org/web/20201129192905/https://amd-osx.com/forum/viewtopic.php?t=4482#p39746
-```
-
-## Installation Guides/Kalway AMD 10 5 2
-
-```
-https://wiki.osx86project.org/wiki/index.php/Installation_Guides/Kalway_AMD_10_5_2
-```
-
-## MP3,1 (& others?) SSE 4.2 emulation (to enable AMD Metal driver)
-
-```
-https://forums.macrumors.com/threads/mp3-1-others-sse-4-2-emulation-to-enable-amd-metal-driver.2206682/
-```
-## Install Snow Leopard on AMD PC, Laptop
-
-```
-https://geeknizer.com/install-snow-leopard-on-amd/
-```
+> [Install Snow Leopard on AMD PC, Laptop](https://geeknizer.com/install-snow-leopard-on-amd/)  

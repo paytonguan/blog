@@ -2,7 +2,7 @@
 title: Mac 终端优化
 categories: Mac
 abbrlink: Mac-Terminal-Optimization
-date: 2019-12-23 14:12:29
+date: 2019-12-10 00:00:00
 tags:
 ---
 
