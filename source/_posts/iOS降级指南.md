@@ -2,7 +2,7 @@
 title: iOS 降级指南
 categories: iOS
 abbrlink: iOS-Downgrade-Guide
-date: 2020-06-06 00:00:00
+date: 2020-02-22 00:00:00
 tags:
 
 ---

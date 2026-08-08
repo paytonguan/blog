@@ -2,7 +2,7 @@
 title: Chromium OS 的安装与配置
 categories: Chromium OS
 abbrlink: Chromium-OS-Installation
-date: 2020-04-15 00:00:00
+date: 2020-02-15 00:00:00
 tags:
 ---
 

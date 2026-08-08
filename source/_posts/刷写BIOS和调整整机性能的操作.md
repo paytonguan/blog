@@ -2,7 +2,7 @@
 title: 刷写 BIOS 和调整整机性能的操作
 categories: Computer
 abbrlink: BIOS-Editing-And-Flashing
-date: 2020-04-16 00:00:00
+date: 2020-01-04 00:00:00
 tags:
 ---
 

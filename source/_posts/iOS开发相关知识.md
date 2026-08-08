@@ -1,8 +1,8 @@
 ---
 title: iOS 开发相关知识
-categories: Study
+categories: iOS
 abbrlink: Knowledge-About-iOS-Development
-date: 2020-06-11 00:00:00
+date: 2020-02-27 00:00:00
 tags:
 ---
 

@@ -2,7 +2,7 @@
 title: Anki 使用指南
 categories: Skill
 abbrlink: Instructions-Of-Anki
-date: 2020-05-12 12:54:29
+date: 2020-01-31 00:00:00
 tags:
 ---
 
