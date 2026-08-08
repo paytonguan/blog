@@ -1,6 +1,6 @@
 ---
 title: 黑苹果 AMD 平台安装指南
-categories: Mac
+categories: Hackintosh
 abbrlink: Hackintosh-AMD-Guide
 date: 2019-12-06 00:00:00
 tags:
