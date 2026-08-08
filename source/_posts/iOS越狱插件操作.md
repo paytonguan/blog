@@ -1,15 +1,15 @@
 ---
-title: iOS越狱插件操作
+title: iOS 越狱插件操作
 categories: iOS
 abbrlink: iOS-Jailbreak-Tweaks-Guide
-date: 2023-11-10 12:33:29
+date: 2020-06-07 00:00:00
 tags:
 
 ---
 
 ![](topic.jpg)
 
-iOS常用越狱插件。
+iOS 越狱插件的来源、操作与常用插件整理。
 
 <!-- more -->
 
@@ -1628,7 +1628,7 @@ https://cokepokes.github.io/
 |------------|----------|
 | AppStore++ | 应用降级 |
 
-对于AppStore++，若降级时发现无可用版本，可打开链接以查询特定应用版本的版本号ID。复制要降级到的版本ID，降级时点击Manual Install，将ID填写到对话框即可。
+对于 AppStore++，若降级时发现无可用版本，可打开链接以查询特定应用版本的版本号 ID。复制要降级到的版本 ID，降级时点击 Manual Install，将 ID 填写到对话框即可。
 
 ```
 https://tools.lancely.tech/
@@ -1914,7 +1914,6 @@ https://apt.cydiami.com/
 https://apt.Fcydia.com/
 http://zlxdike.github.io/repo/
 https://henrikssonbrothers.com/cydia/repo/
-https://kanam.me/repo/
 https://repo.openpack.io/
 https://repo.menushka.ca/
 https://creaturesurvive.github.io/
@@ -1952,7 +1951,6 @@ http://repo.auxiliumdev.com
 https://repo.xarold.com/
 http://julio.xarold.com/
 http://getdelta.co/
-http://beta.sparkservers.co.uk/
 ```
 
 # 其它插件
@@ -2317,1404 +2315,244 @@ https://github.com/34306/MilkyWayReborn
 
 ## 插件出错排查
 
-若安装的插件不兼容或者冲突，一般会进入安全模式。此时打开Sileo卸载有问题的插件即可。
+若安装的插件不兼容或者冲突，一般会进入安全模式。此时打开 Sileo 卸载有问题的插件即可。
 
-可使用PowerSelector一键进入安全模式。
+可使用 PowerSelector 一键进入安全模式。
 
 
 # 参考教程
 
-## iOS 15.4.1 Derootifier 更新，转无根插件
-
-```
-https://mp.weixin.qq.com/s/WpSy6G7vIYFWS0PmbhDXgQ
-```
-
-## iOS 系统，通知上岛，终于来了，免费
-
-```
-https://mp.weixin.qq.com/s/hmhS82ldAPGz13SrvdDXlg
-```
-
-## iOS 系统，新版，通知上岛，免费
-
-```
-https://mp.weixin.qq.com/s/LKNRCtao1hJ904z7GBd3RA
-```
-
-## iOS 系统，网络管理，重生
-
-```
-https://mp.weixin.qq.com/s/IJAs_AWQGgFUllICKsMkMA
-```
-
-## 无需更新系统，iOS 16 锁屏音乐播放器
-
-```
-https://mp.weixin.qq.com/s/Qgg-YsbZ2qxRByP3BvLOwQ
-```
-
-## iOS 系统，巫师，神奇切换器
-
-```
-https://mp.weixin.qq.com/s/5bDN0I2yoVoEE3z_fNzEhw
-https://mp.weixin.qq.com/s/kpO4zbZx_jf-eaAIwnTUwQ
-```
-
-## iOS 系统，新版 OCD，Dotto 重生
-
-```
-https://mp.weixin.qq.com/s/TgPBUlJ6hA6hB47LKbFYXA
-```
-
-## iOS 系统，经典，复活
-
-```
-https://mp.weixin.qq.com/s/jPYZSmac9A982G47oog4Bw
-```
-
-## iOS 系统，保护你的 iPhone
-
-```
-https://mp.weixin.qq.com/s/mPAYZHpTyowD6-cgkm-DrA
-```
-
-## iOS 系统，新玩具，泡泡应用
-
-```
-https://mp.weixin.qq.com/s/DPUNePAuUqr7wc15YCRyOA
-```
-
-## iOS 系统，IAmLazy 一键备份，就这么简单
-
-```
-https://mp.weixin.qq.com/s/9Fozz0htLjFJIMzZKalnuA
-```
-
-## iOS 系统，让 iPhone 续航更持久
-
-```
-https://mp.weixin.qq.com/s/qgDeqCa4bmIZO_Mb42ylZA
-```
-
-## iOS 系统，KuKu，重生
-
-```
-https://mp.weixin.qq.com/s/P-Tq4LH5w_RHe6ulSY3BAQ
-```
-
-## 强，分屏神器随意切换
-
-```
-https://mp.weixin.qq.com/s/fu4GwHb22wV9wTugeTS4kQ
-```
-
-## 大神被诏安，苹果给的实在是太多了
-
-```
-https://mp.weixin.qq.com/s/8aXpTlDo9o924uG1_4otkw
-```
-
-## iOS 15.x SaiGon 越狱更新，离有根接近
-
-```
-https://mp.weixin.qq.com/s/nMf9dsdkYUcc74h7sAsgZA
-```
-
-## iOS 系统，专业歌词，卡拉OK，中文免费
-
-```
-https://mp.weixin.qq.com/s/U4oQJVB-dOhNTfo2oCLooA
-```
-
-## iOS 系统，浏览器手势，便捷神器
-
-```
-https://mp.weixin.qq.com/s/dyslnxm8WUQlaYXhbnlbAQ
-```
-
-## iOS 系统，增强神器，终于来了，好用
-
-```
-https://mp.weixin.qq.com/s/TZegOgeQQ4yBz147n6iD-g
-```
-
-## iOS 系统，灵动通知，现已发布，丝滑
-
-```
-https://mp.weixin.qq.com/s/3_rDkLlOd4yoZfKYvDLyqw
-```
-
-## iOS 系统，智能旋转，好用
-
-```
-https://mp.weixin.qq.com/s/YZalAF-psZc05IksHbzevg
-```
-
-## iOS 系统，新玩意，Ring
-
-```
-https://mp.weixin.qq.com/s/N18_xeLW6ERG-8qTqEQyTw
-```
-
-## iOS 系统，彩虹信号
-
-```
-https://mp.weixin.qq.com/s/HQOalFFFihh2bsHCX92g-Q
-```
-
-## iOS 系统，一键清除后台，免费
-
-```
-https://mp.weixin.qq.com/s/cmhK9IgrbsYoknVPqoa-qA
-```
-
-## iOS 系统，智能通知，终于来了
-
-```
-https://mp.weixin.qq.com/s/skVXzhdfBzOheA16PJNSbA
-```
-
-## iOS 系统，酷CC，完全免费
-
-```
-https://mp.weixin.qq.com/s/0IVd_KbPOxc8HugXw4c1zw
-```
-
-## iOS 系统，通知聚合，漂亮，重生
-
-```
-https://mp.weixin.qq.com/s/MG4ilT2szAIuCx09xFrX0Q
-```
-
-## iOS 系统，通知归纳，复活
-
-```
-https://mp.weixin.qq.com/s/FAlH-OJY9pqVQE69HkM_iw
-```
-
-## iOS 系统，超强山猫，终极定制
-
-```
-https://mp.weixin.qq.com/s/x6o1CxrpmxZS_AKw6twWeQ
-```
-
-## iOS 系统，老牌分屏神器，复活，免费
-
-```
-https://mp.weixin.qq.com/s/KPnCZGIzGjwz4yzvyRm1AA
-```
-
-## iOS 系统，一键单独静音 App，快速方便
-
-```
-https://mp.weixin.qq.com/s/83NwvHGvrPnat2JfScHypQ
-```
-
-## iOS 系统，新玩意，寿司
-
-```
-https://mp.weixin.qq.com/s/FlIRiQsf7GMNSCipOX_Mzw
-```
-
-## iOS 系统，简单时间，效果不错
-
-```
-https://mp.weixin.qq.com/s/gmE_tbMuwVhOlIMUQfBH0A
-```
-
-## iOS 15 系统，Freya 越狱发布，手机端，无需电脑
-
-```
-https://mp.weixin.qq.com/s/lO4QUi5t0QOayFKEnJ_e0w
-```
-
-## iOS 系统，长蛇座，菜单 App 快捷
-
-```
-https://mp.weixin.qq.com/s/iumYTvAg59zTfw9CZ_OfWQ
-```
-
-## iOS 15 系统，新越狱工具发布
-
-```
-https://mp.weixin.qq.com/s/OnXArgrCST81xFdLL2HHhQ
-```
-
-## iOS 系统，Vē，通知记录，全部
-
-```
-https://mp.weixin.qq.com/s/2w9XBSYPo7iplrDIhacjZg
-```
-
-## iOS 系统，砸壳，完整权限
-
-```
-https://mp.weixin.qq.com/s/QazBuU0vS1h1xvAgbpdiwA
-```
-
-## iOS 16.6.1 TrollPad 后台分屏已发布
-
-```
-https://mp.weixin.qq.com/s/TnhjRLBJb07IqqFLq2bdZg
-```
-
-## iOS 系统，App 堆栈，终于来了
-
-```
-https://mp.weixin.qq.com/s/zSZTNRIGDGVfwYiXjkHmLQ
-```
-
-## iOS 系统，全局替换，神器？
-
-```
-https://mp.weixin.qq.com/s/AzWKXwpXyk5r-1UJewEcRw
-```
-
-## 更新了！iOS 16.x LCT 通话翻译，不怕听不懂
-
-```
-https://mp.weixin.qq.com/s/O0jYtJevqlvDD7ZV7CW64w
-```
-
-## iOS 系统，一键长截图，终于来了，独立使用，完全免费
-
-```
-https://mp.weixin.qq.com/s/pm4OONErIvjqIuVUw6-V6w
-```
-
-## iOS 系统，Mitsuha 现已复活
-
-```
-https://mp.weixin.qq.com/s/4W--zjn9KhVyuDFuMsiL8Q
-```
-
-## 无须刷机，破解iPhone访问限制密码方法
-
-```
-https://mp.weixin.qq.com/s/buJ1b3PzLmxn3-_ZIq51AA
-```
-
-## iOS 系统，全新控制中心，终于来了
-
-```
-https://mp.weixin.qq.com/s/ZB-RdZmZBbKp4LcCKC9Tow
-```
-
-## iOS 系统，IPA 下载器，完全免费
-
-```
-https://mp.weixin.qq.com/s/i0ViSJ2e8zbZ2ib4mpguwg
-```
-
-## iOS 系统，老设备一键灵动岛，完全免费
-
-```
-https://mp.weixin.qq.com/s/P8kuxCVVbko6SPegTH512g
-```
-
-## iOS 系统，Mochi15 锁屏音乐，已经免费
-
-```
-https://mp.weixin.qq.com/s/wbFuW40JrKVuINk0R0v75g
-```
-
-## iOS 系统，智能网络，增强 WiFi 信号
-
-```
-https://mp.weixin.qq.com/s/N55JDSXC_7CusZYzjcpebg
-```
-
-## iOS 系统，锁大师，现已上架 Havoc 源，免费
-
-```
-https://mp.weixin.qq.com/s/QOwYPFBHEgCgU9jxyK_FNw
-```
-
-## iOS 系统，新的精美控制中心，必看
-
-```
-https://mp.weixin.qq.com/s/gcsH0URHsh4z9awUIliP3Q
-```
-
-## iOS 16.6.1 新快捷插件，超级便捷
-
-```
-https://mp.weixin.qq.com/s/-tvVsysm4-IcfS908bZD2g
-```
-
-## iOS 系统，tvOS 风格弹窗，完全免费
-
-```
-https://mp.weixin.qq.com/s/gd9MpAeWCgEGTLCaihX1ew
-```
-
-## iOS 系统，耳目一新
-
-```
-https://mp.weixin.qq.com/s/TQAxvrUhZYKPy-X7XaygOQ
-```
-
-## iOS 系统，自定义锁屏，iOS 16 样式
-
-```
-https://mp.weixin.qq.com/s/p3iVl7A6byCKIlip4wyyVA
-```
-
-## iOS 系统，归类，顶图，新样式
-
-```
-https://mp.weixin.qq.com/s/nWj5k6kep8F07tuABfNh-g
-```
-
-## 大神宣布，全部免费
-
-```
-https://mp.weixin.qq.com/s/SSYXT7gAnHCWU2-Nx7sKjg
-```
-
-## iOS 系统，一键更改 App 版本，完全免费
-
-```
-https://mp.weixin.qq.com/s/fue2BvyCnxJwiyDYyYp1oQ
-```
-
-## iOS 系统，键盘增强，完全免费
-
-```
-https://mp.weixin.qq.com/s/Fh4nLBx5xXG7qBADVCoOKw
-```
-
-## iOS 系统，一键清除后台，两款，完全免费
-
-```
-https://mp.weixin.qq.com/s/buF4WXfLffbQXRBgwIEQ2w
-```
-
-## iOS 系统，iPhone 熄屏显示，炫酷
-
-```
-https://mp.weixin.qq.com/s/a52lAZOAU_0eUZussSil4A
-```
-
-## iOS 系统，轻量级剪贴板神器，完全免费
-
-```
-https://mp.weixin.qq.com/s/WZ6zOGvSO5JvCBxh1tGqEQ
-```
-
-## iOS 系统，iPhone 分屏神器，现已免费
-
-```
-https://mp.weixin.qq.com/s/3aokPB-iMBQ-18QlBzLksg
-```
-
-## iOS 系统，一键隐藏，保护隐私
-
-```
-https://mp.weixin.qq.com/s/djagf9zvDL2c0e--wh1sZg
-```
-
-## iOS 系统，照片加锁，保护隐私，现已免费
-
-```
-https://mp.weixin.qq.com/s/9eSKpU4UcaC8MTn-RhyAlA
-```
-
-## iOS 系统，卡片计算器，前端悬浮显示
-
-```
-https://mp.weixin.qq.com/s/i_N7eFDM1f-uZIqZpOSfEg
-```
-
-## iOS 系统，像 iPad 一样分屏，终于来了，免费
-
-```
-https://mp.weixin.qq.com/s/gew66tNDWV0fQXxKBb-vmg
-```
-
-## iOS 系统，电池、亮度、音量百分比，清除角标，快速控制中心，完全免费
-
-```
-https://mp.weixin.qq.com/s/tXfKj3_HgZB4frYFQ4dPww
-```
-
-## iOS 系统，截图神器，详细使用
-
-```
-https://mp.weixin.qq.com/s/F8_flUzRjaQhyUg6fT9tNQ
-```
-
-## iOS 系统，真正的 iPhone 通话录音，就这么简单
-
-```
-https://mp.weixin.qq.com/s/WUWIdWcWB1lwKMfvUr4CtQ
-```
-
-## iOS 系统，老设备立刻拥有灵动岛，来了
-
-```
-https://mp.weixin.qq.com/s/I1kZRanmJ-AJ0XAvlytSTg
-```
-
-## iOS 系统，弹窗自适应，独立设置，录像暂停，Dock 动图，完全免费
-
-```
-https://mp.weixin.qq.com/s/6JJ4kDy4r459QK3HLXyG2Q
-```
-
-## iOS 系统，真后台来了，完全免费
-
-```
-https://mp.weixin.qq.com/s/_O6ZMCZXneX56QzBosreug
-```
-
-## iOS 系统，终于来了，分词大爆炸，完全免费
-
-```
-https://mp.weixin.qq.com/s/dPqO2AgnIMbOFd7Bi46vOw
-```
-
-## iOS 系统，终于支持了，自定义桌面布局，完全免费
-
-```
-https://mp.weixin.qq.com/s/1X16PvIXr7I3sUCp4VhR7w
-```
-## iOS 系统，我的 iPhone 下雪啦，清凉
-
-```
-https://mp.weixin.qq.com/s/RvrDbrBdhT-Q_ut_ky-ZoQ
-```
-
-## iOS 系统，视频播放器手势，完全免费
-
-```
-https://mp.weixin.qq.com/s/MjA6oIQlPu54BJ7kaAvjIw
-```
-
-## iOS 系统，iPhone 来电自动应答，语音信箱
-
-```
-https://mp.weixin.qq.com/s/_kD65DEKCcCGtFh6WorJZw
-```
-
-## iOS 系统，给隐藏照片加锁，保护隐私
-
-```
-https://mp.weixin.qq.com/s/eDvNKbSDuvAuO8s3nhyrzQ
-```
-
-## iOS 系统，分屏神器，终于来了，完全免费
-
-```
-https://mp.weixin.qq.com/s/VxrfG_IMyJkOYxY9s7e5zA
-```
-
-## iOS 系统，接听振动，角标美化，状态栏日期和时间，完全免费
-
-```
-https://mp.weixin.qq.com/s/OUj0C7_-ssvjkJMXeTXPdQ
-```
-
-## iOS 16.2 AppSync 插件更新，可以任意安装IPA
-
-```
-https://mp.weixin.qq.com/s/szIA7ASYdH0VWrRjeQV7xw
-```
-
-## iOS 系统，让 iPhone 使用 tvOS 精美弹窗
-
-```
-https://mp.weixin.qq.com/s/RXv3JAiom4K1rnK3W_U8MA
-```
-
-## iOS 系统，漂亮锁屏，别具一格
-
-```
-https://mp.weixin.qq.com/s/lewysejGGbpwA87h0TTG5w
-```
-## iOS 系统，功能丰富，必备神器，完全免费
-
-```
-https://mp.weixin.qq.com/s/p0nLRsMwnku0oxJen3XprA
-```
-## iOS 系统，动画加速，飞速体验，免费
-
-```
-https://mp.weixin.qq.com/s/mZg28Cu6X_VUo_2ABSmk1w
-```
-
-## 好东西！iOS 16.5.1 新的分屏插件
-
-```
-https://mp.weixin.qq.com/s/Xu3zfZwp9lIYtxvcPA6NJQ
-```
-
-## iOS 系统，全新触摸，中文，免费
-
-```
-https://mp.weixin.qq.com/s/ligvymOcyvnOy-TYy_yVpg
-```
-
-## iOS 系统，Touch-Viz，漂亮，内有福利
-
-```
-https://mp.weixin.qq.com/s/A30VyA5M-RwlPG8VpdYkGQ
-```
-
-## iOS 系统，必备神器，功能丰富
-
-```
-https://mp.weixin.qq.com/s/L_-UQ4Eds90dZObqTh0WoQ
-```
-
-## iOS 系统，增强版，中文，免费
-
-```
-https://mp.weixin.qq.com/s/9H1SDdrU5BUZiCh_pvmLLQ
-```
-
-## iOS 系统，韦尔西纳，测试一下
-
-```
-https://mp.weixin.qq.com/s/ETJQ4RAEimW_yoO677vlTQ
-```
-
-## iOS 系统，CopyVault，好用
-
-```
-https://mp.weixin.qq.com/s/1e1zT3l82OpV787B4DCQ2g
-```
-
-## iOS 系统，iPhone 熄屏显示，新鲜
-
-```
-https://mp.weixin.qq.com/s/nRNoXhFtXZp7JUaKO52Brg
-```
-
-## 在 iPhone 上养一只可爱的小猫，有趣
-
-```
-https://mp.weixin.qq.com/s/yAwYNtCUej1RmVMI78Tj5Q
-```
-## iOS 系统，漂亮的计时器和闹钟，现已免费
-
-```
-https://mp.weixin.qq.com/s/oyFHcmKanTsznQho6UNMfQ
-```
-
-## iOS 系统，iPhone 通话变声器
-
-```
-https://mp.weixin.qq.com/s/yFlqh8mhRNi2QWZ1F40X1Q
-```
-
-## iOS 系统，动画加速，纵享丝滑
-
-```
-https://mp.weixin.qq.com/s/j7Mr4tD4e_wjbyCUWg8KMQ
-```
-
-## iOS 系统，快速启动神器，丝滑
-
-```
-https://mp.weixin.qq.com/s/9HmfhMYfq_0KNNl1ct2t9A
-```
-
-## iOS 系统，超酷动态视频壁纸，完全免费
-
-```
-https://mp.weixin.qq.com/s/LdtVlkrCD7-NBBQ7qW-IsA
-```
-
-## iOS 系统，运行时间，一键截图，锁屏天气，完全免费
-
-```
-https://mp.weixin.qq.com/s/5P8bmTSbnkChQF3F3uJePQ
-```
-
-## iOS 系统，功能强大，保护隐私
-
-```
-https://mp.weixin.qq.com/s/I8yXnoW5gY0908uOUgFVYw
-```
-
-## iOS 系统，简洁好用的程序锁，免费
-
-```
-https://mp.weixin.qq.com/s/7atDcp31oCJZZVDgnhFtBg
-```
-
-## iOS 系统，去除红点，去除资源库，录屏勿扰，复制通知，图标文件夹
-
-```
-https://mp.weixin.qq.com/s/KecTqxZ-Unabb6ARu3toBQ
-```
-
-## iOS 系统，让 iPhone 快速返回，非常方便
-
-```
-https://mp.weixin.qq.com/s/m-UVmt0uggHyD7I6_8TYxA
-```
-
-## iOS 系统，已安装插件，提取和备份 deb
-
-```
-https://mp.weixin.qq.com/s/vQpyIPIyGY80DOJ2KOe1fg
-```
-
-## iOS 系统，设置归类，设置顶图，就这么简单
-
-```
-https://mp.weixin.qq.com/s/7q4zS2mpFX2DRGxrjwqbaA
-```
-
-## iOS 系统，炫酷跑马灯，完全免费
-
-```
-https://mp.weixin.qq.com/s/xpwCCukt4O5VWP3cnXBixA
-```
-
-## iOS 系统，自定义文件夹，支持批量拖放，中文菜单
-
-```
-https://mp.weixin.qq.com/s/_4eThM51DYngTEjxcsKRUA
-```
-
-## iOS 系统，控制中心一键定位，一键注销，迷你播放器，免费
-
-```
-https://mp.weixin.qq.com/s/U9ahH9U06lYYYa3yMv8xEg
-```
-
-## iOS 系统，炫酷翻页特效，重生
-
-```
-https://mp.weixin.qq.com/s/WGF1iK9QmUJQRgVDoUqLyg
-```
-
-## 电池百分比，iOS 16 样式，完全免费
-
-```
-https://mp.weixin.qq.com/s/LoeQYWJCKRAov-DXZ7wLHA
-```
-
-## 仿 iPhone 12 充电动画来了，旧款设备也能实现
-
-```
-https://mp.weixin.qq.com/s/qQpviEqnfhXfL-1tyBneqQ
-```
-
-## iOS 13 仿 14 插件，越狱设备可试
-
-```
-https://mp.weixin.qq.com/s/gyoD4gOr3Iwn6vnOgHreIQ
-```
-
-## iOS 系统，控制中心换个图标，有趣
-
-```
-https://mp.weixin.qq.com/s/nKzvEM2fIscdp0Wdlqprug
-```
-
-## iOS 系统，iPhone 水特效，清凉
-
-```
-https://mp.weixin.qq.com/s/_ctkLwa00Vuh-IPbppx7DA
-```
-
-## 大神去世！
-
-```
-https://mp.weixin.qq.com/s/9eEgZCNwp2l2jGbixECdCA
-```
-
-## iOS 系统，增加小组件，音量控件，触摸轨迹，V指示器
-
-```
-https://mp.weixin.qq.com/s/QEJev2pngW595b2YalJZcw
-```
-
-## iOS 系统，让控制中心更好用
-
-```
-https://mp.weixin.qq.com/s/2qGFFYJTfQFO-3WhfWOv3w
-```
-
-## iOS 系统，电源增强，完全免费
-
-```
-https://mp.weixin.qq.com/s/d3rQlXgBi6yUHLYaR7dFxQ
-```
-
-## iOS 系统，下载 deb，提取 dylib 文件
-
-```
-https://mp.weixin.qq.com/s/bNU5OMIzpYcxWKz-plXy4Q
-```
-
-## 来啦！全新 iOS 16.6.1 启动灵动岛，可以下移显示
-
-```
-https://mp.weixin.qq.com/s/QtIyEdHQs0xaU-lwFzz2Gg
-```
-
-## iOS 16.6.1 颠倒显示，实现无刘海显示
-
-```
-https://mp.weixin.qq.com/s/wOdmdHV-c7dTBMvfafbCDw
-```
-
-## 大神更新，老牌神级，现已支持
-
-```
-https://mp.weixin.qq.com/s/HWtxgeob9SiuF-kiEeZwxA
-```
-
-## 无需升级 iOS 18，体验新功能，第一期
-
-```
-https://mp.weixin.qq.com/s/mNjjfCJT8i5-frfvxtw_JQ
-```
-
-## iOS 系统，精美控制中心，完全免费
-
-```
-https://mp.weixin.qq.com/s/6u4ijH_kdJObZ6D96kSPBg
-```
-
-## iOS 系统，继续，控制
-
-```
-https://mp.weixin.qq.com/s/7yPvxAXQo64eqb-ytT5HEw
-```
-
-## iOS 系统，角标，个性化角标
-
-```
-https://mp.weixin.qq.com/s/RbNw_DeCROx6nNFGLKVJdw
-```
-
-## iOS 系统，一键换号，来电拒接，取消静音，计算历史，备份安装包
-
-```
-https://mp.weixin.qq.com/s/B9VxGRXX_o803jwBnNJAlA
-```
-
-## iOS 系统，锁屏秒数，评论评分，状态栏网速，同时播放，自由深色
-
-```
-https://mp.weixin.qq.com/s/XcaRhBeFUiQloLsYMNxpjA
-```
-
-## 系统数据，查看详细
-
-```
-https://mp.weixin.qq.com/s/4V9v4fkKp4-QdfSeK5HwBQ
-```
-
-## iOS 系统，语音免跳转，移除小组件背景，迷你横幅，环境光切换，独立设置
-
-```
-https://mp.weixin.qq.com/s/PPxn4cm_e9mZ_ZMSyJI1kQ
-```
-
-## 一键透明
-
-```
-https://mp.weixin.qq.com/s/h9k298Yf7XwYg5BkbkLkmQ
-```
-
-## 图标随意摆，终于来了
-
-```
-https://mp.weixin.qq.com/s/NqAHwQ3osTT554lkkOzehA
-```
-
-## 新玩法，无需升级 iOS 18 系统
-
-```
-https://mp.weixin.qq.com/s/4jc7XqYDaWjygjnrGHkqfw
-```
-
-## CC18
-
-```
-https://mp.weixin.qq.com/s/2IoMgsPUtw_KEWPBgpqokQ
-```
-
-## 小草，终于重生
-
-```
-https://mp.weixin.qq.com/s/AZXHdcDyIkyscLOZGZgw0Q
-```
-
-## 时光机
-
-```
-https://mp.weixin.qq.com/s/lzNyegaJs1c-2XMSWdQ5Ow
-```
-
-## 移除电量低于20%弹窗
-
-```
-https://mp.weixin.qq.com/s/-_4KYfb7cD92M-6Z3D7ATA
-```
-
-## 实用，免费！
-
-```
-https://mp.weixin.qq.com/s/2N1p-zeb8-to2OfDgaXbzQ
-```
-
-## 一大波！
-
-```
-https://mp.weixin.qq.com/s/6TOE5mzlksU2L464TekALA
-```
-
-## 速度，无需升级 iOS 18.1 系统
-
-```
-https://mp.weixin.qq.com/s/x13r70Cw5dNmfYhjxX5m6w
-```
-
-## CCBorder
-
-```
-https://mp.weixin.qq.com/s/b75d8mDoTN8SM37qqQ5z-w
-```
-
-## 神器，永生者！
-
-```
-https://mp.weixin.qq.com/s/4CXLdgvM6kUNeZqXLPYmnA
-```
-
-## iOS 13.4.1 免越狱改X手势，Sileo 再次更新
-
-```
-https://mp.weixin.qq.com/s/qYrfrFd-kE5hRtr0thIdUg
-```
-
-## iOS 系统，主题美化，真主题，抢鲜使用，无需越狱，免费
-
-```
-https://mp.weixin.qq.com/s/eDl_Og4I-nFotAgNwp2AnA
-```
-
-## iOS 系统，通知归纳，简洁美观
-
-```
-https://mp.weixin.qq.com/s/Jc7ou0mo4yB5_SMiXOw6KA
-```
-
-## iOS 系统，一键振动，禁用资源库，自定义运营商，自动解锁，完全免费
-
-```
-https://mp.weixin.qq.com/s/PbTZM37HmOShWP7QS7_B9g
-```
-
-## iOS 系统，新的 iPhone 分屏神器，众享丝滑
-
-```
-https://mp.weixin.qq.com/s/MeqS0proFrb5CHZ1LrNWAw
-```
-
-## iOS 系统，自定义锁头，漂亮
-
-```
-https://mp.weixin.qq.com/s/CWGHr0mO5YOcHvcPP0-DgA
-```
-
-## iOS 系统，新一代截图神器，来了
-
-```
-https://mp.weixin.qq.com/s/DZZxAcw8lLvczs-8rUcBMQ
-```
-
-## iOS 系统，iPhone 熄屏显示，精美
-
-```
-https://mp.weixin.qq.com/s/QQgXWmQiGO5kCLsMkH1plw
-```
-
-## iOS 系统，计算历史，角标，去除，勿扰增强，插件 Hub，完全免费
-
-```
-https://mp.weixin.qq.com/s/8HUs0mvFWZ5-ktek1YrxmA
-```
-
-## iOS 越狱，官方源，作者源，推荐大集合
-
-```
-https://mp.weixin.qq.com/s/lSE0PSKA4PT09ChOrEwRRw
-```
-
-## 分享三款插件，你一定会喜欢
-
-```
-https://mp.weixin.qq.com/s/GkZDxPiU7dBJHmTCFP1q2g
-```
-
-## 分享二款实用插件，你一定会喜欢
-
-```
-https://mp.weixin.qq.com/s/dmPGwIi6K-hkM-KayaDvFQ
-```
-
-## 省电插件已经更新，越狱已经修复
-
-```
-https://mp.weixin.qq.com/s/7FFxbg62JpPv9SLtEK2xXQ
-```
-
-## iOS 13 也能享用 iOS 14 新功能，赶紧试试
-
-```
-https://mp.weixin.qq.com/s/q9yuPIOh0nl4hhoRo7j3AQ
-```
-
-## 05.05 ｜ 近期插件更新，速看
-
-```
-https://mp.weixin.qq.com/s/AwNF8CjL2HmxH_dQ5-RJ7A
-```
-
-## 超爽！iOS 15.1 MilkyWay2 分屏，含安装教程
-
-```
-https://mp.weixin.qq.com/s/5dg5MCJ6QgVZnIU-4CL4Gg
-```
-
-## IOS11.2~11.3.1系统美化软件已发布，你会喜欢吗？
-
-```
-https://mp.weixin.qq.com/s/FabYhz1LNwgic41A13kQdA
-```
-
-## iOS 系统，deb 备份，支持一键备份全部
-
-```
-https://mp.weixin.qq.com/s/r6KxWQsuSBh72w6b4X21Sg
-```
-
-## 真的来了，iOS 15/16 灵动半岛插件，确实有灵动
-
-```
-https://mp.weixin.qq.com/s/4S3-4qV4SopGeTwA7lCCpw
-```
-
-## iOS 系统，一键抠图神器，无需升级 iOS 16
-
-```
-https://mp.weixin.qq.com/s/VadXLLO9iBKMnUN507VHxQ
-```
-
-## iOS 系统，带上皇冠，终于来了
-
-```
-https://mp.weixin.qq.com/s/jUTM2lVhOSLWBdr1HiMQQQ
-```
-
-## 近期插件更新，看看
-
-```
-https://mp.weixin.qq.com/s/k81Vg0MjJJKnvfdQ9h9JUw
-```
-
-## iOS 系统，自定义 Dock 栏摆放数量
-
-```
-https://mp.weixin.qq.com/s/h3b5_npq65eCjks5y5LfOw
-```
-
-## iOS 系统，翻译神器，详细使用
-
-```
-https://mp.weixin.qq.com/s/qZ0Gj64bHNqfNmZpocSyBQ
-```
-
-## iOS 系统，伴着音乐入睡
-
-```
-https://mp.weixin.qq.com/s/beSu7v8Q_xXDY-yqHsYdGA
-```
-
-## 无需升级 iOS 18，体验新功能，第二期
-
-```
-https://mp.weixin.qq.com/s/4bmOb5UjTuPKAD4gHAtIWg
-```
-
-## 分享插件：55款插件一定有你喜欢的
-
-```
-https://mp.weixin.qq.com/s/VoZGTl5iwe98tlzrKThEfg
-```
-
-## 新玩法，Centra！
-
-```
-https://mp.weixin.qq.com/s/-MEXxPfLPctloyzIH6FG0A
-```
-
-## 神器，终于来了
-
-```
-https://mp.weixin.qq.com/s/ZWW1W5h2RT0o-cIyyck3hw
-```
-
-## 重生，免费
-
-```
-https://mp.weixin.qq.com/s/StqxCWBQUR-YfutVa-rUQQ
-```
-
-## 新玩具，桑杰！
-
-```
-https://mp.weixin.qq.com/s/5JJ8aCAVlES54fXkhkzhlg
-```
-
-## EmoZoom，无需升级 iOS 18.1 系统
-
-```
-https://mp.weixin.qq.com/s/xGgeWpEPdBZ7DkJSLY0s8g
-```
-
-## iPhone 一秒变手表
-
-```
-https://mp.weixin.qq.com/s/ZA_Vpt8ySW3XqC4anIOpGA
-```
-
-## Shijima
-
-```
-https://mp.weixin.qq.com/s/zxIL6ATqVIv7IJwtVNk1jw
-```
-
-## ReplyActions
-
-```
-https://mp.weixin.qq.com/s/4XHby9ytB_jdIW0hljl0ew
-```
-
-## SquidExtender，好用
-
-```
-https://mp.weixin.qq.com/s/-WOtLpvIBPNDX00paj-ITg
-```
-
-## LockMoji15+
-
-```
-https://mp.weixin.qq.com/s/s6wCAwXLAfLygl_d7lsXHA
-```
-
-## 炫酷 ！
-
-```
-https://mp.weixin.qq.com/s/kBqxfzGUEp3PwBdAfP2DgQ
-```
-
-## 音乐壁纸 ！
-
-```
-https://mp.weixin.qq.com/s/tJ5hwTqtJiY8_T2zaAtZUA
-```
-
-## LockTouchX，无需升级 iOS 18 系统
-
-```
-https://mp.weixin.qq.com/s/lgX4dweSn3xTgiq7VOVlKw
-```
-
-## 计算，增强！
-
-```
-https://mp.weixin.qq.com/s/TXEfw1jFycCiajoI0aanaA
-```
-
-## Pokébox 重生
-
-```
-https://mp.weixin.qq.com/s/dJJJ08kmAwNvinLWmw5jvw
-```
-
-## 去除设置红点，去除未知部件！
-
-```
-https://mp.weixin.qq.com/s/n5wZeVnjYgvX7IUMqA5kcg
-```
-
-## PowerSettings !
-
-```
-https://mp.weixin.qq.com/s/Ad8mBzyxR9rZI5LEfoA7xQ
-```
-
-## WiFi 密码！
-
-```
-https://mp.weixin.qq.com/s/8Sa7V_YCwto2aWr8u9mFgg
-```
-
-## 定时维护！
-
-```
-https://mp.weixin.qq.com/s/pve2_k_1UJuH3ix__jWEPw
-```
-
-## 神器！低系统，安装要求高系统的应用！
-
-```
-https://mp.weixin.qq.com/s/yoRmPFgNC2wk2xohGf4jvA
-```
-
-## 通知上岛，免费！
-
-```
-https://mp.weixin.qq.com/s/H7wNa5_8LsfcW4GR0w3AmQ
-```
-
-## CalculatorConverter，无需 iOS 18！
-
-```
-https://mp.weixin.qq.com/s/602YcRcUdcksicSEcVhQqA
-```
-
-## Analog！
-
-```
-https://mp.weixin.qq.com/s/_omk4SkJBRrRcjoi16gB1w
-```
-
-## Floaty！
-
-```
-https://mp.weixin.qq.com/s/x2jsrWI6GQx7z_jX0tqNjQ
-```
-
-## Vitreux  更新 1.2 版本！
-
-```
-https://mp.weixin.qq.com/s/7hIEdSu_zF7LDQCNPpipAg
-```
-
-## AppCountSwitcher！
-
-```
-https://mp.weixin.qq.com/s/olDDIriidEISdyKJ0Qboyg
-```
-
-## iPhone 一键变成5GA！
-
-```
-https://mp.weixin.qq.com/s/i6UxgS8KaNT5cS25bkatVA
-```
-
-## 继续，清爽！
-
-```
-https://mp.weixin.qq.com/s/3wH5VuPJwNPG6qeausYwsA
-```
-
-## Looky！
-
-```
-https://mp.weixin.qq.com/s/9Xraken8VRPxoVHnD7djRg
-```
-
-## 今晚！
-
-```
-https://mp.weixin.qq.com/s/HfH_HjiiO30Byb5iNFRM4w
-```
-
-## 新玩具，Jikan！
-
-```
-https://mp.weixin.qq.com/s/bI6XMtxOXE7psFmkYYUTVQ
-```
-
-## 让 iPhone 使用 iPad 切换器！
-
-```
-https://mp.weixin.qq.com/s/Sy-Yofkh51TlPhJv3Nl_oQ
-```
-
-## WhiteCCBorders！
-
-```
-https://mp.weixin.qq.com/s/sOqSzffRJjRe7YIxdvz6yg
-```
-
-## Oh My Insets！
-
-```
-https://mp.weixin.qq.com/s/sR8tomUmeWEzMxkKrkhTtA
-```
-
-## 呼吸角标！
-
-```
-https://mp.weixin.qq.com/s/Oyj9_oFRnR9Y6V_RwczS-w
-```
-
-## 现已免费，但有点迟！
-
-```
-https://mp.weixin.qq.com/s/wGqKMNF4QZpOmr8jnyQoIw
-```
-
-## CC26！
-
-```
-https://mp.weixin.qq.com/s/pSzZ8N9kxU2s0CBPMZWpUw
-```
-
-## Eneko！
-
-```
-https://mp.weixin.qq.com/s/WXhhr1MfRdSFPMACslJ3Ng
-```
-
-## MBX！
-
-```
-https://mp.weixin.qq.com/s/fGq-8R3_fivNHtsGkR9DSQ
-```
-
-## 控制给力！
-
-```
-https://mp.weixin.qq.com/s/mXCU9oVpSaXSdYH6gz8x3Q
-```
-
-## 无需更新 iOS 19，体验新功能！
-
-```
-https://mp.weixin.qq.com/s/OOlAczUyGnePjKbAmjLyYQ
-```
-
-## 锁屏动画！
-
-```
-https://mp.weixin.qq.com/s/D8iJ_EZLq-olwaSQy1DG7A
-```
-
-## 去除，清爽！
-
-```
-https://mp.weixin.qq.com/s/Dl0n9ua_kgbVzPh8J1rvgQ
-```
-
-## 日月开关！
-
-```
-https://mp.weixin.qq.com/s/2OcuCOwLBwfB6l3ZSpRXFg
-```
-
-## 新增功能！
-
-```
-https://mp.weixin.qq.com/s/LwWO6XEKnv_AS6kcK85Y6Q
-```
-
-## 分屏新手势！
-
-```
-https://mp.weixin.qq.com/s/yTnqjN3C_XH1istE-u6WMg
-```
-
-## AniTime ！
-
-```
-https://mp.weixin.qq.com/s/QU98X7tCQrPwAgWr7vxCug
-```
-
-## 更新+2！
-
-```
-https://mp.weixin.qq.com/s/jid9bUnaV8WDe2x99Bj8SQ
-```
-
-## 玫瑰，复活！
-
-```
-https://mp.weixin.qq.com/s/2bz5Tl0qH2uqXeGlOMAHbg
-```
-
-## 哈莱姆摇摆，重生！
-
-```
-https://mp.weixin.qq.com/s/DMXvTcW-szOwpF7PVKMc2Q
-```
-
-## 让 iPhone 再战三年！
-
-```
-https://mp.weixin.qq.com/s/bFp4UtX8SNJ98pBScBbS2Q
-```
-
-## 解锁 iPhone！
-
-```
-https://mp.weixin.qq.com/s/NF0bbpUPeRdB2rOzl7u_7Q
-```
-
-## 大佬更新，最终版本！
-
-```
-https://mp.weixin.qq.com/s/jP5KSvE1dnoCNsVKPyDHtg
-```
-
-## N95+旋转的艺术！
-
-```
-https://mp.weixin.qq.com/s/ZAK7XVYizVmVUvgJvcgC-Q
-```
-
-## 智能电池！
-
-```
-https://mp.weixin.qq.com/s/5P0E_uP0xwbRwp5fN1lF7Q
-```
-
-## 单独控制 App 音量！
-
-```
-https://mp.weixin.qq.com/s/pp-4LFYYvbaHz8sRYPkI1w
-```
-
-## 通话来电给力！
-
-```
-https://mp.weixin.qq.com/s/OGu4tN1lvm4iBoOn8IFhmA
-```
-
-## 插件之巅，独孤求败！
-
-```
-https://mp.weixin.qq.com/s/yDhNjghIETDPS-Dbg0GqBw
-```
-
-## 大佬正式发布！
-
-```
-https://mp.weixin.qq.com/s/rJKZmwdbhWfUYAgiRP9pkA
-```
-
-## iPhone 分屏，免费！
-
-```
-https://mp.weixin.qq.com/s/ITTktNCelTpuZ4hNAxoStw
-```
-
-## 官方源，作者源，第一期
-
-```
-https://mp.weixin.qq.com/s/4ZP5V6J_4ZC6vR89adbLsg
-```
+> [iOS 15.4.1 Derootifier 更新，转无根插件](https://mp.weixin.qq.com/s/WpSy6G7vIYFWS0PmbhDXgQ)  
+> [iOS 系统，通知上岛，终于来了，免费](https://mp.weixin.qq.com/s/hmhS82ldAPGz13SrvdDXlg)  
+> [iOS 系统，新版，通知上岛，免费](https://mp.weixin.qq.com/s/LKNRCtao1hJ904z7GBd3RA)  
+> [iOS 系统，网络管理，重生](https://mp.weixin.qq.com/s/IJAs_AWQGgFUllICKsMkMA)  
+> [无需更新系统，iOS 16 锁屏音乐播放器](https://mp.weixin.qq.com/s/Qgg-YsbZ2qxRByP3BvLOwQ)  
+> [iOS 系统，巫师，神奇切换器](https://mp.weixin.qq.com/s/5bDN0I2yoVoEE3z_fNzEhw)  
+> [iOS 系统，巫师，神奇切换器](https://mp.weixin.qq.com/s/kpO4zbZx_jf-eaAIwnTUwQ)  
+> [iOS 系统，新版 OCD，Dotto 重生](https://mp.weixin.qq.com/s/TgPBUlJ6hA6hB47LKbFYXA)  
+> [iOS 系统，经典，复活](https://mp.weixin.qq.com/s/jPYZSmac9A982G47oog4Bw)  
+> [iOS 系统，保护你的 iPhone](https://mp.weixin.qq.com/s/mPAYZHpTyowD6-cgkm-DrA)  
+> [iOS 系统，新玩具，泡泡应用](https://mp.weixin.qq.com/s/DPUNePAuUqr7wc15YCRyOA)  
+> [iOS 系统，IAmLazy 一键备份，就这么简单](https://mp.weixin.qq.com/s/9Fozz0htLjFJIMzZKalnuA)  
+> [iOS 系统，让 iPhone 续航更持久](https://mp.weixin.qq.com/s/qgDeqCa4bmIZO_Mb42ylZA)  
+> [iOS 系统，KuKu，重生](https://mp.weixin.qq.com/s/P-Tq4LH5w_RHe6ulSY3BAQ)  
+> [强，分屏神器随意切换](https://mp.weixin.qq.com/s/fu4GwHb22wV9wTugeTS4kQ)  
+> [大神被诏安，苹果给的实在是太多了](https://mp.weixin.qq.com/s/8aXpTlDo9o924uG1_4otkw)  
+> [iOS 15.x SaiGon 越狱更新，离有根接近](https://mp.weixin.qq.com/s/nMf9dsdkYUcc74h7sAsgZA)  
+> [iOS 系统，专业歌词，卡拉OK，中文免费](https://mp.weixin.qq.com/s/U4oQJVB-dOhNTfo2oCLooA)  
+> [iOS 系统，浏览器手势，便捷神器](https://mp.weixin.qq.com/s/dyslnxm8WUQlaYXhbnlbAQ)  
+> [iOS 系统，增强神器，终于来了，好用](https://mp.weixin.qq.com/s/TZegOgeQQ4yBz147n6iD-g)  
+> [iOS 系统，灵动通知，现已发布，丝滑](https://mp.weixin.qq.com/s/3_rDkLlOd4yoZfKYvDLyqw)  
+> [iOS 系统，智能旋转，好用](https://mp.weixin.qq.com/s/YZalAF-psZc05IksHbzevg)  
+> [iOS 系统，新玩意，Ring](https://mp.weixin.qq.com/s/N18_xeLW6ERG-8qTqEQyTw)  
+> [iOS 系统，彩虹信号](https://mp.weixin.qq.com/s/HQOalFFFihh2bsHCX92g-Q)  
+> [iOS 系统，一键清除后台，免费](https://mp.weixin.qq.com/s/cmhK9IgrbsYoknVPqoa-qA)  
+> [iOS 系统，智能通知，终于来了](https://mp.weixin.qq.com/s/skVXzhdfBzOheA16PJNSbA)  
+> [iOS 系统，酷CC，完全免费](https://mp.weixin.qq.com/s/0IVd_KbPOxc8HugXw4c1zw)  
+> [iOS 系统，通知聚合，漂亮，重生](https://mp.weixin.qq.com/s/MG4ilT2szAIuCx09xFrX0Q)  
+> [iOS 系统，通知归纳，复活](https://mp.weixin.qq.com/s/FAlH-OJY9pqVQE69HkM_iw)  
+> [iOS 系统，超强山猫，终极定制](https://mp.weixin.qq.com/s/x6o1CxrpmxZS_AKw6twWeQ)  
+> [iOS 系统，老牌分屏神器，复活，免费](https://mp.weixin.qq.com/s/KPnCZGIzGjwz4yzvyRm1AA)  
+> [iOS 系统，一键单独静音 App，快速方便](https://mp.weixin.qq.com/s/83NwvHGvrPnat2JfScHypQ)  
+> [iOS 系统，新玩意，寿司](https://mp.weixin.qq.com/s/FlIRiQsf7GMNSCipOX_Mzw)  
+> [iOS 系统，简单时间，效果不错](https://mp.weixin.qq.com/s/gmE_tbMuwVhOlIMUQfBH0A)  
+> [iOS 15 系统，Freya 越狱发布，手机端，无需电脑](https://mp.weixin.qq.com/s/lO4QUi5t0QOayFKEnJ_e0w)  
+> [iOS 系统，长蛇座，菜单 App 快捷](https://mp.weixin.qq.com/s/iumYTvAg59zTfw9CZ_OfWQ)  
+> [iOS 15 系统，新越狱工具发布](https://mp.weixin.qq.com/s/OnXArgrCST81xFdLL2HHhQ)  
+> [iOS 系统，Vē，通知记录，全部](https://mp.weixin.qq.com/s/2w9XBSYPo7iplrDIhacjZg)  
+> [iOS 系统，砸壳，完整权限](https://mp.weixin.qq.com/s/QazBuU0vS1h1xvAgbpdiwA)  
+> [iOS 16.6.1 TrollPad 后台分屏已发布](https://mp.weixin.qq.com/s/TnhjRLBJb07IqqFLq2bdZg)  
+> [iOS 系统，App 堆栈，终于来了](https://mp.weixin.qq.com/s/zSZTNRIGDGVfwYiXjkHmLQ)  
+> [iOS 系统，全局替换，神器？](https://mp.weixin.qq.com/s/AzWKXwpXyk5r-1UJewEcRw)  
+> [更新了！iOS 16.x LCT 通话翻译，不怕听不懂](https://mp.weixin.qq.com/s/O0jYtJevqlvDD7ZV7CW64w)  
+> [iOS 系统，一键长截图，终于来了，独立使用，完全免费](https://mp.weixin.qq.com/s/pm4OONErIvjqIuVUw6-V6w)  
+> [iOS 系统，Mitsuha 现已复活](https://mp.weixin.qq.com/s/4W--zjn9KhVyuDFuMsiL8Q)  
+> [无须刷机，破解iPhone访问限制密码方法](https://mp.weixin.qq.com/s/buJ1b3PzLmxn3-_ZIq51AA)  
+> [iOS 系统，全新控制中心，终于来了](https://mp.weixin.qq.com/s/ZB-RdZmZBbKp4LcCKC9Tow)  
+> [iOS 系统，IPA 下载器，完全免费](https://mp.weixin.qq.com/s/i0ViSJ2e8zbZ2ib4mpguwg)  
+> [iOS 系统，老设备一键灵动岛，完全免费](https://mp.weixin.qq.com/s/P8kuxCVVbko6SPegTH512g)  
+> [iOS 系统，Mochi15 锁屏音乐，已经免费](https://mp.weixin.qq.com/s/wbFuW40JrKVuINk0R0v75g)  
+> [iOS 系统，智能网络，增强 WiFi 信号](https://mp.weixin.qq.com/s/N55JDSXC_7CusZYzjcpebg)  
+> [iOS 系统，锁大师，现已上架 Havoc 源，免费](https://mp.weixin.qq.com/s/QOwYPFBHEgCgU9jxyK_FNw)  
+> [iOS 系统，新的精美控制中心，必看](https://mp.weixin.qq.com/s/gcsH0URHsh4z9awUIliP3Q)  
+> [iOS 16.6.1 新快捷插件，超级便捷](https://mp.weixin.qq.com/s/-tvVsysm4-IcfS908bZD2g)  
+> [iOS 系统，tvOS 风格弹窗，完全免费](https://mp.weixin.qq.com/s/gd9MpAeWCgEGTLCaihX1ew)  
+> [iOS 系统，耳目一新](https://mp.weixin.qq.com/s/TQAxvrUhZYKPy-X7XaygOQ)  
+> [iOS 系统，自定义锁屏，iOS 16 样式](https://mp.weixin.qq.com/s/p3iVl7A6byCKIlip4wyyVA)  
+> [iOS 系统，归类，顶图，新样式](https://mp.weixin.qq.com/s/nWj5k6kep8F07tuABfNh-g)  
+> [大神宣布，全部免费](https://mp.weixin.qq.com/s/SSYXT7gAnHCWU2-Nx7sKjg)  
+> [iOS 系统，一键更改 App 版本，完全免费](https://mp.weixin.qq.com/s/fue2BvyCnxJwiyDYyYp1oQ)  
+> [iOS 系统，键盘增强，完全免费](https://mp.weixin.qq.com/s/Fh4nLBx5xXG7qBADVCoOKw)  
+> [iOS 系统，一键清除后台，两款，完全免费](https://mp.weixin.qq.com/s/buF4WXfLffbQXRBgwIEQ2w)  
+> [iOS 系统，iPhone 熄屏显示，炫酷](https://mp.weixin.qq.com/s/a52lAZOAU_0eUZussSil4A)  
+> [iOS 系统，轻量级剪贴板神器，完全免费](https://mp.weixin.qq.com/s/WZ6zOGvSO5JvCBxh1tGqEQ)  
+> [iOS 系统，iPhone 分屏神器，现已免费](https://mp.weixin.qq.com/s/3aokPB-iMBQ-18QlBzLksg)  
+> [iOS 系统，一键隐藏，保护隐私](https://mp.weixin.qq.com/s/djagf9zvDL2c0e--wh1sZg)  
+> [iOS 系统，照片加锁，保护隐私，现已免费](https://mp.weixin.qq.com/s/9eSKpU4UcaC8MTn-RhyAlA)  
+> [iOS 系统，卡片计算器，前端悬浮显示](https://mp.weixin.qq.com/s/i_N7eFDM1f-uZIqZpOSfEg)  
+> [iOS 系统，像 iPad 一样分屏，终于来了，免费](https://mp.weixin.qq.com/s/gew66tNDWV0fQXxKBb-vmg)  
+> [iOS 系统，电池、亮度、音量百分比，清除角标，快速控制中心，完全免费](https://mp.weixin.qq.com/s/tXfKj3_HgZB4frYFQ4dPww)  
+> [iOS 系统，截图神器，详细使用](https://mp.weixin.qq.com/s/F8_flUzRjaQhyUg6fT9tNQ)  
+> [iOS 系统，真正的 iPhone 通话录音，就这么简单](https://mp.weixin.qq.com/s/WUWIdWcWB1lwKMfvUr4CtQ)  
+> [iOS 系统，老设备立刻拥有灵动岛，来了](https://mp.weixin.qq.com/s/I1kZRanmJ-AJ0XAvlytSTg)  
+> [iOS 系统，弹窗自适应，独立设置，录像暂停，Dock 动图，完全免费](https://mp.weixin.qq.com/s/6JJ4kDy4r459QK3HLXyG2Q)  
+> [iOS 系统，真后台来了，完全免费](https://mp.weixin.qq.com/s/_O6ZMCZXneX56QzBosreug)  
+> [iOS 系统，终于来了，分词大爆炸，完全免费](https://mp.weixin.qq.com/s/dPqO2AgnIMbOFd7Bi46vOw)  
+> [iOS 系统，终于支持了，自定义桌面布局，完全免费](https://mp.weixin.qq.com/s/1X16PvIXr7I3sUCp4VhR7w)  
+> [iOS 系统，我的 iPhone 下雪啦，清凉](https://mp.weixin.qq.com/s/RvrDbrBdhT-Q_ut_ky-ZoQ)  
+> [iOS 系统，视频播放器手势，完全免费](https://mp.weixin.qq.com/s/MjA6oIQlPu54BJ7kaAvjIw)  
+> [iOS 系统，iPhone 来电自动应答，语音信箱](https://mp.weixin.qq.com/s/_kD65DEKCcCGtFh6WorJZw)  
+> [iOS 系统，给隐藏照片加锁，保护隐私](https://mp.weixin.qq.com/s/eDvNKbSDuvAuO8s3nhyrzQ)  
+> [iOS 系统，分屏神器，终于来了，完全免费](https://mp.weixin.qq.com/s/VxrfG_IMyJkOYxY9s7e5zA)  
+> [iOS 系统，接听振动，角标美化，状态栏日期和时间，完全免费](https://mp.weixin.qq.com/s/OUj0C7_-ssvjkJMXeTXPdQ)  
+> [iOS 16.2 AppSync 插件更新，可以任意安装IPA](https://mp.weixin.qq.com/s/szIA7ASYdH0VWrRjeQV7xw)  
+> [iOS 系统，让 iPhone 使用 tvOS 精美弹窗](https://mp.weixin.qq.com/s/RXv3JAiom4K1rnK3W_U8MA)  
+> [iOS 系统，漂亮锁屏，别具一格](https://mp.weixin.qq.com/s/lewysejGGbpwA87h0TTG5w)  
+> [iOS 系统，功能丰富，必备神器，完全免费](https://mp.weixin.qq.com/s/p0nLRsMwnku0oxJen3XprA)  
+> [iOS 系统，动画加速，飞速体验，免费](https://mp.weixin.qq.com/s/mZg28Cu6X_VUo_2ABSmk1w)  
+> [好东西！iOS 16.5.1 新的分屏插件](https://mp.weixin.qq.com/s/Xu3zfZwp9lIYtxvcPA6NJQ)  
+> [iOS 系统，全新触摸，中文，免费](https://mp.weixin.qq.com/s/ligvymOcyvnOy-TYy_yVpg)  
+> [iOS 系统，Touch-Viz，漂亮，内有福利](https://mp.weixin.qq.com/s/A30VyA5M-RwlPG8VpdYkGQ)  
+> [iOS 系统，必备神器，功能丰富](https://mp.weixin.qq.com/s/L_-UQ4Eds90dZObqTh0WoQ)  
+> [iOS 系统，增强版，中文，免费](https://mp.weixin.qq.com/s/9H1SDdrU5BUZiCh_pvmLLQ)  
+> [iOS 系统，韦尔西纳，测试一下](https://mp.weixin.qq.com/s/ETJQ4RAEimW_yoO677vlTQ)  
+> [iOS 系统，CopyVault，好用](https://mp.weixin.qq.com/s/1e1zT3l82OpV787B4DCQ2g)  
+> [iOS 系统，iPhone 熄屏显示，新鲜](https://mp.weixin.qq.com/s/nRNoXhFtXZp7JUaKO52Brg)  
+> [在 iPhone 上养一只可爱的小猫，有趣](https://mp.weixin.qq.com/s/yAwYNtCUej1RmVMI78Tj5Q)  
+> [iOS 系统，漂亮的计时器和闹钟，现已免费](https://mp.weixin.qq.com/s/oyFHcmKanTsznQho6UNMfQ)  
+> [iOS 系统，iPhone 通话变声器](https://mp.weixin.qq.com/s/yFlqh8mhRNi2QWZ1F40X1Q)  
+> [iOS 系统，动画加速，纵享丝滑](https://mp.weixin.qq.com/s/j7Mr4tD4e_wjbyCUWg8KMQ)  
+> [iOS 系统，快速启动神器，丝滑](https://mp.weixin.qq.com/s/9HmfhMYfq_0KNNl1ct2t9A)  
+> [iOS 系统，超酷动态视频壁纸，完全免费](https://mp.weixin.qq.com/s/LdtVlkrCD7-NBBQ7qW-IsA)  
+> [iOS 系统，运行时间，一键截图，锁屏天气，完全免费](https://mp.weixin.qq.com/s/5P8bmTSbnkChQF3F3uJePQ)  
+> [iOS 系统，功能强大，保护隐私](https://mp.weixin.qq.com/s/I8yXnoW5gY0908uOUgFVYw)  
+> [iOS 系统，简洁好用的程序锁，免费](https://mp.weixin.qq.com/s/7atDcp31oCJZZVDgnhFtBg)  
+> [iOS 系统，去除红点，去除资源库，录屏勿扰，复制通知，图标文件夹](https://mp.weixin.qq.com/s/KecTqxZ-Unabb6ARu3toBQ)  
+> [iOS 系统，让 iPhone 快速返回，非常方便](https://mp.weixin.qq.com/s/m-UVmt0uggHyD7I6_8TYxA)  
+> [iOS 系统，已安装插件，提取和备份 deb](https://mp.weixin.qq.com/s/vQpyIPIyGY80DOJ2KOe1fg)  
+> [iOS 系统，设置归类，设置顶图，就这么简单](https://mp.weixin.qq.com/s/7q4zS2mpFX2DRGxrjwqbaA)  
+> [iOS 系统，炫酷跑马灯，完全免费](https://mp.weixin.qq.com/s/xpwCCukt4O5VWP3cnXBixA)  
+> [iOS 系统，自定义文件夹，支持批量拖放，中文菜单](https://mp.weixin.qq.com/s/_4eThM51DYngTEjxcsKRUA)  
+> [iOS 系统，控制中心一键定位，一键注销，迷你播放器，免费](https://mp.weixin.qq.com/s/U9ahH9U06lYYYa3yMv8xEg)  
+> [iOS 系统，炫酷翻页特效，重生](https://mp.weixin.qq.com/s/WGF1iK9QmUJQRgVDoUqLyg)  
+> [电池百分比，iOS 16 样式，完全免费](https://mp.weixin.qq.com/s/LoeQYWJCKRAov-DXZ7wLHA)  
+> [仿 iPhone 12 充电动画来了，旧款设备也能实现](https://mp.weixin.qq.com/s/qQpviEqnfhXfL-1tyBneqQ)  
+> [iOS 13 仿 14 插件，越狱设备可试](https://mp.weixin.qq.com/s/gyoD4gOr3Iwn6vnOgHreIQ)  
+> [iOS 系统，控制中心换个图标，有趣](https://mp.weixin.qq.com/s/nKzvEM2fIscdp0Wdlqprug)  
+> [iOS 系统，iPhone 水特效，清凉](https://mp.weixin.qq.com/s/_ctkLwa00Vuh-IPbppx7DA)  
+> [大神去世！](https://mp.weixin.qq.com/s/9eEgZCNwp2l2jGbixECdCA)  
+> [iOS 系统，增加小组件，音量控件，触摸轨迹，V指示器](https://mp.weixin.qq.com/s/QEJev2pngW595b2YalJZcw)  
+> [iOS 系统，让控制中心更好用](https://mp.weixin.qq.com/s/2qGFFYJTfQFO-3WhfWOv3w)  
+> [iOS 系统，电源增强，完全免费](https://mp.weixin.qq.com/s/d3rQlXgBi6yUHLYaR7dFxQ)  
+> [iOS 系统，下载 deb，提取 dylib 文件](https://mp.weixin.qq.com/s/bNU5OMIzpYcxWKz-plXy4Q)  
+> [来啦！全新 iOS 16.6.1 启动灵动岛，可以下移显示](https://mp.weixin.qq.com/s/QtIyEdHQs0xaU-lwFzz2Gg)  
+> [iOS 16.6.1 颠倒显示，实现无刘海显示](https://mp.weixin.qq.com/s/wOdmdHV-c7dTBMvfafbCDw)  
+> [大神更新，老牌神级，现已支持](https://mp.weixin.qq.com/s/HWtxgeob9SiuF-kiEeZwxA)  
+> [无需升级 iOS 18，体验新功能，第一期](https://mp.weixin.qq.com/s/mNjjfCJT8i5-frfvxtw_JQ)  
+> [iOS 系统，精美控制中心，完全免费](https://mp.weixin.qq.com/s/6u4ijH_kdJObZ6D96kSPBg)  
+> [iOS 系统，继续，控制](https://mp.weixin.qq.com/s/7yPvxAXQo64eqb-ytT5HEw)  
+> [iOS 系统，角标，个性化角标](https://mp.weixin.qq.com/s/RbNw_DeCROx6nNFGLKVJdw)  
+> [iOS 系统，一键换号，来电拒接，取消静音，计算历史，备份安装包](https://mp.weixin.qq.com/s/B9VxGRXX_o803jwBnNJAlA)  
+> [iOS 系统，锁屏秒数，评论评分，状态栏网速，同时播放，自由深色](https://mp.weixin.qq.com/s/XcaRhBeFUiQloLsYMNxpjA)  
+> [系统数据，查看详细](https://mp.weixin.qq.com/s/4V9v4fkKp4-QdfSeK5HwBQ)  
+> [iOS 系统，语音免跳转，移除小组件背景，迷你横幅，环境光切换，独立设置](https://mp.weixin.qq.com/s/PPxn4cm_e9mZ_ZMSyJI1kQ)  
+> [一键透明](https://mp.weixin.qq.com/s/h9k298Yf7XwYg5BkbkLkmQ)  
+> [图标随意摆，终于来了](https://mp.weixin.qq.com/s/NqAHwQ3osTT554lkkOzehA)  
+> [新玩法，无需升级 iOS 18 系统](https://mp.weixin.qq.com/s/4jc7XqYDaWjygjnrGHkqfw)  
+> [CC18](https://mp.weixin.qq.com/s/2IoMgsPUtw_KEWPBgpqokQ)  
+> [小草，终于重生](https://mp.weixin.qq.com/s/AZXHdcDyIkyscLOZGZgw0Q)  
+> [时光机](https://mp.weixin.qq.com/s/lzNyegaJs1c-2XMSWdQ5Ow)  
+> [移除电量低于20%弹窗](https://mp.weixin.qq.com/s/-_4KYfb7cD92M-6Z3D7ATA)  
+> [实用，免费！](https://mp.weixin.qq.com/s/2N1p-zeb8-to2OfDgaXbzQ)  
+> [一大波！](https://mp.weixin.qq.com/s/6TOE5mzlksU2L464TekALA)  
+> [速度，无需升级 iOS 18.1 系统](https://mp.weixin.qq.com/s/x13r70Cw5dNmfYhjxX5m6w)  
+> [CCBorder](https://mp.weixin.qq.com/s/b75d8mDoTN8SM37qqQ5z-w)  
+> [神器，永生者！](https://mp.weixin.qq.com/s/4CXLdgvM6kUNeZqXLPYmnA)  
+> [iOS 13.4.1 免越狱改X手势，Sileo 再次更新](https://mp.weixin.qq.com/s/qYrfrFd-kE5hRtr0thIdUg)  
+> [iOS 系统，主题美化，真主题，抢鲜使用，无需越狱，免费](https://mp.weixin.qq.com/s/eDl_Og4I-nFotAgNwp2AnA)  
+> [iOS 系统，通知归纳，简洁美观](https://mp.weixin.qq.com/s/Jc7ou0mo4yB5_SMiXOw6KA)  
+> [iOS 系统，一键振动，禁用资源库，自定义运营商，自动解锁，完全免费](https://mp.weixin.qq.com/s/PbTZM37HmOShWP7QS7_B9g)  
+> [iOS 系统，新的 iPhone 分屏神器，众享丝滑](https://mp.weixin.qq.com/s/MeqS0proFrb5CHZ1LrNWAw)  
+> [iOS 系统，自定义锁头，漂亮](https://mp.weixin.qq.com/s/CWGHr0mO5YOcHvcPP0-DgA)  
+> [iOS 系统，新一代截图神器，来了](https://mp.weixin.qq.com/s/DZZxAcw8lLvczs-8rUcBMQ)  
+> [iOS 系统，iPhone 熄屏显示，精美](https://mp.weixin.qq.com/s/QQgXWmQiGO5kCLsMkH1plw)  
+> [iOS 系统，计算历史，角标，去除，勿扰增强，插件 Hub，完全免费](https://mp.weixin.qq.com/s/8HUs0mvFWZ5-ktek1YrxmA)  
+> [iOS 越狱，官方源，作者源，推荐大集合](https://mp.weixin.qq.com/s/lSE0PSKA4PT09ChOrEwRRw)  
+> [分享三款插件，你一定会喜欢](https://mp.weixin.qq.com/s/GkZDxPiU7dBJHmTCFP1q2g)  
+> [分享二款实用插件，你一定会喜欢](https://mp.weixin.qq.com/s/dmPGwIi6K-hkM-KayaDvFQ)  
+> [省电插件已经更新，越狱已经修复](https://mp.weixin.qq.com/s/7FFxbg62JpPv9SLtEK2xXQ)  
+> [iOS 13 也能享用 iOS 14 新功能，赶紧试试](https://mp.weixin.qq.com/s/q9yuPIOh0nl4hhoRo7j3AQ)  
+> [05.05 ｜ 近期插件更新，速看](https://mp.weixin.qq.com/s/AwNF8CjL2HmxH_dQ5-RJ7A)  
+> [超爽！iOS 15.1 MilkyWay2 分屏，含安装教程](https://mp.weixin.qq.com/s/5dg5MCJ6QgVZnIU-4CL4Gg)  
+> [IOS11.2~11.3.1系统美化软件已发布，你会喜欢吗？](https://mp.weixin.qq.com/s/FabYhz1LNwgic41A13kQdA)  
+> [iOS 系统，deb 备份，支持一键备份全部](https://mp.weixin.qq.com/s/r6KxWQsuSBh72w6b4X21Sg)  
+> [真的来了，iOS 15/16 灵动半岛插件，确实有灵动](https://mp.weixin.qq.com/s/4S3-4qV4SopGeTwA7lCCpw)  
+> [iOS 系统，一键抠图神器，无需升级 iOS 16](https://mp.weixin.qq.com/s/VadXLLO9iBKMnUN507VHxQ)  
+> [iOS 系统，带上皇冠，终于来了](https://mp.weixin.qq.com/s/jUTM2lVhOSLWBdr1HiMQQQ)  
+> [近期插件更新，看看](https://mp.weixin.qq.com/s/k81Vg0MjJJKnvfdQ9h9JUw)  
+> [iOS 系统，自定义 Dock 栏摆放数量](https://mp.weixin.qq.com/s/h3b5_npq65eCjks5y5LfOw)  
+> [iOS 系统，翻译神器，详细使用](https://mp.weixin.qq.com/s/qZ0Gj64bHNqfNmZpocSyBQ)  
+> [iOS 系统，伴着音乐入睡](https://mp.weixin.qq.com/s/beSu7v8Q_xXDY-yqHsYdGA)  
+> [无需升级 iOS 18，体验新功能，第二期](https://mp.weixin.qq.com/s/4bmOb5UjTuPKAD4gHAtIWg)  
+> [分享插件：55款插件一定有你喜欢的](https://mp.weixin.qq.com/s/VoZGTl5iwe98tlzrKThEfg)  
+> [新玩法，Centra！](https://mp.weixin.qq.com/s/-MEXxPfLPctloyzIH6FG0A)  
+> [神器，终于来了](https://mp.weixin.qq.com/s/ZWW1W5h2RT0o-cIyyck3hw)  
+> [重生，免费](https://mp.weixin.qq.com/s/StqxCWBQUR-YfutVa-rUQQ)  
+> [新玩具，桑杰！](https://mp.weixin.qq.com/s/5JJ8aCAVlES54fXkhkzhlg)  
+> [EmoZoom，无需升级 iOS 18.1 系统](https://mp.weixin.qq.com/s/xGgeWpEPdBZ7DkJSLY0s8g)  
+> [iPhone 一秒变手表](https://mp.weixin.qq.com/s/ZA_Vpt8ySW3XqC4anIOpGA)  
+> [Shijima](https://mp.weixin.qq.com/s/zxIL6ATqVIv7IJwtVNk1jw)  
+> [ReplyActions](https://mp.weixin.qq.com/s/4XHby9ytB_jdIW0hljl0ew)  
+> [SquidExtender，好用](https://mp.weixin.qq.com/s/-WOtLpvIBPNDX00paj-ITg)  
+> [LockMoji15+](https://mp.weixin.qq.com/s/s6wCAwXLAfLygl_d7lsXHA)  
+> [炫酷 ！](https://mp.weixin.qq.com/s/kBqxfzGUEp3PwBdAfP2DgQ)  
+> [音乐壁纸 ！](https://mp.weixin.qq.com/s/tJ5hwTqtJiY8_T2zaAtZUA)  
+> [LockTouchX，无需升级 iOS 18 系统](https://mp.weixin.qq.com/s/lgX4dweSn3xTgiq7VOVlKw)  
+> [计算，增强！](https://mp.weixin.qq.com/s/TXEfw1jFycCiajoI0aanaA)  
+> [Pokébox 重生](https://mp.weixin.qq.com/s/dJJJ08kmAwNvinLWmw5jvw)  
+> [去除设置红点，去除未知部件！](https://mp.weixin.qq.com/s/n5wZeVnjYgvX7IUMqA5kcg)  
+> [PowerSettings !](https://mp.weixin.qq.com/s/Ad8mBzyxR9rZI5LEfoA7xQ)  
+> [WiFi 密码！](https://mp.weixin.qq.com/s/8Sa7V_YCwto2aWr8u9mFgg)  
+> [定时维护！](https://mp.weixin.qq.com/s/pve2_k_1UJuH3ix__jWEPw)  
+> [神器！低系统，安装要求高系统的应用！](https://mp.weixin.qq.com/s/yoRmPFgNC2wk2xohGf4jvA)  
+> [通知上岛，免费！](https://mp.weixin.qq.com/s/H7wNa5_8LsfcW4GR0w3AmQ)  
+> [CalculatorConverter，无需 iOS 18！](https://mp.weixin.qq.com/s/602YcRcUdcksicSEcVhQqA)  
+> [Analog！](https://mp.weixin.qq.com/s/_omk4SkJBRrRcjoi16gB1w)  
+> [Floaty！](https://mp.weixin.qq.com/s/x2jsrWI6GQx7z_jX0tqNjQ)  
+> [Vitreux  更新 1.2 版本！](https://mp.weixin.qq.com/s/7hIEdSu_zF7LDQCNPpipAg)  
+> [AppCountSwitcher！](https://mp.weixin.qq.com/s/olDDIriidEISdyKJ0Qboyg)  
+> [iPhone 一键变成5GA！](https://mp.weixin.qq.com/s/i6UxgS8KaNT5cS25bkatVA)  
+> [继续，清爽！](https://mp.weixin.qq.com/s/3wH5VuPJwNPG6qeausYwsA)  
+> [Looky！](https://mp.weixin.qq.com/s/9Xraken8VRPxoVHnD7djRg)  
+> [今晚！](https://mp.weixin.qq.com/s/HfH_HjiiO30Byb5iNFRM4w)  
+> [新玩具，Jikan！](https://mp.weixin.qq.com/s/bI6XMtxOXE7psFmkYYUTVQ)  
+> [让 iPhone 使用 iPad 切换器！](https://mp.weixin.qq.com/s/Sy-Yofkh51TlPhJv3Nl_oQ)  
+> [WhiteCCBorders！](https://mp.weixin.qq.com/s/sOqSzffRJjRe7YIxdvz6yg)  
+> [Oh My Insets！](https://mp.weixin.qq.com/s/sR8tomUmeWEzMxkKrkhTtA)  
+> [呼吸角标！](https://mp.weixin.qq.com/s/Oyj9_oFRnR9Y6V_RwczS-w)  
+> [现已免费，但有点迟！](https://mp.weixin.qq.com/s/wGqKMNF4QZpOmr8jnyQoIw)  
+> [CC26！](https://mp.weixin.qq.com/s/pSzZ8N9kxU2s0CBPMZWpUw)  
+> [Eneko！](https://mp.weixin.qq.com/s/WXhhr1MfRdSFPMACslJ3Ng)  
+> [MBX！](https://mp.weixin.qq.com/s/fGq-8R3_fivNHtsGkR9DSQ)  
+> [控制给力！](https://mp.weixin.qq.com/s/mXCU9oVpSaXSdYH6gz8x3Q)  
+> [无需更新 iOS 19，体验新功能！](https://mp.weixin.qq.com/s/OOlAczUyGnePjKbAmjLyYQ)  
+> [锁屏动画！](https://mp.weixin.qq.com/s/D8iJ_EZLq-olwaSQy1DG7A)  
+> [去除，清爽！](https://mp.weixin.qq.com/s/Dl0n9ua_kgbVzPh8J1rvgQ)  
+> [日月开关！](https://mp.weixin.qq.com/s/2OcuCOwLBwfB6l3ZSpRXFg)  
+> [新增功能！](https://mp.weixin.qq.com/s/LwWO6XEKnv_AS6kcK85Y6Q)  
+> [分屏新手势！](https://mp.weixin.qq.com/s/yTnqjN3C_XH1istE-u6WMg)  
+> [AniTime ！](https://mp.weixin.qq.com/s/QU98X7tCQrPwAgWr7vxCug)  
+> [更新+2！](https://mp.weixin.qq.com/s/jid9bUnaV8WDe2x99Bj8SQ)  
+> [玫瑰，复活！](https://mp.weixin.qq.com/s/2bz5Tl0qH2uqXeGlOMAHbg)  
+> [哈莱姆摇摆，重生！](https://mp.weixin.qq.com/s/DMXvTcW-szOwpF7PVKMc2Q)  
+> [让 iPhone 再战三年！](https://mp.weixin.qq.com/s/bFp4UtX8SNJ98pBScBbS2Q)  
+> [解锁 iPhone！](https://mp.weixin.qq.com/s/NF0bbpUPeRdB2rOzl7u_7Q)  
+> [大佬更新，最终版本！](https://mp.weixin.qq.com/s/jP5KSvE1dnoCNsVKPyDHtg)  
+> [N95+旋转的艺术！](https://mp.weixin.qq.com/s/ZAK7XVYizVmVUvgJvcgC-Q)  
+> [智能电池！](https://mp.weixin.qq.com/s/5P0E_uP0xwbRwp5fN1lF7Q)  
+> [单独控制 App 音量！](https://mp.weixin.qq.com/s/pp-4LFYYvbaHz8sRYPkI1w)  
+> [通话来电给力！](https://mp.weixin.qq.com/s/OGu4tN1lvm4iBoOn8IFhmA)  
+> [插件之巅，独孤求败！](https://mp.weixin.qq.com/s/yDhNjghIETDPS-Dbg0GqBw)  
+> [大佬正式发布！](https://mp.weixin.qq.com/s/rJKZmwdbhWfUYAgiRP9pkA)  
+> [iPhone 分屏，免费！](https://mp.weixin.qq.com/s/ITTktNCelTpuZ4hNAxoStw)  
+> [官方源，作者源，第一期](https://mp.weixin.qq.com/s/4ZP5V6J_4ZC6vR89adbLsg)  

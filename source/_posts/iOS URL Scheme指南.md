@@ -1,15 +1,15 @@
 ---
-title: iOS URL Scheme指南
+title: iOS URL Scheme 指南
 categories: iOS
 abbrlink: iOS-URL-Scheme-Guide
-date: 2023-11-15 13:18:29
+date: 2020-06-10 00:00:00
 tags:
 
 ---
 
 ![](topic.jpg)
 
-URL Scheme通过类似网站形式的字符串，在浏览器打开时自动跳转到对应的APP。如在浏览器中输入`weixin://`则跳转到微信。
+URL Scheme 通过类似网站形式的字符串，在浏览器打开时自动跳转到对应的 APP。如在浏览器中输入 `weixin://` 则跳转到微信。
 
 <!-- more -->
 
@@ -17,11 +17,11 @@ URL Scheme通过类似网站形式的字符串，在浏览器打开时自动跳�
 
 ## 通过电脑
 
-用解压工具打开要查询的IPA，获得Payload文件夹，打开并在里面的app文件上右键，选择显示包内容。用Xcode等工具打开Info.plist，进入URL types下的URL Schemes即可看到。或者用文本编辑器打开Info.plist，搜索CFBundleURLTypes也可得到。
+用解压工具打开要查询的 IPA，获得 Payload 文件夹，打开并在里面的 app 文件上右键，选择显示包内容。用 Xcode 等工具打开 Info.plist，进入 URL types 下的 URL Schemes 即可看到。或者用文本编辑器打开 Info.plist，搜索 CFBundleURLTypes 也可得到。
 
 ## 通过手机
 
-越狱后通过Filza进入IPA查看即可，路径同上。
+越狱后通过 Filza 进入 IPA 查看即可，路径同上。
 
 ## 通过捷径
 
@@ -278,9 +278,6 @@ moneykeeperwiz://
 
 # 网易漫画
 necomics://
-
-# 有道翻译官
-ydtranslator://
 ```
 
 ## 银行
@@ -509,9 +506,6 @@ nomocamera://
 
 # Cuto Wallpaper
 cuto://
-
-# Picsew
-picsew://
 ```
 
 ## 系统
@@ -691,9 +685,6 @@ QQ05FD1622://
 # 115云盘
 wb1307639798://
 
-# 我的标记
-clover-imark://
-
 # 小米运动
 fb370547106731052://
 
@@ -798,8 +789,4 @@ eidwl://
 
 # 参考教程
 
-## URL Scheme分享
-
-```
-https://st3376519.huoban.com/share/1985010/VGi2N5Vf0C1MVnHCVWiBc8L9g15c9VGJbMGcFrb6/172707/list
-```
+> [URL Scheme分享](https://st3376519.huoban.com/share/1985010/VGi2N5Vf0C1MVnHCVWiBc8L9g15c9VGJbMGcFrb6/172707/list)  

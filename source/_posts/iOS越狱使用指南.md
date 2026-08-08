@@ -1,32 +1,17 @@
 ---
-title: iOS越狱使用指南
+title: iOS 越狱使用指南
 categories: iOS
 abbrlink: iOS-Jailbreak-Usage
-date: 2023-11-10 11:33:29
+date: 2020-06-08 00:00:00
 tags:
 
 ---
 
 ![](topic.jpg)
 
-iOS越狱指南。
+iOS 越狱后的使用指南，包括应用商店、补丁软件、游戏修改与 SSH 连接。
 
 <!-- more -->
-
-# TODOS
-
-```
-iOS越狱教程-内存基址修改器的神奇之处(十三)
-https://mp.weixin.qq.com/s/IY3t96fbzfTybupXzuY5uA
-
-https://ios.cfw.guide/using-palen1x/
-
-
-https://www.reddit.com/r/jailbreak/comments/1tmvh7/question_what_exactly_is_bootstrap/
-https://onejailbreak.com/blog/iapstore-tweak/
-https://leavez.xyz/2017/02/12/mario-tweak/
-https://www.bilibili.com/read/cv12153485/
-```
 
 # 应用商店
 
@@ -51,7 +36,7 @@ https://apptapp.me/repo/
 
 ## AltStore
 
-添加以下源并按顺序安装AltDaemon、AppSync Unified、appinst (App Installer)、AltStore (ALPHA)即可。
+添加以下源并按顺序安装 AltDaemon、AppSync Unified、appinst (App Installer)、AltStore (ALPHA)即可。
 
 ```
 https://pwnders.github.io/repo/
@@ -60,7 +45,7 @@ https://cydia.akemi.ai/
 
 # 补丁软件
 
-补丁软件可以修改APP，达到破解效果。
+补丁软件可以修改 APP，达到破解效果。
 
 ## Flex 3
 
@@ -85,7 +70,7 @@ https://getdelta.co/
 
 ### 补丁制作
 
-下载FlexTool插件，在设置中选择要修改的APP。打开后可通过FlexTool定位到需要修改的函数位置。打开Flex，点击+号，选择要修改的APP，点击Add Units，点击APP名称以进行初次编译。编译完成后搜索刚才找到的函数，勾选并返回到补丁主界面。点击刚才选择的函数，修改其返回值即可。
+下载 FlexTool 插件，在设置中选择要修改的 APP。打开后可通过 FlexTool 定位到需要修改的函数位置。打开 Flex，点击+号，选择要修改的 APP，点击 Add Units，点击 APP 名称以进行初次编译。编译完成后搜索刚才找到的函数，勾选并返回到补丁主界面。点击刚才选择的函数，修改其返回值即可。
 
 ### 补丁列表
 
@@ -204,7 +189,7 @@ https://getdelta.co/
 
 ## SuperCharge
 
-SuperCharge脚本的后缀名为st。将st脚本发送到手机，并用SuperCharge打开即可。源地址如下。
+SuperCharge 脚本的后缀名为 st。将 st 脚本发送到手机，并用 SuperCharge 打开即可。源地址如下。
 
 ```
 https://repo.supercharge.app/
@@ -214,29 +199,35 @@ https://repo.supercharge.app/
 
 ## 必要插件
 
-一般需要IGG和Filza。
+一般需要 IGG 和 Filza。
 
-IGG全称为iGameGuardian，用于修改游戏。安装用嘻哈源即可，官方源如下。
+IGG 全称为 iGameGuardian，用于修改游戏。安装用嘻哈源即可，官方源如下。
 
 ```
 https://aquawu.github.io/igg/
 ```
 
-进入插件配置，打开使用储存空间，下限设为0x00000000，上限设为0x150000000，并打开移除未匹配项，打开有号数，完成配置。
+进入插件配置，打开使用储存空间，下限设为 0x00000000，上限设为 0x150000000，并打开移除未匹配项，打开有号数，完成配置。
+
+Mario Tweak 为超级马里奥等游戏的修改插件，使用教程如下。
+
+```
+https://leavez.xyz/2017/02/12/mario-tweak/
+```
 
 ## 王者荣耀
 
 ### 修改快捷信息/语音库
 
-在语音库中清除任意数量的信息（比如4个），然后用`小心草丛`填入，不要点确定。切到IGG，选择smoba，I32搜索1。
+在语音库中清除任意数量的信息（比如 4 个），然后用`小心草丛`填入，不要点确定。切到 IGG，选择 smoba，I32 搜索 1。
 
-切回王者荣耀，删除4个`小心草丛`，选择4个`敌人消失`填入，不要点确定，再次切到IGG，I32搜索2。
+切回王者荣耀，删除 4 个`小心草丛`，选择 4 个`敌人消失`填入，不要点确定，再次切到 IGG，I32 搜索 2。
 
-切回王者荣耀，删除4个`敌人消失`，选择4个`回防高地`填入，不要点确定，再次切到IGG，I32搜索3。
+切回王者荣耀，删除 4 个`敌人消失`，选择 4 个`回防高地`填入，不要点确定，再次切到 IGG，I32 搜索 3。
 
-切回王者荣耀，删除4个`回防高地`，选择4个`请求支援`填入，不要点确定，再次切到IGG，I32搜索4。
+切回王者荣耀，删除 4 个`回防高地`，选择 4 个`请求支援`填入，不要点确定，再次切到 IGG，I32 搜索 4。
 
-切回王者荣耀，删除4个`请求支援`，分别选择`小心草丛`、`敌人消失`、`回防高地`、`请求支援`，不要点确定。再次切到IGG，上次得到的4-5个结果分别变成了1、2、3、4、5，把这几个数字换成所需要的消息，点确定即可。
+切回王者荣耀，删除 4 个`请求支援`，分别选择`小心草丛`、`敌人消失`、`回防高地`、`请求支援`，不要点确定。再次切到 IGG，上次得到的 4-5 个结果分别变成了 1、2、3、4、5，把这几个数字换成所需要的消息，点确定即可。
 
 详细的快捷消息代码如下。
 
@@ -263,7 +254,7 @@ https://aquawu.github.io/igg/
 | 19   | 我回防高地     |
 | 20   | 集合埋伏       |
 | 21   | 清理兵线       |
-| 22   | 我拿buff，谢谢 |
+| 22   | 我拿 buff，谢谢 |
 | 23   | 集合准备团战   |
 | 24   | 拖住，我偷塔   |
 | 25   | 集合进攻暴君   |
@@ -288,7 +279,7 @@ https://aquawu.github.io/igg/
 | 44   | [全部]抱歉     |
 | 45   | [全部]谢谢你   |
 | 46   | [全部]挑衅     |
-| 47   | 我拿BUFF再团   |
+| 47   | 我拿 BUFF 再团   |
 | 48   | 别团，等人齐   |
 | 49   | 收到           |
 | 50   | 多观察小地图   |
@@ -311,7 +302,7 @@ https://aquawu.github.io/igg/
 | 67   | 注意敌方绕后   |
 | 68   | 法师来拿蓝     |
 | 69   | 射手来拿红     |
-| 70   | 求让BUFF，谢谢 |
+| 70   | 求让 BUFF，谢谢 |
 | 71   | 交个朋友       |
 | 72   | 新年快乐       |
 | 73   | 集合进攻龙王   |
@@ -329,19 +320,19 @@ https://aquawu.github.io/igg/
 
 老账号使用改名卡，在输入框不要输入东西。新账号则在创建昵称界面不要输入文字。
 
-打开IGG并选择smoba，设置临近范围为0x9，然后i32搜索12。打开联合，i32搜索86400，这时只有一个结果。
+打开 IGG 并选择 smoba，设置临近范围为 0x9，然后 i32 搜索 12。打开联合，i32 搜索 86400，这时只有一个结果。
 
-把12改成64，然后清除。再次打开设置，设置临近范围为0x21，然后i32搜索42。打开联合，i32搜索12，把12改成88。
+把 12 改成 64，然后清除。再次打开设置，设置临近范围为 0x21，然后 i32 搜索 42。打开联合，i32 搜索 12，把 12 改成 88。
 
-此时回到游戏界面修改即可，最长21个汉字或61个字母。
+此时回到游戏界面修改即可，最长 21 个汉字或 61 个字母。
 
 ### 设置三个相同的想玩英雄
 
-在排位赛页面清除所有自定义英雄，选择第一个英雄（如赵云）。打开IGG并选择smoba，然后I32搜索107（赵云）。
+在排位赛页面清除所有自定义英雄，选择第一个英雄（如赵云）。打开 IGG 并选择 smoba，然后 I32 搜索 107（赵云）。
 
-去掉赵云，再次选择一个英雄（如小乔）。打开IGG，I32搜索106（小乔），此时结果只剩下一个。
+去掉赵云，再次选择一个英雄（如小乔）。打开 IGG，I32 搜索 106（小乔），此时结果只剩下一个。
 
-点击内存，再点击右上角移动，此时会跳转到刚才的结果，且底部的两个数值为0。返回王者荣耀，随便选择三个英雄，再打开IGG，此时三个数字均发生变化。
+点击内存，再点击右上角移动，此时会跳转到刚才的结果，且底部的两个数值为 0。返回王者荣耀，随便选择三个英雄，再打开 IGG，此时三个数字均发生变化。
 
 修改该三个数字为所需要的英雄代码。返回王者荣耀，点击确定，出现三个一样的头像即可。
 
@@ -493,15 +484,15 @@ https://aquawu.github.io/igg/
 | 701  | 坦克炮管             |
 | 732  | 马可波罗（旧）       |
 
-NPC皮肤代码如下。
+NPC 皮肤代码如下。
 
 | 代码 | 含义             |
 | ---- | ---------------- |
 | 770  | 暴君             |
 | 771  | 主宰（英雄）     |
-| 772  | 暴君3vs3（英雄） |
+| 772  | 暴君 3vs3（英雄） |
 | 773  | 年兽（英雄）     |
-| 2025 | 暴君3vs3         |
+| 2025 | 暴君 3vs3         |
 | 2145 | 主宰             |
 
 技能代码如下。
@@ -524,7 +515,7 @@ NPC皮肤代码如下。
 | 80116 | 寒冰惩戒 |
 | 80117 | 传送     |
 | 80121 | 弱化     |
-| 80122 | PVE闪现  |
+| 80122 | PVE 闪现  |
 | 81102 | 坚定意志 |
 | 81107 | 不灭信仰 |
 | 81109 | 奔狼号令 |
@@ -537,10 +528,10 @@ NPC皮肤代码如下。
 | ----- | ---------------------- |
 | 4010  | 变身大乱斗（地图）     |
 | 41150 | 抢鲲大乱斗（娱乐地图） |
-| 20001 | 经典1v1（竞技地图）    |
-| 20002 | 经典3v3（竞技地图）    |
+| 20001 | 经典 1v1（竞技地图）    |
+| 20002 | 经典 3v3（竞技地图）    |
 | 20009 | 火焰山（娱乐地图）     |
-| 20011 | 经典5v5（竞技地图）    |
+| 20011 | 经典 5v5（竞技地图）    |
 | 20012 | 无限乱斗（娱乐地图）   |
 | 20013 | 无限火力（娱乐地图）   |
 | 20015 | 迷雾模式（娱乐地图）   |
@@ -553,11 +544,11 @@ NPC皮肤代码如下。
 | 20071 | 抢鲲模式（娱乐地图）   |
 | 20072 | 强化模式（娱乐地图）   |
 | 20080 | 快跑模式（娱乐地图）   |
-| 20099 | 无塔1v1（竞技地图）    |
-| 20699 | 无塔3v1（竞技地图）    |
-| 20999 | 无塔5v5（竞技地图）    |
+| 20099 | 无塔 1v1（竞技地图）    |
+| 20699 | 无塔 3v1（竞技地图）    |
+| 20999 | 无塔 5v5（竞技地图）    |
 | 20111 | 征兆模式（竞技地图）   |
-| 20151 | CS模式（竞技地图）     |
+| 20151 | CS 模式（竞技地图）     |
 | 21000 | 峡谷大乱斗（地图）     |
 | 21001 | 峡谷大乱斗（地图）     |
 
@@ -567,7 +558,7 @@ NPC皮肤代码如下。
 163840000；32768000
 ```
 
-TS视角如下。
+TS 视角如下。
 
 ```
 1500000-165000  修改167888
@@ -575,7 +566,7 @@ Online-基址FD38  Beta-基址FD68
 154444-174444  修改160001
 ```
 
-3D视角如下。
+3D 视角如下。
 
 ```
 1097285734
@@ -595,9 +586,9 @@ Online-基址FD38  Beta-基址FD68
 
 ### 体验隐藏角色
 
-打开王者荣耀，进入单机模式，选择任意难度进入房间。任意选择英雄，此处以廉颇（105）为例。切到IGG，选择smoba，I32搜索105。
+打开王者荣耀，进入单机模式，选择任意难度进入房间。任意选择英雄，此处以廉颇（105）为例。切到 IGG，选择 smoba，I32 搜索 105。
 
-回到王者荣耀，选择小乔（106），切到IGG，I32搜索106。点右上角开关，再点左上角全改，此处测试将数值改成武则天（136）。回到王者荣耀，点击皮肤，变成武则天，开局。
+回到王者荣耀，选择小乔（106），切到 IGG，I32 搜索 106。点右上角开关，再点左上角全改，此处测试将数值改成武则天（136）。回到王者荣耀，点击皮肤，变成武则天，开局。
 
 退出本局游戏，再开一次房间，任意选个英雄，切到IGG，点全改，改为艾琳（155）或年兽（773）等其他特殊隐藏角色/NPC。回到王者荣耀，开局即可。
 
@@ -605,11 +596,11 @@ Online-基址FD38  Beta-基址FD68
 
 ### 享受定位特权
 
-下载王者人生APP并打开，可查找到能享受特权的店铺。以KFC为例，记住其位置。下载Wifi万能钥匙，查找该特权店对应的Wi-Fi名称，此处为KFC FREE WIFI。
+下载王者人生 APP 并打开，可查找到能享受特权的店铺。以 KFC 为例，记住其位置。下载 Wifi 万能钥匙，查找该特权店对应的 Wi-Fi 名称，此处为 KFC FREE WIFI。
 
-安装Fake GPS Pro插件，进入Wifi信息修改，设置成KFC FREE WIFI，MAC地址可以任意。安装Anywhere插件，寻找到特权店铺的位置，扎标，然后点击上面跳出的地址推荐，再选择应用到王者荣耀和王者人生。进入王者荣耀，若出现王者特权提示，则成功。否则需要在Anywhere中微调位置直至出现弹窗为止。
+安装 Fake GPS Pro 插件，进入 Wifi 信息修改，设置成 KFC FREE WIFI，MAC 地址可以任意。安装 Anywhere 插件，寻找到特权店铺的位置，扎标，然后点击上面跳出的地址推荐，再选择应用到王者荣耀和王者人生。进入王者荣耀，若出现王者特权提示，则成功。否则需要在 Anywhere 中微调位置直至出现弹窗为止。
 
-或者可以通过修改经纬度的方式实现修改定位。打开flex3，添加王者荣耀，搜索privilegeManager，进入后再搜setuserlatitude longitude。勾选后返回，输入特权店的经纬度即可。修改Wi-Fi和MAC地址则同上。
+或者可以通过修改经纬度的方式实现修改定位。打开 flex3，添加王者荣耀，搜索 privilegeManager，进入后再搜 setuserlatitude longitude。勾选后返回，输入特权店的经纬度即可。修改 Wi-Fi 和 MAC 地址则同上。
 
 ### 修改荣耀战区
 
@@ -619,14 +610,14 @@ Online-基址FD38  Beta-基址FD68
 
 下列步骤必须在游戏中进行修改，且必须落地后在购买装备点击技能的时候进行修改。注意一局只能修改一次。
 
-打开王者荣耀后，IGG进入smoba，I32搜索`英雄代码+00`，如搜索墨子则为10800。打开联合开关，搜索100，关闭联合开关，搜索`英雄代码+00`，全部改0即可。
+打开王者荣耀后，IGG 进入 smoba，I32 搜索`英雄代码+00`，如搜索墨子则为 10800。打开联合开关，搜索 100，关闭联合开关，搜索`英雄代码+00`，全部改 0 即可。
 
 常见代码及对应技能如下。
 
 | 代码 | 英雄名称 |        技能效果        |
 |------|----------|------------------------|
 |  108 | 墨子     | 无限击退（被动）       |
-|  112 | 鲁班     | 无限biubiubiu（被动）  |
+|  112 | 鲁班     | 无限 biubiubiu（被动）  |
 |  114 | 刘禅     | 无限锤（一技能）       |
 |  129 | 典韦     | 无限乱舞（一技能）     |
 |  133 | 狄仁杰   | 无限卡牌（强化被动）   |
@@ -649,9 +640,9 @@ Online-基址FD38  Beta-基址FD68
 
 ## 激门峡谷
 
-以下方法不适用于iOS13以下系统。
+以下方法不适用于 iOS13 以下系统。
 
-打开Filza，找到APP管理器，点击LOL右侧的`i`。点击主程序，进入wildrift.app目录，找到主程序wildrift，点击右侧的`i`。点击打开方式-十六进制编辑器，返回后点击主程序wildrift。
+打开 Filza，找到 APP 管理器，点击 LOL 右侧的`i`。点击主程序，进入 wildrift.app 目录，找到主程序 wildrift，点击右侧的`i`。点击打开方式-十六进制编辑器，返回后点击主程序 wildrift。
 
 按照以下内容完成修改后保存，然后重新下载游戏以避免闪退。
 
@@ -669,33 +660,33 @@ Online-基址FD38  Beta-基址FD68
 
 ### 游击型英雄无后
 
-F32搜25，全部改0即可。
+F32 搜 25，全部改 0 即可。
 
 ### 赵海龙独立无后
 
-F32搜25，联合F32搜35，全部改0即可。
+F32 搜 25，联合 F32 搜 35，全部改 0 即可。
 
 ### 赵海龙隐身
 
-F32搜0.0025，全部改99即可。
+F32 搜 0.0025，全部改 99 即可。
 
 ### 自瞄
 
 游戏中需要关闭辅助瞄准。
 
-i64搜4816377120，联合i64搜3212836864，修改为4811533255104790528即可。
+i64 搜 4816377120，联合 i64 搜 3212836864，修改为 4811533255104790528 即可。
 
 # 系统多开
 
-旧系统可使用coolbooter。
+旧系统可使用 coolbooter。
 
 ```
 https://coolbooter.com/
 ```
 
-coolbooter需要用1.5版本。若使用socket越狱，则需要重签app以获取权限。
+coolbooter 需要用 1.5 版本。若使用 socket 越狱，则需要重签 app 以获取权限。
 
-使用前先安装newterm2和container-resign，然后打开newterm2并输入以下命令。完成后打开coolbooter即可。
+使用前先安装 newterm2 和 container-resign，然后打开 newterm2 并输入以下命令。完成后打开 coolbooter 即可。
 
 ```
 # 密码alpine
@@ -705,9 +696,9 @@ container-resign /Applications/coolbooter.app/coolbooter
 
 # 建立SSH连接
 
-将手机连接到电脑后，在电脑端打开爱思助手，在工具箱中选择打开SSH连接，记下IP和端口，其中127.0.0.1可以用localhost代替。
+将手机连接到电脑后，在电脑端打开爱思助手，在工具箱中选择打开 SSH 连接，记下 IP 和端口，其中 127.0.0.1 可以用 localhost 代替。
 
-打开终端并输入以下命令，即可建立SSH连接。
+打开终端并输入以下命令，即可建立 SSH 连接。
 
 ```
 // 2222为端口，localhost为IP
@@ -716,9 +707,17 @@ ssh -p 2222 root@localhost
 
 # 常见问题
 
+## bootstrap 是什么
+
+bootstrap 是 iOS 15 及以上系统（根除越狱）中的引导机制，用于在系统层面加载越狱相关的进程与库。相关讨论可参考：
+
+```
+https://www.reddit.com/r/jailbreak/comments/1tmvh7/question_what_exactly_is_bootstrap/
+```
+
 ## Cydia无法联网
 
-可用爱思助手安装1.2.3版本的乐网，暂时让Cydia联网。然后安装`连个锤子-越狱联网一键修复`插件，官方源如下。打开插件，点击修复网络，等待修复完成后注销即可。
+可用爱思助手安装 1.2.3 版本的乐网，暂时让 Cydia 联网。然后安装`连个锤子-越狱联网一键修复`插件，官方源如下。打开插件，点击修复网络，等待修复完成后注销即可。
 
 ```
 http://apt.tinyapps.cn/
@@ -734,7 +733,7 @@ http://apt.tinyapps.cn/
 
 ## Sileo提示「unable to fetch some archives」
 
-若在手机端已安装NewTerm插件，则打开NewTerm并执行以下命令即可。若未安装，则先通过SSH使电脑连接到手机，然后在电脑端执行以下命令。
+若在手机端已安装 NewTerm 插件，则打开 NewTerm 并执行以下命令即可。若未安装，则先通过 SSH 使电脑连接到手机，然后在电脑端执行以下命令。
 
 ```
 apt-get update --fix-missing
@@ -743,7 +742,7 @@ killall SpringBoard
 
 ## Slieo提示Target Packages is configured multiple times
 
-在Slieo和Cydia中添加的源地址与名字冲突，在两边均添加同一个源时可能会出现该情况。总体不影响使用，建议卸载Cydia，并在NewTerm输入以下命令以移除cydia.list文件。
+在 Slieo 和 Cydia 中添加的源地址与名字冲突，在两边均添加同一个源时可能会出现该情况。总体不影响使用，建议卸载 Cydia，并在 NewTerm 输入以下命令以移除 cydia.list 文件。
 
 ```
 /etc/apt/sources.list.d
@@ -763,19 +762,25 @@ killall SpringBoard
 
 ## Slieo提示Depends PreferenceLoader
 
-切换到软件包选项卡，点击日期旁边的三条横线，然后点击开发者以切换到开发者模式，然后搜索PreferenceLoader，安装即可。
+切换到软件包选项卡，点击日期旁边的三条横线，然后点击开发者以切换到开发者模式，然后搜索 PreferenceLoader，安装即可。
 
 ## 无法正常内购
 
-此问题是itunesstored进程无法正常启动所导致。若安装了内购破解插件，如LocalIAPStore，先尝试关闭或卸载。
+此问题是 itunesstored 进程无法正常启动所导致。若安装了内购破解插件，如 LocalIAPStore，先尝试关闭或卸载。
 
-若无效，则可使用DaemonDisabler开启itunesstored进程，插件源如下。安装后在插件设置中打开com.apple.itunesstored.plist，然后软重启。
+若需要了解 LocalIAPStore 等内购破解插件的使用，可参考以下教程：
+
+```
+https://onejailbreak.com/blog/iapstore-tweak/
+```
+
+若无效，则可使用 DaemonDisabler 开启 itunesstored 进程，插件源如下。安装后在插件设置中打开 com.apple.itunesstored.plist，然后软重启。
 
 ```
 https://level3tjg.xyz/repo/
 ```
 
-若仍无效，可尝试使用Choicy禁止注入itunesstored。安装Choicy插件并进入Choicy设置，选择进程配置-守护进程，拉到最底部，点击显示所有守护进程，找到itunesstored后点击进入，打开禁用插件注入开关。注销并测试是否可以正常内购。
+若仍无效，可尝试使用 Choicy 禁止注入 itunesstored。安装 Choicy 插件并进入 Choicy 设置，选择进程配置-守护进程，拉到最底部，点击显示所有守护进程，找到 itunesstored 后点击进入，打开禁用插件注入开关。注销并测试是否可以正常内购。
 
 若依旧无法正常内购，可尝试重启或在安全模式下进行内购。
 
@@ -783,33 +788,23 @@ https://level3tjg.xyz/repo/
 
 打开用户目录下的.ssh/known_hosts文件，将有手机IP地址的记录删掉即可。
 
+## 越狱相关教程
+
+更多越狱相关的教程可参考：
+
+```
+https://www.bilibili.com/read/cv12153485/
+```
+
 # 参考教程
 
-## iOS越狱教程-内存基址修改器的外番(二)
-
-```
-https://mp.weixin.qq.com/s/LJAhI2pGOlnmxne6TAnBCw
-```
-
-## iOS越狱教程-内存基址修改器的神奇之处(十二)
-
-```
-https://mp.weixin.qq.com/s/0Je9UhWjVTuK-WIDcP886A
-```
-
-## iOS越狱教程-内存基址修改器的外番(三)
-
-```
-https://mp.weixin.qq.com/s/Il5_Gsbf89McIBM70zdNJg
-```
-
-## 王者荣耀修改教程
-
-```
-https://mp.weixin.qq.com/s/kawj3yg4lklM7BGrM4lXew
-https://mp.weixin.qq.com/s/5g0pjMRXkZc0g1hvs9oqoQ
-https://mp.weixin.qq.com/s/kAwToNnMArbyG9hk-nzalg
-https://mp.weixin.qq.com/s/trKrmzkOg8qUx9LVGu3WCg
-https://mp.weixin.qq.com/s/21gSod8io0L4ygYIK2C0vg
-https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=MzA5OTU0MTE1MQ==&scene=1&album_id=1318325233564172288#wechat_redirect
-```
+> [iOS越狱教程-内存基址修改器的外番(二)](https://mp.weixin.qq.com/s/LJAhI2pGOlnmxne6TAnBCw)  
+> [iOS越狱教程-内存基址修改器的神奇之处(十二)](https://mp.weixin.qq.com/s/0Je9UhWjVTuK-WIDcP886A)  
+> [iOS越狱教程-内存基址修改器的外番(三)](https://mp.weixin.qq.com/s/Il5_Gsbf89McIBM70zdNJg)  
+> [王者荣耀修改教程](https://mp.weixin.qq.com/s/kawj3yg4lklM7BGrM4lXew)  
+> [王者荣耀修改教程（2）](https://mp.weixin.qq.com/s/5g0pjMRXkZc0g1hvs9oqoQ)  
+> [王者荣耀修改教程（3）](https://mp.weixin.qq.com/s/kAwToNnMArbyG9hk-nzalg)  
+> [王者荣耀修改教程（4）](https://mp.weixin.qq.com/s/trKrmzkOg8qUx9LVGu3WCg)  
+> [王者荣耀修改教程（5）](https://mp.weixin.qq.com/s/21gSod8io0L4ygYIK2C0vg)  
+> [王者荣耀修改教程（合集）](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=MzA5OTU0MTE1MQ==&scene=1&album_id=1318325233564172288#wechat_redirect)  
+> [iOS越狱教程-内存基址修改器的神奇之处(十三)](https://mp.weixin.qq.com/s/IY3t96fbzfTybupXzuY5uA)  

@@ -133,6 +133,8 @@ https://www.gotvg.com/
 https://mirrors.tuna.tsinghua.edu.cn/help/fdroid/
 ```
 
+# 常用工具与资源
+
 ## 常用工具
 
 ### Gboard
@@ -140,8 +142,6 @@ https://mirrors.tuna.tsinghua.edu.cn/help/fdroid/
 好用的输入法，在 Google Play 即可下载。
 
 由于下载简体中文语言包需要一段时间，一开始使用拼音时会出现无法弹出中文选字的情况，挂翻墙并等待下载完成即可。
-
-# 常用工具与资源
 
 ## 连点器的使用
 

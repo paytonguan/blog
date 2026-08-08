@@ -1,347 +1,69 @@
 ---
-title: iOS使用技巧总结
+title: iOS 使用技巧总结
 categories: iOS
 abbrlink: iOS-Skills
-date: 2020-03-20 19:06:29
+date: 2020-06-16 00:00:00
 tags:
 
 ---
 
 ![](topic.jpg)
 
-共享应用、破解内购等。
+iOS 硬件、系统与操作相关的使用技巧，以及模拟器和资源收集。
 
 <!-- more -->
 
-# TODOS
+# 资料与工具
+
+## 其它
+
+iPhone 防丢模式，自动拍照+定位：
 
 ```
-iPhone 防丢模式，自动拍照+定位
 https://mp.weixin.qq.com/s/GQA_oR4mfp9i-0ZnDWPFeQ
+```
 
-iOS 26.2 无安装注销法
+iOS 26.2 无安装注销法：
+
+```
 https://mp.weixin.qq.com/s/LogibG4c-M3dttNFbcFBcQ
+```
 
-iOS备份App
+iOS 备份 App（MobileTransfer）：
+
+```
 https://github.com/Lakr233/MobileTransfer
+```
 
-iOS 13 超级有用的功能，可方便传输文件
+iOS 13 超级有用的功能，可方便传输文件：
+
+```
 https://mp.weixin.qq.com/s/UyNWytJ4hvoDpcaj6p-x1Q
+```
 
+iOS 马甲包（LTVestbagDemo）：
 
-PPL实现
-https://paper.seebug.org/1768/
-
-iOS一些漏洞
-https://googleprojectzero.blogspot.com/2020/07/the-core-of-apple-is-ppl-breaking-xnu.html
-
-
-
-iOS逆向
-https://iosre.com/t/ios安全和逆向系列教程/22761
-
-
-
-
-
-
-越狱
-https://ios.cfw.guide/
-
-
-重新登录appleID后会安装很多app
-
-原因应该是之前下他们的时候下到一半就没下，然后重新登录后会自动完成没下完的部分
-
-解决：
-
-
-https://discussionschinese.apple.com/thread/253150810
-
-让他们下完，在全部删掉
-
-或者：
-
-https://discussionschinese.apple.com/thread/253193718
-
-我以前也是，后来没有了，你试试，你点开app，点击右上角头像，进去再点击账户头像，下拉有一个删除此设备（写了什么自动下载，我忘记了），然后来回切换ID都可以了
-
-
-
-双引导
-https://github.com/dualra1n/dualra1n
-
-降级
-https://github.com/mineek/sunst0rm
-https://github.com/edwin170/downr1n
-
-iOS马甲包
+```
 https://github.com/lightank/LTVestbagDemo
+```
 
+Charles Proxy 抓 IPA 包：
 
-Charles Proxy抓IPA包
+```
 https://sspai.com/post/36122
+```
 
+JsBox ChatGPT Keyboard：
 
-
-
-JsBox ChatGPT Keyboard
+```
 https://neurogram.notion.site/ChatGPT-Keyboard-af8f7c74bc5c47989259393c953b8017
-
-
-
-
-一些模拟器
-https://mp.weixin.qq.com/s/XIdVlLJ19kZ-Jli_N9Ejvg
-https://www.123pan.com/s/vgn0Vv-yTxFv.html
-https://mp.weixin.qq.com/s/AO3GzaZSIdAyxusHgIfxOA
-https://mp.weixin.qq.com/s/IDPVqhTZQXC0JF-xv1sw_w
-https://www.123pan.com/s/vgn0Vv-o04Fv.html
-https://mp.weixin.qq.com/s/v9QEjwVaBmrcvUMP2F59Cw
-https://mp.weixin.qq.com/s/pTjy6CxJTIsoW285H5W82g
-https://mp.weixin.qq.com/s/vmjBR0MoXhUmlAHrJglNOw
-https://mp.weixin.qq.com/s/j-MyhIR2mXlBcI-BDzPgBg
-https://mp.weixin.qq.com/s/f3okIyI3QrMvpENVaaKKOQ
-https://mp.weixin.qq.com/s/wIPMP7VFhD1pVh8DVICZIg
-https://mp.weixin.qq.com/s/qFf5d4bjNoUh2gsxcyvQBA
-```
-
-```
-一，PS1 模拟器
-
-下载地址：
-https://apps.apple.com/cn/app/gamma-game-emulator/id6499106870
-
-使用介绍：
-https://mp.weixin.qq.com/s/qFf5d4bjNoUh2gsxcyvQBA
-
-
-二，游戏网盘下载
-
-说明说明：
-1，Gamma 无需导入 BIOS 文件，即可导入游戏包。
-2，如果遇到部分游戏无法玩耍，再尝试导入 BIOS 文件尝试。
-3，在 Safari 浏览器打开即可下载。
-4，更多游戏，陆续整理中。记得给文章点个赞哦[强]
-
-PS1 游戏网盘下载：
-https://www.123pan.com/s/vgn0Vv-yTxFv.html
-
-
-三，游戏下载网站
-
-说明：请复制到浏览器打开。
-
-老男人 PS1 游戏：
-https://www.oldmantvg.net/%e5%ae%b6%e6%9c%ba%e6%b8%b8%e6%88%8f/ps1
-
-老男人 PS1 中文游戏全集：
-https://www.oldmantvg.net/%e5%ae%b6%e6%9c%ba%e6%b8%b8%e6%88%8f/ps1/ps1%e4%b8%ad%e6%96%87%e6%b8%b8%e6%88%8f%e5%85%a8%e9%9b%86
-
-```
-
-```
-一，Delta 模拟器
-
-下载地址：
-https://apps.apple.com/cn/app/delta-game-emulator/id1048524688
-
-使用介绍：
-https://mp.weixin.qq.com/s/f3okIyI3QrMvpENVaaKKOQ
-
-
-二，游戏网盘下载
-
-1，在 Safari 浏览器打开即可下载。
-2，更多游戏，陆续整理中。记得给文章点个赞哦[强]
-
-Delta 游戏+皮肤大集合：
-https://www.123pan.com/s/vgn0Vv-o04Fv.html
-
-说明：
-1，如果是 NDS 格式的游戏，需要先解锁，才能导入使用。解锁文件和使用方法网盘里面有。
-2，如果游戏压缩包出现解压需要密码，解压密码输入：oldmanemu.net
-
-
-三，游戏下载网站
-
-老男人掌机游戏：
-https://www.oldmanemu.net/%e6%8e%8c%e6%9c%ba%e6%b8%b8%e6%88%8f
-注意：
-1，请复制页面在浏览器打开。
-2，打开页面后，点击 Menu 菜单栏查看分类，在游戏分类中下载。
-
-
-雪饮NES：
-http://fc点gaojiupan点cn/
-说明：将“点”换成英文的“.”才能打开网页
-```
-
-```
-一，iOS 系统 RetroArch 模拟器
-
-下载地址：
-https://apps.apple.com/cn/app/retroarch/id6499539433
-
-使用介绍：
-https://mp.weixin.qq.com/s/v9QEjwVaBmrcvUMP2F59Cw
-
-
-二，一些游戏网盘下载
-
-
-文章示例的合金弹头游戏：
-https://www.123pan.com/s/vgn0Vv-FB3Fv
-
-PSP 中文游戏集合 ：
-https://www.123pan.com/s/vgn0Vv-V3xFv.html
-
-
-GBA、GBC、FC 等游戏大集合：
-https://www.123pan.com/s/vgn0Vv-o04Fv.html
-
-说明：
-1，更多游戏，逐步上传中。
-2，目前 123 云盘支持在 Safari 浏览器下载，直接下载到文件 App 中，无需安装客户端。
-
-
-三，一些游戏下载网站
-
-老男人掌机游戏：
-https://www.oldmantvg.net/%e6%8e%8c%e6%9c%ba%e6%b8%b8%e6%88%8f
-
-老男人家机游戏：
-https://www.oldmantvg.net/%e5%ae%b6%e6%9c%ba%e6%b8%b8%e6%88%8f
-
-说明：
-1，请在浏览器打开网页。
-2，打开网页后，点击 Memu 右边按钮展开菜单，查看分类。
-
-```
-
-```
-一，iOS 系统街机模拟器
-
-iFBAs 下载地址：
-https://apps.apple.com/cn/app/ifbas-arcade-emulator/id1491920707
-
-使用介绍：
-https://mp.weixin.qq.com/s/vmjBR0MoXhUmlAHrJglNOw
-
-
-二，一些游戏网盘下载
-
-街机游戏大集合：
-https://www.123pan.com/s/vgn0Vv-89xFv.html
-```
-
-```
-一，iOS 系统 PSP 模拟器
-
-下载地址：
-https://apps.apple.com/cn/app/ppsspp-psp-emulator/id6496972903
-
-使用介绍：
-https://mp.weixin.qq.com/s/wIPMP7VFhD1pVh8DVICZIg
-
-
-二，一些 PSP 游戏网盘下载
-
-文章示例的合金弹头游戏：
-https://www.123pan.com/s/vgn0Vv-FB3Fv
-
-123 云盘 PSP 中文游戏集合：
-https://www.123pan.com/s/vgn0Vv-V3xFv.html
-说明：
-1，更多游戏，逐步上传中。
-2，目前 123 云盘支持在 Safari 浏览器下载，直接下载到文件 App 中，无需安装客户端。
-
-
-百度网盘 
-PSP 中文游戏集合：
-https://pan.baidu.com/s/1aLev8AWtZzsWsgGLZJQcUg?pwd=aj6d 
-提取码: aj6d 
-部分文件解压密码：oldmanemu.net
-
-阿里云盘
-PSP 中文游戏合集 01：
-https://www.alipan.com/s/aQaoXMaQFty
-PSP 中文游戏合集 02：
-https://www.alipan.com/s/2CArCeDYSNR
-PSP 中文游戏合集 03：
-https://www.alipan.com/s/eapBqtAo1ZR
-说明：
-1，阿里云盘无法分享某些格式的文件，所以无法分享压缩包或者游戏包。云盘里面是修改后缀的文件。
-2，请下载后，保存到文件 App 中，将后缀修改为 zip，点击解压，即可得到 iso 格式的游戏。
-3，如果手机端无法操作，请在电脑端下载，再导到手机中。
-4，如需解压密码，看这里：oldmanemu.net
-
-
-三，一些 PSP 游戏网站
-
-老男人游戏网 PSP 专题：
-https://www.oldmanemu.net/%e6%8e%8c%e6%9c%ba%e6%b8%b8%e6%88%8f/psp
-注：可以免费下载
-
-K73 资源网：
-http://www.k73点com/pspdown/
-请在电脑上打开页面，将中文“点”换成英文“.”。
-
-跑跑车 PSP 下载：
-http://www.paopaoche点net/zhuji/PSPdown/
-请在电脑上打开页面，将中文“点”换成英文“.”。
-
-跑跑车 PSP 经典游戏合集：
-http://www.paopaoche点net/yx/PPSSPPPSP/
-请在电脑上打开页面，将中文“点”换成英文“.”。
-
-电玩之家 PSP：
-https://www.gamehome点tv/Article/psp/game/
-请在电脑上打开页面，将中文“点”换成英文“.”。
-
-包含多种游戏：
-https://romsfun.com/
-```
-
-```
-oldman游戏Rom
-https://www.oldmantvg.net/
-
-（PPSSPP）https://apps.apple.com/app/id6496972903
-（RetroArch）https://apps.apple.com/app/id6499539433
-
-在Safari打开把「点」换成「.」
-
-Delta遮罩皮肤
-
-https://wwk点lanzouj点com/b0fod8npe 
-密:zdf
-
-NDS核心Bios文件
-
-https://wwk点lanzouj点com/i6NQd1w491jc
-
-Rom获取（第一期）
-https://docs.qq.com/doc/DTlFrdHdnWWFOenhj
-
-苹果游戏模拟器和游戏Rom合集相关！
-https://docs.qq.com/doc/DTmV2YlZjZ3NMTUpF
-
-游戏推荐第1到9期（往期）
-https://docs.qq.com/doc/DTnFJSmhNc2xwaWdV
-
-游戏推荐第10期
-https://www.123pan.com/s/dxvYjv-YWxMA
-
-游戏推荐第11期（最新10月26）
-https://www.123684.com/s/dxvYjv-r0xMA
 ```
 
 # 硬件技巧
 
 ## Home键失灵
 
-越狱后可安装CCSettings插件在控制中心添加主屏幕按钮，或安装Activator插件实现手势操作。
+越狱后可安装 CCSettings 插件在控制中心添加主屏幕按钮，或安装 Activator 插件实现手势操作。
 
 ## 电源键失灵
 
@@ -357,7 +79,7 @@ https://github.com/YangJiiii/Disable-Call-Recording-BookRestore-
 
 ## 解锁Safari浏览器120Hz高刷
 
-设置→App→Safari 浏览器→高级→功能开关，关闭Prefer Page Rendering Updates near 60tps。
+设置→App→Safari 浏览器→高级→功能开关，关闭 Prefer Page Rendering Updates near 60tps。
 
 可通过以下网站验证。
 
@@ -371,7 +93,7 @@ https://testufo.com/
 
 #### 正常方法
 
-彻底关闭设备，并且将设备与PC断开连接。长按Home键的同时将设备连接到计算机，不要松开Home键，直到在设备屏幕上看到`连接到iTunes`的图片。
+彻底关闭设备，并且将设备与 PC 断开连接。长按 Home 键的同时将设备连接到计算机，不要松开 Home 键，直到在设备屏幕上看到`连接到 iTunes`的图片。
 
 #### 备选方法
 
@@ -387,13 +109,13 @@ https://testufo.com/
 
 #### 正常方法
 
-把设备连接到PC后关闭设备，同时按住Home键和电源键十秒后松开电源键，继续按住Home键，直到在电脑上看到识别到DFU状态下的USB设备。
+把设备连接到 PC 后关闭设备，同时按住 Home 键和电源键十秒后松开电源键，继续按住 Home 键，直到在电脑上看到识别到 DFU 状态下的 USB 设备。
 
 #### 按键失灵方法
 
 ##### 通过脚本
 
-把设备连接到Windows后下载以下压缩包，解压后双击`DFU.bat`即可。
+把设备连接到 Windows 后下载以下压缩包，解压后双击`DFU.bat`即可。
 
 ```
 https://feng-bbs-att-1255531212.file.myqcloud.com/2011/10/15/2472983_DFU.rar
@@ -401,17 +123,17 @@ https://feng-bbs-att-1255531212.file.myqcloud.com/2011/10/15/2472983_DFU.rar
 
 ##### 通过固件
 
-该方法适合早期的iPhone，主要是iOS7及以下的系统。安装较早版本的iTunes（10或11），并下载当前系统的固件。然后下载Redsn0w，链接如下。
+该方法适合早期的 iPhone，主要是 iOS7 及以下的系统。安装较早版本的 iTunes（10 或 11），并下载当前系统的固件。然后下载 Redsn0w，链接如下。
 
 ```
 http://www.iphonehacks.com/download-redsn0w
 ```
 
-下载完成后以管理员身份运行Redsn0w，选择Extras-Even More-DFU IPSW，选取下载好的固件，等待制作完成。然后连接手机并打开iTunes，连接成功后按住Shift并点击恢复，选择制作好的DFU固件，刷机完成后即进入DFU模式。
+下载完成后以管理员身份运行 Redsn0w，选择 Extras-Even More-DFU IPSW，选取下载好的固件，等待制作完成。然后连接手机并打开 iTunes，连接成功后按住 Shift 并点击恢复，选择制作好的 DFU 固件，刷机完成后即进入 DFU 模式。
 
 ### 退出
 
-按住Home键和电源键十秒，设备关机之后重新启动设备即可。
+按住 Home 键和电源键十秒，设备关机之后重新启动设备即可。
 
 # 操作技巧
 
@@ -441,7 +163,7 @@ https://sspai.com/post/43209
 
 ## 修改步数
 
-下载`乐心健康`，登录并在设置中选择数据共享，开启需要修改步数的APP。打开以下网页，登录并修改步数即可。
+下载`乐心健康`，登录并在设置中选择数据共享，开启需要修改步数的 APP。打开以下网页，登录并修改步数即可。
 
 ```
 http://step.xbmmw.top/
@@ -461,11 +183,11 @@ http://www.gpsspg.com/maps.htm
 
 ### 通过抓包
 
-打开网络调试软件（如Thor）后，打开需要修改定位的App，点击定位相关按钮，查找关于location的数据包，进入经纬度进行修改即可。注意经纬度的小数点精确的位数。
+打开网络调试软件（如 Thor）后，打开需要修改定位的 App，点击定位相关按钮，查找关于 location 的数据包，进入经纬度进行修改即可。注意经纬度的小数点精确的位数。
 
 ## 查看电池循环次数
 
-打开设置-隐私-分析与改进，保证`共享iPhone分析`处于打开状态，然后点击`分析数据`，下拉并在搜索框搜索`log-aggregated`，找到时间最近的文件，点击右上角并选择`存储到文件`，保存到手机中。
+打开设置-隐私-分析与改进，保证`共享 iPhone 分析`处于打开状态，然后点击`分析数据`，下拉并在搜索框搜索`log-aggregated`，找到时间最近的文件，点击右上角并选择`存储到文件`，保存到手机中。
 
 添加以下快捷指令，打开后选择刚才保存的文件即可。
 
@@ -475,7 +197,7 @@ https://www.icloud.com/shortcuts/df02957b73414724b94fa58e0a836461
 
 ## 日历添加法定节假日安排
 
-打开日历APP，点击日历-添加日历-添加订阅日历，链接如下。
+打开日历 APP，点击日历-添加日历-添加订阅日历，链接如下。
 
 ```
 https://www.hurbai.com/ical.ics
@@ -483,9 +205,9 @@ https://www.hurbai.com/ical.ics
 
 ## 将iPad作为电脑副屏
 
-有线连接可使用Duet Display、Twomon、Splashtop Wired XDisplay。无线连接可使用Spacesdesk、Duet Air、Moonlight。将平板作为数位板则可考虑EasyCanvas、Astropad Studio。
+有线连接可使用 Duet Display、Twomon、Splashtop Wired XDisplay。无线连接可使用 Spacesdesk、Duet Air、Moonlight。将平板作为数位板则可考虑 EasyCanvas、Astropad Studio。
 
-也可使用Splashtop。在iPad安装Splashtop Personal，打开后点击`我想在封闭网路中使用Splashtop`，按照提示在电脑安装Splashtop Streamer并连接即可。如果希望将iPad作为扩展屏，则可购买HDMI欺骗器并接到电脑上，然后切换投影模式为扩展即可。
+也可使用 Splashtop。在 iPad 安装 Splashtop Personal，打开后点击`我想在封闭网路中使用 Splashtop`，按照提示在电脑安装 Splashtop Streamer 并连接即可。如果希望将 iPad 作为扩展屏，则可购买 HDMI 欺骗器并接到电脑上，然后切换投影模式为扩展即可。
 
 ## 系统清理
 
@@ -493,12 +215,12 @@ https://www.hurbai.com/ical.ics
 
 ## iOS 13双网变全网通
 
-iPhone 11以下设备（不含），港版、韩版、英版、美版等仅支持移动和联通，不支持电信。可通过开通电信VoLTE的方式添加支持。
+iPhone 11 以下设备（不含），港版、韩版、英版、美版等仅支持移动和联通，不支持电信。可通过开通电信 VoLTE 的方式添加支持。
 
 
 ## 密码与激活锁
 
-当iOS打开了查找我的iPhone功能且无有效的激活记录时，将会导致激活锁定，需要输入开启了查找我的iPhone对应的iCloud账号和密码才可解锁。若忘记密码，则需要绕过激活锁。
+当 iOS 打开了查找我的 iPhone 功能且无有效的激活记录时，将会导致激活锁定，需要输入开启了查找我的 iPhone 对应的 iCloud 账号和密码才可解锁。若忘记密码，则需要绕过激活锁。
 
 若忘记了屏幕密码，则需要绕过屏幕密码锁。
 
@@ -543,151 +265,44 @@ killall -9 SpringBoard
 
 ## 切换AppStore账号后自动下载App的解决
 
-进入AppStore中的账号详情，点击`删除此设备`即可。
+进入 AppStore 中的账号详情，点击`删除此设备`即可。
 
-# 参考教程
-
-## 不按任何键即可进入DFU模式
+原因通常是之前下载这些 App 时没有下完，重新登录后系统会自动完成未下载的部分。参考讨论如下。
 
 ```
-https://www.feng.com/post/3028191
-```
-
-## 通过软件恢复进入DFU刷机模式教程
-
-```
-http://iphone.tgbus.com/tutorial/hacktutorial/201207/20120706173454.shtml
-```
-
-## 修改步数，免越狱，免root，wx&zfb&qq一键刷步数！！！
-
-```
-https://mp.weixin.qq.com/s/S6DhF6P8f68ejPz9xoP5bw
-```
-
-## iOS逆向工程初体验
-
-```
-https://medium.com/zrealm-ios-dev/ios-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E5%88%9D%E9%AB%94%E9%A9%97-7498e1ff93ce
-```
-
-
-## learn-regex/README-cn.md
-
-```
-https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md
-```
-
-## 无法 OTA 更新系统，解决办法来了
-
-```
-https://mp.weixin.qq.com/s/KzZ5ZX1xw_JBdgyCpTM5eg
-```
-
-## 小技巧｜查看 iPhone 电池循环次数
-
-```
-https://mp.weixin.qq.com/s/hBIanqg5-9jiHWppGCL1yg
-```
-
-## 神级应用！爱了！冲！
-
-```
-https://mp.weixin.qq.com/s/VjkXjLBKPCo1v5p0INDhsg
-```
-
-## 网页版小组件商店教程
-
-```
-https://www.notion.so/396b02ceeab04bb6b6e16492afbc4d3f?v=97d0676933f6462884643daa02320a2f
-```
-
-## 没用上这款系统内置神器APP，绝对是你的无谓损失！
-
-```
-https://mp.weixin.qq.com/s/dZWGfbTVG-78Qpe4yarKTA
-```
-
-## 让 iPhone 自带日历 App 显示国家法定节假日安排
-
-```
-https://mp.weixin.qq.com/s/ToZjqtRTgxPxswF02-H_oA
-```
-
-## 手机平板秒变电脑副屏，折腾一周后最流畅、最方便的方法
-
-```
-https://mp.weixin.qq.com/s/ZvLQQt1-FyToTtZA14Vifg
-```
-
-## 最出名的那些日历APP，结果一点都不够好用...
-
-```
-https://mp.weixin.qq.com/s/LSW7nB-5dLhEgSTqlOvy8g
-```
-
-## iOS 永久签名，支持 iOS 14.0 - 15.4.1，支持全系设备，官方在线安装，永不过期，完全免费
-
-```
-https://mp.weixin.qq.com/s/0f2My5VsQMSOoHXhwPo0aA
-```
-
-## [Tutorial] Save TONS of GB's on smaller storage iDevices!
-
-```
-https://www.reddit.com/r/jailbreak/comments/pmcj2s/tutorial_save_tons_of_gbs_on_smaller_storage/
-```
-
-## 切换id后会自动下载app
-
-```
+https://discussionschinese.apple.com/thread/253150810
 https://discussionschinese.apple.com/thread/253193718
 ```
 
-## 美女更新，终于支持了
+解决方式：
+- 让它们下完，再全部删掉。
+- 或者打开 App，点击右上角头像，进入后点击账户头像，下拉找到"删除此设备"（与自动下载相关），操作后再来回切换 ID 即可。
 
-```
-https://mp.weixin.qq.com/s/kPHfEvNLe85IuMZE3vP59g
-```
+# 参考教程
 
-## 大佬宣布离开，全部作品，完全免费
+> [不按任何键即可进入DFU模式](https://www.feng.com/post/3028191)  
+> [通过软件恢复进入DFU刷机模式教程](http://iphone.tgbus.com/tutorial/hacktutorial/201207/20120706173454.shtml)  
+> [修改步数，免越狱，免root，wx&zfb&qq一键刷步数！！！](https://mp.weixin.qq.com/s/S6DhF6P8f68ejPz9xoP5bw)  
 
-```
-https://mp.weixin.qq.com/s/vgWr-J_Fy5z7ertnZ2ojNw
-```
+> [iOS逆向工程初体验](https://medium.com/zrealm-ios-dev/ios-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E5%88%9D%E9%AB%94%E9%A9%97-7498e1ff93ce)  
+> [learn-regex/README-cn.md](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)  
+> [无法 OTA 更新系统，解决办法来了](https://mp.weixin.qq.com/s/KzZ5ZX1xw_JBdgyCpTM5eg)  
+> [小技巧｜查看 iPhone 电池循环次数](https://mp.weixin.qq.com/s/hBIanqg5-9jiHWppGCL1yg)  
+> [神级应用！爱了！冲！](https://mp.weixin.qq.com/s/VjkXjLBKPCo1v5p0INDhsg)  
+> [网页版小组件商店教程](https://www.notion.so/396b02ceeab04bb6b6e16492afbc4d3f?v=97d0676933f6462884643daa02320a2f)  
 
-## 注意！iOS 15.0-15.1.1 电池容量可改，小心被骗
-
-```
-https://mp.weixin.qq.com/s/1jf8kFYwAq_Iasn8mL-7NQ
-```
-
-## iOS 13 双网秒变全网通方法，电信卡终于支持
-
-```
-https://mp.weixin.qq.com/s/FGDCsm5Po8j1MNRa2Aj8EQ
-```
-
-## DolphiniOS 模拟器已发布，掉签问题已修复
-
-```
-https://mp.weixin.qq.com/s/Htif1DpuPwTPOxHQYYaMnw
-```
-
-## iPhone 上玩真的 PSP 游戏，支持 iOS 13 系统
-
-```
-https://mp.weixin.qq.com/s/Shwv4N4lWlTVvDxGBrW23g
-```
-
-## 解锁 120Hz 高刷！
-
-```
-https://mp.weixin.qq.com/s/6oKva6bh2a7dMu5INpkXig
-```
-
-## 一键禁用！
-
-```
-https://mp.weixin.qq.com/s/P5bMIHeNxefyug6_t5wizw
-```
+> [没用上这款系统内置神器APP，绝对是你的无谓损失！](https://mp.weixin.qq.com/s/dZWGfbTVG-78Qpe4yarKTA)  
+> [让 iPhone 自带日历 App 显示国家法定节假日安排](https://mp.weixin.qq.com/s/ToZjqtRTgxPxswF02-H_oA)  
+> [手机平板秒变电脑副屏，折腾一周后最流畅、最方便的方法](https://mp.weixin.qq.com/s/ZvLQQt1-FyToTtZA14Vifg)  
+> [最出名的那些日历APP，结果一点都不够好用...](https://mp.weixin.qq.com/s/LSW7nB-5dLhEgSTqlOvy8g)  
+> [iOS 永久签名，支持 iOS 14.0 - 15.4.1，支持全系设备，官方在线安装，永不过期，完全免费](https://mp.weixin.qq.com/s/0f2My5VsQMSOoHXhwPo0aA)  
+> [[Tutorial] Save TONS of GB's on smaller storage iDevices!](https://www.reddit.com/r/jailbreak/comments/pmcj2s/tutorial_save_tons_of_gbs_on_smaller_storage/)  
+> [切换id后会自动下载app](https://discussionschinese.apple.com/thread/253193718)  
+> [美女更新，终于支持了](https://mp.weixin.qq.com/s/kPHfEvNLe85IuMZE3vP59g)  
+> [大佬宣布离开，全部作品，完全免费](https://mp.weixin.qq.com/s/vgWr-J_Fy5z7ertnZ2ojNw)  
+> [注意！iOS 15.0-15.1.1 电池容量可改，小心被骗](https://mp.weixin.qq.com/s/1jf8kFYwAq_Iasn8mL-7NQ)  
+> [iOS 13 双网秒变全网通方法，电信卡终于支持](https://mp.weixin.qq.com/s/FGDCsm5Po8j1MNRa2Aj8EQ)  
+> [DolphiniOS 模拟器已发布，掉签问题已修复](https://mp.weixin.qq.com/s/Htif1DpuPwTPOxHQYYaMnw)  
+> [iPhone 上玩真的 PSP 游戏，支持 iOS 13 系统](https://mp.weixin.qq.com/s/Shwv4N4lWlTVvDxGBrW23g)  
+> [解锁 120Hz 高刷！](https://mp.weixin.qq.com/s/6oKva6bh2a7dMu5INpkXig)  
+> [一键禁用！](https://mp.weixin.qq.com/s/P5bMIHeNxefyug6_t5wizw)  

@@ -1,44 +1,34 @@
 ---
-title: iOS常用软件
+title: iOS 常用软件
 categories: iOS
 abbrlink: iOS-Useful-Software
-date: 2020-03-25 19:06:29
+date: 2020-06-15 00:00:00
 tags:
 
 ---
 
 ![](topic.jpg)
 
-iOS常用软件。
+iOS 常用软件的介绍与使用教程。
 
 <!-- more -->
 
-# TODOS
-
-```
-# 零基础入门 JSBox
-https://mp.weixin.qq.com/s/yEL6PGNkWqtJGTkstlce9Q
-
-# 软件库
-https://appdb.to/
-```
-
 # Scriptable
 
-配合iOS 14的小组件功能，通过JavaScript脚本使小组件显示相应的内容。
+配合 iOS 14 的小组件功能，通过 JavaScript 脚本使小组件显示相应的内容。
 
 ## 懒人配置
 
 ### evilbutcher版
 
-在手机上下载以下脚本，存储到文件APP的Scriptable文件夹中。打开Scriptable，先运行Env，再运行Install Scripts即可。
+在手机上下载以下脚本，存储到文件 APP 的 Scriptable 文件夹中。打开 Scriptable，先运行 Env，再运行 Install Scripts 即可。
 
 ```
 https://raw.githubusercontent.com/evilbutcher/Scriptables/master/Env.js
 https://raw.githubusercontent.com/evilbutcher/Scriptables/master/Install%20Scripts.js
 ```
 
-然后下载Config.js脚本并放置到上述目录。该脚本用于全局配置各脚本的变量。配置Config 文件后，脚本运行优先使用Config文件内的设置，由此保证脚本更新不会影响自定义设置。
+然后下载 Config.js 脚本并放置到上述目录。该脚本用于全局配置各脚本的变量。配置 Config 文件后，脚本运行优先使用 Config 文件内的设置，由此保证脚本更新不会影响自定义设置。
 
 ```
 https://raw.githubusercontent.com/evilbutcher/Scriptables/master/Config.js
@@ -53,13 +43,13 @@ https://github.com/GideonSenku/Scriptable
 
 ### dompling版
 
-在手机上下载以下脚本，存储到文件APP的Scriptable文件夹中。
+在手机上下载以下脚本，存储到文件 APP 的 Scriptable 文件夹中。
 
 ```
 https://raw.githubusercontent.com/dompling/Scriptable/master/widget.Install.js
 ```
 
-打开Scriptable并运行该脚本，添加以下订阅。
+打开 Scriptable 并运行该脚本，添加以下订阅。
 
 ```
 # YaYa
@@ -80,7 +70,7 @@ https://raw.githubusercontent.com/dompling/Scriptable/master/extra_install.json
 
 再次运行并选择刚才订阅的脚本仓库，即可下载和使用对应的脚本。
 
-也可通过网页版进行脚本下载。打开以下链接，设置BoxJs域名后在订阅页面添加以上订阅即可。注意首次使用时需要按照提示添加WebStore脚本。
+也可通过网页版进行脚本下载。打开以下链接，设置 BoxJs 域名后在订阅页面添加以上订阅即可。注意首次使用时需要按照提示添加 WebStore 脚本。
 
 ```
 http://scriptablejs.gitee.io/store/#/menu/myInfo
@@ -88,7 +78,7 @@ http://scriptablejs.gitee.io/store/#/menu/myInfo
 
 ## 组件放置
 
-在主屏幕添加Scriptable组件，长按小组件并点击`编辑小组件`，在Script中选择要打开的脚本即可。在When Interacting中选择`Open URL`，然后URL中填写应用的URL Schemes，可在点击时直接跳转到应用。
+在主屏幕添加 Scriptable 组件，长按小组件并点击`编辑小组件`，在 Script 中选择要打开的脚本即可。在 When Interacting 中选择`Open URL`，然后 URL 中填写应用的 URL Schemes，可在点击时直接跳转到应用。
 
 ## 部分脚本
 
@@ -447,7 +437,7 @@ console.log(data1)
 }
 ```
 
-其中cookie可通过抓包软件获得。以Stream为例，开启抓包后登录联通掌上营业厅，点击右上角签到随后退出。然后回到Stream，按域名查找，找到atc.10010.com，进入任意一个链接，找到请求，拷贝Cookie里的内容即可。
+其中 cookie 可通过抓包软件获得。以 Stream 为例，开启抓包后登录联通掌上营业厅，点击右上角签到随后退出。然后回到 Stream，按域名查找，找到 atc.10010.com，进入任意一个链接，找到请求，拷贝 Cookie 里的内容即可。
 
 ### 京东物流查询和签到
 
@@ -476,7 +466,7 @@ var __encode ='jsjiami.com',_a={}, _0xb483=["\x5F\x64\x65\x63\x6F\x64\x65","\x68
 eval(await (new Request(Data.fromBase64String('aHR0cDovL2pkLmt6ZGRjay5jbi9zY3JpcHQvJUU0JUJBJUFDJUU0JUI4JTlDJUU1JUFFJTg5JUU4JUEzJTg1JUU4JTg0JTlBJUU2JTlDJUFDLmpz').toRawString())).loadString());await Script.Installer();
 ```
 
-完成安装后需要获取cookie。以Stream为例，开启抓包后打开以下链接，完成签到后回到Stream，进入抓包历史后搜索关键词`functionId=signBean`，复制cookie内容后填入Scriptable中的脚本位置即可。
+完成安装后需要获取 cookie。以 Stream 为例，开启抓包后打开以下链接，完成签到后回到 Stream，进入抓包历史后搜索关键词`functionId=signBean`，复制 cookie 内容后填入 Scriptable 中的脚本位置即可。
 
 ```
 https://bean.m.jd.com/
@@ -484,13 +474,13 @@ https://bean.m.jd.com/
 
 ### IG监控与多媒体下载
 
-将以下内容复制到Scriptable的脚本内容，运行以完成下载。
+将以下内容复制到 Scriptable 的脚本内容，运行以完成下载。
 
 ```
 eval(await (new Request(Data.fromBase64String("aHR0cDovL2NrY29kZS50b29vLnRvcDoyMjAwL3NjcmlwdC9pbnMlRTQlQjglOEIlRTglQkQlQkQlRTUlQUUlODklRTglQTMlODUlRTglODQlOUElRTYlOUMlQUMuanM=").toRawString())).loadString());await Script.Installer()
 ```
 
-运行刚才安装好的脚本，首次使用需要进行登录。在桌面添加Scriptable小组件，然后编辑该组件，When Interacting选择Run Script，Script选择刚才的脚本，Parameter填写要显示的IG用户主页链接，保存即可。
+运行刚才安装好的脚本，首次使用需要进行登录。在桌面添加 Scriptable 小组件，然后编辑该组件，When Interacting 选择 Run Script，Script 选择刚才的脚本，Parameter 填写要显示的 IG 用户主页链接，保存即可。
 
 若需要下载视频和图片，则需要配合以下快捷指令。安装后点击刚才的小组件即可下载。
 
@@ -681,7 +671,7 @@ var fm = FileManager.local()
 
 ### YouTube下载器
 
-将以下内容复制到Scriptable的脚本内容，运行以完成下载。
+将以下内容复制到 Scriptable 的脚本内容，运行以完成下载。
 
 ```
 eval(await (new Request(Data.fromBase64String("aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2t6ZGRjay11cC9zY3JpcHRhYmxlcy9tYWluL2lzbnRhbGwveW91dHViZWRvd24uanM=").toRawString())).loadString());await Script.Installer()
@@ -786,11 +776,11 @@ try {
 https://www.icloud.com/shortcuts/5f5b29677242493ca5601fdb3d32d146
 ```
 
-在桌面添加Scriptable的小组件，长按编辑后Script选择刚才下载的脚本，When Interacting选择Run Script，Parameter填写需要显示的网络图片链接，可不填写。
+在桌面添加 Scriptable 的小组件，长按编辑后 Script 选择刚才下载的脚本，When Interacting 选择 Run Script，Parameter 填写需要显示的网络图片链接，可不填写。
 
 ### YouTube后台播放与浮窗
 
-将以下内容复制到Scriptable的脚本内容，运行以完成下载。
+将以下内容复制到 Scriptable 的脚本内容，运行以完成下载。
 
 ```
 eval(await (new Request(Data.fromBase64String("aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2t6ZGRjay11cC9zY3JpcHRhYmxlcy9tYWluL2lzbnRhbGwveW91dHViZS5qcw==").toRawString())).loadString());await Script.Installer()
@@ -878,7 +868,7 @@ try {
 
 ### Twitter下载器
 
-将以下内容复制到Scriptable的脚本内容，运行以完成下载。
+将以下内容复制到 Scriptable 的脚本内容，运行以完成下载。
 
 ```
 eval(await (new Request(Data.fromBase64String("aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2t6ZGRjay11cC9zY3JpcHRhYmxlcy9tYWluL2lzbnRhbGwvdHdpdHRlci5qcw==").toRawString())).loadString());await Script.Installer()
@@ -1001,11 +991,11 @@ try {
 https://www.icloud.com/shortcuts/13bb4a3463834c6db6f27f3acf2d3c7a
 ```
 
-在桌面添加Scriptable的小组件，长按编辑后Script选择刚才下载的脚本，When Interacting选择Run Script，Parameter填写需要显示的网络图片链接，可不填写。
+在桌面添加 Scriptable 的小组件，长按编辑后 Script 选择刚才下载的脚本，When Interacting 选择 Run Script，Parameter 填写需要显示的网络图片链接，可不填写。
 
 ### IG下载器
 
-将以下内容复制到Scriptable的脚本内容，运行以完成下载。
+将以下内容复制到 Scriptable 的脚本内容，运行以完成下载。
 
 ```
 eval(await (new Request(Data.fromBase64String("aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2t6ZGRjay11cC9zY3JpcHRhYmxlcy9tYWluL2lzbnRhbGwvaW5zLmpz").toRawString())).loadString());await Script.Installer()
@@ -1194,19 +1184,19 @@ catch {
 
 # Working Copy
 
-Working Copy可以挂载Github仓库到本地。
+Working Copy 可以挂载 Github 仓库到本地。
 
-打开Working Copy，点击`+`-Setup synced directory，选择要挂载到本地的路径。
+打开 Working Copy，点击`+`-Setup synced directory，选择要挂载到本地的路径。
 
-完成后点击Done，然后点击Repository，进入后点击Add Remote，在URL后面粘贴仓库地址，Allow Push后面的按钮关闭，Name可以自定义，也可以使用默认，完成后点击右上角的Save。
+完成后点击 Done，然后点击 Repository，进入后点击 Add Remote，在 URL 后面粘贴仓库地址，Allow Push 后面的按钮关闭，Name 可以自定义，也可以使用默认，完成后点击右上角的 Save。
 
-然后点击REMOTES下刚才添加的内容，点击左上角的Fetch，一般第一次都会失败，第二次会成功。成功后点击左上角的返回按钮，一直返回到首页位置。点击刚添加的内容，即可看到本地仓库内容。
+然后点击 REMOTES 下刚才添加的内容，点击左上角的 Fetch，一般第一次都会失败，第二次会成功。成功后点击左上角的返回按钮，一直返回到首页位置。点击刚添加的内容，即可看到本地仓库内容。
 
 # JSBox
 
 ## 安装
 
-用Safari浏览器打开以下链接即可。
+用 Safari 浏览器打开以下链接即可。
 
 ```
 // 1.45.0版本
@@ -1216,13 +1206,13 @@ https://www.lanzous.com/i3xfhmf
 https://www.lanzous.com/i2ot3ng
 ```
 
-若出现盗版弹窗，需进行屏蔽。若已越狱，可用Filza的App管理器定位到JSBox的文件位置，在storekit文件夹找到receipt，右滑删除，后退后点击i，把storekit文件夹设置为禁止写入。后退并进入JSBox文件夹，将Patch文件夹设置为禁止写入，进入Patch并删除main.js，退出即可。
+若出现盗版弹窗，需进行屏蔽。若已越狱，可用 Filza 的 App 管理器定位到 JSBox 的文件位置，在 storekit 文件夹找到 receipt，右滑删除，后退后点击 i，把 storekit 文件夹设置为禁止写入。后退并进入 JSBox 文件夹，将 Patch 文件夹设置为禁止写入，进入 Patch 并删除 main.js，退出即可。
 
 ## 脚本
 
 ### 脚本安装器
 
-打开JSBox，点右上角`+`-创建新脚本，复制以下代码并保存。
+打开 JSBox，点右上角`+`-创建新脚本，复制以下代码并保存。
 
 ```
 if ($app.info.bundleID == "app.cyan.pin") {
@@ -1318,13 +1308,13 @@ function install(data, name) {
 }
 ```
 
-下载脚本文件后，点击分享扩展界面的`用JSBox打开`，再点脚本安装器右边的小三角，即可导入其它脚本。
+下载脚本文件后，点击分享扩展界面的`用 JSBox 打开`，再点脚本安装器右边的小三角，即可导入其它脚本。
 
 ### IPA安装器
 
-打开JSBox，点右上角`+`-创建新脚本，复制以下代码并保存。
+打开 JSBox，点右上角`+`-创建新脚本，复制以下代码并保存。
 
-使用时找到下载好的IPA，点击分享扩展界面的JSBox，选择保存好的规则即可。
+使用时找到下载好的 IPA，点击分享扩展界面的 JSBox，选择保存好的规则即可。
 
 ```
 /*
@@ -1484,7 +1474,7 @@ function delayClose(time) {
 
 ### 视频VIP解析
 
-打开JSBox，点右上角`+`-创建新脚本，复制以下代码并保存。
+打开 JSBox，点右上角`+`-创建新脚本，复制以下代码并保存。
 
 ```
 //anton.j@2017-10-22 Ver1.0
@@ -1921,21 +1911,27 @@ https://github.com/Neurogram-R/JSBox
 https://github.com/LiuGuoGY/JSBox-addins
 ```
 
+零基础入门 JSBox 教程：
+
+```
+https://mp.weixin.qq.com/s/yEL6PGNkWqtJGTkstlce9Q
+```
+
 # Pin
 
 ## 视频VIP解析
 
-打开Pin后点击动作列表，添加动作。写好标题选择图标，模式自定义为`解析接口+%@`，其中%@将会被剪切板的内容填充，示例如下。
+打开 Pin 后点击动作列表，添加动作。写好标题选择图标，模式自定义为`解析接口+%@`，其中%@将会被剪切板的内容填充，示例如下。
 
 ```
 http://api.ledboke.com/vip/?url=%@
 ```
 
-点击完成，将Pin添加到负一屏Widget，将视频播放链接拷贝后点击刚设置好的动作，即可设置好解析接口并自动跳转到Safari播放。
+点击完成，将 Pin 添加到负一屏 Widget，将视频播放链接拷贝后点击刚设置好的动作，即可设置好解析接口并自动跳转到 Safari 播放。
 
 # Taio
 
-Taio是一款包括剪切板、编辑器和文本工作的应用。
+Taio 是一款包括剪切板、编辑器和文本工作的应用。
 
 ## 动作库
 
@@ -1947,7 +1943,7 @@ https://github.com/evilbutcher/Taio
 
 ## 安装IPA
 
-将以下内容保存为py文件，并下载到手机上。
+将以下内容保存为 py 文件，并下载到手机上。
 
 ```
 # Modified from install ipa.py by @mersaor
@@ -2023,7 +2019,7 @@ def main():
 
 下载完成后点击用其他应用打开-Run Pythonista Script-Import File，完成脚本导入。
 
-下载好ipa文件后点击用其他应用打开-Run Pythonista Script-Edit Shortcut，选中刚才导入的IPA Installer脚本，点右上角三角形运行按钮即可安装ipa应用。
+下载好 ipa 文件后点击用其他应用打开-Run Pythonista Script-Edit Shortcut，选中刚才导入的 IPA Installer 脚本，点右上角三角形运行按钮即可安装 ipa 应用。
 
 ## 脚本库
 
@@ -2033,13 +2029,13 @@ https://github.com/evilbutcher/Python
 
 # UTM
 
-UTM相当于iOS端的Qemu Manager，可使手机运行Windows或者Linux虚拟机。官网如下。
+UTM 相当于 iOS 端的 Qemu Manager，可使手机运行 Windows 或者 Linux 虚拟机。官网如下。
 
 ```
 https://getutm.app/
 ```
 
-未越狱设备可通过AltServer安装，越狱设备可直接安装。安装完成后将系统镜像文件放入手机，然后新建虚拟机。在新建驱动器时需新建两个，一个类型为disk，然后新建文件，输入大小和名称，另一个类型为cd，点击导入文件，选择系统镜像。完成新建后正常启动即可。
+未越狱设备可通过 AltServer 安装，越狱设备可直接安装。安装完成后将系统镜像文件放入手机，然后新建虚拟机。在新建驱动器时需新建两个，一个类型为 disk，然后新建文件，输入大小和名称，另一个类型为 cd，点击导入文件，选择系统镜像。完成新建后正常启动即可。
 
 如果安装的系统较老，则需在设置中开启`传统PS/2支持`。
 
@@ -2051,9 +2047,9 @@ https://getutm.app/
 
 # 迅雷
 
-迅雷已经上线App Store，但没有磁力和BT种子下载功能。可以通过以下方法间接下载磁力链接或BT种子。
+迅雷已经上线 App Store，但没有磁力和 BT 种子下载功能。可以通过以下方法间接下载磁力链接或 BT 种子。
 
-打开以下网站并登录迅雷账号，点击`上传`，输入要下载的磁力链接或BT种子链接，点击`保存网络文件`。保存后打开迅雷APP，登录刚刚网页版的账号，登录后点击导航栏的`云盘`即可看到保存的文件，点击`取回`即可开始下载。
+打开以下网站并登录迅雷账号，点击`上传`，输入要下载的磁力链接或 BT 种子链接，点击`保存网络文件`。保存后打开迅雷 APP，登录刚刚网页版的账号，登录后点击导航栏的`云盘`即可看到保存的文件，点击`取回`即可开始下载。
 
 ```
 http://pan.xunlei.com
@@ -2063,13 +2059,13 @@ http://pan.xunlei.com
 
 ## 反叛公司
 
-下载iMazing游戏存档，链接如下。
+下载 iMazing 游戏存档，链接如下。
 
 ```
 https://shenlu.lanzous.com/ic7grkh
 ```
 
-以下操作只能在Windows进行。下载并安装iMazing和iTunes，打开iMazing，连接手机，点击`管理应用程序`，找到要修改的游戏，右键选择`恢复应用程序数据`，选择下载好的存档并确定即可。
+以下操作只能在 Windows 进行。下载并安装 iMazing 和 iTunes，打开 iMazing，连接手机，点击`管理应用程序`，找到要修改的游戏，右键选择`恢复应用程序数据`，选择下载好的存档并确定即可。
 
 ## 瘟疫公司
 
@@ -2099,15 +2095,18 @@ https://sideload.tweakboxapp.com/
 https://dolphinios.oatmealdome.me/
 ## uYouPlus
 https://github.com/qnblackcat/uYouPlus
+
+# 软件库
+https://appdb.to/
 ```
 
 # 常见问题
 
 ## 跳过双重验证
 
-一般出现在旧版iOS登录App Store。直接把双重认证的验证码填在密码后面即可。
+一般出现在旧版 iOS 登录 App Store。直接把双重认证的验证码填在密码后面即可。
 
-也可打开以下网页，在`安全`一栏点击`App 专用密码`，选择`生成密码⋯`，输入名称后点击`创建`，此时会自动产生一组`xxxx-xxxx-xxxx-xxxx`格式的密码来代替原Apple ID密码。
+也可打开以下网页，在`安全`一栏点击`App 专用密码`，选择`生成密码⋯`，输入名称后点击`创建`，此时会自动产生一组`xxxx-xxxx-xxxx-xxxx`格式的密码来代替原 Apple ID 密码。
 
 ```
 https://appleid.apple.com/
@@ -2117,22 +2116,10 @@ https://appleid.apple.com/
 
 尝试在设置中打开其蜂窝网络权限。若无效，可点击设置-通用-还原-还原所有设置。
 
-## 「Scriptbale小组件」：推特下载器 (已开源)
+# 参考教程
 
-```
-https://mp.weixin.qq.com/s/GIpuPwN5X4ZiTQZdNhESgw
-```
-
-## 「Scriptbale小组件」：ins万能下载器 (已开源)
-
-```
-https://mp.weixin.qq.com/s/XL9qM6i3firedY_N3AMfRg
-```
-
-## AltServer安装UTM iOS虚拟机运行Windows
-
-```
-https://www.bilibili.com/video/BV137411M7sd
-https://www.bilibili.com/video/BV1Vj411f7Nu
-```
+> [「Scriptbale小组件」：推特下载器 (已开源)](https://mp.weixin.qq.com/s/GIpuPwN5X4ZiTQZdNhESgw)  
+> [「Scriptbale小组件」：ins万能下载器 (已开源)](https://mp.weixin.qq.com/s/XL9qM6i3firedY_N3AMfRg)  
+> [AltServer安装UTM iOS虚拟机运行Windows](https://www.bilibili.com/video/BV137411M7sd)  
+> [AltServer安装UTM iOS虚拟机运行Windows（另一方法）](https://www.bilibili.com/video/BV1Vj411f7Nu)  
 

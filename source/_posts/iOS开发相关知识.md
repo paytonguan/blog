@@ -1,14 +1,14 @@
 ---
-title: iOS开发相关知识
+title: iOS 开发相关知识
 categories: Study
 abbrlink: Knowledge-About-iOS-Development
-date: 2024-12-19 21:40:57
+date: 2020-06-11 00:00:00
 tags:
 ---
 
 ![](topic.jpg)
 
-iOS开发相关知识。
+iOS 开发相关的知识整理，包括 Xcode、组件、框架与常见功能实现。
 
 <!-- more -->
 
@@ -36,6 +36,11 @@ https://developer.apple.com/design/human-interface-guidelines/
 https://www.microsoft.com/design/fluent/
 https://principleformac.com/tutorial.html
 https://material.io/design
+
+# 逆向与安全
+https://iosre.com/t/ios安全和逆向系列教程/22761
+https://paper.seebug.org/1768/
+https://googleprojectzero.blogspot.com/2020/07/the-core-of-apple-is-ppl-breaking-xnu.html
 ```
 
 # 基本知识
@@ -44,7 +49,7 @@ https://material.io/design
 
 ### if let
 
-判断对象的值是否为nil。
+判断对象的值是否为 nil。
 
 ```
 let name: String? = "老王"
@@ -58,7 +63,7 @@ if let nameNew = name,
 
 ### guard let
 
-保证对象的值不为nil。
+保证对象的值不为 nil。
 
 ```
 let name: String? = "老王"
@@ -72,7 +77,7 @@ guard let nameNew = name,
 
 ## Extension
 
-当类A需要遵循协议B时，可按照以下原始写法。
+当类 A 需要遵循协议 B 时，可按照以下原始写法。
 
 ```
 class A: B{
@@ -80,7 +85,7 @@ class A: B{
 }
 ```
 
-也可通过extension的方式实现，在协议众多的情况下会使代码逻辑更加清楚。
+也可通过 extension 的方式实现，在协议众多的情况下会使代码逻辑更加清楚。
 
 ```
 class A{
@@ -96,41 +101,41 @@ extension A: B{
 
 ### viewDidLoad
 
-新建页面时被调用，即页面首先载入的方法，类似初始化。一个页面只会调用一次viewDidLoad方法。
+新建页面时被调用，即页面首先载入的方法，类似初始化。一个页面只会调用一次 viewDidLoad 方法。
 
 ### viewDidAppear
 
-将页面放置到视图时被调用。每次显示页面都会调用该方法，比如进入页面后返回时会调用一次viewDidAppear方法。
+将页面放置到视图时被调用。每次显示页面都会调用该方法，比如进入页面后返回时会调用一次 viewDidAppear 方法。
 
 ### viewDidLayoutSubviews
 
-当页面被放置好时被调用。viewDidLayoutSubviews只会在视图上所有Auto Layout设定或是大小自动计算完成后才会执行，因此会在视图更新、旋转、变动时调用该方法。
+当页面被放置好时被调用。viewDidLayoutSubviews 只会在视图上所有 Auto Layout 设定或是大小自动计算完成后才会执行，因此会在视图更新、旋转、变动时调用该方法。
 
-在开启APP时，viewDidLayoutSubviews会在viewDidLoad之后执行。
+在开启 APP 时，viewDidLayoutSubviews 会在 viewDidLoad 之后执行。
 
-注意，如果要获取控件在设备上的实际尺寸，需要在viewDidLayoutSubviews而不是viewDidLoad进行操作。在viewDidLayoutSubviews调用会得到计算完约束后得到的尺寸，而在viewDidLoad调用会得到在Storyboard或程序添加控件时设定的默认尺寸。
+注意，如果要获取控件在设备上的实际尺寸，需要在 viewDidLayoutSubviews 而不是 viewDidLoad 进行操作。在 viewDidLayoutSubviews 调用会得到计算完约束后得到的尺寸，而在 viewDidLoad 调用会得到在 Storyboard 或程序添加控件时设定的默认尺寸。
 
 # Xcode
 
 ## 设置代码折叠
 
-打开Xcode的Preference-Text Editing，勾选code folding ribbon即可。
+打开 Xcode 的 Preference-Text Editing，勾选 code folding ribbon 即可。
 
 # 组件
 
 ## Collection View
 
-展示Cell列表。
+展示 Cell 列表。
 
 ### 使用方法
 
-在Storyboard中添加UICollectionView，在其中的Cell布局所需要的控件。
+在 Storyboard 中添加 UICollectionView，在其中的 Cell 布局所需要的控件。
 
-在该页对应的ViewController建立该UICollectionView的Outlet，此处将名称设定为collectionView。新建一个类并继承自UICollectionViewCell，此处取名为MyCell。
+在该页对应的 ViewController 建立该 UICollectionView 的 Outlet，此处将名称设定为 collectionView。新建一个类并继承自 UICollectionViewCell，此处取名为 MyCell。
 
-将Storyboard中UICollectionView的Cell的Class设定为MyCell，并设置Identifier，此处设置为`identifierMyCell`。
+将 Storyboard 中 UICollectionView 的 Cell 的 Class 设定为 MyCell，并设置 Identifier，此处设置为`identifierMyCell`。
 
-将Cell中的控件通过Outlet添加到MyCell中。回到ViewController的代码页，修改以下代码以建立委托。
+将 Cell 中的控件通过 Outlet 添加到 MyCell 中。回到 ViewController 的代码页，修改以下代码以建立委托。
 
 ```
 override func viewDidLoad(){
@@ -141,7 +146,7 @@ override func viewDidLoad(){
 }
 ```
 
-建立委托后会提示错误，点击错误提示后会自动添加UICollectionViewDataSource协议。需要重写以下协议实现方法。
+建立委托后会提示错误，点击错误提示后会自动添加 UICollectionViewDataSource 协议。需要重写以下协议实现方法。
 
 ```
 func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -195,11 +200,11 @@ self.mCollectionView.collectionViewLayout = layout
 
 #### 添加
 
-直接在Storyboard中将Cell拖动至需要跳转的页面即可。
+直接在 Storyboard 中将 Cell 拖动至需要跳转的页面即可。
 
 #### 获取点击的位置
 
-点击上面添加的跳转线即segue，设置该segue的identifier，此处为bookJump。重写跳转前的ViewController的prepare方法，示例代码如下。
+点击上面添加的跳转线即 segue，设置该 segue 的 identifier，此处为 bookJump。重写跳转前的 ViewController 的 prepare 方法，示例代码如下。
 
 ```
 # DestViewController为跳转后的ViewController
@@ -234,7 +239,7 @@ picker.delegate = self
 self.present(picker, animated: true, completion: nil)
 ```
 
-需要给呈现该组件的页面ViewController添加UIColorPickerViewControllerDelegate协议，示例如下。
+需要给呈现该组件的页面 ViewController 添加 UIColorPickerViewControllerDelegate 协议，示例如下。
 
 ```
 extension ViewController: UIColorPickerViewControllerDelegate {
@@ -250,7 +255,7 @@ extension ViewController: UIColorPickerViewControllerDelegate {
 }
 ```
 
-也可不使用以上协议，而使用Combine框架。示例代码如下。
+也可不使用以上协议，而使用 Combine 框架。示例代码如下。
 
 ```
 import Combine
@@ -293,7 +298,7 @@ vc.delegate = self
 present(vc, animated: true)
 ```
 
-需要给呈现该组件的页面ViewController添加UIFontPickerViewControllerDelegate协议，示例如下。
+需要给呈现该组件的页面 ViewController 添加 UIFontPickerViewControllerDelegate 协议，示例如下。
 
 ```
 extension ViewController: UIFontPickerViewControllerDelegate {
@@ -411,7 +416,7 @@ sendSubview(toBack:)
 
 ### 绑定点击事件
 
-无法调用addTarget()方法。
+无法调用 addTarget()方法。
 
 ```
 barbuttonitem.target = self;
@@ -441,7 +446,7 @@ activityIndicator.stopAnimating()
 
 ## AVPlayer
 
-用于播放视频。需要AVFoundation库，使用前添加以下语句。
+用于播放视频。需要 AVFoundation 库，使用前添加以下语句。
 
 ```
 import AVFoundation
@@ -516,15 +521,15 @@ player.pause()
 
 #### 独立使用
 
-直接在Storyboard中添加Page View Controller即可。
+直接在 Storyboard 中添加 Page View Controller 即可。
 
 #### 嵌入到页面
 
-在页面上添加Container View，再添加一个Page View Controller，连接Container View和Page View Controller，选择Embed。
+在页面上添加 Container View，再添加一个 Page View Controller，连接 Container View 和 Page View Controller，选择 Embed。
 
 ### 初始化
 
-将Storyboard中的Page View Controller链接到自定义类，此处为PageViewController。示例代码如下。
+将 Storyboard 中的 Page View Controller 链接到自定义类，此处为 PageViewController。示例代码如下。
 
 ```
 import UIKit
@@ -593,9 +598,9 @@ extension PageViewController: UIPageViewControllerDataSource {
 
 ### 添加当前页显示
 
-若需要添加页控件用以显示当前页码，则需要在放置时选择将UIPageViewController嵌入到页面，然后在Container View下添加UIPageControl控件。
+若需要添加页控件用以显示当前页码，则需要在放置时选择将 UIPageViewController 嵌入到页面，然后在 Container View 下添加 UIPageControl 控件。
 
-添加完成后，除了完成初始化中的步骤外，还需要在显示时和切换页面时给UIPageControl控件传递信息。该操作通过自定义协议PageViewControllerDelegate实现，代码如下，仅显示比初始化时增加的部分。
+添加完成后，除了完成初始化中的步骤外，还需要在显示时和切换页面时给 UIPageControl 控件传递信息。该操作通过自定义协议 PageViewControllerDelegate 实现，代码如下，仅显示比初始化时增加的部分。
 
 ```
 protocol PageViewControllerDelegate: class {
@@ -675,7 +680,7 @@ class ViewController: UIViewController, PageViewControllerDelegate {
 
 #### 修改滑动样式
 
-将Transition Style设置成Scroll时为滚动形式，Page Curl时为翻页形式。
+将 Transition Style 设置成 Scroll 时为滚动形式，Page Curl 时为翻页形式。
 
 #### 设置UIPageControl大小
 
@@ -695,7 +700,7 @@ pageControl.subviews.forEach {
 
 ### 类定义
 
-定义IrregularButton类，在默认按钮的基础上进行拓展。
+定义 IrregularButton 类，在默认按钮的基础上进行拓展。
 
 ```
 import UIKit
@@ -871,13 +876,13 @@ https://heartbeat.fritz.ai/swipeless-tinder-using-ios-14-vision-hand-pose-estima
 
 #### 镜头方向随设备旋转而变化
 
-需要旋转cameraPreviewLayer，即相机预览层。
+需要旋转 cameraPreviewLayer，即相机预览层。
 
 ```
 cameraPreviewLayer.connection.videoOrientation = getCaptureVideoOrientation()
 ```
 
-其中getCaptureVideoOrientation()函数如下。
+其中 getCaptureVideoOrientation()函数如下。
 
 ```
 func getCaptureVideoOrientation() -> AVCaptureVideoOrientation {
@@ -975,7 +980,7 @@ textView.attributedText = NSAttributedString(attributedString: attributed)
 
 ### 转换为String
 
-使用string方法即可。
+使用 string 方法即可。
 
 ```
 var attributedString = NSMutableAttributedString(string: "hello, world!")
@@ -1027,7 +1032,7 @@ subView.removeFromSuperView()
 
 ## 监听进程事件
 
-在AppDelegete.swift下的AppDelegete类添加以下函数即可。
+在 AppDelegete.swift 下的 AppDelegete 类添加以下函数即可。
 
 ```
 func applicationDidFinishLaunching(_ application: UIApplication) {
@@ -1057,7 +1062,7 @@ func applicationWillTerminate(_ application: UIApplication) {
 
 ## 监听触摸事件
 
-UIView等相关视图是UIResponder的子类，而UIResponder可对相关触摸事件做出反馈。将Storyboard中的视图绑定到自定义类后，即可重写以下方法对触摸事件做出反馈。
+UIView 等相关视图是 UIResponder 的子类，而 UIResponder 可对相关触摸事件做出反馈。将 Storyboard 中的视图绑定到自定义类后，即可重写以下方法对触摸事件做出反馈。
 
 ```
 # 点击事件触发
@@ -1075,7 +1080,7 @@ func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?)
 
 ## 在View中获取点击坐标
 
-需要重写View的touchesBegan方法。
+需要重写 View 的 touchesBegan 方法。
 
 ```
 override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -1088,7 +1093,7 @@ override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
 ## 隐藏返回键
 
-在需要隐藏返回键页面的ViewController的viewDidLoad()方法中添加以下语句即可。
+在需要隐藏返回键页面的 ViewController 的 viewDidLoad()方法中添加以下语句即可。
 
 ```
 self.navigationController?.navigationBarHidden = true
@@ -1096,7 +1101,7 @@ self.navigationController?.navigationBarHidden = true
 
 ## 从跳转中获取父/子控制器
 
-在Storyboard中对需要设置的segue设置identifier，此处为`Jump`。假设父控制器为ParentViewController，子控制器为ChildViewController。
+在 Storyboard 中对需要设置的 segue 设置 identifier，此处为`Jump`。假设父控制器为 ParentViewController，子控制器为 ChildViewController。
 
 父控制器代码如下。
 
@@ -1151,7 +1156,7 @@ let crect2 = fatherView?.convert((childView?.frame)!, from: childView)
 
 ### 设置
 
-使用present()方法即可。
+使用 present()方法即可。
 
 ### 淡出切换
 
@@ -1164,9 +1169,9 @@ toVC.modalTransitionStyle = .crossDissolve
 
 ### 原理
 
-若使用普通的present方法，将无法实现页面回退。
+若使用普通的 present 方法，将无法实现页面回退。
 
-设当前有两个页面firstVC和secondVC，通过按钮进行两个页面的切换，按钮均绑定btnClicked方法。若使用正常跳转逻辑，代码示例如下。
+设当前有两个页面 firstVC 和 secondVC，通过按钮进行两个页面的切换，按钮均绑定 btnClicked 方法。若使用正常跳转逻辑，代码示例如下。
 
 ```
 // firstVC的类
@@ -1192,11 +1197,11 @@ class SecondViewController: UIViewController {
 }
 ```
 
-在firstVC点击按钮可以顺利跳转到secondVC，但在secondVC点击按钮时将会报错，原因是跳转到的页面已经被呈现过。因此需要使用NavigationController作为页面跳转的载体，通过pushViewController和popViewController方法实现回退跳转。
+在 firstVC 点击按钮可以顺利跳转到 secondVC，但在 secondVC 点击按钮时将会报错，原因是跳转到的页面已经被呈现过。因此需要使用 NavigationController 作为页面跳转的载体，通过 pushViewController 和 popViewController 方法实现回退跳转。
 
 ### 初始化与跳转设置
 
-在Storyboard点击底层页面，即无法再回退的页面，此处以firstVC为例，在菜单栏选择Editor-Embed in-Navigation Controller以使NavigationController嵌入到页面中。
+在 Storyboard 点击底层页面，即无法再回退的页面，此处以 firstVC 为例，在菜单栏选择 Editor-Embed in-Navigation Controller 以使 NavigationController 嵌入到页面中。
 
 嵌入后代码示例如下。
 
@@ -1233,7 +1238,7 @@ class SecondViewController: UIViewController {
 
 ### 隐藏导航栏
 
-若需要隐藏所有页面的导航栏，可点击Navigation Controller的导航栏，在右侧勾选isHidden即可。或者通过以下代码实现。
+若需要隐藏所有页面的导航栏，可点击 Navigation Controller 的导航栏，在右侧勾选 isHidden 即可。或者通过以下代码实现。
 
 ```
 self.navigationController?.navigationBar.isHidden = true
@@ -1291,9 +1296,9 @@ self.navigationController?.fadeOut()
 
 ### 转场动画
 
-在页面跳转时，可设置转场动画。转场动画通过自定义的TransitionCoordinator类实现，该类用于承接NavigationController的delegate，定义转场时的操作。
+在页面跳转时，可设置转场动画。转场动画通过自定义的 TransitionCoordinator 类实现，该类用于承接 NavigationController 的 delegate，定义转场时的操作。
 
-为向TransitionCoordinator类传递动画前后的控件位置，首先定义animTransitionable协议用于从主控制器获取相关内容。
+为向 TransitionCoordinator 类传递动画前后的控件位置，首先定义 animTransitionable 协议用于从主控制器获取相关内容。
 
 ```
 # 定义需要获取的控件
@@ -1303,7 +1308,7 @@ protocol animTransitionable {
 }
 ```
 
-在主控制器添加关于animTransitionable的拓展，从而指定每个选项对应的应当获取的内容。
+在主控制器添加关于 animTransitionable 的拓展，从而指定每个选项对应的应当获取的内容。
 
 ```
 extension MainViewController : animTransitionable
@@ -1332,7 +1337,7 @@ navigationController?.delegate = transition
 navigationController?.delegate = nil
 ```
 
-TransitionCoordinator类定义如下。在进行push时，会调用PushAnimator()方法，在进行pop时则调用PopAnimator()方法。
+TransitionCoordinator 类定义如下。在进行 push 时，会调用 PushAnimator()方法，在进行 pop 时则调用 PopAnimator()方法。
 
 ```
 import UIKit
@@ -1355,7 +1360,7 @@ class TransitionCoordinator: NSObject, UINavigationControllerDelegate {
 }
 ```
 
-以PushAnimator()方法为例，示例如下。其原理为新建一个视图，在其上隐藏来源控制器，完成动画操作，然后显示目标控制器。PopAnimator()方法原理完全一致。
+以 PushAnimator()方法为例，示例如下。其原理为新建一个视图，在其上隐藏来源控制器，完成动画操作，然后显示目标控制器。PopAnimator()方法原理完全一致。
 
 ```
 import UIKit
@@ -1447,9 +1452,9 @@ class PushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 
 ## 添加自定义字体
 
-将所需字体拖动到Xcode的文件栏，选择Copy items if needed和create groups。然后打开Info.plist，添加`Fonts provided by application`，内容为字体文件名称，注意包括扩展名。
+将所需字体拖动到 Xcode 的文件栏，选择 Copy items if needed 和 create groups。然后打开 Info.plist，添加`Fonts provided by application`，内容为字体文件名称，注意包括扩展名。
 
-可在编辑组件时直接修改组件的Font属性使用自定义字体，也可在代码中调用。由于字体名称与字体文件名称不一定完全对应，因此需要通过以下代码输出当前APP可用的字体列表。该段代码放置于任意可被执行的位置即可，比如放置在会出现的ViewController的viewDidLoad()方法中。
+可在编辑组件时直接修改组件的 Font 属性使用自定义字体，也可在代码中调用。由于字体名称与字体文件名称不一定完全对应，因此需要通过以下代码输出当前 APP 可用的字体列表。该段代码放置于任意可被执行的位置即可，比如放置在会出现的 ViewController 的 viewDidLoad()方法中。
 
 ```
 for family in UIFont.familyNames.sorted() {
@@ -1477,19 +1482,19 @@ label.adjustsFontForContentSizeCategory = true
 
 ### 设置启动页
 
-启动页一般在LaunchScreen.storyboard中设置，可点击该文件后，查看右侧Interface Builder Document下Use as Launch Screen是否已被勾选，若未勾选则勾选即可。
+启动页一般在 LaunchScreen.storyboard 中设置，可点击该文件后，查看右侧 Interface Builder Document 下 Use as Launch Screen 是否已被勾选，若未勾选则勾选即可。
 
-也可在项目设置中点击APP，在General的Deployment Info-Main Interface选择启动后显示的页面，一般为Main。在App Icons and Launch Images-Launch Screen File选择启动页，即LaunchScreen。
+也可在项目设置中点击 APP，在 General 的 Deployment Info-Main Interface 选择启动后显示的页面，一般为 Main。在 App Icons and Launch Images-Launch Screen File 选择启动页，即 LaunchScreen。
 
 ### 修改启动页界面
 
-在LaunchScreen.storyboard中放置控件即可。注意该文件中的ViewController不可绑定到自定义类，因此该ViewController的控件属性只可提前设定。
+在 LaunchScreen.storyboard 中放置控件即可。注意该文件中的 ViewController 不可绑定到自定义类，因此该 ViewController 的控件属性只可提前设定。
 
-若启动页有图片，注意需要直接放置到项目目录，而不要放置到Assets.xcasset文件夹中，且应当为JPG而非PNG格式。
+若启动页有图片，注意需要直接放置到项目目录，而不要放置到 Assets.xcasset 文件夹中，且应当为 JPG 而非 PNG 格式。
 
 ### 设置启动页停留时间
 
-在AppDelegate.swift下设置启动页时长，如下。
+在 AppDelegate.swift 下设置启动页时长，如下。
 
 ```
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -1506,7 +1511,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 ### 在不同设备设置不同布局
 
-主要用于在iPhone和iPad设置不同的布局。假设Main_iPad.storyboard为用于iPad的布局，Main_iPhone.storyboard为用于iPhone的布局，在AppDelegate.swift下添加以下代码即可。
+主要用于在 iPhone 和 iPad 设置不同的布局。假设 Main_iPad.storyboard 为用于 iPad 的布局，Main_iPhone.storyboard 为用于 iPhone 的布局，在 AppDelegate.swift 下添加以下代码即可。
 
 ```
 func applicationDidFinishLaunching(_ application: UIApplication) {
@@ -1538,7 +1543,7 @@ label.layer.borderWidth = 1
 label.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 ```
 
-也可在Storyboard中点击需要设置的控件，在右侧的Runtime Attributes添加以下项目。
+也可在 Storyboard 中点击需要设置的控件，在右侧的 Runtime Attributes 添加以下项目。
 
 ```
 layer.borderWidth
@@ -1570,7 +1575,7 @@ view.layer.masksToBounds = false
 
 ## 控件变换与动画
 
-通过transform属性可以修改控件的位移、缩放、旋转。
+通过 transform 属性可以修改控件的位移、缩放、旋转。
 
 ### 变换
 
@@ -1638,13 +1643,13 @@ button.layer.addAnimation(zoomInAndOut, forKey: nil)
 
 ## Popover
 
-Popover是类似气泡的ViewController显示模式，一般在点击按钮时触发。
+Popover 是类似气泡的 ViewController 显示模式，一般在点击按钮时触发。
 
 ### 通过segue
 
-若在Storyboard中通过segue实现跳转，在拉segue时选择Present As Popover即可。在segue的Anchor设置中可设置箭头指向的对象。
+若在 Storyboard 中通过 segue 实现跳转，在拉 segue 时选择 Present As Popover 即可。在 segue 的 Anchor 设置中可设置箭头指向的对象。
 
-在iPhone上Popover默认无法显示出像iPad的效果，需要进行以下设置。
+在 iPhone 上 Popover 默认无法显示出像 iPad 的效果，需要进行以下设置。
 
 ```
 // ViewController为Popover对应控制器的父控制器
@@ -1668,7 +1673,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
 
 ### 通过纯代码
 
-以按钮点击事件触发Popover显示为例，触发代码如下。在iPhone上显示iPad的Popover效果需要的代码操作与用Storyboard的实现相同。
+以按钮点击事件触发 Popover 显示为例，触发代码如下。在 iPhone 上显示 iPad 的 Popover 效果需要的代码操作与用 Storyboard 的实现相同。
 
 ```
 @IBAction func buttonPressed(_ sender: Any) {
@@ -1695,7 +1700,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
 
 ## 分页
 
-准备好处理完成的NSAttributedString，提前调整好字体、颜色、格式等信息。然后通过以下代码实现。
+准备好处理完成的 NSAttributedString，提前调整好字体、颜色、格式等信息。然后通过以下代码实现。
 
 ```
 # 创建NSLayoutManager
@@ -1773,21 +1778,21 @@ extension String {
 
 # Unity相关
 
-Unity工程文件可以打包为Xcode工程文件，但其语言为Objective-C。
+Unity 工程文件可以打包为 Xcode 工程文件，但其语言为 Objective-C。
 
 ## 嵌入到Swift工程
 
 ### 新版教程
 
-适用于Unity 2020及以上版本。官方示例如下。
+适用于 Unity 2020 及以上版本。官方示例如下。
 
 ```
 https://github.com/Unity-Technologies/uaal-example/blob/master/docs/ios.md
 ```
 
-准备好需要嵌入的Swift工程，注意新建工程时需要将Interface设为Storyboard，Life Cycle设为UIKit App Delegate。
+准备好需要嵌入的 Swift 工程，注意新建工程时需要将 Interface 设为 Storyboard，Life Cycle 设为 UIKit App Delegate。
 
-打开Unity工程，点击File-Build Settings，将Platforms设为iOS，右侧设置中Run in Xcode as选择Release，选项全部取消勾选，然后导出工程文件。
+打开 Unity 工程，点击 File-Build Settings，将 Platforms 设为 iOS，右侧设置中 Run in Xcode as 选择 Release，选项全部取消勾选，然后导出工程文件。
 
 将以上两个工程放置到同一目录，示例如下。
 
@@ -1801,13 +1806,13 @@ https://github.com/Unity-Technologies/uaal-example/blob/master/docs/ios.md
         └── Unity-iPhone.xcodeproj
 ```
 
-打开Xcode并点击File-New-Workspace，存放位置为上述的目录，此处为APP。完成后在左侧点击右键并选择`Add Files to ...`，选择所有的工程文件，此处为Interface.xcodeproj和Unity-iPhone.xcodeproj。
+打开 Xcode 并点击 File-New-Workspace，存放位置为上述的目录，此处为 APP。完成后在左侧点击右键并选择`Add Files to ...`，选择所有的工程文件，此处为 Interface.xcodeproj 和 Unity-iPhone.xcodeproj。
 
-添加完成后左侧点击Interface工程，选择TARGETS下的APP，在General-Frameworks, Libraries, and Embedded Content下点击`+`号，选择Unity-iPhone下的UnityFramework.framework。若没有该文件，需要先点击Unity-iPhone工程，设置好签名后运行一次代码，使该Framework得以生成。
+添加完成后左侧点击 Interface 工程，选择 TARGETS 下的 APP，在 General-Frameworks, Libraries, and Embedded Content 下点击`+`号，选择 Unity-iPhone 下的 UnityFramework.framework。若没有该文件，需要先点击 Unity-iPhone 工程，设置好签名后运行一次代码，使该 Framework 得以生成。
 
-然后点击Unity-iPhone下的Data文件夹，在右侧的Target Membership勾选UnityFramework。然后打开Interface工程下的Info.plist，删除`Application Scene Manifest`一项。
+然后点击 Unity-iPhone 下的 Data 文件夹，在右侧的 Target Membership 勾选 UnityFramework。然后打开 Interface 工程下的 Info.plist，删除`Application Scene Manifest`一项。
 
-在Interface工程下新建Unity.swift文件，继承自UIResponder。该类用于控制Unity的启动与关闭，代码如下。
+在 Interface 工程下新建 Unity.swift 文件，继承自 UIResponder。该类用于控制 Unity 的启动与关闭，代码如下。
 
 ```
 import Foundation
@@ -1901,7 +1906,7 @@ extension Unity: UnityFrameworkListener {
 }
 ```
 
-然后打开AppDelegate.swift，删除所有与场景相关的代码，并添加以下内容，以指定关闭Unity后应当返回的窗口。
+然后打开 AppDelegate.swift，删除所有与场景相关的代码，并添加以下内容，以指定关闭 Unity 后应当返回的窗口。
 
 ```
 import UIKit
@@ -1920,13 +1925,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-在需要调用Unity模块的地方调用以下代码即可。
+在需要调用 Unity 模块的地方调用以下代码即可。
 
 ```
 Unity.shared.show()
 ```
 
-若需要退出Unity，需要在Unity新建一个按钮，点击按钮时执行退出操作并返回到iOS App中。新建一个Button后新建一个名为QuitBehavior.cs的脚本并绑定到该Button，脚本代码如下，事件为OnButtonPressed。完成后重新导出Xcode工程文件并重复上述步骤即可。
+若需要退出 Unity，需要在 Unity 新建一个按钮，点击按钮时执行退出操作并返回到 iOS App 中。新建一个 Button 后新建一个名为 QuitBehavior.cs 的脚本并绑定到该 Button，脚本代码如下，事件为 OnButtonPressed。完成后重新导出 Xcode 工程文件并重复上述步骤即可。
 
 ```
 using System.Collections;
@@ -1946,15 +1951,15 @@ public class QuitBehavior : MonoBehaviour
 
 #### 加载Vuforia框架时输出台显示dataset xxx could not be loaded and cannot be activated
 
-数据集没有加载到原Swift工程，在此处为Interface工程。
+数据集没有加载到原 Swift 工程，在此处为 Interface 工程。
 
 数据集位置在Unity-iPhone工程的Data/Raw/Vuforia中。点击Unity-iPhone工程，点击TARGETS下的App，在Build Phases-Copy Bundle Resources下删除Vuforia文件夹并重新添加，注意不要勾选Copy items if needed，选择create folder references方式。
 
-点击左侧新出现的Vuforia文件夹，在右侧勾选UnityFramework。点击Interface工程下TARGETS的App，在Build Phases-Copy Bundle Resources添加Unity-iPhone工程的Vuforia，同样不要勾选Copy items if needed，选择create folder references方式。完成后重新运行即可。
+点击左侧新出现的 Vuforia 文件夹，在右侧勾选 UnityFramework。点击 Interface 工程下 TARGETS 的 App，在 Build Phases-Copy Bundle Resources 添加 Unity-iPhone 工程的 Vuforia，同样不要勾选 Copy items if needed，选择 create folder references 方式。完成后重新运行即可。
 
 #### 加载Unity时输出台显示dyld: Library not loaded: @rpath/ARFoundationDriver.framework/ARFoundationDriver...Reason: image not found
 
-点击Interface工程，选择Build Phases，点击左侧`+`号并选择New Copy Files Phase，然后在下面添加的Copy Files中，将Destination选为Frameworks，然后点击`+`号，添加所需要的Frameworks，此处为ARFoundationDriver.framework。
+点击 Interface 工程，选择 Build Phases，点击左侧`+`号并选择 New Copy Files Phase，然后在下面添加的 Copy Files 中，将 Destination 选为 Frameworks，然后点击`+`号，添加所需要的 Frameworks，此处为 ARFoundationDriver.framework。
 
 ### 旧版教程
 
@@ -2463,25 +2468,25 @@ public static class XcodePostBuild
 #endif
 ```
 
-导出Xcode工程文件，在嵌入的Swift工程下会自动生成Unity文件夹，该文件夹内容由以上脚本生成。
+导出 Xcode 工程文件，在嵌入的 Swift 工程下会自动生成 Unity 文件夹，该文件夹内容由以上脚本生成。
 
-下载以下仓库，将demo下的unity文件夹复制到项目文件夹中，与xcodeproj工程文件同级，与上面的文件夹内容合并。将导出的工程文件的Classes、Libraries和Data文件夹也复制到项目文件夹中，与xcodeproj工程文件同级，与上面的文件夹内容合并。
+下载以下仓库，将 demo 下的 unity 文件夹复制到项目文件夹中，与 xcodeproj 工程文件同级，与上面的文件夹内容合并。将导出的工程文件的 Classes、Libraries 和 Data 文件夹也复制到项目文件夹中，与 xcodeproj 工程文件同级，与上面的文件夹内容合并。
 
 ```
 https://github.com/jiulongw/swift-unity
 ```
 
-用Xcode打开工程，将Unity文件夹下的Classes和Libraries文件夹拖动到左侧文件树，选择Copy items if needed和Create groups。然后将Data文件夹拖动到左侧文件树，选择Create folder references。
+用 Xcode 打开工程，将 Unity 文件夹下的 Classes 和 Libraries 文件夹拖动到左侧文件树，选择 Copy items if needed 和 Create groups。然后将 Data 文件夹拖动到左侧文件树，选择 Create folder references。
 
-点击工程文件，在左侧PROJECT下选择工程，在右侧General选项卡的Configurations下选择Unity配置文件，注意Debug和Release都应当选择。
+点击工程文件，在左侧 PROJECT 下选择工程，在右侧 General 选项卡的 Configurations 下选择 Unity 配置文件，注意 Debug 和 Release 都应当选择。
 
-然后用以下仓库中的AppDelegate.swift、Main.storyboard和ViewController.swift替换掉原工程的对应文件，具体方法为先以Move to trash的方式删除原工程的文件，再通过Copy items if needed和Create groups的方式拖动加入以上文件。
+然后用以下仓库中的 AppDelegate.swift、Main.storyboard 和 ViewController.swift 替换掉原工程的对应文件，具体方法为先以 Move to trash 的方式删除原工程的文件，再通过 Copy items if needed 和 Create groups 的方式拖动加入以上文件。
 
 ```
 https://github.com/jiulongw/swift-unity/tree/master/demo/xcode/DemoApp
 ```
 
-为防止错误，可删除LaunchScreen.storyboard，并在工程文件属性General选项卡的Launch Screen File下选择Main.storyboard。注意删除时应当以Remove Reference的方式。完成后即可运行。
+为防止错误，可删除 LaunchScreen.storyboard，并在工程文件属性 General 选项卡的 Launch Screen File 下选择 Main.storyboard。注意删除时应当以 Remove Reference 的方式。完成后即可运行。
 
 # 常见问题
 
@@ -2497,371 +2502,3 @@ DispatchQueue.main.async {
 
 # 参考教程
 
-## iOS - Vision Framework 文字识别
-
-```
-https://www.jianshu.com/p/4cea25704191
-```
-
-## Xcode折叠函数设置 及快捷键
-
-```
-https://blog.csdn.net/liufangbaishi2014/article/details/51602208
-```
-
-## 笔记：通过storyboard来创建UICollectionView
-
-```
-https://blog.csdn.net/shenjie_xsj/article/details/79679760
-```
-
-## Swift 5 UICollectionView中cell的对齐方法(重写flowlayout)
-
-```
-https://www.jianshu.com/p/e1d8b51fc2b9
-```
-
-## iOS中UICollectionView设置cell大小以及间距
-
-```
-https://www.liuandy.cn/ios/2017/12/07/1982.html#.YLzEZJMzYYF
-```
-
-## swift：如何在单元格中的按钮被点击时获取indexpath.row？
-
-```
-https://www.itranslater.com/qa/details/2135067127244653568
-```
-
-## iOS AppDelegate方法，监听进程在后台、被杀死事件
-
-```
-https://cloud.tencent.com/developer/article/1174777
-```
-
-## Swift -- 获取点击的坐标位置
-
-```
-https://www.jianshu.com/p/21de7f5d6591
-```
-
-## Modifications to the > layout engine must not be performed from a background thread after it has been accessed from the main thread
-
-```
-https://stackoverflow.com/questions/58087536/modifications-to-the-layout-engine-must-not-be-performed-from-a-background-thr
-```
-
-## Push to ViewController without back button
-
-```
-https://stackoverflow.com/questions/22301647/push-to-viewcontroller-without-back-button/22301820
-```
-
-## ios - 如何从uiviewcontainer控制器中获取父控制器
-
-```
-https://kb.kaifa99.com/ios/post_6230237
-```
-
-## How to use UIColorPickerViewController in Swift?
-
-```
-https://www.swiftpal.io/articles/how-to-use-uicolorpickerviewcontroller-in-swift
-```
-
-## 为UIImageView添加响应点击事件（Swift）
-
-```
-https://blog.csdn.net/feosun/article/details/77942049
-```
-
-## ios 子视图获取父视图的视图控制器的方法（oc 和 swift）
-
-```
-https://blog.csdn.net/qq_30963589/article/details/82967301
-```
-
-## 如何以编程方式为UIButton添加系统图标？
-
-```
-https://www.thinbug.com/q/37772411
-```
-
-## Swift（十）UIView
-
-```
-https://www.jianshu.com/p/ff7ffc8129a6
-```
-
-## 如何优雅的做一个小说阅读功能
-
-```
-https://syfh.github.io/2020/07/06/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E5%81%9A%E4%B8%80%E4%B8%AA%E5%B0%8F%E8%AF%B4%E9%98%85%E8%AF%BB%E5%8A%9F%E8%83%BD/
-```
-
-## Swift 3 分词
-
-```
-https://hicc.me/swift-3-tokenize/
-```
-
-## Swift 给一段话分句，或将一句话关键词分组
-
-```
-https://www.jianshu.com/p/ef05fc1371b2
-```
-
-## Three Ways to Enumerate the Words In a String Using Swift
-
-```
-https://medium.com/@sorenlind/three-ways-to-enumerate-the-words-in-a-string-using-swift-7da5504f0062
-```
-
-## swift - 使用Swift将NSAttributedString转换为NSString
-
-```
-https://www.coder.work/article/251231
-```
-
-## iOS：利用代码UIBarButtonItem如何响应事件？
-
-```
-https://blog.csdn.net/dchma20242/article/details/101445681
-```
-
-## How to let users choose a font with UIFontPickerViewController
-
-```
-https://www.hackingwithswift.com/example-code/uikit/how-to-let-users-choose-a-font-with-uifontpickerviewcontroller
-```
-
-## SwiftUI UIFontPickerViewController 基础教程
-
-```
-https://www.codenong.com/js0c37dafc3eca/
-```
-
-## Swift — 為你的 APP 添加自定義字體
-
-```
-https://medium.com/jeremy-xue-s-blog/swift-%E7%82%BA%E4%BD%A0%E7%9A%84-app-%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E7%BE%A9%E5%AD%97%E9%AB%94-1063a7fd30a4
-```
-
-## 如何在Swift中从数组中删除元素
-
-```
-https://qastack.cn/programming/24051633/how-to-remove-an-element-from-an-array-in-swift
-```
-
-## iOS 关于LaunchScreen不显示图片的问题
-
-```
-https://blog.csdn.net/RollingPin/article/details/103817911
-```
-
-## [Swift]LaunchScreen.storyboard设置启动页！UILaunchImages已被iOS弃用，请使用LaunchScreen.storyboard。 - 山青咏芝 - 博客园
-
-```
-https://www.cnblogs.com/strengthen/p/10636993.html
-```
-
-## 具有完全不同布局的通用應用程序
-
-```
-https://zh.stackoom.com/question/1qFDT/%E5%85%B7%E6%9C%89%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%90%8C%E5%B8%83%E5%B1%80%E7%9A%84%E9%80%9A%E7%94%A8%E6%87%89%E7%94%A8%E7%A8%8B%E5%BA%8F
-```
-
-## 快速添加圆角和描边
-
-```
-https://vinefiner.github.io/2016/12/01/%E5%BF%AB%E9%80%9F%E6%B7%BB%E5%8A%A0%E5%9C%86%E8%A7%92%E5%92%8C%E6%8F%8F%E8%BE%B9/
-```
-
-## iOS 文本转语音(TTS)详解：Swift
-
-```
-https://www.geek-share.com/detail/2794338024.html
-```
-
-## Swift-视图阴影篇
-
-```
-https://www.jianshu.com/p/c47c52e9a8e3
-```
-
-## collectionViewCell添加阴影
-
-```
-https://www.jianshu.com/p/74894eb7ec3d
-```
-
-## 在 iPhone & iPad 上顯示 popover 彈出視窗
-
-```
-https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84-swift-ios-app-%E9%96%8B%E7%99%BC%E5%95%8F%E9%A1%8C%E8%A7%A3%E7%AD%94%E9%9B%86/%E5%9C%A8-iphone-ipad-%E4%B8%8A%E9%A1%AF%E7%A4%BA-popover-%E5%BD%88%E5%87%BA%E8%A6%96%E7%AA%97-ac196732e557
-```
-
-## ykying/UnityInSwift
-
-```
-https://github.com/ykying/UnityInSwift
-```
-
-## Integrating Unity into native iOS applications
-
-```
-https://docs.unity3d.com/Manual/UnityasaLibrary-iOS.html
-```
-
-## Reason: image not found
-
-```
-https://www.jianshu.com/p/cadd1dc95cf5
-```
-
-## How to embed a Unity game into an iOS native Swift App
-
-```
-https://medium.com/@IronEqual/how-to-embed-a-unity-game-into-an-ios-native-swift-app-772a0b65c82
-```
-
-## swift - 在 Swift 中仅颜色下划线
-
-```
-https://www.coder.work/article/7052075
-```
-
-## Swift 4.2 自定义相机
-
-```
-https://www.jianshu.com/p/4de39664adfa
-```
-
-## ios - 镜像(翻转)相机预览层
-
-```
-https://www.coder.work/article/443646
-```
-
-## swift 获取子视图在父视图的坐标
-
-```
-https://blog.csdn.net/wm9028/article/details/81301064
-```
-
-## Swift - 触摸事件（点击，移动，抬起等）说明及用例
-
-```
-https://www.hangge.com/blog/cache/detail_674.html
-```
-
-## iOS开发系列--触摸事件、手势识别、摇晃事件、耳机线控
-
-```
-https://www.cnblogs.com/kenshincui/p/3950646.html
-https://www.cnblogs.com/xjf125/p/4862386.html
-```
-
-
-## 在UIView中添加点击事件oc及swift
-
-```
-https://blog.csdn.net/timtian008/article/details/51857852
-```
-
-## CoderJTao/JTShapedButton
-
-```
-https://github.com/CoderJTao/JTShapedButton
-```
-
-## How to play a local video with Swift?
-
-```
-https://stackoverflow.com/questions/25348877/how-to-play-a-local-video-with-swift
-```
-
-## Swift 基本语法03-"if let"和"guard let"
-
-```
-https://www.jianshu.com/p/e1fe08c5db1a
-```
-
-## 解析 View Controller 生命週期：使用 viewDidLayoutSubviews 的時機
-
-```
-https://www.appcoda.com.tw/view-controller-lifecycle/
-```
-
-## 『簡易說明Xcode』顯示下一個畫面方法（由程式觸發的方式 — push）
-
-```
-https://medium.com/%E5%BD%BC%E5%BE%97%E6%BD%98%E7%9A%84-swift-ios-app-%E9%96%8B%E7%99%BC%E6%95%99%E5%AE%A4/%E7%B0%A1%E6%98%93%E8%AA%AA%E6%98%8Excode%E4%B8%AD%E7%9A%84%E9%A1%AF%E7%A4%BA%E4%B8%8B%E4%B8%80%E5%80%8B%E7%95%AB%E9%9D%A2%E6%96%B9%E6%B3%95-%E7%94%B1%E7%A8%8B%E5%BC%8F%E8%A7%B8%E7%99%BC%E7%9A%84%E6%96%B9%E5%BC%8F-push-e0da619641f7
-```
-
-## iOS-如何优雅的隐藏主页面的导航栏，而只展示详细页面的导航栏（UINavigationBar）
-
-```
-https://juejin.cn/post/6844903955051315208
-```
-
-## 【Swift】Swift入門 ~ UIPageViewControllerを使ってみる ~
-
-```
-https://swallow-incubate.com/archives/blog/20200313/#basic1
-```
-
-## Swift - 页视图控制器（UIPageViewController）的使用
-
-```
-https://www.hangge.com/blog/cache/detail_1282.html
-https://www.hangge.com/blog/cache/detail_1283.html
-```
-
-## Increase the size of the indicator in UIPageViewController's UIPageControl
-
-```
-https://stackoverflow.com/questions/42432731/increase-the-size-of-the-indicator-in-uipageviewcontrollers-uipagecontrol
-```
-
-## 动画UIButton放大和缩小点击
-
-```
-http://cn.voidcc.com/question/p-ejgrgomn-pd.html
-```
-
-## IOS UIButton详解 & Button缩放旋转位移实例
-
-```
-https://my.oschina.net/wolx/blog/359398
-```
-
-## subView的添加与移除
-
-```
-https://blog.csdn.net/zhuiyi316/article/details/8308858
-```
-
-## franobarrio/animation-transition-viewcontroller-easy
-
-```
-https://github.com/franobarrio/animation-transition-viewcontroller-easy
-```
-
-## ViewController 轉場初階指南：簡單打造酷炫的轉場動畫
-
-```
-https://www.appcoda.com.tw/viewcontroller-transition-easy/
-```
-
-## How do I cross dissolve when pushing views on a UINavigationController in iOS 7?
-
-```
-https://stackoverflow.com/questions/23530538/how-do-i-cross-dissolve-when-pushing-views-on-a-uinavigationcontroller-in-ios-7
-```
-
-## CGAffineTransform
-
-```
-https://www.jianshu.com/p/1a2475af4378
-```

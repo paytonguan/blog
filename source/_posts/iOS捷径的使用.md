@@ -1,110 +1,17 @@
 ---
-title: iOS捷径的使用
+title: iOS 捷径的使用
 categories: iOS
 abbrlink: iOS-Shortcuts-Usage
-date: 2024-08-09 11:35:29
+date: 2020-06-14 00:00:00
 tags:
 
 ---
 
 ![](topic.jpg)
 
-iOS捷径的使用。
+iOS 捷径（快捷指令）的使用教程与资源整理。
 
 <!-- more -->
-
-# TODOS
-
-```
-# 搭配其他APP
-
-快捷指令＋Anki 实现快速输入、摘录、添加本地图片、划词添加
-https://www.bilibili.com/video/BV1ct4y1m7bL
-
-快捷指令＋iCost 实现相对自动化记账
-https://sspai.com/post/66133
-
-快捷指令＋vika 维格表（记账APP）
-https://mp.weixin.qq.com/s/BeAQyGYLq52Jm6B-MfEFUg
-
-快捷指令＋Seeds（笔记APP）
-https://seedsnote.com/help/advanced/ios_shortcut/
-
-快捷指令＋Notion（笔记APP）
-https://www.bilibili.com/video/BV1C54y137nx
-
-快捷指令＋印象笔记
-https://zhuanlan.zhihu.com/p/373771525
-
-
-# 校园网相关
-
-实现drcom校园网自动登录
-https://mp.weixin.qq.com/s/wkw4KkeuYC8BWXF3h5w4RQ
-
-快速连接南京大学校园网
-https://github.com/LadderOperator/MyShortcuts
-
-实现南航校园网的一键登录
-https://github.com/richardoLee/Shortcut-for-nuaa.portal
-
-快速连接北京理工大学BIT-Web校园网
-https://sspai.com/post/58189
-
-
-# 日历相关
-
-实现华东师范大学课表一键导入iOS日历
-https://github.com/JJAYCHEN1e/ECNU_Bring-Your-Timetable-to-Calendar-App
-
-实现南京大学课表一键导入iOS日历
-https://github.com/LadderOperator/MyShortcuts
-
-自动同步提醒事项和日历
-https://zhuanlan.zhihu.com/p/169566930
-
-将提醒事项同步到微软日历
-https://sspai.com/post/63919
-
-快捷指令＋日历（增强日历功能）
-https://post.smzdm.com/p/alp6d9ke/
-
-
-# 其他
-
-快捷指令搭配NFC
-https://zhuanlan.zhihu.com/p/89824463
-
-实现自动换壁纸
-https://sspai.com/post/64387
-
-修改 iPhone 充电提示音
-https://sspai.com/post/62846
-
-实现自动判断上下班＋导航＋放歌
-https://post.smzdm.com/p/ammqzvlz/
-
-实现自动钉钉打卡
-https://post.smzdm.com/p/ar0vp55w/
-
-实现远程开机
-https://post.smzdm.com/p/aoo8lzdm/
-
-让你的 Siri 自动播报每日天气
-https://mp.weixin.qq.com/s/8DlVNe_lLNvBowGSFSEgNQ
-
-快速打开某一张图片
-https://mp.weixin.qq.com/s/3pE8R3Mka95df9SiajHlmg
-
-快捷设置提醒＋上班手机自动静音＋收盘前查看基金估值＋筛选快递短信并设置提醒等
-https://www.bilibili.com/video/BV1gX4y1A7je
-
-将网页文章推送至Kindle
-https://sspai.com/post/60019
-
-快速连接Sony耳机
-https://sspai.com/post/56974
-```
 
 # 制作
 
@@ -125,13 +32,13 @@ https://sspai.com/post/56974
 └── 存储到相簿
 ```
 
-点击添加操作，选择共享-获取剪贴板，长按并移动到蓝框内。点击+号添加操作，返回添加操作主页面，选择网页-获取URL内容，长按并移动到第一个动作的下方。
+点击添加操作，选择共享-获取剪贴板，长按并移动到蓝框内。点击+号添加操作，返回添加操作主页面，选择网页-获取 URL 内容，长按并移动到第一个动作的下方。
 
-然后继续增加操作，搜索html并将`用多信息文本制作HTML`拖到下一个动作。复制微信推文后运行该捷径，寻找图片链接的规律，可发现均为`data-src="[图片链接]"`的格式。
+然后继续增加操作，搜索 html 并将`用多信息文本制作 HTML`拖到下一个动作。复制微信推文后运行该捷径，寻找图片链接的规律，可发现均为`data-src="[图片链接]"`的格式。
 
 故添加操作`匹配文本`，并将`[0-9a-zA-Z]`修改为`data-src="(.*?)"`。其中`()`代表组，便于后面提取图片链接，而`.*?`是非贪婪的匹配任何字符，即尽可能少的匹配，在本例中代表精确匹配所有图片链接。
 
-添加操作`获取匹配文本的组`以取得图片链接，然后添加操作`获取URL内容`以下载图片，添加操作`存储到相簿`将图片存储到相簿，保存并运行即可。
+添加操作`获取匹配文本的组`以取得图片链接，然后添加操作`获取 URL 内容`以下载图片，添加操作`存储到相簿`将图片存储到相簿，保存并运行即可。
 
 ## 下载小红书视频/图文
 
@@ -214,28 +121,28 @@ https://sspai.com/post/56974
         └── 退出快捷指令
 ```
 
-添加操作`获取剪贴板`取得链接，添加操作`如果`判断链接是否为小红书分享链接。若不含xhs，则不是小红书链接，添加操作`显示提醒`提示用户错误信息，然后添加操作`退出快捷指令`结束。
+添加操作`获取剪贴板`取得链接，添加操作`如果`判断链接是否为小红书分享链接。若不含 xhs，则不是小红书链接，添加操作`显示提醒`提示用户错误信息，然后添加操作`退出快捷指令`结束。
 
-若为小红书链接，则添加操作`获取URL内容`拿到网页内容，其中需要展开并添加以下两个头部值。
+若为小红书链接，则添加操作`获取 URL 内容`拿到网页内容，其中需要展开并添加以下两个头部值。
 
 |     键     |                                                                                                                                                                                                                                 文本                                                                                                                                                                                                                                 |
 |------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | User-Agent | Mozilla/5.0 (iPhone; CPU iPhone OS 13_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1                                                                                                                                                                                                                                                                                                                            |
 | Cookie     | timestamp2=c25daa113bced3fc44240e15d6c01368; hasaki=JTVCJTIyTW96aWxsYS81LjAlMjAoaVBob25lOyUyMENQVSUyMGlQaG9uZSUyME9TJTIwMTNfMyUyMGxpa2UlMjBNYWMlMjBPUyUyMFgpJTIwQXBwbGVXZWJLaXQvNjA1LjEuMTUlMjAoS0hUTUwsJTIwbGlrZSUyMEdlY2tvKSUyMFZlcnNpb24vMTMuMC40JTIwTW9iaWxlLzE1RTE0OCUyMFNhZmFyaS82MDQuMSUyMiwlMjJ6aC1DTiUyMiwzMywtNDgwLHRydWUsdHJ1ZSx0cnVlLCUyMnVuZGVmaW5lZCUyMiwlMjJ1bmRlZmluZWQlMjIsbnVsbCwlMjJpUGhvbmUlMjIsbnVsbCxudWxsLG51bGwsJTIyJTIyLDE5NDcxNjYxMDYlNUQ= |
 
-此处使用了自定义的User-Agent。捷径默认的User-Agent如下。
+此处使用了自定义的 User-Agent。捷径默认的 User-Agent 如下。
 
 ```
 快捷指令/1050.4.6CFNetwork/1121.2.2Darwin/19.2.0
 ```
 
-添加操作`从多信息文本制作HTML`显示网页源代码，然后添加操作`从菜单中选取`，让用户选择是下载视频还是图文。
+添加操作`从多信息文本制作 HTML`显示网页源代码，然后添加操作`从菜单中选取`，让用户选择是下载视频还是图文。
 
-如果是下载视频，则添加操作`匹配文本`，使用正则表达式`video src=\"(.*?)\"`匹配，并添加操作`获取匹配文本的组`以取得视频链接。添加操作`替换文本`，将`amp;`替换为空值，然后添加操作`获取URL内容`以下载视频，添加操作`存储到相簿`将视频存储到相簿。
+如果是下载视频，则添加操作`匹配文本`，使用正则表达式`video src=\"(.*?)\"`匹配，并添加操作`获取匹配文本的组`以取得视频链接。添加操作`替换文本`，将`amp;`替换为空值，然后添加操作`获取 URL 内容`以下载视频，添加操作`存储到相簿`将视频存储到相簿。
 
 添加操作`从菜单中选取`，让用户选择是否保存文字内容。
 
-若保存，则添加操作`匹配文本`，匹配`"name": "(.*?)\"`，以表示标题和作者。添加操作`获取匹配文本的组`，然后添加操作`添加到变量`，将内容存入变量`a`。然后添加操作`匹配文本`，匹配`"comments":\d+,.*?"desc\":\"(.*?)\"`，以表示正文。添加操作`获取匹配文本的组`，添加操作`替换文本`，将`\\n`替换为空，其中需要点开操作，打开`正则表达式`选项。添加操作`添加到变量`，将内容也存入变量`a`。至此变量`a`已存有所有需要的信息，故添加操作`创建备忘录`，使用a创建备忘录。
+若保存，则添加操作`匹配文本`，匹配`"name": "(.*?)\"`，以表示标题和作者。添加操作`获取匹配文本的组`，然后添加操作`添加到变量`，将内容存入变量`a`。然后添加操作`匹配文本`，匹配`"comments":\d+,.*?"desc\":\"(.*?)\"`，以表示正文。添加操作`获取匹配文本的组`，添加操作`替换文本`，将`\\n`替换为空，其中需要点开操作，打开`正则表达式`选项。添加操作`添加到变量`，将内容也存入变量`a`。至此变量`a`已存有所有需要的信息，故添加操作`创建备忘录`，使用 a 创建备忘录。
 
 若不保存，则不进行操作。最后结束菜单。
 
@@ -654,9 +561,6 @@ https://www.icloud.com/shortcuts/9a68ed9c6ea54654a4e7b8918b426855
 
 # 小新下载器
 https://www.icloud.com/shortcuts/90d5942429f14f5095eb7a0664d7918b
-
-# 新磁力搜索
-https://www.icloud.com/shortcuts/9a68ed9c6ea54654a4e7b8918b426855
 ```
 
 ## 电商
@@ -672,9 +576,6 @@ https://www.icloud.com/shortcuts/db359887fea14a61b0f0cd7c43642e4f
 
 # 超级抢购助手
 https://www.icloud.com/shortcuts/dca53a0ff3704f22badb7009b828b495
-
-# 淘宝语音搜索
-https://www.icloud.com/shortcuts/ba79d6ae5a1f455eb296cc314cf82447
 
 # 淘宝语音搜索
 https://www.icloud.com/shortcuts/ba79d6ae5a1f455eb296cc314cf82447
@@ -770,9 +671,6 @@ https://www.icloud.com/shortcuts/59b1018835d94018ba6097ff0462cda9
 
 # 万能扫码
 https://www.icloud.com/shortcuts/e247aa760193472db8588804a8ea76d0
-
-# 长短链接转换
-https://www.icloud.com/shortcuts/22a07d8aeff24a4d9f977e1c9d5d9d0f
 ```
 
 ## 备份
@@ -878,6 +776,63 @@ https://www.icloud.com/shortcuts/5fd43b4ed6664fa4bcbf85bd2c18a408
 
 # 淘宝
 https://www.icloud.com/shortcuts/d7286cd634544d0ab8ecaf4bd7ad376d
+```
+
+## 搭配其他APP
+
+```
+快捷指令＋Anki 实现快速输入、摘录、添加本地图片、划词添加
+https://www.bilibili.com/video/BV1ct4y1m7bL
+
+快捷指令＋iCost 实现相对自动化记账
+https://sspai.com/post/66133
+
+快捷指令＋vika 维格表（记账APP）
+https://mp.weixin.qq.com/s/BeAQyGYLq52Jm6B-MfEFUg
+
+快捷指令＋Seeds（笔记APP）
+https://seedsnote.com/help/advanced/ios_shortcut/
+
+快捷指令＋Notion（笔记APP）
+https://www.bilibili.com/video/BV1C54y137nx
+
+快捷指令＋印象笔记
+https://zhuanlan.zhihu.com/p/373771525
+```
+
+## 校园网
+
+```
+实现drcom校园网自动登录
+https://mp.weixin.qq.com/s/wkw4KkeuYC8BWXF3h5w4RQ
+
+快速连接南京大学校园网
+https://github.com/LadderOperator/MyShortcuts
+
+实现南航校园网的一键登录
+https://github.com/richardoLee/Shortcut-for-nuaa.portal
+
+快速连接北京理工大学BIT-Web校园网
+https://sspai.com/post/58189
+```
+
+## 日历
+
+```
+实现华东师范大学课表一键导入iOS日历
+https://github.com/JJAYCHEN1e/ECNU_Bring-Your-Timetable-to-Calendar-App
+
+实现南京大学课表一键导入iOS日历
+https://github.com/LadderOperator/MyShortcuts
+
+自动同步提醒事项和日历
+https://zhuanlan.zhihu.com/p/169566930
+
+将提醒事项同步到微软日历
+https://sspai.com/post/63919
+
+快捷指令＋日历（增强日历功能）
+https://post.smzdm.com/p/alp6d9ke/
 ```
 
 ## 其它
@@ -988,9 +943,6 @@ https://www.icloud.com/shortcuts/df85acb1585e481fa8d9de965743b046
 # 近期上映电影
 https://www.icloud.com/shortcuts/32999ca5bdce4a879ba48e5890d1b257
 
-# 程序改名加锁
-https://www.icloud.com/shortcuts/0c73f53b09a24ad88f9eeeb315794b81
-
 # 老司机
 https://www.icloud.com/shortcuts/baaeae0d7d164472baed3e531673733b
 
@@ -1004,9 +956,6 @@ https://www.icloud.com/shortcuts/ec6c8f83043a4fb3885c4a302d7c2129
 # 骂人宝典
 https://www.icloud.com/shortcuts/73ded407f0d7417899346a3b5aa6d8ff
 
-# 人脸识别
-https://www.icloud.com/shortcuts/67175ef09c1d4e7da2d77d476506740f
-
 # 睡眠声音
 https://www.icloud.com/shortcuts/c9c50392fb7f4603af03cb9caf0fa9cb
 
@@ -1016,9 +965,6 @@ https://www.icloud.com/shortcuts/7f21e942496c46e9a7a98338d311a07a
 
 # 自定义勿扰时长
 https://www.icloud.com/shortcuts/92706b85621b42d2aaaf7cf296c749e5
-
-# 低消耗
-https://www.icloud.com/shortcuts/2d1a0e792358405fbb2462572962e6cd
 
 # 高德地图语音导航
 https://www.icloud.com/shortcuts/28b98b7fd9b84301955b72345e8515b1
@@ -1094,6 +1040,39 @@ https://www.icloud.com/shortcuts/26224a223a344c0490ef1ecf91ee4ebc
 
 # 网页内容编辑
 https://www.icloud.com/shortcuts/c355a99f35174f488ed53e9499034e8f
+
+# 快捷指令搭配NFC
+https://zhuanlan.zhihu.com/p/89824463
+
+# 实现自动换壁纸
+https://sspai.com/post/64387
+
+# 修改 iPhone 充电提示音
+https://sspai.com/post/62846
+
+# 实现自动判断上下班＋导航＋放歌
+https://post.smzdm.com/p/ammqzvlz/
+
+# 实现自动钉钉打卡
+https://post.smzdm.com/p/ar0vp55w/
+
+# 实现远程开机
+https://post.smzdm.com/p/aoo8lzdm/
+
+# 让你的 Siri 自动播报每日天气
+https://mp.weixin.qq.com/s/8DlVNe_lLNvBowGSFSEgNQ
+
+# 快速打开某一张图片
+https://mp.weixin.qq.com/s/3pE8R3Mka95df9SiajHlmg
+
+# 快捷设置提醒＋上班手机自动静音＋收盘前查看基金估值＋筛选快递短信并设置提醒等
+https://www.bilibili.com/video/BV1gX4y1A7je
+
+# 将网页文章推送至Kindle
+https://sspai.com/post/60019
+
+# 快速连接Sony耳机
+https://sspai.com/post/56974
 ```
 
 # 自动化

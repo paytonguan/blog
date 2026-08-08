@@ -1,28 +1,20 @@
 ---
-title: iOS App操作指南
+title: iOS App 操作指南
 categories: iOS
 abbrlink: iOS-App-Usage
-date: 2024-08-12 13:18:29
+date: 2020-06-13 00:00:00
 tags:
 
 ---
 
 ![](topic.jpg)
 
-iOS App使用指南。
+iOS 应用的操作指南，包括签名、TestFlight、IPA 安装与抓取等。
 
 <!-- more -->
 
 
-从App Store下载的IPA包含了账号信息。因此，安装别人的Apple ID下载的IPA，打开时会提示需要输入账号信息。这种APP可以通过重签名的方式，将账号信息替换为自己，从而进行安装。
-
-# TODOS
-
-```
-# 下载已下架或旧版IPA
-https://gist.github.com/minif/473310d7c556caadf4f2ed2d97389574
-https://gist.github.com/qnblackcat/4f7b77f685ccda2ff4ef916a27d66107
-```
+从 App Store 下载的 IPA 包含了账号信息。因此，安装别人的 Apple ID 下载的 IPA，打开时会提示需要输入账号信息。这种 APP 可以通过重签名的方式，将账号信息替换为自己，从而进行安装。
 
 # 限免
 
@@ -30,19 +22,19 @@ https://gist.github.com/qnblackcat/4f7b77f685ccda2ff4ef916a27d66107
 
 ### 通过Github Actions
 
-打开以下链接，以Github账号登录后点击微信推送-绑定微信，完成绑定后点击首页-SCKEY，复制以备用。
+打开以下链接，以 Github 账号登录后点击微信推送-绑定微信，完成绑定后点击首页-SCKEY，复制以备用。
 
 ```
 http://sc.ftqq.com/3.version
 ```
 
-打开以下链接并fork该项目。
+打开以下链接并 fork 该项目。
 
 ```
 https://github.com/Dreamy-TZK/AppStorePrice
 ```
 
-点击Settings-Secrets，新建一个Secrets，内容如下。
+点击 Settings-Secrets，新建一个 Secrets，内容如下。
 
 ```
 名称 / Secret
@@ -51,13 +43,9 @@ https://github.com/Dreamy-TZK/AppStorePrice
 
 进入src/list.json，修改文件内容以确定需要监控的APP。保存后点击Actions，开启功能后点击Star以激活。
 
-## 应用库
-
-暂时不可用。
-
 # 签名
 
-安装App Store的软件时，会对下载下来的IPA进行签名。安装非App Store的软件，需要手动对IPA进行签名。签名需要用到证书，分类如下。
+安装 App Store 的软件时，会对下载下来的 IPA 进行签名。安装非 App Store 的软件，需要手动对 IPA 进行签名。签名需要用到证书，分类如下。
 
 |     类型     | 有效期 |
 |--------------|--------|
@@ -65,21 +53,21 @@ https://github.com/Dreamy-TZK/AppStorePrice
 | 企业级证书   | 一年   |
 | 开发者证书   | 一年   |
 
-现在大部分APP都是用企业证书进行签名。由于企业证书所签应用多，当应用违规时，证书容易被吊销，从而造成掉签现象。
+现在大部分 APP 都是用企业证书进行签名。由于企业证书所签应用多，当应用违规时，证书容易被吊销，从而造成掉签现象。
 
 ## 通过Xcode
 
-将手机连接到电脑。打开Xcode，进入Preferences，在Accounts处登录自己的Apple ID。然后点击Manage Certificates申请证书，点击Download Manual Profiles下载证书。
+将手机连接到电脑。打开 Xcode，进入 Preferences，在 Accounts 处登录自己的 Apple ID。然后点击 Manage Certificates 申请证书，点击 Download Manual Profiles 下载证书。
 
-回到Xcode主页，点击Create a new Xcode project，选择Single View App，Team选择刚才申请的证书，Product Name和Organization Name可以随意填写。点击Create，然后在项目设置中将Deployment Info的Target选为自己手机的iOS版本，点击左上角的运行按钮，屏幕出现Succeed即可。
+回到 Xcode 主页，点击 Create a new Xcode project，选择 Single View App，Team 选择刚才申请的证书，Product Name 和 Organization Name 可以随意填写。点击 Create，然后在项目设置中将 Deployment Info 的 Target 选为自己手机的 iOS 版本，点击左上角的运行按钮，屏幕出现 Succeed 即可。
 
-从以下地址下载iOS App Signer并运行，Input File选择要签名的IPA，Signing Certificate选择刚才的证书，Provisioning Profile选择刚才新建项目的对应文件，点击Start。
+从以下地址下载 iOS App Signer 并运行，Input File 选择要签名的 IPA，Signing Certificate 选择刚才的证书，Provisioning Profile 选择刚才新建项目的对应文件，点击 Start。
 
 ```
 https://dantheman827.github.io/ios-app-signer/
 ```
 
-回到Xcode，点击菜单栏的Window-Devices and Simulators，在Devices找到刚才创建的项目，点击+，等待黄色框消失即可。
+回到 Xcode，点击菜单栏的 Window-Devices and Simulators，在 Devices 找到刚才创建的项目，点击+，等待黄色框消失即可。
 
 ## 通过自签软件
 
@@ -93,19 +81,19 @@ https://altstore.io/
 
 ##### 电脑安装AltStore等待很久无反应
 
-可尝试手机开热点，电脑连接热点安装；翻墙后安装；更换电脑；用虚拟机搭载macOS系统测试；关闭所有杀毒软件。
+可尝试手机开热点，电脑连接热点安装；翻墙后安装；更换电脑；用虚拟机搭载 macOS 系统测试；关闭所有杀毒软件。
 
 ##### 手机安装IPA显示找不到AltServer
 
-将手机连接电脑即可。若已经越狱，可安装AltStorePatch插件，即可不连接电脑。
+将手机连接电脑即可。若已经越狱，可安装 AltStorePatch 插件，即可不连接电脑。
 
 ##### 手机安装IPA最后一步显示could not install
 
-退出电脑杀毒软件，或更换USB接口。
+退出电脑杀毒软件，或更换 USB 接口。
 
 ### nullxImpactor
 
-需要先安装AltStore并安装AltStore的邮件插件。签名时需保持邮件应用打开。
+需要先安装 AltStore 并安装 AltStore 的邮件插件。签名时需保持邮件应用打开。
 
 ```
 https://impactor.nullx.me/
@@ -113,7 +101,7 @@ https://impactor.nullx.me/
 
 ### AltDeploy
 
-需要先安装AltStore并安装AltStore的邮件插件。签名时需保持邮件应用打开。
+需要先安装 AltStore 并安装 AltStore 的邮件插件。签名时需保持邮件应用打开。
 
 ```
 https://github.com/pixelomer/AltDeploy
@@ -121,7 +109,7 @@ https://github.com/pixelomer/AltDeploy
 
 ### Sideloadly
 
-仅支持签名并安装没有签名的IPA安装包。
+仅支持签名并安装没有签名的 IPA 安装包。
 
 ```
 https://sideloadly.io/
@@ -135,13 +123,13 @@ http://www.cydiaimpactor.com/
 
 ### Scarlet
 
-注意安装Mail Plugin时退出Clash，否则会因为端口占用而安装失败。
+注意安装 Mail Plugin 时退出 Clash，否则会因为端口占用而安装失败。
 
 ```
 https://github.com/DebianArch64/DebProvision
 ```
 
-可用repo如下。
+可用 repo 如下。
 
 ```
 https://raw.githubusercontent.com/azu0609/repo/main/scarlet_repo.json
@@ -171,19 +159,15 @@ https://nbtool8.com/
 https://ios-tool.com
 ```
 
-签名前需先添加证书。下载的证书包括p12和mobileprovision为后缀名的两个文件，先用签名APP打开p12文件，然后再打开mobileprovision文件即可。
+签名前需先添加证书。下载的证书包括 p12 和 mobileprovision 为后缀名的两个文件，先用签名 APP 打开 p12 文件，然后再打开 mobileprovision 文件即可。
 
 # TestFilght
 
-TestFilght是苹果提供开发者应用测试的平台。
+TestFilght 是苹果提供开发者应用测试的平台。
 
 ## 应用降级
 
-打开TestFilght，点击要降级的应用，选择以前的Build，根据需要选择版本即可。
-
-## 应用库
-
-暂时失效。
+打开 TestFilght，点击要降级的应用，选择以前的 Build，根据需要选择版本即可。
 
 # IPA安装
 
@@ -191,17 +175,17 @@ TestFilght是苹果提供开发者应用测试的平台。
 
 ### 通过上传到蓝奏云
 
-IPA上传到蓝奏云后即可直接进行安装。
+IPA 上传到蓝奏云后即可直接进行安装。
 
 ### 通过itms-services协议
 
-苹果允许用itms-services服务协议来直接在iOS安装应用程序。将要安装的IPA和安装时显示的图片上传到OneDrive，获取分享外链，然后通过以下网站将两者转换为直链。
+苹果允许用 itms-services 服务协议来直接在 iOS 安装应用程序。将要安装的 IPA 和安装时显示的图片上传到 OneDrive，获取分享外链，然后通过以下网站将两者转换为直链。
 
 ```
 https://onedrive.gimhoy.com/
 ```
 
-打开记事本并复制以下代码，其中software-package的url改为IPA的链接，display-image的url改为图片的链接。然后另存为plist文件。
+打开记事本并复制以下代码，其中 software-package 的 url 改为 IPA 的链接，display-image 的 url 改为图片的链接。然后另存为 plist 文件。
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -247,7 +231,7 @@ https://onedrive.gimhoy.com/
 </plist>
 ```
 
-将编辑完成的plist文件上传到OneDrive，生成分享外链并转换为直链，然后将链接按照以下格式拼接即可。
+将编辑完成的 plist 文件上传到 OneDrive，生成分享外链并转换为直链，然后将链接按照以下格式拼接即可。
 
 ```
 itms-services://?action=download-manifest&url=[地址]
@@ -255,13 +239,13 @@ itms-services://?action=download-manifest&url=[地址]
 
 ### 通过Shu
 
-通过以下链接安装Shu。如果提示输入ID，则连接电脑并使用爱思助手安装。
+通过以下链接安装 Shu。如果提示输入 ID，则连接电脑并使用爱思助手安装。
 
 ```
 https://www.lanzous.com/i3r11qd
 ```
 
-把下面代码保存到备忘录，然后把ipa文件添加到Wi-Fi共享，改成app.ipa，注意需保持Wi-Fi处于连接状态。最小化Shu，单击备忘录里的代码即可直接安装ipa。
+把下面代码保存到备忘录，然后把 ipa 文件添加到 Wi-Fi 共享，改成 app.ipa，注意需保持 Wi-Fi 处于连接状态。最小化 Shu，单击备忘录里的代码即可直接安装 ipa。
 
 ```
 itms-services://?action=download-manifest&url=https://coding.net/u/qiuker/p/installs/git/raw/master/local/Shu.xml
@@ -283,34 +267,34 @@ https://www.icloud.com/shortcuts/319f80622c234de8b811b7ba2d5a7228
 
 ### 通过iTunes
 
-将手机连接到电脑，打开iTunes，登录IPA对应的Apple ID，并对此电脑授权。在资源管理器找到要安装的IPA，拖入iTunes手机下`我的设备上`区域即可。
+将手机连接到电脑，打开 iTunes，登录 IPA 对应的 Apple ID，并对此电脑授权。在资源管理器找到要安装的 IPA，拖入 iTunes 手机下`我的设备上`区域即可。
 
 ## 掉签IPA处理
 
-打开设置中的无线局域网，点击已连接WiFi后面的菜单键，在最下方选择配置代理。模式选择自动，并将以下地址填入URL中，然后存储。
+打开设置中的无线局域网，点击已连接 WiFi 后面的菜单键，在最下方选择配置代理。模式选择自动，并将以下地址填入 URL 中，然后存储。
 
 ```
 http://ffapple.com
 ```
 
-设置完毕后断开WiFi，再打开，让手机重连WiFi。在设置中清除Safari历史记录与网站数据，再开启飞行模式，即可通过上述方法安装。
+设置完毕后断开 WiFi，再打开，让手机重连 WiFi。在设置中清除 Safari 历史记录与网站数据，再开启飞行模式，即可通过上述方法安装。
 
 # IPA抓取
 
 ## 旧版
 
-抓取旧版软件前，本Apple ID需先下载过该APP。
+抓取旧版软件前，本 Apple ID 需先下载过该 APP。
 
 ### 推荐版本
 
-推荐旧版IPA版本如下。一般一次付费制APP转订阅制APP时，可先下载新版，再降级到旧版已获取免费内购。
+推荐旧版 IPA 版本如下。一般一次付费制 APP 转订阅制 APP 时，可先下载新版，再降级到旧版已获取免费内购。
 
 |               应用名称               |    版本   |                                                         说明                                                        |
 |--------------------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
 | Pyto                                 | 12.1.3    | 内购免费                                                                                                            |
 | Scanner Pro                          | 7.7.3     | 内购免费                                                                                                            |
 | DAMA                                 | 1.0.17    | 内购免费                                                                                                            |
-| 白描                                 | 2.1.6     | 无OCR限制，可批量识别                                                                                               |
+| 白描                                 | 2.1.6     | 无 OCR 限制，可批量识别                                                                                               |
 | 微盘                                 | 3.3.2     | 有「找资源」按钮的最后一个版本                                                                                      |
 |                                      | 3.4.3     | 有搜索功能                                                                                                          |
 | 清理君                               | 1.9.4     | 无广告                                                                                                              |
@@ -321,19 +305,19 @@ http://ffapple.com
 |                                      | 4.0.1     | 无广告，无视频栏                                                                                                    |
 |                                      | 4.1.2     | 无视频栏的最后一个版本                                                                                              |
 |                                      | 4.3.4     | 全面屏可正常显示，开屏极少广告，无更新提醒                                                                          |
-|                                      | 5.7.4     | 视频XR的第一个版本                                                                                                  |
+|                                      | 5.7.4     | 视频 XR 的第一个版本                                                                                                  |
 | 微信                                 | 6.1.1     | 有红包功能                                                                                                          |
-|                                      | 6.3.9.18  | 可从QQ添加好友的最后一个版本                                                                                        |
+|                                      | 6.3.9.18  | 可从 QQ 添加好友的最后一个版本                                                                                        |
 |                                      | 6.3.23    | 朋友圈发照片调用照片地理位置信息                                                                                    |
-|                                      | 6.6.1     | 支持Callkit的最后一个版本                                                                                           |
+|                                      | 6.6.1     | 支持 Callkit 的最后一个版本                                                                                           |
 |                                      | 6.6.2     | 首个支持切换两个账号的版本                                                                                          |
 |                                      | 6.6.7     | 订阅号为瀑布流前的最后一个版本                                                                                      |
 |                                      | 6.7.4     | 大版本更新前的最后一个版本                                                                                          |
-| 微信Mac版                            | 2.0.5     | 可将公众号文章在内置小窗浏览器打开的最后一个版本                                                                    |
+| 微信 Mac 版                            | 2.0.5     | 可将公众号文章在内置小窗浏览器打开的最后一个版本                                                                    |
 | 皮皮虾                               | 1.3.2     | 无广告                                                                                                              |
 | 糗事百科                             | 2.6.4     | 无广告                                                                                                              |
 | 今日头条                             | 3.1.1     | 好用                                                                                                                |
-| 今日头条Pro                          | 6.3.2     | 有小视频版块，功能齐全，打开很快                                                                                    |
+| 今日头条 Pro                          | 6.3.2     | 有小视频版块，功能齐全，打开很快                                                                                    |
 | 哔哩哔哩                             | 5.24.1    | 仍可登录的最旧版本                                                                                                  |
 |                                      | 5.33.2    | 关闭启动动画后无开屏广告，但搜索之后下拉内容会卡屏                                                                  |
 | TikTok                               | 1.2.2     | 未屏蔽地区的最后一个版本，可以正常观看视频，但无法注册和登录                                                        |
@@ -342,26 +326,26 @@ http://ffapple.com
 |                                      | 6.9.6     | 支持吧内搜索                                                                                                        |
 |                                      | 8.9.0     | 首个支持刘海屏的版本                                                                                                |
 |                                      | 9.2.0     | 清爽且广告少                                                                                                        |
-| 百度贴吧iPad版                       | 2.0.1     | 无广告，能查看别人隐藏的内容                                                                                        |
+| 百度贴吧 iPad 版                       | 2.0.1     | 无广告，能查看别人隐藏的内容                                                                                        |
 | 追书神器                             | 2.23.1    | 不需要追书币，有追更模式，无法登录                                                                                  |
 |                                      | 2.24.24   | 有广告，但可换源                                                                                                    |
 |                                      | 2.25.1    | 可换源                                                                                                              |
 | 爱阅书香                             | 4.3.1     | 轻量可换源                                                                                                          |
 | 优酷视频                             | 6.12.0    | 无广告                                                                                                              |
 | 腾讯视频                             | 5.9.2     | 可绑定王卡以实现免流                                                                                                |
-| 爱奇艺                               | 5.7.1     | 无片头广告，仅适用于iOS 10及以下系统                                                                                |
-|                                      | 6.8.1     | 登录VIP无需短信验证                                                                                                 |
-|                                      | 8.12.5    | 可同时下载3个视频                                                                                                   |
+| 爱奇艺                               | 5.7.1     | 无片头广告，仅适用于 iOS 10 及以下系统                                                                                |
+|                                      | 6.8.1     | 登录 VIP 无需短信验证                                                                                                 |
+|                                      | 8.12.5    | 可同时下载 3 个视频                                                                                                   |
 |                                      | 9.8.0     | 启动快，最后一个支持非主设备可以网页扫码登录的版本                                                                  |
 | 淘宝                                 | 8.0.0     | 购物车优惠明细查看，支持扫码                                                                                        |
 | 咸鱼                                 | 6.3.2     | 无开屏广告，无更新提醒                                                                                              |
 | Twitter                              | 7.37.2    | 带翻译功能                                                                                                          |
-| 墨迹天气                             | 7.1.6     | 适配iOS11的第一个版本，打开快                                                                                       |
+| 墨迹天气                             | 7.1.6     | 适配 iOS11 的第一个版本，打开快                                                                                       |
 | 和飞信                               | 4.1.1352  | 有漏话拾遗功能的最后一个版本，漏话拾遗功能打开后在游戏时不会被打扰                                                  |
 | 天翼云盘                             | 4.5.0     | 无需超级会员即可上传视频的最后一个版本，每日签到可增加空间                                                          |
-| 网易漫画                             | 4.2.0     | 越狱用户可以使用Flex3会员补丁                                                                                       |
-| 钉钉                                 | 4.3.5     | 支持Callkit的最后一个版本                                                                                           |
-| 无忧行                               | 3.8.2     | 支持Callkit的最后一个版本                                                                                           |
+| 网易漫画                             | 4.2.0     | 越狱用户可以使用 Flex3 会员补丁                                                                                       |
+| 钉钉                                 | 4.3.5     | 支持 Callkit 的最后一个版本                                                                                           |
+| 无忧行                               | 3.8.2     | 支持 Callkit 的最后一个版本                                                                                           |
 | 饿了么                               | 7.21      | 可使用叠加红包                                                                                                      |
 | 滴滴出行                             | 5.1       | 首个支持滴滴单车的版本                                                                                              |
 | NOMO                                 | 0.9.6     | 新商店前的最后一个版本，切换相机方便                                                                                |
@@ -369,26 +353,26 @@ http://ffapple.com
 | 讯飞输入法                           | 6.0       | 安装包小，输入流畅                                                                                                  |
 | 百度输入法                           | 6.0.2     | 可使用超级皮肤，没有剪切板，输入流畅                                                                                |
 |                                      | 7.1.1     | 无语音功能                                                                                                          |
-| 搜狗输入法                           | 4.0.0     | 输入流畅，支持iOS 11                                                                                                |
+| 搜狗输入法                           | 4.0.0     | 输入流畅，支持 iOS 11                                                                                                |
 |                                      | 5.0.1     | 新功能多，使用流畅                                                                                                  |
 | 有道云笔记                           | 5.7.1     | 笔记列表无广告，「我的」界面有广告                                                                                  |
 |                                      | 5.9.8     | 云笔记与云协作分开前的最后一个版本，有广告                                                                          |
 | 腾讯翻译                             | 3.1       | 无臃肿功能的最后一个版本                                                                                            |
 | 唱吧                                 | 8.2       | 流畅稳定，占用内存低                                                                                                |
-| 全民K歌                              | 3.7.6     | 流畅稳定                                                                                                            |
+| 全民 K 歌                              | 3.7.6     | 流畅稳定                                                                                                            |
 | 美图秀秀                             | 6.0.5     | 流畅稳定                                                                                                            |
 | 花鸟字                               | 1.2       | 保存真彩色画作，背景画布素材与新版相同                                                                              |
-| 文件全能王                           | 5.4       | 支持嗅探式下载音视频，支持m3u8格式下载                                                                              |
+| 文件全能王                           | 5.4       | 支持嗅探式下载音视频，支持 m3u8 格式下载                                                                              |
 | 电视助手                             | 5.5.0     | 支持音视频下载，支持导出文件                                                                                        |
 | Persian IDM                          | 1.0       | 无广告，无内购，支持音视频下载                                                                                      |
 | 快眼追剧                             | 1.6.2     | 支持云播放                                                                                                          |
 | Telegram X                           | 5.0.2     | 无限制屏蔽组                                                                                                        |
-| 喜马拉雅FM                           | 5.4.9     | 体积小，启动快                                                                                                      |
+| 喜马拉雅 FM                           | 5.4.9     | 体积小，启动快                                                                                                      |
 | 豆瓣                                 | 4.1.0     | 体积小，启动快                                                                                                      |
-| Tumbook                              | 1.3       | Tumblr第三方客户端，带下载功能                                                                                      |
+| Tumbook                              | 1.3       | Tumblr 第三方客户端，带下载功能                                                                                      |
 | Tumbot                               | 1.0.5     | 无广告，支持下载视频                                                                                                |
-| 指尖浏览器                           | 1.6       | 带下载功能（新版1.9需系统为汉语才有该功能），支持m3u8                                                               |
-| 鲨鱼浏览器                           | 1.0       | 支持视频下载，支持m3u8格式下载                                                                                      |
+| 指尖浏览器                           | 1.6       | 带下载功能（新版 1.9 需系统为汉语才有该功能），支持 m3u8                                                               |
+| 鲨鱼浏览器                           | 1.0       | 支持视频下载，支持 m3u8 格式下载                                                                                      |
 | 知乎                                 | 3.9.0     | 无广告                                                                                                              |
 |                                      | 3.10.0    | 无广告，无「通知」按钮，部分功能无法正常使用                                                                        |
 |                                      | 3.12.0    | 无广告，有「通知」按钮，部分功能无法正常使用                                                                        |
@@ -397,32 +381,32 @@ http://ffapple.com
 |                                      | 4.4.2     | 回答页面没有广告的最后一个版本                                                                                      |
 | 微博                                 | 7.3.1     | 出现首页直播图标前的最后一个版本，评论页无广告                                                                      |
 | QQ                                   | 6.5.9     | 安装包小，启动快，不支持新表情查看                                                                                  |
-|                                      | 6.6.5     | 安装包小，启动迅速，iOS 12可用                                                                                      |
+|                                      | 6.6.5     | 安装包小，启动迅速，iOS 12 可用                                                                                      |
 |                                      | 6.6.8     | 不用会员可美化/更换主题                                                                                             |
 |                                      | 6.7.1     | 清爽，有更新提示                                                                                                    |
-|                                      | 7.2.5     | 支持iOS 11                                                                                                          |
-| QQ音乐                               | 3.9.1     | 可下载收费歌曲，绿钻功能下载高品质音乐可选，仅适用于iOS 10及以下系统                                                |
+|                                      | 7.2.5     | 支持 iOS 11                                                                                                          |
+| QQ 音乐                               | 3.9.1     | 可下载收费歌曲，绿钻功能下载高品质音乐可选，仅适用于 iOS 10 及以下系统                                                |
 |                                      | 4.7       | 自带绿钻                                                                                                            |
-|                                      | 5.2.2     | 用FLEX可直接下无损格式                                                                                              |
-|                                      | 6.1       | 无需会员开DTS                                                                                                       |
+|                                      | 5.2.2     | 用 FLEX 可直接下无损格式                                                                                              |
+|                                      | 6.1       | 无需会员开 DTS                                                                                                       |
 |                                      | 6.2       | 占用内存少，启动快                                                                                                  |
-|                                      | 6.3.1     | 可以免费使用DTS音效                                                                                                 |
-|                                      | 6.5.1     | 可以下载高清MV                                                                                                      |
-| QQ空间                               | 5.1.1     | 动态浏览无广告，仅适用于iOS 10及以下系统                                                                            |
-| QQ浏览器                             | 6.1.1     | 能缓存视频的最后一个版本                                                                                            |
+|                                      | 6.3.1     | 可以免费使用 DTS 音效                                                                                                 |
+|                                      | 6.5.1     | 可以下载高清 MV                                                                                                      |
+| QQ 空间                               | 5.1.1     | 动态浏览无广告，仅适用于 iOS 10 及以下系统                                                                            |
+| QQ 浏览器                             | 6.1.1     | 能缓存视频的最后一个版本                                                                                            |
 |                                      | 6.3       | 能关闭头条的最后一个版本                                                                                            |
 | 百度网盘                             | 6.6.0     | 支持解压文件，文件可能无法导出                                                                                      |
 |                                      | 6.7.3     | 支持重命名后缀和打开分享未知文件                                                                                    |
-| 蜻蜓FM                               | 4.7.6     | 无音频广告                                                                                                          |
-| UC浏览器                             | 10.5.5    | 无头条，能缓存视频，iOS 11可能会闪退                                                                                |
+| 蜻蜓 FM                               | 4.7.6     | 无音频广告                                                                                                          |
+| UC 浏览器                             | 10.5.5    | 无头条，能缓存视频，iOS 11 可能会闪退                                                                                |
 |                                      | 10.7.11   | 有头条，能缓存视频的最后一个版本，不支持第三方打开                                                                  |
 |                                      | 11.3.1    | 可缓存视频，下载文件，首页无广告                                                                                    |
-| 虾米音乐                             | 6.1.8     | 随心听自定义模式，支持iOS 11                                                                                        |
+| 虾米音乐                             | 6.1.8     | 随心听自定义模式，支持 iOS 11                                                                                        |
 | 天天动听                             | 7.9.3     | 能找到的最老的版本                                                                                                  |
 |                                      | 8.1.5     | 阿里星球的最后一个版本，仅可作为离线播放器使用                                                                      |
 | 酷狗音乐                             | 3.9.4     | 播放器                                                                                                              |
 | 酷我音乐                             | 4.9.2     | 可下载无损音质                                                                                                      |
-| 多看阅读                             | 3.5.3     | 阅读器，iOS 11上适配有问题                                                                                          |
+| 多看阅读                             | 3.5.3     | 阅读器，iOS 11 上适配有问题                                                                                          |
 | Downloads                            | 2.0.0     | 下载视频利器                                                                                                        |
 | Aloha                                | 2.0.3     | （中区已下架）视频缓存利器，添加新闻首页前的最后一个版本                                                            |
 | Castro                               | 2.6.2     | 各国电台播放器，无订阅限制的最后一个版本                                                                            |
@@ -433,29 +417,29 @@ http://ffapple.com
 | 支付宝                               | 9.2       | 越狱后仍可使用指纹支付                                                                                              |
 |                                      | 10.1.32   | 启动快，第一个支持通知栏展开付款码的版本                                                                            |
 | 威锋网                               | 2.2.11    | 无广告，但会员消息通知打不开                                                                                        |
-| Pin                                  | 3.2.2     | 拥有完整xTeko实验室功能的最后一个版本                                                                               |
+| Pin                                  | 3.2.2     | 拥有完整 xTeko 实验室功能的最后一个版本                                                                               |
 | Oxford Advanced Learner's Dictionary | 3.53.32   | 牛津高阶英汉第八版，最后一个收费版本                                                                                |
 | Merriam-Webster Dictionary           | 2.1       | 无广告，但高版本系统无法安装                                                                                        |
 | 美颜相机                             | 5.7.5     | 效果比较自然                                                                                                        |
 |                                      | 6.2.6     | 含主题乐园                                                                                                          |
 |                                      | 7.1.1     | 有萌拍的第一个版本                                                                                                  |
-| TV Assist电视助手                    | 5.5.0     | 支持音视频下载，支持导出文件                                                                                        |
+| TV Assist 电视助手                    | 5.5.0     | 支持音视频下载，支持导出文件                                                                                        |
 | intoLive Pro                         | 2.0.2     | 用GIF/视频制作30秒动态壁纸                                                                                          |
-| 元气骑士                             | 1.6.2     | 同时支持卡无限幻影的BUG和四人联机                                                                                   |
+| 元气骑士                             | 1.6.2     | 同时支持卡无限幻影的 BUG 和四人联机                                                                                   |
 | 触宝电话                             | 5.6.1     | 加入亲情号的版本，广告少                                                                                            |
 | TDownloadr                           | 2.6.4     | 支持国内外几乎所有视频下载                                                                                          |
 | 秒拍                                 | 6.7.6.8   | 传视频稳定且不会特别压缩面质，新版会自动剪裁视频                                                                    |
-| AVPlayer                             | 1.645     | 支持DTS的最后一个版本                                                                                               |
-|                                      | 2.50      | 支持AAC打开杜比环绕音效的最后一个版本                                                                               |
-| nPlayer                              | 2.6.5     | 支持AAC打开杜比环绕音效，音效比新版好，快拉FLV格式的时候不卡，但不支持DTS                                           |
+| AVPlayer                             | 1.645     | 支持 DTS 的最后一个版本                                                                                               |
+|                                      | 2.50      | 支持 AAC 打开杜比环绕音效的最后一个版本                                                                               |
+| nPlayer                              | 2.6.5     | 支持 AAC 打开杜比环绕音效，音效比新版好，快拉 FLV 格式的时候不卡，但不支持 DTS                                           |
 | Thor                                 | 1.2.0.283 | 直接查看响应中消息体的音视频文件/抓取到的音视频文件，可以播放，支持分享和导出（新版本限制音视频文件直接查看和导出） |
-| Alfred                               | 2.8       | 此后的版本和popclip的欧路取词冲突                                                                                   |
+| Alfred                               | 2.8       | 此后的版本和 popclip 的欧路取词冲突                                                                                   |
 | Terminology                          | 3.3.4     | 最后一个收费版                                                                                                      |
 | Ulysses                              | 10        | 最后一个非订阅版                                                                                                    |
 | 网易新闻                             | 3.6.2     | 广告少                                                                                                              |
-| 115网盘                              | 6.0.0     | 支持添加离线下载                                                                                                    |
-| K米                                  | 4.3.2     | 无VIP版本                                                                                                           |
-| WiFi万能密码                         | 1.2.0     |                                                                                                                     |
+| 115 网盘                              | 6.0.0     | 支持添加离线下载                                                                                                    |
+| K 米                                  | 4.3.2     | 无 VIP 版本                                                                                                           |
+| WiFi 万能密码                         | 1.2.0     |                                                                                                                     |
 | 哔哩哔哩动画                         | 4.7       |                                                                                                                     |
 | 体检宝                               | 3.2.81    |                                                                                                                     |
 | 手机淘宝                             | 5.7.0     | 比较顺畅且功能齐全                                                                                                  |
@@ -473,7 +457,7 @@ http://ffapple.com
 https://www.52pojie.cn/forum.php?mod=viewthread&tid=1863801
 ```
 
-适用于Windows。首先安装iTunes12.6.3，该版本是iTunes最后一个有商店的版本。下载链接如下。
+适用于 Windows。首先安装 iTunes12.6.3，该版本是 iTunes 最后一个有商店的版本。下载链接如下。
 
 ```
 # 官方下载
@@ -483,18 +467,18 @@ https://support.apple.com/zh-cn/HT208079
 https://www.jianshu.com/p/33bbfaa6acfd
 ```
 
-如果之前有安装新版的iTunes，换回旧版后运行iTunes时，可能会提示`不能读取文件iTunes Library.itl，因为它是由更高版本的iTunes所创建的`。此时查找iTunes Library.itl并删除该文件即可。
+如果之前有安装新版的 iTunes，换回旧版后运行 iTunes 时，可能会提示`不能读取文件 iTunes Library.itl，因为它是由更高版本的 iTunes 所创建的`。此时查找 iTunes Library.itl 并删除该文件即可。
 
 #### IOS旧版App下载工具
 
-下载地址如下。打不开或者打开报错，需安装Microsoft. NET Framework 4.0，双击安装包中的`打不开的请安装.exe`即可。
+下载地址如下。打不开或者打开报错，需安装 Microsoft. NET Framework 4.0，双击安装包中的`打不开的请安装.exe`即可。
 
 ```
 http://www.pc6.com/softview/SoftView_743492.html
 http://www.ddooo.com/softdown/165173.htm
 ```
 
-打开iTunes并登录自己账号，然后点击菜单栏-账户-我的账户，输入密码登录后，在软件上进行配置并启动即可。
+打开 iTunes 并登录自己账号，然后点击菜单栏-账户-我的账户，输入密码登录后，在软件上进行配置并启动即可。
 
 #### iOS任意版本号APP下载
 
@@ -505,15 +489,22 @@ https://www.52pojie.cn/thread-1284776-1-1.html
 https://www.lanzoux.com/i1BaVhg2m7e
 ```
 
+#### 下载已下架或旧版IPA
+
+```
+https://gist.github.com/minif/473310d7c556caadf4f2ed2d97389574
+https://gist.github.com/qnblackcat/4f7b77f685ccda2ff4ef916a27d66107
+```
+
 ### 通过Charles Proxy
 
-可用于Mac。在Mac上首先需要安装iTunes 12.6.5.3，可通过Retroactive安装。
+可用于 Mac。在 Mac 上首先需要安装 iTunes 12.6.5.3，可通过 Retroactive 安装。
 
 ```
 https://github.com/cormiertyshawn895/Retroactive
 ```
 
-通过以下网站下载Charles Proxy。
+通过以下网站下载 Charles Proxy。
 
 ```
 https://www.charlesproxy.com/download/
@@ -534,28 +525,28 @@ https://www.charles.ren/
 
 ## 已购买但已下架
 
-安装iMazing和破解补丁，补丁链接如下。安装好iMazing后，将补丁复制到iMazing安装根目录，运行补丁，点击patch即可。
+安装 iMazing 和破解补丁，补丁链接如下。安装好 iMazing 后，将补丁复制到 iMazing 安装根目录，运行补丁，点击 patch 即可。
 
 ```
 链接 / https://pan.baidu.com/s/181YRRqo5t2mtx9EYaYRWYg
 提取码 / 26fe
 ```
 
-打开iMazing，连接手机后点击`管理应用程序`，在资料库标签页即可下载已下架的APP，下载完成后右键选择导出IPA即可。导出的IPA可用iMazing或助手类软件安装。
+打开 iMazing，连接手机后点击`管理应用程序`，在资料库标签页即可下载已下架的 APP，下载完成后右键选择导出 IPA 即可。导出的 IPA 可用 iMazing 或助手类软件安装。
 
 # IPA处理
 
 ## 去除旧版更新提示
 
-用解压软件打开IPA，删除iTunesmeradata.plist即可。若无法直接用解压软件打开，可先修改后缀名为ZIP，删除后再修改回IPA。
+用解压软件打开 IPA，删除 iTunesmeradata.plist 即可。若无法直接用解压软件打开，可先修改后缀名为 ZIP，删除后再修改回 IPA。
 
 # IPA砸壳
 
-AppStore下载的应用进行了数字版权加密处理，加密后的App无法被反编译。砸壳可以将已经安装的App解密，导出为ipa格式的文件。
+AppStore 下载的应用进行了数字版权加密处理，加密后的 App 无法被反编译。砸壳可以将已经安装的 App 解密，导出为 ipa 格式的文件。
 
-砸壳后才能自定义使用，如修改标识符实现双开、注入插件实现增强等，砸壳后可以跳过ID验证。
+砸壳后才能自定义使用，如修改标识符实现双开、注入插件实现增强等，砸壳后可以跳过 ID 验证。
 
-砸壳后的App在越狱手机上可直接用Filza安装。
+砸壳后的 App 在越狱手机上可直接用 Filza 安装。
 
 ## 通过网站
 
@@ -565,11 +556,11 @@ https://decrypt.34306.lol/
 
 ## 通过frida-ios-dump
 
-该方法适用于Mac，需要APP能够正常打开。
+该方法适用于 Mac，需要 APP 能够正常打开。
 
 ### 电脑端配置
 
-确保电脑已安装frida，Mac可通过Homebrew安装。安装完成后运行以下命令，若出现`Waiting for USB device to appear...`，则成功。
+确保电脑已安装 frida，Mac 可通过 Homebrew 安装。安装完成后运行以下命令，若出现`Waiting for USB device to appear...`，则成功。
 
 ```
 frida-ps -U
@@ -590,11 +581,11 @@ frida-ps -U
 
 ### 手机端配置
 
-完成电脑端配置后，需要在手机上安装frida-server，版本需要和电脑端匹配。
+完成电脑端配置后，需要在手机上安装 frida-server，版本需要和电脑端匹配。
 
 打开以下链接下载与电脑的frida对应的frida-server，并用Filza复制到手机的/usr/bin中，重命名为frida-server。在手机上用Filza找到刚刚复制进去的文件，调整其属性，将权限全部开放。
 
-然后在手机打开NewTerm，运行以下命令完成安装。
+然后在手机打开 NewTerm，运行以下命令完成安装。
 
 ```
 cd /usr/bin
@@ -602,7 +593,7 @@ frida-server --version
 frida-server -D
 ```
 
-frida-server也可用Cydia安装。打开Cydia并添加以下源安装即可，若无法下载可换用嘻哈源。
+frida-server 也可用 Cydia 安装。打开 Cydia 并添加以下源安装即可，若无法下载可换用嘻哈源。
 
 ```
 https://build.frida.re
@@ -610,9 +601,9 @@ https://build.frida.re
 
 ### 砸壳操作
 
-将手机和电脑进行连接，并确保两者连接到同一个Wi-Fi。
+将手机和电脑进行连接，并确保两者连接到同一个 Wi-Fi。
 
-用爱思助手打开手机的SSH通道，然后打开克隆好的仓库，修改dump.py中端口为连接手机SSH的端口。打开终端，执行以下命令以与手机进行SSH连接。
+用爱思助手打开手机的 SSH 通道，然后打开克隆好的仓库，修改 dump.py 中端口为连接手机 SSH 的端口。打开终端，执行以下命令以与手机进行 SSH 连接。
 
 ```
 ssh root@127.0.0.1 -p1025
@@ -625,7 +616,7 @@ cd frida-ios-dump
 python3 dump.py -l
 ```
 
-输入以下命令以进行砸壳。若提示`unable to access process with pid 1 from the current user account`，则需先在手机上打开APP。砸壳完成的APP将放到电脑的终端当前路径。
+输入以下命令以进行砸壳。若提示`unable to access process with pid 1 from the current user account`，则需先在手机上打开 APP。砸壳完成的 APP 将放到电脑的终端当前路径。
 
 ```
 python3 dump.py [APP名称]（或BundleID）
@@ -633,11 +624,11 @@ python3 dump.py [APP名称]（或BundleID）
 
 ## 通过插件
 
-该方法需要APP能够正常打开。
+该方法需要 APP 能够正常打开。
 
 ### CrackerXI+
 
-安装CrackerXI+插件，源地址如下。
+安装 CrackerXI+插件，源地址如下。
 
 ```
 https://cydia.iphonecake.com/
@@ -666,93 +657,18 @@ https://www.123pan.com/s/vgn0Vv-vfHFv.html
 
 # 参考教程
 
-## AppStore降价监控
-
-```
-https://www.antmoe.com/posts/77e27eac/index.html
-```
-
-
-## Sideloadly，无需越狱，自签安装 IPA 文件，免费
-
-```
-https://mp.weixin.qq.com/s/gM4nv-WLyysWmM3BtLFr5w
-```
-
-## Scarlet，猩红，自签安装 IPA 文件，完全免费
-
-```
-https://mp.weixin.qq.com/s/4Nt6K5KkkZr4247RlbQZog
-```
-
-## iOS 系统，砸壳，提取 IPA，支持中文
-
-```
-https://mp.weixin.qq.com/s/UfiM2Z346_KtRcQSk9HJZw
-```
-
-## 如何在苹果商店把App降级至任意版本
-
-```
-https://mp.weixin.qq.com/s/afXnjvgwA0aC3NaPg53l_g
-```
-
-## 使用Xcode签名IPA教程
-
-```
-https://mp.weixin.qq.com/s/edwIuv8DyXklLT00RsdavA
-```
-
-## IOS逆向-APP砸壳
-
-```
-https://mp.weixin.qq.com/s/jZHAr_i0IL72EpBYQCibMQ
-```
-
-## windows上ios App一键砸壳教程(不需要ssh)
-
-```
-https://bbs.pediy.com/thread-252384.htm
-```
-
-## CrackerXI+，砸壳，提取 IPA
-
-```
-https://mp.weixin.qq.com/s/SIf8tWc1IH1ZZLHOiYG3Fw
-```
-
-## 别怪我白嫖哈，这可是你自己上架的功能全解锁版
-
-```
-https://mp.weixin.qq.com/s/zkolfG0Tvj8ImgKrJB80Vg
-```
-
-## 你所珍藏的历史旧版本 app
-
-```
-https://www.v2ex.com/t/452086?p=2
-```
-
-## 【IOS】常用旧版软件ID整理分享
-
-```
-https://www.jianshu.com/p/5a28dacba975
-```
-
-## [其他] 【IOS】好用的旧版APP —6.3更新—
-
-```
-https://www.52pojie.cn/thread-741535-1-4.html
-```
-
-## iOS 系统，砸壳，提取 IPA
-
-```
-https://mp.weixin.qq.com/s/POKnLnXEcaV_WeFRlkTSJg
-```
-
-## 大佬发布，无需越魔！
-
-```
-https://mp.weixin.qq.com/s/BwsuxcZKgsUK9pRo7FTTAQ
-```
+> [AppStore降价监控](https://www.antmoe.com/posts/77e27eac/index.html)  
+> [Sideloadly，无需越狱，自签安装 IPA 文件，免费](https://mp.weixin.qq.com/s/gM4nv-WLyysWmM3BtLFr5w)  
+> [Scarlet，猩红，自签安装 IPA 文件，完全免费](https://mp.weixin.qq.com/s/4Nt6K5KkkZr4247RlbQZog)  
+> [iOS 系统，砸壳，提取 IPA，支持中文](https://mp.weixin.qq.com/s/UfiM2Z346_KtRcQSk9HJZw)  
+> [如何在苹果商店把App降级至任意版本](https://mp.weixin.qq.com/s/afXnjvgwA0aC3NaPg53l_g)  
+> [使用Xcode签名IPA教程](https://mp.weixin.qq.com/s/edwIuv8DyXklLT00RsdavA)  
+> [IOS逆向-APP砸壳](https://mp.weixin.qq.com/s/jZHAr_i0IL72EpBYQCibMQ)  
+> [windows上ios App一键砸壳教程(不需要ssh)](https://bbs.pediy.com/thread-252384.htm)  
+> [CrackerXI+，砸壳，提取 IPA](https://mp.weixin.qq.com/s/SIf8tWc1IH1ZZLHOiYG3Fw)  
+> [别怪我白嫖哈，这可是你自己上架的功能全解锁版](https://mp.weixin.qq.com/s/zkolfG0Tvj8ImgKrJB80Vg)  
+> [你所珍藏的历史旧版本 app](https://www.v2ex.com/t/452086?p=2)  
+> [【IOS】常用旧版软件ID整理分享](https://www.jianshu.com/p/5a28dacba975)  
+> [[其他] 【IOS】好用的旧版APP —6.3更新—](https://www.52pojie.cn/thread-741535-1-4.html)  
+> [iOS 系统，砸壳，提取 IPA（另一种方法）](https://mp.weixin.qq.com/s/POKnLnXEcaV_WeFRlkTSJg)  
+> [大佬发布，无需越魔！](https://mp.weixin.qq.com/s/BwsuxcZKgsUK9pRo7FTTAQ)  
