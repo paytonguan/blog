@@ -1,14 +1,14 @@
 ---
-title: AMD安装黑苹果指南
+title: 黑苹果AMD平台安装指南
 categories: Mac
-abbrlink: AMD-Hackintosh-Guide
+abbrlink: Hackintosh-AMD-Guide
 date: 2019-12-01 09:55:29
 tags:
 ---
 
 ![](topic.jpg)
 
-AMD安装黑苹果指南。
+AMD 平台安装黑苹果的指南。
 
 <!-- more -->
 

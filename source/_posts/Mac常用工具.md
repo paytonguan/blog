@@ -1,5 +1,5 @@
 ---
-title: Mac常用工具
+title: Mac 常用工具
 categories: Mac
 abbrlink: Mac-Tools
 date: 2019-12-20 14:12:29
@@ -8,7 +8,7 @@ tags:
 
 ![](topic.jpg)
 
-Mac常用工具。
+Mac 上常用的工具与软件整理。
 
 <!-- more -->
 
@@ -86,7 +86,7 @@ https://www.geekbench.com/
 
 ## Intel Power Gadget
 
-查看CPU状态。
+查看 CPU 状态。
 
 ```
 https://software.intel.com/en-us/articles/intel-power-gadget
@@ -107,7 +107,7 @@ SN: GAWAE-FCWQ3-P8NYB-C7GF7-NEDRT-Q5DTB-MFZG6-6NEQC-CRMUD-8MZ2K-66SRB-SU8EW-EDLZ
 
 ## IOJones
 
-IORegistryExplorer的替代品。
+IORegistryExplorer 的替代品。
 
 ```
 https://sourceforge.net/projects/iojones/
@@ -131,7 +131,7 @@ https://novabench.com/download#personal
 
 ## CUDA-Z
 
-查看Nvidia驱动。
+查看 Nvidia 驱动。
 
 ```
 https://sourceforge.net/projects/cuda-z/
@@ -147,7 +147,7 @@ https://macdownload.informer.com/aja-system-test/download/
 
 ## MachineProfile
 
-查询电脑信息，Mac App Store可下载。
+查询电脑信息，Mac App Store 可下载。
 
 # 系统设置
 
@@ -161,7 +161,7 @@ https://github.com/fewtarius/displayrotation
 
 ## Scroll Reverser
 
-只改变鼠标滚轮方向而不改变触控板滑动方向，在终端输入以下命令安装。此APP会让三指点击失效。
+只改变鼠标滚轮方向而不改变触控板滑动方向，在终端输入以下命令安装。此 APP 会让三指点击失效。
 
 ```
 brew cask install scroll-reverser
@@ -177,7 +177,7 @@ https://gotoes.org/sales/ShowHiddenFilesMacOSX/How_To_Show_Hidden_Files.php
 
 ## Trim Enabler
 
-为SSD打开Trim功能。
+为 SSD 打开 Trim 功能。
 
 ```
 https://cindori.org/trimenabler/
@@ -200,7 +200,7 @@ Serial number / 4Ip8izH03A-0K48zlp3zw-1Sp
 
 ## EFI MountianShow
 
-挂载EFI分区。
+挂载 EFI 分区。
 
 ```
 https://www.tonymacx86.com/threads/updated-efi-mounter-v3-renamed-to-efi-mountianshow.210413/
@@ -216,7 +216,7 @@ https://www.firewolf.science/2015/06/ramdisk-utility-for-os-x/
 
 ## TotalFinder
 
-Finder的增强。
+Finder 的增强。
 
 ```
 http://www.pc6.com/mac/113433.html
@@ -236,7 +236,7 @@ https://www.titanium-software.fr/en/onyx.html
 
 ## Hex Fiend
 
-Hex编辑器。
+Hex 编辑器。
 
 ```
 http://ridiculousfish.com/hexfiend/
@@ -244,7 +244,7 @@ http://ridiculousfish.com/hexfiend/
 
 ## FileMerge
 
-安装Xcode后即可搜索到，用于比较代码差异，常用于编写SSDT时比较打补丁前后的DSDT差异。
+安装 Xcode 后即可搜索到，用于比较代码差异，常用于编写 SSDT 时比较打补丁前后的 DSDT 差异。
 
 # 音乐播放
 
@@ -266,7 +266,7 @@ https://gitee.com/cssec/ParallelsDesktopCrack
 
 ## Touchbar Pet
 
-Touchbar养宠物。
+Touchbar 养宠物。
 
 ```
 https://www.cr173.com/mac/1100456.html
@@ -274,7 +274,7 @@ https://www.cr173.com/mac/1100456.html
 
 ## Classic Finder
 
-模仿旧版Finder。
+模仿旧版 Finder。
 
 ```
 https://bitbucket.org/bszyman/classic-finder-app/downloads/

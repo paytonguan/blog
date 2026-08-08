@@ -1,5 +1,5 @@
 ---
-title: Mac使用技巧总结
+title: Mac 使用技巧总结
 categories: Mac
 abbrlink: Mac-Skills
 date: 2019-11-25 14:12:29
@@ -8,14 +8,15 @@ tags:
 
 ![](topic.jpg)
 
-总结了一些MacOS的使用技巧，不断更新。
+MacOS 的使用技巧总结。
 
 <!-- more -->
 
-# TODOS
+# 开启 Apple AI
+
+通过以下项目启用 Apple AI。
 
 ```
-# 开启Apple AI
 https://github.com/kanshurichard/enableAppleAI
 ```
 
@@ -35,13 +36,13 @@ https://github.com/kanshurichard/enableAppleAI
 
 # 访问Mac共享
 
-在Mac打开设置，选择共享-文件共享，点击`选项`，勾选两个复选框，并勾选用于共享的用户。回到设置页面，打开`网络偏好设置`，选择活跃的连接，点击高级-WINS，输入Windows的工作组名称，一般为WORKGROUP。
+在 Mac 打开设置，选择共享-文件共享，点击`选项`，勾选两个复选框，并勾选用于共享的用户。回到设置页面，打开`网络偏好设置`，选择活跃的连接，点击高级-WINS，输入 Windows 的工作组名称，一般为 WORKGROUP。
 
-在Windows端打开运行，输入`\\[Mac的IP地址]`即可访问。
+在 Windows 端打开运行，输入`\\[Mac 的 IP 地址]`即可访问。
 
 # 旧款Mac安装Catalina
 
-使用macOS Catalina Patcher即可。
+使用 macOS Catalina Patcher 即可。
 
 ```
 http://dosdude1.com/catalina/
@@ -49,7 +50,7 @@ http://dosdude1.com/catalina/
 
 # 直接下载Boot Camp驱动程序
 
-使用Brigadier即可。
+使用 Brigadier 即可。
 
 ```
 https://github.com/timsutton/brigadier/releases
@@ -59,7 +60,7 @@ https://github.com/timsutton/brigadier/releases
 
 注意，此法不能读取内置Windows分区和外接驱动器（非APFS/HFS）分区。
 
-在正常模式的系统下执行以下命令以获取msdosfs.kext，默认在根目录的kexts文件夹下。
+在正常模式的系统下执行以下命令以获取 msdosfs.kext，默认在根目录的 kexts 文件夹下。
 
 ```
 sudo mkdir /kexts
@@ -70,7 +71,7 @@ sudo chmod -Rf 755 /kexts/msdosfs.kext
 sudo chown -Rf 0:0 /kexts/msdosfs.kext
 ```
 
-在安全模式下通过以下命令加载此kext，再挂载EFI分区即可。
+在安全模式下通过以下命令加载此 kext，再挂载 EFI 分区即可。
 
 ```
 sudo kextload /kexts/msdosfs.kext
@@ -98,7 +99,7 @@ plugin L2TP.ppp
 l2tpnoipsec // 第一个字母为小写L
 ```
 
-按Esc后输入`:wq`并回车，回到网络设置界面。连接上述设置好的VPN，正常情况下连接成功。
+按 Esc 后输入`:wq`并回车，回到网络设置界面。连接上述设置好的 VPN，正常情况下连接成功。
 
 # 重置蓝牙配置
 
@@ -106,7 +107,7 @@ l2tpnoipsec // 第一个字母为小写L
 
 # 备份EFI分区脚本
 
-脚本地址如下，运行EFI Backup-Restore.command即可。
+脚本地址如下，运行 EFI Backup-Restore.command 即可。
 
 ```
 https://github.com/corpnewt/EFI-Backup-Restore
@@ -182,7 +183,7 @@ launchctl unload -wF com.apple.metadata.mds.spindump.plist
 
 # 远程控制
 
-可通过iMessage，打开后选择或新建对方的信息会话，点击右上角后选择共享即可。
+可通过 iMessage，打开后选择或新建对方的信息会话，点击右上角后选择共享即可。
 
 # 删除Launchpad的废图标
 
@@ -199,13 +200,13 @@ sqlite3 db "delete from apps where title='[需要删除的应用名称]';"&&kill
 
 # Menu Bar操作
 
-按住Command键并拖动菜单栏图标可调整其顺序，拖出菜单栏则清除此图标。
+按住 Command 键并拖动菜单栏图标可调整其顺序，拖出菜单栏则清除此图标。
 
 若菜单栏上没有图标，则转至`/System/Library/CoreServices/Menu Extras`，直接用鼠标将Eject.menu拖放至菜单栏即可。
 
 # 常用快捷键
 
-Mac键盘与普通键盘键位对应如下表。 
+Mac 键盘与普通键盘键位对应如下表。 
 
 | Mac     | Windows             |
 | ------- | ------------------- |
@@ -214,7 +215,7 @@ Mac键盘与普通键盘键位对应如下表。
 | Delete  | 空格（Backspace）键 |
 | Return  | 回车（Enter）键     |
 
-替换Command和Control键后，常用快捷键对应如下（Space键即空格键，Win键即Windows徽标键）。
+替换 Command 和 Control 键后，常用快捷键对应如下（Space 键即空格键，Win 键即 Windows 徽标键）。
 
 | Mac                           | Windows                | 作用                       |
 | ----------------------------- | ---------------------- | -------------------------- |
@@ -281,11 +282,11 @@ defaults write com.apple.finder AppleShowAllFiles -bool false
 
 # 删除所有短信
 
-设置短信为保留30天，然后设置日期，拨动往后的几个月份直至短信被删除即可。
+设置短信为保留 30 天，然后设置日期，拨动往后的几个月份直至短信被删除即可。
 
 # QQ功能扩展
 
-下载以下仓库，解压后在终端运行Other文件夹中的`install.sh`即可。
+下载以下仓库，解压后在终端运行 Other 文件夹中的`install.sh`即可。
 
 ```
 https://github.com/TKkk-iOSer/QQPlugin-macOS/tree/master
@@ -315,13 +316,13 @@ open -n /Applications/WeChat.app
 
 # Quick Look插件
 
-通过安装Quick Look插件，可以在点击空格预览的时候有更多功能，仓库如下。
+通过安装 Quick Look 插件，可以在点击空格预览的时候有更多功能，仓库如下。
 
 ```
 https://github.com/sindresorhus/quick-look-plugins
 ```
 
-在终端通过以下命令进行安装，常用插件有qlcolorcode、qlstephen、qlmarkdown、quicklook-json、qlimagesize、suspicious-package等。
+在终端通过以下命令进行安装，常用插件有 qlcolorcode、qlstephen、qlmarkdown、quicklook-json、qlimagesize、suspicious-package 等。
 
 ```
 brew cask install [插件名]
@@ -330,7 +331,7 @@ brew cask install [插件名]
 
 # Xcode SDK文件
 
-用于为Xcode提供旧版SDK文件。
+用于为 Xcode 提供旧版 SDK 文件。
 
 ```
 https://github.com/phracker/MacOSX-SDKs
@@ -359,11 +360,11 @@ sudo xattr -d com.apple.quarantine /Applications/xxxx.app
 
 ## 因AppleGFXHDADriver重启
 
-将SLE下的AppleGFXHDA.kext删除或更改后缀即可。
+将 SLE 下的 AppleGFXHDA.kext 删除或更改后缀即可。
 
 ## 旧Mac电脑无法开启高分辨率
 
-可使用mac-pixel-clock-patch-V2补丁，仓库如下。
+可使用 mac-pixel-clock-patch-V2 补丁，仓库如下。
 
 ```
 https://github.com/Floris497/mac-pixel-clock-patch-V2
@@ -371,44 +372,10 @@ https://github.com/Floris497/mac-pixel-clock-patch-V2
 
 # 参考教程
 
-## `为什么创建点下划线._文件，如何避免使用它们？`
-
-```
-https://qastack.cn/apple/14980/why-are-dot-underscore-_-files-created-and-how-can-i-avoid-them
-```
-
-## ItChat 系列 0 - 初识 ItChat
-
-```
-https://www.playpi.org/2019020701.html
-```
-
-## 在Mac系统中如何显示和隐藏文件
-
-```
-https://www.jianshu.com/p/a1c2495b02aa
-```
-
-## 如何删除GIT中的.DS_Store
-
-```
-https://www.jianshu.com/p/fdaa8be7f6c3
-```
-
-## Mac 重装系统教程(二)：网络在线重装
-
-```
-https://m.sohu.com/a/325579861_654244
-```
-
-## OS X 默认字体的讨论与修改方法
-
-```
-https://blog.royli.dev/2018/os-x-mo-ren-zi-ti-de-tao-lun-yu-xiu-gai-fang-fa-2d38abb1
-```
-
-## 删除启动台（LaunchPad）残留的图标
-
-```
-https://zhuanlan.zhihu.com/p/55866195
-```
+> [`为什么创建点下划线._文件，如何避免使用它们？`](https://qastack.cn/apple/14980/why-are-dot-underscore-_-files-created-and-how-can-i-avoid-them)  
+> [ItChat 系列 0 - 初识 ItChat](https://www.playpi.org/2019020701.html)  
+> [在Mac系统中如何显示和隐藏文件](https://www.jianshu.com/p/a1c2495b02aa)  
+> [如何删除GIT中的.DS_Store](https://www.jianshu.com/p/fdaa8be7f6c3)  
+> [Mac 重装系统教程\(二\)：网络在线重装](https://m.sohu.com/a/325579861_654244)  
+> [OS X 默认字体的讨论与修改方法](https://blog.royli.dev/2018/os-x-mo-ren-zi-ti-de-tao-lun-yu-xiu-gai-fang-fa-2d38abb1)  
+> [删除启动台（LaunchPad）残留的图标](https://zhuanlan.zhihu.com/p/55866195)  

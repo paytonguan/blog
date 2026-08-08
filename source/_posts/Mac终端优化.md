@@ -1,5 +1,5 @@
 ---
-title: Mac终端优化
+title: Mac 终端优化
 categories: Mac
 abbrlink: Mac-Terminal-Optimization
 date: 2019-12-23 14:12:29
@@ -8,7 +8,7 @@ tags:
 
 ![](topic.jpg)
 
-Mac终端优化。
+Mac 终端的使用与优化技巧。
 
 <!-- more -->
 
@@ -22,7 +22,7 @@ Mac终端优化。
 
 ## Homebrew
 
-Homebrew是类似于Linux的apt-get软件包管理器。
+Homebrew 是类似于 Linux 的 apt-get 软件包管理器。
 
 ### 安装与卸载
 
@@ -68,7 +68,7 @@ mkdir homebrew && cd homebrew
 git clone git://mirrors.ustc.edu.cn/homebrew-core.git
 ```
 
-若为安装cask时卡住，则为以下命令。
+若为安装 cask 时卡住，则为以下命令。
 
 ```
 cd "$(brew --repo)/Library/Taps/"
@@ -91,7 +91,7 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zshrc
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
-也可在M1芯片安装普通的x86版，命令如下。
+也可在 M1 芯片安装普通的 x86 版，命令如下。
 
 ```
 arch -x86_64 /bin/bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/ineo6/homebrew-install/install.sh)"
@@ -104,7 +104,7 @@ alias abrew='arch -arm64 /opt/homebrew/bin/brew'
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 ```
 
-保存后，在终端输入`abrew`表示使用ARM版，输入`ibrew`表示使用x86版。
+保存后，在终端输入`abrew`表示使用 ARM 版，输入`ibrew`表示使用 x86 版。
 </details>
 
 ##### 失效教程
@@ -112,13 +112,13 @@ alias ibrew='arch -x86_64 /usr/local/bin/brew'
 <details>
 <summary></summary>
 
-在终端输入以下命令以获取install文件。
+在终端输入以下命令以获取 install 文件。
 
 ```
 curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install >> brew_install
 ```
 
-打开所获取的install文件（一般在用户目录），更改脚本中`BREW_REPO`和`CORE_TAP_REPO`两处，两个镜像源任选一个。
+打开所获取的 install 文件（一般在用户目录），更改脚本中`BREW_REPO`和`CORE_TAP_REPO`两处，两个镜像源任选一个。
 
 ```
 // 中国科学技术大学源
@@ -198,7 +198,7 @@ source ~/.zshrc
 https://brew.idayer.com/guide/change-source
 ```
 
-完成后在终端输入以下命令更新Homebrew。
+完成后在终端输入以下命令更新 Homebrew。
 
 ```
 brew update
@@ -232,7 +232,7 @@ brew upgrade
 
 #### tcl
 
-Python的图形化界面依赖。
+Python 的图形化界面依赖。
 
 ### 操作技巧
 
@@ -265,7 +265,7 @@ bottles镜像地址更新，须在~/.zshrc或~/.bash_profile中修改HOMEBREW_BO
 
 #### command not found: brew
 
-对于ARM版，需安装步骤添加环境变量。
+对于 ARM 版，需安装步骤添加环境变量。
 
 对于x86版，可尝试在~/.zshrc或~/.bash_profile手动添加以下环境变量。
 
@@ -281,22 +281,22 @@ eval "$(/usr/local/Homebrew/bin/brew shellenv)"
 
 ## 设置zsh为默认Shell
 
-Catalina及以上系统默认shell已为zsh，无需设置。
+Catalina 及以上系统默认 shell 已为 zsh，无需设置。
 
-可在终端输入以下命令查看当前使用的shell和已安装的shell。
+可在终端输入以下命令查看当前使用的 shell 和已安装的 shell。
 
 ```
 echo $SHELL
 cat /etc/shells
 ```
 
-若未安装zsh，可通过以下命令安装。
+若未安装 zsh，可通过以下命令安装。
 
 ```
 brew install zsh
 ```
 
-输入以下命令，更换默认shell为zsh，重启终端生效。
+输入以下命令，更换默认 shell 为 zsh，重启终端生效。
 
 ```
 chsh -s /bin/zsh
@@ -306,7 +306,7 @@ chsh -s /bin/zsh
 
 ### 安装
 
-oh-my-zsh用于美化zsh终端，采用下列命令安装oh-my-zsh。
+oh-my-zsh 用于美化 zsh 终端，采用下列命令安装 oh-my-zsh。
 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -318,7 +318,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 sudo vim ~/.zshrc
 ```
 
-按i键以修改文件。修改`ZSH_THEME`，即可修改oh-my-zsh的主题。oh-my-zsh的GitHub Wiki页面提供了主题列表。
+按 i 键以修改文件。修改`ZSH_THEME`，即可修改 oh-my-zsh 的主题。oh-my-zsh 的 GitHub Wiki 页面提供了主题列表。
 
 ```
 https://github.com/robbyrussell/oh-my-zsh/wiki/themes
@@ -336,13 +336,13 @@ ZSH_THEME="agnoster"
 DEFAULT_USER=$USER
 ```
 
-修改完成后，需运行以下命令以更新zsh配置。
+修改完成后，需运行以下命令以更新 zsh 配置。
 
 ```
 source ~/.zshrc
 ```
 
-使用agnoster主题需要安装Powerline字体。在终端运行以下命令。
+使用 agnoster 主题需要安装 Powerline 字体。在终端运行以下命令。
 
 ```
 git clone https://github.com/powerline/fonts.git --depth=1
@@ -350,14 +350,14 @@ cd fonts
 ./install.sh
 ```
 
-在终端菜单点击偏好设置，在描述文件选项卡新建一个描述文件，将文本的字体修改为Powerline系的字体，注意需要在字体集中选择所有字体才能找到。保存后将该配置文件设置为默认，然后重启终端即可。
+在终端菜单点击偏好设置，在描述文件选项卡新建一个描述文件，将文本的字体修改为 Powerline 系的字体，注意需要在字体集中选择所有字体才能找到。保存后将该配置文件设置为默认，然后重启终端即可。
 
-若希望改变主题默认配色，可在配置文件中配置相应的ANSI颜色。
+若希望改变主题默认配色，可在配置文件中配置相应的 ANSI 颜色。
 
 
 ### 外置主题
 
-除使用oh-my-zsh内置主题，也可安装其它外置主题。
+除使用 oh-my-zsh 内置主题，也可安装其它外置主题。
 
 #### Powerlevel10k
 
@@ -374,13 +374,13 @@ POWERLEVEL9K_MODE="nerdfont-complete"
 ZSH_THEME="powerlevel10k/powerlevel10k
 ```
 
-该主题需要使用Nerd Fonts。打开以下链接，下载Hack.zip后解压，安装其中的所有字体。
+该主题需要使用 Nerd Fonts。打开以下链接，下载 Hack.zip 后解压，安装其中的所有字体。
 
 ```
 https://github.com/ryanoasis/nerd-fonts/releases
 ```
 
-完成后在终端的偏好设置中，将配置文件的字体设置为Hack Nerd Font。在终端自动配置流程将被触发，若未被触发，可运行以下命令。
+完成后在终端的偏好设置中，将配置文件的字体设置为 Hack Nerd Font。在终端自动配置流程将被触发，若未被触发，可运行以下命令。
 
 ```
 p10k configure
@@ -439,7 +439,7 @@ cd autojump
 ./install.py or ./uninstall.py
 ```
 
-也可通过brew安装。
+也可通过 brew 安装。
 
 ```
 brew install autojump
@@ -461,7 +461,7 @@ source $ZSH/custom/plugins/incr/incr*.zsh
 
 ## proxychains-ng
 
-proxychains-ng用于终端翻墙，可用Homebrew安装。
+proxychains-ng 用于终端翻墙，可用 Homebrew 安装。
 
 ```
 brew install proxychains-ng
@@ -503,7 +503,7 @@ pc curl http://www.google.com
 
 # 终端命令
 
-macOS中用`\40`代表空格。
+macOS 中用`\40`代表空格。
 
 ## 磁盘工具添加调试菜单
 
@@ -525,7 +525,7 @@ mdimport /System/Library/Frameworks
 xcode-select --install
 ```
 
-若提示`不能下载该软件，因为网络出现问题`，可打开以下链接，并搜索`Command Line`。可以通过在Mac App Store搜索Xcode，通过查看适合本机系统的Xcode版本以确定应当使用的Command Line版本。下载后安装即可。
+若提示`不能下载该软件，因为网络出现问题`，可打开以下链接，并搜索`Command Line`。可以通过在 Mac App Store 搜索 Xcode，通过查看适合本机系统的 Xcode 版本以确定应当使用的 Command Line 版本。下载后安装即可。
 
 ```
 https://developer.apple.com/download/more/
@@ -879,7 +879,7 @@ defaults write com.apple.systempreferences AttentionPrefBundleIDs 0 && killall D
 
 ## 配置Safari的开发功能
 
-或打开Safari后选择`偏好设置`，勾选`高级`选项卡下的`在菜单栏显示开发菜单`，也可达到相同效果。
+或打开 Safari 后选择`偏好设置`，勾选`高级`选项卡下的`在菜单栏显示开发菜单`，也可达到相同效果。
 
 ```
 // 开启
@@ -891,7 +891,7 @@ defaults write com.apple.Safari IncludeInternalDebugMenu 0
 
 ## 制作Mac安装盘
 
-以Sierra安装包为例。
+以 Sierra 安装包为例。
 
 ```
 sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/Sierra --applicationpath /Applications/Install\ macOS\ Sierra.app --nointeraction
@@ -943,7 +943,7 @@ exec /bin/bash
 
 ## 查看EFI版本
 
-EFI32或EFI64。
+EFI32 或 EFI64。
 
 ```
 ioreg -l -p IODeviceTree | grep firmware-abi
@@ -967,32 +967,8 @@ https://hyper.is/
 
 # 参考教程
 
-## Mac terminal 清屏快捷键
-
-```
-https://blog.csdn.net/u010164190/article/details/78622884
-```
-
-## Homebrew国内如何自动安装（国内地址）
-
-```
-https://zhuanlan.zhihu.com/p/111014448
-```
-
-## 这篇 iTerm2 + Oh My Zsh 教程手把手让你成为这条街最靓的仔
-
-```
-https://segmentfault.com/a/1190000022813972
-```
-
-## 镜像快速安装Homebrew教程
-
-```
-https://brew.idayer.com/
-```
-
-## Can you install disabled Homebrew packages?
-
-```
-https://stackoverflow.com/questions/73586208/can-you-install-disabled-homebrew-packages/73595534
-```
+> [Mac terminal 清屏快捷键](https://blog.csdn.net/u010164190/article/details/78622884)  
+> [Homebrew国内如何自动安装（国内地址）](https://zhuanlan.zhihu.com/p/111014448)  
+> [这篇 iTerm2 + Oh My Zsh 教程手把手让你成为这条街最靓的仔](https://segmentfault.com/a/1190000022813972)  
+> [镜像快速安装Homebrew教程](https://brew.idayer.com/)  
+> [Can you install disabled Homebrew packages?](https://stackoverflow.com/questions/73586208/can-you-install-disabled-homebrew-packages/73595534)  
