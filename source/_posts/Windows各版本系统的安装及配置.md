@@ -1,25 +1,16 @@
 ---
-title: Windows各版本系统的安装及配置
+title: Windows 各版本系统的安装及配置
 categories: Windows
 abbrlink: Windows-Installation
-date: 2020-04-09 00:59:29
+date: 2020-04-14 00:00:00
 tags:
 ---
 
 ![](topic.jpg)
 
-不同版本的Windows在现代电脑上安装方法并不相同。通过相关配置，可以运行较旧的Windows版本。
+不同版本的 Windows 在现代电脑上安装方法并不相同。通过相关配置，可以运行较旧的 Windows 版本。
 
 <!-- more -->
-
-# TODOS
-
-```
-搭建KMS服务器
-https://blog.csdn.net/gsls200808/article/details/50357921
-https://blog.csdn.net/gsls200808/article/details/50364104
-https://blog.csdn.net/gsls200808/article/details/72773249
-```
 
 # 系统支持性
 
@@ -42,7 +33,7 @@ https://blog.csdn.net/gsls200808/article/details/72773249
 
 ## 镜像与软件
 
-从以下链接可以获取官方安装包，主要分为自解压包和ISO镜像两种。
+从以下链接可以获取官方安装包，主要分为自解压包和 ISO 镜像两种。
 
 ```
 # 推荐，可获得原版系统
@@ -72,7 +63,7 @@ https://www.thecollectionbook.info/information/downloads/
 https://github.com/pbatard/Fido
 ```
 
-对于Windows 10，可打开以下链接并按F12，切换为手机浏览视图即可看到下载按钮。
+对于 Windows 10，可打开以下链接并按 F12，切换为手机浏览视图即可看到下载按钮。
 
 ```
 https://www.microsoft.com/zh-cn/software-download/windows10/
@@ -81,20 +72,20 @@ https://www.microsoft.com/zh-cn/software-download/windows10/
 ## 驱动
 
 ```
-// 推荐，离线驱动包大全
+# 推荐，离线驱动包大全
 http://sdi-tool.org/
 https://www.52pojie.cn/thread-1060773-1-1.html
 
-// Windows 2000/XP驱动
+# Windows 2000/XP驱动
 https://labmice.techtarget.com/drivers/default.htm
 
-// Windows 2000/XP/2003驱动包
+# Windows 2000/XP/2003驱动包
 http://driverpacks.net/driverpacks/windows/xp
 ```
 
 # 各系统安装
 
-对于虚拟机，若为ISO镜像，直接挂载安装即可。若为自解压包，则需要先把解压出来的文件全部复制到要安装分区的根目录，然后进入DOS环境，打开Setup.exe完成安装。DOS环境可从微PE工具箱制作的U盘进入，也可通过挂载微PE工具箱或者纯DOS的ISO镜像的方式。
+对于虚拟机，若为 ISO 镜像，直接挂载安装即可。若为自解压包，则需要先把解压出来的文件全部复制到要安装分区的根目录，然后进入 DOS 环境，打开 Setup.exe 完成安装。DOS 环境可从微 PE 工具箱制作的 U 盘进入，也可通过挂载微 PE 工具箱或者纯 DOS 的 ISO 镜像的方式。
 
 对于实体机，可能需要在虚拟机的安装流程基础上添加步骤。
 
@@ -110,7 +101,7 @@ https://jamesfriend.com.au/pce-js/ibmpc-games/
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://www.jb51.net/softs/609407.html
@@ -118,17 +109,17 @@ https://www.jb51.net/softs/609407.html
 
 ### 虚拟机安装
 
-直接挂载ISO。由于安装程序没有格式化工具，如果找不到安装磁盘，则先退出安装程序，进入纯DOS命令行环境，然后输入`fdisk`，按照提示进行分区操作（按1后再按1）。分区完成后需要格式化，命令为`format <盘符>`。完成后重启即可。
+直接挂载 ISO。由于安装程序没有格式化工具，如果找不到安装磁盘，则先退出安装程序，进入纯 DOS 命令行环境，然后输入`fdisk`，按照提示进行分区操作（按 1 后再按 1）。分区完成后需要格式化，命令为`format <盘符>`。完成后重启即可。
 
-安装程序完成后不要马上推出ISO，再次进入ISO时将提示安装CDROM支持。选择安装，完成后再推出ISO。
+安装程序完成后不要马上推出 ISO，再次进入 ISO 时将提示安装 CDROM 支持。选择安装，完成后再推出 ISO。
 
-如果无法完成操作，可以先挂载另一个DOS版本的ISO镜像，完成分区后再挂载原安装镜像。也可以挂载微PE工具箱的ISO镜像，通过内置的DOS工具箱完成操作。
+如果无法完成操作，可以先挂载另一个 DOS 版本的 ISO 镜像，完成分区后再挂载原安装镜像。也可以挂载微 PE 工具箱的 ISO 镜像，通过内置的 DOS 工具箱完成操作。
 
 ## MS-DOS 7.10
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://www.jb51.net/softs/86539.html
@@ -136,11 +127,11 @@ https://www.jb51.net/softs/86539.html
 
 ### 虚拟机安装
 
-直接挂载ISO即可，安装程序会自动创建FAT分区并进行安装。建议选择`Full Installation`，允许所有Add-On的安装，但不要允许其Autorun。若遇到三个选项，选择Both，其它的都是Use Default即可。
+直接挂载 ISO 即可，安装程序会自动创建 FAT 分区并进行安装。建议选择`Full Installation`，允许所有 Add-On 的安装，但不要允许其 Autorun。若遇到三个选项，选择 Both，其它的都是 Use Default 即可。
 
 ### 实体机安装
 
-首先通过微PE工具箱的DOS工具箱功能，使电脑进入DOS模式。工具箱中带有LOADISO程序，可挂载ISO，若无此工具则可自行下载。通过`LOADISO <镜像名>`挂载ISO安装镜像并切换到目录进行安装即可。注意，安装完成后需在Windows下通过Diskgenius等软件将MS-DOS所在分区设为活动分区，开机时才会进入到DOS系统。
+首先通过微 PE 工具箱的 DOS 工具箱功能，使电脑进入 DOS 模式。工具箱中带有 LOADISO 程序，可挂载 ISO，若无此工具则可自行下载。通过`LOADISO <镜像名>`挂载 ISO 安装镜像并切换到目录进行安装即可。注意，安装完成后需在 Windows 下通过 Diskgenius 等软件将 MS-DOS 所在分区设为活动分区，开机时才会进入到 DOS 系统。
 
 ### 配置
 
@@ -148,11 +139,11 @@ https://www.jb51.net/softs/86539.html
 
 ##### 安装方法
 
-挂载ISO安装包可用LOADISO，挂载IMG镜像可用FAKEDISK。
+挂载 ISO 安装包可用 LOADISO，挂载 IMG 镜像可用 FAKEDISK。
 
-若软件已解压，则将安装包放到适当位置，在DOS下进入安装路径并执行`SETUP`或`INSTALL`即可。
+若软件已解压，则将安装包放到适当位置，在 DOS 下进入安装路径并执行`SETUP`或`INSTALL`即可。
 
-若软件为IMG包，在虚拟机上可直接挂载，在实体机上需提前整合为一个IMG文件再通过FAKEDISK进行挂载，也可直接把所有文件从IMG提取出来后再进行安装。可使用UltraISO进行IMG的整合或提取。
+若软件为 IMG 包，在虚拟机上可直接挂载，在实体机上需提前整合为一个 IMG 文件再通过 FAKEDISK 进行挂载，也可直接把所有文件从 IMG 提取出来后再进行安装。可使用 UltraISO 进行 IMG 的整合或提取。
 
 ##### 软件库
 
@@ -224,7 +215,7 @@ https://winworldpc.com/product/dbase/v
 https://www.cr173.com/soft/20363.html
 ```
 
-#### 添加NTFS支持
+#### 添加 NTFS 支持
 
 用`NTFS4DOS`即可。
 
@@ -235,24 +226,24 @@ https://www.cr173.com/soft/20363.html
 为命令提供别名。
 
 ```
-// 定义
+# 定义
 doskey a=echo hello
 
-// 使用
+# 使用
 a // 显示hello
 ```
 
 ### 说明
 
-#### DOS挂载镜像后的盘符
+#### DOS 挂载镜像后的盘符
 
-挂载的ISO通常在CD-ROM设备上，如D:\，R:\等，DOS在启动时有记录。软盘或系统文件一般在A:\。
+挂载的 ISO 通常在 CD-ROM 设备上，如 D:\，R:\等，DOS 在启动时有记录。软盘或系统文件一般在 A:\。
 
 ## Windows 1.0
 
 ### 下载
 
-该Windows 1.0镜像为IMG格式。
+该 Windows 1.0 镜像为 IMG 格式。
 
 ```
 https://winworldpc.com/product/windows-10/104
@@ -266,9 +257,9 @@ https://copy.sh/v86/?profile=windows1
 
 ### 虚拟机安装
 
-首先安装好MS-DOS 7.10，然后向虚拟机添加一个软盘驱动器设备，在该设备上挂载Windows 1.0的IMG镜像。进入DOS环境，输入软盘盘符（通常为A:），并通过dir命令查看当前目录文件。通过`cd <目录>`命令可以切换到指定目录位置，切换到含有SETUP.EXE的目录后，直接输入`SETUP.EXE`进入Windows 1.0的安装程序，注意Graphics Mode应选择6。
+首先安装好 MS-DOS 7.10，然后向虚拟机添加一个软盘驱动器设备，在该设备上挂载 Windows 1.0 的 IMG 镜像。进入 DOS 环境，输入软盘盘符（通常为 A:），并通过 dir 命令查看当前目录文件。通过`cd <目录>`命令可以切换到指定目录位置，切换到含有 SETUP.EXE 的目录后，直接输入`SETUP.EXE`进入 Windows 1.0 的安装程序，注意 Graphics Mode 应选择 6。
 
-安装完成后会回到DOS环境，输入以下命令即可运行Windows 1.0。
+安装完成后会回到 DOS 环境，输入以下命令即可运行 Windows 1.0。
 
 ```
 CD WINDOWS
@@ -277,9 +268,9 @@ WIN
 
 ### 实体机安装
 
-首先安装好DOS，然后在DOS环境下通过`FAKEDISK <镜像名>`在DOS下进行IMG挂载，若无此工具则可自行下载。挂载后进入安装包并执行`SETUP`即可。
+首先安装好 DOS，然后在 DOS 环境下通过`FAKEDISK <镜像名>`在 DOS 下进行 IMG 挂载，若无此工具则可自行下载。挂载后进入安装包并执行`SETUP`即可。
 
-注意，由于`FAKEDISK`一次只能挂载一个IMG镜像，因此需提前将多个IMG文件合成为一个IMG文件，若系统在安装过程中提示插入另一张软盘，直接回车即可。
+注意，由于`FAKEDISK`一次只能挂载一个 IMG 镜像，因此需提前将多个 IMG 文件合成为一个 IMG 文件，若系统在安装过程中提示插入另一张软盘，直接回车即可。
 
 ### 配置
 
@@ -295,7 +286,7 @@ http://toastytech.com/guis/win1x2x.html
 
 ### 下载
 
-该Windows 2.0镜像为IMG格式。
+该 Windows 2.0 镜像为 IMG 格式。
 
 ```
 https://winworldpc.com/product/windows-20/20
@@ -303,9 +294,9 @@ https://winworldpc.com/product/windows-20/20
 
 ### 虚拟机安装
 
-首先安装好MS-DOS 6.22，然后添加一个软盘驱动器设备并挂载Windows 2.0的IMG镜像，一般为SETUP.IMG。
+首先安装好 MS-DOS 6.22，然后添加一个软盘驱动器设备并挂载 Windows 2.0 的 IMG 镜像，一般为 SETUP.IMG。
 
-安装前需要先配置DOS环境以避免安装程序出错。输入`edit config.sys`命令，将打开文本编辑器。清空并写入以下内容，保存并退出。
+安装前需要先配置 DOS 环境以避免安装程序出错。输入`edit config.sys`命令，将打开文本编辑器。清空并写入以下内容，保存并退出。
 
 ```
 DEVICE=C:\DOS\SETVER.EXE
@@ -326,13 +317,13 @@ WIN86
 
 #### 软件安装
 
-与Windows 1.0相同。
+与 Windows 1.0 相同。
 
 ## Windows 3.x
 
 ### 下载
 
-该Windows 3.x镜像为自解压包格式。
+该 Windows 3.x 镜像为自解压包格式。
 
 ```
 ed2k://|file|SC_Windows31.exe|8472384|84037137FFF3932707F286EC852F2ABC|/
@@ -346,15 +337,15 @@ https://jamesfriend.com.au/pce-js/ibmpc-win/
 
 ### 虚拟机安装
 
-解压得到文件并用UltraISO将所有文件打包为ISO或IMG镜像（无需引导文件）。安装MS-DOS 7.10，然后挂载打包好的镜像，进入该分区，切换到安装包目录并运行SETUP.EXE即可。
+解压得到文件并用 UltraISO 将所有文件打包为 ISO 或 IMG 镜像（无需引导文件）。安装 MS-DOS 7.10，然后挂载打包好的镜像，进入该分区，切换到安装包目录并运行 SETUP.EXE 即可。
 
-也可在DOS环境安装好以后直接复制镜像文件到虚拟机分区根目录，再在根目录下直接运行安装程序。
+也可在 DOS 环境安装好以后直接复制镜像文件到虚拟机分区根目录，再在根目录下直接运行安装程序。
 
-安装完成后，在DOS输入`WIN`即可进入Windows 3.x。
+安装完成后，在 DOS 输入`WIN`即可进入 Windows 3.x。
 
 ### 实体机安装
 
-过程与虚拟机安装基本一致。若在启动时遇到错误，则在DOS下执行`EDIT SYSTEM.INI`，添加以下代码并保存。
+过程与虚拟机安装基本一致。若在启动时遇到错误，则在 DOS 下执行`EDIT SYSTEM.INI`，添加以下代码并保存。
 
 ```
 MaxPhysPage=30000
@@ -365,7 +356,7 @@ PageOverCommit=1
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://cloudflare-ipfs.com/ipfs/QmXnj2yY4bnZjZStbjwdfxrYoUf9e4TSrpjT9Nnkz3J6kx/Microsoft%20Windows%20XP%20(''Whistler''%205.1.2419.1%20Professional%20B1).7z
@@ -383,7 +374,7 @@ RBDC9-VTRC8-D7972-J97JY-PRVMG
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://cloudflare-ipfs.com/ipfs/QmNTSNtx8VxezgzEqeGBm4ZNd84JBn8RoMtD9qfosvKTqy/Microsoft%20Windows%20XP%20(''Whistler''%205.1.2446.1%20Professional%20B2).7z
@@ -397,7 +388,7 @@ https://cloudflare-ipfs.com/ipfs/QmNTSNtx8VxezgzEqeGBm4ZNd84JBn8RoMtD9qfosvKTqy/
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://winworldpc.com/product/windows-xp/rc-2
@@ -416,7 +407,7 @@ FP2SD-SI7RB-H4TYP-R460Q-TAYO2
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://winworldpc.com/product/windows-longhorn-vis/post-reset
@@ -437,7 +428,7 @@ TCP8W-T8PQJ-WWRRH-QH76C-99FBW
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://winworldpc.com/product/windows-longhorn-vis/pre-reset
@@ -445,13 +436,13 @@ https://winworldpc.com/product/windows-longhorn-vis/pre-reset
 
 ### 虚拟机安装
 
-虚拟机类型选择XP，直接安装即可。
+虚拟机类型选择 XP，直接安装即可。
 
 ## Windows FLP
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://share.pipipan.com/info/1aq518408
@@ -470,7 +461,7 @@ MRX3F-47B9T-2487J-KWKMF-RPWBY
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://winworldpc.com/product/windows-95/chicago
@@ -482,11 +473,11 @@ https://winworldpc.com/product/windows-95/chicago
 
 ## Windows Neptune
 
-类似Windows 2000的系统。
+类似 Windows 2000 的系统。
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://winworldpc.com/product/windows-neptune/build-5111
@@ -505,7 +496,7 @@ https://winworldpc.com/product/windows-neptune/build-5111
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://winworldpc.com/product/windows-nashville/build-999
@@ -519,7 +510,7 @@ https://winworldpc.com/product/windows-nashville/build-999
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://winworldpc.com/product/windows-nt-3x/351
@@ -541,11 +532,11 @@ https://winworldpc.com/product/windows-nt-3x/patches
 
 ## Windows 95
 
-Windows 95基于MS-DOS，行为与Windows 3.x相同。启动Windows 95时，都会先启动MS-DOS，然后Command.com在Windows目录中启动win.com。
+Windows 95 基于 MS-DOS，行为与 Windows 3.x 相同。启动 Windows 95 时，都会先启动 MS-DOS，然后 Command.com 在 Windows 目录中启动 win.com。
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://www.jb51.net/softs/160869.html
@@ -559,7 +550,7 @@ https://github.com/felixrieseberg/windows95
 
 ### 虚拟机安装
 
-由于Windows 95无法自动识别ISO，因此需要先加载MS-DOS 7.10的安装镜像进行分区。完成格式化后不要安装DOS，改挂载Windows 95镜像，选择Boot from CD-ROM，然后选择Start Windows 95 Setup from CD-ROM即可。如果无法正确进入安装程序，可手动切换到安装目录并执行`SETUP`进行安装。安装采用以下密钥即可。
+由于 Windows 95 无法自动识别 ISO，因此需要先加载 MS-DOS 7.10 的安装镜像进行分区。完成格式化后不要安装 DOS，改挂载 Windows 95 镜像，选择 Boot from CD-ROM，然后选择 Start Windows 95 Setup from CD-ROM 即可。如果无法正确进入安装程序，可手动切换到安装目录并执行`SETUP`进行安装。安装采用以下密钥即可。
 
 ```
 35296-OEM-0017544-62261
@@ -567,16 +558,16 @@ https://github.com/felixrieseberg/windows95
 
 ### 实体机安装
 
-与虚拟机安装基本一致，注意安装路径为`C:\WINDOWS`。安装完成后，需要修复系统的CPU配置以正常启动系统。
+与虚拟机安装基本一致，注意安装路径为`C:\WINDOWS`。安装完成后，需要修复系统的 CPU 配置以正常启动系统。
 
-下载以下CPU速度修复补丁。
+下载以下 CPU 速度修复补丁。
 
 ```
 http://lonecrusader.x10host.com/fix95cpu.html
 ```
 
 
-提取FIX95CPU.IMA，并将对应文件复制到系统盘覆盖，具体路径如下。
+提取 FIX95CPU.IMA，并将对应文件复制到系统盘覆盖，具体路径如下。
 
 |      IMA内的路径      |           复制到           |
 |-----------------------|----------------------------|
@@ -587,15 +578,15 @@ http://lonecrusader.x10host.com/fix95cpu.html
 
 ### 配置
 
-#### 进入DOS
+#### 进入 DOS
 
-启动时按F8。
+启动时按 F8。
 
 #### 软件安装
 
 ##### Microsoft Plus! 95
 
-Windows 95补充包，提供附加功能。
+Windows 95 补充包，提供附加功能。
 
 ```
 https://winworldpc.com/product/plus/1995
@@ -623,7 +614,7 @@ http://dl.pcgames.com.cn/download/47923.html
 
 ##### Internet Explorer 5.5 Service Pack 2
 
-推荐先安装Internet Explorer 4.0获得Windows桌面更新。
+推荐先安装 Internet Explorer 4.0 获得 Windows 桌面更新。
 
 ```
 https://winworldpc.com/product/internet-explorer/ie-55
@@ -663,20 +654,20 @@ http://www.oldversion.com/windows/download/winamp-2-81
 ##### IrfanView
 
 ```
-// 源程序
+# 源程序
 https://www.irfanview.com/
 
-// 语言包
+# 语言包
 https://www.irfanview.net/lang/irfanview_lang_chinese.exe
 ```
 
 ##### Total Command
 
 ```
-// 源程序
+# 源程序
 https://www.ghisler.com/amazons3.php
 
-// 插件包
+# 插件包
 http://xbeta.info/tc/plugins.htm
 ```
 
@@ -742,7 +733,7 @@ https://www.malavida.com/en/soft/netmeeting/download
 https://www.softpedia.com/get/System/System-Miscellaneous/Microsoft-Agent.shtml#download
 ```
 
-##### Cih-kill终结版
+##### Cih-kill 终结版
 
 ```
 http://pan.baidu.com/share/link?shareid=2928938278&uk=1883208263
@@ -766,13 +757,13 @@ ed2k://|file|SC_WIN98SE.exe|278540368|939909E688963174901F822123E55F7E|/
 
 ### 虚拟机安装
 
-与Windows 3.x基本一致。
+与 Windows 3.x 基本一致。
 
 ### 实体机安装
 
 在执行安装程序时，需要通过`setup /p i`命令，否则将出现`0E 0028:ff02847b`错误。
 
-安装完成后若出现内存问题，需修改SYSTEM.INI和SYSTEM.DB。进入PE环境，打开系统根目录下的SYSTEM.INI和SYSTEM.DB，添加以下代码并保存。
+安装完成后若出现内存问题，需修改 SYSTEM.INI 和 SYSTEM.DB。进入 PE 环境，打开系统根目录下的 SYSTEM.INI 和 SYSTEM.DB，添加以下代码并保存。
 
 ```
 [386Enh]
@@ -788,9 +779,9 @@ MaxFileCache=65536
 
 ### 配置
 
-#### 进入DOS
+#### 进入 DOS
 
-启动时按Ctrl。
+启动时按 Ctrl。
 
 #### 补丁安装
 
@@ -818,21 +809,21 @@ rem load=...
 rem run=...
 ```
 
-若仍无效，则删除或重命名CONFIG.SYS与AUTOEXEC.BAT，使其启动时不起作用。
+若仍无效，则删除或重命名 CONFIG.SYS 与 AUTOEXEC.BAT，使其启动时不起作用。
 
 若仍无效，则在设备管理器中转到系统设备，然后转到高级电源管理。单击设置选项卡，然后取消选中启用电源管理。
 
 若仍无效，则进入控制面板-电源管理，将关闭显示器和关闭硬盘都设置为从不。
 
-若仍无效，则在设备管理器中转到系统设备，双击PCI Bus，进入IRQ指导选项卡，取消勾选使用IRQ指导。
+若仍无效，则在设备管理器中转到系统设备，双击 PCI Bus，进入 IRQ 指导选项卡，取消勾选使用 IRQ 指导。
 
 若仍无效，则在设备管理器中转到系统设备，选择即插即用BIOS-设置，勾选禁用NVRAM/ESCD更新。
 
-若仍无效，可尝试卸载杀毒程序，或禁用BIOS中的`Resume by Ring and LAN`。
+若仍无效，可尝试卸载杀毒程序，或禁用 BIOS 中的`Resume by Ring and LAN`。
 
 ### 安装程序参数说明
 
-包括Windows 95和Windows 98。
+包括 Windows 95 和 Windows 98。
 
 |          参数         |                                                                                                                                         解释                                                                                                                                        |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -884,7 +875,7 @@ rem run=...
 
 ### 下载
 
-该Windows ME镜像为自解压包格式。
+该 Windows ME 镜像为自解压包格式。
 
 ```
 ed2k://|file|SC_WINME.exe|174098008|EEBAABADCD0162DA9F66F68E91B1B92A|/
@@ -892,7 +883,7 @@ ed2k://|file|SC_WINME.exe|174098008|EEBAABADCD0162DA9F66F68E91B1B92A|/
 
 ### 虚拟机安装
 
-安装流程与安装Windows 98的步骤一致。如果安装过程中遇到以下错误之一，则在DOS环境下执行`edit config.sys`，删掉所有与386有关的行，并重新运行安装程序即可。
+安装流程与安装 Windows 98 的步骤一致。如果安装过程中遇到以下错误之一，则在 DOS 环境下执行`edit config.sys`，删掉所有与 386 有关的行，并重新运行安装程序即可。
 
 ```
 Standard Mode: Invaild DPMI return.
@@ -904,7 +895,7 @@ Standard Mode: Stack Overflow.
 
 ### 实体机安装
 
-安装完成后需修改SYSTEM.INI和SYSTEM.DB以解决内存问题。进入PE环境，打开系统根目录下的SYSTEM.INI和SYSTEM.DB，添加以下代码并保存。
+安装完成后需修改 SYSTEM.INI 和 SYSTEM.DB 以解决内存问题。进入 PE 环境，打开系统根目录下的 SYSTEM.INI 和 SYSTEM.DB，添加以下代码并保存。
 
 ```
 [386Enh]
@@ -920,15 +911,15 @@ MaxFileCache=65536
 
 ### 配置
 
-#### 进入DOS
+#### 进入 DOS
 
-启动时按F8。
+启动时按 F8。
 
 ## Windows Chicago
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://winworldpc.com/product/windows-95/chicago
@@ -944,15 +935,15 @@ Beta Site ID: 101907
 Password: 999b4cb09
 ```
 
-装完后强制关机，然后进入fail safe mode才能够进到系统。
+装完后强制关机，然后进入 fail safe mode 才能够进到系统。
 
 ## Windows Nashville
 
-也被称为Windows 96。
+也被称为 Windows 96。
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://mega.nz/file/lJ8CTA6Q#f1nJ0YbcOde2nanjO15Lfnym-AXdGTXNK55lCZlpDmY
@@ -967,7 +958,7 @@ https://archive.org/details/WindowsNashvilleBuild999
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://winworldpc.com/product/windows-xp/beta-1
@@ -975,26 +966,26 @@ https://winworldpc.com/product/windows-xp/beta-1
 
 ### 虚拟机安装
 
-虚拟机类型选XP。安装前需到BIOS修改系统时间，具体如下。
+虚拟机类型选 XP。安装前需到 BIOS 修改系统时间，具体如下。
 
 ```
-// Windows Whister 2419
+# Windows Whister 2419
 2001/01/14
 
-// Windows Whister 2446
+# Windows Whister 2446
 2001/01/11
 
-// Windows Whister 2542
+# Windows Whister 2542
 2001/05/31
 ```
 
 密钥如下。
 
 ```
-// Windows Whister 2419
+# Windows Whister 2419
 RBDC9-VTRC8-D7972-J97JY-PRVMG
 
-// Windows Whister 2542
+# Windows Whister 2542
 BX6HT-MDJKW-H2J4X-BX67W-TVVFG
 ```
 
@@ -1002,7 +993,7 @@ BX6HT-MDJKW-H2J4X-BX67W-TVVFG
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 http://www.xitongpe.com/win/39.html
@@ -1020,7 +1011,7 @@ http://www.xitongpe.com/win/39.html
 
 ### 实体机安装
 
-由于Windows NT 4.0无法通过WinNTSetup安装，因此需要通过恢复gho镜像的方式。镜像可通过虚拟机备份得到。
+由于 Windows NT 4.0 无法通过 WinNTSetup 安装，因此需要通过恢复 gho 镜像的方式。镜像可通过虚拟机备份得到。
 
 ### 配置
 
@@ -1108,7 +1099,7 @@ https://www.microsoft.com/en-us/download/details.aspx?id=21995
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 ed2k://|file|ZRMPSEL_CN.iso|402690048|00D1BDA0F057EDB8DA0B29CF5E188788|/
@@ -1120,9 +1111,9 @@ ed2k://|file|ZRMPSEL_CN.iso|402690048|00D1BDA0F057EDB8DA0B29CF5E188788|/
 
 ### 实体机安装
 
-Windows 2000无法通过WinNTSetup安装，通过gho镜像安装时会出现蓝屏错误。而安装程序在高于Windows 2000的系统运行时会出现已安装更高版本的提示。
+Windows 2000 无法通过 WinNTSetup 安装，通过 gho 镜像安装时会出现蓝屏错误。而安装程序在高于 Windows 2000 的系统运行时会出现已安装更高版本的提示。
 
-因此需先安装好Windows NT 4.0，然后打开Windows 2000的安装包进行覆盖安装。
+因此需先安装好 Windows NT 4.0，然后打开 Windows 2000 的安装包进行覆盖安装。
 
 ### 配置
 
@@ -1130,59 +1121,59 @@ Windows 2000无法通过WinNTSetup安装，通过gho镜像安装时会出现蓝�
 
 ##### 工具
 
-可使用`360漏洞修复独立版`、`金山卫士系统漏洞修复工具`、`RGSec漏洞修复2013`等。
+可使用`360 漏洞修复独立版`、`金山卫士系统漏洞修复工具`、`RGSec 漏洞修复 2013`等。
 
 ##### 官方更新补丁
 
 需要的安装包可在以下链接找到。
 
 ```
-// 总补丁包
+# 总补丁包
 https://pan.baidu.com/s/1boKcmxp#list/path=%2F
 
-// Service Pack 4
+# Service Pack 4
 http://retro.remotecpu.com/files/win2k/updates/W2KSP4_EN.EXE
 
-// KB835732
+# KB835732
 http://retro.remotecpu.com/files/win2k/updates/Windows2000-KB835732-x86-ENU.EXE
 
-// Microsoft Internet Explorer 6
+# Microsoft Internet Explorer 6
 http://www.oldapps.com/internet_explorer.php?old_internet_explorer=11
 
-// Windows Update Agent
+# Windows Update Agent
 http://download.windowsupdate.com/windowsupdate/redist/standalone/7.4.7600.226/windowsupdateagent30-x86.exe
 http://greyghost.mooo.com/w2kadventures/WindowsUpdateAgent30-x86.exe
 
-// DirectX 9.0c
+# DirectX 9.0c
 http://retro.remotecpu.com/files/win2k/updates/DirectX-90c-x86-x86_64-Mar2009.zip
 
-// KB975337
+# KB975337
 http://retro.remotecpu.com/files/win2k/updates/WindowsXP-KB975337-x86-ENU.exe
 
-// Microsoft .Net 1.1 Framework
+# Microsoft .Net 1.1 Framework
 http://retro.remotecpu.com/files/win2k/updates/dotnet1.1fx.exe
 
-// Microsoft .Net 2.0 SP1 Framework
+# Microsoft .Net 2.0 SP1 Framework
 http://retro.remotecpu.com/files/win2k/updates/NetFx20SP1_x86.exe
 
-// Visual C++ 2005 Runtimes
+# Visual C++ 2005 Runtimes
 http://retro.remotecpu.com/files/win2k/updates/vc++_2005_redist_x86.exe
 
-// Visual C++ 2008 Runtimes
+# Visual C++ 2008 Runtimes
 http://retro.remotecpu.com/files/win2k/updates/vc++_2008sp1_redist_x86.exe
 ```
 
-首先需要安装Windows 2000 SP4和Windows 2000 SP4 Update Rollup 1，然后安装KB835732。为使用Windows Update，需要安装Microsoft Internet Explorer 6。然后安装Windows Update Agent。
+首先需要安装 Windows 2000 SP4 和 Windows 2000 SP4 Update Rollup 1，然后安装 KB835732。为使用 Windows Update，需要安装 Microsoft Internet Explorer 6。然后安装 Windows Update Agent。
 
-打开Windows Update，保证允许ActiveX运行，并始终信任Microsoft Corporation的内容。若出现问题，则可将Windows Update添加到受信任的区域，并在Internet选项-高级选项卡下勾选使用TLS 1.0、SSL 2.0和SSL 3.0。
+打开 Windows Update，保证允许 ActiveX 运行，并始终信任 Microsoft Corporation 的内容。若出现问题，则可将 Windows Update 添加到受信任的区域，并在 Internet 选项-高级选项卡下勾选使用 TLS 1.0、SSL 2.0 和 SSL 3.0。
 
-顺利打开Windows Update后，按照流程更新。完成后安装其它补丁即可。
+顺利打开 Windows Update 后，按照流程更新。完成后安装其它补丁即可。
 
 ##### 非官方更新补丁
 
 ###### Gurgelmyer's Unofficial Service Pack 5.1
 
-即USP5.1，建议在运行Windows Update前安装。
+即 USP5.1，建议在运行 Windows Update 前安装。
 
 ```
 http://retro.remotecpu.com/files/win2k/updates/Windows2000-UpdateServicePack-5.1.zip
@@ -1191,23 +1182,23 @@ https://www.majorgeeks.com/files/details/microsoft_windows_2000_unofficial_sp.ht
 
 ###### Gurgelmyer's Unofficial Update Rollup 2
 
-即UUR2，建议在运行Windows Update后安装。
+即 UUR2，建议在运行 Windows Update 后安装。
 
 ###### Gurgelmyer's Unofficial Update Rollup
 
-即UURollup。建议在运行Windows Update后安装，不能同时安装多个UURollup包。
+即 UURollup。建议在运行 Windows Update 后安装，不能同时安装多个 UURollup 包。
 
 先安装以下补丁。
 
 ```
-// Windows 2000 Update Pack
+# Windows 2000 Update Pack
 http://win2k.dyniform.net/windows-2000-update-pack.html
 
-// Gurgelmyer's Unofficial Update Rollup
+# Gurgelmyer's Unofficial Update Rollup
 http://retro.remotecpu.com/files/win2k/updates/Windows2000-UURollup-v11-d20141130-x86-ENU.7z
 ```
 
-启动注册表编辑器，定位到HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Nls\Language，修改右侧最下方的Default为0804，InstallLanguage为0409。代码的具体含义如下。
+启动注册表编辑器，定位到 HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Nls\Language，修改右侧最下方的 Default 为 0804，InstallLanguage 为 0409。代码的具体含义如下。
 
 | 代码 | 语言 |
 |------|------|
@@ -1215,17 +1206,17 @@ http://retro.remotecpu.com/files/win2k/updates/Windows2000-UURollup-v11-d2014113
 | 0411 | 日文 |
 | 0804 | 中文 |
 
-安装KB979683-v16a-ENU、KB935839-v30e-ENU、NET3.5 RTM for Extended Kernel，然后再装驱动。补丁下载地址如下。
+安装 KB979683-v16a-ENU、KB935839-v30e-ENU、NET3.5 RTM for Extended Kernel，然后再装驱动。补丁下载地址如下。
 
 ```
-// KB979683&KB935839
+# KB979683&KB935839
 http://blog.livedoor.jp/blackwingcat/archives/1299806.html
 
-// NET3.5 RTM for Extended Kernel
+# NET3.5 RTM for Extended Kernel
 http://blog.livedoor.jp/blackwingcat/archives/1095338.html
 ```
 
-再次进入注册表的相同路径，将Default的值改为0804，InstallLanguage的值改为0409。
+再次进入注册表的相同路径，将 Default 的值改为 0804，InstallLanguage 的值改为 0409。
 
 ##### 存档
 
@@ -1286,7 +1277,7 @@ https://faststone-capture.informer.com/download/#downloading
 https://xetbox.com/854/file
 ```
 
-##### 光影魔术手NeoImaging 3.1.2.104
+##### 光影魔术手 NeoImaging 3.1.2.104
 
 ```
 https://download.pchome.net/design/digipic/download-20642.html
@@ -1362,7 +1353,7 @@ http://retro.remotecpu.com/files/win2k/network/Firefox_Setup_12.0.exe
 
 ##### Firefox 43.0.1
 
-需要USP 5.1。
+需要 USP 5.1。
 
 ```
 http://retro.remotecpu.com/files/win2k/network/Firefox%20Setup%2043.0.1.exe
@@ -1370,7 +1361,7 @@ http://retro.remotecpu.com/files/win2k/network/Firefox%20Setup%2043.0.1.exe
 
 ##### Firefox 44.0.0
 
-需要USP 5.1和UURollup，通过Application Compatibility Launcher运行。
+需要 USP 5.1 和 UURollup，通过 Application Compatibility Launcher 运行。
 
 ```
 http://retro.remotecpu.com/files/win2k/network/Firefox%20Setup%2044.0.exe
@@ -1384,7 +1375,7 @@ http://www.oldversion.com/windows/download/macromedia-flash-player-11-1-102-55-i
 
 ##### Adobe Flash 20.0 Plugin for FF
 
-需要USP 5.1。
+需要 USP 5.1。
 
 ##### Opera 1202
 
@@ -1393,7 +1384,7 @@ http://get.opera.com/ftp/pub/opera/win/1202/zh-cn/
 http://retro.remotecpu.com/files/win2k/network/Opera_1202_int_Setup.exe
 ```
 
-##### QQ旋风 4.1.734
+##### QQ 旋风 4.1.734
 
 ```
 http://dl_dir.qq.com/invc/cyclone/QQDownload_Setup_41_734_401.exe
@@ -1465,7 +1456,7 @@ https://www.filehorse.com/download-media-player-classic-32/7649/download/
 https://www.filehorse.com/download-daum-potplayer-32/16503/download/
 ```
 
-##### QQ影音 3.8.897
+##### QQ 影音 3.8.897
 
 ```
 http://dldir1.qq.com/qqyy/pc/QQPlayer_Setup_38_897.exe
@@ -1569,7 +1560,7 @@ https://github.com/Stellarium/stellarium/releases/tag/stellarium-0-12-4
 http://www.jisuxz.com/down/29.html
 ```
 
-##### 精灵五笔98版 3.0.0.30
+##### 精灵五笔 98 版 3.0.0.30
 
 ```
 http://soft.miiyun.com/pcsoftware/shrf/432918.html
@@ -1797,7 +1788,7 @@ http://www.downza.cn/soft/25565.html
 http://www.xz7.com/downinfo/82542.html
 ```
 
-##### 中文之星2006
+##### 中文之星 2006
 
 ```
 http://www.piaodown.com/soft/13194.htm
@@ -1860,7 +1851,7 @@ http://retro.remotecpu.com/files/win2k/network/mirc732.exe
 
 ##### mIRC 7.43
 
-需要USP 5.1。
+需要 USP 5.1。
 
 ```
 http://retro.remotecpu.com/files/win2k/network/mirc743.exe
@@ -1874,7 +1865,7 @@ http://retro.remotecpu.com/files/win2k/apps/qbittorrent-2-9-7-win.exe
 
 ##### qBittorrent 3.3.3
 
-需要USP 5.1。
+需要 USP 5.1。
 
 ```
 http://retro.remotecpu.com/files/win2k/network/qbittorrent_3.3.3_setup.exe
@@ -1979,7 +1970,7 @@ http://retro.remotecpu.com/files/win2k/desktop/transbar-1.4.2_setup.exe
 
 ##### Calibre 1.48.0
 
-需要USP 5.1。
+需要 USP 5.1。
 
 ```
 http://retro.remotecpu.com/files/win2k/apps/calibre-1.48.0-winxp.msi
@@ -1987,7 +1978,7 @@ http://retro.remotecpu.com/files/win2k/apps/calibre-1.48.0-winxp.msi
 
 ##### Google Picasa v3.9
 
-需要USP 5.1。
+需要 USP 5.1。
 
 ```
 http://retro.remotecpu.com/files/win2k/apps/picasa39-setup.exe
@@ -1995,7 +1986,7 @@ http://retro.remotecpu.com/files/win2k/apps/picasa39-setup.exe
 
 ##### VLC 2.22
 
-需要USP 5.1和UURollup，通过Application Compatibility Launcher运行。
+需要 USP 5.1 和 UURollup，通过 Application Compatibility Launcher 运行。
 
 ```
 http://retro.remotecpu.com/files/win2k/apps/vlc-2.2.2-win32.exe
@@ -2003,11 +1994,11 @@ http://retro.remotecpu.com/files/win2k/apps/vlc-2.2.2-win32.exe
 
 ##### Winamp 5.621
 
-需要USP 5.1。
+需要 USP 5.1。
 
 ##### WinSplit Revolution 11.04
 
-需要USP 5.1。
+需要 USP 5.1。
 
 ```
 http://retro.remotecpu.com/files/win2k/apps/WinSplit-Revolution-v11.04.exe
@@ -2015,7 +2006,7 @@ http://retro.remotecpu.com/files/win2k/apps/WinSplit-Revolution-v11.04.exe
 
 ##### Putty 0.66
 
-需要USP 5.1。
+需要 USP 5.1。
 
 ```
 http://retro.remotecpu.com/files/win2k/utils/putty.exe
@@ -2023,11 +2014,11 @@ http://retro.remotecpu.com/files/win2k/utils/putty.exe
 
 #### 驱动工具
 
-##### WiFi驱动
+##### WiFi 驱动
 
 ###### Intel PROSET Utility (802.11a/g,g) for Windows 2000
 
-Intel的WiFi驱动。
+Intel 的 WiFi 驱动。
 
 ```
 https://support.dynabook.com/support/viewContentDetail?contentId=1197543
@@ -2035,25 +2026,25 @@ https://support.dynabook.com/support/viewContentDetail?contentId=1197543
 
 ###### Boingo Wireless
 
-WiFi管理工具，可用于WPA2连接。
+WiFi 管理工具，可用于 WPA2 连接。
 
 ```
 http://retrosystemsrevival.blogspot.com/2018/01/boingo-wireless.html
 https://yadi.sk/d/yJ8R94-5e2xFgg
 ```
 
-##### ATI显卡驱动
+##### ATI 显卡驱动
 
 下载链接如下。
 
 ```
-// ATI Display Drivers
+# ATI Display Drivers
 http://retro.remotecpu.com/files/win2k/drivers/6-2_xp-2k_dd_30152.exe
 
-// ATI Catalyst Suite
+# ATI Catalyst Suite
 http://retro.remotecpu.com/files/win2k/drivers/6-2_xp-2k_dd_ccc_wdm_enu_30152.exe
 
-// 驱动
+# 驱动
 https://driverzone.com/%7Beb1a4349-a527-4837-9abf-a66c64fff9eb%7D?id=1547175
 http://blog.livedoor.jp/blackwingcat/archives/571484.html?blog_id=2914225
 https://devid.info/find?lng=ca&text=ATI+Mobility+Radeon+HD+3470
@@ -2067,7 +2058,7 @@ https://devid.info/find?lng=ca&text=ATI+Mobility+Radeon+HD+3470
 https://drive.google.com/file/d/0B_3gCgMW-1B7bW5HTE9sRUgzeXM/view
 https://drive.google.com/file/d/0B_3gCgMW-1B7c0xDT2N0WEFDdTg/view
 
-// 旧版
+# 旧版
 https://drive.google.com/file/d/0B_3gCgMW-1B7VXNzYllrWTNUOVk/view
 https://drive.google.com/file/d/0B_3gCgMW-1B7RDN5V3NKWl91OU0/view
 ```
@@ -2077,7 +2068,7 @@ https://drive.google.com/file/d/0B_3gCgMW-1B7RDN5V3NKWl91OU0/view
 ```
 https://drive.google.com/file/d/0B_3gCgMW-1B7YTlsZkF1a29KMW8/view
 
-// 旧版
+# 旧版
 https://drive.google.com/file/d/0B_3gCgMW-1B7Tk04ZDhKS2pIRjQ/view
 ```
 
@@ -2086,7 +2077,7 @@ https://drive.google.com/file/d/0B_3gCgMW-1B7Tk04ZDhKS2pIRjQ/view
 ```
 https://drive.google.com/file/d/0B_3gCgMW-1B7V3VmWnBLeG5zaGM/view
 
-// 旧版
+# 旧版
 https://drive.google.com/file/d/0B_3gCgMW-1B7TWlsUzVDTzRueXc/view
 ```
 
@@ -2095,23 +2086,23 @@ https://drive.google.com/file/d/0B_3gCgMW-1B7TWlsUzVDTzRueXc/view
 ```
 https://drive.google.com/file/d/0B_3gCgMW-1B7SjAtbVJjeV9UV3M/view
 
-// 旧版
+# 旧版
 https://drive.google.com/file/d/0B_3gCgMW-1B7ekNkdy02Q0JNMDA/view
 ```
 
 #### 启用无线配置管理器
 
-进入控制面板，选择管理工具，打开服务。找到Wireless Manager的服务，将其设为自动启动即可。
+进入控制面板，选择管理工具，打开服务。找到 Wireless Manager 的服务，将其设为自动启动即可。
 
 ### 扩展内核版
 
-下载黑翼猫的Windows 2000镜像并安装，然后安装KB979683、KB935836、Colortrap、MUI，在控制面板安装NET。安装必要补丁，但不要安装NET4。千万不要安装非官方更新补丁，否则会蓝屏。
+下载黑翼猫的 Windows 2000 镜像并安装，然后安装 KB979683、KB935836、Colortrap、MUI，在控制面板安装 NET。安装必要补丁，但不要安装 NET4。千万不要安装非官方更新补丁，否则会蓝屏。
 
 ## Windows Server 2003
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 ed2k://|file|cn_windows_server_2003_sp2_x86_cd.iso|390135808|4C38E53EF100F80683810CAC1044CA70|/
@@ -2123,13 +2114,13 @@ ed2k://|file|cn_windows_server_2003_sp2_x86_cd.iso|390135808|4C38E53EF100F806838
 
 ### 实体机安装
 
-通过PE下的WinNTSetup安装即可。
+通过 PE 下的 WinNTSetup 安装即可。
 
 ### 配置
 
 #### 补丁安装
 
-适用于Windows Server 2003的补丁包如下。
+适用于 Windows Server 2003 的补丁包如下。
 
 ```
 链接 / https://pan.baidu.com/s/1pLG846B
@@ -2140,7 +2131,7 @@ ed2k://|file|cn_windows_server_2003_sp2_x86_cd.iso|390135808|4C38E53EF100F806838
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 ed2k://|file|zh-hans_windows_xp_professional_with_service_pack_3_x86_cd_x14-80404.iso|630239232|CD0900AFA058ACB6345761969CBCBFF4|/
@@ -2152,27 +2143,27 @@ ed2k://|file|zh-hans_windows_xp_professional_with_service_pack_3_x86_cd_x14-8040
 
 ### 实体机安装
 
-通过PE下的WinNTSetup安装即可。
+通过 PE 下的 WinNTSetup 安装即可。
 
 ### 配置
 
 #### 系统激活
 
-可用`XP OEM免激活`工具激活。
+可用`XP OEM 免激活`工具激活。
 
 ```
 http://soft.onlinedown.net/soft/580556.htm
 ```
 
-#### 制作CAB压缩/自解压缩包
+#### 制作 CAB 压缩/自解压缩包
 
-在运行输入IExpress，选择Create new Self Extraction Directive file，然后选择打包类型后添加文件即可。
+在运行输入 IExpress，选择 Create new Self Extraction Directive file，然后选择打包类型后添加文件即可。
 
 #### 驱动安装
 
 ##### 显卡驱动
 
-以ATI显卡为例。下载`ATI Catalyst for XP`，链接如下。
+以 ATI 显卡为例。下载`ATI Catalyst for XP`，链接如下。
 
 ```
 https://www.crsky.com/soft/3287.html
@@ -2180,23 +2171,23 @@ https://www.crsky.com/soft/3287.html
 
 打开后安装包会把安装程序解压到`C:\AMD\Support`，完成驱动安装。
 
-如果安装不成功，则下载DH Mobility Modder.NET，运行时需要.net frameworks 2.0和MSXML 4.0。下载地址如下。
+如果安装不成功，则下载 DH Mobility Modder.NET，运行时需要.net frameworks 2.0 和 MSXML 4.0。下载地址如下。
 
 ```
 http://www.crsky.com/soft/5368.html
 ```
 
-解压后运行MobilityDotNET.EXE，目录选择C:\ATI\SUPPORT\14-4-xp32-64-dd-ccc-Pack3，点击Modify即可。
+解压后运行 MobilityDotNET.EXE，目录选择 C:\ATI\SUPPORT\14-4-xp32-64-dd-ccc-Pack3，点击 Modify 即可。
 
-在设备管理器中，更新显卡驱动程序，`从磁盘安装...`时选择C:\ATI\SUPPORT\14-4-xp32-64-dd-ccc-Pack3\Driver\Driver\XP_INF下的CX_59344.inf文件，在目录表中选择`ATI Radeon HD 3400`即可。
+在设备管理器中，更新显卡驱动程序，`从磁盘安装...`时选择 C:\ATI\SUPPORT\14-4-xp32-64-dd-ccc-Pack3\Driver\Driver\XP_INF 下的 CX_59344.inf 文件，在目录表中选择`ATI Radeon HD 3400`即可。
 
-安装完成后，如果没有Catalyst Control Center，则到C:\AMD\Support\14-4-xp32-64-dd-ccc-Pack3\Packages\Apps\CCC\Core-Static安装ccc-core-static.msi即可。
+安装完成后，如果没有 Catalyst Control Center，则到 C:\AMD\Support\14-4-xp32-64-dd-ccc-Pack3\Packages\Apps\CCC\Core-Static 安装 ccc-core-static.msi 即可。
 
-正确安装驱动后可连接外接显示器。进入Catalyst Control Center，点击Displays Manager，选择外接的显示器并设置为Clone，然后在Desktop Area选择合适的分辨率即可。
+正确安装驱动后可连接外接显示器。进入 Catalyst Control Center，点击 Displays Manager，选择外接的显示器并设置为 Clone，然后在 Desktop Area 选择合适的分辨率即可。
 
 ##### 指纹驱动
 
-以AuthenInc指纹识别器为例，安装`TrueSuite Access Manager`指纹系统即可。
+以 AuthenInc 指纹识别器为例，安装`TrueSuite Access Manager`指纹系统即可。
 
 ```
 https://driverscollection.com/?file_cid=447398325664ec25068609a422f
@@ -2234,7 +2225,7 @@ https://www.jb51.net/softs/143399.html
 https://www.filehorse.com/download-firefox-32/36446/download/
 ```
 
-##### Windows优化大师
+##### Windows 优化大师
 
 ```
 http://www.youhua.com/
@@ -2250,19 +2241,19 @@ https://www.jb51.net/softs/116659.html
 https://www.macxin.com/archives/6551.html
 ```
 
-安装后可能无法进行病毒库自动更新，则需要手动更新病毒库。访问以下网站，下载最新的`avvdat-xxxx.zip`到电脑并解压，得到dat文件。
+安装后可能无法进行病毒库自动更新，则需要手动更新病毒库。访问以下网站，下载最新的`avvdat-xxxx.zip`到电脑并解压，得到 dat 文件。
 
 ```
 ftp://ftp.nai.com/commonupdater/
 ```
 
-进入VirusScan控制台，双击访问保护，取消勾选`禁止McAfee服务被停止`并确定。Win+R打开运行，输入`services.msc`，选择`McAfee McShield McAfee Framework`服务并停止。
+进入 VirusScan 控制台，双击访问保护，取消勾选`禁止 McAfee 服务被停止`并确定。Win+R 打开运行，输入`services.msc`，选择`McAfee McShield McAfee Framework`服务并停止。
 
-复制得到的dat文件到C:\Program Files\Common Files\McAfee\Engine，覆盖后进入VirusScan控制台，点击帮助-关于，查看dat版本是否为最新。
+复制得到的 dat 文件到 C:\Program Files\Common Files\McAfee\Engine，覆盖后进入 VirusScan 控制台，点击帮助-关于，查看 dat 版本是否为最新。
 
-完成更新后重新打开`McAfee McShield McAfee Framework`服务，并在VirusScan控制台勾选`禁止McAfee服务被停止`即可。
+完成更新后重新打开`McAfee McShield McAfee Framework`服务，并在 VirusScan 控制台勾选`禁止 McAfee 服务被停止`即可。
 
-##### Windows清理助手
+##### Windows 清理助手
 
 ```
 http://www.arswp.com/
@@ -2272,17 +2263,17 @@ http://www.arswp.com/
 
 ##### 普通补丁
 
-可通过Windows Update安装。
+可通过 Windows Update 安装。
 
 ##### 获取更新补丁
 
-伪装为PosReady，可获取更新的补丁。下载以下补丁包以安装2014年5月前XP的所有补丁，通过Windows Update确认补丁已经全部打完。
+伪装为 PosReady，可获取更新的补丁。下载以下补丁包以安装 2014 年 5 月前 XP 的所有补丁，通过 Windows Update 确认补丁已经全部打完。
 
 ```
 https://www.xiazaiba.com/html/120.html
 ```
 
-打开记事本，输入以下内容后保存为reg文件，然后双击运行。
+打开记事本，输入以下内容后保存为 reg 文件，然后双击运行。
 
 ```
 Windows Registry Editor Version 5.00
@@ -2291,15 +2282,15 @@ Windows Registry Editor Version 5.00
 "Installed"=dword:00000001
 ```
 
-打开以下网站以安装2014年5月后的补丁，然后再通过Windows Update更新其余补丁。
+打开以下网站以安装 2014 年 5 月后的补丁，然后再通过 Windows Update 更新其余补丁。
 
 ```
 https://www.zxinc.org/xppatch.htm
 ```
 
-注意，伪装成PosReady后不能为Office打补丁，否则Office将会显示操作系统设置不匹配的错误。
+注意，伪装成 PosReady 后不能为 Office 打补丁，否则 Office 将会显示操作系统设置不匹配的错误。
 
-若想关闭伪装，另存为以下reg文件并运行即可。
+若想关闭伪装，另存为以下 reg 文件并运行即可。
 
 ```
 Windows Registry Editor Version 5.00
@@ -2308,7 +2299,7 @@ Windows Registry Editor Version 5.00
 "Installed"=dword:00000000
 ```
 
-##### GPT补丁
+##### GPT 补丁
 
 打开以下链接下载补丁。
 
@@ -2316,13 +2307,13 @@ Windows Registry Editor Version 5.00
 http://www.downcc.com/soft/21920.html
 ```
 
-切换到路径C:\Windows\Driver Cache，备份sp3.cab后替换其中的disk.sys为下载的文件。注意，解压操作可通过普通压缩软件，重新打包操作可通过XP自带的IExpress等。然后替换C:\Windows\system32\dllcache和C:\Windows\system32\drivers目录下的disk.sys，重启即可。
+切换到路径 C:\Windows\Driver Cache，备份 sp3.cab 后替换其中的 disk.sys 为下载的文件。注意，解压操作可通过普通压缩软件，重新打包操作可通过 XP 自带的 IExpress 等。然后替换 C:\Windows\system32\dllcache 和 C:\Windows\system32\drivers 目录下的 disk.sys，重启即可。
 
 ### 常见错误
 
 #### 安装程序提示「the file xxx.sys could not be found」
 
-将系统安装镜像i386中的所有文件复制到`C:\win.NT~BT`和`C:\win.NT~LS\i386`即可。
+将系统安装镜像 i386 中的所有文件复制到`C:\win.NT~BT`和`C:\win.NT~LS\i386`即可。
 
 #### 无法/拒绝访问文件夹
 
@@ -2332,7 +2323,7 @@ http://www.downcc.com/soft/21920.html
 
 ### 下载
 
-该镜像为GHO格式。
+该镜像为 GHO 格式。
 
 ```
 https://cloud.189.cn/t/NzMFZ3nuyIFf
@@ -2340,11 +2331,11 @@ https://cloud.189.cn/t/NzMFZ3nuyIFf
 
 ### 虚拟机安装
 
-挂载PE镜像并通过Ghost恢复即可。
+挂载 PE 镜像并通过 Ghost 恢复即可。
 
 ### 实体机安装
 
-进入PE并通过Ghost恢复即可。
+进入 PE 并通过 Ghost 恢复即可。
 
 ### 配置
 
@@ -2356,7 +2347,7 @@ https://cloud.189.cn/t/NzMFZ3nuyIFf
 http://www.downza.cn/soft/20590.html
 ```
 
-##### 完美解码20190329版
+##### 完美解码 20190329 版
 
 ```
 https://www.ranwenzw.com/xiazai/27995.html
@@ -2375,16 +2366,16 @@ https://www.microsoft.com/en-us/download/confirmation.aspx?id=17791
 ### 下载
 
 ```
-// CD1
+# CD1
 http://www.ilovext.com/msdn/9.html
 
-// CD2
+# CD2
 http://www.ilovext.com/msdn/10.html
 ```
 
 ### 安装
 
-实际上Tablet PC和Media Center是同一张ISO，安装完其实是Windows XP Media Center Edition 2005。密钥如下。
+实际上 Tablet PC 和 Media Center 是同一张 ISO，安装完其实是 Windows XP Media Center Edition 2005。密钥如下。
 
 ```
 HCQ9D-TVCWX-X9QRG-J4B2Y-GR2TT
@@ -2411,7 +2402,7 @@ WPPXX-GYT2K-TK339-W64QB-DKT4J
 
 ### 下载
 
-原镜像如下，该镜像为ISO格式。
+原镜像如下，该镜像为 ISO 格式。
 
 ```
 链接 / http://pan.baidu.com/s/1ctUDm2
@@ -2430,13 +2421,13 @@ https://pan.baidu.com/s/1c10vWmk
 
 ### 实体机安装
 
-进入PE并通过WinNTSetup安装即可。
+进入 PE 并通过 WinNTSetup 安装即可。
 
 ## Windows XP Vienna Edition
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://getintopc.com/softwares/operating-systems/windows-xp-vienna-edition-free-download-1613893/
@@ -2452,13 +2443,13 @@ https://getintopc.com/softwares/operating-systems/windows-xp-vienna-edition-free
 
 ### 实体机安装
 
-进入PE并通过WinNTSetup安装即可。
+进入 PE 并通过 WinNTSetup 安装即可。
 
 ## Windows XP SP3 Black Edition
 
 ### 下载
 
-该镜像为ISO格式。
+该镜像为 ISO 格式。
 
 ```
 https://getintopc.com/softwares/operating-systems/windows-xp-sp3-black-edition-2014-free-download-1173658/
@@ -2474,13 +2465,13 @@ https://getintopc.com/softwares/operating-systems/windows-xp-sp3-black-edition-2
 
 ### 实体机安装
 
-进入PE并通过WinNTSetup安装即可。
+进入 PE 并通过 WinNTSetup 安装即可。
 
 ## Windows CE 6.0
 
 ### 下载
 
-该系统需要在Visual Studio中运行。
+该系统需要在 Visual Studio 中运行。
 
 #### Visual Studio 2005
 
@@ -2496,7 +2487,7 @@ https://www.microsoft.com/zh-CN/download/details.aspx?id=5553
 
 #### Windows Embedded CE 6.0
 
-Windows Embedded CE 6.0.msi为安装工具，其余为必要依赖。
+Windows Embedded CE 6.0.msi 为安装工具，其余为必要依赖。
 
 ```
 http://download.microsoft.com/download/a/0/9/a09e587c-4ff9-4a58-a854-56fe50b862b2/Windows Embedded CE 6.0.msi
@@ -2897,13 +2888,13 @@ http://download.microsoft.com/download/a/0/9/a09e587c-4ff9-4a58-a854-56fe50b862b
 
 ### 虚拟机安装
 
-向虚拟机分配40G，安装Windows XP SP3，然后安装Visual Studio 2005，密钥如下。
+向虚拟机分配 40G，安装 Windows XP SP3，然后安装 Visual Studio 2005，密钥如下。
 
 ```
 M3C9X-9K3Q9-DC8PX-B3YR3-BKQR8
 ```
 
-安装完成后安装Visual Studio 2005 Service Package 1（KB926601）。然后安装Windows Embedded CE 6.0，密钥如下。
+安装完成后安装 Visual Studio 2005 Service Package 1（KB926601）。然后安装 Windows Embedded CE 6.0，密钥如下。
 
 ```
 H8RQR-MMKRP-XFRFC-9HKGJ-82R6J
@@ -2911,9 +2902,9 @@ H8RQR-MMKRP-XFRFC-9HKGJ-82R6J
 
 然后安装Windows Embedded CE 6.0 Platform Builder Service Pack 1、Microsoft Device Emulator 2.0、Microsoft Virtual PC 2007。注意，Microsoft Virtual PC 2007能在Windows XP/Vista/Server 2003 Standard上安装而无法在Enterprise上安装，Enterprise上只能装更为高级的Virtual Server 2005。
 
-打开Visual Studio 2005，选择新建一个新安装的OS Design项目模板，进入向导页面。在Board Support Packages中选择`Device Emulator: ARMV4I`，设计模板选择PDA Device-Mobile Handheld，一路下一步完成创建。
+打开 Visual Studio 2005，选择新建一个新安装的 OS Design 项目模板，进入向导页面。在 Board Support Packages 中选择`Device Emulator: ARMV4I`，设计模板选择 PDA Device-Mobile Handheld，一路下一步完成创建。
 
-右键单击项目名称，选择Properties，在Build options中取消勾选`Enable KITL(no IMGKITL=1)`。然后选中整个Solution，点击Build-Build Solutions进行编译。然后选择Target-Connectivity options，配置如下。修改完配置后点击Apply并关闭窗口。
+右键单击项目名称，选择 Properties，在 Build options 中取消勾选`Enable KITL(no IMGKITL=1)`。然后选中整个 Solution，点击 Build-Build Solutions 进行编译。然后选择 Target-Connectivity options，配置如下。修改完配置后点击 Apply 并关闭窗口。
 
 |      项目     |          内容         |
 |---------------|-----------------------|
@@ -2923,19 +2914,19 @@ H8RQR-MMKRP-XFRFC-9HKGJ-82R6J
 | Debugger      | None                  |
 | 屏幕尺寸      | 600*400，32色         |
 
-选择Target-Attach device，开始附加到设备。模拟器正常启动后可以看到Windows CE系统的模拟器窗口。
+选择 Target-Attach device，开始附加到设备。模拟器正常启动后可以看到 Windows CE 系统的模拟器窗口。
 
-选择Project-Add new SDK，打开SDK属性页。在Emulator中将Configuration修改为Device Emulator ARMV4I Debug，填写必要的信息后点击确定，然后在项目窗口中右单击刚才创建的SDK，选择编译。
+选择 Project-Add new SDK，打开 SDK 属性页。在 Emulator 中将 Configuration 修改为 Device Emulator ARMV4I Debug，填写必要的信息后点击确定，然后在项目窗口中右单击刚才创建的 SDK，选择编译。
 
 编译完成后生成一个msi安装文件，位于OSDesign项目文件夹下`SDKS/<SDKname>`目录中。关闭Visual Studio 2005并运行此SDK进行安装。
 
-安装完成后打开Visual Studio 2005，选择菜单Tools-Device Emulator Manager，在WINCE6_EMU下单击刚才新建的CE项目，选择Connect，弹出模拟器窗口，CE系统启动成功。
+安装完成后打开 Visual Studio 2005，选择菜单 Tools-Device Emulator Manager，在 WINCE6_EMU 下单击刚才新建的 CE 项目，选择 Connect，弹出模拟器窗口，CE 系统启动成功。
 
 ## Windows Thin PC
 
 ### 下载
 
-镜像为ISO格式。
+镜像为 ISO 格式。
 
 ```
 ed2k://|file|en_windows_thin_pc_x86_697681.iso|1576980480|2D0E6A048EB3F314F556B4F0834A95E2|/
@@ -2947,7 +2938,7 @@ ed2k://|file|en_windows_thin_pc_x86_697681.iso|1576980480|2D0E6A048EB3F314F556B4
 
 ### 实体机安装
 
-进入PE并通过WinNTSetup安装即可。
+进入 PE 并通过 WinNTSetup 安装即可。
 
 ## Citrix WinFrame 1.8
 
@@ -2994,19 +2985,19 @@ https://archive.org/download/tiny-10_202301/tiny10%202303%20x86.iso
 
 ### 实体机安装
 
-#### 通过WinPE
+#### 通过 WinPE
 
-进入WinPE环境后使用WinNTSetup安装即可。
+进入 WinPE 环境后使用 WinNTSetup 安装即可。
 
 #### 通过拷录镜像
 
-将镜像拷录到U盘，从U盘启动并根据流程安装即可。
+将镜像拷录到 U 盘，从 U 盘启动并根据流程安装即可。
 
-#### 通过dism
+#### 通过 dism
 
 该方法所需时间比正常安装短。
 
-将镜像拷录到U盘，启动到安装程序后按Shift+F10弹出命令行界面。输入以下命令以确认当前USB盘符与安装盘盘符。
+将镜像拷录到 U 盘，启动到安装程序后按 Shift+F10 弹出命令行界面。输入以下命令以确认当前 USB 盘符与安装盘盘符。
 
 ```
 diskpart
@@ -3014,7 +3005,7 @@ list vol
 exit
 ```
 
-然后输入以下命令查看镜像消息，注意将D盘修改为USB盘符。
+然后输入以下命令查看镜像消息，注意将 D 盘修改为 USB 盘符。
 
 ```
 # WIM based install media
@@ -3026,13 +3017,13 @@ dism /Get-WimInfo /WimFile:D:\Sources\install.wim、
 dism /Get-WimInfo /WimFile:D:\Sources\install.esd
 ```
 
-输出中不同Index表示不同的Windows版本。记录需要安装的Windows版本对应的Index，然后输入以下命令，注意将D盘修改为USB盘符，G盘修改为安装盘盘符，1修改为需要安装的版本数字。
+输出中不同 Index 表示不同的 Windows 版本。记录需要安装的 Windows 版本对应的 Index，然后输入以下命令，注意将 D 盘修改为 USB 盘符，G 盘修改为安装盘盘符，1 修改为需要安装的版本数字。
 
 ```
 dism /Apply-Image /ImageFile:D:\Sources\install.wim /index:1 /ApplyDir:G:\
 ```
 
-完成部署后输入以下命令以写入引导记录。注意G盘修改为安装盘盘符。
+完成部署后输入以下命令以写入引导记录。注意 G 盘修改为安装盘盘符。
 
 ```
 G:\Windows\System32\bcdboot G:\Windows
@@ -3043,7 +3034,7 @@ G:\Windows\System32\bcdboot G:\Windows
 <details>
 <summary>【进阶】bcdboot的使用</summary>
 
-bcdboot用于将Windows引导安装到指定的分区，用法如下。
+bcdboot 用于将 Windows 引导安装到指定的分区，用法如下。
 
 ```
 # X:\Windows为安装盘USB盘符
@@ -3052,9 +3043,9 @@ bcdboot用于将Windows引导安装到指定的分区，用法如下。
 bcdboot X:\Windows /s S: /f UEFI
 ```
 
-需要有安装USB介质，若无则重启到高级启动选项，并点击疑难解答-命令提示符，此时X即为安装盘USB盘符。
+需要有安装 USB 介质，若无则重启到高级启动选项，并点击疑难解答-命令提示符，此时 X 即为安装盘 USB 盘符。
 
-可通过以下命令从Windows重启到高级启动选项。
+可通过以下命令从 Windows 重启到高级启动选项。
 
 ```
 shutdown /r /o /t 0
@@ -3065,7 +3056,7 @@ shutdown /r /o /t 0
 
 ### 下载
 
-通过以下链接下载ISO即可。
+通过以下链接下载 ISO 即可。
 
 ```
 https://www.microsoft.com/zh-cn/software-download/windows11
@@ -3073,7 +3064,7 @@ https://www.microsoft.com/zh-cn/software-download/windows11
 
 ### 判断硬件条件
 
-Windows 11需要硬件支持TPM 2.0，可通过以下工具查看是否支持。
+Windows 11 需要硬件支持 TPM 2.0，可通过以下工具查看是否支持。
 
 ```
 https://github.com/rcmaehl/WhyNotWin11
@@ -3083,29 +3074,29 @@ https://github.com/rcmaehl/WhyNotWin11
 
 ## 安装顺序
 
-多系统的安装顺序一般是从低到高，以最高版本系统为主系统。如本机安装有MS-DOS 7.10、Windows 3.1、Windows 95、Windows NT 4.0、Windows 2000和Windows XP，则应该以Windows XP作为主系统。主系统应当为WinNT内核，需安装到主分区，并设置为激活分区。
+多系统的安装顺序一般是从低到高，以最高版本系统为主系统。如本机安装有 MS-DOS 7.10、Windows 3.1、Windows 95、Windows NT 4.0、Windows 2000 和 Windows XP，则应该以 Windows XP 作为主系统。主系统应当为 WinNT 内核，需安装到主分区，并设置为激活分区。
 
 如果系统未按照从低到高的顺序，则应当注意旧版系统对新版系统的引导覆盖问题。新版系统引导兼容旧版系统，而旧版系统引导不兼容新版系统，因此需要进行备份和替换。
 
-比如在已安装Windows XP的电脑上安装Windows 2000，则Windows 2000安装程序将会覆盖Windows XP的引导。由于两者都是WinNT内核，因此引导方式完全相同，但由于Windows 2000的引导文件旧于Windows XP，会导致安装后无法引导至Windows XP。
+比如在已安装 Windows XP 的电脑上安装 Windows 2000，则 Windows 2000 安装程序将会覆盖 Windows XP 的引导。由于两者都是 WinNT 内核，因此引导方式完全相同，但由于 Windows 2000 的引导文件旧于 Windows XP，会导致安装后无法引导至 Windows XP。
 
-对于WinNT内核而言，其引导文件为NTDETECT.COM和NTLDR，而BOOT.INI用于配置启动项。为解决以上问题，需要先备份Windows XP的NTDETECT.COM和NTLDR，在Windows 2000安装完成后替换旧版文件即可。
+对于 WinNT 内核而言，其引导文件为 NTDETECT.COM 和 NTLDR，而 BOOT.INI 用于配置启动项。为解决以上问题，需要先备份 Windows XP 的 NTDETECT.COM 和 NTLDR，在 Windows 2000 安装完成后替换旧版文件即可。
 
 ## 安装位置
 
-由于MBR分区表最多只能支持四个主分区，因此其它系统需要安装到扩展分区中。其中NT内核的系统可以通过先安装到主分区，再通过恢复gho镜像或磁盘克隆的方式拷贝到扩展分区中，添加引导后可以正常运行。而以DOS为基础的其它系统只能安装到主分区中。
+由于 MBR 分区表最多只能支持四个主分区，因此其它系统需要安装到扩展分区中。其中 NT 内核的系统可以通过先安装到主分区，再通过恢复 gho 镜像或磁盘克隆的方式拷贝到扩展分区中，添加引导后可以正常运行。而以 DOS 为基础的其它系统只能安装到主分区中。
 
 ## 引导添加
 
 在最高版本系统中，可以添加其它系统的引导项。
 
-### WinNT内核
+### WinNT 内核
 
-对于WinNT内核，引导信息写在BOOT.INI中，到主系统根目录编辑BOOT.INI即可。
+对于 WinNT 内核，引导信息写在 BOOT.INI 中，到主系统根目录编辑 BOOT.INI 即可。
 
 #### 手动添加
 
-将需要添加引导的系统根目录下的BOOT.INI内的引导条目复制到主系统的BOOT.INI即可，格式如下。
+将需要添加引导的系统根目录下的 BOOT.INI 内的引导条目复制到主系统的 BOOT.INI 即可，格式如下。
 
 ```
 multi(0)disk(0)rdisk(0)partition(1)\WINDOWS="WinNT"  /noexecute=optin /fastdetect
@@ -3113,21 +3104,21 @@ multi(0)disk(0)rdisk(0)partition(1)\WINDOWS="WinNT"  /noexecute=optin /fastdetec
 
 #### 自动添加
 
-用NTBOOTautoFix工具即可。
+用 NTBOOTautoFix 工具即可。
 
 ```
 https://www.onlinedown.net/soft/1150737.htm
 ```
 
-### Win 9.x/DOS内核
+### Win 9.x/DOS 内核
 
 注意，如果有多个Win 9.x/DOS系统，则无论保存哪个系统的PBR，都将被引导到第一个Win 9.x/DOS系统。
 
-#### 保存PBR
+#### 保存 PBR
 
-##### 通过DOS命令
+##### 通过 DOS 命令
 
-进入到DOS环境，输入以下命令。
+进入到 DOS 环境，输入以下命令。
 
 ```
 debug
@@ -3140,13 +3131,13 @@ CX 0000
 -Q
 ```
 
-##### 通过Diskgenius
+##### 通过 Diskgenius
 
-打开新版Diskgenius，在需要操作的系统磁盘上选择编辑扇区内容，将扇区的前200个字节另存为bootsect.dos文件即可。
+打开新版 Diskgenius，在需要操作的系统磁盘上选择编辑扇区内容，将扇区的前 200 个字节另存为 bootsect.dos 文件即可。
 
 #### 添加条目
 
-将得到的写有PBR的文件复制到主系统根目录，并手动在主系统的BOOT.INI添加引导项，格式如下。
+将得到的写有 PBR 的文件复制到主系统根目录，并手动在主系统的 BOOT.INI 添加引导项，格式如下。
 
 ```
 C:\bootsect.dos="Win 9.x"
@@ -3160,7 +3151,7 @@ C:\bootsect.dos="Win 9.x"
 
 #### Microsoft Update Catalog
 
-翻墙后在较新的Windows系统（如Windows 10）上用Internet Explorer打开Microsoft Update Catalog网站，会提示安装加载项。安装完成后在搜索框搜索系统名称即可下载所有官方补丁，下载时可关闭代理工具。Microsoft Update Catalog网站如下。
+翻墙后在较新的 Windows 系统（如 Windows 10）上用 Internet Explorer 打开 Microsoft Update Catalog 网站，会提示安装加载项。安装完成后在搜索框搜索系统名称即可下载所有官方补丁，下载时可关闭代理工具。Microsoft Update Catalog 网站如下。
 
 ```
 http://www.catalog.update.microsoft.com/home.aspx
@@ -3188,7 +3179,7 @@ dir /b >a.txt
 
 #### 通过现成脚本
 
-在补丁目录新建一个文本文档，将以下代码复制到文档中并保存为bat文件，双击运行即可。
+在补丁目录新建一个文本文档，将以下代码复制到文档中并保存为 bat 文件，双击运行即可。
 
 ```
 @echo off 
@@ -3205,11 +3196,11 @@ for %%i in (*.exe) do %%i /r
 | VOL Edition | 批量授权版（XP及以前系统使用），使用团体批量许可证，不用激活，只需要对应序列号即可使用 |
 | VL Edition  | 批量授权版（Vista及以后系统使用），使用KMS激活                                         |
 
-对于Windows Vista及以上系统，主流的激活方式为KMS激活，带有Business、VL、Vol、Volume等字样的系统可以使用此方法，注意Customer版本不行。Business版安装过程中无输入密钥环节，而Consumer版安装过程中会提示输入密钥。
+对于 Windows Vista 及以上系统，主流的激活方式为 KMS 激活，带有 Business、VL、Vol、Volume 等字样的系统可以使用此方法，注意 Customer 版本不行。Business 版安装过程中无输入密钥环节，而 Consumer 版安装过程中会提示输入密钥。
 
-KMS激活需要180天内连接一次KMS激活服务器来续订激活。默认情况下，系统每七天自动进行一次激活续订尝试，在续订成功之后，激活有效期时间间隔将重新开始计算，重置为180天，因此不需要考虑激活失效的问题。
+KMS 激活需要 180 天内连接一次 KMS 激活服务器来续订激活。默认情况下，系统每七天自动进行一次激活续订尝试，在续订成功之后，激活有效期时间间隔将重新开始计算，重置为 180 天，因此不需要考虑激活失效的问题。
 
-在Windows下打开运行并输入以下命令，可查看系统属于RTL还是VL。
+在 Windows 下打开运行并输入以下命令，可查看系统属于 RTL 还是 VL。
 
 ```
 slmgr.vbs -dlv
@@ -3217,9 +3208,9 @@ slmgr.vbs -dlv
 # wmic os get caption
 ```
 
-### 升级为VL版
+### 升级为 VL 版
 
-如果电脑不是VL版本，可通过更换密钥的方式升级为VL版。进入设置-更新和安全-激活，点击更改产品密钥按钮，输入以下密钥。
+如果电脑不是 VL 版本，可通过更换密钥的方式升级为 VL 版。进入设置-更新和安全-激活，点击更改产品密钥按钮，输入以下密钥。
 
 ```
 NPPR9-FWDCX-D2C8J-H872K-2YT43
@@ -3228,13 +3219,13 @@ NPPR9-FWDCX-D2C8J-H872K-2YT43
 VK7JG-NPHTM-C97JM-9MPGT-3V66T
 ```
 
-升级完成后以管理员身份打开命令提示符，输入以下命令即完成更换。该密钥被称为GVLK key，用于KMS激活。
+升级完成后以管理员身份打开命令提示符，输入以下命令即完成更换。该密钥被称为 GVLK key，用于 KMS 激活。
 
 ```
 slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43
 ```
 
-因为VL版本的镜像一般内置GVLK key，因此不需要上述操作。但如果之前手动输过其他密钥，那么内置GVLK key就会被替换掉，此时如果想用KMS，需要先通过上面那一行命令把GVLK key输回去。GVLK key列表如下。
+因为 VL 版本的镜像一般内置 GVLK key，因此不需要上述操作。但如果之前手动输过其他密钥，那么内置 GVLK key 就会被替换掉，此时如果想用 KMS，需要先通过上面那一行命令把 GVLK key 输回去。GVLK key 列表如下。
 
 ```
 https://docs.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys
@@ -3242,7 +3233,7 @@ https://docs.microsoft.com/zh-cn/windows-server/get-started/kms-client-activatio
 
 ### 激活方法
 
-可用KMS激活工具如下。
+可用 KMS 激活工具如下。
 
 ```
 # KMSAuto Net，推荐
@@ -3290,9 +3281,9 @@ slmgr /xpr
 <details>
 <summary>【进阶】KMS的激活原理</summary>
 
-KMS工具连接到KMS激活服务器，服务器使用由微软官方免费对外提供的密钥，即上述提到的GVLK key，对机器进行激活。注意，GVLK key提供给KMS服务器使用，不能直接在系统中输入激活。
+KMS 工具连接到 KMS 激活服务器，服务器使用由微软官方免费对外提供的密钥，即上述提到的 GVLK key，对机器进行激活。注意，GVLK key 提供给 KMS 服务器使用，不能直接在系统中输入激活。
 
-可通过以下工具查看KMS激活服务器状态。
+可通过以下工具查看 KMS 激活服务器状态。
 
 ```
 https://v0v.bid/vlmcs.exe
@@ -3320,7 +3311,7 @@ C:\vlmcs.exe -l 1 kms.v0v.bid
 <details>
 <summary>【进阶】自行搭建KMS服务器</summary>
 
-对于电脑端，可通过以下仓库自行搭建KMS服务器。
+对于电脑端，可通过以下仓库自行搭建 KMS 服务器。
 
 ```
 https://github.com/dylanbai8/kmspro
@@ -3328,13 +3319,21 @@ https://github.com/Wind4/vlmcsd
 https://github.com/ThunderEX/py-kms
 ```
 
-对于Android，可安装以下APP，然后保持手机与需要激活的电脑连接同一Wi-Fi网络或在同一局域网内，启动软件，点击`启动服务器`，查看软件内显示的IP地址，然后将激活命令中的KMS服务器地址替换为该IP即可。
+搭建教程可参考以下链接。
+
+```
+https://blog.csdn.net/gsls200808/article/details/50357921
+https://blog.csdn.net/gsls200808/article/details/50364104
+https://blog.csdn.net/gsls200808/article/details/72773249
+```
+
+对于 Android，可安装以下 APP，然后保持手机与需要激活的电脑连接同一 Wi-Fi 网络或在同一局域网内，启动软件，点击`启动服务器`，查看软件内显示的 IP 地址，然后将激活命令中的 KMS 服务器地址替换为该 IP 即可。
 
 ```
 https://v0v.bid/android.html
 ```
 
-也可通过刷路由器固件的方式，路由器固件一般自带KMS主机插件。
+也可通过刷路由器固件的方式，路由器固件一般自带 KMS 主机插件。
 </details>
 
 <details>
@@ -3351,13 +3350,13 @@ slmgr /rearm
 
 ### 其它方法
 
-对于Windows 10系统，还可使用数字权利激活。数字权利激活会记录硬件信息，在不更换硬件的情况下，重装系统不需要重新激活。
+对于 Windows 10 系统，还可使用数字权利激活。数字权利激活会记录硬件信息，在不更换硬件的情况下，重装系统不需要重新激活。
 
 ```
 https://cmwtat.cloudmoe.com/cn.html
 ```
 
-也可将Windows 10升级为神州网信政府版（CMGE），即中国政府版。中国政府版的更新服务器位于中国境内，移除、禁用了原版Windows10中自带的办公类、个人助理类、娱乐生活类应用以及基于云的服务如OneDrive、Windows Defender等），内置了中国政府指定数字证书机关的根证书，开启或者关闭了大量系统安防方面的设置。具体介绍如下。
+也可将 Windows 10 升级为神州网信政府版（CMGE），即中国政府版。中国政府版的更新服务器位于中国境内，移除、禁用了原版 Windows10 中自带的办公类、个人助理类、娱乐生活类应用以及基于云的服务如 OneDrive、Windows Defender 等），内置了中国政府指定数字证书机关的根证书，开启或者关闭了大量系统安防方面的设置。具体介绍如下。
 
 ```
 https://document.cmgos.com/release_notes/release_notes
@@ -3387,35 +3386,35 @@ slmgr /skms kms.v0v.bid && slmgr /ato
 https://docs.microsoft.com/zh-cn/windows-server/get-started/activation-error-codes
 ```
 
-## Dll修复
+## Dll 修复
 
-可用DirectX Repair、DLL Escort等。
+可用 DirectX Repair、DLL Escort 等。
 
 ```
-// DirectX Repair
+# DirectX Repair
 https://www.pcsoft.com.cn/soft/36821.html
 
-// DLL Escort
+# DLL Escort
 https://www.lhdown.com/soft/28621.html
 ```
 
-# Vmware配置
+# Vmware 配置
 
-## 安装Vmware Tools
+## 安装 Vmware Tools
 
-### Windows 9.x内核
+### Windows 9.x 内核
 
-Windows 2000及以前使用`VMware tools for winPre2k`，下载地址如下。
+Windows 2000 及以前使用`VMware tools for winPre2k`，下载地址如下。
 
 ```
 http://www.upantool.com/qidong/qtqd/7232.html
 ```
 
-### Windows NT内核
+### Windows NT 内核
 
-包括Windows XP Starter Edition。
+包括 Windows XP Starter Edition。
 
-Windows 2000以后可直接在Vmware进行安装。如果安装出现问题，可从以下网站下载Vmware Tools镜像包。
+Windows 2000 以后可直接在 Vmware 进行安装。如果安装出现问题，可从以下网站下载 Vmware Tools 镜像包。
 
 ```
 https://packages.vmware.com/tools/releases/
@@ -3435,133 +3434,65 @@ http://www.scampers.org/steve/vmware/#31pack
 
 ## 从虚拟机克隆到实体机
 
-若在实体机上无法完成安装，可以先在虚拟机上安装，然后克隆到实体机上。注意虚拟机上的系统不要安装驱动或Vmware Tools，进入WinPE环境后将系统盘备份为GHO文件，然后从虚拟机拷贝出来即可。
+若在实体机上无法完成安装，可以先在虚拟机上安装，然后克隆到实体机上。注意虚拟机上的系统不要安装驱动或 Vmware Tools，进入 WinPE 环境后将系统盘备份为 GHO 文件，然后从虚拟机拷贝出来即可。
 
 如果Win8内核的WinPE无法识别系统盘，可以换一个WinPE，比如Win2000/WinXP内核的PE。
 
 ## 常见错误
 
-### 安装Vmware Tool时出现「Setup was unable to upgrade the Windows Installer」
+### 安装 Vmware Tool 时出现「Setup was unable to upgrade the Windows Installer」
 
-下载以下msi文件，启动到目录服务恢复模式，安装msi文件即可。
+下载以下 msi 文件，启动到目录服务恢复模式，安装 msi 文件即可。
 
 ```
 https://pan.baidu.com/s/1pLFkyQR
 ```
 
-### 虚拟机挂载WinPE的ISO后无法进入到WinPE主页面
+### 虚拟机挂载 WinPE 的 ISO 后无法进入到 WinPE 主页面
 
-适当增加虚拟机内存，建议大于1GB。
+适当增加虚拟机内存，建议大于 1GB。
 
 ### 打开虚拟机时显示不是有效的虚拟机配置文件
 
-大多数情况为vmx文件损坏。进入虚拟机路径，删除vmx文件，打开vmware.log，找到`vmx| DICT --- CONFIGURATION`，复制该行以下内容到记事本，至`vmx| DICT --- USER DEFAULTS`为止（不含）。删除所有日期时间标识，如`Jan 24 23:13:15.438: vmx| DICT config.version = 8`改为`config.version = 8`。全部修改完成后，给所有行等号后的字符加上英文双引号，保存为`<虚拟机名>.vmx`，放到虚拟机目录，双击打开即可。
+大多数情况为 vmx 文件损坏。进入虚拟机路径，删除 vmx 文件，打开 vmware.log，找到`vmx| DICT --- CONFIGURATION`，复制该行以下内容到记事本，至`vmx| DICT --- USER DEFAULTS`为止（不含）。删除所有日期时间标识，如`Jan 24 23:13:15.438: vmx| DICT config.version = 8`改为`config.version = 8`。全部修改完成后，给所有行等号后的字符加上英文双引号，保存为`<虚拟机名>.vmx`，放到虚拟机目录，双击打开即可。
 
-### Vmware异常关闭后无法打开虚拟机
+### Vmware 异常关闭后无法打开虚拟机
 
-关闭进程`vmware-vmx.exe`，然后删除虚拟机目录下的lck文件即可。
+关闭进程`vmware-vmx.exe`，然后删除虚拟机目录下的 lck 文件即可。
 
 # 参考教程
 
-## Install Windows/386 2.11 in VMware
+> [Install Windows/386 2.11 in VMware](https://medium.com/@anubis2591/install-windows-386-2-11-in-vmware-9cfcc2b6dd56)  
 
-```
-https://medium.com/@anubis2591/install-windows-386-2-11-in-vmware-9cfcc2b6dd56
-```
+> [Standard Mode: Fault in MS Dos Extender](https://it.toolbox.com/question/standard-mode-fault-in-ms-dos-extender-102506)  
 
-## Standard Mode: Fault in MS Dos Extender
+> [Invalid DPMI During Setup Of Windows ME](http://discussions.virtualdr.com/showthread.php?92799-Invalid-DPMI-During-Setup-Of-Windows-ME)  
 
-```
-https://it.toolbox.com/question/standard-mode-fault-in-ms-dos-extender-102506
-```
+> [vmware异常关闭后导致虚拟机无法打开问题解决](https://blog.csdn.net/itwxming/java/article/details/99727215)  
 
-## Invalid DPMI During Setup Of Windows ME
+> [How do I enable Windows Wireless Manager for Win2k, Xp and Vista](https://networkoverload.com/guides/how_do_i_enable_windows_wireless_manager_win2k_xp_and_vista)  
 
-```
-http://discussions.virtualdr.com/showthread.php?92799-Invalid-DPMI-During-Setup-Of-Windows-ME
-```
+> [win98se install freezes](https://forums.techguy.org/threads/win98se-install-freezes.384921/)  
 
-## vmware异常关闭后导致虚拟机无法打开问题解决
+> [Windows 2000 Un-Official Updates](http://greyghost.mooo.com/limestone/Web-Features/W2K_UU/)  
 
-```
-https://blog.csdn.net/itwxming/java/article/details/99727215
-```
+> [DriverPacks for Windows 2000/XP/2003 \(x86\)](https://jackngblog.blogspot.com/2011/10/driverpacks-for-windows-2000xp2003-x86.html)  
 
-## How do I enable Windows Wireless Manager for Win2k, Xp and Vista
+> [Windows 2000 Sp4 Files](http://retro.remotecpu.com/win2k.php)  
 
-```
-https://networkoverload.com/guides/how_do_i_enable_windows_wireless_manager_win2k_xp_and_vista
-```
+> [Citrix Winframe 1.8基于Window](https://tieba.baidu.com/p/6289561988?red_tag=2476268029)  
 
-## win98se install freezes
+> [Win95/98 Shutdown Problems](http://educ.jmu.edu/~jarvislb/utils/shutdown.html)  
 
-```
-https://forums.techguy.org/threads/win98se-install-freezes.384921/
-```
+> [Apply Windows Image using DISM Instead of Clean Install](https://www.tenforums.com/tutorials/84331-apply-windows-image-using-dism-instead-clean-install.html#Part2)  
 
-## Windows 2000 Un-Official Updates
+> [这应该是每个用Windows的人最首先该了解的事…](https://mp.weixin.qq.com/s/kYeg0sHZxYtB1vE36i83yw)  
 
-```
-http://greyghost.mooo.com/limestone/Web-Features/W2K_UU/
-```
+> [使用KMS命令 激活 Windows 系统（教程）、激活 Office 全套（教程）](https://v0v.bid/kms.html)  
 
-## DriverPacks for Windows 2000/XP/2003 (x86)
+> [一句命令激活windows/office](https://03k.org/kms.html)  
 
-```
-https://jackngblog.blogspot.com/2011/10/driverpacks-for-windows-2000xp2003-x86.html
-```
+> [KMS 激活 Windows Office](https://sunpma.com/kms.html)  
 
-## Windows 2000 Sp4 Files
-
-```
-http://retro.remotecpu.com/win2k.php
-```
-
-## Citrix Winframe 1.8基于Window
-
-```
-https://tieba.baidu.com/p/6289561988?red_tag=2476268029
-```
-
-## Win95/98 Shutdown Problems
-
-```
-http://educ.jmu.edu/~jarvislb/utils/shutdown.html
-```
-
-## Apply Windows Image using DISM Instead of Clean Install
-
-```
-https://www.tenforums.com/tutorials/84331-apply-windows-image-using-dism-instead-clean-install.html#Part2
-```
-
-## 这应该是每个用Windows的人最首先该了解的事…
-
-```
-https://mp.weixin.qq.com/s/kYeg0sHZxYtB1vE36i83yw
-```
-
-## 使用KMS命令 激活 Windows 系统（教程）、激活 Office 全套（教程）
-
-```
-https://v0v.bid/kms.html
-```
-
-## 一句命令激活windows/office
-
-```
-https://03k.org/kms.html
-```
-
-## KMS 激活 Windows Office
-
-```
-https://sunpma.com/kms.html
-```
-
-## 微软想隐藏的高速下载服务，没想到被民间大神给破了！
-
-```
-https://mp.weixin.qq.com/s/mgdr8-1_TVIhx1FCAPp0zw
-```
+> [微软想隐藏的高速下载服务，没想到被民间大神给破了！](https://mp.weixin.qq.com/s/mgdr8-1_TVIhx1FCAPp0zw)  
 
