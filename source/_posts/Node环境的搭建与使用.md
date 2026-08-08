@@ -1,5 +1,5 @@
 ---
-title: Node环境的搭建与使用
+title: Node 环境的搭建与使用
 categories: Skill
 abbrlink: Node-Installation
 date: 2019-11-25 21:10:29
@@ -8,7 +8,7 @@ tags:
 
 ![](topic.jpg)
 
-Node是一个JavaScript运行环境，很多模块都需要依赖node。npm是随同node安装的包管理工具，node安装完成后，npm也安装完成。
+Node 是一个 JavaScript 运行环境，很多模块都需要依赖 node。npm 是随同 node 安装的包管理工具，node 安装完成后，npm 也安装完成。
 
 <!-- more -->
 
@@ -16,7 +16,7 @@ Node是一个JavaScript运行环境，很多模块都需要依赖node。npm是�
 
 ## 通过包管理器
 
-适用于Linux。由于系统默认包含的nodejs版本较低，因此可通过以下命令更新为较新的版本。
+适用于 Linux。由于系统默认包含的 nodejs 版本较低，因此可通过以下命令更新为较新的版本。
 
 ```
 # 设置为安装14.x版本的nodejs
@@ -27,35 +27,35 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt install nodejs
 ```
 
-## 通过nvm
+## 通过 nvm
 
 仓库如下。
 
 ```
-// Mac
+# Mac
 https://github.com/nvm-sh/nvm
 
-// Windows
+# Windows
 https://github.com/coreybutler/nvm-windows
 ```
 
-以Mac为例，在终端输入以下命令安装`nvm`。
+以 Mac 为例，在终端输入以下命令安装`nvm`。
 
 ```
-// bash用户
+# bash用户
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 
-// zsh用户
+# zsh用户
 curl -o- [https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh](https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh) | bash [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
 ```
 
 安装完成后在终端输入下列命令以安装`node`。
 
 ```
-// 安装长期支持版本（建议）
+# 安装长期支持版本（建议）
 nvm install --lts
 
-// 安装最新版本
+# 安装最新版本
 nvm install node
 ```
 
@@ -79,7 +79,7 @@ https://nodejs.org/en/
 npm config set -g registry https://registry.npm.taobao.org
 ```
 
-### 用nrm切换下载源
+### 用 nrm 切换下载源
 
 在终端执行以下命令安装`nrm`，并查看下载镜像源。
 
@@ -96,7 +96,7 @@ nrm use taobao
 
 ## 更新主程序
 
-### 对于nvm安装
+### 对于 nvm 安装
 
 ```
 nvm install --lts --latest-npm --reinstall-packages-from=node
@@ -124,10 +124,10 @@ npm update --save  # 更新系统插件
 ## 查看安装过的模块
 
 ```
-// 查看当前项目的依赖模块
+# 查看当前项目的依赖模块
 npm ls --depth 0
 
-// 查看全局依赖模块命令
+# 查看全局依赖模块命令
 npm ls -g --depth 0
 ```
 
@@ -135,7 +135,7 @@ npm ls -g --depth 0
 
 ```
 npm cache verify
-// 或npm cache clean --force
+# 或npm cache clean --force
 ```
 
 ## 删除项目所有依赖
@@ -160,7 +160,7 @@ console.log(a === b);   // 输出false
 
 ### nodejieba
 
-jieba中文分词库的Nodejs版本。
+jieba 中文分词库的 Nodejs 版本。
 
 #### 安装
 
@@ -252,9 +252,9 @@ console.log(nodejieba.extract("升职加薪，当上CEO，走上人生巅峰。"
 
 # 卸载
 
-## 卸载nvm
+## 卸载 nvm
 
-在终端输入以下命令，移除nvm。
+在终端输入以下命令，移除 nvm。
 
 ```
 cd ~
@@ -268,9 +268,9 @@ source ~/.zshrc
 source ~/.bash_profile
 ```
 
-## 卸载node和npm
+## 卸载 node 和 npm
 
-### 对于nvm安装
+### 对于 nvm 安装
 
 ```
 nvm uninstall [版本号]
@@ -301,19 +301,19 @@ npm
 
 # 常见问题
 
-## 提示package.json不存在
+## 提示 package.json 不存在
 
-package.json不存在时，可运行以下命令自动创建。
+package.json 不存在时，可运行以下命令自动创建。
 
 ```
 npm init
 ```
 
-package.json存在时，运行以下命令以将package.json的模块安装到node-modules文件夹下。
+package.json 存在时，运行以下命令以将 package.json 的模块安装到 node-modules 文件夹下。
 
 ```
 npm install
-// 或 npm install –save-dev
+# 或 npm install –save-dev
 ```
 
 打开package.json，在最后大括号前添加以下语句，保存并退出。该语句可修复`warning no description / no repository field`的错误。
@@ -324,7 +324,7 @@ npm install
 
 ## 提示找不到<CoreFoundation/CoreFoundation.h>或其它库文件
 
-对于Mac，在终端输入以下命令即可。
+对于 Mac，在终端输入以下命令即可。
 
 ```
 csrutil disable
@@ -337,32 +337,12 @@ sudo DevToolsSecurity -enable
 
 # 参考教程
 
-## How to Install Node.js and npm on CentOS 7
+> [How to Install Node.js and npm on CentOS 7](https://linuxize.com/post/how-to-install-node-js-on-centos-7/)  
 
-```
-https://linuxize.com/post/how-to-install-node-js-on-centos-7/
-```
+> [如何在 Ubuntu 20.04 上安装 Node.js 和 npm](https://developer.aliyun.com/article/760687)  
 
-## 如何在 Ubuntu 20.04 上安装 Node.js 和 npm
+> [yanyiwu/nodejieba](https://github.com/yanyiwu/nodejieba)  
 
-```
-https://developer.aliyun.com/article/760687
-```
+> [nodejs中的==、===、!=、!==的区别](https://blog.csdn.net/gisredevelopment/article/details/12979479)  
 
-## yanyiwu/nodejieba
-
-```
-https://github.com/yanyiwu/nodejieba
-```
-
-## nodejs中的==、===、!=、!==的区别
-
-```
-https://blog.csdn.net/gisredevelopment/article/details/12979479
-```
-
-## jiaba 分词词性标注含义
-
-```
-https://blog.csdn.net/weixin_30521649/article/details/95919189
-```
+> [jiaba 分词词性标注含义](https://blog.csdn.net/weixin_30521649/article/details/95919189)  

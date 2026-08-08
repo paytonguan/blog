@@ -8,7 +8,7 @@ tags:
 
 ![](topic.jpg)
 
-Markdown语法。
+Markdown 语法。
 
 <!-- more -->
 
@@ -27,7 +27,7 @@ Markdown语法。
 
 # 区块引用
 
-区块引用可以嵌套，也可以使用其他的Markdown语法，包括标题、列表、代码区块等。
+区块引用可以嵌套，也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等。
 
 ```
 > 引用
@@ -55,12 +55,12 @@ Markdown语法。
 * Green
 * Blue
 
-// 或
+# 或
 + Red
 + Green
 + Blue
 
-// 或
+# 或
 - Red
 - Green
 - Blue
@@ -101,7 +101,7 @@ I get 10 times more traffic from [Google] [1] than from
   [2]: http://search.yahoo.com/  "Yahoo Search"
   [3]: http://search.msn.com/    "MSN Search"
 
-// 选其一即可
+# 选其一即可
 [1]: http://example.com/  "Optional Title Here"
 [1]: http://example.com/  'Optional Title Here'
 [1]: http://example.com/  (Optional Title Here)
@@ -185,10 +185,10 @@ Use the `printf()` function.
 # 公式
 
 ```
-// 行内公式
+# 行内公式
 $公式内容$
 
-// 独行公式
+# 独行公式
 $$公式内容$$
 ```
 
@@ -387,20 +387,8 @@ $$公式内容$$
 
 # 参考教程
 
-## Markdown 语法说明 (简体中文版)
+> [Markdown 语法说明 \(简体中文版\)](https://www.appinn.com/markdown/)  
 
-```
-https://www.appinn.com/markdown/
-```
+> [Markdown 分段函数写法](https://blog.csdn.net/Hey___Man/article/details/79272137)  
 
-## Markdown 分段函数写法
-
-```
-https://blog.csdn.net/Hey___Man/article/details/79272137
-```
-
-## Markdown数学公式语法
-
-```
-https://www.jianshu.com/p/e74eb43960a1
-```
+> [Markdown数学公式语法](https://www.jianshu.com/p/e74eb43960a1)  

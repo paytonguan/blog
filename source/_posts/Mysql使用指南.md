@@ -1,5 +1,5 @@
 ---
-title: Mysql使用指南
+title: Mysql 使用指南
 categories: Skill
 abbrlink: Instructions-Of-Mysql
 date: 2020-12-19 21:45:57
@@ -8,7 +8,7 @@ tags:
 
 ![](topic.jpg)
 
-Mysql使用指南。
+Mysql 使用指南。
 
 <!-- more -->
 
@@ -22,7 +22,7 @@ https://dev.mysql.com/downloads/mysql/
 
 # 配置环境变量
 
-对于Mac，打开用户目录下的.bash_profile（zsh为.zshrc）文件，在末尾复制以下内容并保存。
+对于 Mac，打开用户目录下的.bash_profile（zsh 为.zshrc）文件，在末尾复制以下内容并保存。
 
 ```
 export PATH=$PATH:/usr/local/mysql/bin
@@ -32,10 +32,10 @@ export PATH=$PATH:/usr/local/mysql/support-files
 打开终端并输入以下命令。
 
 ```
-// bash
+# bash
 source ~/.bash_profile
 
-// zsh
+# zsh
 source ~/.zshrc
 ```
 
@@ -50,7 +50,7 @@ sudo mysql.server status
 
 # 进入命令行
 
-输入以下命令即可。其中-u表示username，-p表示password。
+输入以下命令即可。其中-u 表示 username，-p 表示 password。
 
 ```
 mysql -u <用户名> -p [<密码>]
@@ -78,7 +78,7 @@ create table <表名>{
 
 ## 插入数据
 
-注意，如果键的属性为auto_increment，则插入数据时可以不用写该值。
+注意，如果键的属性为 auto_increment，则插入数据时可以不用写该值。
 
 ```
 insert into <表名>(<键名>,...,<键名>) values (<键值>,...,<键值>);
@@ -89,13 +89,13 @@ insert into <表名>(<键名>,...,<键名>) values (<键值>,...,<键值>);
 如果有外码约束，需先消除外码约束。
 
 ```
-// 取消外码约束
+# 取消外码约束
 set foreign_key_checks = 0;
 
-// 更新数据
+# 更新数据
 update <表名> set <键名>=<键值> where <条件>;
 
-// 恢复外码约束
+# 恢复外码约束
 set foreign_key_checks = 1;
 ```
 
@@ -104,13 +104,13 @@ set foreign_key_checks = 1;
 如果有外码约束，需先消除外码约束。
 
 ```
-// 取消外码约束
+# 取消外码约束
 set foreign_key_checks = 0;
 
-// 更新数据
+# 更新数据
 delete from <表名> where <条件>;
 
-// 恢复外码约束
+# 恢复外码约束
 set foreign_key_checks = 1;
 ```
 
@@ -118,7 +118,7 @@ set foreign_key_checks = 1;
 
 ## 查询
 
-在mysql命令行输入以下命令即可。
+在 mysql 命令行输入以下命令即可。
 
 ```
 show global variables like ‘port’;
@@ -128,7 +128,7 @@ show global variables like ‘port’;
 
 对于Mac，打开配置文件/Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist，修改`-port=`后面的数字即可。
 
-# CLion集成
+# CLion 集成
 
 具体可参照以下链接。
 
@@ -136,14 +136,14 @@ show global variables like ‘port’;
 https://www.jetbrains.com/help/clion/connecting-to-a-database.html
 ```
 
-# 配置ODBC
+# 配置 ODBC
 
-以下操作均在Windows下完成。
+以下操作均在 Windows 下完成。
 
 ## 安装驱动
 
-在安装MySQL时选中ODBC组件即可。
+在安装 MySQL 时选中 ODBC 组件即可。
 
-## 配置ODBC源
+## 配置 ODBC 源
 
-打开控制面板，选择管理工具-ODBC数据源，点击添加，选择MySQL ODBC 8.0 ANSI Driver，按照信息填写即可。
+打开控制面板，选择管理工具-ODBC 数据源，点击添加，选择 MySQL ODBC 8.0 ANSI Driver，按照信息填写即可。

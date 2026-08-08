@@ -1,5 +1,5 @@
 ---
-title: Scoop使用指南
+title: Scoop 使用指南
 categories: Skill
 abbrlink: Instructions-Of-Scoop
 date: 2020-04-27 08:54:29
@@ -8,13 +8,13 @@ tags:
 
 ![](topic.jpg)
 
-类似Homebrew的软件管理器。
+类似 Homebrew 的软件管理器。
 
 <!-- more -->
 
 # 使用
 
-打开PowerShell并运行以下命令以执行安装。
+打开 PowerShell 并运行以下命令以执行安装。
 
 ```
 # 将PowerShell设置为可运行任意脚本
@@ -22,11 +22,11 @@ set-executionpolicy Unrestricted
 
 # 下载脚本
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
-// 或
+# 或
 iwr -useb get.scoop.sh | iex
 ```
 
-执行以下命令安装aria2以提升下载速度。
+执行以下命令安装 aria2 以提升下载速度。
 
 ```
 scoop install aria2
@@ -69,10 +69,6 @@ scoop bucket add dodorz https://github.com/dodorz/scoop-bucket
 
 # 参考教程
 
-## Scoop软件包管理神器
-
-```
-https://www.limufang.com/post/569.html
-```
+> [Scoop软件包管理神器](https://www.limufang.com/post/569.html)  
 
 

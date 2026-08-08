@@ -1,5 +1,5 @@
 ---
-title: Python使用指南
+title: Python 使用指南
 categories: Skill
 abbrlink: Instructions-Of-Python
 date: 2019-12-29 14:12:29
@@ -8,13 +8,13 @@ tags:
 
 ![](topic.jpg)
 
-对于Mac而言，Big Sur已自带python3，Catalina及以下自带python 2。
+对于 Mac 而言，Big Sur 已自带 python3，Catalina 及以下自带 python 2。
 
 <!-- more -->
 
 # 安装
 
-## 通过pyenv
+## 通过 pyenv
 
 ```
 brew install pyenv
@@ -34,19 +34,19 @@ pyenv install [版本号]
 <details>
 <summary>旧方法</summary>
 
-查看系统自带的python版本。
+查看系统自带的 python 版本。
 
 ```
 python -V
 ```
 
-用Homebrew安装python 3。
+用 Homebrew 安装 python 3。
 
 ```
 brew install python3
 ```
 
-查看python 3位置，并记录。
+查看 python 3 位置，并记录。
 
 ```
 which python3
@@ -55,7 +55,7 @@ which python3
 打开配置文件。
 
 ```
-// 以下二选一
+# 以下二选一
 （终端shell为zsh）
 vi ~/.zshrc
 
@@ -66,14 +66,14 @@ vi ~/.bash_profile
 在文件中添加下面语句，保存并退出。
 
 ```
-// 路径改为上面记录的python 3路径
+# 路径改为上面记录的python 3路径
 alias python="/usr/local/bin/python3"
 ```
 
 编译系统配置文件。
 
 ```
-// 以下二选一
+# 以下二选一
 （终端shell为zsh）
 source ~/.zshrc
 
@@ -81,7 +81,7 @@ source ~/.zshrc
 source ~/.bash_profile
 ```
 
-查看系统python版本，应已改为python 3。
+查看系统 python 版本，应已改为 python 3。
 
 ```
 python -V
@@ -90,7 +90,7 @@ python -V
 
 # pip
 
-pip是python的安装包工具。
+pip 是 python 的安装包工具。
 
 ## 安装
 
@@ -102,7 +102,7 @@ sudo easy_install pip
 
 ## 更新
 
-注意不要用sudo。
+注意不要用 sudo。
 
 ```
 pip install --user --upgrade pip
@@ -118,7 +118,7 @@ sudo pip uninstall pip
 
 ## 包管理
 
-### 卸载所有由pip安装的包
+### 卸载所有由 pip 安装的包
 
 ```
 pip uninstall -y -r <(pip freeze)
@@ -126,9 +126,9 @@ pip uninstall -y -r <(pip freeze)
 
 ## 常见问题
 
-### 安装后出现Warning: pip is being invoked by an old script wrapper
+### 安装后出现 Warning: pip is being invoked by an old script wrapper
 
-不要将pip和sudo一起使用，否则将容易出现该错误。
+不要将 pip 和 sudo 一起使用，否则将容易出现该错误。
 
 若出现该错误，可打开~/.zshrc，将以下行取消注释，保存后重启终端。
 
@@ -172,7 +172,7 @@ pip config set global.index-url [镜像源地址]
 
 ## Frida
 
-到以下网站下载Frida的安装包并放到用户目录，为egg格式。
+到以下网站下载 Frida 的安装包并放到用户目录，为 egg 格式。
 
 ```
 https://pypi.org/project/frida/#files
@@ -186,23 +186,11 @@ easy_install [路径]
 
 # 参考教程
 
-## pyenv
+> [pyenv](https://github.com/pyenv/pyenv)  
+> https://github.com/pyenv/pyenv-installer  
+> https://github.com/jiansoung/issues-list/issues/13  
 
-```
-https://github.com/pyenv/pyenv
-https://github.com/pyenv/pyenv-installer
-https://github.com/jiansoung/issues-list/issues/13
-```
+> [删除pip安装的所有软件包的最简单方法是什么？](https://www.imooc.com/wenda/detail/605683)  
 
-## 删除pip安装的所有软件包的最简单方法是什么？
-
-```
-https://www.imooc.com/wenda/detail/605683
-```
-
-## python - Warning: pip is being invoked by an old script wrapper - Stack Overflow
-
-```
-https://stackoverflow.com/questions/60029215/warning-pip-is-being-invoked-by-an-old-script-wrapper
-```
+> [python - Warning: pip is being invoked by an old script wrapper - Stack Overflow](https://stackoverflow.com/questions/60029215/warning-pip-is-being-invoked-by-an-old-script-wrapper)  
 

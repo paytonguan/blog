@@ -1,5 +1,5 @@
 ---
-title: Git和Github的安装与使用
+title: Git 和 Github 的安装与使用
 categories: Skill
 abbrlink: Git-Installation
 date: 2019-11-25 17:50:29
@@ -8,21 +8,21 @@ tags:
 
 ![](topic.jpg)
 
-Git是一个常用的工具，与github一同使用。
+Git 是一个常用的工具，与 github 一同使用。
 
 <!-- more -->
 
 # Git
 
-Git是提交记录的集合。
+Git 是提交记录的集合。
 
 ## 安装
 
-Mac下已自带git。
+Mac 下已自带 git。
 
-Windows需自行下载。到官网下载`git for windows`，双击安装包进行安装，注意在Terminal Emulator的设置中选择Use Windows' default console window，这样就可以在cmd中使用git命令。
+Windows 需自行下载。到官网下载`git for windows`，双击安装包进行安装，注意在 Terminal Emulator 的设置中选择 Use Windows' default console window，这样就可以在 cmd 中使用 git 命令。
 
-打开cmd，输入git，检查是否安装成功。
+打开 cmd，输入 git，检查是否安装成功。
 
 ```
 https://gitforwindows.org/
@@ -32,7 +32,7 @@ https://gitforwindows.org/
 
 以下为创建/克隆一个仓库并完成提交的过程，按照命令顺序执行即可。
 
-### 连接到Github账号
+### 连接到 Github 账号
 
 只需配置一次。打开终端输入以下代码，一路回车生成密钥。
 
@@ -42,7 +42,7 @@ git config --global user.email "github的注册邮箱地址"
 ssh-keygen -t rsa -C "github的注册邮箱地址" 
 ```
 
-密钥默认生成在用户目录下的`.ssh`文件夹内。打开id_rsa.pub，复制所有内容后，在网页上登录Github，点击头像，选择Settings-SSH and GPG keys，选择New SSH key，名称任取，内容把刚才复制的粘贴上去，保存即可。
+密钥默认生成在用户目录下的`.ssh`文件夹内。打开 id_rsa.pub，复制所有内容后，在网页上登录 Github，点击头像，选择 Settings-SSH and GPG keys，选择 New SSH key，名称任取，内容把刚才复制的粘贴上去，保存即可。
 
 ### 本地新建仓库或克隆现有仓库
 
@@ -68,7 +68,7 @@ git clone git@github.com:[用户名]/[仓库名].git
 
 ### 设定远程仓库地址
 
-只需在第一次新建仓库时执行，需要在Github网页版上先新建好仓库。对于同一个本地仓库而言，该命令只在初始化仓库时执行。
+只需在第一次新建仓库时执行，需要在 Github 网页版上先新建好仓库。对于同一个本地仓库而言，该命令只在初始化仓库时执行。
 
 ```
 git remote add origin git@github.com:[用户名]/[仓库名].git
@@ -86,7 +86,7 @@ git remote add origin git@github.com:[用户名]/[仓库名].git
 
 ### 工作流处理
 
-每次进行修改后均要执行。工作流有三个部分，其中工作目录用于存放原始文件，暂存区用于临时保存改动，HEAD指向最后一次提交的结果。
+每次进行修改后均要执行。工作流有三个部分，其中工作目录用于存放原始文件，暂存区用于临时保存改动，HEAD 指向最后一次提交的结果。
 
 #### 提交到暂存区
 
@@ -110,15 +110,15 @@ git add .
 | git clean -fd            | 清理未跟踪的文件和目录                                             |
 | git clean -nd            | 测试上面命令会删除哪些文件                                         |
 
-#### 提交到HEAD
+#### 提交到 HEAD
 
-每执行一次本命令，当前修改即被打包为一个提交记录，且前一个提交记录成为当前提交记录的父节点，当前分支头HEAD则指向当前分支。
+每执行一次本命令，当前修改即被打包为一个提交记录，且前一个提交记录成为当前提交记录的父节点，当前分支头 HEAD 则指向当前分支。
 
 ```
 git commit -m "..."
 ```
 
-提交前后示意如下，其中main为分支，星号表示当前处于该分支。注意commit只会移动当前分支，而不影响其它分支。
+提交前后示意如下，其中 main 为分支，星号表示当前处于该分支。注意 commit 只会移动当前分支，而不影响其它分支。
 
 ```
 # 执行前
@@ -143,7 +143,7 @@ C0───C1───C2
 | --reset-author | 同步提交者信息                         |
 | -c [名称]      | 使用[名称]的提交说明                   |
 
-#### 由HEAD推送到远程仓库
+#### 由 HEAD 推送到远程仓库
 
 ```
 # 推送到master分支
@@ -215,7 +215,7 @@ C0───C1───C2──┐
                  main*
 ```
 
-注意，若需将bugFix分支移动到main，则运行以下命令。由于main继承自bugFix，因此Git会将bugFix移动到main处。
+注意，若需将 bugFix 分支移动到 main，则运行以下命令。由于 main 继承自 bugFix，因此 Git 会将 bugFix 移动到 main 处。
 
 ```
 git checkout bugFix
@@ -243,7 +243,7 @@ C0───C1───C2──┐
                  bugFix*
 ```
 
-merge的方法分为三种，分别为普通merge、rebase merge和squash merge，区别如下。
+merge 的方法分为三种，分别为普通 merge、rebase merge 和 squash merge，区别如下。
 
 ```
 # 执行前
@@ -268,8 +268,6 @@ C0───C1───C2───C3───C4──┐
       └───C5────────────┴─C6
                            │
                            main*
-
-
 
 # squash merge
 # 开始时在main分支
@@ -330,7 +328,7 @@ C0───C1
 git rebase main
 ```
 
-执行以上命令前后提交记录如下。注意，分支应指向最新的提交记录，运行rebase时，Git默认将从两者的公共节点出发，断开本分支与公共节点的连接，并指向指定分支以使其成为父节点。
+执行以上命令前后提交记录如下。注意，分支应指向最新的提交记录，运行 rebase 时，Git 默认将从两者的公共节点出发，断开本分支与公共节点的连接，并指向指定分支以使其成为父节点。
 
 ```
 # 执行前
@@ -356,15 +354,15 @@ C0───C1─ ─C3
 ```
 git rebase --continue
 ```
-若中途希望终止rebase，则输入以下命令。
+若中途希望终止 rebase，则输入以下命令。
 
 ```
 git rebase --abort
 ```
 
-经过rebase后的分支推送到远程分支时，需要用`-f`参数强制覆盖远程分支。
+经过 rebase 后的分支推送到远程分支时，需要用`-f`参数强制覆盖远程分支。
 
-注意，若需将main分支移动到bugFix，则运行以下命令。由于bugFix继承自main，因此Git会将main移动到bugFix处。
+注意，若需将 main 分支移动到 bugFix，则运行以下命令。由于 bugFix 继承自 main，因此 Git 会将 main 移动到 bugFix 处。
 
 ```
 git checkout main
@@ -452,7 +450,7 @@ git checkout [本地分支名]
 
 ### HEAD
 
-HEAD指向最后一次提交的结果，一般指向分支名。可通过以下命令查看HEAD的指向。
+HEAD 指向最后一次提交的结果，一般指向分支名。可通过以下命令查看 HEAD 的指向。
 
 ```
 # 查看HEAD指向
@@ -462,7 +460,7 @@ cat .git/HEAD
 git symbolic-ref HEAD
 ```
 
-分离的HEAD即为让HEAD指向某个具体的提交记录而非分支名。通过哈希值可指定提交记录，命令如下。哈希值不必全部填写，填写至Git能唯一识别该提交记录时的长度即可。
+分离的 HEAD 即为让 HEAD 指向某个具体的提交记录而非分支名。通过哈希值可指定提交记录，命令如下。哈希值不必全部填写，填写至 Git 能唯一识别该提交记录时的长度即可。
 
 ```
 # 让HEAD指向提交记录C1而非分支
@@ -514,7 +512,7 @@ C0───C1───C2
 git checkout main^2
 ```
 
-假设C3为C4的第一个父节点，C2为C4的第二个父节点。执行以上命令前后提交记录如下。
+假设 C3 为 C4 的第一个父节点，C2 为 C4 的第二个父节点。执行以上命令前后提交记录如下。
 
 ```
 # 执行前
@@ -536,9 +534,9 @@ C0───C1───C2──┐
 
 ### 撤销变更
 
-#### reset命令
+#### reset 命令
 
-git reset通过把分支记录回退几个提交记录来实现撤销改动。该命令对本地分支起作用。
+git reset 通过把分支记录回退几个提交记录来实现撤销改动。该命令对本地分支起作用。
 
 ```
 git reset HEAD~1
@@ -558,7 +556,7 @@ C0───C1─ ─C2
       main*
 ```
 
-其余可用命令如下。`[<commit>]`可以省略，默认为HEAD。
+其余可用命令如下。`[<commit>]`可以省略，默认为 HEAD。
 
 |                  命令                  |                                            含义                                           |
 |----------------------------------------|-------------------------------------------------------------------------------------------|
@@ -573,15 +571,15 @@ C0───C1─ ─C2
 | --soft  | 只更改引用，工作区和暂存区不影响           |
 | --mixed | 默认参数，只更改引用和暂存区，不影响工作区 |
 
-#### revert命令
+#### revert 命令
 
-git revert用于撤销更改并实现共享。
+git revert 用于撤销更改并实现共享。
 
 ```
 git revert HEAD
 ```
 
-执行以上命令前后提交记录如下。其中C2'的内容与C1一致。
+执行以上命令前后提交记录如下。其中 C2'的内容与 C1 一致。
 
 ```
 # 执行前
@@ -627,7 +625,7 @@ C0───C1───C2───C3───C4
                       main*
 ```
 
-注意，对于以下情况，应该使用cherry-pick而不是rebase。
+注意，对于以下情况，应该使用 cherry-pick 而不是 rebase。
 
 ```
 # 执行前
@@ -647,9 +645,9 @@ C0───C1───C2
 
 ### 修改先前提交记录
 
-可先通过rebase命令将要修改的提交记录移到最前，完成修改并commit后，再用rebase命令调整为原来的顺序。
+可先通过 rebase 命令将要修改的提交记录移到最前，完成修改并 commit 后，再用 rebase 命令调整为原来的顺序。
 
-也可通过cherry-pick命令将要修改的提交记录单独复制出来，完成修改并commit后，再用cherry-pick命令复制该提交记录以后的提交记录。
+也可通过 cherry-pick 命令将要修改的提交记录单独复制出来，完成修改并 commit 后，再用 cherry-pick 命令复制该提交记录以后的提交记录。
 
 修改之前的提交记录可使用`--amend`参数。注意推送的时候需要`-f`参数。
 
@@ -660,7 +658,7 @@ git push -f
 
 ### 标签
 
-即tag，也称为里程碑，用于标记某个特定的提交记录。该tag不会随着新的提交移动，永久指向该提交记录。可以通过checkout命令切换到指定的tag。
+即 tag，也称为里程碑，用于标记某个特定的提交记录。该 tag 不会随着新的提交移动，永久指向该提交记录。可以通过 checkout 命令切换到指定的 tag。
 
 ```
 git tag V1 C1
@@ -680,15 +678,15 @@ C0───C1───C2
       v1   main*
 ```
 
-通过以下命令可查找离指定位置最近的标签，其中`<ref>`为任何能被Git识别成提交记录的引用，不指定则默认为HEAD。--dirty参数可选，表示如果工作区有文件修改，将会显示出来。
+通过以下命令可查找离指定位置最近的标签，其中`<ref>`为任何能被 Git 识别成提交记录的引用，不指定则默认为 HEAD。--dirty 参数可选，表示如果工作区有文件修改，将会显示出来。
 
 ```
 git describe <ref> [--dirty]
 ```
 
-输出如下。其中tag表示离ref最近的标签，numCommits表示这个ref与tag相差有多少个提交记录，hash表示给定的ref所表示的提交记录哈希值的前几位。
+输出如下。其中 tag 表示离 ref 最近的标签，numCommits 表示这个 ref 与 tag 相差有多少个提交记录，hash 表示给定的 ref 所表示的提交记录哈希值的前几位。
 
-注意，当ref提交记录上有某个标签时，则只输出标签名称。
+注意，当 ref 提交记录上有某个标签时，则只输出标签名称。
 
 ```
 <tag>_<numCommits>_g<hash>
@@ -779,7 +777,7 @@ git fetch origin foo~1:bar
 git fetch origin :bar
 ```
 
-执行以上命令前后提交记录如下。注意本地的main分支不会被更新。
+执行以上命令前后提交记录如下。注意本地的 main 分支不会被更新。
 
 ```
 # 执行前
@@ -804,7 +802,7 @@ C0───C1───C2───C3
       main*     origin/main
 ```
 
-若希望更新本地分支，可使用fetch命令后使用以下命令之一。
+若希望更新本地分支，可使用 fetch 命令后使用以下命令之一。
 
 ```
 git cherry-pick origin/main
@@ -855,7 +853,7 @@ C0───C1───C2──┐
  origin/main     main*
 ```
 
-也可以直接使用pull命令。使用pull命令则无需再使用fetch命令。git pull等同于git fetch加上git merge，其参数使用与前面完全一致。
+也可以直接使用 pull 命令。使用 pull 命令则无需再使用 fetch 命令。git pull 等同于 git fetch 加上 git merge，其参数使用与前面完全一致。
 
 ```
 # <place>可以为<destination>或<source>:<destination>
@@ -906,7 +904,7 @@ C0───C1───C2──┐
 
 ### 提交本地变更
 
-push命令将变更上传到指定的远程仓库，并在远程仓库上合并新提交记录。若分支在远程仓库中不存在，Git将会自动创建。
+push 命令将变更上传到指定的远程仓库，并在远程仓库上合并新提交记录。若分支在远程仓库中不存在，Git 将会自动创建。
 
 ```
 # <place>可以为<destination>或<source>:<destination>
@@ -961,7 +959,7 @@ C0───C1───C2──┐
 
 ### 历史偏离处理
 
-假设当前提交记录如下。此时执行git push将失败，因为C3基于C1，但远程仓库中已经变成了C2，Git无法确定是需要先合并分支还是直接回滚到C1。
+假设当前提交记录如下。此时执行 git push 将失败，因为 C3 基于 C1，但远程仓库中已经变成了 C2，Git 无法确定是需要先合并分支还是直接回滚到 C1。
 
 ```
 ## 远程端
@@ -977,7 +975,7 @@ C0───C1───C3
 origin/main
 ```
 
-此时可先更新本地的远程分支，然后通过rebase命令将C3移到最新的提交记录下，最后再提交即可。
+此时可先更新本地的远程分支，然后通过 rebase 命令将 C3 移到最新的提交记录下，最后再提交即可。
 
 ```
 git fetch
@@ -1004,7 +1002,7 @@ C0───C1───C2───C3'
                 origin/main
 ```
 
-也可用merge代替rebase。
+也可用 merge 代替 rebase。
 
 ```
 git fetch
@@ -1085,7 +1083,7 @@ C0───C1
       origin/main
 ```
 
-若执行git pull，则变为如下。注意main分支未被更新，git push同理。
+若执行 git pull，则变为如下。注意 main 分支未被更新，git push 同理。
 
 ```
 ## 远程端
@@ -1113,7 +1111,7 @@ git status -s
 
 ### 文件忽略
 
-git文件忽略需要在根目录新建.gitignore文件，作用范围是其所处的目录及其子目录，无法使用add添加。只对未加入跟踪的文件有效。
+git 文件忽略需要在根目录新建.gitignore 文件，作用范围是其所处的目录及其子目录，无法使用 add 添加。只对未加入跟踪的文件有效。
 
 文件内容示例如下。
 
@@ -1169,7 +1167,7 @@ git rev-parse --show-toplevel
 
 git对于超过100MB的文件默认不能上传，出现`GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.`错误。
 
-可通过安装git-lfs解决，切换到项目目录并执行以下命令即可。注意无法对安装该工具之前的提交应用该工具。完成安装后按照正常的仓库提交流程进行即可。
+可通过安装 git-lfs 解决，切换到项目目录并执行以下命令即可。注意无法对安装该工具之前的提交应用该工具。完成安装后按照正常的仓库提交流程进行即可。
 
 ```
 git lfs install
@@ -1177,7 +1175,7 @@ git lfs track "*.psd" // psd为需要上传的大文件后缀
 git add .gitattributes
 ```
 
-### 用HEAD中的内容替换本地改动
+### 用 HEAD 中的内容替换本地改动
 
 ```
 git checkout -- <fliename>
@@ -1285,21 +1283,21 @@ git reflog -1
 
 ## 主程序管理
 
-### 配置SSH密钥
+### 配置 SSH 密钥
 
-配置SSH密钥可在拉取代码时避免输入用户名和密码。终端输入以下命令，一路回车以使用默认配置。
+配置 SSH 密钥可在拉取代码时避免输入用户名和密码。终端输入以下命令，一路回车以使用默认配置。
 
 ```
 ssh-keygen -t rsa -C "[Github邮箱地址]"
 ```
 
-然后输入以下命令查看生成的SSH密钥。
+然后输入以下命令查看生成的 SSH 密钥。
 
 ```
 cat ~/.ssh/id_rsa.pub
 ```
 
-在Github网站上登录自己的账号，然后进入Settings-SSH and GPG keys，点击New SSH Key，将刚才的内容复制进来并确定即可。
+在 Github 网站上登录自己的账号，然后进入 Settings-SSH and GPG keys，点击 New SSH Key，将刚才的内容复制进来并确定即可。
 
 ### 更新
 
@@ -1307,13 +1305,13 @@ cat ~/.ssh/id_rsa.pub
 git update-git-for-windows
 ```
 
-### 彩色git输出
+### 彩色 git 输出
 
 ```
 git config color.ui true
 ```
 
-### git配置
+### git 配置
 
 ```
 git config
@@ -1348,11 +1346,11 @@ git config --global http.sslverify true
 
 ## 下载加速
 
-国内DNS把Github的域名基本上都解析到了美国的服务器，所以访问起来会比较慢。
+国内 DNS 把 Github 的域名基本上都解析到了美国的服务器，所以访问起来会比较慢。
 
-### 通过Gitee
+### 通过 Gitee
 
-打开以下链接并完成注册和登录。然后创建仓库，在新建仓库页选择`导入已有仓库`，复制需要下载的git链接，点击创建，然后下载即可。
+打开以下链接并完成注册和登录。然后创建仓库，在新建仓库页选择`导入已有仓库`，复制需要下载的 git 链接，点击创建，然后下载即可。
 
 ```
 https://gitee.com/
@@ -1360,7 +1358,7 @@ https://gitee.com/
 
 ### 通过镜像站
 
-可通过以下网站代替github.com进行访问。
+可通过以下网站代替 github.com 进行访问。
 
 ```
 https://github.iapk.cc
@@ -1370,7 +1368,7 @@ https://github.com.cnpmjs.org
 https://github.wuyanzheshui.workers.dev
 ```
 
-也可使用Fast Github，游猴脚本如下。
+也可使用 Fast Github，游猴脚本如下。
 
 ```
 https://greasyfork.org/zh-CN/scripts/397419
@@ -1398,9 +1396,9 @@ https://github.zhlh6.cn/
 
 ### 通过插件
 
-#### Chrome插件
+#### Chrome 插件
 
-可通过`Github加速`插件，下载链接如下。
+可通过`Github 加速`插件，下载链接如下。
 
 ```
 https://fhefh2015.github.io/Fast-GitHub/
@@ -1408,7 +1406,7 @@ https://ltribe.lanzoui.com/i3iAGi1xxdi
 https://chrome.google.com/webstore/detail/github%E5%8A%A0%E9%80%9F/mfnkflidjnladnkldfonnaicljppahpg
 ```
 
-也可使用FasterHosts。
+也可使用 FasterHosts。
 
 ```
 https://github.com/gauseen/faster-hosts
@@ -1416,13 +1414,13 @@ https://github.com/gauseen/faster-hosts
 
 #### 游猴插件
 
-可通过`Github增强`插件。
+可通过`Github 增强`插件。
 
 ```
 https://greasyfork.org/scripts/412245
 ```
 
-### 通过CDN
+### 通过 CDN
 
 通过以下链接即可。
 
@@ -1430,19 +1428,19 @@ https://greasyfork.org/scripts/412245
 https://cdn.jsdelivr.net/gh/[Github用户名]/[GitHub仓库名]@[版本号，没版本号可以不填]/file
 ```
 
-也可将raw.githubusercontent.com替换为raw.staticdn.net。
+也可将 raw.githubusercontent.com 替换为 raw.staticdn.net。
 
 ### 通过自建服务器
 
-#### 部署到Cloudflare Worker
+#### 部署到 Cloudflare Worker
 
-打开以下链接并登录，新建一个Worker。
+打开以下链接并登录，新建一个 Worker。
 
 ```
 https://workers.cloudflare.com
 ```
 
-复制以下代码到左侧代码框后进行部署，即可通过Worker所分配的网站进入部署好的Github加速站点。
+复制以下代码到左侧代码框后进行部署，即可通过 Worker 所分配的网站进入部署好的 Github 加速站点。
 
 ```
 'use strict'
@@ -1610,21 +1608,21 @@ async function proxy(urlObj, reqInit, rawLen) {
 }
 ```
 
-#### 部署到VPS
+#### 部署到 VPS
 
-连接到服务器并执行以下命令部署docker，其中第一个80表示要暴露的端口。
+连接到服务器并执行以下命令部署 docker，其中第一个 80 表示要暴露的端口。
 
 ```
 docker run -d --name="gh-proxy-py" -p 0.0.0.0:80:80 --restart=always hunsh/gh-proxy-py:latest
 ```
 
-通过以下命令安装依赖，注意应当使用python 3。
+通过以下命令安装依赖，注意应当使用 python 3。
 
 ```
 pip install flask requests
 ```
 
-新建main.py并填写以下内容，其中部分选项根据注释进行修改。修改完成后保存并运行该脚本即可。
+新建 main.py 并填写以下内容，其中部分选项根据注释进行修改。修改完成后保存并运行该脚本即可。
 
 ```
 # -*- coding: utf-8 -*-
@@ -1764,7 +1762,7 @@ if __name__ == '__main__':
     app.run(host=HOST, port=PORT)
 ```
 
-### 通过FastGit
+### 通过 FastGit
 
 #### 基础使用
 
@@ -1789,13 +1787,13 @@ wget https://download.fastgit.org/A/A/archive/master.zip
 
 #### fgit
 
-可通过安装fgit，在克隆项目时直接完成链接替换。下载以下项目并解压。
+可通过安装 fgit，在克隆项目时直接完成链接替换。下载以下项目并解压。
 
 ```
 https://github.com/FastGitORG/fgit
 ```
 
-完成解压后，对于Linux，终端切换到解压好的目录后执行以下命令。
+完成解压后，对于 Linux，终端切换到解压好的目录后执行以下命令。
 
 ```
 sudo cp ./bin/fgit.sh /usr/local/bin
@@ -1811,15 +1809,15 @@ fgit https://github.com/author/repo
 
 #### 油猴脚本
 
-Fastgit油猴脚本链接如下。
+Fastgit 油猴脚本链接如下。
 
 ```
 https://greasyfork.org/zh-CN/scripts/402301-fastgit
 ```
 
-### 通过Microsoft Azure Notebooks
+### 通过 Microsoft Azure Notebooks
 
-打开以下链接并登录微软账号。新建一个notebook环境并预装Git，然后使用git或者wget命令将Github资源下载到微软服务器，再从微软下载。
+打开以下链接并登录微软账号。新建一个 notebook 环境并预装 Git，然后使用 git 或者 wget 命令将 Github 资源下载到微软服务器，再从微软下载。
 
 ```
 https://notebooks.azure.com/
@@ -1842,7 +1840,7 @@ https://www.dogfight360.com/blog/686/
 
 ### 通过翻墙
 
-翻墙后查看翻墙工具的本地端口。以1080为例，可通过以下命令设置代理。
+翻墙后查看翻墙工具的本地端口。以 1080 为例，可通过以下命令设置代理。
 
 ```
 git config --global http.proxy 'socks5://127.0.0.1:1080'
@@ -1856,11 +1854,11 @@ git config --global --unset https.proxy 'socks5://127.0.0.1:1080'
 git config --global --unset http.proxy 'socks5://127.0.0.1:1080'
 ```
 
-### 通过hosts
+### 通过 hosts
 
 #### 自动修改
 
-##### 通过UsbEAm Hosts Editor
+##### 通过 UsbEAm Hosts Editor
 
 下载链接如下。
 
@@ -1868,9 +1866,9 @@ git config --global --unset http.proxy 'socks5://127.0.0.1:1080'
 https://www.dogfight360.com/blog/475/
 ```
 
-##### 通过SwitchHosts!
+##### 通过 SwitchHosts!
 
-可通过订阅hosts规则的方式，避免手动更新域名和IP。点击+号，Type选择Remote，URL如下，Auto Refresh建议选择1 hour。
+可通过订阅 hosts 规则的方式，避免手动更新域名和 IP。点击+号，Type 选择 Remote，URL 如下，Auto Refresh 建议选择 1 hour。
 
 ```
 # 选择其一即可
@@ -1880,9 +1878,9 @@ https://raw.hellogithub.com/hosts
 
 #### 手动修改
 
-##### 查询IP
+##### 查询 IP
 
-通过以下网站查询`global-ssl.fastly.Net`和`github.com`的公网地址，选择一个稳定且延迟较低的IP并记录。注意不要直接在终端ping该网址，因为经常会发生DNS污染。
+通过以下网站查询`global-ssl.fastly.Net`和`github.com`的公网地址，选择一个稳定且延迟较低的 IP 并记录。注意不要直接在终端 ping 该网址，因为经常会发生 DNS 污染。
 
 ```
 http://tool.chinaz.com/dns/
@@ -1899,33 +1897,33 @@ https://github.com/ineo6/hosts
 
 ###### 通过直接修改
 
-将以下代码添加到`hosts`文件，其中xxx部分替换为上面所查到的IP地址。
+将以下代码添加到`hosts`文件，其中 xxx 部分替换为上面所查到的 IP 地址。
 
 ```
-// Windows下hosts文件位于C:\Windows\System32\drivers\etc\hosts
-// Mac/Linux下hosts文件位于/etc/hosts
+# Windows下hosts文件位于C:\Windows\System32\drivers\etc\hosts
+# Mac/Linux下hosts文件位于/etc/hosts
 
 xxx.xxx.xxx.xxx github.com
 xxx.xxx.xxx.xxx github.global.ssl.fastly.net  
 ```
 
-重启浏览器，或在终端（命令行）输入以下命令以刷新DNS缓存即可。
+重启浏览器，或在终端（命令行）输入以下命令以刷新 DNS 缓存即可。
 
 ```
-// Linux/Mac
+# Linux/Mac
 sudo /etc/init.d/networking restart
 
-// Windows
+# Windows
 ipconfig /flushdns
 ```
 
-###### 通过SwitchHosts!
+###### 通过 SwitchHosts!
 
-打开后新建配置文件，填写上面查询到的IP和域名，然后开启该配置文件即可。
+打开后新建配置文件，填写上面查询到的 IP 和域名，然后开启该配置文件即可。
 
 ### 通过加速器
 
-网易UU加速器可免费加速Github。
+网易 UU 加速器可免费加速 Github。
 
 ```
 https://uu.163.com/
@@ -1933,7 +1931,7 @@ https://uu.163.com/
 
 ## 常见问题
 
-### 每次pull代码都要输入密码
+### 每次 pull 代码都要输入密码
 
 打开终端，在项目目录下输入以下命令。
 
@@ -1941,7 +1939,7 @@ https://uu.163.com/
 git config --global credential.helper store
 ```
 
-然后pull一次，输入密码即可。注意这里的密码应该是token。
+然后 pull 一次，输入密码即可。注意这里的密码应该是 token。
 
 若无效，则先执行以下命令清理之前的配置，再输入以上命令。
 
@@ -1956,35 +1954,35 @@ git prune
 
 ### 新建分支
 
-在仓库中点击Branch，在搜索框中输入要新建的分支的名字，系统会自动弹出Create branch的窗口，点击即可。
+在仓库中点击 Branch，在搜索框中输入要新建的分支的名字，系统会自动弹出 Create branch 的窗口，点击即可。
 
 ### 设置默认分支
 
-在仓库中点击Settings，在侧栏选择Branches，选择新的默认分支即可。
+在仓库中点击 Settings，在侧栏选择 Branches，选择新的默认分支即可。
 
 ### Pull Request
 
-即PR。部分仓库不允许直接push，需要通过Pull Request提交更新。对代码进行修改后通知仓库作者并请求作者合并自己的修改，即完成一次Pull Request。
+即 PR。部分仓库不允许直接 push，需要通过 Pull Request 提交更新。对代码进行修改后通知仓库作者并请求作者合并自己的修改，即完成一次 Pull Request。
 
-在Github上fork项目，并进行修改。切换到需要PR的分支，点击New pull request即可。
+在 Github 上 fork 项目，并进行修改。切换到需要 PR 的分支，点击 New pull request 即可。
 
 ## Github Action
 
 ### 准备工作
 
-打开Github，点击Settings-Seveloper settings-Personal access tokens，选择`Generate new token`，勾选`repo`，`admin:repo_hook`，`workflow`后点击`Generate token`即可。
+打开 Github，点击 Settings-Seveloper settings-Personal access tokens，选择`Generate new token`，勾选`repo`，`admin:repo_hook`，`workflow`后点击`Generate token`即可。
 
-完成Github Action的设置后，可通过随意commit或点击`Star`以激活功能。
+完成 Github Action 的设置后，可通过随意 commit 或点击`Star`以激活功能。
 
 ### 可用项目
 
 #### 签到与打卡
 
-签到一般需要获取完整Cookie。
+签到一般需要获取完整 Cookie。
 
-若需要完整Cookie，可登录官网后点击F12，进入Network-Doc，刷新网页后点击以名称中以网站为名的选项，右侧即可复制Cookie。
+若需要完整 Cookie，可登录官网后点击 F12，进入 Network-Doc，刷新网页后点击以名称中以网站为名的选项，右侧即可复制 Cookie。
 
-若需要部分Cookie，则进入Application-Cookie，点击其下子项后，即可在右侧看到Cookie的详细内容。
+若需要部分 Cookie，则进入 Application-Cookie，点击其下子项后，即可在右侧看到 Cookie 的详细内容。
 
 如果有服务器，也可使用青龙部署。
 
@@ -2003,13 +2001,13 @@ http://qd.acy.moe/index.php?mod=login
 
 ##### 天翼云盘
 
-打开以下链接并Fork项目。
+打开以下链接并 Fork 项目。
 
 ```
 https://github.com/Wang-KH/Cloud189Checkin-Actions
 ```
 
-点击Settings-Secrets，添加以下Secrets。
+点击 Settings-Secrets，添加以下 Secrets。
 
 ```
 名称 / USER
@@ -2019,13 +2017,13 @@ https://github.com/Wang-KH/Cloud189Checkin-Actions
 内容 / 密码（可用空格分隔多个账号）
 ```
 
-保存后点击Actions，并开启功能。然后打开README.md，随意编辑后提交更改即可。
+保存后点击 Actions，并开启功能。然后打开 README.md，随意编辑后提交更改即可。
 
 ##### Sitoi
 
-包括爱奇艺、全民K歌、腾讯视频、有道云笔记、网易云音乐、一加手机社区官方论坛、百度贴吧、Bilibili、V2EX、咔叽网单、什么值得买、AcFun、天翼云盘、WPS、吾爱破解、芒果TV、联通营业厅、Fa米家、小米运动、百度搜索资源平台、每日天气预报、每日一句、哔咔漫画、和彩云、智友邦、微博、CSDN、王者营地。
+包括爱奇艺、全民 K 歌、腾讯视频、有道云笔记、网易云音乐、一加手机社区官方论坛、百度贴吧、Bilibili、V2EX、咔叽网单、什么值得买、AcFun、天翼云盘、WPS、吾爱破解、芒果 TV、联通营业厅、Fa 米家、小米运动、百度搜索资源平台、每日天气预报、每日一句、哔咔漫画、和彩云、智友邦、微博、CSDN、王者营地。
 
-fork以下项目，并转到Settings-Secrets。
+fork 以下项目，并转到 Settings-Secrets。
 
 ```
 https://github.com/Sitoi/dailycheckin
@@ -2033,16 +2031,16 @@ https://github.com/Sitoi/dailycheckin
 
 内容根据以下文档配置。
 
-需要说明的是，王者营地的数据可用Loon的抓包模式获得，注意当前只支持QQ登录的账号。
+需要说明的是，王者营地的数据可用 Loon 的抓包模式获得，注意当前只支持 QQ 登录的账号。
 
 ```
 https://sitoi.github.io/dailycheckin/settings/
 https://sitoi.github.io/dailycheckin/github-actions/
 ```
 
-对于使用Bark推送，填写BARK_URL即可。
+对于使用 Bark 推送，填写 BARK_URL 即可。
 
-对于使用Telegram推送，仅需填写TG_BOT_TOKEN、TG_USER_ID和TG_API_HOST，其中TG_API_HOST为搭建的反向代理地址，可在Cloudflare新建Worker并使用以下代码进行配置。
+对于使用 Telegram 推送，仅需填写 TG_BOT_TOKEN、TG_USER_ID 和 TG_API_HOST，其中 TG_API_HOST 为搭建的反向代理地址，可在 Cloudflare 新建 Worker 并使用以下代码进行配置。
 
 ```
 const whitelist = ["/bot"];
@@ -2095,9 +2093,9 @@ def main_handler(event, context):
   checkin()
 ```
 
-展开`高级配置`，将执行超时时间改为900，其他保持默认。
+展开`高级配置`，将执行超时时间改为 900，其他保持默认。
 
-展开`触发器配置`，切换到自定义创建，定时任务的名称任意，触发周期改为自定义触发周期，在Cron表达式处填入`45 8 * * *`。点击最下方的完成以创建云函数。
+展开`触发器配置`，切换到自定义创建，定时任务的名称任意，触发周期改为自定义触发周期，在 Cron 表达式处填入`45 8 * * *`。点击最下方的完成以创建云函数。
 
 创建完成后点击函数管理-函数代码，然后点击终端-新终端，在终端输入以下命令。
 
@@ -2106,7 +2104,7 @@ cd src
 pip3 install dailycheckin --upgrade -t .
 ```
 
-在Cloud Studio中，在src目录下创建config文件夹，在config文件夹下创建config.json文件，文件内容如下，根据需要填入需要签到的账号的Cookie。
+在 Cloud Studio 中，在 src 目录下创建 config 文件夹，在 config 文件夹下创建 config.json 文件，文件内容如下，根据需要填入需要签到的账号的 Cookie。
 
 ```
 {
@@ -2406,7 +2404,7 @@ https://sitoi.github.io/dailycheckin/settings/
 https://github.com/BlueSkyClouds/My-Actions
 ```
 
-Secrets获取方式如下。对于使用Telegram推送，仅需填写TG_BOT_TOKEN和TG_USER_ID。
+Secrets 获取方式如下。对于使用 Telegram 推送，仅需填写 TG_BOT_TOKEN 和 TG_USER_ID。
 
 |   应用   |     Name     |                                                      Value                                                      |
 |----------|--------------|-----------------------------------------------------------------------------------------------------------------|
@@ -2418,7 +2416,7 @@ Secrets获取方式如下。对于使用Telegram推送，仅需填写TG_BOT_TOKE
 
 ##### fashionzzZ
 
-包括V2EX、百度贴吧、京东、什么值得买、CSDN、网易云游戏。
+包括 V2EX、百度贴吧、京东、什么值得买、CSDN、网易云游戏。
 
 ```
 https://github.com/fashionzzZ/sign-actions
@@ -2426,7 +2424,7 @@ https://github.com/fashionzzZ/sign-actions
 
 ##### mkdir700
 
-包括BiliBili抽奖、葫芦侠签到、吾爱破解论坛打卡、EduCoder签到、学习通-健康上报、学习通-课堂签到、小One易统计打卡。
+包括 BiliBili 抽奖、葫芦侠签到、吾爱破解论坛打卡、EduCoder 签到、学习通-健康上报、学习通-课堂签到、小 One 易统计打卡。
 
 ```
 https://github.com/mkdir700/sign_in
@@ -2434,7 +2432,7 @@ https://github.com/mkdir700/sign_in
 
 ##### mengshouer
 
-包括天翼云盘每日签到、最终幻想14积分商城签到、什么值得买网页每日签到、52pojie每日签到、网易云音乐每日签到、有道云笔记签到、V2EX签到、恩山论坛签到、智友邦签到。
+包括天翼云盘每日签到、最终幻想 14 积分商城签到、什么值得买网页每日签到、52pojie 每日签到、网易云音乐每日签到、有道云笔记签到、V2EX 签到、恩山论坛签到、智友邦签到。
 
 ```
 https://github.com/mengshouer/CheckinBox
@@ -2442,7 +2440,7 @@ https://github.com/mengshouer/CheckinBox
 
 ##### Dingugu
 
-爱奇艺、腾讯视频、芒果tv、网易云音乐、天翼网盘、52破解论坛、精易论坛、乐易论坛签到。
+爱奇艺、腾讯视频、芒果 tv、网易云音乐、天翼网盘、52 破解论坛、精易论坛、乐易论坛签到。
 
 ```
 https://github.com/Dingugu/SCF_Sign
@@ -2470,7 +2468,7 @@ http://blog.renzexuan.com/index.php/archives/3/
 https://github.com/Wenmoux/V2ex-Auto-Sign
 ```
 
-##### Hostloc论坛
+##### Hostloc 论坛
 
 ```
 https://github.com/inkuang/hostloc-auto-get-points
@@ -2482,13 +2480,13 @@ https://github.com/inkuang/hostloc-auto-get-points
 https://github.com/srcrs/TiebaSignIn
 ```
 
-##### oshwhub社区
+##### oshwhub 社区
 
 ```
 https://github.com/seishinkouki/oshwhub_autosign
 ```
 
-##### Hao4K论坛
+##### Hao4K 论坛
 
 ```
 https://github.com/AlanLang/hao4k-auto-sign-in
@@ -2541,15 +2539,15 @@ https://github.com/secriy/CloudMusic-LevelUp
 <details>
 <summary>【进阶】腾讯云函数部署</summary>
 
-该项目也可使用腾讯云函数部署。打开以上链接，下载仓库并解压。进入云函数管理台，新建云函数，运行环境必须为python 3，函数代码提交方法选择本地上传文件夹，选择刚才解压好的文件夹。将高级配置中的环境配置-内存改为64MB，执行超时时间改为900，其它保持默认，点击创建。
+该项目也可使用腾讯云函数部署。打开以上链接，下载仓库并解压。进入云函数管理台，新建云函数，运行环境必须为 python 3，函数代码提交方法选择本地上传文件夹，选择刚才解压好的文件夹。将高级配置中的环境配置-内存改为 64MB，执行超时时间改为 900，其它保持默认，点击创建。
 
-完成后进入函数管理页面，在在线IDE中打开一个终端并输入以下命令安装依赖。
+完成后进入函数管理页面，在在线 IDE 中打开一个终端并输入以下命令安装依赖。
 
 ```
 cd src/ && pip3 install -r requirements.txt -t .
 ```
 
-然后修改index.py文件，将其中的infos变量各值修改为脚本所需参数，完成后点击部署。然后进入触发管理，点击创建触发器，新建一个触发器以实现定时运行。
+然后修改 index.py 文件，将其中的 infos 变量各值修改为脚本所需参数，完成后点击部署。然后进入触发管理，点击创建触发器，新建一个触发器以实现定时运行。
 </details>
 
 ##### 哔哩哔哩
@@ -2568,11 +2566,11 @@ https://github.com/yew/fudanDaily
 
 ### 关闭双重身份验证
 
-网页登录github账号后，点击Settings-Account Security，在Two-factor Authentication一栏点击Disable即可。
+网页登录 github 账号后，点击 Settings-Account Security，在 Two-factor Authentication 一栏点击 Disable 即可。
 
-### 获取Token
+### 获取 Token
 
-网页登录github账号后，点击Settings-Developer settings-Personal access tokens，点击Generate Token即可。注意生成后需马上复制该Token，否则第二次将无法复制。
+网页登录 github 账号后，点击 Settings-Developer settings-Personal access tokens，点击 Generate Token 即可。注意生成后需马上复制该 Token，否则第二次将无法复制。
 
 ## 仓库管理
 
@@ -2592,7 +2590,7 @@ https://github.com/1c7/chinese-independent-developer
 
 ### SingleFile
 
-将网页保存为HTML文件。
+将网页保存为 HTML 文件。
 
 ```
 https://github.com/gildas-lormeau/SingleFile
@@ -2600,7 +2598,7 @@ https://github.com/gildas-lormeau/SingleFile
 
 ### Handright
 
-模拟中文手写的轻量级Python库。
+模拟中文手写的轻量级 Python 库。
 
 ```
 https://github.com/Gsllchb/Handright
@@ -2608,7 +2606,7 @@ https://github.com/Gsllchb/Handright
 
 ### CC-attack
 
-进行DDOS攻击。
+进行 DDOS 攻击。
 
 ```
 https://github.com/Leeon123/CC-attack
@@ -2616,7 +2614,7 @@ https://github.com/Leeon123/CC-attack
 
 ### manim
 
-3b1b使用的数学绘图库。
+3b1b 使用的数学绘图库。
 
 ```
 https://github.com/3b1b/manim
@@ -2624,7 +2622,7 @@ https://github.com/3b1b/manim
 
 ### wkhtmltopdf
 
-将HTML渲染为PDF和各种图像格式的命令行工具。
+将 HTML 渲染为 PDF 和各种图像格式的命令行工具。
 
 ```
 https://github.com/wkhtmltopdf/wkhtmltopdf
@@ -2641,7 +2639,7 @@ https://github.com/r35tart/RW_Password
 
 ### raspberry-pi-sync
 
-在树莓派上安装Resilio Sync。
+在树莓派上安装 Resilio Sync。
 
 ```
 https://github.com/willjasen/raspberry-pi-sync
@@ -2666,13 +2664,13 @@ https://github.com/schollz/croc
 
 # Github Gist
 
-随时编写代码并记录。可设为仅自己可见即secret，或全体可见即public。
+随时编写代码并记录。可设为仅自己可见即 secret，或全体可见即 public。
 
 ```
 https://gist.github.com/
 ```
 
-可通过Lepton管理自己的Github Gist。
+可通过 Lepton 管理自己的 Github Gist。
 
 ```
 https://github.com/hackjutsu/Lepton
@@ -2680,7 +2678,7 @@ https://github.com/hackjutsu/Lepton
 
 # 工具
 
-可使用工具进行Git的图形化操作。
+可使用工具进行 Git 的图形化操作。
 
 ## Sourcetree
 
@@ -2694,7 +2692,7 @@ https://www.sourcetreeapp.com/
 
 ### 下载与破解
 
-GitKraren从6.5.1版本开始收费。可通过下载6.5.0及更早版本以免费使用，或下载7.0.1及以前版本并通过GitCracken破解。
+GitKraren 从 6.5.1 版本开始收费。可通过下载 6.5.0 及更早版本以免费使用，或下载 7.0.1 及以前版本并通过 GitCracken 破解。
 
 下载链接如下，改版本号即可下载特定的旧版本。
 
@@ -2715,7 +2713,7 @@ https://release.axocdn.com/win64/GitKrakenSetup-7.5.1.exe
 https://release.axocdn.com/darwin/GitKraken-v7.5.1.zip
 ```
 
-以Mac为例，若下载了6.5.2-7.0.1版本，需要先打开一次软件，关闭后在终端输入以下命令破解。执行前需要先下载yarn和node，其中yarn可以通过Homebrew下载，node可通过nvm下载。
+以 Mac 为例，若下载了 6.5.2-7.0.1 版本，需要先打开一次软件，关闭后在终端输入以下命令破解。执行前需要先下载 yarn 和 node，其中 yarn 可以通过 Homebrew 下载，node 可通过 nvm 下载。
 
 ```
 git clone https://gitcode.net/mirrors/5cr1pt/GitCracken.git
@@ -2725,7 +2723,7 @@ yarn build
 node dist/bin/gitcracken.js patcher
 ```
 
-完成后在Hosts文件添加以下内容以屏蔽更新。
+完成后在 Hosts 文件添加以下内容以屏蔽更新。
 
 ```
 0.0.0.0 release.gitkraken.com
@@ -2735,7 +2733,7 @@ node dist/bin/gitcracken.js patcher
 
 ## GitExtensions
 
-仅适用于Windows。
+仅适用于 Windows。
 
 ```
 http://gitextensions.github.io/
@@ -2759,7 +2757,7 @@ https://www.syntevo.com/smartgit/download/
 
 ## GitX
 
-仅适用于Mac 10.5-10.6。
+仅适用于 Mac 10.5-10.6。
 
 ```
 http://gitx.frim.nl/index.html
@@ -2767,201 +2765,69 @@ http://gitx.frim.nl/index.html
 
 # 参考教程
 
-## gitbook
+> [gitbook](https://git-scm.com/book/zh/v2)  
 
-```
-https://git-scm.com/book/zh/v2
-```
+> [git 的基本用法](https://www.cnblogs.com/manjin666/p/9634324.html)  
 
-## git的基本用法
+> [GIT 命令汇总](http://shaofan.org/git-2/)  
 
-```
-https://www.cnblogs.com/manjin666/p/9634324.html
-```
+> [Git Large File Storage](https://git-lfs.github.com/)  
 
-## GIT命令汇总
+> [.gitignore](https://www.jianshu.com/p/699ed86028c2)  
 
-```
-http://shaofan.org/git-2/
-```
+> [hunshcn/gh-proxy](https://github.com/hunshcn/gh-proxy)  
 
-## Git Large File Storage
+> [FastGit 简体中文指南](https://doc.fastgit.org/zh-cn/)  
 
-```
-https://git-lfs.github.com/
-```
+> [如何提高国内访问 Github 的速度到 2MB/s 以上 | 评布客博客](https://code.seniortesting.club/blog/2020/How-To-Speed-Github.html)  
 
-## .gitignore
+> [Learn Git Branching](https://learngitbranching.js.org/?locale=zh_CN)  
 
-```
-https://www.jianshu.com/p/699ed86028c2
-```
+> [Pull Request 的命令行管理](http://www.ruanyifeng.com/blog/2017/07/pull_request.html)  
 
-## hunshcn/gh-proxy
+> [如何解决类似 curl: \(7\) Failed to connect to raw.githubusercontent.com port 443: Connection refused 的问题 #10](https://github.com/hawtim/blog/issues/10)  
 
-```
-https://github.com/hunshcn/gh-proxy
-```
+> [如何获取爱奇艺 authcookie，并签到](https://www.bilibili.com/read/cv7437179)  
 
-## FastGit简体中文指南
+> [如何获取百度 BDUSS](https://jingyan.baidu.com/article/95c9d20d073afbec4e7561d4.html)  
 
-```
-https://doc.fastgit.org/zh-cn/
-```
+> [无需动手每天就能签到，这招没多少人知道！](https://mp.weixin.qq.com/s/RDpjSNfx1i0H_Rz8THDYdw)  
 
-## 如何提高国内访问Github的速度到2MB/s以上 | 评布客博客
+> [腾讯的良心服务，趁没收费赶快来白嫖！](https://mp.weixin.qq.com/s/9ihXeVvRaAAluKOfazK-LA)  
 
-```
-https://code.seniortesting.club/blog/2020/How-To-Speed-Github.html
-```
+> [腾讯云函数部署 CloudMusic-LevelUp 脚本](https://blog.secriy.com/2021/06/12/cktskyuao0031rcnwgd7vc7tl/)  
 
-## Learn Git Branching
+> [彻底搞懂 Git-Rebase](http://jartto.wang/2018/12/11/git-rebase/)  
 
-```
-https://learngitbranching.js.org/?locale=zh_CN
-```
+> [解决 git rebase 操作后推送远端分支不成功的问题](https://blog.csdn.net/ManyPeng/article/details/81095744)  
 
-## Pull Request 的命令行管理
+> [sourcetree 拉取 一直让输入密码](https://www.cnblogs.com/jcz1206/p/10818427.html)  
 
-```
-http://www.ruanyifeng.com/blog/2017/07/pull_request.html
-```
+> [Git 的 commit message 写错了，有办法进行修改么？](https://segmentfault.com/q/1010000000761908)  
 
-## 如何解决类似 curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused 的问题 #10
+> [merge squash 和 merge rebase 区别](https://www.jianshu.com/p/684a8ae9dcf1)  
+> https://liqiang.io/post/difference-between-merge-squash-and-rebase  
 
-```
-https://github.com/hawtim/blog/issues/10
-```
+> [git 拉取远程分支并创建本地分支](https://blog.csdn.net/tterminator/article/details/52225720)  
 
-## 如何获取爱奇艺authcookie，并签到
+> [【Git 学习笔记】强行删除还没有 merge 的分支](https://blog.csdn.net/liuchunming033/article/details/40823549)  
 
-```
-https://www.bilibili.com/read/cv7437179
-```
+> [git 中 submodule 子模块的添加、使用和删除](https://blog.csdn.net/guotianqing/article/details/82391665)  
 
-## 如何获取百度BDUSS
+> [server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none](https://www.cnblogs.com/stone1989/p/7000406.html)  
 
-```
-https://jingyan.baidu.com/article/95c9d20d073afbec4e7561d4.html
-```
+> [git clone 的时候提示输入密码](https://www.cnblogs.com/wscw/p/14118675.html)  
 
-## 无需动手每天就能签到，这招没多少人知道！
+> [How do I delete a forked GitHub repo that's unavailable due to DCMA takedown?](https://stackoverflow.com/questions/25354045/how-do-i-delete-a-forked-github-repo-thats-unavailable-due-to-dcma-takedown)  
 
-```
-https://mp.weixin.qq.com/s/RDpjSNfx1i0H_Rz8THDYdw
-```
+> [GitKraKen 7.5.1｜6.5.0 - 安装包&破解](https://blog.csdn.net/wanzheng_96/article/details/104692476)  
 
-## 腾讯的良心服务，趁没收费赶快来白嫖！
+> [技术/破解最新版 GitKraken 7.x.ipynb · Retrying/Modules-Learn - Gitee.com](https://gitee.com/wanzheng_96/Modules-Learn/blob/master/%E6%8A%80%E6%9C%AF/%E7%A0%B4%E8%A7%A3%E6%9C%80%E6%96%B0%E7%89%88GitKraken%207.x.ipynb)  
 
-```
-https://mp.weixin.qq.com/s/9ihXeVvRaAAluKOfazK-LA
-```
+> [上万良心软件都在 GitHub，你却还卡在无法访问？](https://mp.weixin.qq.com/s/C5XUgzL3_KGIga2X-LHJuw)  
 
-## 腾讯云函数部署CloudMusic-LevelUp脚本
+> [禁用个人帐户的双重身份验证](https://docs.github.com/cn/authentication/securing-your-account-with-two-factor-authentication-2fa/disabling-two-factor-authentication-for-your-personal-account)  
 
-```
-https://blog.secriy.com/2021/06/12/cktskyuao0031rcnwgd7vc7tl/
-```
+> [Git 重新关联远程仓库地址的三种方法](https://www.jianshu.com/p/286437fae916)  
 
-## 彻底搞懂 Git-Rebase
-
-```
-http://jartto.wang/2018/12/11/git-rebase/
-```
-
-## 解决git rebase操作后推送远端分支不成功的问题
-
-```
-https://blog.csdn.net/ManyPeng/article/details/81095744
-```
-
-## sourcetree 拉取 一直让输入密码
-
-```
-https://www.cnblogs.com/jcz1206/p/10818427.html
-```
-
-## Git 的 commit message 写错了，有办法进行修改么？
-
-```
-https://segmentfault.com/q/1010000000761908
-```
-
-## merge squash 和 merge rebase 区别
-
-```
-https://www.jianshu.com/p/684a8ae9dcf1
-https://liqiang.io/post/difference-between-merge-squash-and-rebase
-```
-
-## git拉取远程分支并创建本地分支
-
-```
-https://blog.csdn.net/tterminator/article/details/52225720
-```
-
-## 【Git学习笔记】强行删除还没有merge的分支
-
-```
-https://blog.csdn.net/liuchunming033/article/details/40823549
-```
-
-## git中submodule子模块的添加、使用和删除
-
-```
-https://blog.csdn.net/guotianqing/article/details/82391665
-```
-
-## server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none
-
-```
-https://www.cnblogs.com/stone1989/p/7000406.html
-```
-
-## git clone的时候提示输入密码
-
-```
-https://www.cnblogs.com/wscw/p/14118675.html
-```
-
-## How do I delete a forked GitHub repo that's unavailable due to DCMA takedown?
-
-```
-https://stackoverflow.com/questions/25354045/how-do-i-delete-a-forked-github-repo-thats-unavailable-due-to-dcma-takedown
-```
-
-## GitKraKen 7.5.1｜6.5.0 - 安装包&破解
-
-```
-https://blog.csdn.net/wanzheng_96/article/details/104692476
-```
-
-## 技术/破解最新版GitKraken 7.x.ipynb · Retrying/Modules-Learn - Gitee.com
-
-```
-https://gitee.com/wanzheng_96/Modules-Learn/blob/master/%E6%8A%80%E6%9C%AF/%E7%A0%B4%E8%A7%A3%E6%9C%80%E6%96%B0%E7%89%88GitKraken%207.x.ipynb
-```
-
-## 上万良心软件都在GitHub，你却还卡在无法访问？
-
-```
-https://mp.weixin.qq.com/s/C5XUgzL3_KGIga2X-LHJuw
-```
-
-## 禁用个人帐户的双重身份验证
-
-```
-https://docs.github.com/cn/authentication/securing-your-account-with-two-factor-authentication-2fa/disabling-two-factor-authentication-for-your-personal-account
-```
-
-## Git 重新关联远程仓库地址的三种方法
-
-```
-https://www.jianshu.com/p/286437fae916
-```
-
-## 没了腾讯云，那就白嫖阿里云，继续实现多平台自动签到！
-
-```
-https://mp.weixin.qq.com/s/sExOgDi8l8QuXIz_bucE8Q
-```
+> [没了腾讯云，那就白嫖阿里云，继续实现多平台自动签到！](https://mp.weixin.qq.com/s/sExOgDi8l8QuXIz_bucE8Q)  
