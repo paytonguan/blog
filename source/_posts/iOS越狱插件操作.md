@@ -1607,6 +1607,15 @@ https://rootless.zq666.eu.org/
 | BlockAppUpdate | 屏蔽app更新               |
 | 120Hz Fix      | 解锁动态刷新率80Hz到120Hz |
 
+## futur3sn0w源
+
+```
+https://futur3sn0w.github.io/repo/
+```
+
+|   插件  |       作用       |
+|---------|------------------|
+| CCAster | 可编辑的控制中心 |
 
 ## Deno源
 
@@ -2556,3 +2565,4 @@ https://github.com/34306/MilkyWayReborn
 > [大佬正式发布！](https://mp.weixin.qq.com/s/rJKZmwdbhWfUYAgiRP9pkA)  
 > [iPhone 分屏，免费！](https://mp.weixin.qq.com/s/ITTktNCelTpuZ4hNAxoStw)  
 > [官方源，作者源，第一期](https://mp.weixin.qq.com/s/4ZP5V6J_4ZC6vR89adbLsg)  
+> [流弊，低系统，用上 iOS 18+ 控制！](https://mp.weixin.qq.com/s/AHwhJu9uLSr-W9nNCLapMA)  
