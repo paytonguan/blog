@@ -1,5 +1,5 @@
 ---
-title: CPU调整指南
+title: CPU 调整指南
 categories: Computer
 abbrlink: Instructions-Of-CPU-Adjust
 date: 2024-12-18 11:54:29
@@ -9,25 +9,25 @@ tags:
 
 ![](topic.jpg)
 
-CPU调整指南。
+CPU 调整指南。
 
 <!-- more -->
 
 # 查看被限制性能的处理器
 
-在Windows下打开事件查看器，选择Windows日志-系统，然后点击右侧栏的`筛选当前日志`，类型选择Kernel-Processor-Power即可。
+在 Windows 下打开事件查看器，选择 Windows 日志-系统，然后点击右侧栏的`筛选当前日志`，类型选择 Kernel-Processor-Power 即可。
 
 # 超频
 
-对于CPU，BCLK乘以倍增系数即为内核频率。BCLK即基本时钟速度，一般为100MHz。倍增系数即倍频，随CPU变化。
+对于 CPU，BCLK 乘以倍增系数即为内核频率。BCLK 即基本时钟速度，一般为 100MHz。倍增系数即倍频，随 CPU 变化。
 
-如果CPU未锁定倍频，可直接超频。若CPU锁定了倍频，可通过提高主板FSB速度，或屏蔽CPU部分针脚实现超频。
+如果 CPU 未锁定倍频，可直接超频。若 CPU 锁定了倍频，可通过提高主板 FSB 速度，或屏蔽 CPU 部分针脚实现超频。
 
-对于Intel，名称末尾带K或X的CPU表明该CPU未锁频。超频前建议将CPU各核设为相等的频率。
+对于 Intel，名称末尾带 K 或 X 的 CPU 表明该 CPU 未锁频。超频前建议将 CPU 各核设为相等的频率。
 
-## 通过BIOS
+## 通过 BIOS
 
-一般提高CPU Core Ratio即可。
+一般提高 CPU Core Ratio 即可。
 
 ## 通过软件
 
@@ -39,11 +39,11 @@ CPU调整指南。
 https://downloadcenter.intel.com/zh-cn/download/24075/Intel-Extreme-Tuning-Utility-Intel-XTU-
 ```
 
-安装完成后打开，点击Basic Tuning，向右调整两个滑块即可，注意缓存倍频如果低于内核倍频，CPU 性能会降低。建议每次上调一倍，以防止电脑死机。完成设定后用Stress Test进行压力测试，查看CPU能否稳定运行。
+安装完成后打开，点击 Basic Tuning，向右调整两个滑块即可，注意缓存倍频如果低于内核倍频，CPU 性能会降低。建议每次上调一倍，以防止电脑死机。完成设定后用 Stress Test 进行压力测试，查看 CPU 能否稳定运行。
 
-若需要更精细的调整，可点击左边Advanced Tuning，会出现提示警告。点击`I agree,don't show again`即可打开高级选项。
+若需要更精细的调整，可点击左边 Advanced Tuning，会出现提示警告。点击`I agree,don't show again`即可打开高级选项。
 
-一般调节Turbo Boost Short Power Max、Turbo Boost Power Max、Turbo Boost Power Time Window，控制温度使用Core Voltage Offset。
+一般调节 Turbo Boost Short Power Max、Turbo Boost Power Max、Turbo Boost Power Time Window，控制温度使用 Core Voltage Offset。
 
 |                   项目                  |        中文名        |                                                                        注释                                                                        |                                                                                                                                                                                    调整方法                                                                                                                                                                                    |
 |-----------------------------------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -80,7 +80,7 @@ https://downloadcenter.intel.com/zh-cn/download/24075/Intel-Extreme-Tuning-Utili
 | **Other**                               |                      |                                                                                                                                                    |                                                                                                                                                                                                                                                                                                                                                                                |
 | System Agent IccMax                     |                      |                                                                                                                                                    |                                                                                                                                                                                                                                                                                                                                                                                |
 
-XTU可用命令行进行控制。打开记事本，复制以下代码并保存，后缀名改为ps1，即可通过PowerShell运行。各种参数ID可以打开C:\Program Files (x86)\Intel\Intel(R) Extreme Tuning Utility\Client\XtuCLI.exe查看。
+XTU 可用命令行进行控制。打开记事本，复制以下代码并保存，后缀名改为 ps1，即可通过 PowerShell 运行。各种参数 ID 可以打开 C:\Program Files (x86)\Intel\Intel(R) Extreme Tuning Utility\Client\XtuCLI.exe 查看。
 
 ```
 $status = Get-Service -Name "XTU3SERVICE" | Select-Object "status" | Format-Wide
@@ -95,7 +95,7 @@ stop-process -id $PID -force
 
 ### Intel Performance Maximizer
 
-官方自动超频软件，适用于i5、i7、i9、X系列的部分处理器。下载后运行即可。
+官方自动超频软件，适用于 i5、i7、i9、X 系列的部分处理器。下载后运行即可。
 
 ```
 https://downloadcenter.intel.com/zh-cn/product/188727/Intel-Performance-Maximizer
@@ -103,7 +103,7 @@ https://downloadcenter.intel.com/zh-cn/product/188727/Intel-Performance-Maximize
 
 ### Throttlestop
 
-下载链接如下。XP下可运行的版本为8.40。
+下载链接如下。XP 下可运行的版本为 8.40。
 
 ```
 # 最新版本
@@ -113,7 +113,7 @@ https://www.techpowerup.com/download/techpowerup-throttlestop/
 http://xiazai.zol.com.cn/detail/44/439686.shtml
 ```
 
-打开软件后勾选Set Multiplier和Speed Shift EPP，取消勾选BD PROCHOT，将Set Multiplier后面的数字拉到最大。点击Limit Reasons可查看功耗被限制的原因。
+打开软件后勾选 Set Multiplier 和 Speed Shift EPP，取消勾选 BD PROCHOT，将 Set Multiplier 后面的数字拉到最大。点击 Limit Reasons 可查看功耗被限制的原因。
 
 点击BCLK以设置PL1/PL2，可先尝试200。点击FIVR可设置电压，首先选择CPU Core/Cache，然后勾选Adjustable Voltage，再将下方的Offset Voltage拉到最大。
 
@@ -131,11 +131,11 @@ http://xiazai.zol.com.cn/detail/44/439686.shtml
 
 ### SetFSB
 
-需要使用2.1.91.1版本，否则将提示无法使用。
+需要使用 2.1.91.1 版本，否则将提示无法使用。
 
-使用前需知道CPU所用的时钟发生器的型号，可尝试搜索得到。若仍未知，则首先打开CPU-Z，记录总线速度和额定FSB，然后打开SetFSB，逐个时钟发生器进行尝试，点击Get FSB，查看下面的FSB值是否与CPU-Z中得到的一致，若一致则有可能为该时钟发生器。
+使用前需知道 CPU 所用的时钟发生器的型号，可尝试搜索得到。若仍未知，则首先打开 CPU-Z，记录总线速度和额定 FSB，然后打开 SetFSB，逐个时钟发生器进行尝试，点击 Get FSB，查看下面的 FSB 值是否与 CPU-Z 中得到的一致，若一致则有可能为该时钟发生器。
 
-确定时钟发生器的型号后，拖动滑块即可进行调整。本机可能的时钟发生器为ICS9LPR501HGLF和ICSLP505-2HGLF。
+确定时钟发生器的型号后，拖动滑块即可进行调整。本机可能的时钟发生器为 ICS9LPR501HGLF 和 ICSLP505-2HGLF。
 
 ### ClockGen
 
@@ -143,7 +143,7 @@ http://xiazai.zol.com.cn/detail/44/439686.shtml
 
 ### AMD Ryzen Master
 
-AMD锐龙处理器超频工具，下载链接如下。打开后调整速度和电压即可。
+AMD 锐龙处理器超频工具，下载链接如下。打开后调整速度和电压即可。
 
 ```
 https://www.amd.com/zh-hans/technologies/ryzen-master
@@ -151,7 +151,7 @@ https://www.amd.com/zh-hans/technologies/ryzen-master
 
 ### CPU-Tweaker
 
-支持AMD Phenom DDR2&DDR3、INTEL Core i7 DDR3，不支持intel四核处理器。下载链接如下。
+支持 AMD Phenom DDR2&DDR3、INTEL Core i7 DDR3，不支持 intel 四核处理器。下载链接如下。
 
 ```
 https://www.majorgeeks.com/files/details/cpu_tweaker.html
@@ -161,9 +161,9 @@ https://www.majorgeeks.com/files/details/cpu_tweaker.html
 
 P State是实际的速度步长，定义了各种频率/电压组合。当CPU不在重负载下时，它可以降低使用的功率。可以通过降压进一步控制功率。
 
-C State是CPU深度睡眠状态，一般C1，C2，C3或C1，C2，C4三个C状态可以同时工作。在DSDT中，Name (C1M4, Package (0x04)定义以上三个状态。
+C State 是 CPU 深度睡眠状态，一般 C1，C2，C3 或 C1，C2，C4 三个 C 状态可以同时工作。在 DSDT 中，Name (C1M4, Package (0x04)定义以上三个状态。
 
-可在IORegistryExplorer中选择CPU0@0->AppleACPICPI->ACPI_SMC_PlatformPlugin，查看右侧参数。若CPUPlimit为0x0，PerformanceStateArray包含五个状态，说明已经开启P State。若有CSTInfo，说明已经开启C State。
+可在 IORegistryExplorer 中选择 CPU0@0->AppleACPICPI->ACPI_SMC_PlatformPlugin，查看右侧参数。若 CPUPlimit 为 0x0，PerformanceStateArray 包含五个状态，说明已经开启 P State。若有 CSTInfo，说明已经开启 C State。
 
 对于Mac，开启P State需要修改SLE下的IOPlatformPluginFamily.kext/Contents/PlugIns/ACPI_SMC_PlatformPlugin.kext/Contents/Resources/Info.plist，该文件规定了不同Mac型号可使用的SpeedStep和C State。示例如下。由于Mac一般从SSDT而非DSDT读取P State，因此除非需要降压，否则不需要修改DSDT。
 
@@ -176,7 +176,7 @@ C State是CPU深度睡眠状态，一般C1，C2，C3或C1，C2，C4三个C状态
 <string>ACPI_SMC_PlatformPlugin</string>
 <key>IOPlatformThermalProfile</key>
 <dict>
-// 以下为特定型号的配置内容，不同型号内容不同
+# 以下为特定型号的配置内容，不同型号内容不同
     <dict>
         <key>model</key>
         <string>MacBookPro2,3</string>
@@ -198,7 +198,7 @@ C State是CPU深度睡眠状态，一般C1，C2，C3或C1，C2，C4三个C状态
     <key>StepDataDict</key>
     ....
 </dict>
-// 结束
+# 结束
 <key>IOProbeScore</key>
 <integer>1200</integer>
 <key>IOPropertyMatch</key>
@@ -213,7 +213,7 @@ C State是CPU深度睡眠状态，一般C1，C2，C3或C1，C2，C4三个C状态
 </dict>
 ```
 
-开启C State则需要修改DSDT。在系统SSDT或DSDT中搜索Name (C1M4, Package (0x04)，找到定义C1，C2，C4的块，然后放置到DSDT中，示例如下。此处重写了`_CST`方法，使其能返回正确的C State。若C State定义与本机不符，则Mac将不会执行该部分代码，不会对硬件造成影响。
+开启 C State 则需要修改 DSDT。在系统 SSDT 或 DSDT 中搜索 Name (C1M4, Package (0x04)，找到定义 C1，C2，C4 的块，然后放置到 DSDT 中，示例如下。此处重写了`_CST`方法，使其能返回正确的 C State。若 C State 定义与本机不符，则 Mac 将不会执行该部分代码，不会对硬件造成影响。
 
 ```
 Scope (_PR)
@@ -279,25 +279,25 @@ Method (_CST, 0, NotSerialized)
 }
 ```
 
-在Mac下可打开DPCI Manager并单击P States，即可查看SpeedStep。
+在 Mac 下可打开 DPCI Manager 并单击 P States，即可查看 SpeedStep。
 
-# 修改MSR寄存器
+# 修改 MSR 寄存器
 
-CPU的功率限制被写在MSR寄存器中。通过修改MSR寄存器的值，可以提升CPU的功率。
+CPU 的功率限制被写在 MSR 寄存器中。通过修改 MSR 寄存器的值，可以提升 CPU 的功率。
 
-## 开启CFG
+## 开启 CFG
 
-在BIOS中，若CFG Lock处于Enabled状态，将不能对MSR寄存器进行读写。故须先用grub将CFG Lock设为Disabled。
+在 BIOS 中，若 CFG Lock 处于 Enabled 状态，将不能对 MSR 寄存器进行读写。故须先用 grub 将 CFG Lock 设为 Disabled。
 
 ## 查看寄存器地址
 
-### 通过Hackintool
+### 通过 Hackintool
 
 推荐使用该方法。
 
-进入Mac并打开Hackintool，切换到工具选项卡。点击Intel图标，将输出复制到文本文档中，该输出即有CPU的相关信息，包括MSR寄存器的地址。
+进入 Mac 并打开 Hackintool，切换到工具选项卡。点击 Intel 图标，将输出复制到文本文档中，该输出即有 CPU 的相关信息，包括 MSR 寄存器的地址。
 
-### 通过AppleIntelInfo.kext
+### 通过 AppleIntelInfo.kext
 
 通过以下链接下载压缩包。
 
@@ -305,30 +305,30 @@ CPU的功率限制被写在MSR寄存器中。通过修改MSR寄存器的值，�
 https://github.com/Piker-Alpha/AppleIntelInfo
 ```
 
-在Mac下载压缩包并用Xcode编译，编译完成后切换到kext所在目录，输入以下命令以获取CPU信息。
+在 Mac 下载压缩包并用 Xcode 编译，编译完成后切换到 kext 所在目录，输入以下命令以获取 CPU 信息。
 
 ```
 sudo chown -R root:wheel AppleIntelInfo.kext
 sudo chmod -R 755 AppleIntelInfo.kext
 sudo kextload AppleIntelInfo.kext
 
-// 在终端查看
+# 在终端查看
 sudo cat /tmp/AppleIntelInfo.dat | more
 
-// 或将包含CPU信息的文件复制到当前目录下
+# 或将包含CPU信息的文件复制到当前目录下
 sudo cp /tmp/AppleIntelInfo.dat AppleIntelInfo.txt
 sudo kextunload AppleIntelInfo.kext
 ```
 
 ### 通过官方文档
 
-在Linux的终端下输入以下命令以获取CPU信息。
+在 Linux 的终端下输入以下命令以获取 CPU 信息。
 
 ```
 cat /proc/cpuinfo | less
 ```
 
-根据输出判定CPU类型，主要用到的是cpu family和model，将其转为十六进制后，可得到CPUID。CPUID由DisplayFamily_DisplayModel构成，以本机为例，本机的DisplayFamily为06h，DisplayModel为8Eh（均为十六进制），故CPUID为06_8EH。
+根据输出判定 CPU 类型，主要用到的是 cpu family 和 model，将其转为十六进制后，可得到 CPUID。CPUID 由 DisplayFamily_DisplayModel 构成，以本机为例，本机的 DisplayFamily 为 06h，DisplayModel 为 8Eh（均为十六进制），故 CPUID 为 06_8EH。
 
 ```
 processor       : 0
@@ -340,46 +340,46 @@ stepping        : 10
 ......
 ```
 
-在Intel官方文档下载页面中下载Four-Volume Set of Intel® 64 and IA-32 Architectures Software Developer’s Manuals中的第四章，链接如下。
+在 Intel 官方文档下载页面中下载 Four-Volume Set of Intel® 64 and IA-32 Architectures Software Developer’s Manuals 中的第四章，链接如下。
 
 ```
 https://software.intel.com/en-us/download/intel-64-and-ia-32-architectures-software-developers-manual-volume-4-model-specific-registers
 ```
 
-在文档中搜索CPUID（06_8EH）、CPU架构（Kaby Lake）或CPU代数（8TH GENERATION），查询其MSR地址。如本CPU在2.17一节中。
+在文档中搜索 CPUID（06_8EH）、CPU 架构（Kaby Lake）或 CPU 代数（8TH GENERATION），查询其 MSR 地址。如本 CPU 在 2.17 一节中。
 
 ## 查询寄存器含义
 
-在Intel官方文档下载页面中下载Four-Volume Set of Intel® 64 and IA-32 Architectures Software Developer’s Manuals中的第三章，链接如下。
+在 Intel 官方文档下载页面中下载 Four-Volume Set of Intel® 64 and IA-32 Architectures Software Developer’s Manuals 中的第三章，链接如下。
 
 ```
 https://software.intel.com/en-us/download/intel-64-and-ia-32-architectures-sdm-combined-volumes-3a-3b-3c-and-3d-system-programming-guide
 ```
 
-打开文档并搜索需要更改的寄存器（如MSR_PKG_POWER_LIMIT），即可查询其对应含义。
+打开文档并搜索需要更改的寄存器（如 MSR_PKG_POWER_LIMIT），即可查询其对应含义。
 
 ## 准备修改环境
 
-进入Linux系统并执行以下命令，以安装msr-tools并加载系统MSR模块。
+进入 Linux 系统并执行以下命令，以安装 msr-tools 并加载系统 MSR 模块。
 
 ```
 sudo apt-get install msr-tools
 sudo modprobe msr
 ```
 
-然后便可利用msr-tools完成MSR寄存器的读取与修改。主要用到以下两个命令，均为十六进制。 
+然后便可利用 msr-tools 完成 MSR 寄存器的读取与修改。主要用到以下两个命令，均为十六进制。 
 
 ```
-// 读取[A]地址的值
+# 读取[A]地址的值
 sudo rdmsr [A]
 
-// 将[A]地址的值改为[B]
+# 将[A]地址的值改为[B]
 sudo wrmsr [A] [B]
 ```
 
 ## 修改寄存器内容
 
-以下以修改Package power limits为例进行说明。
+以下以修改 Package power limits 为例进行说明。
 
 首先需要读取MSR_RAPL_POWER_UNIT寄存器的值，此寄存器存储功率/能量/时间单位。在本CPU中，该寄存器的地址为0x606，故输入以下命令。
 
@@ -396,7 +396,7 @@ Energy Status Units (bits 12:8): Energy related information (in Joules) is based
 Time Units (bits 19:16): Time related information (in Seconds) is based on the multiplier, 1/ 2^TU; where TU is an unsigned integer represented by bits 19:16. Default value is 1010b, indicating time unit is in 976 micro- seconds increment. 
 ```
 
-将A0E03转换为二进制为1010 0000 1110 0000 0011。bits A:B表示二进制的第B到A位（从低位开始数，个位是第0位），故按照说明可得下表。
+将 A0E03 转换为二进制为 1010 0000 1110 0000 0011。bits A:B 表示二进制的第 B 到 A 位（从低位开始数，个位是第 0 位），故按照说明可得下表。
 
 | 原文                              | 位置    | 含义     | 内容（二进制）      | 内容含义                                                       | 说明                                                                        |
 | --------------------------------- | ------- | -------  | ------------------- | -------------------------------------------------------------- |                                                                             |
@@ -404,7 +404,7 @@ Time Units (bits 19:16): Time related information (in Seconds) is based on the m
 | Energy Status Units               | 12:8    | 能量单位 | 01110               | 0.00006103515625J                                              | 01110转换为十进制为14，故能量以$(\frac{1}{2})^{14}$=0.00006103515625J为单位 |
 | Time Units                        | 19:16   | 时间单位 | 1010                | 0.0009765625s                                                  | 01110转换为十进制为10，故时间以$(\frac{1}{2})^{10}$=0.0009765625s为单位     |
 
-Package power limits位于MSR_PKG_POWER_LIMIT寄存器中，本CPU对应的地址为0x610。输入以下指令得到该地址的值，并对应进行修改。
+Package power limits 位于 MSR_PKG_POWER_LIMIT 寄存器中，本 CPU 对应的地址为 0x610。输入以下指令得到该地址的值，并对应进行修改。
 
 ```
 sudo rdmsr 0x610 // 输出42816000DD8160（二进制为0000 0000 0100 0010 1000 0001 0110 0000 0000 0000 1101 1101 1000 0001 0110 0000）
@@ -422,13 +422,13 @@ sudo rdmsr 0x610 // 输出42816000DD8160（二进制为0000 0000 0100 0010 1000 
 | Time Window for Power Limit #2 | 55:49 |         0100001 |                  | 时间限制值= $(2^Y*(1+Z/4)*TimeUnit)$，其中Y是寄存器的第21:17位，Z是寄存器的第23:22位，TimeUnit是前面所定义的时间单位 |
 | Lock                           | 63    |               0 |                  | CFG锁，若为1则无法写入                                                                                               |
 
-将更改后的内容从低位到高位组成一个64位的二进制数并转换为十六进制 ，然后用wrmsr写入即可。写入后用rdmsr读取，检验结果是否正确。
+将更改后的内容从低位到高位组成一个 64 位的二进制数并转换为十六进制 ，然后用 wrmsr 写入即可。写入后用 rdmsr 读取，检验结果是否正确。
 
 ## 可修改的寄存器
 
 ### MSR_PKG_POWER_LIMIT
 
-参考值为42819800FC80C8h。
+参考值为 42819800FC80C8h。
 
 |             原文            |  位置 | 参考值（二进制） | 说明 |
 |-----------------------------|-------|------------------|------|
@@ -453,7 +453,7 @@ sudo rdmsr 0x610 // 输出42816000DD8160（二进制为0000 0000 0100 0010 1000 
 
 ### MSR_TURBO_RATIO_LIMIT
 
-参考值为28282828h。
+参考值为 28282828h。
 
 |   原文   |  位置 | 参考值（二进制） | 说明 |
 |----------|-------|------------------|------|
@@ -464,23 +464,23 @@ sudo rdmsr 0x610 // 输出42816000DD8160（二进制为0000 0000 0100 0010 1000 
 
 # DPTF
 
-DPTF是Intel的一项技术，用于温度控制。DPTF会根据温度动态调节睿频性能的软件驱动，在低温下上调TDP限制，高温下下调限制。
+DPTF 是 Intel 的一项技术，用于温度控制。DPTF 会根据温度动态调节睿频性能的软件驱动，在低温下上调 TDP 限制，高温下下调限制。
 
 ## 禁用
 
-若BIOS中有开关，可直接通过BIOS关闭。
+若 BIOS 中有开关，可直接通过 BIOS 关闭。
 
 若控制面板有DPTF相关软件，直接卸载即可。若无卸载程序，可通过任务管理器/服务找到DPTF并定位，一般在C:\Windows\System32\Intel下，直接删除整个文件夹即可。
 
-从原理上来说，在驱动层面的DPTF会优先掌控系统性能。如果DPTF作为设备出现，则需要禁用该设备。Windows自动更新会把驱动安装回来，因此需要通过策略组的方式禁用设备安装。
+从原理上来说，在驱动层面的 DPTF 会优先掌控系统性能。如果 DPTF 作为设备出现，则需要禁用该设备。Windows 自动更新会把驱动安装回来，因此需要通过策略组的方式禁用设备安装。
 
-按Win+R打开运行命令，输入`gpedit.msc`打开策略组。打开计算机配置-管理模板-系统-设备安装-设备安装限制，在右侧窗口点击`阻止安装与下列任何设备id相匹配的设备`，打开面板，在左边的选择中点击已启用，在`禁止安装与下列任何设备id相匹配的设备`中打开显示按钮，在输入框中输入dptf的硬件ID即可。
+按 Win+R 打开运行命令，输入`gpedit.msc`打开策略组。打开计算机配置-管理模板-系统-设备安装-设备安装限制，在右侧窗口点击`阻止安装与下列任何设备 id 相匹配的设备`，打开面板，在左边的选择中点击已启用，在`禁止安装与下列任何设备 id 相匹配的设备`中打开显示按钮，在输入框中输入 dptf 的硬件 ID 即可。
 
 # 工具
 
 ## Core Temp
 
-查看CPU各核温度。
+查看 CPU 各核温度。
 
 ```
 https://www.alcpu.com/CoreTemp/
@@ -492,9 +492,9 @@ https://www.alcpu.com/CoreTemp/
 
 # 附录
 
-## 本机CPU信息
+## 本机 CPU 信息
 
-由Hackintool输出。
+由 Hackintool 输出。
 
 ```
 AppleIntelInfo.kext v3.0 Copyright © 2012-2017 Pike R. Alpha. All rights reserved.
@@ -846,44 +846,16 @@ CPU P-States [ 8 9 18 19 20 21 22 29 36 (37) 40 ] iGPU P-States [ ]
 
 # 参考教程
 
-## TDP and turbo parameter modification with MSR on non-overclockable CPU
+> [TDP and turbo parameter modification with MSR on non-overclockable CPU](https://gist.github.com/Mnkai/5a8edd34bd949199224b33bd90b8c3d4)  
 
-```
-https://gist.github.com/Mnkai/5a8edd34bd949199224b33bd90b8c3d4
-```
+> [Is it possible to unlock a clock-locked CPU?](https://www.quora.com/Is-it-possible-to-unlock-a-clock-locked-CPU)  
 
-## Is it possible to unlock a clock-locked CPU?
+> [How To Software OverClock Your CPU With ClockGen Fast And Easy Way to OC](https://www.youtube.com/watch?v=7yXW4pqLE70)  
 
-```
-https://www.quora.com/Is-it-possible-to-unlock-a-clock-locked-CPU
-```
+> [如何通过 BIOS 超频 CPU - 英特尔® 官网](https://www.intel.cn/content/www/cn/zh/gaming/resources/bios-overclocking.html)  
 
-## How To Software OverClock Your CPU With ClockGen Fast And Easy Way to OC
+> [Quick CPU - Advanced CPU settings](https://coderbag.com/product/quickcpu/features/advanced-cpu-settings)  
 
-```
-https://www.youtube.com/watch?v=7yXW4pqLE70
-```
+> [如何超频您未锁频的英特尔® 酷睿™ 处理器-英特尔®️ 官网](https://www.intel.cn/content/www/cn/zh/gaming/resources/how-to-overclock.html)  
 
-## 如何通过 BIOS 超频 CPU - 英特尔® 官网
-
-```
-https://www.intel.cn/content/www/cn/zh/gaming/resources/bios-overclocking.html
-```
-
-## Quick CPU - Advanced CPU settings
-
-```
-https://coderbag.com/product/quickcpu/features/advanced-cpu-settings
-```
-
-## 如何超频您未锁频的英特尔® 酷睿™ 处理器-英特尔®️ 官网
-
-```
-https://www.intel.cn/content/www/cn/zh/gaming/resources/how-to-overclock.html
-```
-
-## The ThrottleStop Guide
-
-```
-http://forum.notebookreview.com/threads/the-throttlestop-guide.531329/page-72
-```
+> [The ThrottleStop Guide](http://forum.notebookreview.com/threads/the-throttlestop-guide.531329/page-72)  

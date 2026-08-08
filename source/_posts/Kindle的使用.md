@@ -1,5 +1,5 @@
 ---
-title: Kindle的使用
+title: Kindle 的使用
 categories: Skill
 abbrlink: How-To-Use-Kindle
 date: 2020-07-21 12:57:29
@@ -9,26 +9,9 @@ tags:
 
 ![](topic.jpg)
 
-Kindle的使用技巧总结。
+Kindle 的使用技巧总结。
 
 <!-- more -->
-
-# TODOS
-
-```
-# Kindle刷入安卓
-https://www.beizigen.com/post/kindle-migu-install-weread-tutorial/
-https://www.beizigen.com/post/kindle-migu-flashing-android-system/
-https://www.bilibili.com/video/BV1mV4y1H7aQ/
-https://www.bilibili.com/video/BV1J2421N7QH/
-https://post.smzdm.com/p/aoow0lkm/
-https://xdaforums.com/t/guide-installing-android-on-your-aging-kindle-e-reader.4450117/
-https://community.wvbtech.com/d/3027
-https://zyyme.com/kindle8.html
-https://zyyme.com/usr/uploads/2024/01/hlwm1e0cgx.pdf
-https://www.zhihu.com/question/526933239/answer/3094012922
-https://github.com/Angels-Ray/Kindle_X_Migu
-```
 
 # 电子书获取
 
@@ -134,7 +117,7 @@ http://it-ebooks.flygon.net/
 # azw3&mobi格式
 链接 / https://share.weiyun.com/5bL0FMv
 密码 / ny6ghu
- 
+
 # epub格式
 链接 / https://share.weiyun.com/53bONhM
 密码 / 406if9
@@ -193,11 +176,11 @@ https://calibre-ebook.com/zh_CN/download
 
 ## 通过数据线
 
-将Kindle连接到电脑，复制文件到Kindle即可。
+将 Kindle 连接到电脑，复制文件到 Kindle 即可。
 
 ## 通过邮箱
 
-打开以下网站，登录Kindle账号后选择我的账户-管理我的内容和设备，点击首选项-个人文档设置，并在下方选择`添加认可的电子邮箱`，将负责传书的邮箱添加进去。上面系统分配的邮箱即为传输到Kindle的推送邮箱，在传输邮箱中新建邮件，收件地址填Kindle的推送邮箱，将需要传输的电子书设为普通邮件附件，注意不要使用超大附件功能，可以发送多个附件。
+打开以下网站，登录 Kindle 账号后选择我的账户-管理我的内容和设备，点击首选项-个人文档设置，并在下方选择`添加认可的电子邮箱`，将负责传书的邮箱添加进去。上面系统分配的邮箱即为传输到 Kindle 的推送邮箱，在传输邮箱中新建邮件，收件地址填 Kindle 的推送邮箱，将需要传输的电子书设为普通邮件附件，注意不要使用超大附件功能，可以发送多个附件。
 
 ```
 https://www.amazon.cn/
@@ -205,9 +188,9 @@ https://www.amazon.cn/
 
 ## 通过公众号
 
-关注`亚马逊Kindle服务号`并关注。回复`绑定+Kindle邮箱地址`来绑定账号。在Kindle后台添加`kindle@eub-inc.com`为信任邮箱。打开要保存的公众号文章，点击右上角分享，选择`亚马逊Kindle服务号`，文章即被推送到Kindle。
+关注`亚马逊 Kindle 服务号`并关注。回复`绑定+Kindle 邮箱地址`来绑定账号。在 Kindle 后台添加`kindle@eub-inc.com`为信任邮箱。打开要保存的公众号文章，点击右上角分享，选择`亚马逊 Kindle 服务号`，文章即被推送到 Kindle。
 
-# PDF寻找
+# PDF 寻找
 
 ## 付费方法
 
@@ -239,13 +222,13 @@ http://www.sslibrary.com/ssreader/download
 
 #### 通过图片缓存
 
-用阅读器打开电子书后，进入`C:\Users\[用户名]\AppData\Local\Temp\buffer`，如果PDZ是文字版则将buffer改为localX，如local1。每翻一页，此处将生成当前页和下一页的BMP图像，因此只需翻完整本书，即可获取到所有页面的图片。可使用鼠大侠鼠标连点器完成上述点击操作。
+用阅读器打开电子书后，进入`C:\Users\[用户名]\AppData\Local\Temp\buffer`，如果 PDZ 是文字版则将 buffer 改为 localX，如 local1。每翻一页，此处将生成当前页和下一页的 BMP 图像，因此只需翻完整本书，即可获取到所有页面的图片。可使用鼠大侠鼠标连点器完成上述点击操作。
 
 ```
 https://axu.lanzoux.com/inFq6hykh2f
 ```
 
-得到图片后，通过PDF编辑器将其合成为完整的PDF即可。合并PDF可通过PDF补丁完成，下载链接如下。
+得到图片后，通过 PDF 编辑器将其合成为完整的 PDF 即可。合并 PDF 可通过 PDF 补丁完成，下载链接如下。
 
 ```
 https://axu.lanzoux.com/igagvhykeyj
@@ -253,7 +236,7 @@ https://axu.lanzoux.com/igagvhykeyj
 
 #### 通过虚拟打印机
 
-在超星阅读器中将PDZ打印为XPS，然后用XPS Viewer打开XPS打印为PDF。XPS Viewer下载链接如下。
+在超星阅读器中将 PDZ 打印为 XPS，然后用 XPS Viewer 打开 XPS 打印为 PDF。XPS Viewer 下载链接如下。
 
 ```
 https://axu.lanzoux.com/i1dN4hykicb
@@ -261,17 +244,17 @@ https://axu.lanzoux.com/i1dN4hykicb
 
 ### 添加目录书签
 
-以上方法下载的电子书可能会没有目录书签。为此，需要重新下载电子书，并选择分页下载，以获取BookContents.dat文件。用PdgCntEditor打开该文件并复制，然后打开需要添加目录书签的PDF，将刚才复制的内容贴上。PdgEntEditor下载链接如下。
+以上方法下载的电子书可能会没有目录书签。为此，需要重新下载电子书，并选择分页下载，以获取 BookContents.dat 文件。用 PdgCntEditor 打开该文件并复制，然后打开需要添加目录书签的 PDF，将刚才复制的内容贴上。PdgEntEditor 下载链接如下。
 
 ```
 https://axu.lanzoux.com/iPLWkhykfde
 ```
 
-切换到树形编辑模式。如果目录本身自带数字编号的层级，如`1.1`、`2.1`等，则直接点击工具栏上的`自动切分页码`，否则通过工具栏上的`将所选条目右移一栏`调整目录层次。根据目录与实际的页码差值调整基准页，如目录是第1页，而实际PDF中是第7页，则基准页填7（7-1+1）。完成后保存PDF即可。
+切换到树形编辑模式。如果目录本身自带数字编号的层级，如`1.1`、`2.1`等，则直接点击工具栏上的`自动切分页码`，否则通过工具栏上的`将所选条目右移一栏`调整目录层次。根据目录与实际的页码差值调整基准页，如目录是第 1 页，而实际 PDF 中是第 7 页，则基准页填 7（7-1+1）。完成后保存 PDF 即可。
 
 # 书源
 
-## 阅读APP
+## 阅读 APP
 
 可用书香之家、爱阅读、石头阅读、顶点小说、蓝鲸阅读。其中蓝鲸阅读可添加以下书源。
 
@@ -285,28 +268,30 @@ https://gitee.com/dkreader/book-source-warehouse/raw/master/my.json
 http://www.yckceo.com/
 ```
 
+# Kindle 刷入安卓
+
+可将 Kindle 刷入安卓系统，教程参考以下链接。
+
+```
+https://www.beizigen.com/post/kindle-migu-install-weread-tutorial/
+https://www.beizigen.com/post/kindle-migu-flashing-android-system/
+https://www.bilibili.com/video/BV1mV4y1H7aQ/
+https://www.bilibili.com/video/BV1J2421N7QH/
+https://post.smzdm.com/p/aoow0lkm/
+https://xdaforums.com/t/guide-installing-android-on-your-aging-kindle-e-reader.4450117/
+https://community.wvbtech.com/d/3027
+https://zyyme.com/kindle8.html
+https://zyyme.com/usr/uploads/2024/01/hlwm1e0cgx.pdf
+https://www.zhihu.com/question/526933239/answer/3094012922
+https://github.com/Angels-Ray/Kindle_X_Migu
+```
+
 # 参考教程
 
-## 怎么把网上找到的电子书放到kindle里？
+> [怎么把网上找到的电子书放到kindle里？](https://www.zhihu.com/question/22794631)  
 
-```
-https://www.zhihu.com/question/22794631
-```
+> [【简道云筛选】电子书下载网站大全](https://tyi45di4ct.jiandaoyun.com/dash/5e7d915c6c56d8000674a8b8)  
 
-## 【简道云筛选】电子书下载网站大全
+> [有了这十几个网站，没有你找不到的电子书](https://zhuanlan.zhihu.com/p/53064677)  
 
-```
-https://tyi45di4ct.jiandaoyun.com/dash/5e7d915c6c56d8000674a8b8
-```
-
-## 有了这十几个网站，没有你找不到的电子书
-
-```
-https://zhuanlan.zhihu.com/p/53064677
-```
-
-## 知名换源阅读APP相继下架，仅剩的免费阅读神器别再错过了！
-
-```
-https://mp.weixin.qq.com/s/kCAH5ZphEn-Xq2qKg60xUg
-```
+> [知名换源阅读APP相继下架，仅剩的免费阅读神器别再错过了！](https://mp.weixin.qq.com/s/kCAH5ZphEn-Xq2qKg60xUg)  

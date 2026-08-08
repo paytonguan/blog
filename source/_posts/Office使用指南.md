@@ -1,5 +1,5 @@
 ---
-title: Office使用指南
+title: Office 使用指南
 categories: Skill
 abbrlink: Instructions-Of-Office
 date: 2020-05-01 08:54:29
@@ -8,26 +8,19 @@ tags:
 
 ![](topic.jpg)
 
-Office使用指南。
+Office 使用指南。
 
 <!-- more -->
 
-# TODOS
-
-```
-# 操作教程
-http://www.wordlm.com/
-```
-
 # 下载
 
-Windows可通过Office Tool。
+Windows 可通过 Office Tool。
 
 ```
 https://otp.landian.vip/
 ```
 
-Mac可通过以下链接下载。
+Mac 可通过以下链接下载。
 
 ```
 https://github.com/alsyundawy/Microsoft-Office-For-MacOS
@@ -37,13 +30,13 @@ https://github.com/alsyundawy/Microsoft-Office-For-MacOS
 
 ## 方法
 
-Office安装目录对于Office 2016为C:\Program Files (x86)\Microsoft Office\Office16，对于Office 2013为Office15，对于Office 2010为Office14。该目录下应当有一个文件为OSPP.VBS。
+Office 安装目录对于 Office 2016 为 C:\Program Files (x86)\Microsoft Office\Office16，对于 Office 2013 为 Office15，对于 Office 2010 为 Office14。该目录下应当有一个文件为 OSPP.VBS。
 
-主流的激活工具均为KMS激活，会安装KMS密钥，需要VOL密钥。
+主流的激活工具均为 KMS 激活，会安装 KMS 密钥，需要 VOL 密钥。
 
-### 升级为VL版
+### 升级为 VL 版
 
-如果Office安装完成后带有Retail密钥，可先通过Office Tool删除该密钥，再安装新的密钥。也可在命令提示符输入以下命令。
+如果 Office 安装完成后带有 Retail 密钥，可先通过 Office Tool 删除该密钥，再安装新的密钥。也可在命令提示符输入以下命令。
 
 ```
 # 以Office 2016为例
@@ -56,7 +49,7 @@ for /f %x in ('dir /b ..\root\Licenses16\proplusvl_mak*.xrm-ms') do cscript ospp
 cscript ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
 ```
 
-VOL密钥列表如下。
+VOL 密钥列表如下。
 
 ```
 # Office 2016-2021
@@ -71,7 +64,7 @@ https://docs.microsoft.com/zh-cn/previous-versions/office/office-2010/ee624355(v
 
 ### 激活方法
 
-通过Kmspico或Microsoft Toolkit可以激活Office 2010。也可用KMS Activator、microKMS等。
+通过 Kmspico 或 Microsoft Toolkit 可以激活 Office 2010。也可用 KMS Activator、microKMS 等。
 
 ```
 # KMSpico
@@ -103,9 +96,9 @@ cscript ospp.vbs /sethst:kms.03k.org
 cscript ospp.vbs /act
 ```
 
-注意，Office 365本身是没有所谓专业版的，转换激活后的Office 365会显示为使用的密钥对应的版本。事实上它会变成一个混合版，既有Office 365的特性，又有密钥对应版本的特性。
+注意，Office 365 本身是没有所谓专业版的，转换激活后的 Office 365 会显示为使用的密钥对应的版本。事实上它会变成一个混合版，既有 Office 365 的特性，又有密钥对应版本的特性。
 
-可通过以下命令查看激活详情，注意仍需要在Office安装目录下执行。
+可通过以下命令查看激活详情，注意仍需要在 Office 安装目录下执行。
 
 ```
 cscript ospp.vbs /dstatus
@@ -114,7 +107,7 @@ cscript ospp.vbs /dstatus
 <details>
 <summary>【进阶】卸载KMS激活</summary>
 
-以管理员身份打开命令提示符，输入以下命令，注意仍需要在Office安装目录下执行。
+以管理员身份打开命令提示符，输入以下命令，注意仍需要在 Office 安装目录下执行。
 
 ```
 # 查询激活密钥后五位
@@ -174,9 +167,9 @@ J2MV9-JYYQ6-JM44K-QMYTH-8RB2W
 https://gw.xkonglong.com/
 ```
 
-### Word必备工具箱
+### Word 必备工具箱
 
-为Word增加大体4类功能。
+为 Word 增加大体 4 类功能。
 
 ```
 http://www.ahzll.top/HELP/PAGE/blog_5488e3a90100u8ux.html
@@ -190,7 +183,7 @@ http://www.hbg666.com/
 
 ## Excel
 
-### Excel必备工具箱
+### Excel 必备工具箱
 
 ```
 http://www.ahzll.top/
@@ -202,19 +195,19 @@ http://www.ahzll.top/
 http://www.ffcell.com/home/products.aspx
 ```
 
-### Excel催化剂
+### Excel 催化剂
 
 ```
 https://www.yuque.com/excelcuihuajihome/helpdocument
 ```
 
-### Excel易用宝
+### Excel 易用宝
 
 ```
 https://yyb.excelhome.net/
 ```
 
-### Excel精灵
+### Excel 精灵
 
 ```
 http://www.excelbbx.net/Eling.htm
@@ -229,7 +222,7 @@ http://www.hbg666.com/q.php
 
 ### AudTool
 
-审计常用，免费试用期30天。
+审计常用，免费试用期 30 天。
 
 ```
 http://www.ffcell.com/home/AuditOrder.aspx
@@ -255,13 +248,13 @@ http://oktools.xyz/
 
 ### Lvyh Tools
 
-PPT转Word、字体收藏、字体导出、顶点编辑、线条编辑、形状编辑、位置分布等。
+PPT 转 Word、字体收藏、字体导出、顶点编辑、线条编辑、形状编辑、位置分布等。
 
 ```
 https://addins.cn/yhtools/
 ```
 
-### PA口袋动画
+### PA 口袋动画
 
 动画制作。
 
@@ -275,9 +268,9 @@ http://www.papocket.com/
 https://www.islide.cc/download
 ```
 
-### PPT精灵
+### PPT 精灵
 
-支持PowerPoint 2007-2016。
+支持 PowerPoint 2007-2016。
 
 ```
 http://excelbbx.net/PPT/Index.htm
@@ -329,13 +322,13 @@ http://excelbbx.net/PPT/Index.htm
 
 要查找已被定义为通配符的字符，需该字符前键入反斜杠`\`。
 
-如果使用了通配符，在查找文字时会大小写敏感。如果希望查找大写和小写字母的任意组合，需要使用方括号通配符。如输入`[Hh]*[Tt]`可找到heat、Hat或HAT，而用`H*t`找不到heat。
+如果使用了通配符，在查找文字时会大小写敏感。如果希望查找大写和小写字母的任意组合，需要使用方括号通配符。如输入`[Hh]*[Tt]`可找到 heat、Hat 或 HAT，而用`H*t`找不到 heat。
 
-使用通配符时，Word只查找整个单词。如搜索e*r可找到enter，但不会找到entertain。如输入`<(e*r)`可找到enter和entertain。
+使用通配符时，Word 只查找整个单词。如搜索 e*r 可找到 enter，但不会找到 entertain。如输入`<(e*r)`可找到 enter 和 entertain。
 
-在查找图形时，Word只查找嵌入图形，而不能查找浮动图形。在默认情况下，Word会将导入的图形以嵌入图形的方式插入到文档中。
+在查找图形时，Word 只查找嵌入图形，而不能查找浮动图形。在默认情况下，Word 会将导入的图形以嵌入图形的方式插入到文档中。
 
-如果包含可选连字符代码，Word只会找到在指定位置带有可选连字符的文字。如果省略可选连字符代码，Word将找到所有匹配的文字，包括带有可选连字符的文字。
+如果包含可选连字符代码，Word 只会找到在指定位置带有可选连字符的文字。如果省略可选连字符代码，Word 将找到所有匹配的文字，包括带有可选连字符的文字。
 
 ### 列表
 
@@ -385,7 +378,7 @@ http://excelbbx.net/PPT/Index.htm
 
 #### 选取包含特定字符的一行
 
-将手动换行符变为换行符，即^l全部替换为^p。查找与替换中勾选使用通配符，查找内容填写`[内容](*)^13`，搜索范围为全文档即可。
+将手动换行符变为换行符，即^l 全部替换为^p。查找与替换中勾选使用通配符，查找内容填写`[内容](*)^13`，搜索范围为全文档即可。
 
 #### 选取同时包含两个关键词的内容
 
@@ -393,16 +386,14 @@ http://excelbbx.net/PPT/Index.htm
 (?=.*[关键词1])(?=.*[关键词2])^.*$
 ```
 
+### 操作教程参考
+
+```
+http://www.wordlm.com/
+```
+
 # 参考教程
 
-## Word查找替换详细用法及通配符一览表
+> [Word查找替换详细用法及通配符一览表](https://www.cnblogs.com/whchensir/p/5768030.html)  
 
-```
-https://www.cnblogs.com/whchensir/p/5768030.html
-```
-
-## 正则同时包含两个关键字
-
-```
-https://www.cnblogs.com/fsqsec/p/7132815.html
-```
+> [正则同时包含两个关键字](https://www.cnblogs.com/fsqsec/p/7132815.html)  

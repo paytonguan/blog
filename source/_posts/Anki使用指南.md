@@ -1,5 +1,5 @@
 ---
-title: Anki使用指南
+title: Anki 使用指南
 categories: Skill
 abbrlink: Instructions-Of-Anki
 date: 2020-05-12 12:54:29
@@ -8,15 +8,34 @@ tags:
 
 ![](topic.jpg)
 
-Anki使用指南。
+Anki 使用指南。
 
 <!-- more -->
 
-# TODOS
+# 下载
 
 ```
-# Anki通识教程
+# Windows／Mac／Linux
+https://github.com/ankitects/anki
 
+# Android
+https://github.com/ankidroid/Anki-Android
+```
+
+# 牌组库
+
+```
+https://tieba.baidu.com/f?kw=anki
+https://wiki.anki.link/
+https://ankibbs.com/t/share
+https://ankiweb.net/shared/decks/chinese
+```
+
+# 教程与技巧
+
+## Anki 通识教程
+
+```
 Anki手册
 http://www.ankichina.net/manual/anki
 
@@ -25,10 +44,11 @@ https://www.kancloud.cn/ankigaokao/ankigaokao
 
 【视频】Anki从入门到精通
 https://www.bilibili.com/video/av19384827/
+```
 
+## 批量制卡方案
 
-# 批量制卡方案
-
+```
 Word内容快速批量制卡
 https://zhuanlan.zhihu.com/p/105384134
 
@@ -43,10 +63,11 @@ https://www.bilibili.com/video/av16816801/
 
 图片批量制卡（media import 插件）
 https://zhuanlan.zhihu.com/p/22180094
+```
 
+## 纸质笔记制卡
 
-# 纸质笔记制卡
-
+```
 Image Occlude
 https://zhuanlan.zhihu.com/p/21463061
 
@@ -55,10 +76,11 @@ http://www.pc6.com/az/992368.html
 
 Anki涂鸦制卡 iOS 端解决方案
 https://zhuanlan.zhihu.com/p/100107442
+```
 
+## 划词快速制卡
 
-# 划词快速制卡
-
+```
 【PC】沙拉查词＋Anki
 https://saladict.crimx.com/anki.html
 
@@ -70,10 +92,11 @@ https://www.coolapk.com/apk/com.mmjang.ankihelper
 
 【iOS】划词助手
 https://mp.weixin.qq.com/s/q7_xhpCsk4VMYrrYYlciAA
+```
 
+## 其他软件搭配 Anki
 
-# 其他软件搭配Anki
-
+```
 Anki＋图床
 https://mp.weixin.qq.com/s/TTDVcNm4uyhV59XHThwLGg
 
@@ -88,10 +111,11 @@ http://kmate.me/2016/10/10/kindle-mate-anki-card-for-reciter-cn/
 
 Kindle＋Anki：插件AnKindle视频教程及配套模板
 https://www.laohuang.net/20180429/ankindle-template/
+```
 
+## 其它
 
-# 其它
-
+```
 如何使用Anki插件（8000字）
 https://mp.weixin.qq.com/s/Z5RWqLl4_o93jVI7sprVCQ
 
@@ -115,23 +139,4 @@ https://zhuanlan.zhihu.com/p/25128573
 
 Anki万字使用经验
 https://zhuanlan.zhihu.com/p/270135184
-```
-
-# 下载
-
-```
-# Windows／Mac／Linux
-https://github.com/ankitects/anki
-
-# Android
-https://github.com/ankidroid/Anki-Android
-```
-
-# 牌组库
-
-```
-https://tieba.baidu.com/f?kw=anki
-https://wiki.anki.link/
-https://ankibbs.com/t/share
-https://ankiweb.net/shared/decks/chinese
 ```

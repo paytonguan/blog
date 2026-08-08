@@ -1,5 +1,5 @@
 ---
-title: Adobe使用指南
+title: Adobe 使用指南
 categories: Skill
 abbrlink: Instructions-Of-Adobe
 date: 2020-05-11 11:54:29
@@ -8,7 +8,7 @@ tags:
 
 ![](topic.jpg)
 
-Adobe使用指南。
+Adobe 使用指南。
 
 <!-- more -->
 
@@ -21,11 +21,11 @@ https://github.com/davleone/Adobe-Photoshop-for-Mac-2024-and-Windows
 
 # 破解补丁
 
-Adobe的产品可先通过Creative Cloud下载试用版。
+Adobe 的产品可先通过 Creative Cloud 下载试用版。
 
 ## Windows
 
-可使用GenP。
+可使用 GenP。
 
 ```
 https://www.reddit.com/r/GenP/comments/ktxsxk/genp_guide_installation_and_cleanup/
@@ -33,7 +33,7 @@ https://www.reddit.com/r/GenP/comments/ktxsxk/genp_guide_installation_and_cleanu
 
 ## Mac
 
-可使用Adobe Zii破解。注意补丁需适配Adobe的版本号。
+可使用 Adobe Zii 破解。注意补丁需适配 Adobe 的版本号。
 
 ```
 https://www.adobezii.com/
@@ -66,7 +66,7 @@ https://www.newcger.com/aechajian/
 
 # 常见问题
 
-## 出现42或72错误
+## 出现 42 或 72 错误
 
 打开以下链接，下载底部的证书，双击安装。
 
@@ -74,5 +74,5 @@ https://www.newcger.com/aechajian/
 https://helpx.adobe.com/creative-cloud/kb/Error-code-42-or-72-when-installing-or-updating-Creative-Cloud-desktop-app.html
 ```
 
-安装完成后需要将证书设置为始终信任。以Mac为例，打开`钥匙串访问`，在`证书`选项卡找到刚才安装的证书，双击并将`信任`下的所有项设置为`始终信任`即可。
+安装完成后需要将证书设置为始终信任。以 Mac 为例，打开`钥匙串访问`，在`证书`选项卡找到刚才安装的证书，双击并将`信任`下的所有项设置为`始终信任`即可。
 
