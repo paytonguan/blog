@@ -1,5 +1,5 @@
 ---
-title: SSL证书配置指南
+title: SSL 证书配置指南
 categories: Computer
 abbrlink: SSL-Certificate-Guide
 date: 2020-01-14 00:00:00
