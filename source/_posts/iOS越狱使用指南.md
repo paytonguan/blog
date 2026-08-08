@@ -701,7 +701,7 @@ container-resign /Applications/coolbooter.app/coolbooter
 打开终端并输入以下命令，即可建立 SSH 连接。
 
 ```
-// 2222为端口，localhost为IP
+# 2222为端口，localhost为IP
 ssh -p 2222 root@localhost
 ```
 

@@ -97,10 +97,10 @@ https://software.intel.com/en-us/articles/intel-power-gadget
 用于性能监控。
 
 ```
-// 下载地址
+# 下载地址
 https://bjango.com/mac/istatmenus/
 
-// 注册信息
+# 注册信息
 Email: 982092332@qq.com
 SN: GAWAE-FCWQ3-P8NYB-C7GF7-NEDRT-Q5DTB-MFZG6-6NEQC-CRMUD-8MZ2K-66SRB-SU8EW-EDLZ9-TGH3S-8SGA
 ```

@@ -118,12 +118,12 @@ https://github.com/corpnewt/EFI-Backup-Restore
 打开终端并输入以下命令。
 
 ```
-// 获取Su权限
+# 获取Su权限
 sudo su
 passwd root
 su root
 
-// 解除系统应用
+# 解除系统应用
 cd /
 mkdir RemovedFiles
 cd RemovedFiles
@@ -271,13 +271,13 @@ Mac 键盘与普通键盘键位对应如下表。
 也可打开终端，输入以下命令。
 
 ```
-// 显示隐藏文件
+# 显示隐藏文件
 defaults write com.apple.finder AppleShowAllFiles -bool true
-// 或defaults write com.apple.finder AppleShowAllFiles YES
+# 或defaults write com.apple.finder AppleShowAllFiles YES
 
-// 隐藏隐藏文件
+# 隐藏隐藏文件
 defaults write com.apple.finder AppleShowAllFiles -bool false
-// 或defaults write com.apple.finder AppleShowAllFiles NO
+# 或defaults write com.apple.finder AppleShowAllFiles NO
 ```
 
 # 删除所有短信
@@ -346,7 +346,7 @@ https://github.com/phracker/MacOSX-SDKs
 ```
 sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer/ 
 xcode-select --print-path
-// 输出/Applications/Xcode.app/Contents/Developer
+# 输出/Applications/Xcode.app/Contents/Developer
 ```
 
 ## App在Catalina下提示已损坏
@@ -354,7 +354,7 @@ xcode-select --print-path
 在终端输入以下命令即可。
 
 ```
-// /Applications/xxxx.app换为所需App路径，推荐直接将app文件拖入终端
+# /Applications/xxxx.app换为所需App路径，推荐直接将app文件拖入终端
 sudo xattr -d com.apple.quarantine /Applications/xxxx.app
 ```
 

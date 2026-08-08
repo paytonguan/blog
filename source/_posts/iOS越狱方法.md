@@ -372,10 +372,10 @@ https://checkra.in/
 手机端安装好 Checkra1n 后不要打开。确保电脑已安装 usbmuxd，若未安装可在终端输入以下命令。
 
 ```
-// MacOS
+# MacOS
 brew install usbmuxd
 
-// Linux
+# Linux
 sudo apt install libusbmuxd-tools
 ```
 
@@ -384,7 +384,7 @@ sudo apt install libusbmuxd-tools
 ```
 curl http://chimera1n.aaronc.cn/CoolStar/chimera1n-deploy-linux-macos.sh | bash
 
-// 或
+# 或
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/coolstar/Odyssey-bootstrap/master/procursus-deploy-linux-macos.sh)"
 ```
 

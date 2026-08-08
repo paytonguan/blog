@@ -121,11 +121,11 @@ curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install >> 
 打开所获取的 install 文件（一般在用户目录），更改脚本中`BREW_REPO`和`CORE_TAP_REPO`两处，两个镜像源任选一个。
 
 ```
-// 中国科学技术大学源
+# 中国科学技术大学源
 BREW_REPO = "https://mirrors.ustc.edu.cn/brew.git".freeze
 CORE_TAP_REPO = "https://mirrors.ustc.edu.cn/homebrew-core.git".freeze
 
-// 清华大学源
+# 清华大学源
 BREW_REPO = "https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git".freeze
 CORE_TAP_REPO = "https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git".freeze
 ```
@@ -560,7 +560,7 @@ open -n /Applications/xxxx.app
 若想保留此函数的功能，则需将此函数写入`~/.profile`中。
 
 ```
-// 将以下函数直接复制到终端运行
+# 将以下函数直接复制到终端运行
 watts() {
   FORMULA=$(system_profiler SPPowerDataType | awk '/Amperage\ \(mA\):/ {printf $3" * "}; /Voltage\ \(mV\):/ {print $3}')
   WATTS=$(echo "scale=3; ${FORMULA} / 1000000" | bc 2>/dev/null)
@@ -571,7 +571,7 @@ watts() {
   echo "${WATTS} mW"
 }
 
-// 使用
+# 使用
 watts
 ```
 
@@ -580,12 +580,12 @@ watts
 若想保留此函数的功能，则需将此函数写入`~/.profile`中。
 
 ```
-// 创建函数
+# 创建函数
 powertop() {
   top -stats pid,command,power -o power
 }
 
-// 调用
+# 调用
 powertop
 ```
 
@@ -677,10 +677,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/daliansky/dell7000/master/
 ## 笔记本插电源出提示音
 
 ```
-// 开启
+# 开启
 defaults write com.apple.PowerChime ChimeOnAllHardware -bool true; open /System/Library/CoreServices/PowerChime.app &
 
-// 关闭
+# 关闭
 defaults write com.apple.PowerChime ChimeOnAllHardware -bool false; killall PowerChime
 ```
 
@@ -689,11 +689,11 @@ defaults write com.apple.PowerChime ChimeOnAllHardware -bool false; killall Powe
 ### 移动kexts
 
 ```
-// 删除重名/错误的kexts
+# 删除重名/错误的kexts
 sudo rm -Rf /Library/Extensions/KextToInstall.kext
 sudo rm -Rf /System/Library/Extensions/KextToInstall.kext
 
-// 把新kext移动到LE或SLE
+# 把新kext移动到LE或SLE
 sudo cp -R KextToInstall.kext /Library/Extensions
 sudo cp -R KextToInstall.kext /System/Library/Extensions
 ```
@@ -748,53 +748,53 @@ rm -R ~/Library/Messages/
 ## 终端ftp工具
 
 ```
-// 安装
+# 安装
 brew install inetutils
 
-// 使用
+# 使用
 ftp
 ```
 
 ## 设置macOS电源相关
 
 ```
-// 查看系统范围内的电源状态
+# 查看系统范围内的电源状态
 pmset -g
 pmset -g live
 
-// 查看电源状态
+# 查看电源状态
 pmset -g assertions
 
-// 从日志查看电源状态
+# 从日志查看电源状态
 pmset -g log
 
-// -a针对所有电源，-b针对电池电源，-c针对壁式充电器电源，-u以UPS电源为目标
-// 休眠到内存（台式机默认设置）
+# -a针对所有电源，-b针对电池电源，-c针对壁式充电器电源，-u以UPS电源为目标
+# 休眠到内存（台式机默认设置）
 sudo pmset -a hibernatemodes 0
 
-// 休眠到硬盘
+# 休眠到硬盘
 sudo pmset -a hibernatemodes 1
 
-// 混合休眠（笔记本电脑默认配置）
+# 混合休眠（笔记本电脑默认配置）
 sudo pmset -a hibernatemodes 3
 
-// 省电休眠
+# 省电休眠
 sudo pmset -a hibernatemode 25
 
-// 关闭powernap
+# 关闭powernap
 sudo pmset -a powernap 0
 
-// 关闭休眠
+# 关闭休眠
 sudo pmset -a autopoweroff 0
 sudo pmset -a standby 0
 
-// 重置设置
+# 重置设置
 pmset -a restoredefaults
 
-// 查看睡眠唤醒原因
+# 查看睡眠唤醒原因
 pmset -g log | grep -Ei 'wake.*due'
 
-// 关闭硬盘摔落保护功能
+# 关闭硬盘摔落保护功能
 sudo pmset -a sms 0
 ```
 
@@ -825,16 +825,16 @@ sudo diskutil corestorage revert /
 ## 查看加载驱动
 
 ```
-// 查看所有加载的驱动
+# 查看所有加载的驱动
 kextstat
 
-// 查看除苹果以外加载的驱动
+# 查看除苹果以外加载的驱动
 kextstat | grep -v "com.apple"
 
-// 查看加载的非官方驱动
+# 查看加载的非官方驱动
 kextstat | grep -v "com.apple" | grep -v "Energy"
 
-// 查看特定名称的驱动（以ACPIplat为例）
+# 查看特定名称的驱动（以ACPIplat为例）
 kextstat | grep -y acpiplat
 kextstat | grep -i acpiplat
 ```
@@ -842,10 +842,10 @@ kextstat | grep -i acpiplat
 ## Finder显示完整文件路径
 
 ```
-// 显示
+# 显示
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool TRUE && killall Finder
 
-// 取消显示
+# 取消显示
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool FALSE && killall Finder
 ```
 
@@ -858,10 +858,10 @@ open .
 ## 终端调用Chrome
 
 ```
-// 打开Chrome浏览器
+# 打开Chrome浏览器
 open -a Google\ Chrome --args -disable-web-security
 
-// 直接打开网站
+# 直接打开网站
 open www.baidu.com
 ```
 
@@ -882,10 +882,10 @@ defaults write com.apple.systempreferences AttentionPrefBundleIDs 0 && killall D
 或打开 Safari 后选择`偏好设置`，勾选`高级`选项卡下的`在菜单栏显示开发菜单`，也可达到相同效果。
 
 ```
-// 开启
+# 开启
 defaults write com.apple.Safari IncludeInternalDebugMenu 1
 
-// 关闭
+# 关闭
 defaults write com.apple.Safari IncludeInternalDebugMenu 0
 ```
 
@@ -901,7 +901,7 @@ sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallme
 
 ```
 dot_clean [路径]
-// 或
+# 或
 find . -type f -name '._*' -delete
 ```
 
@@ -914,10 +914,10 @@ find . -name '*.DS_Store' -type f -delete
 ## 禁止/启用.DS_Store自动生成
 
 ```
-// 禁止
+# 禁止
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
 
-// 启用
+# 启用
 defaults delete com.apple.desktopservices DSDontWriteNetworkStores
 ```
 
